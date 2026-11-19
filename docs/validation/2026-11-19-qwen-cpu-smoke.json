@@ -1,0 +1,21 @@
+{
+  "status": "real_model_engineering_smoke_passed",
+  "is_deception_evaluation": false,
+  "checkpoint": "Qwen/Qwen2.5-0.5B-Instruct",
+  "resolved_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "training_examples": 14,
+  "control_examples": 6,
+  "actual_hf_hidden_state_index_verified": 7,
+  "causal_prefix_invariance": {
+    "passed": true,
+    "max_absolute_error": 1.1324882507324219e-06,
+    "rtol": 0.0001,
+    "atol": 0.0001
+  },
+  "uv_lock_sha256": "5865c0880802d319d2526094290f228795b954a35ce3a07c02251d0f3375b57a",
+  "limitations": [
+    "Qwen 0.5B float32 CPU engineering check, not the 8B study.",
+    "Two validation instruction examples cannot establish detection performance.",
+    "Six neutral controls cannot establish a reliable 1% FPR operating point."
+  ]
+}

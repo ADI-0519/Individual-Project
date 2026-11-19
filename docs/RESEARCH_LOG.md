@@ -47,9 +47,12 @@ ignore rules. No project or upstream-data licence was invented. No model weights
 tokens, private material or generated runs are source-controlled.
 
 Local offline suite initially passed 113 tests and 48 subtests (72% aggregate
-branch-aware coverage), then received additional data-quality regression checks.
-The final CI run is the authoritative check for the committed version. Tests use
-marked fixtures; their passing counts are not model research results.
+branch-aware coverage), then reached 116 tests after further data-quality and
+source-provenance regression checks. All four jobs in the first
+[GitHub CI run](https://github.com/ADI-0519/Individual-Project/actions/runs/44525529169)
+passed, including Linux Python 3.11/3.12 and Windows Python 3.11. The final CI run
+is the authoritative check for the committed version. Tests use marked fixtures;
+their passing counts are not model research results.
 
 ### Real-model execution status
 
@@ -60,11 +63,23 @@ Transformers. The same import was blocked outside the sandbox. No protection was
 disabled and no fake response or activation was substituted. The failed local
 manifest remains an ignored engineering record under `runs/`.
 
-Added a manual Linux CPU smoke workflow with a fixed public Qwen 0.5B checkpoint,
-14 paired training examples, six freshly generated neutral controls and real
-hidden-state/prefix-invariance checks. Its outcome is recorded by the Action and
-`runs/apollo_smoke_validation.json`, not assumed here. Any successful run is an
-engineering validation, not an 8B detection result or a reliable 1% FPR estimate.
+The [first manual Linux CPU smoke](https://github.com/ADI-0519/Individual-Project/actions/runs/44525570337)
+passed on commit `d57dbbe9a02aeb44d7178006b4eb4c15c86b52b8`. It loaded public
+Qwen 0.5B revision `7ae557604adf67be50417f59c2c2f167def9a775`, captured 14 paired
+examples, fitted the readout and generated/scored six neutral controls. The
+real decoder hook matched HF hidden-state index 7. Prefix-only versus full-context
+activation maximum absolute error was `1.1324882507324219e-06`, below the declared
+`1e-4` absolute/relative tolerance. The small
+[original validation summary](./validation/2026-11-19-qwen-cpu-smoke.json) is
+preserved here; full trace artifacts were downloaded to ignored local runs.
+This is engineering validation, not an 8B detection result or a reliable 1% FPR.
+
+Final independent review then found that arbitrary custom CSVs could inherit a
+pinned source-revision claim. A regression reproduced this; preparation now
+verifies source bytes, marks custom data explicitly unverified, and propagates
+the preparation manifest into captures. Missing calibration sidecars now carry
+an explicit unverified-provenance warning. The normal first smoke used the
+verified download; its measured activation result is unaffected by these guards.
 
 ### Scope that remains
 

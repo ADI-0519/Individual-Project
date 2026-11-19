@@ -93,6 +93,11 @@ def prepare_pairs(
     provenance = output.with_suffix(".manifest.json")
     if output.exists() or provenance.exists():
         raise FileExistsError("Prepared data already exist; choose a new output path")
+    raw_facts = Path(facts_path).read_bytes()
+    source_blob = hashlib.sha1(
+        b"blob " + str(len(raw_facts)).encode() + b"\0" + raw_facts
+    ).hexdigest()
+    source_verified = source_blob == FACTS_BLOB
     with Path(facts_path).open(newline="", encoding="utf-8-sig") as stream:
         reader = csv.DictReader(stream)
         if not {"statement", "label"} <= set(reader.fieldnames or []):
@@ -149,8 +154,15 @@ def prepare_pairs(
         raise ValueError("Short-fact exclusions leave an empty partition")
     write_jsonl(output, rows)
     manifest = {
-        "profile": "apollo_saved_plain_source_word_mask",
-        "source_revision": UPSTREAM_REVISION,
+        "profile": (
+            "apollo_saved_plain_source_word_mask"
+            if source_verified
+            else "apollo_plain_custom_facts_word_mask"
+        ),
+        "recipe_revision": UPSTREAM_REVISION,
+        "source_revision": UPSTREAM_REVISION if source_verified else None,
+        "source_verified": source_verified,
+        "source_git_blob": source_blob,
         "facts_sha256": file_sha256(facts_path),
         "prepared_sha256": file_sha256(output),
         "requested_max_pairs": limit,
@@ -264,20 +276,33 @@ def extract_token_examples(
     if len(config.model.capture_layers) != 1 or len(config.seeds) != 1:
         raise ValueError("Apollo extraction requires one declared layer and one seed per run")
     examples = load_token_examples(examples_path)
+    preparation_path = Path(examples_path).with_suffix(".manifest.json")
+    preparation = read_json(preparation_path) if preparation_path.exists() else None
+    if preparation and preparation.get("prepared_sha256") != file_sha256(examples_path):
+        raise ValueError("Prepared example bytes differ from their provenance manifest")
     identity = {
         "config_hash": canonical_hash(config.to_dict()),
         "examples_hash": canonical_hash(examples),
+        "preparation_hash": canonical_hash(preparation),
     }
     output, manifest = _prepare(output_dir, identity, resume, "apollo_tokens")
     if not resume:
         atomic_json(output / "config.json", config.to_dict())
         write_jsonl(output / "examples.jsonl", examples)
+        if preparation is not None:
+            atomic_json(output / "preparation.json", preparation)
     elif (
         canonical_hash(read_json(output / "config.json")) != identity["config_hash"]
         or canonical_hash(load_token_examples(output / "examples.jsonl"))
         != identity["examples_hash"]
     ):
         raise ValueError("Recorded token-run inputs changed")
+    if (
+        resume
+        and preparation is not None
+        and (canonical_hash(read_json(output / "preparation.json")) != canonical_hash(preparation))
+    ):
+        raise ValueError("Recorded preparation provenance changed")
     expected_files = {canonical_hash(row["example_id"])[:32] + ".json" for row in examples}
     actual_files = {p.name for p in (output / "records").glob("*.json")}
     if not actual_files <= expected_files:

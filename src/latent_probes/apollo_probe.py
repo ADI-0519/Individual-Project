@@ -384,12 +384,17 @@ def calibrate_control_threshold(
         "scores_sha256": _sha256(path),
         "feature_signature": provenance.get("feature_signature"),
         "probe_sha256": provenance.get("probe_sha256"),
+        "provenance_verified": bool(provenance),
         "warnings": ["The calibration quantile does not guarantee FPR on new or shifted data."],
     }
     if len(rows) * (1 - quantile) < 10:
         report["warnings"].append(
             "Fewer than ten expected observations lie above the requested quantile; "
             "this tail estimate is an unreliable pilot calibration."
+        )
+    if not provenance:
+        report["warnings"].append(
+            "No calibration score sidecar: feature/probe identity and training overlap are unverified."
         )
     _json_output(output, report)
     return report
@@ -452,6 +457,10 @@ def evaluate_apollo_scores(
     if threshold_path is not None:
         threshold_file = Path(threshold_path)
         calibration = json.loads(threshold_file.read_text(encoding="utf-8"))
+        if not calibration.get("feature_signature") or not calibration.get("probe_sha256"):
+            report["warnings"].append(
+                "Calibration provenance is incomplete; threshold identity compatibility is unverified."
+            )
         if calibration.get("comparison") != "score > threshold":
             raise ValueError("Threshold must declare strict score > threshold comparison.")
         control_ids = calibration.get("control_example_ids")

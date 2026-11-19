@@ -91,6 +91,14 @@ def test_pairs_use_only_true_rows_and_keep_ordered_facts_together(tmp_path):
         prepare_pairs(tmp_path / "facts.csv", path, limit=8)
 
 
+def test_custom_csv_does_not_inherit_pinned_upstream_data_identity(tmp_path):
+    source = tmp_path / "facts.csv"
+    facts(source)
+    manifest = prepare_pairs(source, tmp_path / "pairs.jsonl", limit=8)
+    assert manifest["source_revision"] is None
+    assert manifest["source_verified"] is False
+
+
 def test_preparation_rejects_short_or_duplicate_facts(tmp_path):
     source = tmp_path / "facts.csv"
     source.write_text("statement,label\nshort fact,1\nshort fact,1\nshort fact,1\n")
@@ -166,6 +174,17 @@ def test_resume_rejects_changed_completed_export(tmp_path):
     with pytest.raises(ValueError, match="artifacts changed"):
         extract_token_examples(
             configuration(), path, run, resume=True, backend_factory=TokenFixture
+        )
+
+
+def test_prepared_example_edits_cannot_keep_the_original_source_attribution(tmp_path):
+    path = prepared(tmp_path)
+    rows = load_token_examples(path)
+    rows[0]["response"] += " Changed."
+    path.write_text("\n".join(json.dumps(r) for r in rows), encoding="utf-8")
+    with pytest.raises(ValueError, match="differ from their provenance"):
+        extract_token_examples(
+            configuration(), path, tmp_path / "run", backend_factory=TokenFixture
         )
 
 

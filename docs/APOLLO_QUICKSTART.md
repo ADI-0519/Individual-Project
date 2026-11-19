@@ -54,6 +54,9 @@ the original split retains **219 training / 49 validation pairs** for a full
 preparation. Omitting `--limit 8` prepares that dataset. Neither exclusion is
 silent: the manifest records the original index, split and reason. The small
 eight-source-fact example retains seven pairs (six train / one validation).
+Preparation verifies the source bytes again: a modified/custom CSV is marked
+unverified and does not inherit the pinned upstream data revision. Its own
+checksum and preparation manifest are retained in the activation run.
 
 ## Capture and fit
 

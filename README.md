@@ -21,6 +21,10 @@ do not establish deception-detection performance. See [validation](VALIDATION.md
 for the imported starter's historical checks; current checks are recorded in
 the repository research log.
 
+The first [genuine CPU smoke run](https://github.com/ADI-0519/Individual-Project/actions/runs/44525570337)
+passed: Qwen 0.5B token capture, probe fitting, generated control scoring and
+causal-prefix invariance. The main Llama 8B study has not yet been run.
+
 ## Original sender–recipient starter
 
 Working implementation for Variant 2: evaluating latent probes under perturbation and distribution shifts.
