@@ -83,11 +83,44 @@ verified download; its measured activation result is unaffected by these guards.
 
 ### Scope that remains
 
-Obtain personal gated access to Llama 3.1 8B, validate the approved GPU runtime,
-run a declared precision/depth profile, collect independent control/evaluation
+Obtain personal gated access to Llama 3.1 8B, validate its declared
+precision/depth profile, collect independent control/evaluation
 responses, audit behavioral labels and freeze the held-out protocol. The reader
 forecast and omission extensions remain research tasks; the 24 draft starter
 scenarios must not be promoted to validated deception examples.
+
+### Local WSL GPU validation
+
+The separate Ubuntu environment completed installation with Python 3.11.17,
+PyTorch 2.14.1+cu130 and CUDA 13.0. The actual CUDA kernel check passed on the
+RTX 5080 (compute capability 12.0). The first Qwen forward pass then exposed a
+missing C compiler required by Triton. Installed Ubuntu `build-essential` and
+`python3-dev` through the package manager; no application protection was changed.
+The failed capture manifest remains in ignored local runs. A fresh run used
+the same pinned Qwen checkpoint and the new float32 CUDA config.
+
+The complete local engineering pipeline passed: 14 instruction examples yielded
+84 token vectors (78 training / 6 validation), the readout fitted, and six
+neutral prompts generated 102 scored token vectors. The probe and controls
+shared the recorded feature signature. The validator reloaded the actual GPU
+checkpoint and checked one saved dialogue: all selected vectors exactly matched
+HF hidden-state index 7, and prefix-only replay of its first and last selected
+tokens also had maximum absolute error 0.0. The prespecified absolute/relative
+tolerance was 1e-4. These checks cover one dialogue and its selected positions;
+broader prompt coverage remains unevaluated.
+
+The [GPU validation record](./validation/2026-11-19-wsl-gpu-smoke.json) preserves
+the runtime, checkpoint, layer, dtype and numerical checks. The quickstart now
+keeps the WSL CUDA environment separate from Windows development and CPU
+profiles. The validator retains its original CPU defaults and accepts explicit
+paths for this GPU run. Two agents contributed to the validation implementation
+and the remaining 8B readiness review; no connected-app plugin was needed.
+
+These are Qwen 0.5B setup results. The two held-out instruction examples are
+not an estimate of deception performance. The six-control 99th percentile is
+an explicitly unreliable engineering calibration, not a reliable 1% FPR claim.
+A genuine 8B quantized load, its memory profile and independently audited
+behavioral evaluation remain to be run.
 
 ### Tool and plugin use
 

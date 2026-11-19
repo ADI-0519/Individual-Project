@@ -36,6 +36,53 @@ Application Control may independently block a native dependency DLL: changing
 TLS settings does not resolve that policy. Use an approved Linux/CREATE runtime
 or the manual Linux smoke workflow; do not disable application protection.
 
+### WSL Ubuntu GPU setup
+
+The Windows development environment and the Ubuntu model environment are
+separate. In an Ubuntu terminal opened in this checkout, select the Linux
+environment explicitly so a sync does not reuse the Windows environment:
+
+```sh
+sudo apt-get update
+sudo apt-get install --no-install-recommends build-essential python3-dev
+export UV_PROJECT_ENVIRONMENT=.venv-wsl
+uv sync --locked --group dev --extra models --extra cu130 --extra quantization
+export HF_HOME=.cache/huggingface-wsl
+export HF_HUB_DISABLE_TELEMETRY=1
+export TRITON_CACHE_DIR=.cache/triton-wsl
+.venv-wsl/bin/python -m latent_probes doctor
+```
+
+For an existing successful installation, start with `doctor`; reinstalling is
+unnecessary. Its CUDA kernel check must pass before loading a model. From a
+PowerShell terminal in this checkout, the equivalent check is:
+
+```powershell
+wsl -d Ubuntu -- .venv-wsl/bin/python -m latent_probes doctor
+```
+
+Use [the CUDA smoke config](../configs/apollo_smoke_cuda.json) for the first
+local model run. It keeps Qwen 0.5B in float32 to check GPU placement separately
+from reduced precision or quantization. After preparing the small fact subset
+as below, run these commands in Ubuntu with the environment exports above:
+
+```sh
+.venv-wsl/bin/python -m latent_probes apollo extract --config configs/apollo_smoke_cuda.json --examples data/processed/apollo_smoke_pairs.jsonl --output runs/apollo_wsl_gpu_pairs
+.venv-wsl/bin/python -m latent_probes apollo train --features runs/apollo_wsl_gpu_pairs/features.npz --labels runs/apollo_wsl_gpu_pairs/metadata.csv --output runs/apollo_wsl_gpu_probe
+.venv-wsl/bin/python -m latent_probes apollo extract --config configs/apollo_smoke_cuda.json --examples data/examples/apollo_smoke_controls.jsonl --output runs/apollo_wsl_gpu_controls
+.venv-wsl/bin/python -m latent_probes apollo score --features runs/apollo_wsl_gpu_controls/features.npz --probe runs/apollo_wsl_gpu_probe --output runs/apollo_wsl_gpu_control_scores.csv
+.venv-wsl/bin/python -m latent_probes apollo calibrate --scores runs/apollo_wsl_gpu_control_scores.csv --output runs/apollo_wsl_gpu_threshold.json
+.venv-wsl/bin/python scripts/validate_model_smoke.py --training runs/apollo_wsl_gpu_pairs --controls runs/apollo_wsl_gpu_controls --scores runs/apollo_wsl_gpu_control_scores.csv --threshold runs/apollo_wsl_gpu_threshold.json --output runs/apollo_wsl_gpu_validation.json
+```
+
+Keep using this environment for GPU work. The CPU commands in the following
+sections describe a separate profile and should not be used to resync the WSL
+GPU environment. Model caches and generated runs are excluded from Git.
+Triton may compile GPU helpers on the first real model forward pass, so a
+successful elementary CUDA kernel check alone does not establish that the
+compiler toolchain is present. These six controls and seven fact pairs test
+execution; they cannot establish deception detection performance.
+
 ## Prepare data explicitly
 
 ```sh
