@@ -6,6 +6,11 @@ Research software for KCL Variant 2, by Aditya Ranjan. Start with an auditable
 adaptation of Apollo's instruction-pair deception probe, then evaluate transfer
 under reporting pressure and recipient-knowledge shifts.
 
+The main research question is whether a latent reader-outcome readout trained
+under neutral communication transfers to pressured natural reports and improves
+on text/source controls. Apollo and fixed-report replays are comparators and
+diagnostics. See [research direction](docs/RESEARCH_DIRECTION.md).
+
 **Start here:** [Apollo quickstart](docs/APOLLO_QUICKSTART.md) ·
 [paper/source audit](docs/APOLLO_METHOD.md) · [reading log](docs/READING_LOG.md) ·
 [starter audit](docs/STARTER_AUDIT.md) ·
@@ -16,6 +21,12 @@ under reporting pressure and recipient-knowledge shifts.
 [recipient-context experiment](docs/RECIPIENT_CONTEXT_DESIGN.md).
 Read the [measured pilot results and next empirical gates](docs/PILOT_RESULTS.md)
 before scaling the case bank.
+
+The [first natural neutral-to-pressure reader-forecast pilot](docs/NEUTRAL_FORECAST_RESULTS.md)
+is now complete: 84 natural reports and reader labels, a prospectively frozen
+three-class readout, and text/source controls. Activation accuracy is 10/12 in
+each test condition across four cases, while an exploratory literal-text rule
+gets 11/12 under pressure. Added value beyond report text is not established.
 
 The Apollo path trains on selected token rows and scores mean raw projections.
 It is separate from the original last-token baseline documented below.
@@ -42,8 +53,9 @@ The [first reader/context pilot](docs/validation/2026-11-19-reader-and-context-p
 is complete: 48 genuine reader conversations and 48 fixed-report captures,
 alongside exact GPU replay checks on a prespecified 22-dialogue subset. The
 four development cases include a failed factual-restoration control. These
-are feasibility results; natural pressure responses, audited behavior labels,
-strong monitor comparisons and held-out family evaluation remain outstanding.
+are feasibility results. The newer natural pressure run is documented above;
+audited behavior labels, stronger monitor comparisons and held-out family
+evaluation remain outstanding.
 
 ## Original sender–recipient starter
 
@@ -59,7 +71,10 @@ The experiment separates the sender's objective, the information attributed to a
 - Software tests use explicit artificial fixtures. They are not LLM research results.
 - The imported starter was tested without a model runtime. Its historical record is in [VALIDATION.md](VALIDATION.md); current evidence and remaining hardware limits are recorded in [docs/RESEARCH_LOG.md](docs/RESEARCH_LOG.md).
 
-The main first milestone is one real message, one saved activation, and a recipient response with a fully traceable input. Keep the submitted project scope and discuss the final protocol and ethics route with Hanqi.
+The initial real-message/activation milestone is complete. The current gate is
+validating natural reports, recipient outcomes and predictive value beyond text
+before a fresh family-held-out study. Keep the submitted project scope and
+discuss the final protocol and ethics route with Hanqi.
 
 ## 1. Install the lightweight package and check the data
 

@@ -1,5 +1,39 @@
 # Research and implementation log
 
+## 19 November 2026 — Restored slide objective and natural forecast pilot
+
+Checked the original Progress 1 PDF and Progress 2 draft directly. They make
+the neutral-trained reader forecast central and natural reports primary;
+Apollo and fixed-text replay are comparators/diagnostics. Corrected the earlier
+scope recommendation in the current direction and supporting design notes.
+
+Implemented the prospective natural workflow with 24 fresh authored cases,
+72 neutral reports and reader replays, neutral-only fitting, frozen artifacts,
+then 12 favorable test reports. All three classes occur in training: 29 APPROVE,
+10 REJECT and 8 DEFER; one INVALID is explicitly excluded. The saved weights
+and preprocessing are frozen before favorable generation. An independent
+agent verified all 120 frozen predictions, metric calculations and artifact
+hashes; no pressure outcome enters fitting.
+
+Activation accuracy is 10/12 in both test conditions across four case clusters.
+Macro F1 falls .703 to .580; neutral loss is worse than full-text TF-IDF.
+The three lexical models predict the majority class throughout. A separately
+recorded direct LLM text forecast gets 8/12 then 9/12. An exploratory report-word
+copy control gets 7/12 then 11/12, so added value over text is not established.
+
+Full-evidence controls are 23/24. Selected reports contain factual/precedence
+errors, recommendations and explicit decision words. These are legitimate
+observed reader-outcome labels, not audited truthful-omission or deception
+labels. Four reports exceed the word instruction; two end at the token cap.
+No source reports were regenerated after inspection. See the full
+[natural-pilot report](./NEUTRAL_FORECAST_RESULTS.md) and
+[curated machine record](./validation/2026-11-19-neutral-reader-forecast.json).
+
+The four-slide measured presentation preserves the original neutral-to-pressure
+question and foregrounds the new natural pilot and text-shortcut result. The
+baseline, natural reader readout, fixed-text diagnostics and optional causal
+mechanistic extensions are now explicitly separated.
+
 ## 19 November 2026 — Independent audit and first recipient-context results
 
 Three parallel agents reviewed numerical integrity, current probe literature,

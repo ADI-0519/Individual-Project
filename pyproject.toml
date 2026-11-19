@@ -9,7 +9,7 @@ description = "A reproducible starter for sender-recipient experiments and laten
 requires-python = ">=3.11"
 readme = "README.md"
 authors = [{name = "Aditya Ranjan"}]
-dependencies = ["numpy>=1.26,<3", "scikit-learn>=1.4,<2"]
+dependencies = ["numpy>=1.26,<3", "scikit-learn>=1.4,<2", "scipy>=1.11,<2"]
 
 [project.optional-dependencies]
 models = ["transformers>=4.57,<5", "accelerate>=1.2,<2", "safetensors>=0.4"]
@@ -17,6 +17,7 @@ cpu = ["torch>=2.9,<3"]
 cu130 = ["torch>=2.9,<3"]
 quantization = ["bitsandbytes>=0.48,<1"]
 plots = ["matplotlib>=3.8,<4"]
+slides = ["python-pptx>=1,<2", "reportlab>=4,<6"]
 
 [project.scripts]
 latent-probes = "latent_probes.cli:main"

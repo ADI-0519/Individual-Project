@@ -2,6 +2,10 @@
 
 19 November 2026. **Development results from four authored cases, not held-out research estimates.** The original panel, failed controls and follow-up remain separate. The [research decision](./RESEARCH_DIRECTION.md) explains the intended larger study; [machine-readable results](./validation/2026-11-19-reader-and-context-pilot.json) contain decisions, contrasts and artifact hashes.
 
+This is the supporting fixed-report assay. The subsequent main
+[natural neutral-to-pressure forecast pilot](./NEUTRAL_FORECAST_RESULTS.md)
+trains the first reader-outcome readout and preserves the objective in the slides.
+
 ## Engineering and numerical findings
 
 The pinned Llama-3.1-8B-Instruct ran locally on the RTX 5080 with 224 actual NF4 Linear4bit modules and BF16 compute. The expanded validator audited all 536 stored dialogue artifacts and actually replayed 22 dialogues selected by a fixed source-ID rule. Saved/reloaded vectors, block-8 versus HF-hidden-state-9 outputs, identical-option repeats, and first/last future-token mutations agreed **exactly** for every selected example. Its 1,840 recorded checks include many file/hash checks, not 1,840 independent GPU experiments.

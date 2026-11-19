@@ -1,0 +1,501 @@
+{
+  "baseline_examples": 536,
+  "baseline_instruction_auroc": 1.0,
+  "software_tests": 222,
+  "software_subtests": 48,
+  "reader_calls": 48,
+  "fixed_replay_calls": 48,
+  "natural_reports": 84,
+  "neutral_reports": 72,
+  "pressure_reports": 12,
+  "natural_reader_calls": 84,
+  "test_cases": 4,
+  "test_rows_per_condition": 12,
+  "forecast_neutral_correct": 10,
+  "forecast_pressure_correct": 10,
+  "lexical_neutral_correct": 8,
+  "lexical_pressure_correct": 8,
+  "copy_neutral_correct": 7,
+  "copy_pressure_correct": 11,
+  "text_forecast_neutral_correct": 8,
+  "text_forecast_pressure_correct": 9,
+  "forecast_neutral_macro_f1": 0.7026143790849674,
+  "forecast_pressure_macro_f1": 0.5803921568627451,
+  "forecast_neutral_balanced_recall": 0.7777777777777777,
+  "forecast_pressure_balanced_recall": 0.5555555555555555,
+  "forecast_neutral_nll": 0.9575929879156043,
+  "lexical_neutral_nll": 0.6827256695245336,
+  "neutral_readout": {
+    "status": "complete",
+    "headline": "Neutral readout trained; text shortcut exposed",
+    "detail": "Four held-out cases; added value beyond report text is not established.",
+    "metrics": {
+      "activation": {
+        "test/favorable": {
+          "n_valid_rows": 12,
+          "class_counts": {
+            "APPROVE": 8,
+            "REJECT": 1,
+            "DEFER": 3
+          },
+          "missing_evaluation_classes": [],
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              2
+            ]
+          ],
+          "accuracy": 0.8333333333333334,
+          "balanced_accuracy_fixed_three_class_universe": 0.5555555555555555,
+          "macro_f1_fixed_three_class_universe": 0.5803921568627451,
+          "multiclass_log_loss": 0.4091249797564723,
+          "per_class_recall": {
+            "APPROVE": 1.0,
+            "REJECT": 0.0,
+            "DEFER": 0.6666666666666666
+          },
+          "per_class_f1": {
+            "APPROVE": 0.9411764705882353,
+            "REJECT": 0.0,
+            "DEFER": 0.8
+          },
+          "absent_class_metric_policy": "recall and F1 are zero; fixed universe is always three classes",
+          "argmax_tie_policy": "first class in declared class order"
+        },
+        "test/neutral": {
+          "n_valid_rows": 12,
+          "class_counts": {
+            "APPROVE": 8,
+            "REJECT": 3,
+            "DEFER": 1
+          },
+          "missing_evaluation_classes": [],
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "accuracy": 0.8333333333333334,
+          "balanced_accuracy_fixed_three_class_universe": 0.7777777777777777,
+          "macro_f1_fixed_three_class_universe": 0.7026143790849674,
+          "multiclass_log_loss": 0.9575929879156043,
+          "per_class_recall": {
+            "APPROVE": 1.0,
+            "REJECT": 0.3333333333333333,
+            "DEFER": 1.0
+          },
+          "per_class_f1": {
+            "APPROVE": 0.9411764705882353,
+            "REJECT": 0.5,
+            "DEFER": 0.6666666666666666
+          },
+          "absent_class_metric_policy": "recall and F1 are zero; fixed universe is always three classes",
+          "argmax_tie_policy": "first class in declared class order"
+        }
+      },
+      "prompt_only": {
+        "test/favorable": {
+          "n_valid_rows": 12,
+          "class_counts": {
+            "APPROVE": 8,
+            "REJECT": 1,
+            "DEFER": 3
+          },
+          "missing_evaluation_classes": [],
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ]
+          ],
+          "accuracy": 0.6666666666666666,
+          "balanced_accuracy_fixed_three_class_universe": 0.3333333333333333,
+          "macro_f1_fixed_three_class_universe": 0.26666666666666666,
+          "multiclass_log_loss": 0.720728613398399,
+          "per_class_recall": {
+            "APPROVE": 1.0,
+            "REJECT": 0.0,
+            "DEFER": 0.0
+          },
+          "per_class_f1": {
+            "APPROVE": 0.8,
+            "REJECT": 0.0,
+            "DEFER": 0.0
+          },
+          "absent_class_metric_policy": "recall and F1 are zero; fixed universe is always three classes",
+          "argmax_tie_policy": "first class in declared class order"
+        },
+        "test/neutral": {
+          "n_valid_rows": 12,
+          "class_counts": {
+            "APPROVE": 8,
+            "REJECT": 3,
+            "DEFER": 1
+          },
+          "missing_evaluation_classes": [],
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "accuracy": 0.6666666666666666,
+          "balanced_accuracy_fixed_three_class_universe": 0.3333333333333333,
+          "macro_f1_fixed_three_class_universe": 0.26666666666666666,
+          "multiclass_log_loss": 0.6875926959778712,
+          "per_class_recall": {
+            "APPROVE": 1.0,
+            "REJECT": 0.0,
+            "DEFER": 0.0
+          },
+          "per_class_f1": {
+            "APPROVE": 0.8,
+            "REJECT": 0.0,
+            "DEFER": 0.0
+          },
+          "absent_class_metric_policy": "recall and F1 are zero; fixed universe is always three classes",
+          "argmax_tie_policy": "first class in declared class order"
+        }
+      },
+      "report_only": {
+        "test/favorable": {
+          "n_valid_rows": 12,
+          "class_counts": {
+            "APPROVE": 8,
+            "REJECT": 1,
+            "DEFER": 3
+          },
+          "missing_evaluation_classes": [],
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ]
+          ],
+          "accuracy": 0.6666666666666666,
+          "balanced_accuracy_fixed_three_class_universe": 0.3333333333333333,
+          "macro_f1_fixed_three_class_universe": 0.26666666666666666,
+          "multiclass_log_loss": 0.7329618223554003,
+          "per_class_recall": {
+            "APPROVE": 1.0,
+            "REJECT": 0.0,
+            "DEFER": 0.0
+          },
+          "per_class_f1": {
+            "APPROVE": 0.8,
+            "REJECT": 0.0,
+            "DEFER": 0.0
+          },
+          "absent_class_metric_policy": "recall and F1 are zero; fixed universe is always three classes",
+          "argmax_tie_policy": "first class in declared class order"
+        },
+        "test/neutral": {
+          "n_valid_rows": 12,
+          "class_counts": {
+            "APPROVE": 8,
+            "REJECT": 3,
+            "DEFER": 1
+          },
+          "missing_evaluation_classes": [],
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "accuracy": 0.6666666666666666,
+          "balanced_accuracy_fixed_three_class_universe": 0.3333333333333333,
+          "macro_f1_fixed_three_class_universe": 0.26666666666666666,
+          "multiclass_log_loss": 0.6925249393045351,
+          "per_class_recall": {
+            "APPROVE": 1.0,
+            "REJECT": 0.0,
+            "DEFER": 0.0
+          },
+          "per_class_f1": {
+            "APPROVE": 0.8,
+            "REJECT": 0.0,
+            "DEFER": 0.0
+          },
+          "absent_class_metric_policy": "recall and F1 are zero; fixed universe is always three classes",
+          "argmax_tie_policy": "first class in declared class order"
+        }
+      },
+      "full_text": {
+        "test/favorable": {
+          "n_valid_rows": 12,
+          "class_counts": {
+            "APPROVE": 8,
+            "REJECT": 1,
+            "DEFER": 3
+          },
+          "missing_evaluation_classes": [],
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ]
+          ],
+          "accuracy": 0.6666666666666666,
+          "balanced_accuracy_fixed_three_class_universe": 0.3333333333333333,
+          "macro_f1_fixed_three_class_universe": 0.26666666666666666,
+          "multiclass_log_loss": 0.7091140915336509,
+          "per_class_recall": {
+            "APPROVE": 1.0,
+            "REJECT": 0.0,
+            "DEFER": 0.0
+          },
+          "per_class_f1": {
+            "APPROVE": 0.8,
+            "REJECT": 0.0,
+            "DEFER": 0.0
+          },
+          "absent_class_metric_policy": "recall and F1 are zero; fixed universe is always three classes",
+          "argmax_tie_policy": "first class in declared class order"
+        },
+        "test/neutral": {
+          "n_valid_rows": 12,
+          "class_counts": {
+            "APPROVE": 8,
+            "REJECT": 3,
+            "DEFER": 1
+          },
+          "missing_evaluation_classes": [],
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "accuracy": 0.6666666666666666,
+          "balanced_accuracy_fixed_three_class_universe": 0.3333333333333333,
+          "macro_f1_fixed_three_class_universe": 0.26666666666666666,
+          "multiclass_log_loss": 0.6827256695245336,
+          "per_class_recall": {
+            "APPROVE": 1.0,
+            "REJECT": 0.0,
+            "DEFER": 0.0
+          },
+          "per_class_f1": {
+            "APPROVE": 0.8,
+            "REJECT": 0.0,
+            "DEFER": 0.0
+          },
+          "absent_class_metric_policy": "recall and F1 are zero; fixed universe is always three classes",
+          "argmax_tie_policy": "first class in declared class order"
+        }
+      },
+      "full_text_activation": {
+        "test/favorable": {
+          "n_valid_rows": 12,
+          "class_counts": {
+            "APPROVE": 8,
+            "REJECT": 1,
+            "DEFER": 3
+          },
+          "missing_evaluation_classes": [],
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              2
+            ]
+          ],
+          "accuracy": 0.8333333333333334,
+          "balanced_accuracy_fixed_three_class_universe": 0.5555555555555555,
+          "macro_f1_fixed_three_class_universe": 0.5803921568627451,
+          "multiclass_log_loss": 0.42396599636990545,
+          "per_class_recall": {
+            "APPROVE": 1.0,
+            "REJECT": 0.0,
+            "DEFER": 0.6666666666666666
+          },
+          "per_class_f1": {
+            "APPROVE": 0.9411764705882353,
+            "REJECT": 0.0,
+            "DEFER": 0.8
+          },
+          "absent_class_metric_policy": "recall and F1 are zero; fixed universe is always three classes",
+          "argmax_tie_policy": "first class in declared class order"
+        },
+        "test/neutral": {
+          "n_valid_rows": 12,
+          "class_counts": {
+            "APPROVE": 8,
+            "REJECT": 3,
+            "DEFER": 1
+          },
+          "missing_evaluation_classes": [],
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "accuracy": 0.8333333333333334,
+          "balanced_accuracy_fixed_three_class_universe": 0.7777777777777777,
+          "macro_f1_fixed_three_class_universe": 0.7026143790849674,
+          "multiclass_log_loss": 0.9623256909344643,
+          "per_class_recall": {
+            "APPROVE": 1.0,
+            "REJECT": 0.3333333333333333,
+            "DEFER": 1.0
+          },
+          "per_class_f1": {
+            "APPROVE": 0.9411764705882353,
+            "REJECT": 0.5,
+            "DEFER": 0.6666666666666666
+          },
+          "absent_class_metric_policy": "recall and F1 are zero; fixed universe is always three classes",
+          "argmax_tie_policy": "first class in declared class order"
+        }
+      }
+    }
+  },
+  "strong_text_forecast": {
+    "summary": {
+      "neutral_test": {
+        "n": 12,
+        "n_valid_targets": 12,
+        "prediction_counts": {
+          "APPROVE": 12
+        },
+        "invalid_predictions": 0,
+        "accuracy": 0.6666666666666666,
+        "macro_f1": 0.26666666666666666
+      },
+      "favorable_test": {
+        "n": 12,
+        "n_valid_targets": 12,
+        "prediction_counts": {
+          "REJECT": 1,
+          "APPROVE": 11
+        },
+        "invalid_predictions": 0,
+        "accuracy": 0.75,
+        "macro_f1": 0.6140350877192983
+      }
+    },
+    "source_sha256": {
+      "manifest.json": "9dc4acbce8fe1a827e1c4072dfac02c017327a191190a8e1494393960b8b9b98",
+      "plan.json": "d01d1e7c8323e53af2232b443f1ebc9afccc3010b76e419a5fc03be28a46929d",
+      "summary.json": "757a0f104db6153810420343a36a3de4cbe5b4a28547cd128636b095bf033c0b"
+    },
+    "limits": [
+      "One greedy forecast per report; four case clusters, not24 independent cases.",
+      "Same8B checkpoint as sender/reader; stronger independent monitors remain future work.",
+      "Post-hoc exploratory baseline; original reports and trained readouts stay frozen.",
+      "Forecast decisions, not calibrated probabilities; no log-loss comparison is invented."
+    ]
+  }
+}

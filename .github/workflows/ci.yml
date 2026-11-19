@@ -63,6 +63,42 @@ jobs:
           if-no-files-found: error
           retention-days: 14
 
+  presentation:
+    name: Rebuild measured Progress 2
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out source
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
+      - name: Set up locked uv and Python
+        uses: astral-sh/setup-uv@37802adc94f370d6bfd71619e3f0bf239e1f3b78 # v7.6.0
+        with:
+          python-version: "3.11"
+          enable-cache: true
+          cache-dependency-glob: |
+            pyproject.toml
+            uv.lock
+          cache-suffix: presentation
+      - name: Install locked presentation dependencies
+        run: uv sync --locked --extra slides --group dev
+      - name: Rebuild editable deck and vector PDF from measured data
+        run: >-
+          uv run --locked --extra slides python scripts/update_progress2.py
+          --results presentations/progress2/Progress-2-measured-results.json
+          --pptx .cache/progress2-check.pptx
+          --pdf .cache/progress2-check.pdf
+      - name: Retain checked presentation
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: progress2-presentation-check
+          path: |
+            .cache/progress2-check.pptx
+            .cache/progress2-check.pdf
+          if-no-files-found: error
+          retention-days: 14
+
   quality:
     name: Lint and build
     runs-on: ubuntu-latest

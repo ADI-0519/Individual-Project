@@ -2,10 +2,12 @@ include ACKNOWLEDGEMENTS.md CITATION.cff CONTRIBUTING.md SECURITY.md VALIDATION.
 include data/README.md data/pilot_scenarios.jsonl data/probe_examples_template.jsonl
 recursive-include data/examples *.jsonl
 recursive-include data/reader_panel *.json
+recursive-include data/reader_forecast *.json
 recursive-include configs *.json
 recursive-include docs *.md
 recursive-include docs/validation *.json
 recursive-include scripts *.py *.sh
+recursive-include presentations *.pptx *.pdf *.json
 prune data/raw
 prune data/private
 prune data/processed

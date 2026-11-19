@@ -165,8 +165,8 @@ baseline must receive the same information. A separate fixed-report sender
 diagnostic can test sensitivity to attributed knowledge and reporting pressure;
 it cannot use those manipulations as ground-truth intent labels.
 
-An optional neutral-trained recipient-belief readout belongs after this validity
-check. It should be evaluated on held-out scenario families, compared with
+A neutral-trained reader-outcome readout is the main transfer experiment in the
+slides and follows this supporting validity check. It should be evaluated on held-out scenario families, compared with
 world-state and instruction-only controls, and distinguished from direct
 representations of the recipient packet. Neither the current panel nor linear
 decodability establishes a causal second-order belief mechanism.

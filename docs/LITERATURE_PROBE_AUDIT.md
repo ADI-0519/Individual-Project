@@ -2,6 +2,8 @@
 
 **Audit date: 19 November 2026.** This is a primary-source research assessment, not a report of new model results. Reading scopes below distinguish full-paper reading, targeted sections, implementation inspection, and search-only leads. No novelty or publication guarantee is implied.
 
+**Scope correction after checking the slides:** the project centres on a neutral-trained reader-outcome readout transferring to pressure, with natural reports as primary evidence. The frozen-Apollo/matched-report experiment proposed below is a supporting diagnostic. It does not replace that central transfer question. See the updated [research direction](./RESEARCH_DIRECTION.md).
+
 The recommendation is to retain **recipient-dependent truthful omissions** as the research direction, while treating the Apollo adaptation and pressure-specificity panel as validation milestones. Generic probe robustness, pressure confounds, omission-themed instruction pairs and elicited-belief deception detection already have substantial prior work.
 
 Existing implementation details and the small pilot are documented in [Apollo method](./APOLLO_METHOD.md), [reading log](./READING_LOG.md) and [planned pressure pilot](./PRESSURE_PILOT.md).
@@ -150,11 +152,11 @@ The pressured-honest subset is selected by behavior after prompting, so its comp
 
 A capable text monitor or generator self-report logit is an important comparator. FIBS in particular shows why latent scores should not be interpreted without this baseline. The tiny first pilot can establish data validity before adding monitoring machinery.
 
-## 4. Narrow recommended research question
+## 4. Supporting audience-context assay and originality limits
 
 > **Do frozen deception monitors track the decision consequences of truthful omissions when recipient knowledge changes, or do they primarily track reporting incentives and disclosure cues?**
 
-The proposed contribution is a controlled evaluation of **recipient-dependent monitoring and transfer**, not another universal deception direction. It remains aligned with Variant 2 while retaining the useful audience-belief motivation. The additional deep readings narrow the proposed distinction: Florin et al. already manipulate disclosure salience, Hu et al. already measure downstream false verdicts from truthful fragments, and Huang et al. already adapt probes across benchmark domains. The experiment must contribute the **joint control of fixed report wording, independently assigned recipient evidence and a fixed factual restoration**, together with held-out monitor evaluation. This combination is a candidate distinction from these three papers, not a guarantee that the broader literature has never studied it.
+This supporting diagnostic evaluates recipient-dependent monitoring alongside the main neutral-to-pressure outcome-readout experiment. Florin et al. already manipulate disclosure salience, Hu et al. already measure downstream false verdicts from truthful fragments, and Huang et al. already adapt probes across benchmark domains. The joint control of fixed wording, independently assigned reader evidence and factual restoration may help validate interpretation; it is not the replacement main contribution. The natural transfer study still needs an informative target and competitive information-matched baselines. No broader-literature novelty guarantee follows from this search.
 
 A coherent end-to-end study has these components:
 
