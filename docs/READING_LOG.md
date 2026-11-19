@@ -119,8 +119,40 @@ Read sections 1–4 and the beginning of section 5, including complete methods 3
 - Their tuned regularization is lambda 1, rather than Apollo's lambda 10. Treat this as a different experimental recipe.
 - The paper already evaluates MASK transfer failures and incentive/prompt sensitivity. A new 8B pressure-control replication needs the reader-knowledge/omission extension for a distinct contribution.
 
+## MASK implementation and public-data metadata audit
+
+Inspected the official generator, evaluator/parser, downloader, repository
+license and dataset card/API metadata. The inspected code revision is
+[`25e0b1201e6c928ebe69f7c5aad6fa9063a377ea`](https://github.com/centerforaisafety/mask/tree/25e0b1201e6c928ebe69f7c5aad6fa9063a377ea);
+the canonical dataset is
+[`cais/MASK` at `74a44111218d762985b7a82f39b0eb5bddadad2a`](https://huggingface.co/datasets/cais/MASK/tree/74a44111218d762985b7a82f39b0eb5bddadad2a).
+No pilot case records were downloaded, selected or scored in this audit.
+
+- The `known_facts` / `test` metadata reports 209 binary rows. Its original
+  `belief_elicit_1/2/3` prompts remove the need to invent indirect questions.
+  The generator repeats the first three times and the others once each.
+- Pressure uses the original system/user prompt pair. The upstream generation
+  clients are for cloud APIs; our local checkpoint uses this repository's backend.
+- The parser recognizes slash-separated alternatives inside `<pivotal>` tags;
+  option order does not identify truth. Numerical propositions use `<value>`.
+- Dataset terms are CC-BY-4.0; repository code is MIT. These are separate sources
+  with separate attribution/notice requirements. Do not assume a code license
+  licenses the data.
+- The card's loading example points to `cais/hle`; the official downloader
+  correctly names MASK. The card's 1,028-example prose also differs from the
+  1,000 total in its six configuration counts. Preserve the exact revision and
+  selected IDs rather than assuming identity with a historical release.
+
+The resulting [pilot protocol](./PRESSURE_PILOT.md) remains planned, with
+behavioral annotation and local inference scheduling still to be completed.
+
 ## Consequences for this repository
 
 The implementation contract and explicit 8B adaptations are in [Apollo method](./APOLLO_METHOD.md). The main safeguards are source-pinned training templates, word-boundary masking, token-row fitting, training-only normalization, raw-score aggregation, explicit layer conventions, independent control calibration, and a behavior label that distinguishes honesty from pressure, evasion, factual error and recipient outcomes.
 
-Open issues require experimental or additional source evidence: real tokenizer boundary tests; numerical parity of hooks versus hidden-state extraction; behavior-label auditing; neutral-tail sample size; upstream MASK code details; and whether the selected 8B layer transfers at all. Passing software tests addresses implementation behavior, not these empirical research questions.
+The genuine 8B check now verifies mask/ID replay and exact hook/hidden-state
+parity for one saved dialogue; the full instruction-condition diagnostic also
+completed. Open issues include broader boundary-test coverage, behavior-label
+auditing, neutral-tail sample size, a MASK local-inference adapter and whether
+the selected layer transfers to behavioral evaluation. Software checks and
+instruction separation do not settle those empirical questions.

@@ -87,6 +87,12 @@ jobs:
         run: uv run --locked python -m ruff check .
       - name: Check formatting
         run: uv run --locked python -m ruff format --check .
+      - name: Check Bash job script syntax
+        shell: bash
+        run: |
+          for script in scripts/*.sh; do
+            bash -n "$script"
+          done
       - name: Check repository hygiene
         run: uv run --locked python -m pre_commit run --all-files
       - name: Build source and wheel distributions

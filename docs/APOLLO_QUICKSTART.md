@@ -192,6 +192,22 @@ then generates and scores one neutral response. Its BF16 checks are separate
 from the Qwen float32 validator. No detection accuracy or calibrated operating
 point follows from these engineering examples.
 
+### Fit the full instruction-pair baseline
+
+After the small 8B validator passes, prepare the complete pinned source with
+the same explicit exclusion policies and use the pinned development profile:
+
+```sh
+.venv-wsl/bin/python -m latent_probes apollo prepare --facts data/raw/apollo-pinned/true_false_facts.csv --output data/processed/apollo_full_pairs_v1.jsonl --short-fact-policy exclude --duplicate-fact-policy exclude
+.venv-wsl/bin/python -m latent_probes apollo extract --config configs/apollo_llama8b_4bit.json --examples data/processed/apollo_full_pairs_v1.jsonl --output runs/apollo_llama8b_full_v1
+.venv-wsl/bin/python -m latent_probes apollo train --features runs/apollo_llama8b_full_v1/features.npz --labels runs/apollo_llama8b_full_v1/metadata.csv --output runs/apollo_llama8b_full_probe_v1
+```
+
+This captures 536 dialogues: two instruction conditions for each of 268 facts,
+split into 219 training and 49 validation pairs before fitting. The held-out
+AUROC describes instruction-condition discrimination. Actual honesty under
+pressure requires the separate behavioral evaluation and label audit.
+
 Use `configs/apollo_llama8b_bf16.json` on suitable hardware and
 `configs/apollo_llama8b_4bit.json` for a separate quantized development run.
 Llama access must be granted to your own Hugging Face account; authenticate on
@@ -217,3 +233,8 @@ labels and checks calibration/training overlap when provenance is available.
 
 No 8B detection result, calibrated deception probability, reliable 1% FPR or
 novel omission/belief mechanism follows from the engineering smoke.
+
+After the full instruction-pair baseline, follow the
+[planned pressure-specificity pilot](./PRESSURE_PILOT.md) for the first audited
+behavioral comparison. Its case selection, sampling, blind label audit and
+identical-text diagnostic must be frozen before inspecting pilot scores.

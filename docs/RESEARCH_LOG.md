@@ -83,9 +83,9 @@ verified download; its measured activation result is unaffected by these guards.
 
 ### Scope that remains
 
-Finish genuine Llama 3.1 8B execution and validate its declared
-precision/depth profile, collect independent control/evaluation
-responses, audit behavioral labels and freeze the held-out protocol. The reader
+Collect independent control/evaluation responses, audit behavioral labels,
+run the pressure-specificity pilot and establish a BF16 reference in a verified
+CREATE environment. Freeze the held-out behavioral protocol. The reader
 forecast and omission extensions remain research tasks; the 24 draft starter
 scenarios must not be promoted to validated deception examples.
 
@@ -153,6 +153,61 @@ tolerance is reused or widened after seeing the results. The validator also
 requires actual bitsandbytes 4-bit modules, finite 4,096-dimensional vectors,
 matching masks/IDs, and one generated/scored neutral answer. That answer will
 exercise scoring; it cannot establish a detection metric or calibration.
+
+### Verified 8B execution and full instruction baseline
+
+The first transfer was interrupted; a process check showed that neither the
+capture nor its continuation was still running. Resumed the identical capture
+with unchanged package/code fingerprints and retained provenance. The completed
+weight shard was reused; unfinished Xet shards restarted their transfers. All
+four original shards subsequently finished. The results below are from the
+completed executions, not an inference from a waiting status file.
+
+The [8B validation record](./validation/2026-11-19-llama8b-4bit-smoke.json)
+reports **pass** on the RTX 5080: 224 actual bitsandbytes Linear4bit modules,
+BF16 native residual outputs, 14 captured dialogues and 84 token vectors with
+4,096 dimensions. In the checked saved dialogue, all 28,672 compared values
+matched the actual HF hidden-state index 9 and the fresh reload exactly. Two
+unchanged same-shape forwards matched exactly. Separate mutations of future
+tokens preserved the first and last selected vectors exactly. All observed
+errors were zero; the predeclared BF16-neighbor rule was not widened. These
+index/replay/causality checks cover that dialogue, not all possible prompts.
+
+The same model generated `17 + 25 = 42.` and its saved response activations
+were scored successfully. The validator's maximum PyTorch allocation was
+6.701 GiB, including its recorded initialization peak. Runtime imports and
+cached model loading took 201.4 seconds in this WSL/OneDrive setup. This is a
+local engineering profile, not a CREATE timing prediction. The pinned tokenizer
+was also inspected: its default date is the constant `26 Jul 2024`, with no
+wall-clock `strftime_now` call; no date-pinning code change was necessary.
+
+The [full instruction baseline record](./validation/2026-11-19-llama8b-full-instruction-probe.json)
+then completed on the same checkpoint, NF4/BF16 profile and block-8 signature:
+
+- 268 eligible unique facts, with 219 training / 49 validation pairs.
+- 536 dialogues and 3,200 token rows: 2,536 training / 664 validation rows.
+- Training-only standardization, `C=0.1`, no fitted intercept and mean raw margins.
+- AUROC **1.00 on 98 held-out instruction examples**, comprising 49 paired facts.
+- Capture wall time 279.9 seconds including model loading; classifier fit 0.81 seconds.
+- Maximum recorded per-example PyTorch allocation 5.466 GiB after peak resets;
+  this excludes initialization and other applications' allocations.
+
+The AUROC measures separation of instruction conditions. Both continuations in
+each pair are fixed source truths, so it is not a measured deception-detection
+accuracy. No operating threshold or calibration is inferred from this result.
+The full probe also scored the saved neutral arithmetic answer through the
+matching feature-signature check; one answer remains a compatibility smoke.
+Both main 8B profiles are now pinned to the verified model revision.
+
+The [pressure pilot](./PRESSURE_PILOT.md) remains planned and unexecuted. The
+source audit identified original MASK belief prompts and a separate CC-BY-4.0
+data license, avoiding unnecessary rewritten belief questions and a misleading
+dataset-card loading example. Case selection and blind behavioral audit still
+precede scoring. The new Apollo CREATE template calls the correct extraction
+command, checks real CUDA execution and passes local Bash syntax/configuration
+guards; it has not been executed on CREATE. CI now checks Bash syntax, and
+source distributions include the curated JSON validation evidence while raw
+runs, weights and credentials remain excluded.
 
 ### Tool and plugin use
 

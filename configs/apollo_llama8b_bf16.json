@@ -1,7 +1,7 @@
 {
   "model": {
     "model_id": "meta-llama/Llama-3.1-8B-Instruct",
-    "revision": "main",
+    "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
     "dtype": "bfloat16",
     "quantization": "none",
     "device": "cuda",

@@ -8,7 +8,8 @@ under reporting pressure and recipient-knowledge shifts.
 
 **Start here:** [Apollo quickstart](docs/APOLLO_QUICKSTART.md) ·
 [paper/source audit](docs/APOLLO_METHOD.md) · [reading log](docs/READING_LOG.md) ·
-[starter audit](docs/STARTER_AUDIT.md).
+[starter audit](docs/STARTER_AUDIT.md) ·
+[planned pressure pilot](docs/PRESSURE_PILOT.md).
 
 The Apollo path trains on selected token rows and scores mean raw projections.
 It is separate from the original last-token baseline documented below.
@@ -21,9 +22,15 @@ do not establish deception-detection performance. See [validation](VALIDATION.md
 for the imported starter's historical checks; current checks are recorded in
 the repository research log.
 
-The first [genuine CPU smoke run](https://github.com/ADI-0519/Individual-Project/actions/runs/44525570337)
-passed: Qwen 0.5B token capture, probe fitting, generated control scoring and
-causal-prefix invariance. The main Llama 8B study has not yet been run.
+The [genuine CPU smoke run](https://github.com/ADI-0519/Individual-Project/actions/runs/44525570337)
+and local Qwen GPU check passed. The
+[Llama 8B NF4/BF16 validation](docs/validation/2026-11-19-llama8b-4bit-smoke.json)
+also passed, including actual quantization, layer indexing, saved-vector replay
+and same-shape causal checks. The
+[full instruction baseline](docs/validation/2026-11-19-llama8b-full-instruction-probe.json)
+captured 536 dialogues and fitted the probe using 219 training / 49 validation
+fact pairs. Its validation target is the instruction condition. Audited
+behavioral evaluation under pressure and the omission study remain to be run.
 
 ## Original sender–recipient starter
 

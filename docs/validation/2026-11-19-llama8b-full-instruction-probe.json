@@ -1,0 +1,343 @@
+{
+  "status": "full_instruction_baseline_complete",
+  "created_at": "2026-11-19T18:42:01.830183+00:00",
+  "is_deception_evaluation": false,
+  "label_target": "instructed_honesty_condition",
+  "feature_signature": {
+    "attention_implementation": "sdpa",
+    "capture": "block output before final model norm; float32 CPU storage",
+    "chat_template_sha256": "ca5b86f15c19b53c24ff18228849e06ffb677b952d85171c66d9b720d924f9bb",
+    "decoder_block_index": 8,
+    "dtype": "bfloat16",
+    "hf_hidden_state_index": 9,
+    "is_test_fixture": false,
+    "model_id": "meta-llama/Llama-3.1-8B-Instruct",
+    "quantization": "4bit",
+    "resolved_revision": "0e9e39f249a16976918f6564b8830bc894c89659"
+  },
+  "examples": 536,
+  "token_rows": 3200,
+  "feature_dimension": 4096,
+  "training_pairs": 219,
+  "validation_pairs": 49,
+  "training_token_rows": 2536,
+  "validation_token_rows": 664,
+  "validation_diagnostic": {
+    "n_examples": 98,
+    "n_positive": 49,
+    "n_negative": 49,
+    "roc_auc": 1.0,
+    "target": "held-out instruction condition, not observed deceptive behavior"
+  },
+  "fit_settings": {
+    "C": 0.1,
+    "fit_intercept": false,
+    "penalty": "l2",
+    "solver": "lbfgs",
+    "max_iter": 1000,
+    "random_state": 42,
+    "numeric_dtype": "float64",
+    "normalization": "StandardScaler fitted on training token rows only",
+    "training_unit": "token",
+    "score_aggregation": "mean_raw_margin"
+  },
+  "capture_wall_seconds_including_model_load": 279.88918756599924,
+  "probe_fit_wall_seconds": 0.8087642800001049,
+  "peak_torch_allocated_gib": 5.465758800506592,
+  "source_preparation": {
+    "profile": "apollo_saved_plain_source_word_mask",
+    "recipe_revision": "f8ec4010e74927394709dffa22b97bdf8cd5a62f",
+    "source_revision": "f8ec4010e74927394709dffa22b97bdf8cd5a62f",
+    "source_verified": true,
+    "source_git_blob": "addb4c5ae6cdc9cd99793a950727862b7ad06d5c",
+    "facts_sha256": "924709159b40a30d5b51488e9ccd7fd886456a89f0e0f5849eacefba6ff55312",
+    "prepared_sha256": "50fbf11d39a8a819ee95430e295b8a79fb5d24e4d0c31c895419278beff00184",
+    "requested_max_pairs": 512,
+    "selected_source_pairs": 306,
+    "fact_pairs": 268,
+    "training_pairs": 219,
+    "validation_pairs": 49,
+    "short_fact_policy": "exclude",
+    "duplicate_fact_policy": "exclude",
+    "excluded_pairs": [
+      {
+        "pair_id": "fact_fb971eb2223c8f4a43ae",
+        "source_index": 4,
+        "split": "train",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_29622cfd87808aa50ece",
+        "source_index": 26,
+        "split": "train",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_096b6d359329332b0b95",
+        "source_index": 28,
+        "split": "train",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_05d3c882c6175f956d02",
+        "source_index": 44,
+        "split": "train",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_da5263ec7901ae716c38",
+        "source_index": 54,
+        "split": "train",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_41a120bd89b43945be11",
+        "source_index": 64,
+        "split": "train",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_473ee059126af14a010d",
+        "source_index": 77,
+        "split": "train",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_798f6308a2a9760fbdbc",
+        "source_index": 78,
+        "split": "train",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_450909805292f062d8c9",
+        "source_index": 79,
+        "split": "train",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_6d4d8fc8ce8aff993787",
+        "source_index": 81,
+        "split": "train",
+        "reason": "duplicate of an earlier source fact"
+      },
+      {
+        "pair_id": "fact_f7556ab13602f24fe133",
+        "source_index": 98,
+        "split": "train",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_e03239952e463a4025f3",
+        "source_index": 122,
+        "split": "train",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_1799bf2f42a2d9440ba2",
+        "source_index": 134,
+        "split": "train",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_702c417f9be9351c7606",
+        "source_index": 147,
+        "split": "train",
+        "reason": "duplicate of an earlier source fact"
+      },
+      {
+        "pair_id": "fact_3d1ba630e452e927d3c0",
+        "source_index": 153,
+        "split": "train",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_149de4d521b807d41e1a",
+        "source_index": 155,
+        "split": "train",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_c45fe94ab4c45f7073d8",
+        "source_index": 180,
+        "split": "train",
+        "reason": "duplicate of an earlier source fact"
+      },
+      {
+        "pair_id": "fact_581bc0fedebc89d78cdc",
+        "source_index": 186,
+        "split": "train",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_0b245ed4ab3aef5907f3",
+        "source_index": 204,
+        "split": "train",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_8e56b919a229bd1780d9",
+        "source_index": 205,
+        "split": "train",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_1f8f6dbfa18ea9a8c22d",
+        "source_index": 210,
+        "split": "train",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_0e82445091057ef7bf06",
+        "source_index": 213,
+        "split": "train",
+        "reason": "duplicate of an earlier source fact"
+      },
+      {
+        "pair_id": "fact_bb346a60c10c37e3bc1d",
+        "source_index": 219,
+        "split": "train",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_196b683b36487595d64a",
+        "source_index": 220,
+        "split": "train",
+        "reason": "duplicate of an earlier source fact"
+      },
+      {
+        "pair_id": "fact_a41414b117f46632e664",
+        "source_index": 229,
+        "split": "train",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_07402d93fbd8795df4e3",
+        "source_index": 244,
+        "split": "train",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_eafb8e06674262e4bf5f",
+        "source_index": 250,
+        "split": "validation",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_096b6d359329332b0b95",
+        "source_index": 251,
+        "split": "validation",
+        "reason": "duplicate of an earlier source fact"
+      },
+      {
+        "pair_id": "fact_e4aeeb8b454beabad215",
+        "source_index": 259,
+        "split": "validation",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_a4b66b2922dc6afdcef0",
+        "source_index": 268,
+        "split": "validation",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_88fe19962c28f3c24a5d",
+        "source_index": 271,
+        "split": "validation",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_6436322d6c4a3e6a7ea7",
+        "source_index": 272,
+        "split": "validation",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_382077bdf0ef657cda52",
+        "source_index": 273,
+        "split": "validation",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_203421f6cfd4af03241f",
+        "source_index": 275,
+        "split": "validation",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_1ee17d1e621f6eb3a11b",
+        "source_index": 281,
+        "split": "validation",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_ac95dd6f280ac7b82945",
+        "source_index": 284,
+        "split": "validation",
+        "reason": "zero selected tokens after five-word exclusion"
+      },
+      {
+        "pair_id": "fact_1fc587ac0fb44bb12106",
+        "source_index": 291,
+        "split": "validation",
+        "reason": "duplicate of an earlier source fact"
+      },
+      {
+        "pair_id": "fact_196b683b36487595d64a",
+        "source_index": 292,
+        "split": "validation",
+        "reason": "duplicate of an earlier source fact"
+      }
+    ],
+    "split": "ordered true facts; both instruction variants remain together",
+    "mask": "exclude final five space-delimited WORDS; paper prose says tokens",
+    "label_meaning": "instruction condition, not observed honesty/deception",
+    "small_run": false
+  },
+  "capture_environment": {
+    "python": "3.11.17",
+    "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "packages": {
+      "numpy": "2.4.6",
+      "scikit-learn": "1.9.1",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "tokenizers": "0.22.2",
+      "huggingface-hub": "0.36.2",
+      "accelerate": "1.16.0",
+      "bitsandbytes": "0.50.2",
+      "safetensors": "0.8.0"
+    },
+    "git_commit": "db5512c29f5b1e16bd104963298ecc8bcd8e26f0",
+    "code_sha256": "ae48332767fd56e45d2d8d3566012a68157adab441aadf37be42cae2bad1c196"
+  },
+  "input_output_sha256": {
+    "runs/apollo_llama8b_full_v1/manifest.json": "837563fe2147db28e36196c917bdcefdf33493d76e6cf2c94a5a1cc27f21c004",
+    "runs/apollo_llama8b_full_v1/config.json": "48953c090bd75bd5f2e3ddbe99335b0ffd60c1968e37860bee0d7281926b5162",
+    "runs/apollo_llama8b_full_v1/features.npz": "e9eca30a14553bc13019f904f545b2ccd26b399a1d3ad4c2ba521e8b680800fc",
+    "runs/apollo_llama8b_full_v1/metadata.csv": "3c2d394b782ad47b86b0ab880830b9f21f14060acdbfa0a9a18c668324c5f06a",
+    "runs/apollo_llama8b_full_probe_v1/manifest.json": "913adcb4f413941ed4022929d7aaf3d06fcf0f532c44cabe0049ce2f1fc784a5",
+    "runs/apollo_llama8b_full_probe_v1/probe.npz": "a914ee3a458553f16a4ef32baf9472410df07e14d96395e0523edb6e66babb54",
+    "docs/validation/2026-11-19-llama8b-4bit-smoke.json": "5b207052a41946eeea89ed8dfd12415e99f0982dbd086458aab8a5f1f446fd62",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/runs/run_full_apollo_v1.py": "ce4b673bfa1aba99647cd76525d4de2f6f4ffd1c5abdb04f165740785cc14246",
+    "runs/apollo_llama8b_full_neutral_smoke_scores.csv": "1837cdeb06bc84d20070928ac16c33fc15561bc94a16faa8d4c9597672bc08bb",
+    "runs/apollo_llama8b_full_neutral_smoke_scores.csv.manifest.json": "7a1a2f70012add03f8311a3b3b245fcf1efe8b102738b1fc105400059f79fb8d",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/.cache/curate_full_baseline.py": "b3f0e137052fe1f3069582017857cd3fd4d5b22d0005375c8ec604ba3f2d3f72"
+  },
+  "limitations": [
+    "Validation discriminates instruction conditions, not observed deceptive behavior.",
+    "This is an NF4/BF16 8B adaptation, not the original 70B numerical result.",
+    "No independent behavioral evaluation or reliable false-positive operating point yet.",
+    "PyTorch allocated memory excludes other applications and some runtime allocations."
+  ],
+  "peak_torch_allocated_gib_scope": "Maximum recorded per-example peak after counter resets; excludes model-initialization peak.",
+  "neutral_score_smoke_with_full_probe": {
+    "completed": true,
+    "n_examples": 1,
+    "n_tokens": 8,
+    "raw_margin": -13.16455344559252,
+    "probe_sha256": "a914ee3a458553f16a4ef32baf9472410df07e14d96395e0523edb6e66babb54",
+    "features_sha256": "9aa288aa4a29a18bd772f3c1dc3c7b4b2a4fdf423d34b0a243cab4feec9938aa",
+    "purpose": "One-example signature compatibility and scoring check; not calibration."
+  }
+}
