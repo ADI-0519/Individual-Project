@@ -104,6 +104,16 @@ The method extracts multiple orthogonal probe directions and adapts a gating net
 
 Writer/Editor/Director agents optimize truthful-fragment selection and ordering. Victims process the same feed, form claims, and explicitly report a verdict on the target hypothesis. Appendix B.4 then evaluates five-victim majority vote and a downstream judge given raw evidence plus victim reports. Therefore neither truthful evidence causing mistaken conclusions nor measured downstream verdicts is a new contribution by itself. The experiment does not independently cross recipients' starting evidence or replay identical report wording across informed/stale contexts; it does not measure a fixed decisive-fact restoration against an irrelevant edit. Section 6 proposes monitoring defenses but does not evaluate latent probes. Main section 5.1 mentions false and unverified target rumors whereas B.1 describes false rumors; target-truth certainty needs care before dataset reuse. Self-reported verdicts/confidence are behavioral measures, not direct latent belief observations.
 
+### JANUS: recipient-relevant summaries already receive goal-conditioned analysis
+
+**JANUS**, **v2, 29 October 2026**. [Versioned primary text](https://arxiv.org/html/2606.10852v2).
+
+Reading scope: sections 2.1–2.4, 3.1–3.3 and 4–5; prompting appendix C.2; judging and human validation D.1–D.5; fact inclusion and ordering F/G; robustness H/I. Other appendices and released implementation were not exhaustively audited.
+
+JANUS already conditions summaries on recipients' needs, constraints and vulnerabilities and contrasts neutral with institutional objectives. Recipient context remains fixed within each pair while the summary is regenerated. Human validators see complete evidence and paired outputs and judge misleadingness/action pressure. This is not independent replay of actual readers with different starting evidence. No latent-probe evaluation or fixed decisive-fact restoration/irrelevant-edit factorial was identified in the inspected sections.
+
+The overlap rules out claiming recipient relevance or goal-conditioned truthful communication as new. The bounded fixed-report/independent-evidence/restoration distinction remains. A feasibility warning also matters: fact retention is nearly complete, including Llama 8B adverse-fact inclusion of 99.17% under neutral and 95.83% under goal conditions in appendix F. Natural omission prevalence must be measured rather than assumed. These are that benchmark's inclusion rates, not our omission or deception rates.
+
 ## 2. What instruction-pair AUROC 1 establishes
 
 Perfect held-out instruction-condition discrimination is a useful numerical and activation-extraction check. It establishes separation of those conditions on that finite panel under the recorded feature profile.
