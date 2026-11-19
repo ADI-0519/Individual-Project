@@ -1,0 +1,69 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kcl-latent-probes"
+version = "0.1.0"
+description = "A reproducible starter for sender-recipient experiments and latent probe evaluation"
+requires-python = ">=3.11"
+readme = "README.md"
+authors = [{name = "Aditya Ranjan"}]
+dependencies = ["numpy>=1.26,<3", "scikit-learn>=1.4,<2"]
+
+[project.optional-dependencies]
+models = ["transformers>=4.57,<5", "accelerate>=1.2,<2", "safetensors>=0.4"]
+cpu = ["torch>=2.9,<3"]
+cu130 = ["torch>=2.9,<3"]
+quantization = ["bitsandbytes>=0.48,<1"]
+plots = ["matplotlib>=3.8,<4"]
+
+[project.scripts]
+latent-probes = "latent_probes.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.urls]
+Repository = "https://github.com/ADI-0519/Individual-Project"
+Issues = "https://github.com/ADI-0519/Individual-Project/issues"
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "pytest-cov>=6,<8", "ruff>=0.14,<1", "build>=1.2,<2", "twine>=6,<7", "pre-commit>=4,<5", "setuptools>=68", "wheel>=0.45"]
+
+[tool.uv]
+required-version = "==0.13.5"
+conflicts = [[{ extra = "cpu" }, { extra = "cu130" }]]
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cpu", extra = "cpu" }, { index = "pytorch-cu130", extra = "cu130" }]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra -m 'not model'"
+markers = ["model: integration checks requiring an explicitly selected real model"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "UP"]
+
+[tool.coverage.run]
+source = ["latent_probes"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true

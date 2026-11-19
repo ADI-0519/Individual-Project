@@ -1,0 +1,17 @@
+{
+  "model": {
+    "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "main",
+    "dtype": "float32",
+    "quantization": "none",
+    "device": "auto",
+    "capture_layers": [14],
+    "max_input_tokens": 1024
+  },
+  "sender": {"max_new_tokens": 80, "do_sample": false},
+  "recipient": {"max_new_tokens": 8, "do_sample": false},
+  "seeds": [17],
+  "objectives": ["neutral"],
+  "assumed_knowledge": [false],
+  "elicited_forecast": false
+}

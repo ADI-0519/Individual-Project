@@ -1,0 +1,65 @@
+# Python environments and generated files
+.venv/
+.venv-*/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.uv-cache/
+.cache/
+
+# Test, analysis and editor state
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.ipynb_checkpoints/
+.vscode/
+.idea/
+*.log
+.DS_Store
+Thumbs.db
+
+# Credentials and local overrides; a documented example may be committed.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Raw experiments and downloaded assets are not source code.
+/runs/
+/results/
+/model-cache/
+/models/
+/data/raw/
+/data/private/
+/data/external/
+/data/downloads/
+/data/processed/
+/third_party/
+/research/_work/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.gguf
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.joblib
+
+# Small audited fixtures may be versioned deliberately.
+!/tests/fixtures/**/*.npy
+!/tests/fixtures/**/*.npz
+!/tests/fixtures/**/*.joblib

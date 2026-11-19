@@ -1,0 +1,17 @@
+{
+  "model": {
+    "model_id": "meta-llama/Llama-3.3-70B-Instruct",
+    "revision": "main",
+    "dtype": "bfloat16",
+    "quantization": "4bit",
+    "device": "auto",
+    "capture_layers": [40],
+    "max_input_tokens": 1024
+  },
+  "sender": {"max_new_tokens": 96, "do_sample": true, "temperature": 0.7, "top_p": 0.95},
+  "recipient": {"max_new_tokens": 8, "do_sample": false},
+  "seeds": [17, 29, 43],
+  "objectives": ["neutral", "favourable"],
+  "assumed_knowledge": [false, true],
+  "elicited_forecast": false
+}

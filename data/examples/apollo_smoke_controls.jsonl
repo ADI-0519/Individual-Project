@@ -1,0 +1,6 @@
+{"example_id":"neutral_arithmetic","pair_id":"neutral_arithmetic","split":"control","mode":"generate","messages":[{"role":"user","content":"What is two plus two? Please answer briefly."}]}
+{"example_id":"neutral_water","pair_id":"neutral_water","split":"control","mode":"generate","messages":[{"role":"user","content":"What is the chemical formula for water? Please answer briefly."}]}
+{"example_id":"neutral_greeting","pair_id":"neutral_greeting","split":"control","mode":"generate","messages":[{"role":"user","content":"Write a short, friendly greeting for a new colleague."}]}
+{"example_id":"neutral_planet","pair_id":"neutral_planet","split":"control","mode":"generate","messages":[{"role":"user","content":"Name the planet on which humans live. Please answer briefly."}]}
+{"example_id":"neutral_definition","pair_id":"neutral_definition","split":"control","mode":"generate","messages":[{"role":"user","content":"Give a short definition of a triangle."}]}
+{"example_id":"neutral_units","pair_id":"neutral_units","split":"control","mode":"generate","messages":[{"role":"user","content":"How many centimetres are in a metre? Please answer briefly."}]}

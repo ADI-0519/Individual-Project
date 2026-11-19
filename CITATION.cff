@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software, please cite it using this metadata. Also cite the
+  original publications and assets associated with any methods or data you use.
+type: software
+title: KCL Latent Probes
+authors:
+  - family-names: Ranjan
+    given-names: Aditya
+repository-code: https://github.com/ADI-0519/Individual-Project
+abstract: >-
+  Reproducible infrastructure for evaluating latent probes under perturbation
+  and distribution shifts, including sender and recipient experiments.
+keywords:
+  - latent probes
+  - language models
+  - AI safety
+  - reproducibility
