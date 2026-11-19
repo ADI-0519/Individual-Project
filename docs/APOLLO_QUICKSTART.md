@@ -147,6 +147,51 @@ engineering artifact. The job is not a deception experiment.
 
 ## Move to the main checkpoint
 
+### Authenticate in Ubuntu
+
+Request access to the exact
+[Llama 3.1 8B Instruct repository](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct)
+using your own Hugging Face account. The base model is a separate repository.
+After approval, create a Read token and, in the Ubuntu checkout, run:
+
+```sh
+export HF_HOME="$PWD/.cache/huggingface-wsl"
+.venv-wsl/bin/hf auth login
+```
+
+Paste the token only at the hidden prompt. Adding it to a Git credential helper
+is optional; the saved Hugging Face token is sufficient for model downloads.
+A missing Git helper warning followed by `Login successful` does not require
+changing global Git configuration. Verify account and model access separately:
+
+```sh
+.venv-wsl/bin/hf auth whoami
+.venv-wsl/bin/hf download meta-llama/Llama-3.1-8B-Instruct config.json
+```
+
+Use the same `HF_HOME` for authentication and model runs. This cache directory
+is excluded from Git. Never put the token in a tracked file or command argument.
+
+### Run the first 8B development check
+
+The [pinned 4-bit smoke config](../configs/apollo_llama8b_4bit_smoke.json) uses
+NF4 weights, BF16 compute and decoder block 8. It still downloads approximately
+16 GB of original weights before quantizing them during loading. GPU memory
+savings do not imply a smaller initial download. Use the prepared seven-pair
+smoke subset and the WSL environment exports from above:
+
+```sh
+.venv-wsl/bin/python -m latent_probes apollo extract --config configs/apollo_llama8b_4bit_smoke.json --examples data/processed/apollo_smoke_pairs.jsonl --output runs/apollo_llama8b_4bit_smoke
+.venv-wsl/bin/python -m latent_probes apollo train --features runs/apollo_llama8b_4bit_smoke/features.npz --labels runs/apollo_llama8b_4bit_smoke/metadata.csv --output runs/apollo_llama8b_4bit_probe
+.venv-wsl/bin/python scripts/validate_llama_smoke.py --training runs/apollo_llama8b_4bit_smoke --probe runs/apollo_llama8b_4bit_probe --output runs/apollo_llama8b_4bit_validation
+```
+
+Use fresh output directories for another experiment. This validator checks
+actual quantization, layer indexing and causal behavior in a saved dialogue,
+then generates and scores one neutral response. Its BF16 checks are separate
+from the Qwen float32 validator. No detection accuracy or calibrated operating
+point follows from these engineering examples.
+
 Use `configs/apollo_llama8b_bf16.json` on suitable hardware and
 `configs/apollo_llama8b_4bit.json` for a separate quantized development run.
 Llama access must be granted to your own Hugging Face account; authenticate on

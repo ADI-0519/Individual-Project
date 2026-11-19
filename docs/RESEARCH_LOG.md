@@ -83,7 +83,7 @@ verified download; its measured activation result is unaffected by these guards.
 
 ### Scope that remains
 
-Obtain personal gated access to Llama 3.1 8B, validate its declared
+Finish genuine Llama 3.1 8B execution and validate its declared
 precision/depth profile, collect independent control/evaluation
 responses, audit behavioral labels and freeze the held-out protocol. The reader
 forecast and omission extensions remain research tasks; the 24 draft starter
@@ -121,6 +121,38 @@ not an estimate of deception performance. The six-control 99th percentile is
 an explicitly unreliable engineering calibration, not a reliable 1% FPR claim.
 A genuine 8B quantized load, its memory profile and independently audited
 behavioral evaluation remain to be run.
+
+### Llama access and the first 8B run
+
+The user's Hugging Face login succeeded in Ubuntu. The optional Git credential
+helper warning did not prevent authentication; downloading the exact Instruct
+repository's `config.json` succeeded through the saved token. No global Git
+credential configuration was changed, and no token was read into the chat or
+committed. The base and Instruct repositories are distinguished in the quickstart.
+
+Added an explicit small-run config pinned to resolved model revision
+`0e9e39f249a16976918f6564b8830bc894c89659`, with NF4 loading, BF16 compute and
+decoder block 8. The genuine 14-example extraction was launched with the same
+verified seven fact pairs used for the engineering check. The original weight
+download is approximately 16 GB even though GPU loading is quantized. **At this
+entry's commit, the weight download is still running; no successful 8B load,
+activation result or probe fit is claimed.** The continuation process waits for
+the existing capture to complete, then fits the instruction probe and runs the
+dedicated validator. Its ignored pipeline status and validation outputs record
+success or failure independently of this journal entry.
+
+The new Llama validator was reviewed by a second agent; imports/CLI help, Ruff
+and editor diagnostics pass. Genuine-model checks remain pending. Its numerical
+criteria were fixed before observing any 8B activation result: exact equality
+between a block-8 hook and HF hidden-state index 9 in the same forward; exact
+unchanged repeats; and exact invariance at first/last selected positions when
+only later token IDs change in separate, same-length replays. Reloaded versus
+saved BF16 values may differ by at most one adjacent representable BF16 value
+per coordinate, with errors and out-of-bound counts reported. No float32
+tolerance is reused or widened after seeing the results. The validator also
+requires actual bitsandbytes 4-bit modules, finite 4,096-dimensional vectors,
+matching masks/IDs, and one generated/scored neutral answer. That answer will
+exercise scoring; it cannot establish a detection metric or calibration.
 
 ### Tool and plugin use
 
