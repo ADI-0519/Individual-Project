@@ -60,6 +60,13 @@ These examples are not a prevalence audit. The natural data cannot yet be called
 
 ## Next experiment, preserving the original project
 
+**Subsequent development update:** the report audit, prefix-only before-report
+comparison and a paired sender-policy ablation have now run. The
+[new results](./RESEARCH_CHECKS_RESULTS.md) preserve this pilot unchanged and
+report a sharp before-report transfer failure. Human review and a fresh main
+study remain outstanding; the steps below record the priorities identified
+from the original run.
+
 1. Audit sender facts, temporal comparisons, recommendations, omissions and recipient outcomes separately. Keep this development run frozen. Clarify evidence-precedence and sender/reader roles in a separately versioned protocol.
 2. Compare **pre-report prompt features** with during/after-report features, with positions fixed before the next fresh evaluation. A pre-report readout removes direct access to the sampled report, but still needs source-state and prompt-only controls. It is not automatically a belief mechanism.
 3. Develop independently labelled neutral communication/belief tasks whose target is the recipient's **post-message** state, with world truth, prior recipient state and resulting state separated. Preserve the neutral-trained transfer objective in the slides.

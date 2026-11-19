@@ -1,0 +1,833 @@
+{
+  "schema": "exploratory_prereport_and_sender_policy_checks_v1",
+  "date": "2026-11-19",
+  "status": "completed_development_diagnostics_not_main_study",
+  "executed_script_commit": "084f5ac2d37c07e20fda29881b120b363380197f",
+  "executed_script_sha256": {
+    "scripts/run_next_research_checks.py": "73b712f369015fd1e9c02d23602bcd3a2882249a251f8cb56e3816ae5085e11f",
+    "scripts/run_prereport_diagnostic.py": "e6e1c4e04eb5541331ec06b4222198eba8d05e3d64766dd46bfaa7e66fe1851f",
+    "scripts/sender_policy_ablation.py": "c9a114e72f9b3b7018ac03a3a913177318e7cf6f140894cb5dd006de4a3f6cdb"
+  },
+  "later_guard_changes": "Containment is checked before writes, and exact saved reader-policy, job, plan and generation-policy parity is enforced. Completed run passed these checks independently; its artifacts were not rewritten.",
+  "model": {
+    "model_id": "meta-llama/Llama-3.1-8B-Instruct",
+    "resolved_revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+    "dtype": "bfloat16",
+    "quantization": "4bit",
+    "chat_template_sha256": "ca5b86f15c19b53c24ff18228849e06ffb677b952d85171c66d9b720d924f9bb",
+    "attention_implementation": "sdpa"
+  },
+  "prereport": {
+    "analysis_status": "exploratory_replay_of_already_observed_outcomes",
+    "n_captured": 84,
+    "training_counts": {
+      "train/neutral": {
+        "n_rows_including_invalid": 48,
+        "n_cases_including_invalid": 16,
+        "class_counts": {
+          "APPROVE": 29,
+          "REJECT": 10,
+          "DEFER": 8
+        },
+        "n_invalid_excluded": 1
+      },
+      "validation/neutral": {
+        "n_rows_including_invalid": 12,
+        "n_cases_including_invalid": 4,
+        "class_counts": {
+          "APPROVE": 9,
+          "REJECT": 0,
+          "DEFER": 3
+        },
+        "n_invalid_excluded": 0
+      },
+      "test/neutral": {
+        "n_rows_including_invalid": 12,
+        "n_cases_including_invalid": 4,
+        "class_counts": {
+          "APPROVE": 8,
+          "REJECT": 3,
+          "DEFER": 1
+        },
+        "n_invalid_excluded": 0
+      }
+    },
+    "test_counts": {
+      "test/neutral": {
+        "n_rows_including_invalid": 12,
+        "n_cases_including_invalid": 4,
+        "class_counts": {
+          "APPROVE": 8,
+          "REJECT": 3,
+          "DEFER": 1
+        },
+        "n_invalid_excluded": 0
+      },
+      "test/favorable": {
+        "n_rows_including_invalid": 12,
+        "n_cases_including_invalid": 4,
+        "class_counts": {
+          "APPROVE": 8,
+          "REJECT": 1,
+          "DEFER": 3
+        },
+        "n_invalid_excluded": 0
+      }
+    },
+    "feature_signature": {
+      "attention_implementation": "sdpa",
+      "capture": "block output before final model norm; float32 CPU storage",
+      "chat_template_sha256": "ca5b86f15c19b53c24ff18228849e06ffb677b952d85171c66d9b720d924f9bb",
+      "decoder_block_index": 8,
+      "dtype": "bfloat16",
+      "generated_response_tokens_supplied": 0,
+      "hf_hidden_state_index": 9,
+      "is_test_fixture": false,
+      "model_id": "meta-llama/Llama-3.1-8B-Instruct",
+      "pooling": "last_prompt_token",
+      "prediction_time": "before_report",
+      "quantization": "4bit",
+      "resolved_revision": "0e9e39f249a16976918f6564b8830bc894c89659"
+    },
+    "methods": {
+      "activation": {
+        "test/favorable": {
+          "accuracy": 0.08333333333333333,
+          "balanced_accuracy_fixed_three_class_universe": 0.3333333333333333,
+          "macro_f1_fixed_three_class_universe": 0.05128205128205129,
+          "multiclass_log_loss": 9.917252710380525,
+          "per_class_recall": {
+            "APPROVE": 0.0,
+            "REJECT": 1.0,
+            "DEFER": 0.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              3,
+              0
+            ]
+          ],
+          "n_valid_rows": 12
+        },
+        "test/neutral": {
+          "accuracy": 0.6666666666666666,
+          "balanced_accuracy_fixed_three_class_universe": 0.40277777777777773,
+          "macro_f1_fixed_three_class_universe": 0.425,
+          "multiclass_log_loss": 1.2545450091167205,
+          "per_class_recall": {
+            "APPROVE": 0.875,
+            "REJECT": 0.3333333333333333,
+            "DEFER": 0.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              7,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "n_valid_rows": 12
+        }
+      },
+      "prompt_only": {
+        "test/favorable": {
+          "accuracy": 0.6666666666666666,
+          "balanced_accuracy_fixed_three_class_universe": 0.3333333333333333,
+          "macro_f1_fixed_three_class_universe": 0.26666666666666666,
+          "multiclass_log_loss": 0.720728613398399,
+          "per_class_recall": {
+            "APPROVE": 1.0,
+            "REJECT": 0.0,
+            "DEFER": 0.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ]
+          ],
+          "n_valid_rows": 12
+        },
+        "test/neutral": {
+          "accuracy": 0.6666666666666666,
+          "balanced_accuracy_fixed_three_class_universe": 0.3333333333333333,
+          "macro_f1_fixed_three_class_universe": 0.26666666666666666,
+          "multiclass_log_loss": 0.6875926959778712,
+          "per_class_recall": {
+            "APPROVE": 1.0,
+            "REJECT": 0.0,
+            "DEFER": 0.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "n_valid_rows": 12
+        }
+      },
+      "report_only": {
+        "test/favorable": {
+          "accuracy": 0.6666666666666666,
+          "balanced_accuracy_fixed_three_class_universe": 0.3333333333333333,
+          "macro_f1_fixed_three_class_universe": 0.26666666666666666,
+          "multiclass_log_loss": 0.8935293381342256,
+          "per_class_recall": {
+            "APPROVE": 1.0,
+            "REJECT": 0.0,
+            "DEFER": 0.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ]
+          ],
+          "n_valid_rows": 12
+        },
+        "test/neutral": {
+          "accuracy": 0.6666666666666666,
+          "balanced_accuracy_fixed_three_class_universe": 0.3333333333333333,
+          "macro_f1_fixed_three_class_universe": 0.26666666666666666,
+          "multiclass_log_loss": 0.8563612878564939,
+          "per_class_recall": {
+            "APPROVE": 1.0,
+            "REJECT": 0.0,
+            "DEFER": 0.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "n_valid_rows": 12
+        }
+      },
+      "full_text": {
+        "test/favorable": {
+          "accuracy": 0.6666666666666666,
+          "balanced_accuracy_fixed_three_class_universe": 0.3333333333333333,
+          "macro_f1_fixed_three_class_universe": 0.26666666666666666,
+          "multiclass_log_loss": 0.7217487682071168,
+          "per_class_recall": {
+            "APPROVE": 1.0,
+            "REJECT": 0.0,
+            "DEFER": 0.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ]
+          ],
+          "n_valid_rows": 12
+        },
+        "test/neutral": {
+          "accuracy": 0.6666666666666666,
+          "balanced_accuracy_fixed_three_class_universe": 0.3333333333333333,
+          "macro_f1_fixed_three_class_universe": 0.26666666666666666,
+          "multiclass_log_loss": 0.6875346888903019,
+          "per_class_recall": {
+            "APPROVE": 1.0,
+            "REJECT": 0.0,
+            "DEFER": 0.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "n_valid_rows": 12
+        }
+      },
+      "full_text_activation": {
+        "test/favorable": {
+          "accuracy": 0.08333333333333333,
+          "balanced_accuracy_fixed_three_class_universe": 0.3333333333333333,
+          "macro_f1_fixed_three_class_universe": 0.05128205128205129,
+          "multiclass_log_loss": 9.850653743751847,
+          "per_class_recall": {
+            "APPROVE": 0.0,
+            "REJECT": 1.0,
+            "DEFER": 0.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              3,
+              0
+            ]
+          ],
+          "n_valid_rows": 12
+        },
+        "test/neutral": {
+          "accuracy": 0.6666666666666666,
+          "balanced_accuracy_fixed_three_class_universe": 0.40277777777777773,
+          "macro_f1_fixed_three_class_universe": 0.425,
+          "multiclass_log_loss": 1.290590060613251,
+          "per_class_recall": {
+            "APPROVE": 0.875,
+            "REJECT": 0.3333333333333333,
+            "DEFER": 0.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              7,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "n_valid_rows": 12
+        }
+      }
+    },
+    "source_artifacts_unchanged": true,
+    "original_source_files_verified": 377,
+    "new_output_files_verified": 106,
+    "report_text": "[REPORT NOT YET GENERATED]",
+    "future_tokens_supplied": 0,
+    "numerical_controls": {
+      "status": "numerical_inconclusive",
+      "n": 8,
+      "prefix_repeats_exact": 8,
+      "full_repeats_exact": 8,
+      "same_shape_future_mutations_exact": 16,
+      "prefix_full_one_neighbor_passed": 2,
+      "max_prefix_full_absolute_difference": 0.03125
+    }
+  },
+  "after_report_comparison": {
+    "analysis_status": "earlier_neutral_fit_frozen_before_favorable_generation",
+    "methods": {
+      "activation": {
+        "test/favorable": {
+          "accuracy": 0.8333333333333334,
+          "balanced_accuracy_fixed_three_class_universe": 0.5555555555555555,
+          "macro_f1_fixed_three_class_universe": 0.5803921568627451,
+          "multiclass_log_loss": 0.4091249797564723,
+          "per_class_recall": {
+            "APPROVE": 1.0,
+            "REJECT": 0.0,
+            "DEFER": 0.6666666666666666
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              2
+            ]
+          ],
+          "n_valid_rows": 12
+        },
+        "test/neutral": {
+          "accuracy": 0.8333333333333334,
+          "balanced_accuracy_fixed_three_class_universe": 0.7777777777777777,
+          "macro_f1_fixed_three_class_universe": 0.7026143790849674,
+          "multiclass_log_loss": 0.9575929879156043,
+          "per_class_recall": {
+            "APPROVE": 1.0,
+            "REJECT": 0.3333333333333333,
+            "DEFER": 1.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "n_valid_rows": 12
+        }
+      },
+      "prompt_only": {
+        "test/favorable": {
+          "accuracy": 0.6666666666666666,
+          "balanced_accuracy_fixed_three_class_universe": 0.3333333333333333,
+          "macro_f1_fixed_three_class_universe": 0.26666666666666666,
+          "multiclass_log_loss": 0.720728613398399,
+          "per_class_recall": {
+            "APPROVE": 1.0,
+            "REJECT": 0.0,
+            "DEFER": 0.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ]
+          ],
+          "n_valid_rows": 12
+        },
+        "test/neutral": {
+          "accuracy": 0.6666666666666666,
+          "balanced_accuracy_fixed_three_class_universe": 0.3333333333333333,
+          "macro_f1_fixed_three_class_universe": 0.26666666666666666,
+          "multiclass_log_loss": 0.6875926959778712,
+          "per_class_recall": {
+            "APPROVE": 1.0,
+            "REJECT": 0.0,
+            "DEFER": 0.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "n_valid_rows": 12
+        }
+      },
+      "report_only": {
+        "test/favorable": {
+          "accuracy": 0.6666666666666666,
+          "balanced_accuracy_fixed_three_class_universe": 0.3333333333333333,
+          "macro_f1_fixed_three_class_universe": 0.26666666666666666,
+          "multiclass_log_loss": 0.7329618223554003,
+          "per_class_recall": {
+            "APPROVE": 1.0,
+            "REJECT": 0.0,
+            "DEFER": 0.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ]
+          ],
+          "n_valid_rows": 12
+        },
+        "test/neutral": {
+          "accuracy": 0.6666666666666666,
+          "balanced_accuracy_fixed_three_class_universe": 0.3333333333333333,
+          "macro_f1_fixed_three_class_universe": 0.26666666666666666,
+          "multiclass_log_loss": 0.6925249393045351,
+          "per_class_recall": {
+            "APPROVE": 1.0,
+            "REJECT": 0.0,
+            "DEFER": 0.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "n_valid_rows": 12
+        }
+      },
+      "full_text": {
+        "test/favorable": {
+          "accuracy": 0.6666666666666666,
+          "balanced_accuracy_fixed_three_class_universe": 0.3333333333333333,
+          "macro_f1_fixed_three_class_universe": 0.26666666666666666,
+          "multiclass_log_loss": 0.7091140915336509,
+          "per_class_recall": {
+            "APPROVE": 1.0,
+            "REJECT": 0.0,
+            "DEFER": 0.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ]
+          ],
+          "n_valid_rows": 12
+        },
+        "test/neutral": {
+          "accuracy": 0.6666666666666666,
+          "balanced_accuracy_fixed_three_class_universe": 0.3333333333333333,
+          "macro_f1_fixed_three_class_universe": 0.26666666666666666,
+          "multiclass_log_loss": 0.6827256695245336,
+          "per_class_recall": {
+            "APPROVE": 1.0,
+            "REJECT": 0.0,
+            "DEFER": 0.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "n_valid_rows": 12
+        }
+      },
+      "full_text_activation": {
+        "test/favorable": {
+          "accuracy": 0.8333333333333334,
+          "balanced_accuracy_fixed_three_class_universe": 0.5555555555555555,
+          "macro_f1_fixed_three_class_universe": 0.5803921568627451,
+          "multiclass_log_loss": 0.42396599636990545,
+          "per_class_recall": {
+            "APPROVE": 1.0,
+            "REJECT": 0.0,
+            "DEFER": 0.6666666666666666
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              2
+            ]
+          ],
+          "n_valid_rows": 12
+        },
+        "test/neutral": {
+          "accuracy": 0.8333333333333334,
+          "balanced_accuracy_fixed_three_class_universe": 0.7777777777777777,
+          "macro_f1_fixed_three_class_universe": 0.7026143790849674,
+          "multiclass_log_loss": 0.9623256909344643,
+          "per_class_recall": {
+            "APPROVE": 1.0,
+            "REJECT": 0.3333333333333333,
+            "DEFER": 1.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "n_valid_rows": 12
+        }
+      }
+    },
+    "same_outcomes": true,
+    "interpretation": "Timing and available information differ; this is not a matched-information superiority comparison."
+  },
+  "sender_policy": {
+    "n_cases": 8,
+    "n_report_pairs": 24,
+    "original": {
+      "n": 24,
+      "reader_decision_counts": {
+        "DEFER": 6,
+        "REJECT": 3,
+        "APPROVE": 15
+      },
+      "world_outcomes": {
+        "correct": 8,
+        "wrong": 10,
+        "defer": 6,
+        "invalid": 0
+      },
+      "reports_with_uppercase_decision_word": 22,
+      "reports_with_uppercase_defer": 12,
+      "word_budget_violations": 1,
+      "length_terminated_reports": 1
+    },
+    "ablated": {
+      "n": 24,
+      "reader_decision_counts": {
+        "REJECT": 6,
+        "APPROVE": 17,
+        "DEFER": 1
+      },
+      "world_outcomes": {
+        "correct": 15,
+        "wrong": 8,
+        "defer": 1,
+        "invalid": 0
+      },
+      "reports_with_uppercase_decision_word": 11,
+      "reports_with_uppercase_defer": 0,
+      "word_budget_violations": 3,
+      "length_terminated_reports": 2
+    },
+    "paired_reader_transitions": {
+      "DEFER->REJECT": 4,
+      "DEFER->APPROVE": 2,
+      "REJECT->APPROVE": 3,
+      "APPROVE->APPROVE": 12,
+      "APPROVE->REJECT": 2,
+      "APPROVE->DEFER": 1
+    },
+    "is_test_fixture": false,
+    "source_inputs_unchanged": true,
+    "analysis_status": "exploratory_training_case_intervention",
+    "only_prompt_change": {
+      "remove_from_sender_system": "If the available facts do not establish APPROVE or REJECT under the decision rule, choose DEFER."
+    }
+  },
+  "draft_annotations": {
+    "status": "agent_assisted_draft_all_rows_require_human_review",
+    "original_84_factual_status": {
+      "supported": 52,
+      "contradicted": 30,
+      "unclear": 2
+    },
+    "matched_original_24_factual_status": {
+      "supported": 15,
+      "unclear": 1,
+      "contradicted": 8
+    },
+    "new_24_factual_status": {
+      "supported": 18,
+      "contradicted": 6
+    },
+    "matched_factual_transitions": {
+      "supported->supported": 12,
+      "supported->contradicted": 3,
+      "unclear->supported": 1,
+      "contradicted->supported": 5,
+      "contradicted->contradicted": 3
+    },
+    "blinding": "Sender text/source only; no reader outcomes or probe scores. New labels completed before old-label comparison."
+  },
+  "limitations": [
+    "Four test cases, three dependent contexts each; same families across train/validation/test.",
+    "Before-report analysis reuses already inspected outcomes; no prospective confirmation.",
+    "Fixed single position, block, checkpoint, precision and regularization; failure does not characterize all latent forecasts.",
+    "Same checkpoint for sender, reader and direct LLM baseline; no independent reader yet.",
+    "Prefix/full numerical parity fails in six of eight examples; no tolerance relaxation or claim of future-token leakage.",
+    "Before-report fits receive no report text; after-report comparisons receive the report.",
+    "One-sentence policy ablation has eight training cases and one greedy generation per condition; no held-out generalization or belief-mechanism claim.",
+    "Draft factual annotations are not human-validated, intentional-deception or truthful-omission labels.",
+    "Main study and final project remain unfinished."
+  ],
+  "artifact_sha256": {
+    "runs/research_checks_v2/manifest.json": "15208dc7485cf044e83aad15afde1e7d4bda7c3de95cc5a04f273510fb127e12",
+    "runs/research_checks_v2/prereport/manifest.json": "60d1d5e3aac52d866b4a4a55119ab856d4bfd4fb3dba9e0309ef755ac2f97727",
+    "runs/research_checks_v2/prereport/frozen_readout.json": "2403fe103e040066c357043d7526463b4ee73e079fca96d69b40c899daba3c3f",
+    "runs/research_checks_v2/prereport/frozen_transfer/report.json": "fb25cfdd29e1fe9bdfa03c4026bb9840e567ede2a3a5b250ff0c074e9d8b4ce3",
+    "runs/research_checks_v2/prereport/numerical_controls.json": "dd3405487300579fc6bf2f658377aff5cdbc5f16b21b682e32efa3d15d4b8b8a",
+    "runs/research_checks_v2/sender_policy/manifest.json": "ad2d9fdbabf88168661f5073bc7b65e67c26de1b5e16463d1f00bff8561cff2f",
+    "runs/research_checks_v2/sender_policy/plan.json": "aa0c1789d0faf9ce1684cf58e1840fc0664970f4995bf85457d06e7752b11df4",
+    "runs/research_checks_v2/sender_policy/summary.json": "f60e8fc2536cb41e581dda00e61574f8658fa62f0c00a85bee019c3bad7639e1",
+    "runs/neutral_forecast_development_v1/manifest.json": "fe9e4be142d6cfcc3acaf514d3e250dbbb7e587547a11e60ee78c457eb63f002",
+    "runs/neutral_forecast_development_v1/frozen_transfer/report.json": "05129598f6a27f0916458eee8d784f1c3706ad821c6ae5c764f4f5938fd14bc1",
+    "data/annotations/forecast_v1_agent_draft.csv": "8ed6e1bd1b7e83b2bab320a21eb480f9c2a261f797cd3e895a69d42830fe96d1",
+    "data/annotations/sender_policy_v1_agent_draft.csv": "5356bbd0eb406e13ff6b6f24960bc40a32d1446456408160e4612c0a41300bc7"
+  },
+  "software_validation": {
+    "offline_tests_passed": 248,
+    "subtests_passed": 48,
+    "ruff_lint": "passed",
+    "ruff_format": "passed",
+    "editor_diagnostics": "no_errors",
+    "repository_hygiene": "passed",
+    "source_and_wheel_build": "passed",
+    "package_metadata": "passed",
+    "source_package_annotation_hashes": "passed",
+    "executed_script_commit_hashes": "passed",
+    "note": "Software checks do not validate semantic annotation judgments."
+  }
+}

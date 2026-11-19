@@ -11,6 +11,12 @@ under neutral communication transfers to pressured natural reports and improves
 on text/source controls. Apollo and fixed-report replays are comparators and
 diagnostics. See [research direction](docs/RESEARCH_DIRECTION.md).
 
+**Project status: early research development.** The engineering baseline and
+small pilot are complete; the main study and dissertation are not. Validated
+targets, human-reviewed data, competitive frozen controls, independent family
+holdouts, a second reader and the final analysis/write-up remain ahead. The
+[main-study gates](docs/MAIN_STUDY_GATES.md) define what counts as completion.
+
 **Start here:** [Apollo quickstart](docs/APOLLO_QUICKSTART.md) ·
 [paper/source audit](docs/APOLLO_METHOD.md) · [reading log](docs/READING_LOG.md) ·
 [starter audit](docs/STARTER_AUDIT.md) ·
@@ -27,6 +33,14 @@ is now complete: 84 natural reports and reader labels, a prospectively frozen
 three-class readout, and text/source controls. Activation accuracy is 10/12 in
 each test condition across four cases, while an exploratory literal-text rule
 gets 11/12 under pressure. Added value beyond report text is not established.
+
+The [next empirical checks](docs/RESEARCH_CHECKS_RESULTS.md) are also complete:
+a separately fitted **before-report** readout gets 8/12 neutral and 1/12 under
+pressure on those same four development-test cases. A paired sender-instruction
+ablation changes reports and reader decisions on eight training cases. The
+[84-report draft audit](docs/REPORT_AUDIT_DRAFT.md) and
+[24-report ablation audit](docs/SENDER_POLICY_AUDIT_DRAFT.md) need human review.
+These are exploratory diagnostics, with retained failures, not a finished study.
 
 The Apollo path trains on selected token rows and scores mean raw projections.
 It is separate from the original last-token baseline documented below.

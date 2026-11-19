@@ -7,6 +7,7 @@ fixed. This uses development TRAINING cases; it is not held-out evaluation.
 import copy
 import re
 from collections import Counter
+from dataclasses import asdict
 from pathlib import Path
 
 from latent_probes.config import GenerationSettings
@@ -121,12 +122,24 @@ def run_sender_policy_ablation(source_run, output_dir, backend, *, progress=prin
         "dtype",
         "quantization",
         "capture_layers",
+        "chat_template_sha256",
+        "generation_defaults",
+        "special_token_ids",
         "attention_implementation",
         "is_test_fixture",
     ):
         if metadata.get(key) != original_manifest["backend"].get(key):
             raise ValueError(f"Ablation backend differs from original: {key}")
-    panel = read_json(source / "plan.json")["panel"]
+    source_plan = read_json(source / "plan.json")
+    if original_manifest.get("plan_sha256") != canonical_hash(source_plan):
+        raise ValueError("Original source plan hash differs.")
+    panel = source_plan["panel"]
+    sender_settings = GenerationSettings(max_new_tokens=panel["max_new_tokens"], do_sample=False)
+    reader_settings = GenerationSettings(max_new_tokens=8, do_sample=False)
+    if source_plan.get("sender_settings") != asdict(sender_settings) or source_plan.get(
+        "reader_settings"
+    ) != asdict(reader_settings):
+        raise ValueError("Original generation policy differs from the declared greedy diagnostic.")
     cases = {case["id"]: case for case in panel["cases"]}
     jobs = select_ablation_jobs(panel)
     snapshots = _snapshot(source)
@@ -137,10 +150,20 @@ def run_sender_policy_ablation(source_run, output_dir, backend, *, progress=prin
         reader = read_json(source / "reports" / (identifier + ".json"))
         _check_record(sender)
         _check_record(reader)
+        for key in ("example_id", "case_id", "family", "objective", "split", "context", "seed"):
+            expected = identifier if key == "example_id" else job[key]
+            if sender.get(key) != expected or reader.get(key) != expected:
+                raise ValueError(f"Original sender/reader job binding differs: {key}")
         if ablate_sender_sentence(sender["messages"]) != job["messages"]:
             raise ValueError("Original sender differs from the saved case plan.")
         if sender["generation"] != reader["generation"]:
             raise ValueError("Source sender/report generation mismatch.")
+        if reader.get("reader_messages") != build_reader_messages(
+            cases[job["case_id"]], sender["generation"]["text"], job["context"]
+        ):
+            raise ValueError("Original reader policy or packet differs from the current renderer.")
+        if reader.get("decision") != parse_decision(reader["reader_generation"]["text"]):
+            raise ValueError("Original reader decision differs from its saved response.")
         originals[identifier] = (sender, reader)
     output.mkdir(parents=True)
     atomic_json(
@@ -176,7 +199,7 @@ def run_sender_policy_ablation(source_run, output_dir, backend, *, progress=prin
             sender, old_reader = originals[job["source_example_id"]]
             result = backend.generate(
                 job["messages"],
-                GenerationSettings(max_new_tokens=panel["max_new_tokens"], do_sample=False),
+                sender_settings,
                 panel["seed"],
                 capture=False,
             )
@@ -192,7 +215,7 @@ def run_sender_policy_ablation(source_run, output_dir, backend, *, progress=prin
             )
             answer = backend.generate(
                 reader_messages,
-                GenerationSettings(max_new_tokens=8, do_sample=False),
+                reader_settings,
                 panel["seed"],
                 capture=False,
             )

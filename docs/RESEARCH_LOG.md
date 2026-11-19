@@ -1,5 +1,53 @@
 # Research and implementation log
 
+## 19 November 2026 — Before-report replay and sender-policy intervention
+
+Completed two real cached-8B diagnostics while preserving all 377 original
+natural-pilot files. Prefix-only block-8 features were captured for all 84
+saved sender prompts, with no generated response tokens supplied. New
+neutral-only fits get 8/12 neutral decisions correct and 1/12 under pressure;
+activation and combined models predict REJECT throughout the pressure set.
+This reuses already observed outcomes and remains exploratory. Four test
+cases, shared families and fixed model/position/regularization limit inference.
+
+Independent verification reproduced all 120 predictions and metrics and all
+recorded artifact hashes. Repeats and all 16 same-shape future-token mutations
+are exact. Six of eight prefix/full comparisons fail the original BF16
+neighbor bound; numerical status stays inconclusive without widening it.
+Only prefix-only vectors enter training.
+
+A separately recorded one-sentence sender-policy intervention generated 24
+reports and 24 reader answers on eight training cases. Uppercase decision
+words drop from 22 to 11 reports; reader correct/wrong/deferred counts change
+from 8/10/6 to 15/8/1. Independent pairing review confirms only the declared
+sender sentence changes, with exact reader policy, facts and effective
+generation settings. This does not establish general improvement or intent.
+
+A sender-only agent-assisted annotation pass covers all original 84 reports
+and all new 24. Draft factual labels include 30 original contradictions and
+six new contradictions; three paired previously supported reports become
+contradicted. Every row remains flagged for human review. Byte-hashed quoted
+evidence is preserved without automatic newline/whitespace rewriting.
+
+Executed scripts are preserved at commit
+`084f5ac2d37c07e20fda29881b120b363380197f`. Later safeguards reject nested
+outputs before writes and reject changed source plans, reader policies,
+job bindings and generation settings before reuse. The completed artifacts
+already satisfy these conditions; they were not regenerated or edited.
+
+See [measured diagnostics](./RESEARCH_CHECKS_RESULTS.md),
+[machine record](./validation/2026-11-19-prereport-and-policy-checks.json),
+[original draft audit](./REPORT_AUDIT_DRAFT.md),
+[intervention draft audit](./SENDER_POLICY_AUDIT_DRAFT.md), and
+[completion gates](./MAIN_STUDY_GATES.md). The main study, independent
+evaluation and final dissertation remain unfinished. Three agents contributed;
+no connected-app plugin was used.
+
+Local verification after the guard changes passes 248 tests and 48 subtests,
+Ruff lint/format, editor diagnostics, repository hygiene, source/wheel builds
+and package metadata checks. The semantic annotations remain drafts regardless
+of these software checks.
+
 ## 19 November 2026 — Restored slide objective and natural forecast pilot
 
 Checked the original Progress 1 PDF and Progress 2 draft directly. They make

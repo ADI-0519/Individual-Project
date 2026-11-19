@@ -18,9 +18,12 @@ repos:
         entry: python -m pre_commit_hooks.detect_private_key
       - id: end-of-file-fixer
         entry: python -m pre_commit_hooks.end_of_file_fixer
+        exclude: ^data/annotations/.*_agent_draft\.csv$
       - id: trailing-whitespace
         entry: python -m pre_commit_hooks.trailing_whitespace_fixer
         args: [--markdown-linebreak-ext=md]
+        # Preserve the exact quoted evidence in byte-hashed annotation drafts.
+        exclude: ^data/annotations/.*_agent_draft\.csv$
   - repo: local
     hooks:
       - id: ruff-check

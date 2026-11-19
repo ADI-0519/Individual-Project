@@ -19,6 +19,9 @@ def main():
     parser.add_argument("--run", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
+    args.run, args.output = args.run.resolve(), args.output.resolve()
+    if args.output.is_relative_to(args.run):
+        raise ValueError("Diagnostic output must be outside the original frozen run.")
     if args.output.exists():
         raise FileExistsError("Use a new diagnostic output directory.")
     args.output.mkdir(parents=True)

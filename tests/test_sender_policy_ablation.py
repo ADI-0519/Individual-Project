@@ -2,12 +2,14 @@
 
 import copy
 import importlib.util
+from dataclasses import asdict
 from pathlib import Path
 
 import pytest
 
 from latent_probes.backends import GenerationResult
-from latent_probes.forecast_panel import load_forecast_panel, sender_jobs
+from latent_probes.config import GenerationSettings
+from latent_probes.forecast_panel import build_reader_messages, load_forecast_panel, sender_jobs
 from latent_probes.storage import atomic_json, canonical_hash, read_json
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -46,8 +48,17 @@ def test_ablation_uses_only_first_two_training_cases_per_family():
 def make_source_fixture(directory):
     panel = load_forecast_panel(ROOT / "data/reader_forecast/development_v1.json")
     metadata = {"model_id": "scripted-test-fixture", "is_test_fixture": True}
-    atomic_json(directory / "manifest.json", {"status": "complete", "backend": metadata})
-    atomic_json(directory / "plan.json", {"panel": panel})
+    plan = {
+        "panel": panel,
+        "sender_settings": asdict(GenerationSettings(max_new_tokens=96, do_sample=False)),
+        "reader_settings": asdict(GenerationSettings(max_new_tokens=8, do_sample=False)),
+    }
+    atomic_json(
+        directory / "manifest.json",
+        {"status": "complete", "backend": metadata, "plan_sha256": canonical_hash(plan)},
+    )
+    atomic_json(directory / "plan.json", plan)
+    cases = {case["id"]: case for case in panel["cases"]}
     selected = {job["source_example_id"] for job in module.select_ablation_jobs(panel)}
     for job in sender_jobs(panel):
         if job["example_id"] not in selected:
@@ -61,7 +72,14 @@ def make_source_fixture(directory):
         }
         record["record_sha256"] = canonical_hash(record)
         atomic_json(directory / "senders" / (job["example_id"] + ".json"), record)
-        reader = {**record, "decision": "DEFER"}
+        reader = {
+            **record,
+            "decision": "DEFER",
+            "reader_messages": build_reader_messages(
+                cases[job["case_id"]], record["generation"]["text"], job["context"]
+            ),
+            "reader_generation": GenerationResult(text="DEFER", finish_reason="eos").record(),
+        }
         reader["record_sha256"] = canonical_hash(
             {k: v for k, v in reader.items() if k != "record_sha256"}
         )
@@ -109,3 +127,53 @@ def test_failed_reader_retains_sender_record(tmp_path):
     assert len(list((output / "senders").glob("*.json"))) == 1
     manifest = read_json(output / "manifest.json")
     assert manifest["status"] == "failed" and manifest["source_inputs_unchanged"]
+
+
+@pytest.mark.parametrize("changed_field", ["reader_messages", "context", "decision"])
+def test_ablation_rejects_rehashed_reader_policy_or_binding_change(tmp_path, changed_field):
+    source = tmp_path / "source"
+    backend = ScriptedAblationBackend(make_source_fixture(source))
+    path = next((source / "reports").glob("*.json"))
+    record = read_json(path)
+    if changed_field == "reader_messages":
+        record[changed_field][0]["content"] += " A different reader policy."
+    elif changed_field == "context":
+        record[changed_field] = "different packet"
+    else:
+        record[changed_field] = "REJECT"
+    record["record_sha256"] = canonical_hash(
+        {key: value for key, value in record.items() if key != "record_sha256"}
+    )
+    atomic_json(path, record)
+    output = tmp_path / "rejected"
+    with pytest.raises(ValueError, match="Original reader|Original sender/reader"):
+        module.run_sender_policy_ablation(source, output, backend, progress=None)
+    assert not output.exists() and backend.calls == []
+
+
+def test_ablation_rejects_revised_source_plan_before_generation(tmp_path):
+    source = tmp_path / "source"
+    backend = ScriptedAblationBackend(make_source_fixture(source))
+    plan = read_json(source / "plan.json")
+    plan["panel"]["seed"] += 1
+    atomic_json(source / "plan.json", plan)
+    output = tmp_path / "rejected"
+    with pytest.raises(ValueError, match="plan hash"):
+        module.run_sender_policy_ablation(source, output, backend, progress=None)
+    assert not output.exists() and backend.calls == []
+
+
+@pytest.mark.parametrize("settings_key", ["sender_settings", "reader_settings"])
+def test_ablation_rejects_different_saved_generation_policy(tmp_path, settings_key):
+    source = tmp_path / "source"
+    backend = ScriptedAblationBackend(make_source_fixture(source))
+    plan = read_json(source / "plan.json")
+    plan[settings_key]["do_sample"] = True
+    atomic_json(source / "plan.json", plan)
+    manifest = read_json(source / "manifest.json")
+    manifest["plan_sha256"] = canonical_hash(plan)
+    atomic_json(source / "manifest.json", manifest)
+    output = tmp_path / "rejected"
+    with pytest.raises(ValueError, match="generation policy"):
+        module.run_sender_policy_ablation(source, output, backend, progress=None)
+    assert not output.exists() and backend.calls == []
