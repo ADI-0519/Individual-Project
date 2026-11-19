@@ -1,5 +1,68 @@
 # Research and implementation log
 
+## 19 November 2026 — Independent audit and first recipient-context results
+
+Three parallel agents reviewed numerical integrity, current probe literature,
+and omission/recipient-context novelty. Read scopes and primary sources are in
+the [deep audit](./LITERATURE_PROBE_AUDIT.md) and
+[recipient design](./RECIPIENT_CONTEXT_DESIGN.md). The resulting
+[scope decision](./RESEARCH_DIRECTION.md) keeps Variant 2 and postpones a new
+belief decoder or correction-ranking system until the controls are valid.
+
+Reproduced three integrity gaps with failing tests, then fixed them: incomplete
+score sidecars could claim verified provenance; training/scoring did not verify
+a present Apollo capture's completion and artifact hashes; and resumed runs
+did not compare attention implementation. The historical completed SDPA run
+is unaffected. Generic external numeric inputs remain explicitly unverified.
+
+The [independent numeric report](./validation/2026-11-19-independent-baseline-audit.json)
+verifies the original artifacts and fitting. Prompt-only text AUROC is 1.0;
+response-only is 0.5. Twenty independently seeded pair-flip fits average 0.5183
+AUROC (range 0.4661–0.6031). There are 178 shared validation causal histories
+and 130 exact validation vector duplicates. Purging pairs with any shared
+history leaves eight validation pairs with instruction AUROC 1.0. These
+diagnostics establish instruction discrimination, not observed deception.
+
+The genuine expanded GPU audit passed 1,840 recorded checks, many of which
+are artifact/hash checks. All 536 stored records were audited; 22 selected
+dialogues were actually replayed. Their saved/reloaded values, same-forward
+layer comparison, repeated forwards and first/last future-token mutations
+agree exactly. CUDA forward-phase Torch allocation peaked at 5.480 GiB,
+including resident model allocations and excluding caller load peak and
+non-Torch memory. See the
+[reader and context report](./validation/2026-11-19-reader-and-context-pilot.json).
+
+The same model load completed 48 reader calls and 48 off-policy fixed-report
+captures. Informed readers were correct in all four original and restored
+conditions. Absent-evidence readers deferred on all four originals; restoration
+yielded three correct decisions and one deferral. Stale-evidence readers went
+from two wrong/two deferred on original reports to three correct/one wrong
+after restoration. The irrelevant addition preserved original decisions in
+all four cases and three contexts. No original report induced a new wrong
+decision relative to no report. Net-profit restoration failed in both absent
+and stale contexts, so the original pilot stays frozen and the failure receives
+a separately marked post-hoc development diagnostic.
+
+For original fixed reports, the favorable reporting goal increased the probe
+margin in all 12 case/context comparisons (mean +0.8121). Stale-minus-informed
+score differences have mixed signs. These are context-sensitivity results,
+not detection rates, calibrated probabilities, or evidence of intent. Four
+authored cases cannot support population confidence intervals.
+
+The offline suite passed 176 tests plus 48 subtests, with aggregate branch-aware
+coverage 77%; lint, formatting and editor diagnostics passed. The source and
+wheel build succeeded. Coverage excludes genuine GPU execution; it does not
+prove every runtime path. The old starter validation record remains historical.
+
+The nine-call post-hoc profit diagnostic completed separately. The failed
+decisions reproduce at both 8- and 64-token budgets. Standalone subtraction and
+a complete informed packet succeed. Removing the absent packet's explicit
+"no cost figure" phrase resolves that restoration; adding the computed net
+loss resolves both absent and stale cases. These support investigating evidence
+integration and prompt interpretation, not a unique causal diagnosis. The
+[pilot report](./PILOT_RESULTS.md) includes all outcomes, their limits and the
+next data-validity gates. Original four-case content and outputs stay frozen.
+
 ## 19 November 2026 — Apollo foundation
 
 Imported the supplied `kcl_latent_probes_starter.zip` into the existing empty,

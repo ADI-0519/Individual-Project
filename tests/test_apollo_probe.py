@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import csv
+import hashlib
 import json
 import tempfile
 import unittest
@@ -93,6 +94,47 @@ class ApolloProbeTests(unittest.TestCase):
         self.assertFalse(report["settings"]["fit_intercept"])
         self.assertEqual(report["n_training_token_rows"], 4)
         self.assertEqual(report["validation_diagnostic"]["roc_auc"], 1)
+
+    def test_partial_score_manifest_cannot_claim_verified_provenance(self):
+        scores = self.scores("partial.csv", [("c1", 0), ("c2", 1)])
+        scores.with_suffix(".csv.manifest.json").write_text(
+            json.dumps({"scores_sha256": hashlib.sha256(scores.read_bytes()).hexdigest()}),
+            encoding="utf-8",
+        )
+        with self.assertRaisesRegex(ValueError, "incomplete|schema"):
+            calibrate_control_threshold(scores, self.root / "partial-threshold.json")
+
+    def test_training_rejects_modified_or_incomplete_capture(self):
+        features, labels = self.training()
+        manifest_path = self.root / "manifest.json"
+        manifest = {
+            "stage": "apollo_tokens",
+            "status": "failed",
+            "features_sha256": hashlib.sha256(features.read_bytes()).hexdigest(),
+            "metadata_sha256": hashlib.sha256(labels.read_bytes()).hexdigest(),
+            "feature_signature": self.signature,
+        }
+        manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "complete"):
+            train_apollo_probe(features, labels, self.root / "failed-probe")
+        manifest["status"] = "complete"
+        manifest["features_sha256"] = "0" * 64
+        manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "capture.*hash|hash.*capture"):
+            train_apollo_probe(features, labels, self.root / "changed-probe")
+        manifest["features_sha256"] = hashlib.sha256(features.read_bytes()).hexdigest()
+        manifest["metadata_sha256"] = "0" * 64
+        manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "Labels.*capture hash"):
+            train_apollo_probe(features, labels, self.root / "changed-labels")
+        manifest["metadata_sha256"] = hashlib.sha256(labels.read_bytes()).hexdigest()
+        manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+        report = train_apollo_probe(features, labels, self.root / "verified-probe")
+        self.assertTrue(report["capture_provenance"]["verified"])
+        manifest["status"] = "failed"
+        manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "complete"):
+            score_apollo_probe(features, self.root / "verified-probe", self.root / "scores.csv")
 
     def test_mean_raw_margin_not_mean_sigmoid(self):
         features, metadata = self.training()

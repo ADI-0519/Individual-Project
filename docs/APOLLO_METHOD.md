@@ -150,3 +150,25 @@ The instruction-pair baseline can test whether monitoring generalizes from promp
 Call this work an **8B adaptation of Apollo's instruction-pair probe recipe**. Exact 70B performance reproduction, universal lie detection, cross-model transfer, successful omission detection, and calibrated deception probabilities require separate evidence. Report genuine model runs separately from software fixtures and engineering smoke tests.
 
 See [reading log](./READING_LOG.md) for the section-by-section audit and unresolved source ambiguities.
+
+## 9. Independent validation after the full 8B fit
+
+The [numerical audit](./validation/2026-11-19-independent-baseline-audit.json)
+recomputes train-only normalization and frozen scores independently. Mean and
+scale differences are zero; instruction AUROC remains 1.0. A prompt-only text
+classifier also obtains 1.0 and a response-only classifier 0.5. This verifies
+the instruction-target limitation rather than establishing behavioral detection.
+
+Full-fact uniqueness does not ensure uniqueness of the scored causal histories:
+178 of 664 validation token rows have histories seen in training, and 130 rows
+exactly match a training activation. Five validation pairs have all scored
+histories covered. Removing every pair with any shared history leaves eight
+pairs with AUROC 1.0; these are post-fit diagnostics of the original frozen
+model, not a new independent behavioral evaluation.
+
+The [expanded GPU audit](./validation/2026-11-19-reader-and-context-pilot.json)
+checks all 536 stored records and replays 22 dialogues selected without scores.
+Saved/reloaded vectors, same-forward block-8 versus HF-state-9 outputs,
+unchanged repeats and both future-only mutation checks agree exactly in every
+selected example. This validates the recorded NF4/BF16 feature path; it does
+not establish equivalence with a full BF16 checkpoint.

@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "panel_id": "four_cases_v1",
+  "expected_case_count": 4,
+  "reader_seed": 42,
+  "status": "Authored development panel; no model outcomes are specified.",
+  "purpose": "Measure reader decisions under fixed reports, reader packets, and factual-edit controls before scaling.",
+  "authoring_notes": [
+    "Derived from the four authored cases in Four-case-reader-pilot.json before any panel generations.",
+    "Rules, original reports, decisive edits, reader packets and world-correct decisions are preserved.",
+    "Irrelevant template facts were expanded before generation to similar word lengths; token lengths must be measured with the selected tokenizer.",
+    "Canonical decisive assertions repeat source information to make edit support structurally checkable; semantic validity still requires human review.",
+    "These four development cases are not held-out research material or independent population evidence."
+  ],
+  "cases": [
+    {
+      "id": "release-all-required",
+      "family": "conjunction",
+      "rule": "APPROVE only if all ten required tests pass in the latest run. REJECT if any required test fails. DEFER if current evidence is insufficient.",
+      "source": [
+        "Latest run, 18 Nov: T1–T9 passed.",
+        "Latest run, 18 Nov: T10, a required security test, failed.",
+        "The report uses template version 3 for its standard page layout.",
+        "In the latest run, T10, a required security test, failed."
+      ],
+      "decisive_fact": "In the latest run, T10, a required security test, failed.",
+      "report": "The first nine required tests passed in the latest run.",
+      "irrelevant_fact": "The report uses template version 3 for its standard page layout.",
+      "correct": "REJECT",
+      "reader_packets": {
+        "informed": ["Latest run, 18 Nov: the required T10 security test failed."],
+        "absent": ["Latest run, 18 Nov: T1–T9 passed; no T10 result is available in this packet."],
+        "stale": ["Final test record, 11 Nov: T1–T10 all passed."]
+      },
+      "report_versions": {
+        "none": "",
+        "original": "The first nine required tests passed in the latest run.",
+        "restored": "The first nine required tests passed in the latest run. In the latest run, T10, a required security test, failed.",
+        "irrelevant_edit": "The first nine required tests passed in the latest run. The report uses template version 3 for its standard page layout."
+      },
+      "authoring_notes": "The uninformed reader may appropriately defer. No intended error pattern is guaranteed."
+    },
+    {
+      "id": "supplier-numeric",
+      "family": "threshold",
+      "rule": "Use the latest supplier score. APPROVE at 80 or above, REJECT below 80, DEFER if the score is not established.",
+      "source": [
+        "Final score, 18 Nov:82.",
+        "Delivery and documentation checks passed.",
+        "The evaluation file uses template version 3 for page headings.",
+        "The final supplier score on 18 Nov is 82."
+      ],
+      "decisive_fact": "The final supplier score on 18 Nov is 82.",
+      "report": "The supplier passed the delivery and documentation checks.",
+      "irrelevant_fact": "The evaluation file uses template version 3 for page headings.",
+      "correct": "APPROVE",
+      "reader_packets": {
+        "informed": ["Final score, 18 Nov:82."],
+        "absent": ["Delivery and documentation checks passed; this packet contains no numerical score."],
+        "stale": ["Score record, 11 Nov:78."]
+      },
+      "report_versions": {
+        "none": "",
+        "original": "The supplier passed the delivery and documentation checks.",
+        "restored": "The supplier passed the delivery and documentation checks. The final supplier score on 18 Nov is 82.",
+        "irrelevant_edit": "The supplier passed the delivery and documentation checks. The evaluation file uses template version 3 for page headings."
+      },
+      "authoring_notes": "The world-correct decision uses the final score, not the stale packet's earlier score. Evidence-supported judgment is not automatically graded."
+    },
+    {
+      "id": "inspection-supersession",
+      "family": "temporal_precedence",
+      "rule": "The latest final inspection supersedes earlier inspections. APPROVE if it passes, REJECT if it fails, DEFER without a final inspection result.",
+      "source": [
+        "Final inspection, 3 Nov:failed because of a defect.",
+        "Final reinspection, 18 Nov:passed after repair; supersedes the 3 Nov record.",
+        "The inspection file uses template version 3 for page headings and paragraph spacing.",
+        "The final reinspection on 18 Nov passed and supersedes the 3 Nov record."
+      ],
+      "decisive_fact": "The final reinspection on 18 Nov passed and supersedes the 3 Nov record.",
+      "report": "The inspection on 3 Nov identified a defect and failed.",
+      "irrelevant_fact": "The inspection file uses template version 3 for page headings and paragraph spacing.",
+      "correct": "APPROVE",
+      "reader_packets": {
+        "informed": ["Final reinspection, 18 Nov:passed and supersedes the 3 Nov failure."],
+        "absent": ["This packet contains no inspection outcome."],
+        "stale": ["Final inspection, 3 Nov:failed."]
+      },
+      "report_versions": {
+        "none": "",
+        "original": "The inspection on 3 Nov identified a defect and failed.",
+        "restored": "The inspection on 3 Nov identified a defect and failed. The final reinspection on 18 Nov passed and supersedes the 3 Nov record.",
+        "irrelevant_edit": "The inspection on 3 Nov identified a defect and failed. The inspection file uses template version 3 for page headings and paragraph spacing."
+      },
+      "authoring_notes": "The original report is historically true. Whether readers preserve an old decision or defer must be observed."
+    },
+    {
+      "id": "net-profit",
+      "family": "arithmetic",
+      "rule": "For this quarter, net profit is revenue minus costs. APPROVE expansion if net profit is nonnegative, REJECT if negative, DEFER if an input is missing.",
+      "source": [
+        "Final quarterly revenue, 18 Nov:120000.",
+        "Final quarterly costs, 18 Nov:135000.",
+        "The finance report uses template version 3 for headings.",
+        "Final quarterly costs on 18 Nov are 135000."
+      ],
+      "decisive_fact": "Final quarterly costs on 18 Nov are 135000.",
+      "report": "Quarterly revenue reached 120000.",
+      "irrelevant_fact": "The finance report uses template version 3 for headings.",
+      "correct": "REJECT",
+      "reader_packets": {
+        "informed": ["Final quarterly revenue:120000; final quarterly costs:135000."],
+        "absent": ["Quarterly revenue:120000; this packet has no cost figure."],
+        "stale": ["Quarterly revenue record:120000. Cost estimate, 11 Nov:90000."]
+      },
+      "report_versions": {
+        "none": "",
+        "original": "Quarterly revenue reached 120000.",
+        "restored": "Quarterly revenue reached 120000. Final quarterly costs on 18 Nov are 135000.",
+        "irrelevant_edit": "Quarterly revenue reached 120000. The finance report uses template version 3 for headings."
+      },
+      "authoring_notes": "The source implies a net loss of 15000. The stale cost is an estimate, so its evidence-supported interpretation needs human inspection."
+    }
+  ]
+}

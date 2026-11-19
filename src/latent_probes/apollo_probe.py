@@ -150,7 +150,63 @@ def _read_sidecar(path: Path) -> dict[str, Any]:
         raise ValueError("Score manifest must be a JSON object.")
     if payload.get("scores_sha256") != _sha256(path):
         raise ValueError("Score CSV does not match its recorded manifest hash.")
+    # A CSV checksum alone cannot verify probe identity or the overlap ledger.
+    if payload.get("schema") != "apollo_scores_v1":
+        raise ValueError("Score manifest has an incomplete or unsupported schema.")
+    for key in ("features_sha256", "probe_sha256", "scores_sha256"):
+        value = payload.get(key)
+        if (
+            not isinstance(value, str)
+            or len(value) != 64
+            or any(char not in "0123456789abcdef" for char in value)
+        ):
+            raise ValueError(f"Score manifest is incomplete: invalid {key}.")
+    _signature(payload.get("feature_signature", ""))
+    if payload.get("score_aggregation") != "mean_raw_margin":
+        raise ValueError("Score manifest has an unsupported aggregation.")
+    for key in (
+        "train_example_ids",
+        "validation_example_ids",
+        "train_pair_ids",
+        "validation_pair_ids",
+    ):
+        values = payload.get(key)
+        if (
+            not isinstance(values, list)
+            or not values
+            or any(not isinstance(value, str) or not value.strip() for value in values)
+            or len(set(values)) != len(values)
+        ):
+            raise ValueError(f"Score manifest is incomplete: invalid {key}.")
+    for key in ("n_examples", "n_tokens"):
+        if type(payload.get(key)) is not int or payload[key] <= 0:
+            raise ValueError(f"Score manifest is incomplete: invalid {key}.")
+    if len(_load_scores(path)) != payload["n_examples"]:
+        raise ValueError("Score manifest example count differs from its CSV.")
     return payload
+
+
+def _verify_capture(features: Path, signature: str, labels: Path | None = None) -> dict[str, Any]:
+    """Check a supplied Apollo capture ledger; generic numeric inputs stay explicit."""
+    companion = features.parent / "manifest.json"
+    if not companion.is_file():
+        return {"verified": False, "reason": "No adjacent Apollo capture manifest."}
+    payload = json.loads(companion.read_text(encoding="utf-8"))
+    if not isinstance(payload, dict) or payload.get("stage") != "apollo_tokens":
+        return {"verified": False, "reason": "Adjacent manifest is not an Apollo capture."}
+    if payload.get("status") != "complete":
+        raise ValueError("Apollo capture must have status complete before training or scoring.")
+    if payload.get("features_sha256") != _sha256(features):
+        raise ValueError("Features differ from their Apollo capture hash.")
+    if labels is not None and payload.get("metadata_sha256") != _sha256(labels):
+        raise ValueError("Labels differ from their Apollo capture hash.")
+    if _signature(payload.get("feature_signature", "")) != signature:
+        raise ValueError("Feature signature differs from the Apollo capture manifest.")
+    return {
+        "verified": True,
+        "manifest_sha256": _sha256(companion),
+        "scope": "completed capture, artifact hashes and feature identity; not behavior labels",
+    }
 
 
 def train_apollo_probe(
@@ -159,6 +215,7 @@ def train_apollo_probe(
     """Fit the source-recipe numeric readout on explicit training token rows."""
     features, labels, destination = Path(features_path), Path(labels_path), Path(output_dir)
     X, ids, signature = _load_features(features)
+    capture_provenance = _verify_capture(features, signature, labels)
     metadata = _load_metadata(labels)
     _match_ids(set(ids.tolist()), metadata)
     if any(row["split"] not in {"train", "validation"} for row in metadata.values()):
@@ -209,6 +266,7 @@ def train_apollo_probe(
     validation = [row for row in aggregate if row["example_id"] in set(by_split["validation"])]
     manifest: dict[str, Any] = {
         "schema": "apollo_probe_v1",
+        "capture_provenance": capture_provenance,
         "upstream_commit": UPSTREAM_COMMIT,
         "label_target": INSTRUCTION_TARGET,
         "feature_signature": signature,
@@ -278,6 +336,7 @@ def score_apollo_probe(
     """Average raw standardized margins over each contiguous example span."""
     features, directory, output = Path(features_path), Path(probe_dir), Path(output_path)
     X, ids, signature = _load_features(features)
+    capture_provenance = _verify_capture(features, signature)
     manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
     if signature != _signature(manifest.get("feature_signature", "")):
         raise ValueError("Feature identity differs from the fitted probe; scoring refused.")
@@ -307,6 +366,7 @@ def score_apollo_probe(
         writer.writerows(rows)
     score_manifest = {
         "schema": "apollo_scores_v1",
+        "capture_provenance": capture_provenance,
         "n_examples": len(rows),
         "n_tokens": len(ids),
         "feature_signature": signature,

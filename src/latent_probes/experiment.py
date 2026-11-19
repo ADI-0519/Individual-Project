@@ -154,6 +154,7 @@ def _load_backend(settings, manifest, factory):
         "resolved_revision",
         "dtype",
         "quantization",
+        "attention_implementation",
         "chat_template_sha256",
         "capture_layers",
         "extraction",

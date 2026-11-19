@@ -11,6 +11,12 @@ under reporting pressure and recipient-knowledge shifts.
 [starter audit](docs/STARTER_AUDIT.md) ·
 [planned pressure pilot](docs/PRESSURE_PILOT.md).
 
+**Current research decision:** [direction and scope](docs/RESEARCH_DIRECTION.md),
+[deep literature audit](docs/LITERATURE_PROBE_AUDIT.md), and
+[recipient-context experiment](docs/RECIPIENT_CONTEXT_DESIGN.md).
+Read the [measured pilot results and next empirical gates](docs/PILOT_RESULTS.md)
+before scaling the case bank.
+
 The Apollo path trains on selected token rows and scores mean raw projections.
 It is separate from the original last-token baseline documented below.
 Dependency locks, offline CI on Linux/Windows, packaging artifacts and a manual
@@ -29,8 +35,15 @@ also passed, including actual quantization, layer indexing, saved-vector replay
 and same-shape causal checks. The
 [full instruction baseline](docs/validation/2026-11-19-llama8b-full-instruction-probe.json)
 captured 536 dialogues and fitted the probe using 219 training / 49 validation
-fact pairs. Its validation target is the instruction condition. Audited
-behavioral evaluation under pressure and the omission study remain to be run.
+fact pairs. Its validation target is the instruction condition. The
+[independent numerical audit](docs/validation/2026-11-19-independent-baseline-audit.json)
+reproduces the fit and finds prompt-only AUROC 1.0 and response-only AUROC 0.5.
+The [first reader/context pilot](docs/validation/2026-11-19-reader-and-context-pilot.json)
+is complete: 48 genuine reader conversations and 48 fixed-report captures,
+alongside exact GPU replay checks on a prespecified 22-dialogue subset. The
+four development cases include a failed factual-restoration control. These
+are feasibility results; natural pressure responses, audited behavior labels,
+strong monitor comparisons and held-out family evaluation remain outstanding.
 
 ## Original sender–recipient starter
 

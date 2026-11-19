@@ -18,7 +18,7 @@ import numpy as np
 
 from latent_probes.backends import GenerationResult
 from latent_probes.config import ExperimentConfig, ModelSettings
-from latent_probes.experiment import plan, replay_recipients, run_senders
+from latent_probes.experiment import _load_backend, plan, replay_recipients, run_senders
 from latent_probes.storage import read_json
 
 
@@ -83,6 +83,15 @@ class ScriptedBackend:
 
 
 class ExperimentTests(unittest.TestCase):
+    def test_resume_refuses_changed_attention_implementation(self):
+        settings = ModelSettings(model_id="fixture", capture_layers=[0])
+        backend = ScriptedBackend(settings, [])
+        previous = dict(backend.metadata, attention_implementation="sdpa")
+        backend.metadata["attention_implementation"] = "eager"
+        with self.assertRaisesRegex(ValueError, "differs"):
+            _load_backend(settings, {"backend": previous}, lambda _: backend)
+        self.assertTrue(backend.closed)
+
     def setUp(self):
         self.temporary = tempfile.TemporaryDirectory(prefix="latent-probes-test-")
         self.addCleanup(self.temporary.cleanup)

@@ -1,0 +1,171 @@
+{
+  "schema": "independent_instruction_baseline_audit_summary_v1",
+  "status": "independent_cpu_audit_complete",
+  "is_deception_evaluation": false,
+  "label_target": "instructed_honesty_condition",
+  "source_audit": {
+    "path": "runs/apollo_full_independent_audit_v1.json",
+    "sha256": "61a7f67f2f77317c22fa9ce9f20cffd7b79a9908694b1b30cd04e37efb3c4815",
+    "created_at": "2026-11-19T20:04:49.808197+00:00",
+    "status": "saved_artifact_integrity_and_numeric_checks_passed",
+    "auditor_path": "src/latent_probes/baseline_audit.py",
+    "auditor_sha256": "5d98b5feea98e5961ac8397001f3e0ccdc67dd5e2927522ef0f624f7646bd40b"
+  },
+  "input_sha256": {
+    "runs/apollo_llama8b_full_v1/features.npz": "e9eca30a14553bc13019f904f545b2ccd26b399a1d3ad4c2ba521e8b680800fc",
+    "runs/apollo_llama8b_full_probe_v1/probe.npz": "a914ee3a458553f16a4ef32baf9472410df07e14d96395e0523edb6e66babb54"
+  },
+  "feature_profile": {
+    "model_id": "meta-llama/Llama-3.1-8B-Instruct",
+    "resolved_revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+    "dtype": "bfloat16",
+    "quantization": "4bit",
+    "decoder_block_index": 8,
+    "hf_hidden_state_index": 9,
+    "attention_implementation": "sdpa",
+    "is_test_fixture": false
+  },
+  "artifact_integrity": {
+    "capture_status": "complete",
+    "probe_schema": "apollo_probe_v1",
+    "n_examples": 536,
+    "n_token_rows": 3200,
+    "feature_dimension": 4096,
+    "record_and_packed_alignment": true,
+    "saved_mask_text_checks": true
+  },
+  "training_only_normalization": {
+    "rtol": 1e-10,
+    "atol": 1e-12,
+    "variance_ddof": 0,
+    "mean_max_absolute_error": 0.0,
+    "scale_max_absolute_error": 0.0
+  },
+  "logistic_stationarity": {
+    "objective": "mean(logaddexp(0,z)-y*z) + ||w||^2/(2*C*N)",
+    "C": 0.1,
+    "N_training_token_rows": 2536,
+    "regularized_objective": 0.01674409257637938,
+    "gradient_max_absolute": 9.641539513610781e-05,
+    "diagnostic_bound": 0.001,
+    "within_diagnostic_bound": true,
+    "interpretation": "Optimizer stationarity diagnostic, not deception-detection evidence."
+  },
+  "instruction_validation": {
+    "score_aggregation": "mean_raw_margin",
+    "auroc_method": "independent positive-negative pair comparisons; ties receive half credit",
+    "purge_selection_uses_labels": false,
+    "original": {
+      "n_examples": 98,
+      "n_positive": 49,
+      "n_negative": 49,
+      "n_pairs": 49,
+      "roc_auc": 1.0
+    },
+    "purge_fully_history_covered_pairs": {
+      "rule": "Remove a pair if either member has every scored causal history represented in training.",
+      "n_removed_pairs": 5,
+      "n_examples": 88,
+      "n_positive": 44,
+      "n_negative": 44,
+      "n_pairs": 44,
+      "roc_auc": 1.0
+    },
+    "strict_purge_any_shared_history_pairs": {
+      "rule": "Remove a pair if either member has any scored causal history represented in training.",
+      "n_removed_pairs": 41,
+      "n_examples": 16,
+      "n_positive": 8,
+      "n_negative": 8,
+      "n_pairs": 8,
+      "roc_auc": 1.0
+    },
+    "novel_token_only_complete_pairs": {
+      "rule": "Average only previously unseen causal histories; retain pairs with a score for both members.",
+      "n_examples_without_novel_tokens": 10,
+      "n_examples": 88,
+      "n_positive": 44,
+      "n_negative": 44,
+      "n_pairs": 44,
+      "roc_auc": 1.0
+    }
+  },
+  "text_controls": {
+    "unique_training_prompts": 2,
+    "unique_validation_prompts": 2,
+    "fit_partition": "train only",
+    "tfidf_ngram_range": [1, 2],
+    "logistic_C": 1.0,
+    "logistic_fit_intercept": true,
+    "prompt_only": {
+      "n_features": 26,
+      "roc_auc": 1.0,
+      "converged": true
+    },
+    "response_only": {
+      "text": "Complete inserted fact, identical within each instruction pair.",
+      "n_features": 2202,
+      "roc_auc": 0.5,
+      "converged": true
+    }
+  },
+  "overlap": {
+    "history_definition": "Entire input-token prefix through and including the scored token.",
+    "vector_equality": "Exact numeric equality against any training occurrence; signed zeros equal.",
+    "training_token_rows": 2536,
+    "unique_training_histories": 1906,
+    "validation_token_rows": 664,
+    "validation_rows_with_shared_history": 178,
+    "validation_rows_with_exact_training_vector": 130,
+    "validation_rows_with_exact_vector_and_same_history": 130,
+    "fully_history_covered_validation_examples": 10,
+    "fully_history_covered_validation_pairs": 5,
+    "fully_vector_covered_validation_examples": 4
+  },
+  "pair_flip_negative_controls": {
+    "n_fits": 20,
+    "n_converged": 20,
+    "seed_first": 20261119,
+    "seed_last": 20261138,
+    "assignment": "Independent train/validation SeedSequence children; one XOR label flip per sorted pair ID.",
+    "normalization": "Fixed training-only mean and scale.",
+    "C": 0.1,
+    "fit_intercept": false,
+    "predetermined_expected_result_required": false,
+    "mean_auroc": 0.5182840483132028,
+    "population_std_auroc": 0.028755344303896375,
+    "minimum_auroc": 0.4660558100791337,
+    "maximum_auroc": 0.6030820491461891,
+    "auroc_by_seed_order": [
+      0.5226988754685548,
+      0.504789670970429,
+      0.5172844648063307,
+      0.4860474802165764,
+      0.5556018325697626,
+      0.5106205747605165,
+      0.5031236984589754,
+      0.6030820491461891,
+      0.5285297792586422,
+      0.5264473136193253,
+      0.4910453977509371,
+      0.4943773427738442,
+      0.5060391503540191,
+      0.4660558100791337,
+      0.5514369012911287,
+      0.5077051228654728,
+      0.4993752603082049,
+      0.5297792586422324,
+      0.5260308204914619,
+      0.5356101624323198
+    ]
+  },
+  "interpretation": "The saved readout is internally consistent and separates instruction conditions. A prompt-only text baseline achieves the same AUROC, so these validation results establish no added value for latent deception monitoring.",
+  "limitations": [
+    "Labels identify honest/dishonest instructions over fixed responses, not observed lies, intent or recipient beliefs.",
+    "This is one NF4/BF16 8B profile and an ordered development split; no independent behavioral distribution-shift evaluation is included.",
+    "Shared causal histories limit independence. The strict purged subset contains only eight pairs; perfect AUROC there is not population evidence.",
+    "Twenty seeded label-flip fits are a negative-control diagnostic, not a required pass rate or a significance claim.",
+    "The CPU audit checks saved arrays and internal hash consistency. Independent tokenization and genuine model causality require separate GPU checks."
+  ],
+  "curation": "Selected fields from the immutable source audit; raw per-example scores, case IDs, complete hash ledger and pair-flip assignments are omitted."
+}
