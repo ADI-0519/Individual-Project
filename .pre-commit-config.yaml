@@ -7,7 +7,8 @@ repos:
       - id: check-added-large-files
         entry: python -m pre_commit_hooks.check_added_large_files
         args: [--maxkb=1000]
-        exclude: ^uv\.lock$
+        # Reviewed 128-case source bank is 1.13 MiB; raw runs remain ignored.
+        exclude: ^(uv\.lock|data/belief_diagnostic/contrast_validation_v1\.json)$
       - id: check-merge-conflict
         entry: python -m pre_commit_hooks.check_merge_conflict
       - id: check-yaml
