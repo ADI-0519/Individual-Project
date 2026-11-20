@@ -1,0 +1,18 @@
+{
+  "model": {
+    "model_id": "Qwen/Qwen2.5-7B-Instruct",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "dtype": "bfloat16",
+    "quantization": "4bit",
+    "device": "cuda",
+    "capture_layers": [8],
+    "max_input_tokens": 2048,
+    "local_files_only": true
+  },
+  "sender": {"max_new_tokens": 96, "do_sample": false},
+  "recipient": {"max_new_tokens": 8, "do_sample": false},
+  "seeds": [42],
+  "objectives": ["neutral"],
+  "assumed_knowledge": [false],
+  "elicited_forecast": false
+}
