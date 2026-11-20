@@ -60,6 +60,42 @@ Truth probes miss many authored misleading non-falsities; including misleading e
 
 **Collision:** neither truthful misleadingness nor the idea of decoding a listener's belief is new. Evaluating intent probes against measured recipient-dependent effects is an empirical extension worth testing, not a proven unoccupied field.
 
+### Li et al.: missing disclosure and downstream actions
+
+[*Thinking Is Not Telling: Information Disclosure in User-Service LLM Agents*](https://arxiv.org/html/2602.07796v3), arXiv:2602.07796v3, revised 17 November 2026. The primary arXiv record identifies TMLR; an October acceptance date was not independently verified because OpenReview presented a browser challenge.
+
+**Read:** disclosure annotation and counterfactual construction in sections 4.1–4.2, results in 5.1–5.2 and relevant Appendix C–E passages.
+
+Its evidence-grounded "probing" means GPT-4.1 evidence-span annotation, not latent activation probing. It injects missing decision-relevant information into a failed response, rerolls the agent/user interaction, and compares subsequent actions with verbosity and reasoning-content controls.
+
+**Collision:** restoring disclosure and measuring downstream correction are established. The inspected experiment does not independently cross an unchanged natural report with recipient starting packets or fit a neutral-only latent outcome monitor for pressure transfer.
+
+### MonitorBench: the same passage with different actual evidence
+
+[*MonitorBench*](https://arxiv.org/html/2603.28590v2), Appendix A.3.1, was reread specifically for this priority check. A truthful misleading passage and question stay fixed while a decisive fact is supplied as additional solver context, and the solver's answer is measured against gold.
+
+**Collision:** the broad same-text/different-actual-information/downstream-answer idea already exists in substance. Any proposed contribution here must depend on the full natural-communication transfer evaluation and its empirical comparison, not claiming to invent that intervention.
+
+### Florin et al.: awareness and disclosure are separate measurements
+
+[*Deception by Omission: Language Models Knowingly Hide Their Mistakes*](https://arxiv.org/html/2610.11351v1), arXiv:2610.11351v1, 8 October 2026.
+
+**Read:** complete methods 3.1–3.5 and discussion/limitations 5.1–5.3; related-work references were inspected selectively. No full appendix or code audit.
+
+The authors prefill synthetic mistakes, apply capability controls and separately judge verbalized awareness and user-facing disclosure. They acknowledge that prefilling is off-policy and that CoT can omit or distort awareness. They propose white-box investigation of the difference between reviewing a transcript and continuing one's own trajectory.
+
+**Collision:** knowing-versus-telling dissociations and the motivation for internal-state monitoring are established. Our contextual reread cannot prove the original sender noticed, anticipated or intentionally concealed a fact.
+
+### Abdulhai et al.: listener effects and initial belief quality
+
+[*Evaluating & Reducing Deceptive Dialogue From Language Models with Multi-turn RL*](https://arxiv.org/html/2510.14318v1), arXiv:2510.14318v1, 16 October 2025.
+
+**Read:** complete methods 3.1–3.5 and experimental setup 4; no full appendix, RL implementation or metric reproduction.
+
+The study models dialogue partners with private information, compares prompting objectives, and measures listener belief misalignment relative to world facts. Its metric subtracts initial from final misalignment, rather than treating every belief change as harmful. Listener beliefs are inferred by an additional LLM from the dialogue and confidential information.
+
+**Collision:** an effect-on-the-listener framing, private recipient information and prior-versus-posterior error are not new. Our primary endpoint is a pinned reader's observed decision; it must not be described as the first listener-based deception metric.
+
 ## What the project should establish
 
 The core question remains:
