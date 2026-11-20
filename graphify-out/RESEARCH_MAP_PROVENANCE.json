@@ -1,12 +1,12 @@
 {
-  "schema": "graphify_research_map_v2",
-  "updated_utc": "2026-11-20T15:47:09.776451+00:00",
+  "schema": "graphify_research_map_v3",
+  "updated_utc": "2026-11-20T16:39:07.249038+00:00",
   "graphify_version": "0.9.100",
   "source_root": "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project",
   "source_files": {
     "README.md": {
-      "sha256": "be3bfda4c102db535cda757bb0675ef4721b0cb01ef66ff47ed940e915cd1c99",
-      "lines": 327
+      "sha256": "29a0c343894ed52c3b444f551891aa9f0b5637028e870bebb0fc4c1bfcab3340",
+      "lines": 340
     },
     "docs/BELIEF_DIAGNOSTIC_RESULTS.md": {
       "sha256": "13e48c3da74826cbd9ff29dface5a1cd9e6654a7616a39439fe9813b8a91fa7e",
@@ -41,8 +41,24 @@
       "lines": 143
     },
     "docs/CREATE_COMPUTE_REQUEST.md": {
-      "sha256": "dd2cdf78f04299dba4a78ee13aa39c4915422fec1c20d7b787609d10167baa8c",
-      "lines": 141
+      "sha256": "c0ff2ec63fe7845e77642c6be05e3947de01c2e062c57ad16d45e5f8bcb4a243",
+      "lines": 150
+    },
+    "docs/EVIDENCE_ROLE_DIAGNOSTIC_PROTOCOL.md": {
+      "sha256": "9cc155c8e664ae1608f3b235eaa6edb9caf00445740999fd13d842815eb8f3df",
+      "lines": 74
+    },
+    "docs/EVIDENCE_ROLE_DIAGNOSTIC_RESULTS.md": {
+      "sha256": "2abd465e9dc054ffc4f84729d84a76626119c582c75186ac4a031636d34e7bd9",
+      "lines": 174
+    },
+    "docs/EVIDENCE_ROLE_LITERATURE.md": {
+      "sha256": "dfa6e7414eda0ccb175b78c97510c8d68bc59508efa1749f8ede8ce3d9f032e9",
+      "lines": 58
+    },
+    "docs/EVIDENCE_ROLE_REPLICATION_PROTOCOL.md": {
+      "sha256": "a67871b194e44b0f718f6eb561e751599f67149a4a41990f1b1fd8137ed9e10a",
+      "lines": 48
     },
     "docs/EXPERIMENT_PROTOCOL.md": {
       "sha256": "f5b3b079a6b86867db18767f1789ef280234fc9a4c230b7547714791cd67754e",
@@ -101,12 +117,12 @@
       "lines": 158
     },
     "docs/RESEARCH_LOG.md": {
-      "sha256": "c9ad20ac5edec2062c4c44664a89d58bf4098974470a3540d3b3cd2281b7fdbc",
-      "lines": 604
+      "sha256": "65d7de296bba9d3c2e2f75d0af7fd3fca2a7a5de658668463fe032dad986a650",
+      "lines": 632
     },
     "docs/SUPERVISOR_PROGRESS_2_BRIEF.md": {
-      "sha256": "f45989e8add6b8dbe16cf964b4730b820f9f7ac739b17a24ff114a1796bca38e",
-      "lines": 121
+      "sha256": "e92296aefb223a15277dd2c77bddabefa077b85ad5729ac0fa71f5535243e834",
+      "lines": 150
     },
     "scripts/analyse_mask_sensitivity.py": {
       "sha256": "5a2f248ee568a588a7d0c973ccb4e0a1d8647a8ed03949d9bec8d5d3b6e9d00c",
@@ -116,9 +132,17 @@
       "sha256": "0aa27a9b15b591fb1de2c85c8513b84946f979c42c63e737773611309ba526bb",
       "lines": 388
     },
+    "scripts/plot_evidence_role_diagnostic.py": {
+      "sha256": "66f8ac42dacf92fc16a303724850c98080e321563967524ca0e7ff15336f5298",
+      "lines": 255
+    },
     "scripts/replay_communication_reader.py": {
       "sha256": "78876350cda1fe354afb1a645c959a01d7e335d8588db16f527dd00aec74a7a1",
       "lines": 232
+    },
+    "scripts/replicate_evidence_role.py": {
+      "sha256": "99ce0dd9dfa44f9c26498b425e41ea5ab9ad96f7e6a43e800e78df520ebf4969",
+      "lines": 243
     },
     "scripts/run_belief_diagnostic.py": {
       "sha256": "ae85e31fbc18c922c407806cc4d0a65579055163fb7c36b5b61fb1c15b719540",
@@ -136,6 +160,10 @@
       "sha256": "b852b4c26513a93b222308ae8526877e4c3b832820e8fd98ef066904ff7cd926",
       "lines": 630
     },
+    "scripts/run_evidence_role_diagnostic.py": {
+      "sha256": "b94626390d93057d76091994826fdb1b0b28f44c67f15438f86b01194809c840",
+      "lines": 288
+    },
     "scripts/run_mask_same_text.py": {
       "sha256": "b9e6ebb986ab063546ebfdd5fad04b2fdbc303e55bc5a6fc2a896835315e5fa4",
       "lines": 371
@@ -151,6 +179,10 @@
     "scripts/run_recipient_transfer.py": {
       "sha256": "d1048d4de0f9b6799ab1f6854c896563e756a95cf26e05eacf155f48c514e847",
       "lines": 454
+    },
+    "scripts/update_progress2.py": {
+      "sha256": "4a1d5d60dd954a80caf7ff48394c7f3b40d074c2d3c68fa31e286c6f04082e78",
+      "lines": 1623
     },
     "scripts/validate_calibrated_reader.py": {
       "sha256": "3bfc421b67bd8fcc1d1ff64fee1fd46f7e71f7539065a507abe3e06ef5302e49",
@@ -196,6 +228,10 @@
       "sha256": "0fc63546c88a826bc1e87efeebb51b6a23488272e0d76de8018fdd99543bb608",
       "lines": 130
     },
+    "src/latent_probes/evidence_role_panel.py": {
+      "sha256": "ac06994ddf66268390fd20fe7145b519a7bfdf2c4ee253ccc6df8d5ae3214767",
+      "lines": 183
+    },
     "src/latent_probes/forecast_panel.py": {
       "sha256": "1ba166414f9a2aec1f1a48e19e1155051768854dfa0eb137e61756b3fe51e82f",
       "lines": 386
@@ -225,30 +261,32 @@
       "lines": 108
     }
   },
-  "scope": "55 explicitly selected project docs/code sources; no raw experiments, result JSON arrays, weights or generated slides.",
+  "scope": "64 explicitly selected research docs/code; excludes raw runs, result JSON arrays, weights and generated figures/slides.",
   "source_coverage": {
-    "markdown_fully_read": 26,
-    "python_ast_extracted": 29,
-    "changed_semantic_fully_read": 12,
-    "new_or_changed_ast_modules": 15
+    "markdown_fully_read": 30,
+    "python_ast_extracted": 34,
+    "changed_semantic_fully_read": 8,
+    "new_or_changed_ast_modules": 5
   },
   "graph": {
-    "nodes": 630,
-    "edges": 1815,
-    "communities": 26
+    "nodes": 727,
+    "edges": 2081,
+    "communities": 27
   },
   "incremental_diff": {
-    "prior_sources": 29,
-    "prior_nodes": 348,
-    "prior_edges": 922,
-    "new_nodes": 282,
-    "new_edges": 893
+    "prior_sources": 55,
+    "prior_nodes": 630,
+    "prior_edges": 1815,
+    "added_nodes": 97,
+    "added_edges": 266,
+    "removed_nodes": 0,
+    "removed_edges": 0
   },
-  "extraction": "Installed Graphify detect_incremental + AST/cache + delegated host-agent semantic extraction + build_merge replace-on-source + clustering.",
-  "semantic_reading_limits": "Paper nodes summarize repository primary-source audits with their stated limits; this operation did not newly read external PDFs. Source-explicit claims are not independent experimental verification.",
-  "research_status": "Fresh natural communication and terminal controls completed; conditional recipient readout pipeline remains unexecuted after failed qualification.",
+  "extraction": "Installed Graphify detect_incremental + AST/cache + delegated host-agent semantic extraction + build_merge replace-on-source + clustering. Unchanged source extraction preserved.",
+  "semantic_reading_limits": "All changed Markdown was read to final line; prior fully read sources reused. Paper nodes summarize repository primary-source audits; no new external PDFs read in this graph update. Source-explicit claims are not independent experimental verification.",
+  "research_status": "Natural communication completed; fresh reader qualification failed; Qwen evidence-role diagnostic and one post-discovery Llama replication completed. Full Qwen pattern is not cross-model replicated. Conditional recipient-readout pipeline remains unexecuted.",
   "excluded_feedback_files": [
-    "graphify-out/memory/query_20261120_125213_9e802eb9_which_current_results_connect_apollo_probes_to_nat.md"
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\graphify-out\\memory\\query_20261120_125213_9e802eb9_which_current_results_connect_apollo_probes_to_nat.md"
   ],
   "excluded": [
     "raw runs",

@@ -1,5 +1,32 @@
 # Research and implementation log
 
+## 20 November 2026 — Evidence-role failure and independent-reader replay
+
+After the failed qualification, froze one bounded reader-only diagnosis at
+`17e8df7`: 16 new cases, two authored grammars, three evidence roles and two
+value sides, giving 96 calls under the unchanged Qwen nine-shot text policy.
+This did not reopen qualification, fit a probe or touch the `ct` bank.
+Qwen gets all 32 decisive-evidence controls correct, but no metadata-only input
+elicits a warranted deferral (0/32). All eight date pairs follow irrelevant
+registration values, even when completion is explicitly stated to be unavailable.
+Score metadata follows the value in six of eight pairs; explicit missingness
+only repairs the high-score side. All outputs reach EOS and parse.
+
+An independent scorer reconstructed all 96 inputs, labels, raw parses, paired
+contrasts and seeded bootstrap summaries. Exact prompt IDs and all original
+source/record hashes match. The narrow two-grammar sample does not establish
+an internal mechanism, population prevalence or first discovery of distraction.
+Three further primary-paper reviews establish the relevant sufficiency and
+irrelevant-context precedents. See the [complete role diagnostic](./EVIDENCE_ROLE_DIAGNOSTIC_RESULTS.md).
+
+Froze one post-discovery Llama replication at `d0d0bd5`, retaining all 96 input
+messages. The result differs: only 19/32 decisive controls pass; metadata
+deferrals are 16/32 and explicit-missing deferrals 32/32. Do not promote the
+Qwen result into a cross-model mechanism or use Llama as a qualified replacement.
+The discovery directory and both experiments' sources remain unchanged. No
+fitting or untouched transfer followed. Total communication-checkpoint calls
+are 1,223; the final local suite passes **631 tests plus 48 subtests** in 111.41s.
+
 ## 20 November 2026 — Fresh natural communication and reader validity
 
 Committed the fresh input bank, protocol and runner at `4eb7e56` before model
@@ -69,7 +96,8 @@ Graphify was actually built and queried through its isolated installed runtime:
 source coverage and health warnings. Its evidence paths informed the return to
 natural reports. The literature reassessment reads methods and relevant
 appendices across eight primary papers and records the novelty collisions.
-The final full local suite passes **592 tests plus 48 subtests** (108.21 seconds).
+At the first published communication checkpoint, the full local suite passed
+**592 tests plus 48 subtests** (108.21 seconds).
 This includes the new fit/evaluator and failure-gate tests on synthetic fixtures.
 Editor diagnostics report no errors in the new runner/readout and slide builder.
 Final lint, package checks and remote CI are reported with the Git checkpoint.

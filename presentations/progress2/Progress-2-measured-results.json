@@ -1,7 +1,7 @@
 {
   "baseline_examples": 536,
   "baseline_instruction_auroc": 1,
-  "software_tests": 592,
+  "software_tests": 631,
   "software_subtests": 48,
   "reader_calls": 48,
   "fixed_replay_calls": 48,
@@ -608,7 +608,7 @@
     "n_reader_calls": 144,
     "n_unique_cached_reader_calls": 383,
     "n_secondary_conditions": 288,
-    "headline": "High accuracy matches a constant prediction; activation advantage is unproven.",
+    "headline": "Pressure accuracy matches a constant; irrelevant values expose a reader failure.",
     "detail": "APPROVE constant: 63/72 neutral, 66/71 pressure. Activation REJECT recall: zero in both goals.",
     "forecast": {
       "neutral": {
@@ -678,7 +678,7 @@
     "reader_validation_response": "Absent gate requires 20/24. New fitting stopped; request a matched CREATE precision reference.",
     "primary_record": "docs/validation/2026-11-20-communication-transfer.json",
     "terminal_followups": "docs/validation/2026-11-20-reader-followups.json",
-    "n_actual_generation_calls_this_checkpoint": 1031,
+    "n_actual_generation_calls_this_checkpoint": 1223,
     "monitor_budget": 512,
     "monitor_budget_status": "post-hoc fixed recovery; primary160retained",
     "primary_summary": {
@@ -12623,6 +12623,937 @@
       "summary_sha256": "a8eea2ae3b2db4686f8ea7804de96f31eaac2483cf2a88aa896dd424c0c43824",
       "forecasts_sha256": "97a705480ca1b5ce471ba75362df6237c5cbc51d7b79dd50008b9278a687f867"
     },
-    "interpretation": "No demonstrated latent advantage, spontaneous anticipation or validated novel positive result. Independent human semantic review outstanding."
+    "evidence_role_diagnostic": {
+      "model_label": "QWEN",
+      "n_calls": 96,
+      "n_cases": 16,
+      "decisive_correct": 32,
+      "decisive_n": 32,
+      "metadata_deferrals": 0,
+      "metadata_n": 32,
+      "date_value_following_pairs": 8,
+      "date_pairs": 8,
+      "summary": {
+        "schema": "evidence_role_diagnostic_summary_v1",
+        "n_calls": 96,
+        "n_cases": 16,
+        "groups": {
+          "date/decisive": {
+            "n": 16,
+            "correct": 16,
+            "invalid": 0,
+            "decision_counts": {
+              "APPROVE": 8,
+              "REJECT": 8
+            },
+            "deferrals": 0
+          },
+          "date/metadata": {
+            "n": 16,
+            "correct": 0,
+            "invalid": 0,
+            "decision_counts": {
+              "APPROVE": 8,
+              "REJECT": 8
+            },
+            "deferrals": 0
+          },
+          "date/explicit_missing": {
+            "n": 16,
+            "correct": 0,
+            "invalid": 0,
+            "decision_counts": {
+              "APPROVE": 8,
+              "REJECT": 8
+            },
+            "deferrals": 0
+          },
+          "score/decisive": {
+            "n": 16,
+            "correct": 16,
+            "invalid": 0,
+            "decision_counts": {
+              "REJECT": 8,
+              "APPROVE": 8
+            },
+            "deferrals": 0
+          },
+          "score/metadata": {
+            "n": 16,
+            "correct": 0,
+            "invalid": 0,
+            "decision_counts": {
+              "REJECT": 10,
+              "APPROVE": 6
+            },
+            "deferrals": 0
+          },
+          "score/explicit_missing": {
+            "n": 16,
+            "correct": 8,
+            "invalid": 0,
+            "decision_counts": {
+              "REJECT": 8,
+              "DEFER": 8
+            },
+            "deferrals": 8
+          }
+        },
+        "paired": {
+          "date": {
+            "cases": [
+              {
+                "case_id": "er_date_01",
+                "pairs": {
+                  "metadata": {
+                    "low": "APPROVE",
+                    "high": "REJECT",
+                    "any_flip": true,
+                    "definite_flip": true,
+                    "follows_irrelevant_value_as_decisive": true,
+                    "both_defer": false
+                  },
+                  "explicit_missing": {
+                    "low": "APPROVE",
+                    "high": "REJECT",
+                    "any_flip": true,
+                    "definite_flip": true,
+                    "follows_irrelevant_value_as_decisive": true,
+                    "both_defer": false
+                  }
+                },
+                "explicit_missing_minus_metadata_deferral": 0.0
+              },
+              {
+                "case_id": "er_date_02",
+                "pairs": {
+                  "metadata": {
+                    "low": "APPROVE",
+                    "high": "REJECT",
+                    "any_flip": true,
+                    "definite_flip": true,
+                    "follows_irrelevant_value_as_decisive": true,
+                    "both_defer": false
+                  },
+                  "explicit_missing": {
+                    "low": "APPROVE",
+                    "high": "REJECT",
+                    "any_flip": true,
+                    "definite_flip": true,
+                    "follows_irrelevant_value_as_decisive": true,
+                    "both_defer": false
+                  }
+                },
+                "explicit_missing_minus_metadata_deferral": 0.0
+              },
+              {
+                "case_id": "er_date_03",
+                "pairs": {
+                  "metadata": {
+                    "low": "APPROVE",
+                    "high": "REJECT",
+                    "any_flip": true,
+                    "definite_flip": true,
+                    "follows_irrelevant_value_as_decisive": true,
+                    "both_defer": false
+                  },
+                  "explicit_missing": {
+                    "low": "APPROVE",
+                    "high": "REJECT",
+                    "any_flip": true,
+                    "definite_flip": true,
+                    "follows_irrelevant_value_as_decisive": true,
+                    "both_defer": false
+                  }
+                },
+                "explicit_missing_minus_metadata_deferral": 0.0
+              },
+              {
+                "case_id": "er_date_04",
+                "pairs": {
+                  "metadata": {
+                    "low": "APPROVE",
+                    "high": "REJECT",
+                    "any_flip": true,
+                    "definite_flip": true,
+                    "follows_irrelevant_value_as_decisive": true,
+                    "both_defer": false
+                  },
+                  "explicit_missing": {
+                    "low": "APPROVE",
+                    "high": "REJECT",
+                    "any_flip": true,
+                    "definite_flip": true,
+                    "follows_irrelevant_value_as_decisive": true,
+                    "both_defer": false
+                  }
+                },
+                "explicit_missing_minus_metadata_deferral": 0.0
+              },
+              {
+                "case_id": "er_date_05",
+                "pairs": {
+                  "metadata": {
+                    "low": "APPROVE",
+                    "high": "REJECT",
+                    "any_flip": true,
+                    "definite_flip": true,
+                    "follows_irrelevant_value_as_decisive": true,
+                    "both_defer": false
+                  },
+                  "explicit_missing": {
+                    "low": "APPROVE",
+                    "high": "REJECT",
+                    "any_flip": true,
+                    "definite_flip": true,
+                    "follows_irrelevant_value_as_decisive": true,
+                    "both_defer": false
+                  }
+                },
+                "explicit_missing_minus_metadata_deferral": 0.0
+              },
+              {
+                "case_id": "er_date_06",
+                "pairs": {
+                  "metadata": {
+                    "low": "APPROVE",
+                    "high": "REJECT",
+                    "any_flip": true,
+                    "definite_flip": true,
+                    "follows_irrelevant_value_as_decisive": true,
+                    "both_defer": false
+                  },
+                  "explicit_missing": {
+                    "low": "APPROVE",
+                    "high": "REJECT",
+                    "any_flip": true,
+                    "definite_flip": true,
+                    "follows_irrelevant_value_as_decisive": true,
+                    "both_defer": false
+                  }
+                },
+                "explicit_missing_minus_metadata_deferral": 0.0
+              },
+              {
+                "case_id": "er_date_07",
+                "pairs": {
+                  "metadata": {
+                    "low": "APPROVE",
+                    "high": "REJECT",
+                    "any_flip": true,
+                    "definite_flip": true,
+                    "follows_irrelevant_value_as_decisive": true,
+                    "both_defer": false
+                  },
+                  "explicit_missing": {
+                    "low": "APPROVE",
+                    "high": "REJECT",
+                    "any_flip": true,
+                    "definite_flip": true,
+                    "follows_irrelevant_value_as_decisive": true,
+                    "both_defer": false
+                  }
+                },
+                "explicit_missing_minus_metadata_deferral": 0.0
+              },
+              {
+                "case_id": "er_date_08",
+                "pairs": {
+                  "metadata": {
+                    "low": "APPROVE",
+                    "high": "REJECT",
+                    "any_flip": true,
+                    "definite_flip": true,
+                    "follows_irrelevant_value_as_decisive": true,
+                    "both_defer": false
+                  },
+                  "explicit_missing": {
+                    "low": "APPROVE",
+                    "high": "REJECT",
+                    "any_flip": true,
+                    "definite_flip": true,
+                    "follows_irrelevant_value_as_decisive": true,
+                    "both_defer": false
+                  }
+                },
+                "explicit_missing_minus_metadata_deferral": 0.0
+              }
+            ],
+            "n_cases": 8,
+            "metadata_definite_flip_cases": 8,
+            "metadata_value_following_cases": 8,
+            "explicit_missing_value_following_cases": 8,
+            "deferral_intervention": {
+              "n_case_clusters": 8,
+              "mean": 0.0,
+              "case_bootstrap_percentile_95": [
+                0.0,
+                0.0
+              ],
+              "scope": "Conditional on authored instances of one rule grammar; not population family inference."
+            }
+          },
+          "score": {
+            "cases": [
+              {
+                "case_id": "er_score_01",
+                "pairs": {
+                  "metadata": {
+                    "low": "REJECT",
+                    "high": "REJECT",
+                    "any_flip": false,
+                    "definite_flip": false,
+                    "follows_irrelevant_value_as_decisive": false,
+                    "both_defer": false
+                  },
+                  "explicit_missing": {
+                    "low": "REJECT",
+                    "high": "DEFER",
+                    "any_flip": true,
+                    "definite_flip": false,
+                    "follows_irrelevant_value_as_decisive": false,
+                    "both_defer": false
+                  }
+                },
+                "explicit_missing_minus_metadata_deferral": 0.5
+              },
+              {
+                "case_id": "er_score_02",
+                "pairs": {
+                  "metadata": {
+                    "low": "REJECT",
+                    "high": "APPROVE",
+                    "any_flip": true,
+                    "definite_flip": true,
+                    "follows_irrelevant_value_as_decisive": true,
+                    "both_defer": false
+                  },
+                  "explicit_missing": {
+                    "low": "REJECT",
+                    "high": "DEFER",
+                    "any_flip": true,
+                    "definite_flip": false,
+                    "follows_irrelevant_value_as_decisive": false,
+                    "both_defer": false
+                  }
+                },
+                "explicit_missing_minus_metadata_deferral": 0.5
+              },
+              {
+                "case_id": "er_score_03",
+                "pairs": {
+                  "metadata": {
+                    "low": "REJECT",
+                    "high": "APPROVE",
+                    "any_flip": true,
+                    "definite_flip": true,
+                    "follows_irrelevant_value_as_decisive": true,
+                    "both_defer": false
+                  },
+                  "explicit_missing": {
+                    "low": "REJECT",
+                    "high": "DEFER",
+                    "any_flip": true,
+                    "definite_flip": false,
+                    "follows_irrelevant_value_as_decisive": false,
+                    "both_defer": false
+                  }
+                },
+                "explicit_missing_minus_metadata_deferral": 0.5
+              },
+              {
+                "case_id": "er_score_04",
+                "pairs": {
+                  "metadata": {
+                    "low": "REJECT",
+                    "high": "REJECT",
+                    "any_flip": false,
+                    "definite_flip": false,
+                    "follows_irrelevant_value_as_decisive": false,
+                    "both_defer": false
+                  },
+                  "explicit_missing": {
+                    "low": "REJECT",
+                    "high": "DEFER",
+                    "any_flip": true,
+                    "definite_flip": false,
+                    "follows_irrelevant_value_as_decisive": false,
+                    "both_defer": false
+                  }
+                },
+                "explicit_missing_minus_metadata_deferral": 0.5
+              },
+              {
+                "case_id": "er_score_05",
+                "pairs": {
+                  "metadata": {
+                    "low": "REJECT",
+                    "high": "APPROVE",
+                    "any_flip": true,
+                    "definite_flip": true,
+                    "follows_irrelevant_value_as_decisive": true,
+                    "both_defer": false
+                  },
+                  "explicit_missing": {
+                    "low": "REJECT",
+                    "high": "DEFER",
+                    "any_flip": true,
+                    "definite_flip": false,
+                    "follows_irrelevant_value_as_decisive": false,
+                    "both_defer": false
+                  }
+                },
+                "explicit_missing_minus_metadata_deferral": 0.5
+              },
+              {
+                "case_id": "er_score_06",
+                "pairs": {
+                  "metadata": {
+                    "low": "REJECT",
+                    "high": "APPROVE",
+                    "any_flip": true,
+                    "definite_flip": true,
+                    "follows_irrelevant_value_as_decisive": true,
+                    "both_defer": false
+                  },
+                  "explicit_missing": {
+                    "low": "REJECT",
+                    "high": "DEFER",
+                    "any_flip": true,
+                    "definite_flip": false,
+                    "follows_irrelevant_value_as_decisive": false,
+                    "both_defer": false
+                  }
+                },
+                "explicit_missing_minus_metadata_deferral": 0.5
+              },
+              {
+                "case_id": "er_score_07",
+                "pairs": {
+                  "metadata": {
+                    "low": "REJECT",
+                    "high": "APPROVE",
+                    "any_flip": true,
+                    "definite_flip": true,
+                    "follows_irrelevant_value_as_decisive": true,
+                    "both_defer": false
+                  },
+                  "explicit_missing": {
+                    "low": "REJECT",
+                    "high": "DEFER",
+                    "any_flip": true,
+                    "definite_flip": false,
+                    "follows_irrelevant_value_as_decisive": false,
+                    "both_defer": false
+                  }
+                },
+                "explicit_missing_minus_metadata_deferral": 0.5
+              },
+              {
+                "case_id": "er_score_08",
+                "pairs": {
+                  "metadata": {
+                    "low": "REJECT",
+                    "high": "APPROVE",
+                    "any_flip": true,
+                    "definite_flip": true,
+                    "follows_irrelevant_value_as_decisive": true,
+                    "both_defer": false
+                  },
+                  "explicit_missing": {
+                    "low": "REJECT",
+                    "high": "DEFER",
+                    "any_flip": true,
+                    "definite_flip": false,
+                    "follows_irrelevant_value_as_decisive": false,
+                    "both_defer": false
+                  }
+                },
+                "explicit_missing_minus_metadata_deferral": 0.5
+              }
+            ],
+            "n_cases": 8,
+            "metadata_definite_flip_cases": 6,
+            "metadata_value_following_cases": 6,
+            "explicit_missing_value_following_cases": 0,
+            "deferral_intervention": {
+              "n_case_clusters": 8,
+              "mean": 0.5,
+              "case_bootstrap_percentile_95": [
+                0.5,
+                0.5
+              ],
+              "scope": "Conditional on authored instances of one rule grammar; not population family inference."
+            }
+          }
+        },
+        "qualifies_reader": false,
+        "new_probe_fits": 0,
+        "untouched_transfer_calls": 0
+      },
+      "record": "docs/validation/2026-11-20-evidence-role-diagnostic.json",
+      "scope": "Separate reader-only96conditiondiagnostic; does not pass the failed qualification or establish latent advantage."
+    },
+    "interpretation": "Controlled reader value-following pattern; no demonstrated latent advantage, spontaneous anticipation or novel internal mechanism. Independent human semantic review outstanding.",
+    "evidence_role_llama_replication": {
+      "schema": "evidence_role_diagnostic_summary_v1",
+      "n_calls": 96,
+      "n_cases": 16,
+      "groups": {
+        "date/decisive": {
+          "n": 16,
+          "correct": 11,
+          "invalid": 0,
+          "decision_counts": {
+            "APPROVE": 13,
+            "REJECT": 3
+          },
+          "deferrals": 0
+        },
+        "date/metadata": {
+          "n": 16,
+          "correct": 0,
+          "invalid": 0,
+          "decision_counts": {
+            "APPROVE": 15,
+            "REJECT": 1
+          },
+          "deferrals": 0
+        },
+        "date/explicit_missing": {
+          "n": 16,
+          "correct": 16,
+          "invalid": 0,
+          "decision_counts": {
+            "DEFER": 16
+          },
+          "deferrals": 16
+        },
+        "score/decisive": {
+          "n": 16,
+          "correct": 8,
+          "invalid": 0,
+          "decision_counts": {
+            "APPROVE": 16
+          },
+          "deferrals": 0
+        },
+        "score/metadata": {
+          "n": 16,
+          "correct": 16,
+          "invalid": 0,
+          "decision_counts": {
+            "DEFER": 16
+          },
+          "deferrals": 16
+        },
+        "score/explicit_missing": {
+          "n": 16,
+          "correct": 16,
+          "invalid": 0,
+          "decision_counts": {
+            "DEFER": 16
+          },
+          "deferrals": 16
+        }
+      },
+      "paired": {
+        "date": {
+          "cases": [
+            {
+              "case_id": "er_date_01",
+              "pairs": {
+                "metadata": {
+                  "low": "APPROVE",
+                  "high": "APPROVE",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": false
+                },
+                "explicit_missing": {
+                  "low": "DEFER",
+                  "high": "DEFER",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": true
+                }
+              },
+              "explicit_missing_minus_metadata_deferral": 1.0
+            },
+            {
+              "case_id": "er_date_02",
+              "pairs": {
+                "metadata": {
+                  "low": "APPROVE",
+                  "high": "APPROVE",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": false
+                },
+                "explicit_missing": {
+                  "low": "DEFER",
+                  "high": "DEFER",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": true
+                }
+              },
+              "explicit_missing_minus_metadata_deferral": 1.0
+            },
+            {
+              "case_id": "er_date_03",
+              "pairs": {
+                "metadata": {
+                  "low": "APPROVE",
+                  "high": "APPROVE",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": false
+                },
+                "explicit_missing": {
+                  "low": "DEFER",
+                  "high": "DEFER",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": true
+                }
+              },
+              "explicit_missing_minus_metadata_deferral": 1.0
+            },
+            {
+              "case_id": "er_date_04",
+              "pairs": {
+                "metadata": {
+                  "low": "APPROVE",
+                  "high": "APPROVE",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": false
+                },
+                "explicit_missing": {
+                  "low": "DEFER",
+                  "high": "DEFER",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": true
+                }
+              },
+              "explicit_missing_minus_metadata_deferral": 1.0
+            },
+            {
+              "case_id": "er_date_05",
+              "pairs": {
+                "metadata": {
+                  "low": "APPROVE",
+                  "high": "APPROVE",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": false
+                },
+                "explicit_missing": {
+                  "low": "DEFER",
+                  "high": "DEFER",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": true
+                }
+              },
+              "explicit_missing_minus_metadata_deferral": 1.0
+            },
+            {
+              "case_id": "er_date_06",
+              "pairs": {
+                "metadata": {
+                  "low": "APPROVE",
+                  "high": "APPROVE",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": false
+                },
+                "explicit_missing": {
+                  "low": "DEFER",
+                  "high": "DEFER",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": true
+                }
+              },
+              "explicit_missing_minus_metadata_deferral": 1.0
+            },
+            {
+              "case_id": "er_date_07",
+              "pairs": {
+                "metadata": {
+                  "low": "APPROVE",
+                  "high": "APPROVE",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": false
+                },
+                "explicit_missing": {
+                  "low": "DEFER",
+                  "high": "DEFER",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": true
+                }
+              },
+              "explicit_missing_minus_metadata_deferral": 1.0
+            },
+            {
+              "case_id": "er_date_08",
+              "pairs": {
+                "metadata": {
+                  "low": "APPROVE",
+                  "high": "REJECT",
+                  "any_flip": true,
+                  "definite_flip": true,
+                  "follows_irrelevant_value_as_decisive": true,
+                  "both_defer": false
+                },
+                "explicit_missing": {
+                  "low": "DEFER",
+                  "high": "DEFER",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": true
+                }
+              },
+              "explicit_missing_minus_metadata_deferral": 1.0
+            }
+          ],
+          "n_cases": 8,
+          "metadata_definite_flip_cases": 1,
+          "metadata_value_following_cases": 1,
+          "explicit_missing_value_following_cases": 0,
+          "deferral_intervention": {
+            "n_case_clusters": 8,
+            "mean": 1.0,
+            "case_bootstrap_percentile_95": [
+              1.0,
+              1.0
+            ],
+            "scope": "Conditional on authored instances of one rule grammar; not population family inference."
+          }
+        },
+        "score": {
+          "cases": [
+            {
+              "case_id": "er_score_01",
+              "pairs": {
+                "metadata": {
+                  "low": "DEFER",
+                  "high": "DEFER",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": true
+                },
+                "explicit_missing": {
+                  "low": "DEFER",
+                  "high": "DEFER",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": true
+                }
+              },
+              "explicit_missing_minus_metadata_deferral": 0.0
+            },
+            {
+              "case_id": "er_score_02",
+              "pairs": {
+                "metadata": {
+                  "low": "DEFER",
+                  "high": "DEFER",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": true
+                },
+                "explicit_missing": {
+                  "low": "DEFER",
+                  "high": "DEFER",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": true
+                }
+              },
+              "explicit_missing_minus_metadata_deferral": 0.0
+            },
+            {
+              "case_id": "er_score_03",
+              "pairs": {
+                "metadata": {
+                  "low": "DEFER",
+                  "high": "DEFER",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": true
+                },
+                "explicit_missing": {
+                  "low": "DEFER",
+                  "high": "DEFER",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": true
+                }
+              },
+              "explicit_missing_minus_metadata_deferral": 0.0
+            },
+            {
+              "case_id": "er_score_04",
+              "pairs": {
+                "metadata": {
+                  "low": "DEFER",
+                  "high": "DEFER",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": true
+                },
+                "explicit_missing": {
+                  "low": "DEFER",
+                  "high": "DEFER",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": true
+                }
+              },
+              "explicit_missing_minus_metadata_deferral": 0.0
+            },
+            {
+              "case_id": "er_score_05",
+              "pairs": {
+                "metadata": {
+                  "low": "DEFER",
+                  "high": "DEFER",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": true
+                },
+                "explicit_missing": {
+                  "low": "DEFER",
+                  "high": "DEFER",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": true
+                }
+              },
+              "explicit_missing_minus_metadata_deferral": 0.0
+            },
+            {
+              "case_id": "er_score_06",
+              "pairs": {
+                "metadata": {
+                  "low": "DEFER",
+                  "high": "DEFER",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": true
+                },
+                "explicit_missing": {
+                  "low": "DEFER",
+                  "high": "DEFER",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": true
+                }
+              },
+              "explicit_missing_minus_metadata_deferral": 0.0
+            },
+            {
+              "case_id": "er_score_07",
+              "pairs": {
+                "metadata": {
+                  "low": "DEFER",
+                  "high": "DEFER",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": true
+                },
+                "explicit_missing": {
+                  "low": "DEFER",
+                  "high": "DEFER",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": true
+                }
+              },
+              "explicit_missing_minus_metadata_deferral": 0.0
+            },
+            {
+              "case_id": "er_score_08",
+              "pairs": {
+                "metadata": {
+                  "low": "DEFER",
+                  "high": "DEFER",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": true
+                },
+                "explicit_missing": {
+                  "low": "DEFER",
+                  "high": "DEFER",
+                  "any_flip": false,
+                  "definite_flip": false,
+                  "follows_irrelevant_value_as_decisive": false,
+                  "both_defer": true
+                }
+              },
+              "explicit_missing_minus_metadata_deferral": 0.0
+            }
+          ],
+          "n_cases": 8,
+          "metadata_definite_flip_cases": 0,
+          "metadata_value_following_cases": 0,
+          "explicit_missing_value_following_cases": 0,
+          "deferral_intervention": {
+            "n_case_clusters": 8,
+            "mean": 0.0,
+            "case_bootstrap_percentile_95": [
+              0.0,
+              0.0
+            ],
+            "scope": "Conditional on authored instances of one rule grammar; not population family inference."
+          }
+        }
+      },
+      "qualifies_reader": false,
+      "new_probe_fits": 0,
+      "untouched_transfer_calls": 0,
+      "limits": [
+        "Post-failure diagnosis under an unchanged policy, not untouched main-study validation.",
+        "Two authored rule grammars with8 instances each, not16 independent domains.",
+        "Input/answer contrasts do not establish an internal substitution mechanism or deceptive intent.",
+        "Explicitly marking missing evidence is a diagnostic condition, not a selected new reader policy."
+      ]
+    }
   }
 }

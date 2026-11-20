@@ -32,6 +32,19 @@ and untouched natural-transfer evaluation **were not run**. See the
 The location/belief-query studies
 below remain auxiliary diagnostics, rather than the main empirical result.
 
+**Controlled failure finding:** the separate [96-condition evidence-role
+diagnostic](docs/EVIDENCE_ROLE_DIAGNOSTIC_RESULTS.md) gets 32/32 decisive-evidence
+controls correct, yet 0/32 metadata-only inputs produce warranted deferral.
+All eight date pairs follow an irrelevant registration date, even when the
+completion date is explicitly unavailable. This is a reproducible behavioral
+pattern under one fixed Qwen policy, not a demonstrated internal mechanism or
+novel latent-monitor advantage. The failed qualification and stopped fitting
+remain unchanged.
+The one independent Llama replay differs: explicit missingness produces 32/32
+deferrals, but decisive-evidence controls fall to 19/32. The Qwen value-following
+pattern is therefore model-specific here; two checkpoints do not establish a
+general internal mechanism.
+
 **Start here:** [Apollo quickstart](docs/APOLLO_QUICKSTART.md) ·
 [paper/source audit](docs/APOLLO_METHOD.md) · [reading log](docs/READING_LOG.md) ·
 [starter audit](docs/STARTER_AUDIT.md) ·

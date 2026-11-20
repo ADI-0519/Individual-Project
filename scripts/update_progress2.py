@@ -370,6 +370,28 @@ def _validate_communication_results(study: Any) -> None:
                 raise ValueError("Comparator denominators must match that goal's forecast targets.")
             if comparison[f"{condition}_correct"] > actual_n:
                 raise ValueError("Comparator numerator cannot exceed that goal's denominator.")
+    role = study.get("evidence_role_diagnostic")
+    if role is not None:
+        if (
+            not isinstance(role, dict)
+            or not isinstance(role.get("model_label"), str)
+            or not role["model_label"].strip()
+        ):
+            raise ValueError("A measured evidence-role diagnostic requires its model label.")
+        for numerator, denominator in (
+            ("decisive_correct", "decisive_n"),
+            ("metadata_deferrals", "metadata_n"),
+            ("date_value_following_pairs", "date_pairs"),
+        ):
+            if (
+                type(role.get(numerator)) is not int
+                or type(role.get(denominator)) is not int
+                or not 0 <= role[numerator] <= role[denominator]
+                or role[denominator] <= 0
+            ):
+                raise ValueError(
+                    "Evidence-role diagnostic counts need explicit valid denominators."
+                )
 
 
 def _register_fonts() -> tuple[str, str]:
@@ -848,6 +870,7 @@ def _communication_slides(results: dict[str, Any]) -> list[Slide]:
     forecast, monitor = study["forecast"], study["full_context_monitor"]
     neutral, pressure = forecast["neutral"], forecast["pressure"]
     controls = study["reader_controls"]
+    role = study.get("evidence_role_diagnostic")
     provenance = (
         "Measured communication snapshot: "
         + results["snapshot_date"]
@@ -929,15 +952,25 @@ def _communication_slides(results: dict[str, Any]) -> list[Slide]:
             "Original neutral weights unchanged.",
         ),
         (
-            "FULL-CONTEXT TEXT MONITOR",
-            f"{monitor['pressure']['correct']}/{monitor['pressure']['n']}",
-            "correct pressured forecasts",
-            f"Neutral: {monitor['neutral']['correct']}/{monitor['neutral']['n']}.\n"
-            + (
-                f"{study['monitor_budget']}-token recovery; primary retained."
-                if study.get("monitor_budget")
-                else "Same-checkpoint text comparator."
-            ),
+            (
+                role["model_label"] + " READER ROLE TEST",
+                f"{role['decisive_correct']}/{role['decisive_n']}",
+                "decisive controls correct",
+                f"Metadata only: {role['metadata_deferrals']}/{role['metadata_n']} DEFER.\n"
+                f"{role['date_value_following_pairs']}/{role['date_pairs']} date pairs follow metadata.",
+            )
+            if role
+            else (
+                "FULL-CONTEXT TEXT MONITOR",
+                f"{monitor['pressure']['correct']}/{monitor['pressure']['n']}",
+                "correct pressured forecasts",
+                f"Neutral: {monitor['neutral']['correct']}/{monitor['neutral']['n']}.\n"
+                + (
+                    f"{study['monitor_budget']}-token recovery; primary retained."
+                    if study.get("monitor_budget")
+                    else "Same-checkpoint text comparator."
+                ),
+            )
         ),
     )
     for x, (label, value, unit, body) in zip((0.65, 4.78, 8.91), cards, strict=True):

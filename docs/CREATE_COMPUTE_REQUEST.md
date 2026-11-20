@@ -63,6 +63,15 @@ These findings do **not** show that quantization caused the errors or that BF16
 will fix them. They justify a paired precision reference before scaling a study
 whose interpretation depends on a reader using supplied evidence correctly.
 
+A separate [96-condition role diagnostic](./EVIDENCE_ROLE_DIAGNOSTIC_RESULTS.md)
+strengthens the reason to inspect that measurement. Qwen correctly uses all
+32 supplied decisive values, but defers on none of the 32 metadata-only inputs.
+All eight date pairs change their decisions with an irrelevant registration
+date, even with explicit missing-completion wording. This is not a general
+inability to compare the provided values, but no internal cause or precision
+explanation is established. The first CREATE job below remains the frozen
+72-case-condition qualification replay; the diagnostic does not expand its budget.
+
 ## Frozen first experiment and resource cap
 
 Use `Qwen/Qwen2.5-7B-Instruct` at revision

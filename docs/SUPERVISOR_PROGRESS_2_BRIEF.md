@@ -4,8 +4,8 @@ Aditya Ranjan · 20 November 2026 · Latent Probes and Listener Beliefs
 
 The project remains within Variant 2: evaluate a frozen latent probe under
 reporting-pressure and recipient-evidence shifts. We now have real natural-report
-results. They do **not** establish an activation advantage or a novel positive
-finding. The immediate barrier is the validity of the reader-based measurement,
+results and a controlled reader-failure finding. A novel monitoring advantage
+remains unproven. The immediate barrier is the validity of the reader-based measurement,
 alongside the scarcity of clean natural omissions.
 
 ## Work completed since Progress 1
@@ -22,7 +22,7 @@ unchanged neutral-trained outcome readout and Apollo comparator, collected
 actual recipient decisions, and replayed the same reports across recipient
 evidence and factual-restoration controls. Three agents conducted score-blind
 draft content review; independent human review is still outstanding. The primary
-run and follow-ups together made **1,031 actual generation calls**, including
+run and follow-ups through reader qualification made **1,031 actual generation calls**, including
 cached-call accounting and retained failures.
 
 | Outcome forecast | Neutral | Approval pressure |
@@ -73,6 +73,35 @@ evaluation on the untouched `ct` bank followed. A strictly gated implementation
 and tests exist for those steps. Synthetic-fixture tests establish software
 behavior, not research outcomes. The [terminal evidence](./validation/2026-11-20-reader-followups.json)
 retains the failed gate and all seven exact prompts and answers.
+
+## A controlled failure worth investigating
+
+A separately frozen **96-condition evidence-role diagnostic** narrows the
+measurement problem. The same Qwen policy gets all **32/32 decisive-evidence
+controls** correct, yet defers on **0/32 administrative-metadata conditions**.
+For all eight date cases, moving only a file-registration date across a deadline
+flips APPROVE to REJECT as though it were the missing completion date. That
+pattern persists when the prompt explicitly states that completion date is not
+provided. Numeric file IDs show value-following in six of eight cases; explicit
+missingness helps only the high-value score conditions. All 96 answers are
+uncapped and parse correctly.
+
+This is a controlled behavioral pattern, with independent reconstruction of
+every prompt, label, pair and summary. It is consistent with misuse of an
+attribute's evidential role, not proof of an internal mechanism. There are only
+16 authored case clusters and two grammars. Broad distractor sensitivity and
+insufficient-evidence answering have close precedents. The
+[complete diagnostic](./EVIDENCE_ROLE_DIAGNOSTIC_RESULTS.md) retains all cases and
+limits. The original qualification remains failed; this batch does not authorize
+the stopped probe fit or turn recipient error into deceptive intent.
+
+One post-discovery replay of all 96 identical messages on pinned Llama-3.1-8B
+does **not** reproduce the full Qwen pattern. It correctly defers on 16/32
+metadata-only inputs and 32/32 explicit-missing inputs, but passes only 19/32
+decisive-evidence controls. Preserve that failure: the Qwen finding is specific
+to this model/policy/grammar setup, and Llama cannot be substituted as a qualified
+reader. These two diagnostics add 192 calls, bringing this communication
+checkpoint to **1,223 actual generation calls**.
 
 ## Scope and the possible contribution
 

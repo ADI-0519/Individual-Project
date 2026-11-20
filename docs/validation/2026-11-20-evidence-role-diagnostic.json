@@ -1,0 +1,2984 @@
+{
+  "schema": "curated_independent_evidence_role_diagnostic_v1",
+  "created_utc": "2026-11-20T16:09:45.784627+00:00",
+  "status": "complete_independently_recomputed",
+  "scope": "Post-failure fixed-policy diagnosis, not reader qualification or a fit/ct experiment.",
+  "summary": {
+    "schema": "evidence_role_diagnostic_summary_v1",
+    "n_calls": 96,
+    "n_cases": 16,
+    "groups": {
+      "date/decisive": {
+        "n": 16,
+        "correct": 16,
+        "invalid": 0,
+        "decision_counts": {
+          "APPROVE": 8,
+          "REJECT": 8
+        },
+        "deferrals": 0
+      },
+      "date/metadata": {
+        "n": 16,
+        "correct": 0,
+        "invalid": 0,
+        "decision_counts": {
+          "APPROVE": 8,
+          "REJECT": 8
+        },
+        "deferrals": 0
+      },
+      "date/explicit_missing": {
+        "n": 16,
+        "correct": 0,
+        "invalid": 0,
+        "decision_counts": {
+          "APPROVE": 8,
+          "REJECT": 8
+        },
+        "deferrals": 0
+      },
+      "score/decisive": {
+        "n": 16,
+        "correct": 16,
+        "invalid": 0,
+        "decision_counts": {
+          "REJECT": 8,
+          "APPROVE": 8
+        },
+        "deferrals": 0
+      },
+      "score/metadata": {
+        "n": 16,
+        "correct": 0,
+        "invalid": 0,
+        "decision_counts": {
+          "REJECT": 10,
+          "APPROVE": 6
+        },
+        "deferrals": 0
+      },
+      "score/explicit_missing": {
+        "n": 16,
+        "correct": 8,
+        "invalid": 0,
+        "decision_counts": {
+          "REJECT": 8,
+          "DEFER": 8
+        },
+        "deferrals": 8
+      }
+    },
+    "paired": {
+      "date": {
+        "cases": [
+          {
+            "case_id": "er_date_01",
+            "pairs": {
+              "metadata": {
+                "low": "APPROVE",
+                "high": "REJECT",
+                "any_flip": true,
+                "definite_flip": true,
+                "follows_irrelevant_value_as_decisive": true,
+                "both_defer": false
+              },
+              "explicit_missing": {
+                "low": "APPROVE",
+                "high": "REJECT",
+                "any_flip": true,
+                "definite_flip": true,
+                "follows_irrelevant_value_as_decisive": true,
+                "both_defer": false
+              }
+            },
+            "explicit_missing_minus_metadata_deferral": 0.0
+          },
+          {
+            "case_id": "er_date_02",
+            "pairs": {
+              "metadata": {
+                "low": "APPROVE",
+                "high": "REJECT",
+                "any_flip": true,
+                "definite_flip": true,
+                "follows_irrelevant_value_as_decisive": true,
+                "both_defer": false
+              },
+              "explicit_missing": {
+                "low": "APPROVE",
+                "high": "REJECT",
+                "any_flip": true,
+                "definite_flip": true,
+                "follows_irrelevant_value_as_decisive": true,
+                "both_defer": false
+              }
+            },
+            "explicit_missing_minus_metadata_deferral": 0.0
+          },
+          {
+            "case_id": "er_date_03",
+            "pairs": {
+              "metadata": {
+                "low": "APPROVE",
+                "high": "REJECT",
+                "any_flip": true,
+                "definite_flip": true,
+                "follows_irrelevant_value_as_decisive": true,
+                "both_defer": false
+              },
+              "explicit_missing": {
+                "low": "APPROVE",
+                "high": "REJECT",
+                "any_flip": true,
+                "definite_flip": true,
+                "follows_irrelevant_value_as_decisive": true,
+                "both_defer": false
+              }
+            },
+            "explicit_missing_minus_metadata_deferral": 0.0
+          },
+          {
+            "case_id": "er_date_04",
+            "pairs": {
+              "metadata": {
+                "low": "APPROVE",
+                "high": "REJECT",
+                "any_flip": true,
+                "definite_flip": true,
+                "follows_irrelevant_value_as_decisive": true,
+                "both_defer": false
+              },
+              "explicit_missing": {
+                "low": "APPROVE",
+                "high": "REJECT",
+                "any_flip": true,
+                "definite_flip": true,
+                "follows_irrelevant_value_as_decisive": true,
+                "both_defer": false
+              }
+            },
+            "explicit_missing_minus_metadata_deferral": 0.0
+          },
+          {
+            "case_id": "er_date_05",
+            "pairs": {
+              "metadata": {
+                "low": "APPROVE",
+                "high": "REJECT",
+                "any_flip": true,
+                "definite_flip": true,
+                "follows_irrelevant_value_as_decisive": true,
+                "both_defer": false
+              },
+              "explicit_missing": {
+                "low": "APPROVE",
+                "high": "REJECT",
+                "any_flip": true,
+                "definite_flip": true,
+                "follows_irrelevant_value_as_decisive": true,
+                "both_defer": false
+              }
+            },
+            "explicit_missing_minus_metadata_deferral": 0.0
+          },
+          {
+            "case_id": "er_date_06",
+            "pairs": {
+              "metadata": {
+                "low": "APPROVE",
+                "high": "REJECT",
+                "any_flip": true,
+                "definite_flip": true,
+                "follows_irrelevant_value_as_decisive": true,
+                "both_defer": false
+              },
+              "explicit_missing": {
+                "low": "APPROVE",
+                "high": "REJECT",
+                "any_flip": true,
+                "definite_flip": true,
+                "follows_irrelevant_value_as_decisive": true,
+                "both_defer": false
+              }
+            },
+            "explicit_missing_minus_metadata_deferral": 0.0
+          },
+          {
+            "case_id": "er_date_07",
+            "pairs": {
+              "metadata": {
+                "low": "APPROVE",
+                "high": "REJECT",
+                "any_flip": true,
+                "definite_flip": true,
+                "follows_irrelevant_value_as_decisive": true,
+                "both_defer": false
+              },
+              "explicit_missing": {
+                "low": "APPROVE",
+                "high": "REJECT",
+                "any_flip": true,
+                "definite_flip": true,
+                "follows_irrelevant_value_as_decisive": true,
+                "both_defer": false
+              }
+            },
+            "explicit_missing_minus_metadata_deferral": 0.0
+          },
+          {
+            "case_id": "er_date_08",
+            "pairs": {
+              "metadata": {
+                "low": "APPROVE",
+                "high": "REJECT",
+                "any_flip": true,
+                "definite_flip": true,
+                "follows_irrelevant_value_as_decisive": true,
+                "both_defer": false
+              },
+              "explicit_missing": {
+                "low": "APPROVE",
+                "high": "REJECT",
+                "any_flip": true,
+                "definite_flip": true,
+                "follows_irrelevant_value_as_decisive": true,
+                "both_defer": false
+              }
+            },
+            "explicit_missing_minus_metadata_deferral": 0.0
+          }
+        ],
+        "n_cases": 8,
+        "metadata_definite_flip_cases": 8,
+        "metadata_value_following_cases": 8,
+        "explicit_missing_value_following_cases": 8,
+        "deferral_intervention": {
+          "n_case_clusters": 8,
+          "mean": 0.0,
+          "case_bootstrap_percentile_95": [
+            0.0,
+            0.0
+          ],
+          "scope": "Conditional on authored instances of one rule grammar; not population family inference."
+        }
+      },
+      "score": {
+        "cases": [
+          {
+            "case_id": "er_score_01",
+            "pairs": {
+              "metadata": {
+                "low": "REJECT",
+                "high": "REJECT",
+                "any_flip": false,
+                "definite_flip": false,
+                "follows_irrelevant_value_as_decisive": false,
+                "both_defer": false
+              },
+              "explicit_missing": {
+                "low": "REJECT",
+                "high": "DEFER",
+                "any_flip": true,
+                "definite_flip": false,
+                "follows_irrelevant_value_as_decisive": false,
+                "both_defer": false
+              }
+            },
+            "explicit_missing_minus_metadata_deferral": 0.5
+          },
+          {
+            "case_id": "er_score_02",
+            "pairs": {
+              "metadata": {
+                "low": "REJECT",
+                "high": "APPROVE",
+                "any_flip": true,
+                "definite_flip": true,
+                "follows_irrelevant_value_as_decisive": true,
+                "both_defer": false
+              },
+              "explicit_missing": {
+                "low": "REJECT",
+                "high": "DEFER",
+                "any_flip": true,
+                "definite_flip": false,
+                "follows_irrelevant_value_as_decisive": false,
+                "both_defer": false
+              }
+            },
+            "explicit_missing_minus_metadata_deferral": 0.5
+          },
+          {
+            "case_id": "er_score_03",
+            "pairs": {
+              "metadata": {
+                "low": "REJECT",
+                "high": "APPROVE",
+                "any_flip": true,
+                "definite_flip": true,
+                "follows_irrelevant_value_as_decisive": true,
+                "both_defer": false
+              },
+              "explicit_missing": {
+                "low": "REJECT",
+                "high": "DEFER",
+                "any_flip": true,
+                "definite_flip": false,
+                "follows_irrelevant_value_as_decisive": false,
+                "both_defer": false
+              }
+            },
+            "explicit_missing_minus_metadata_deferral": 0.5
+          },
+          {
+            "case_id": "er_score_04",
+            "pairs": {
+              "metadata": {
+                "low": "REJECT",
+                "high": "REJECT",
+                "any_flip": false,
+                "definite_flip": false,
+                "follows_irrelevant_value_as_decisive": false,
+                "both_defer": false
+              },
+              "explicit_missing": {
+                "low": "REJECT",
+                "high": "DEFER",
+                "any_flip": true,
+                "definite_flip": false,
+                "follows_irrelevant_value_as_decisive": false,
+                "both_defer": false
+              }
+            },
+            "explicit_missing_minus_metadata_deferral": 0.5
+          },
+          {
+            "case_id": "er_score_05",
+            "pairs": {
+              "metadata": {
+                "low": "REJECT",
+                "high": "APPROVE",
+                "any_flip": true,
+                "definite_flip": true,
+                "follows_irrelevant_value_as_decisive": true,
+                "both_defer": false
+              },
+              "explicit_missing": {
+                "low": "REJECT",
+                "high": "DEFER",
+                "any_flip": true,
+                "definite_flip": false,
+                "follows_irrelevant_value_as_decisive": false,
+                "both_defer": false
+              }
+            },
+            "explicit_missing_minus_metadata_deferral": 0.5
+          },
+          {
+            "case_id": "er_score_06",
+            "pairs": {
+              "metadata": {
+                "low": "REJECT",
+                "high": "APPROVE",
+                "any_flip": true,
+                "definite_flip": true,
+                "follows_irrelevant_value_as_decisive": true,
+                "both_defer": false
+              },
+              "explicit_missing": {
+                "low": "REJECT",
+                "high": "DEFER",
+                "any_flip": true,
+                "definite_flip": false,
+                "follows_irrelevant_value_as_decisive": false,
+                "both_defer": false
+              }
+            },
+            "explicit_missing_minus_metadata_deferral": 0.5
+          },
+          {
+            "case_id": "er_score_07",
+            "pairs": {
+              "metadata": {
+                "low": "REJECT",
+                "high": "APPROVE",
+                "any_flip": true,
+                "definite_flip": true,
+                "follows_irrelevant_value_as_decisive": true,
+                "both_defer": false
+              },
+              "explicit_missing": {
+                "low": "REJECT",
+                "high": "DEFER",
+                "any_flip": true,
+                "definite_flip": false,
+                "follows_irrelevant_value_as_decisive": false,
+                "both_defer": false
+              }
+            },
+            "explicit_missing_minus_metadata_deferral": 0.5
+          },
+          {
+            "case_id": "er_score_08",
+            "pairs": {
+              "metadata": {
+                "low": "REJECT",
+                "high": "APPROVE",
+                "any_flip": true,
+                "definite_flip": true,
+                "follows_irrelevant_value_as_decisive": true,
+                "both_defer": false
+              },
+              "explicit_missing": {
+                "low": "REJECT",
+                "high": "DEFER",
+                "any_flip": true,
+                "definite_flip": false,
+                "follows_irrelevant_value_as_decisive": false,
+                "both_defer": false
+              }
+            },
+            "explicit_missing_minus_metadata_deferral": 0.5
+          }
+        ],
+        "n_cases": 8,
+        "metadata_definite_flip_cases": 6,
+        "metadata_value_following_cases": 6,
+        "explicit_missing_value_following_cases": 0,
+        "deferral_intervention": {
+          "n_case_clusters": 8,
+          "mean": 0.5,
+          "case_bootstrap_percentile_95": [
+            0.5,
+            0.5
+          ],
+          "scope": "Conditional on authored instances of one rule grammar; not population family inference."
+        }
+      }
+    },
+    "qualifies_reader": false,
+    "new_probe_fits": 0,
+    "untouched_transfer_calls": 0
+  },
+  "limits": [
+    "Post-failure diagnosis under an unchanged policy, not untouched main-study validation.",
+    "Two authored rule grammars with8 instances each, not16 independent domains.",
+    "Input/answer contrasts do not establish an internal substitution mechanism or deceptive intent.",
+    "Explicitly marking missing evidence is a diagnostic condition, not a selected new reader policy."
+  ],
+  "rows": [
+    {
+      "example_id": "er_e483bacc0be88c857a9d5d8d",
+      "case_id": "er_date_01",
+      "family": "date",
+      "condition": "decisive",
+      "side": "low",
+      "expected_decision": "APPROVE",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Aster, APPROVE if the completion date is on or before 2022-01-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe completion date for Evidence Date Aster is 2022-01-13.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "d7f7b29abe51f4e1d7aeeec63ea8cd4a233b00e8aac706b8faef5a67ab61a9b2",
+      "record_file_sha256": "8584badffa5c2c4512503434e2195a095e4076752e85a67e2726412c4d672ae1",
+      "full_record_canonical_sha256": "9e789830492b7f21d3515d764dc3fe7cb7640bf48aae9e23372c4b283fe97674",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 6.831851427999993,
+        "prompt_tokens": 1028,
+        "prompt_token_ids_sha256": "bd5d70db3924c5d89c483c71456ef336a5c6ef4312460ec858d79d989f982860"
+      }
+    },
+    {
+      "example_id": "er_d7511e1ee7d603b654030957",
+      "case_id": "er_date_01",
+      "family": "date",
+      "condition": "decisive",
+      "side": "high",
+      "expected_decision": "REJECT",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Aster, APPROVE if the completion date is on or before 2022-01-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe completion date for Evidence Date Aster is 2022-01-17.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "0fecbf21ed9c761393f7f79f73fb6f90e39886b5f0098027a485379977a36613",
+      "record_file_sha256": "175db92e95cd00d1a874bde1f14b4f313b8e9ee383c60bc2dd996d250543f48f",
+      "full_record_canonical_sha256": "bff636a908d5ad8d792ca97a056ef708d9fca547fc9fa6b1ee471a32eca4561a",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.317629237999995,
+        "prompt_tokens": 1028,
+        "prompt_token_ids_sha256": "187abc0a38f654f01fc796d713df241dc3e604e8980c0ae1062d4cf48495d88c"
+      }
+    },
+    {
+      "example_id": "er_b304c1facbb338b83fcb9368",
+      "case_id": "er_date_01",
+      "family": "date",
+      "condition": "metadata",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Aster, APPROVE if the completion date is on or before 2022-01-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Aster is 2022-01-13.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "29c8e0f139bef7f127184fe7492fd541a12bb9bcbd14d5d9ba6e2d73a43ab199",
+      "record_file_sha256": "c7f8aaf9cfc5abacfbba7e4f614411436b1dd6461a9c748928bb3d2801224801",
+      "full_record_canonical_sha256": "3011d827773bab8c57c69deb522fef7bb22e415ab9dbcc1c13f4777cc97b23a4",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.35020685899996806,
+        "prompt_tokens": 1030,
+        "prompt_token_ids_sha256": "6afe7935fe44563bb6fadf1a7d5e2611980115b2bb881cae78b60a8f9b6119d7"
+      }
+    },
+    {
+      "example_id": "er_2c53631e96df0c8ab42f09f1",
+      "case_id": "er_date_01",
+      "family": "date",
+      "condition": "metadata",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Aster, APPROVE if the completion date is on or before 2022-01-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Aster is 2022-01-17.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "0f928aa1b87c901390093b95ff49bbf14fe464c449480e41088370ef410a86c7",
+      "record_file_sha256": "a0ca0542ddfcf31111abf22b466ddf0b69a54c75dc8d46354174cd9515dbdeba",
+      "full_record_canonical_sha256": "0a15b6cf7814f213f036a0984d25715403011764b60081d743121e97f26c03ec",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.31736122099999875,
+        "prompt_tokens": 1030,
+        "prompt_token_ids_sha256": "9e028b4a318e308dbd1a14546b7dad857861a6f94aae5e342c25f3b79ae0dbf4"
+      }
+    },
+    {
+      "example_id": "er_aa6ae65bfb010e2fa993bc2a",
+      "case_id": "er_date_01",
+      "family": "date",
+      "condition": "explicit_missing",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Aster, APPROVE if the completion date is on or before 2022-01-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Aster is 2022-01-13.\nThe completion date for Evidence Date Aster is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "e7809f8bcc105c290784fa03ec989f414dd2e752015e8e8e8af2810e0189c9e2",
+      "record_file_sha256": "c3eb28f8111689444b45b1349c724598c9a8fab1d7d899ad15e047e8cbe711f5",
+      "full_record_canonical_sha256": "8d993796bf311ac6a0fb724ccea5573d16bf2af3f33c364cb62be85480234c84",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.3483694820000096,
+        "prompt_tokens": 1041,
+        "prompt_token_ids_sha256": "b59f98b399b320b9fefdf7ccf73cd92e43a50560169707bf3d1beffea483a1d1"
+      }
+    },
+    {
+      "example_id": "er_ade74f5ce1974fe4b82f5b4e",
+      "case_id": "er_date_01",
+      "family": "date",
+      "condition": "explicit_missing",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Aster, APPROVE if the completion date is on or before 2022-01-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Aster is 2022-01-17.\nThe completion date for Evidence Date Aster is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "c56aa1ff50805b49983d3341ac45666751037a0735a9019b412ff825929f5028",
+      "record_file_sha256": "95a1c90e73b342aeaac23024951ac1ccdcee86aacad214a91238c148361693fd",
+      "full_record_canonical_sha256": "c8878c005501dd2128fb586c372a8dd1f264b6afb2e87060821eb65bca6b44a8",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.3158922060000009,
+        "prompt_tokens": 1041,
+        "prompt_token_ids_sha256": "d4868a413434a0243a8c7840c3a990e3b4f8f47f70d44cfa15f6d215677b8a62"
+      }
+    },
+    {
+      "example_id": "er_81d6f9706045018edb25dc6b",
+      "case_id": "er_date_02",
+      "family": "date",
+      "condition": "decisive",
+      "side": "low",
+      "expected_decision": "APPROVE",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Birch, APPROVE if the completion date is on or before 2022-02-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe completion date for Evidence Date Birch is 2022-02-13.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "c5f91fc27225137b0a1b5601e9a6449a061b51ee7d32b04c9eb05a537d6bcd69",
+      "record_file_sha256": "e396f61edf8d403f0d42e9ca3e741cfab77a025cb11f9981b4686d6d3113cf43",
+      "full_record_canonical_sha256": "67231ada39e67a0915f95ef1ef181c1761dc9069ca6838e73b7d0ab8b5d4c80a",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.335317018000012,
+        "prompt_tokens": 1028,
+        "prompt_token_ids_sha256": "7c38e40255610b05f3a8a034166af8b3f2625cc44c63deb3b4d0deb43e22132c"
+      }
+    },
+    {
+      "example_id": "er_fae83bf50d0c38276a6119f4",
+      "case_id": "er_date_02",
+      "family": "date",
+      "condition": "decisive",
+      "side": "high",
+      "expected_decision": "REJECT",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Birch, APPROVE if the completion date is on or before 2022-02-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe completion date for Evidence Date Birch is 2022-02-17.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "83de10d6b1e80b3f7655a9057f46f84f7c044386258db0a6e434f4b1a422d39e",
+      "record_file_sha256": "f1e51a3469a195aa1bd1aefb16d38dc3991bdecea3fc9135c31e4849dc7c45d6",
+      "full_record_canonical_sha256": "b9d1675d6d78cceaf499a23ee9a01009993b725fdcd8d1ee469e4aa1e093217d",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.32549422200003164,
+        "prompt_tokens": 1028,
+        "prompt_token_ids_sha256": "90def0bb7b96d07d2dd528165d554d5044a0d0a2d9b32128c41d162d4684a133"
+      }
+    },
+    {
+      "example_id": "er_8ff0ad64519483e6caba8426",
+      "case_id": "er_date_02",
+      "family": "date",
+      "condition": "metadata",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Birch, APPROVE if the completion date is on or before 2022-02-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Birch is 2022-02-13.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "a287daab7c13cf5d715ff9ec6731f2aedc54c195d64878c92ec9ffbccd5bfe81",
+      "record_file_sha256": "afc95e472db855e77346da96faca7aa99bee4434308b6a96d29204af878a6393",
+      "full_record_canonical_sha256": "67b6d378d88013afe7c1fdfa003a3194bbe41474e5d086ca2f4fa2c5e94bc3a0",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.33593858199998294,
+        "prompt_tokens": 1030,
+        "prompt_token_ids_sha256": "de6861e6c386edd306083b1b2305bdd5094c7c68a5a7df943866f7ddb92828e7"
+      }
+    },
+    {
+      "example_id": "er_e18ceab2124c4ea1cdb5e170",
+      "case_id": "er_date_02",
+      "family": "date",
+      "condition": "metadata",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Birch, APPROVE if the completion date is on or before 2022-02-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Birch is 2022-02-17.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "968022feacfd02fc8a833ae878d78dbc163d561e538bf9da57a6f37c03380bfa",
+      "record_file_sha256": "05adfc9c4723b6bc142a6dff4748b1f6dd36235856efd34a7c22d4664f968912",
+      "full_record_canonical_sha256": "8cfadb3f7cb5dd835b8591b362415fa589b9d2f63ac569ddb949762054234553",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.3162003620000178,
+        "prompt_tokens": 1030,
+        "prompt_token_ids_sha256": "4e9ea67070a885af69bcefd6dceabb75d90d7f02d51c2f3d7503716bd54018e5"
+      }
+    },
+    {
+      "example_id": "er_1aedc17bf3fca2ddb5b1fd5c",
+      "case_id": "er_date_02",
+      "family": "date",
+      "condition": "explicit_missing",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Birch, APPROVE if the completion date is on or before 2022-02-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Birch is 2022-02-13.\nThe completion date for Evidence Date Birch is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "75f07951e30abe2ff9e7d25a45f8ca384dd0fa432c60f2551bb1caa80b1e3426",
+      "record_file_sha256": "f02a7b780ffb20b773c6d1e282bbc01224dc0573a49779962b89a944afc9801c",
+      "full_record_canonical_sha256": "80c9ad6ef012edff42bb628f4eedca8ae80bdc7eee8cbc646d5125ca844549eb",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.3386122600000476,
+        "prompt_tokens": 1041,
+        "prompt_token_ids_sha256": "0d0e0d8e32334f386b2abcace77584c4fef086dffbafa1a10dfdba08104ab16a"
+      }
+    },
+    {
+      "example_id": "er_1b6786fa6a663d0e638b6a82",
+      "case_id": "er_date_02",
+      "family": "date",
+      "condition": "explicit_missing",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Birch, APPROVE if the completion date is on or before 2022-02-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Birch is 2022-02-17.\nThe completion date for Evidence Date Birch is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "edf4769869a6c35e61fa0a84409b90ccf149646f669079758dfe764e4eb98c42",
+      "record_file_sha256": "675c2f247d2abc86eb29b214836964a7d2f7904ded074f567831817fd4bf57bd",
+      "full_record_canonical_sha256": "a4b840502fcf7dec6e3ad4ba0be52b5466460a6b56f5ed7bb56dfe618ad53392",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.3241448029999674,
+        "prompt_tokens": 1041,
+        "prompt_token_ids_sha256": "138efe0d9437451c1683d8eb992d4a190fd493a259d543759cdb13afabe65d71"
+      }
+    },
+    {
+      "example_id": "er_eaae320694a54b75caac4bc7",
+      "case_id": "er_date_03",
+      "family": "date",
+      "condition": "decisive",
+      "side": "low",
+      "expected_decision": "APPROVE",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Clover, APPROVE if the completion date is on or before 2022-03-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe completion date for Evidence Date Clover is 2022-03-13.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "d5e5e453de190e70c9363d1a036e9a5e5da42f5f318e9c3d3ce316ae0f68e74f",
+      "record_file_sha256": "10fa1d5fddbec02ba255d553af63c71a728c8c00c027ab4a552ef0ebae10efc3",
+      "full_record_canonical_sha256": "523f3c4270153109a9875ebe7f100e363478d235254f24b218a2b2921a63d4a1",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.34209239500000876,
+        "prompt_tokens": 1028,
+        "prompt_token_ids_sha256": "f833f270f72c9a58411adc8341d2e66e1a4c5f13ab6dd5ade01a5b4854a93335"
+      }
+    },
+    {
+      "example_id": "er_d2d91eeaaa277cf74932b731",
+      "case_id": "er_date_03",
+      "family": "date",
+      "condition": "decisive",
+      "side": "high",
+      "expected_decision": "REJECT",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Clover, APPROVE if the completion date is on or before 2022-03-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe completion date for Evidence Date Clover is 2022-03-17.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "071212a31356ec66dae5e0b89afa36b3aceaff0a4bebeb9ad3b786715b31bdbb",
+      "record_file_sha256": "b3b45fa303a7d72e873dbec20ddc551929bb227eb891e2d87662e6535e99da6d",
+      "full_record_canonical_sha256": "f9cb7b533cf81176b25f642b4819d225053f80d8ccef12c2bd3583e0ef0c90e6",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.3109660990000407,
+        "prompt_tokens": 1028,
+        "prompt_token_ids_sha256": "572a432501cc90c1f74560e6929903a9352fd9642a5a7667a066cefaebc81174"
+      }
+    },
+    {
+      "example_id": "er_41e1c59f64a926f7c466215e",
+      "case_id": "er_date_03",
+      "family": "date",
+      "condition": "metadata",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Clover, APPROVE if the completion date is on or before 2022-03-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Clover is 2022-03-13.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "d4b39e3240a4a0f13f6524fe11b997dbace5c1b32010928900b4f456be6873ea",
+      "record_file_sha256": "6b09b44a1fbab5d6ab1e9ef4b83f3b363d69ffb572e071f84f2eed38521c3cdd",
+      "full_record_canonical_sha256": "fe240d26d0fa07d94a2124b108fb245c82a7344653a5580cd41c2c22c77e15d0",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.3309511079999652,
+        "prompt_tokens": 1030,
+        "prompt_token_ids_sha256": "3bbee98e9eb3b002dbdd8f3196be2092b47e4c6585516c03720d16d6d02f710b"
+      }
+    },
+    {
+      "example_id": "er_e44f81663736284da125f9c2",
+      "case_id": "er_date_03",
+      "family": "date",
+      "condition": "metadata",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Clover, APPROVE if the completion date is on or before 2022-03-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Clover is 2022-03-17.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "5380107e964b681df889c1932a9f859f42f72e115521677b411a357d4c263b68",
+      "record_file_sha256": "4d5166f40b5673da5359ba9fae745ca6e6e75bf26a1c0be7e5f7c992f46fdd49",
+      "full_record_canonical_sha256": "0fa1159fa8301f7e7a01cc877080841db50dbb92deb39efce6ae2979ad95f134",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.30858267300004627,
+        "prompt_tokens": 1030,
+        "prompt_token_ids_sha256": "82e72cd88b5e6536a373f2583a37bafc5543c5642c8dd875a0f7aeb8ee8bda2f"
+      }
+    },
+    {
+      "example_id": "er_406d069937c2c54f1d03f863",
+      "case_id": "er_date_03",
+      "family": "date",
+      "condition": "explicit_missing",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Clover, APPROVE if the completion date is on or before 2022-03-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Clover is 2022-03-13.\nThe completion date for Evidence Date Clover is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "e66f6f46df0e58206ee8facca4ae610fe153e8e038434a0fdf437910651ec299",
+      "record_file_sha256": "2f0d5050f77beded58e4046ed8a09071be6f8289a6208990bf61cf5154098a34",
+      "full_record_canonical_sha256": "16e1b834e0c184d2c170c247b0885c9f4a93300ad24a59a01e28982c51cddeeb",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.3339373239999759,
+        "prompt_tokens": 1041,
+        "prompt_token_ids_sha256": "51e931cd620d5870ed462caea28e1e85d1610042c801657b809642b7db1013aa"
+      }
+    },
+    {
+      "example_id": "er_dd080c9f65f940b26273c89c",
+      "case_id": "er_date_03",
+      "family": "date",
+      "condition": "explicit_missing",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Clover, APPROVE if the completion date is on or before 2022-03-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Clover is 2022-03-17.\nThe completion date for Evidence Date Clover is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "e5019176f4efc0cf320be6a3fdc2afe5893a6d2c46bae39801df013fbde12b10",
+      "record_file_sha256": "2b6d2668305bb3f6a67dbc14c5cdb9a05e8e0011417ac3babb760f5af5c1f338",
+      "full_record_canonical_sha256": "758729139b4da0c7bcaa9e384f49a8c9a99f77f1e8a715f6b58e90e2e1e8dbf1",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.31485638399999516,
+        "prompt_tokens": 1041,
+        "prompt_token_ids_sha256": "0f03f5ee29e8a17c2b7923d0fd0503902bb09efc30532e67fb2fa5e93f77866d"
+      }
+    },
+    {
+      "example_id": "er_8890d5ee8da2f67841a76a8e",
+      "case_id": "er_date_04",
+      "family": "date",
+      "condition": "decisive",
+      "side": "low",
+      "expected_decision": "APPROVE",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Dune, APPROVE if the completion date is on or before 2022-04-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe completion date for Evidence Date Dune is 2022-04-13.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "d0a18aa6d345de69dca2ead1e108431c4bfe57a7336757d0ea4c5a4f2865cb30",
+      "record_file_sha256": "db393b9c571e3a169bc0e738df6cf42bdbbd6bf0326df9152217c398c24803ed",
+      "full_record_canonical_sha256": "96a8b844a7d83c426cabe3bd74b1d062f3b6328f4362e3296d131ba01aca436f",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.34143733799999154,
+        "prompt_tokens": 1030,
+        "prompt_token_ids_sha256": "43e84e24ccae6fe68737fe147902e0c8f9a630cc92cd37ea24dae34e9a95ea26"
+      }
+    },
+    {
+      "example_id": "er_aeea98cef89d797d0c0c1633",
+      "case_id": "er_date_04",
+      "family": "date",
+      "condition": "decisive",
+      "side": "high",
+      "expected_decision": "REJECT",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Dune, APPROVE if the completion date is on or before 2022-04-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe completion date for Evidence Date Dune is 2022-04-17.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "765e3cde966ee127b5fe5ece278dde4ce645d2b6db866d3dea9af38b4af0f7d3",
+      "record_file_sha256": "e3e3dc2bee731126821db3407e1eb95ed0b9e4910125e81bda624114d7d97067",
+      "full_record_canonical_sha256": "5ba3064187531efccffcf37fda20cc220c793c77f4fc743c0c5538127cef0172",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.3154298460000291,
+        "prompt_tokens": 1030,
+        "prompt_token_ids_sha256": "c60b949a0405f2afc49008fe70c354833b813b24cf20de6e3d0501f4c7260df1"
+      }
+    },
+    {
+      "example_id": "er_64c817b17fe3bf326311138a",
+      "case_id": "er_date_04",
+      "family": "date",
+      "condition": "metadata",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Dune, APPROVE if the completion date is on or before 2022-04-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Dune is 2022-04-13.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "c6d1433be900880f7c76db48e4b3a304d7bee7d73f7f1884c9ae55eb07c25a14",
+      "record_file_sha256": "1864b80f58de8897d4ec85b12946e74366f2f13c425292db65dfcfab7fba6622",
+      "full_record_canonical_sha256": "e263854e035ed81f12a8db95c2976750103231019eaa979a00da3cb1418ad441",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.3386284219999993,
+        "prompt_tokens": 1032,
+        "prompt_token_ids_sha256": "52283fa6a58a5481715cc96e656198945aeb3bd428adb3e3bcd5a9931a380c2f"
+      }
+    },
+    {
+      "example_id": "er_3c1d2aa1d371fef02e6e5f4a",
+      "case_id": "er_date_04",
+      "family": "date",
+      "condition": "metadata",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Dune, APPROVE if the completion date is on or before 2022-04-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Dune is 2022-04-17.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "86ae16d250ce76e065ff202023c7d1a6caa7e4e54d088de7ee55a2dad5c40250",
+      "record_file_sha256": "000eb07bb58b87ef5344497d1138b9f41424dca49131b6b03d6033fde35681a8",
+      "full_record_canonical_sha256": "41280965d8392d064081f87e7662a9f461255cfa6d242a3b50cbe2a860336479",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.31539034999997284,
+        "prompt_tokens": 1032,
+        "prompt_token_ids_sha256": "11201fd3743b56d697f3e47bcd4db05e65da621312eeb436698de057a4fb5f1d"
+      }
+    },
+    {
+      "example_id": "er_362e1996f88c307a3244a9c2",
+      "case_id": "er_date_04",
+      "family": "date",
+      "condition": "explicit_missing",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Dune, APPROVE if the completion date is on or before 2022-04-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Dune is 2022-04-13.\nThe completion date for Evidence Date Dune is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "c4f79b6d69fbf6ec5b34b0bdcfcf11973801111710698ed7b8f52ef637ad22eb",
+      "record_file_sha256": "ee1e0f27e801861edb70453dbe9cbf0803b0e85e3a3fc4df46a22ca58924224c",
+      "full_record_canonical_sha256": "a89baa90cc0a31dc3ee8357fe1a3dc52d6b179367b01fde824f09bb293dee6ff",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.33165749299996605,
+        "prompt_tokens": 1044,
+        "prompt_token_ids_sha256": "1b828c751a47ad365e437b69f8807a2cb76aeec55705852f5e5217d41b900497"
+      }
+    },
+    {
+      "example_id": "er_14852b1e82d33f79d55e6809",
+      "case_id": "er_date_04",
+      "family": "date",
+      "condition": "explicit_missing",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Dune, APPROVE if the completion date is on or before 2022-04-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Dune is 2022-04-17.\nThe completion date for Evidence Date Dune is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "15b533a040300daac0d69f5e85b4765204a84bcedeb6e5f6dd27dc03fa0a88e9",
+      "record_file_sha256": "57d0cc269ab439a7706c0fcfc0bfd2cee047b70263ac620a3fad5fdcb18e509d",
+      "full_record_canonical_sha256": "014c9f20e08c3e3af675b8343e0edb1b4f5df3e92514ebc8d2df7cfa6dfe755d",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.3089284000000134,
+        "prompt_tokens": 1044,
+        "prompt_token_ids_sha256": "322bca1efe9a0dbf2423c3e739dd7573007b5458552f455956f3dc58b7c46bb4"
+      }
+    },
+    {
+      "example_id": "er_a449646fe422ad878ec94d7c",
+      "case_id": "er_date_05",
+      "family": "date",
+      "condition": "decisive",
+      "side": "low",
+      "expected_decision": "APPROVE",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Elder, APPROVE if the completion date is on or before 2022-05-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe completion date for Evidence Date Elder is 2022-05-13.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "a9b28840f492aad4987dd250c6c77cbf5084929ccbf598fc5682a6fb19268145",
+      "record_file_sha256": "e362bc5c1ad22a55770a7768564935bc08aca9657a718ab4024f60893a19df76",
+      "full_record_canonical_sha256": "dda7105d841b0d337b81b4d00d2221f8ce46c28fcee38c5a0fa1113a6cef98cf",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.3405614469999705,
+        "prompt_tokens": 1028,
+        "prompt_token_ids_sha256": "825e587be374b4d7d1f063c2c6146263f1a5d07bd9ce8127587a5dcd77574362"
+      }
+    },
+    {
+      "example_id": "er_5a86a5494e2395e7216ce499",
+      "case_id": "er_date_05",
+      "family": "date",
+      "condition": "decisive",
+      "side": "high",
+      "expected_decision": "REJECT",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Elder, APPROVE if the completion date is on or before 2022-05-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe completion date for Evidence Date Elder is 2022-05-17.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "2d25a761e03cf48b2b41af43a8509780b2126b5814cec238c7ae60580c632981",
+      "record_file_sha256": "be4884c10803d5d2ad14db86d982c0561da55c958e98b89be2d29dee12e1d4a8",
+      "full_record_canonical_sha256": "c6bbf6fe69c1833bf69432688246c4c37e8ddc406cd25b0011c9cad3dd794f04",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.3111139310000226,
+        "prompt_tokens": 1028,
+        "prompt_token_ids_sha256": "a621c1438244fb8c42cdccd8994d42464b9394570cb6cbcd6fd06bf1e04b46c1"
+      }
+    },
+    {
+      "example_id": "er_da4ee91a706f9174b3cbfa97",
+      "case_id": "er_date_05",
+      "family": "date",
+      "condition": "metadata",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Elder, APPROVE if the completion date is on or before 2022-05-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Elder is 2022-05-13.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "118d6b5f626d320206f033c6c8d857779de041afc2217ea59c823e3d5c1afed6",
+      "record_file_sha256": "f8fea1c3e481950ba49845f173da7f2ca8b3bf6445db8497a0ce08edab4e0850",
+      "full_record_canonical_sha256": "282b6b95469b7998a2e772d54cadec44d87d25c25adf0416975323fc54a9f3f8",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.3298335579999616,
+        "prompt_tokens": 1030,
+        "prompt_token_ids_sha256": "a4684fe27bee87918b46c25287c47bc9be1c74131d0a8b31d86522c255361dec"
+      }
+    },
+    {
+      "example_id": "er_77c5db1a47ac21b4d1ef753d",
+      "case_id": "er_date_05",
+      "family": "date",
+      "condition": "metadata",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Elder, APPROVE if the completion date is on or before 2022-05-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Elder is 2022-05-17.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "a25e5d9d8692828d9078780b6c74f92adb148622f7d073cf588ca11dd4c092ce",
+      "record_file_sha256": "69a06746f869c383e7f5d03a6b78e65cacee146d1aec0bb314c909d5bb38e0c7",
+      "full_record_canonical_sha256": "f182a2fd529daac267547d57613227754f4c922102ea774a9523f194ddc0dc38",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.3061749699999723,
+        "prompt_tokens": 1030,
+        "prompt_token_ids_sha256": "ba6f90c78caf459b1be2f9dd262c875ab4668fcaf9a30632fbd951292c9e1a86"
+      }
+    },
+    {
+      "example_id": "er_1c62feb0bd2beb7622ca7215",
+      "case_id": "er_date_05",
+      "family": "date",
+      "condition": "explicit_missing",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Elder, APPROVE if the completion date is on or before 2022-05-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Elder is 2022-05-13.\nThe completion date for Evidence Date Elder is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "354159b5d4647a8e63d623bf45e6f2bf56fd3ec161fa22ff7f96a7b049e67183",
+      "record_file_sha256": "e6b179caea149f331973282437a8d7875b6d72e4bb579bd883b970033ddfaa10",
+      "full_record_canonical_sha256": "638c4dbedfbf8156a0a334588b92b05b7eafabb40e4ae98e929aa4f0662ee6da",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.32973772600001894,
+        "prompt_tokens": 1041,
+        "prompt_token_ids_sha256": "1685b6a116aeb1f58a0e128f95cf83067ef7cdc8a5f51b753dbcc1502430942a"
+      }
+    },
+    {
+      "example_id": "er_cb1b7fce1f96b727548df288",
+      "case_id": "er_date_05",
+      "family": "date",
+      "condition": "explicit_missing",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Elder, APPROVE if the completion date is on or before 2022-05-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Elder is 2022-05-17.\nThe completion date for Evidence Date Elder is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "42f64fa12d0febe1e4defd807e498c4999f27ccf7c681c4c7c6a5772f9d8a473",
+      "record_file_sha256": "39a09cfec18ceb25fe10f403f0a3f50e668de1f500b6d7e43fd9cabbcc22fed1",
+      "full_record_canonical_sha256": "6839721b139861ed5cbfead2d3b738246de0335dc5818a215fa98b3e22f1c19f",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.3060855090000132,
+        "prompt_tokens": 1041,
+        "prompt_token_ids_sha256": "d46d8728cdc6ed573fc66e5b736c240abedd0f5385463080503be46752efa9be"
+      }
+    },
+    {
+      "example_id": "er_6719a9cd7d594ae02beea6fb",
+      "case_id": "er_date_06",
+      "family": "date",
+      "condition": "decisive",
+      "side": "low",
+      "expected_decision": "APPROVE",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Flint, APPROVE if the completion date is on or before 2022-06-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe completion date for Evidence Date Flint is 2022-06-13.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "a2ff1bed236d98bbc73d553b134841e3e4edfb9a9bef0e00ba58e131e735cc04",
+      "record_file_sha256": "73f35368f038ca27e7e5ed4a5773d50bbd51073ac530229b077202a952ab56f2",
+      "full_record_canonical_sha256": "8d79c042ef01458e51cc7ebd59df7bd924553179cfbb87b0395ce4439d34da26",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.32865861200002655,
+        "prompt_tokens": 1028,
+        "prompt_token_ids_sha256": "e1735259bc79d661c977147ae453930e70361e02c67015fc94211a9bf8dd5976"
+      }
+    },
+    {
+      "example_id": "er_8ab7639b7ba1c72463e0ab42",
+      "case_id": "er_date_06",
+      "family": "date",
+      "condition": "decisive",
+      "side": "high",
+      "expected_decision": "REJECT",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Flint, APPROVE if the completion date is on or before 2022-06-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe completion date for Evidence Date Flint is 2022-06-17.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "671f0a3e742a7a8fba82ba80d534d2d33587e68df71eeba1e4c1a1dac2243a44",
+      "record_file_sha256": "f71a12af3f137009e9354fd9dafe0aa02f5b984048fcb7f5e42bc87f8d10acdd",
+      "full_record_canonical_sha256": "ace9980da828271c1c8594f2f44110b66fe6735f5ac7ffeac7d3f8848768962c",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.30619052899999133,
+        "prompt_tokens": 1028,
+        "prompt_token_ids_sha256": "ec36199867ad92d71afc36cf92fb4da8a4a0441ecd83efc5297c5d4ae071a2b9"
+      }
+    },
+    {
+      "example_id": "er_7eeb382ab58a4c7641f4b7e3",
+      "case_id": "er_date_06",
+      "family": "date",
+      "condition": "metadata",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Flint, APPROVE if the completion date is on or before 2022-06-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Flint is 2022-06-13.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "90712b0d79d87814b41125f11a7348192e112239c671cd927117d23114a541d9",
+      "record_file_sha256": "190e0ec5d92020db723630e1640632e9c3a16d62935c19bf3bbc36f3f63d75f0",
+      "full_record_canonical_sha256": "0ac8c1932f4b1e627590ecd108236b66e2059164529ed4b1683e8f23ea401c6f",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.3363091319999967,
+        "prompt_tokens": 1030,
+        "prompt_token_ids_sha256": "ed9197843c52c73bb1f0edafa44f4f63da71b46531698ef3cfcd4a1d897b3c34"
+      }
+    },
+    {
+      "example_id": "er_3a52f5483dd289aca4befe20",
+      "case_id": "er_date_06",
+      "family": "date",
+      "condition": "metadata",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Flint, APPROVE if the completion date is on or before 2022-06-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Flint is 2022-06-17.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "97b54af79c1ec391b251bb2480ec3e5fde33541251b576c4bdaa63516e8ccbbb",
+      "record_file_sha256": "6919042e7ecce5e71809d19a73fb0166353adebb9f4c21edd52fc92a7a8f8b1b",
+      "full_record_canonical_sha256": "0ebe4447bfc3a36d01ff13008fb3b38b0e056b663071798ce1da4f3544332e7c",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.3085987310000178,
+        "prompt_tokens": 1030,
+        "prompt_token_ids_sha256": "1d0a40c6d5e139ae788b0fe2e5415fd1edd56e71d70e51a42736c0e63624387b"
+      }
+    },
+    {
+      "example_id": "er_91cb557fccbc2d76c7c64051",
+      "case_id": "er_date_06",
+      "family": "date",
+      "condition": "explicit_missing",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Flint, APPROVE if the completion date is on or before 2022-06-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Flint is 2022-06-13.\nThe completion date for Evidence Date Flint is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "00e47a1ff9707383f24b4483bd9263a3363f4a761e6733d5805edb500596b53a",
+      "record_file_sha256": "461be985349bea02eabb8caf116e8734244cf65c37b2da206a671079b2808855",
+      "full_record_canonical_sha256": "1e0dccfb49ecc951bf794546f9b3226f3ccb4ff454912d1fcb5771701222d5d8",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.32919479199995294,
+        "prompt_tokens": 1041,
+        "prompt_token_ids_sha256": "fb7f89a91a0ae4190db6002842ca8be7bee543dc7126baff074997f13d0606e8"
+      }
+    },
+    {
+      "example_id": "er_c116f34ffb16ee5e54961635",
+      "case_id": "er_date_06",
+      "family": "date",
+      "condition": "explicit_missing",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Flint, APPROVE if the completion date is on or before 2022-06-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Flint is 2022-06-17.\nThe completion date for Evidence Date Flint is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "6c358a69189baee48f8cad6c84dc174945fe3712f57ebf726a006fe3d683fe60",
+      "record_file_sha256": "976a93ace70f2abdfc363711dcaadd3e4198eb671137406bb3e1dfa29ae27266",
+      "full_record_canonical_sha256": "eb66b0b822b729441baac5c020c97b87a7292021543d66dc79cfc6205c493730",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.3102757139999994,
+        "prompt_tokens": 1041,
+        "prompt_token_ids_sha256": "82a3dc933ae033b53a302bcea09981b9aa5ff008c420a0ad7d5ea5a74746e574"
+      }
+    },
+    {
+      "example_id": "er_7abe8bcb6ef7e5a46ee1d544",
+      "case_id": "er_date_07",
+      "family": "date",
+      "condition": "decisive",
+      "side": "low",
+      "expected_decision": "APPROVE",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Grove, APPROVE if the completion date is on or before 2022-07-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe completion date for Evidence Date Grove is 2022-07-13.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "8f1e70012dba3ea42860f09f5641cb8e0e4718c27a6d499b7dc6aaae129c9a32",
+      "record_file_sha256": "5095f5e5cefcceebc825340d46fd1f7810b6a77579fb93fe10f45a936ec4beb1",
+      "full_record_canonical_sha256": "9f6552f2db5d55b39628a9fda3700c872b19a2fea472add78c4bc9a38f6ea56f",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.33475285100001884,
+        "prompt_tokens": 1028,
+        "prompt_token_ids_sha256": "61590d1ac27867c0757f998574a9da80924ac8e384a5faadcd3f9052a9cad653"
+      }
+    },
+    {
+      "example_id": "er_d23e959b9da2f431afba3c0c",
+      "case_id": "er_date_07",
+      "family": "date",
+      "condition": "decisive",
+      "side": "high",
+      "expected_decision": "REJECT",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Grove, APPROVE if the completion date is on or before 2022-07-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe completion date for Evidence Date Grove is 2022-07-17.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "44bfaa6dbf55c593755c82201f384f7709fc59f2dae4846dc15f8c9460b4a568",
+      "record_file_sha256": "cb87cd8f50400c5c33395126bfe7f0d4cbb7fd0147b4ade395edcbca414233c3",
+      "full_record_canonical_sha256": "85f8f7d66e04e13ac0b56c06e5f2930913273b59457f0e7486e3d80b87f58c39",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.3116746960000114,
+        "prompt_tokens": 1028,
+        "prompt_token_ids_sha256": "b8099fa3e45dcb539cac1b6fc573af666935a838212c4d7dbdac339419770073"
+      }
+    },
+    {
+      "example_id": "er_c7bbf786f9902715b70061ab",
+      "case_id": "er_date_07",
+      "family": "date",
+      "condition": "metadata",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Grove, APPROVE if the completion date is on or before 2022-07-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Grove is 2022-07-13.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "18abdcf8fcdde390cfd5ee4ca5e719fee8c6cac9f565f23a0a84a7394c56eeea",
+      "record_file_sha256": "4e18fb2d84c92abd2efeda1f318aabae19dc5722b3c928684b73542102b530af",
+      "full_record_canonical_sha256": "4b063a5521b8b9d116b5258604dabb04dfd8a8a6b1bc2144ee9cf2f2db714819",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.31763152299998865,
+        "prompt_tokens": 1030,
+        "prompt_token_ids_sha256": "6b03a728fee6c327a5338bce92d74982d1cedc69a9ad5e1a3f911efc03d9b8a5"
+      }
+    },
+    {
+      "example_id": "er_a10f24f07e6404a6060ab2ed",
+      "case_id": "er_date_07",
+      "family": "date",
+      "condition": "metadata",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Grove, APPROVE if the completion date is on or before 2022-07-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Grove is 2022-07-17.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "56e2ad02b91d858cade5d37be9acbea1faa48d9bc20b29d3418380ee5eb77cdb",
+      "record_file_sha256": "80db690e5df04023c0e14eed9ba7c84c24e8a9808b90e0d99564772c892ae5b1",
+      "full_record_canonical_sha256": "af24739e2bbac0001224bf481c89ad8236d2517bab48063465d1fec51051b690",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.31423936799996,
+        "prompt_tokens": 1030,
+        "prompt_token_ids_sha256": "a57b4dbfc74b1c06f277d2f29c72669d082f3ffe01a2564a06641db1c69a4d93"
+      }
+    },
+    {
+      "example_id": "er_efe82878d17b845056ead447",
+      "case_id": "er_date_07",
+      "family": "date",
+      "condition": "explicit_missing",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Grove, APPROVE if the completion date is on or before 2022-07-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Grove is 2022-07-13.\nThe completion date for Evidence Date Grove is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "d3b329d788e533c601213009d0065fed831a5383051262cc093c20809dd3e1ca",
+      "record_file_sha256": "70db72cc0a052353881f17f295f2a53e8918758d6e3ff5c962cfde7084beac99",
+      "full_record_canonical_sha256": "7ef6e0fa8e9d09217140bf07db81068be2eb5ba2d0ca25a0f66a59a3e1c301ac",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.34034013400003005,
+        "prompt_tokens": 1041,
+        "prompt_token_ids_sha256": "5121d5d896f7521fcc75fab03636f4ae074609fb68ba0973664196a40b68af81"
+      }
+    },
+    {
+      "example_id": "er_0b922adb4fba82a38b6467cb",
+      "case_id": "er_date_07",
+      "family": "date",
+      "condition": "explicit_missing",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Grove, APPROVE if the completion date is on or before 2022-07-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Grove is 2022-07-17.\nThe completion date for Evidence Date Grove is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "3a64b9f7730130a5d0a6bc7968fdde86ee7a34a3217c7d7e2e64ce4f54fe72da",
+      "record_file_sha256": "ced88a435fb7f103e0ced47759e35bcbfab2a4bc44686e90ed2d9714f6b0d06e",
+      "full_record_canonical_sha256": "c14baf00afea7661787c8f076d171fe5a41d1b0e66bca1a695d48277eb97d813",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.3227404369999931,
+        "prompt_tokens": 1041,
+        "prompt_token_ids_sha256": "f1d01917d103016982d61d21925e052106f12b496da7e0575341f90c7aed3f52"
+      }
+    },
+    {
+      "example_id": "er_765ac53931a766c0d2b7bf65",
+      "case_id": "er_date_08",
+      "family": "date",
+      "condition": "decisive",
+      "side": "low",
+      "expected_decision": "APPROVE",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Heath, APPROVE if the completion date is on or before 2022-08-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe completion date for Evidence Date Heath is 2022-08-13.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "4b56c5a0154da0767023f76677b81f5eaee834e82410c0fbee9ff2c6e0ca4cb7",
+      "record_file_sha256": "ed9502e23e97e87f7fb0b54fcf38f3dcb4b52066afaeb408967560ac87a04441",
+      "full_record_canonical_sha256": "f722ed5028a3c92c4fd7f49c405241fa43047cde08bc48a228e3bca45157f82a",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.34954246799998145,
+        "prompt_tokens": 1028,
+        "prompt_token_ids_sha256": "64f9999d6b1e9dfffefe7991ddb79899b31c0801374400cd290df0a56d864ff5"
+      }
+    },
+    {
+      "example_id": "er_a1fa7cf3b9a938ec7b518098",
+      "case_id": "er_date_08",
+      "family": "date",
+      "condition": "decisive",
+      "side": "high",
+      "expected_decision": "REJECT",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Heath, APPROVE if the completion date is on or before 2022-08-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe completion date for Evidence Date Heath is 2022-08-17.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "7797230c19b202d057538a33dce1c32338d1cb8ca062bd05aecb162d0f1557dc",
+      "record_file_sha256": "8f0cffc8f0aea2d2458fa994d6921594e440f86cfb077af3c8a1c71348692dfd",
+      "full_record_canonical_sha256": "89f33d60b8f72c3297414e18bf88ee2519fe9f4a809ad556ae580b2e5582cd69",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.3198269019999884,
+        "prompt_tokens": 1028,
+        "prompt_token_ids_sha256": "695d5197b457158ff47756d2320bdc4d5c76703e87c4923fda883879670185b8"
+      }
+    },
+    {
+      "example_id": "er_7ab33808cc74240d90147aec",
+      "case_id": "er_date_08",
+      "family": "date",
+      "condition": "metadata",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Heath, APPROVE if the completion date is on or before 2022-08-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Heath is 2022-08-13.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "ff8f99d0c3924c0f5b37af837b0aa97b39e73dc3451d910951160251a114443c",
+      "record_file_sha256": "9cea6270583c42a0871a559cbbe67dc452678f0728ac08821ef514286c969c42",
+      "full_record_canonical_sha256": "90f64492411f7834c8ca180f07d075ba88b72682d6ebd388d1e91814e8697f77",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.33685477199998104,
+        "prompt_tokens": 1030,
+        "prompt_token_ids_sha256": "99d7be062c236dfee979a630d1a5c39b58d9d25a8891dba0303741996918082a"
+      }
+    },
+    {
+      "example_id": "er_7679da4980ed3558327b0a1d",
+      "case_id": "er_date_08",
+      "family": "date",
+      "condition": "metadata",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Heath, APPROVE if the completion date is on or before 2022-08-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Heath is 2022-08-17.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "ae729fc796582aed6fca62c8bbcf1832010fd72bab64d488faac768f498a076c",
+      "record_file_sha256": "c7bbf11eb104a758bd78438cae82629234e53a5f3eff496b7828419f9d42afa0",
+      "full_record_canonical_sha256": "1a3662ea021e16854320593f375961543924dd81e036c6d7550b26971cdd243b",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.322788007999975,
+        "prompt_tokens": 1030,
+        "prompt_token_ids_sha256": "8198f245a00ca2a1ede6fd5fb83460cc5ae52267413e6caef1ca909a0f6650b1"
+      }
+    },
+    {
+      "example_id": "er_4396d364112ecd73b12faab0",
+      "case_id": "er_date_08",
+      "family": "date",
+      "condition": "explicit_missing",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Heath, APPROVE if the completion date is on or before 2022-08-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Heath is 2022-08-13.\nThe completion date for Evidence Date Heath is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "d24a0fd94dbc9996b283e4fa242e18debed72d46c679e12eabfae45fb750ecba",
+      "record_file_sha256": "a227ca445f1fbe00305f4efc5450bff7f3096dd2214e7eea193678d84b770c9a",
+      "full_record_canonical_sha256": "901d334dfd45c15438097665317fdc63ebe0716c1c2faa4238f7673834c4452f",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.33122412299996995,
+        "prompt_tokens": 1041,
+        "prompt_token_ids_sha256": "df153f839dc320557584ec4f8ef546c34912e272332bb3b3544eef358c851067"
+      }
+    },
+    {
+      "example_id": "er_562761bf0fce43b3479587fa",
+      "case_id": "er_date_08",
+      "family": "date",
+      "condition": "explicit_missing",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Date Heath, APPROVE if the completion date is on or before 2022-08-15; REJECT if completion was after that deadline.\n\nEvidence packet:\nThe administrative file registration date for Evidence Date Heath is 2022-08-17.\nThe completion date for Evidence Date Heath is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "8724df6968e1717d6d82340bd77c10bc85ed95e7dd77737d00e7d0ddedb8f88a",
+      "record_file_sha256": "1670bdb39ef60c24d6fbdddc0651faf5848e471de09eced2e83f23eb42b74589",
+      "full_record_canonical_sha256": "b69e2e2a37fc28ccb620e48bb0c678e2114a305b5015ffd353e8b943a52b550d",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.304261452999981,
+        "prompt_tokens": 1041,
+        "prompt_token_ids_sha256": "22a89ac95c8caaf8eb942fb5250aea90e2d5e304382fae1b7aa906c711185ef1"
+      }
+    },
+    {
+      "example_id": "er_9ea68cb1e1d364fb1fd7c17c",
+      "case_id": "er_score_01",
+      "family": "score",
+      "condition": "decisive",
+      "side": "low",
+      "expected_decision": "REJECT",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Aster, APPROVE if the evaluation score is at least 900230 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe evaluation score for Evidence Score Aster is 900199 points.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "f02b2347b63c4078c67fa227b918b65ee401c5dc9c71de8da55951034498b972",
+      "record_file_sha256": "b4dd61c3533892a011238126ea5d68274184f5ac309f7b3640d3fa43f18bc6ec",
+      "full_record_canonical_sha256": "ea5832cc8a24d931a72aa5142faa0ab1a273baba3af912429e672411966a18d1",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.28784145899999203,
+        "prompt_tokens": 1023,
+        "prompt_token_ids_sha256": "1bb1dfe7dc33fcc1bbb0fdc16fa5e135fad42381264366f9675af695ce38e7a9"
+      }
+    },
+    {
+      "example_id": "er_91f25999050354ef850b0a6f",
+      "case_id": "er_score_01",
+      "family": "score",
+      "condition": "decisive",
+      "side": "high",
+      "expected_decision": "APPROVE",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Aster, APPROVE if the evaluation score is at least 900230 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe evaluation score for Evidence Score Aster is 900267 points.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "40a0b1f1ea3c20e1cdba62dfd184329bd19faf581d1f0359395e914d8a224aab",
+      "record_file_sha256": "610ec2a8af2857d4495fc78712d9d8567ee3b57b8c9ed798ce963b95fe88dfce",
+      "full_record_canonical_sha256": "0f75abd41890cbb343c1ca1757e7506d04362482e9d124bf5b89cc7f6aefd4c2",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.31834050999998453,
+        "prompt_tokens": 1023,
+        "prompt_token_ids_sha256": "e362b8d0322835a7eab3e3ca7b1f89a4db52593ebe5b2e96e81ab3514e96ec89"
+      }
+    },
+    {
+      "example_id": "er_4888009c1c51d0c7732255e7",
+      "case_id": "er_score_01",
+      "family": "score",
+      "condition": "metadata",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Aster, APPROVE if the evaluation score is at least 900230 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Aster is 900199.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "656d61c80bbe3aa2d3a4782ff6bfead5b71bd18a6c5548589e2a012801bb8024",
+      "record_file_sha256": "584632b7e150503fd0a67ded7501342e5f3236c04729b2b053bde20d5e93ee32",
+      "full_record_canonical_sha256": "564d2539b1e0e351c9becfd560f153d0d667e26e8e5e4fdeb1786d5eb3cf6f91",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.330448414999978,
+        "prompt_tokens": 1024,
+        "prompt_token_ids_sha256": "7be20de28c8f1f303e506371c770346b6c4f6b9cb88b0177ccfaceca26ad8067"
+      }
+    },
+    {
+      "example_id": "er_b5fabb0d7f560aefb6c8938e",
+      "case_id": "er_score_01",
+      "family": "score",
+      "condition": "metadata",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Aster, APPROVE if the evaluation score is at least 900230 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Aster is 900267.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "f9818f7a576bb928fdb364e6a227f605c971976e6103d85062fa890ed2d901ca",
+      "record_file_sha256": "e2a1c85f1c674b99a104aa083c1ff03da1f5ae34676273967f236c784de68851",
+      "full_record_canonical_sha256": "36a09227bef1858affc3336d88e523bd1576dbca5e17b41ce78c708cc1958c98",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.2983226289999834,
+        "prompt_tokens": 1024,
+        "prompt_token_ids_sha256": "0a33328a120684bb1337ba9e0fc87e332cad82c5134013d8ac499929e1667f51"
+      }
+    },
+    {
+      "example_id": "er_de5eac0bd623d1765782efd1",
+      "case_id": "er_score_01",
+      "family": "score",
+      "condition": "explicit_missing",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Aster, APPROVE if the evaluation score is at least 900230 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Aster is 900199.\nThe evaluation score for Evidence Score Aster is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "343dde55bf951dc35e664b319e3ac214536f117bc7fced491768ea7050ac40d7",
+      "record_file_sha256": "9902304848420a415f34d4ba7d256b7d13748b55d5c2dbcfbe8ac18c06ef6b4a",
+      "full_record_canonical_sha256": "bc75744b47654b90892d985b6fc438d4aa3b69e0c5c869ed92a58d52a2d6630b",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.3089083760000335,
+        "prompt_tokens": 1035,
+        "prompt_token_ids_sha256": "ef92d1180c04a6c06ae323f9cd1eaa74693216627486bf9b636c8a705fa606dc"
+      }
+    },
+    {
+      "example_id": "er_0c234b383c2355433af073ef",
+      "case_id": "er_score_01",
+      "family": "score",
+      "condition": "explicit_missing",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "DEFER",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Aster, APPROVE if the evaluation score is at least 900230 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Aster is 900267.\nThe evaluation score for Evidence Score Aster is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "81469b20e0e189f2676cbc7648d739d8cd30bc370200f83cea4ef65e7dd08779",
+      "record_file_sha256": "5f288fd3940807cb49a27160ec74bda86c186e254e87c851bb8135f166bef690",
+      "full_record_canonical_sha256": "06998760f67d801872770bc0434ca32d9f928fb1edae63e10b5a49df3f2c1320",
+      "generation": {
+        "text": "DEFER",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          13649,
+          640,
+          151645
+        ],
+        "elapsed_seconds": 0.3059337550000123,
+        "prompt_tokens": 1035,
+        "prompt_token_ids_sha256": "9a045d56558193ddea50e158ae797e2d00a25dd2376cb84ae13ed4a831453b7f"
+      }
+    },
+    {
+      "example_id": "er_e76d7c51ac7647dc5451511e",
+      "case_id": "er_score_02",
+      "family": "score",
+      "condition": "decisive",
+      "side": "low",
+      "expected_decision": "REJECT",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Birch, APPROVE if the evaluation score is at least 900441 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe evaluation score for Evidence Score Birch is 900410 points.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "159f8549776b81ef1d30d9e9b5bfa2629a529a3c6461b3cfd35fd5d7c889dd53",
+      "record_file_sha256": "b62162dce913807718ecc1d6b52450736e003e94e68e2ab5c6cbc98bf3ad1510",
+      "full_record_canonical_sha256": "3020ebc8aa8f9adc081aa74eed22d11c4d6638bfe2b40972276c6b976d07c9a1",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.29471261700001605,
+        "prompt_tokens": 1023,
+        "prompt_token_ids_sha256": "6f640b24226093c4e1a6c4531bc5ae83062f864d635b4b1c6672dda5952ce97d"
+      }
+    },
+    {
+      "example_id": "er_1d683d7b085d78f21c2fedd2",
+      "case_id": "er_score_02",
+      "family": "score",
+      "condition": "decisive",
+      "side": "high",
+      "expected_decision": "APPROVE",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Birch, APPROVE if the evaluation score is at least 900441 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe evaluation score for Evidence Score Birch is 900478 points.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "cd5c0ffde8187fcf29f1693bb1158227b8004deebb19cf62feb3773a661a237d",
+      "record_file_sha256": "eb424d17dafaeacf5da6e8a94b75575e780dd6c3c9ecf3a493964a6be63025bc",
+      "full_record_canonical_sha256": "24f05b6999c5e3028dcb056f5473f61134c0fc55ed9b37dd1eefa4fabdc3b534",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.3158191399999737,
+        "prompt_tokens": 1023,
+        "prompt_token_ids_sha256": "819d1a94fa5fa4753e8443f1cae8ee9dffa34ac2a90164f785e53027d441741b"
+      }
+    },
+    {
+      "example_id": "er_20b198d932c99a91499b9c08",
+      "case_id": "er_score_02",
+      "family": "score",
+      "condition": "metadata",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Birch, APPROVE if the evaluation score is at least 900441 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Birch is 900410.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "33e92a7bc82b9da66652e3aa073f0a1105a5ffc6c3d0bec150a2b0985619ff16",
+      "record_file_sha256": "f5387757b7cf7dc2063a6a5110b42155c788971c8eb417bb03e6714fa72d7ac8",
+      "full_record_canonical_sha256": "df0971f6bcf51dc831489fe23b687416cf597bc9ab4ca533e029261850d6c4ac",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.3036091209999654,
+        "prompt_tokens": 1024,
+        "prompt_token_ids_sha256": "bec47778fe9974a436474613f1c5b7f23153cdf0c7267a2f192a5deb7b6ec955"
+      }
+    },
+    {
+      "example_id": "er_e07c9c339ccb74e4ffba681a",
+      "case_id": "er_score_02",
+      "family": "score",
+      "condition": "metadata",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Birch, APPROVE if the evaluation score is at least 900441 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Birch is 900478.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "e33e398cf2897ee1c986cf60a6bc1ecc5d319045f3193333ab88c1ac06f228d0",
+      "record_file_sha256": "1fc4255a07eed80bf7eaa1651fabf3ae24d3d3dbf5e59fc695ee9437d8978cc9",
+      "full_record_canonical_sha256": "70fe0dce702818aedf79781ef05767b08586394ad9aa428ca8fadc9f67343d8f",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.3070904869999822,
+        "prompt_tokens": 1024,
+        "prompt_token_ids_sha256": "5065a8803975127cef03c8a6b78ed5f9ae944ae8f072aeedff9ac1021ba8bd4b"
+      }
+    },
+    {
+      "example_id": "er_752feeb64f5bb60331bdbdbf",
+      "case_id": "er_score_02",
+      "family": "score",
+      "condition": "explicit_missing",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Birch, APPROVE if the evaluation score is at least 900441 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Birch is 900410.\nThe evaluation score for Evidence Score Birch is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "5a928b7cb9142e658f5b501c6bb38cc47c4a8f5dce23db5e2d991527dd28406d",
+      "record_file_sha256": "856865792b7265145646f70ec144d5df17def02fc4e3484ea777563eca63008d",
+      "full_record_canonical_sha256": "25fb4ea6a274b979e4023af76529455f8754f93334461cd4e3d2ca971f8e6fc4",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.29669959899996456,
+        "prompt_tokens": 1035,
+        "prompt_token_ids_sha256": "20832bc9339309a81addd9fae9faa6fded7f2924173aa00200d2d6f8c000757a"
+      }
+    },
+    {
+      "example_id": "er_e6acbe7dfe5a0f160a0ab869",
+      "case_id": "er_score_02",
+      "family": "score",
+      "condition": "explicit_missing",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "DEFER",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Birch, APPROVE if the evaluation score is at least 900441 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Birch is 900478.\nThe evaluation score for Evidence Score Birch is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "b0e0969b1767718e578ca180ef15d9a7e06f2e74408f47f6c2a1265411508c2f",
+      "record_file_sha256": "634eecc1fe369f1ea3d8ba566631bf8929f570b7ccbadce00099d977b03266bc",
+      "full_record_canonical_sha256": "095247c7f23d484493acd1c5cad238b7d57ed30801c664d3601947b6039a64ed",
+      "generation": {
+        "text": "DEFER",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          13649,
+          640,
+          151645
+        ],
+        "elapsed_seconds": 0.2940043790000004,
+        "prompt_tokens": 1035,
+        "prompt_token_ids_sha256": "1fba054bda65498eacd5e8df5843ad73a2ed74f5df69e75dbf32d2f9158ec877"
+      }
+    },
+    {
+      "example_id": "er_ab8f60fd1caf9c923641f1b9",
+      "case_id": "er_score_03",
+      "family": "score",
+      "condition": "decisive",
+      "side": "low",
+      "expected_decision": "REJECT",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Clover, APPROVE if the evaluation score is at least 900652 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe evaluation score for Evidence Score Clover is 900621 points.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "0a2e80d76f66b507e73bf8b3ae56f440dd9f9038633f21eb708af74ebb6fd4e8",
+      "record_file_sha256": "9b1258a5571f9098cabdc14700c13df61744437848beac73f2dcf2817f4d93c1",
+      "full_record_canonical_sha256": "88b55ce27aa3b5eb3dbb5f74b307236706fb9773887882506e4238636b0c13a1",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.2881015840000032,
+        "prompt_tokens": 1023,
+        "prompt_token_ids_sha256": "58a5bc65c35ee45440b245b3c9cef69002015e8e3164b1ea18cbb1257d539cbf"
+      }
+    },
+    {
+      "example_id": "er_5296fb7b46ccf8d6a3eff180",
+      "case_id": "er_score_03",
+      "family": "score",
+      "condition": "decisive",
+      "side": "high",
+      "expected_decision": "APPROVE",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Clover, APPROVE if the evaluation score is at least 900652 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe evaluation score for Evidence Score Clover is 900689 points.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "4565add461871b15195de7b47bcdc63431b4d30f68883d626f5182227991ce07",
+      "record_file_sha256": "7e8dc9fbdafffe4dce08faf0f66912fafa5d26c37dbca3f21a1f44f585de1f50",
+      "full_record_canonical_sha256": "e138d3ccb6437bd8a8d0ef57ddfb96774abf29b433a7e0a5bcff3f25108d0dab",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.3069870890000175,
+        "prompt_tokens": 1023,
+        "prompt_token_ids_sha256": "fbcaf825b1aa8c3f959c016d726ac2390a4c186c311482c3acf25bc47d0a7f34"
+      }
+    },
+    {
+      "example_id": "er_7adec9d310d495fc611b88f8",
+      "case_id": "er_score_03",
+      "family": "score",
+      "condition": "metadata",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Clover, APPROVE if the evaluation score is at least 900652 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Clover is 900621.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "fab754ffea976d8b131c359daa36aefd4464cf0b3ddd745a442ac8002943d1c9",
+      "record_file_sha256": "32ea8312ee38724ae5dbb618c6b77a65532608b76afa80d402a28ad10b1b229d",
+      "full_record_canonical_sha256": "67a7604f608f6e49a7e5022c932e39d9005c886f96a897f9e4a8cccbf10318f6",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.2805287589999921,
+        "prompt_tokens": 1024,
+        "prompt_token_ids_sha256": "f283d1c8a8ab10f258d442abf08ef53be36c20bf4a156f523ff79529285df496"
+      }
+    },
+    {
+      "example_id": "er_15588f9a42172d236a6d4bca",
+      "case_id": "er_score_03",
+      "family": "score",
+      "condition": "metadata",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Clover, APPROVE if the evaluation score is at least 900652 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Clover is 900689.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "d8a2c2b5e673069c7fa639fa317b0450cf78fdcfe744f18eff41a7af55a17224",
+      "record_file_sha256": "755330c4bcf7cb9e229e57a0e950c64f8d47dc7449e3bf23cc54ffaa6a8518f4",
+      "full_record_canonical_sha256": "2ebe1b6645eb52e0b4f478df611fc9f469d03614181b4827c3a7b770b79d16f6",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.3062311099999988,
+        "prompt_tokens": 1024,
+        "prompt_token_ids_sha256": "147b9cbca60f3a29096b15bf5ea0bd2a1e1ed96d00b33550cd29352be4017505"
+      }
+    },
+    {
+      "example_id": "er_c75376fc0ca0c7e09e2b7350",
+      "case_id": "er_score_03",
+      "family": "score",
+      "condition": "explicit_missing",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Clover, APPROVE if the evaluation score is at least 900652 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Clover is 900621.\nThe evaluation score for Evidence Score Clover is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "096d9d0385aef46240da8fc38a4358b1b7bf28170477b0f1870c71c030a6dd9e",
+      "record_file_sha256": "0d6f4a2f905ad4df9a3256fcb192897abe5ffe75418c08046fa310b63e9eaf94",
+      "full_record_canonical_sha256": "ab995bd1f5281d672f67f58f306f927ca0f0fc81025f21c6797bbeb54548ceb9",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.30421431199999915,
+        "prompt_tokens": 1035,
+        "prompt_token_ids_sha256": "43fea581a9361e29450df297dcef73479ec2165eddb2ab327f5e3d4e31c7afe2"
+      }
+    },
+    {
+      "example_id": "er_9c7eaa6184691e79c7bd74d5",
+      "case_id": "er_score_03",
+      "family": "score",
+      "condition": "explicit_missing",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "DEFER",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Clover, APPROVE if the evaluation score is at least 900652 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Clover is 900689.\nThe evaluation score for Evidence Score Clover is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "cf73e3eb430551479bf322c0f9425acd84f1fabb609d5767ae0fe3d745478764",
+      "record_file_sha256": "9e827aae0af20fa672807cc1df7986718311d20ce0e8ea6a5a75fc2af3d41317",
+      "full_record_canonical_sha256": "d056efd53b2e0fd1aeb3f81ab71880007248abf1715267335962c1c2a75f6090",
+      "generation": {
+        "text": "DEFER",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          13649,
+          640,
+          151645
+        ],
+        "elapsed_seconds": 0.30815289899999243,
+        "prompt_tokens": 1035,
+        "prompt_token_ids_sha256": "7560528882ad6c1e399d991fe433a4ed3fe4c8599644551cd3243757f4e194fa"
+      }
+    },
+    {
+      "example_id": "er_6767ce5ea9bc87057c4c5370",
+      "case_id": "er_score_04",
+      "family": "score",
+      "condition": "decisive",
+      "side": "low",
+      "expected_decision": "REJECT",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Dune, APPROVE if the evaluation score is at least 900863 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe evaluation score for Evidence Score Dune is 900832 points.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "e819e6adf2aac8c35d9d2f1e4efa111a2912bb2c1472f0741270bf5ff305047b",
+      "record_file_sha256": "9cbfcbc2fa6c1a9c70e79b08af65759d966bb74c77b42f0e24c77cf7ae1369f3",
+      "full_record_canonical_sha256": "39a6f86592059d85ead0382cafd6e6712c5aa865aa8bde11f29af0c6c2f635b1",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.3085287650000055,
+        "prompt_tokens": 1025,
+        "prompt_token_ids_sha256": "58ba16240eb6b6563ce69644df051fe59fc193f95eebbc9eb72fd6e15c83d78b"
+      }
+    },
+    {
+      "example_id": "er_c94250bb4aa1429c755e5770",
+      "case_id": "er_score_04",
+      "family": "score",
+      "condition": "decisive",
+      "side": "high",
+      "expected_decision": "APPROVE",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Dune, APPROVE if the evaluation score is at least 900863 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe evaluation score for Evidence Score Dune is 900900 points.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "786f013282e2b176f78002f33f70dd63c947e6518de0b4dfe117d488e519c1da",
+      "record_file_sha256": "669f58d5c0bbe41da0ed830e7350cbe80a48a6385727d23bc8493e859bf521f8",
+      "full_record_canonical_sha256": "75e220839a9842b4134191aac9a5022fda44d89292af32823f5e00d295dfe5ad",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.31763232200000857,
+        "prompt_tokens": 1025,
+        "prompt_token_ids_sha256": "4c7a51d206d5f9a9b3c6ebae72a631362eab57b44727a0a716b1aa86f909988c"
+      }
+    },
+    {
+      "example_id": "er_642354ee721287899fee922f",
+      "case_id": "er_score_04",
+      "family": "score",
+      "condition": "metadata",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Dune, APPROVE if the evaluation score is at least 900863 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Dune is 900832.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "0f9f34466506495a524548114529741c2334b01cc2e963d18f5d46f0e303de60",
+      "record_file_sha256": "8ca6f7f2e6f7ec17d33f9fa007225bd03f90416bd30287e71e0db7b98f7d74e8",
+      "full_record_canonical_sha256": "bb626c971e9381043127320f287bd830001ca66febb9cacbaf242b27ccedae7a",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.29281438399999615,
+        "prompt_tokens": 1026,
+        "prompt_token_ids_sha256": "ae01ea524fa9849308132f8e36c35199606bb64f327ef91fb2c593c79d3cd8b0"
+      }
+    },
+    {
+      "example_id": "er_4723c8cc51eccdfa237e3f76",
+      "case_id": "er_score_04",
+      "family": "score",
+      "condition": "metadata",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Dune, APPROVE if the evaluation score is at least 900863 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Dune is 900900.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "7ea57574e9ecd3a95fba12a48c89391023caa5a6a25de7c53807a66f1803c2e0",
+      "record_file_sha256": "8735614cd9fadea1f9a5ee78db78f6a36899a0e23210eb495dbde197de0a725c",
+      "full_record_canonical_sha256": "77abb29dc1c4dd333fe8b4c2966d99a53632c60c0ddc938b56c8206282c97ca8",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.297934779000002,
+        "prompt_tokens": 1026,
+        "prompt_token_ids_sha256": "1de08c48fa0c20528238b1b28fada51c543af857a6327d6d3697e35d053c3cbe"
+      }
+    },
+    {
+      "example_id": "er_9860d911cfc8c1defbe763c7",
+      "case_id": "er_score_04",
+      "family": "score",
+      "condition": "explicit_missing",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Dune, APPROVE if the evaluation score is at least 900863 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Dune is 900832.\nThe evaluation score for Evidence Score Dune is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "430732b77a3c83cf084df21aebc39725d106a3ce593a4f176f5a2069fa0e07d9",
+      "record_file_sha256": "bf7add119a8b23c814bc0116cce0ca0e712f8ab231ebb81d42dd606b14c54f68",
+      "full_record_canonical_sha256": "6cf0d681cdb57966850b7a3c8d386f1c6b74346a4885ba03441f780360180f34",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.3073049630000355,
+        "prompt_tokens": 1038,
+        "prompt_token_ids_sha256": "a35c74f66dd819abc43ed6d002334a2c27cdbbb1e0f0ad32aa2769bd876f2d1f"
+      }
+    },
+    {
+      "example_id": "er_9190a1b78daa2f519bd560df",
+      "case_id": "er_score_04",
+      "family": "score",
+      "condition": "explicit_missing",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "DEFER",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Dune, APPROVE if the evaluation score is at least 900863 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Dune is 900900.\nThe evaluation score for Evidence Score Dune is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "8a0ae0dce799943f689f9ce127db13d1f5b748944447b0d1378cb5ae1f97f548",
+      "record_file_sha256": "a910c97f8c02f7f4633bac2197381819d1d7b715369dab47d32775364ac11b4b",
+      "full_record_canonical_sha256": "4581621d908b2d7bcd93bce0e2b8fc6d7ad3b17c622d5634ea0c15cfb499e51c",
+      "generation": {
+        "text": "DEFER",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          13649,
+          640,
+          151645
+        ],
+        "elapsed_seconds": 0.30443484199997783,
+        "prompt_tokens": 1038,
+        "prompt_token_ids_sha256": "460b76bd2e93acf976ac443a26b4736cf2eb07da449cd3ccab77eb7670f8cb51"
+      }
+    },
+    {
+      "example_id": "er_865824d01786f2a61eeff1ef",
+      "case_id": "er_score_05",
+      "family": "score",
+      "condition": "decisive",
+      "side": "low",
+      "expected_decision": "REJECT",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Elder, APPROVE if the evaluation score is at least 901074 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe evaluation score for Evidence Score Elder is 901043 points.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "26535eb052feb6de8869ad8a863bd7c633f2ecc2ad305d2f99f20f9a5183b9d5",
+      "record_file_sha256": "4efea883086e7bd449fea0acc1ef0db93e068ae795d9246e29c9a8db9172467b",
+      "full_record_canonical_sha256": "bfbd8348c5d6987bc3879334afe1115dba84143e305b1c69658a978997f6aeda",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.2838049920000003,
+        "prompt_tokens": 1023,
+        "prompt_token_ids_sha256": "c1b48bc2a0a1b5cd9008257ed70cc88b56fc6f7ae00bc39f077c61a3e49a4ad8"
+      }
+    },
+    {
+      "example_id": "er_f3d78b077a324ad08c108962",
+      "case_id": "er_score_05",
+      "family": "score",
+      "condition": "decisive",
+      "side": "high",
+      "expected_decision": "APPROVE",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Elder, APPROVE if the evaluation score is at least 901074 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe evaluation score for Evidence Score Elder is 901111 points.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "67f372618933d1939de09d4f7696c869f229331fdd0afe6d46070406f29a1292",
+      "record_file_sha256": "7d3d0129df1757fbc6d4bc93df1e90e3ada6d03b8b51066de460352c4dd9bb60",
+      "full_record_canonical_sha256": "6382aff8bbc314b1fa4eb2d2380cd3fdbc779c972b7a9f968a00c4b0df69949a",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.33899488700001257,
+        "prompt_tokens": 1023,
+        "prompt_token_ids_sha256": "7ef424a8a68b89870089a6fa14be196f3ad58ed267e29bf4c63a71fcfdaec623"
+      }
+    },
+    {
+      "example_id": "er_a111e6e932b5547a63f97194",
+      "case_id": "er_score_05",
+      "family": "score",
+      "condition": "metadata",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Elder, APPROVE if the evaluation score is at least 901074 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Elder is 901043.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "5d384c94b0f37320fe565f0e852f54ec1112edb744a6ddff34fc1419202a9d23",
+      "record_file_sha256": "e53963b3ba0887896abc0bf72ec8de2f910e83f15fabe97555dcaf1397c15253",
+      "full_record_canonical_sha256": "c3b1edd973b9f111213ee22d7a189c1ec421bbbe89fe43f3f5b1528e0f80b34e",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.2918618159999937,
+        "prompt_tokens": 1024,
+        "prompt_token_ids_sha256": "91c7a2c3b3b3a9ba2d224b29c004553ecca8d8fb63c7889ba78bd749c9b24eb5"
+      }
+    },
+    {
+      "example_id": "er_f6b0cd4b28a938bfc8d853f9",
+      "case_id": "er_score_05",
+      "family": "score",
+      "condition": "metadata",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Elder, APPROVE if the evaluation score is at least 901074 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Elder is 901111.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "7dfaebdea588231d4b59595a2a0161316916fcaef67f09233fd4cf19c15a7bdd",
+      "record_file_sha256": "e3fd18a592a8490c1b4caee93202bd956830da0017c23acced54b3aaea8af681",
+      "full_record_canonical_sha256": "4d255e4fc86c1bf71e07086c40276f75a127a8d221f402c06e80dea407e9f8a4",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.3410769320000213,
+        "prompt_tokens": 1024,
+        "prompt_token_ids_sha256": "1fc2b4cc6e0e6f5eb8c4d7e34a71b29ba677571820c2480a472ba7b196514767"
+      }
+    },
+    {
+      "example_id": "er_8b473e3e81c292c5019d96e4",
+      "case_id": "er_score_05",
+      "family": "score",
+      "condition": "explicit_missing",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Elder, APPROVE if the evaluation score is at least 901074 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Elder is 901043.\nThe evaluation score for Evidence Score Elder is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "97740d5250f13e82d1b7b4d877848ea154dd5eec4847fbb4b39be644437adf0b",
+      "record_file_sha256": "e3110f99b8000285513aba24183dce9c569cb131cbca07e5a04f5c625e746ddf",
+      "full_record_canonical_sha256": "7879fedf991d06830c998369a2bd2778a002a7ca64c98e59e38b9063fb05911b",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.3028839449999623,
+        "prompt_tokens": 1035,
+        "prompt_token_ids_sha256": "7651a5572d4a3be225630459a8363679c8df81dde749f5fdf2763b60be98d94f"
+      }
+    },
+    {
+      "example_id": "er_e1d1f3360486d4136408d34b",
+      "case_id": "er_score_05",
+      "family": "score",
+      "condition": "explicit_missing",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "DEFER",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Elder, APPROVE if the evaluation score is at least 901074 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Elder is 901111.\nThe evaluation score for Evidence Score Elder is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "807f15d5f7376815aec1207f8291f0f5fc4aab51ae49d03133f24dadfd818ce3",
+      "record_file_sha256": "97336293295bb3e1f800c6f0a975d72a169de0ea98fc70d2fc9af49902ee5553",
+      "full_record_canonical_sha256": "6ca01c4038e77e585f5040a5aab69e3815e344f0ec13e474a85602ec7820e68d",
+      "generation": {
+        "text": "DEFER",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          13649,
+          640,
+          151645
+        ],
+        "elapsed_seconds": 0.30176477300000215,
+        "prompt_tokens": 1035,
+        "prompt_token_ids_sha256": "b356553cebc9820febe7a2c5c3aff94222f9c6fb51718a1b93b268dcf493431a"
+      }
+    },
+    {
+      "example_id": "er_217efbbded4583f5116eb21e",
+      "case_id": "er_score_06",
+      "family": "score",
+      "condition": "decisive",
+      "side": "low",
+      "expected_decision": "REJECT",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Flint, APPROVE if the evaluation score is at least 901285 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe evaluation score for Evidence Score Flint is 901254 points.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "00ce3d11d8b73f2626047159ec9436aff05fbbda1a8098c36c468a26f7fa0a2d",
+      "record_file_sha256": "0ac0033264ac2eebad093fcf4619ac310af527336a2e3a2e23b1b334da87719a",
+      "full_record_canonical_sha256": "ad5af95ab5a0f334762a33ef8b18b2a34663453e41579add7e89d79d69eafc63",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.2788429160000305,
+        "prompt_tokens": 1023,
+        "prompt_token_ids_sha256": "5c0a72c4cd228e655903e6a9f2fdcaacadaf213efa133334d4dc30dfd1e5c9a9"
+      }
+    },
+    {
+      "example_id": "er_70e9e166e30029e9e9d2b654",
+      "case_id": "er_score_06",
+      "family": "score",
+      "condition": "decisive",
+      "side": "high",
+      "expected_decision": "APPROVE",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Flint, APPROVE if the evaluation score is at least 901285 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe evaluation score for Evidence Score Flint is 901322 points.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "f56b5e0baffb53f66f5ded8c5ccd11b26776cc59dd9ee9565b5cf0e8f64e937d",
+      "record_file_sha256": "557d4b08bdf2a337a2e52b1053399626ef179b7f8b0518abdacccbf10789161d",
+      "full_record_canonical_sha256": "842da67d10085229f30af74d09fffba94af7cf4c36166547970589174d7abfc9",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.3159550050000348,
+        "prompt_tokens": 1023,
+        "prompt_token_ids_sha256": "fa37c99bd153fb308e445788820f0a839970728344eb010b6b99f8375f1d6f08"
+      }
+    },
+    {
+      "example_id": "er_1d23c9865cb79a554d662ef8",
+      "case_id": "er_score_06",
+      "family": "score",
+      "condition": "metadata",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Flint, APPROVE if the evaluation score is at least 901285 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Flint is 901254.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "0444518554318df8668b716318cd6f9d3ad0cb7981cdefdbc1d812b6537009dd",
+      "record_file_sha256": "e751237f40f7bc31cd2c9cd67f5201398893caf6e0ce692f27acfc4d3ef4acf1",
+      "full_record_canonical_sha256": "9cd172d403adb8a52a080bdbc8394fd22b01b9a2d0a04f56f0b3bcffebcfb184",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.28886415899995654,
+        "prompt_tokens": 1024,
+        "prompt_token_ids_sha256": "27c20ef1b5028e47496509f5c68015387c7151ab699ca662061eef3b9a41b011"
+      }
+    },
+    {
+      "example_id": "er_9904fcb3d3af251fd421b567",
+      "case_id": "er_score_06",
+      "family": "score",
+      "condition": "metadata",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Flint, APPROVE if the evaluation score is at least 901285 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Flint is 901322.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "eef1687385cc66ad7092415d0f0cec0a703e3bfd7f3ad850d9e3ea99e13cefc9",
+      "record_file_sha256": "1f5004669e731e12287a613ea80e48e054cf17ae4352a3d1d07c28e73116200e",
+      "full_record_canonical_sha256": "311f7546279c25e02609fb48173beeef0a5d7ae86b26db4d0f057207867edc6c",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.312436617000003,
+        "prompt_tokens": 1024,
+        "prompt_token_ids_sha256": "604118469b4e30cdfc740c9d3ebc3a2d48e55b266207e91b28fe58ec8a6dd4c1"
+      }
+    },
+    {
+      "example_id": "er_9faeedc25763e8c342f73974",
+      "case_id": "er_score_06",
+      "family": "score",
+      "condition": "explicit_missing",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Flint, APPROVE if the evaluation score is at least 901285 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Flint is 901254.\nThe evaluation score for Evidence Score Flint is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "07b3acc18def45d37607935fe4ec26ce12cd22ae532780d026361930f2f9d7ee",
+      "record_file_sha256": "cd17b94db822b3c5138d8542caa5e58d840c474d9c4c12c32fa6544b6912d74f",
+      "full_record_canonical_sha256": "30ba7bcd34ae2c3301950bc4eaaf5037347d3b50e8f45ba2db2c13307fea7bf0",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.2994973780000123,
+        "prompt_tokens": 1035,
+        "prompt_token_ids_sha256": "48026c3c94fed9ee1cc01b89d1aa10b8e58c3f5dc067b1aff266721de0144d8d"
+      }
+    },
+    {
+      "example_id": "er_e3b80f7c188746c661cbddb3",
+      "case_id": "er_score_06",
+      "family": "score",
+      "condition": "explicit_missing",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "DEFER",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Flint, APPROVE if the evaluation score is at least 901285 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Flint is 901322.\nThe evaluation score for Evidence Score Flint is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "0ff1c13ec5ea286f26fb83327e70f63f7a4649bb90568dcc5d9da694a139f398",
+      "record_file_sha256": "4793c26ceb5b4ee4fb40ed8a9f47351d7c8541d3727f24fc2e61545f73a7b9b1",
+      "full_record_canonical_sha256": "34270c0743085fbe434a3293efeb9473aeef2c3cde44daa9b7145da8a03d733a",
+      "generation": {
+        "text": "DEFER",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          13649,
+          640,
+          151645
+        ],
+        "elapsed_seconds": 0.3051624619999984,
+        "prompt_tokens": 1035,
+        "prompt_token_ids_sha256": "89b747046bcad746db950f6593f8c6a1b17a456597b4aa191adededcadf73008"
+      }
+    },
+    {
+      "example_id": "er_002a71ace67a506f81a3f116",
+      "case_id": "er_score_07",
+      "family": "score",
+      "condition": "decisive",
+      "side": "low",
+      "expected_decision": "REJECT",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Grove, APPROVE if the evaluation score is at least 901496 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe evaluation score for Evidence Score Grove is 901465 points.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "daa1e698e6e64ee55c350a9ca07c6580856754e57246532b97f07f2e2690a7a4",
+      "record_file_sha256": "a9c9575fb899bf053bd8e6f70c7b98773e7ab1bce3d8b7272fc8150714a5d9a9",
+      "full_record_canonical_sha256": "f34273a03878cf7ad86f9c684f8925f3adde2405c06b8082b08c5a8e6ae0f595",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.2921270709999817,
+        "prompt_tokens": 1023,
+        "prompt_token_ids_sha256": "f1d4bfc043e9a41a8d2dd250af59b6f977b497da9ecce37e6f0ca51ebd60af64"
+      }
+    },
+    {
+      "example_id": "er_19cce8d3502c0695a3782d1a",
+      "case_id": "er_score_07",
+      "family": "score",
+      "condition": "decisive",
+      "side": "high",
+      "expected_decision": "APPROVE",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Grove, APPROVE if the evaluation score is at least 901496 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe evaluation score for Evidence Score Grove is 901533 points.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "409311cb8e96906d0cc111318cfa6f548a5ffc256b72c361814abd7218b11b38",
+      "record_file_sha256": "5c6e5643eddaf90e2a09134ce907fe527651193eb1fd5707d396394e94232ae4",
+      "full_record_canonical_sha256": "594676ddfc36ad8ca6973ecea067a1f8d3d54840d5fe99a7e7f6e4a107e6b3b5",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.3211508340000364,
+        "prompt_tokens": 1023,
+        "prompt_token_ids_sha256": "19c06252736a0608b32121aa0c2e387c958ea083b3b7ee4098ed52b3ded10de6"
+      }
+    },
+    {
+      "example_id": "er_d900910eaa7bc82ae54bd105",
+      "case_id": "er_score_07",
+      "family": "score",
+      "condition": "metadata",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Grove, APPROVE if the evaluation score is at least 901496 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Grove is 901465.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "bbd231676da073127e3e5684fafe2f8f7e2000b6cad09dabe9bc0c3a86e955dd",
+      "record_file_sha256": "f8cf63379c71a8de4b30e1cb96d7418eaf4d9ca9db0d801f74a918c773efcfde",
+      "full_record_canonical_sha256": "03bcc524697bdfc9fa802bc8733efd004d34a94d71732c1df4fc6f983047c715",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.30103757099999484,
+        "prompt_tokens": 1024,
+        "prompt_token_ids_sha256": "1cfeefeef0f6b9a15776ac09a8a2019b2cb6eb88a6257e9c7766764247a2a36c"
+      }
+    },
+    {
+      "example_id": "er_c96197a90d15ad1bdb9fb6b1",
+      "case_id": "er_score_07",
+      "family": "score",
+      "condition": "metadata",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Grove, APPROVE if the evaluation score is at least 901496 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Grove is 901533.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "6655339c81978c3bf21f3ef0420de4d58dba8debe7d3aee674b11bff8613d142",
+      "record_file_sha256": "1dbf8f3294ee7e1e7979c9adac2414424e088814eeb4ccf995527a439dd189b5",
+      "full_record_canonical_sha256": "bda3ac548fd002cf422537471c346f0355827cdf38bb546fe06b58f500aecab2",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.32665926900000386,
+        "prompt_tokens": 1024,
+        "prompt_token_ids_sha256": "889c0ac268726b40e093756ae5aeb3d1f881b56af3fd97618d52612d83c3669c"
+      }
+    },
+    {
+      "example_id": "er_9a905d491eef97253562bfdd",
+      "case_id": "er_score_07",
+      "family": "score",
+      "condition": "explicit_missing",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Grove, APPROVE if the evaluation score is at least 901496 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Grove is 901465.\nThe evaluation score for Evidence Score Grove is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "cd35641d2fbd032856ce6edc1c563f04371e8b9b7771a5c483a098f488e78bbb",
+      "record_file_sha256": "2e67394b27c88ef37c1d34ae7b2485e8cbbf78a9d9642b18e895d28c9b9ab0ab",
+      "full_record_canonical_sha256": "f23b1b40f758c74a1ca9e660e0dd08a97de2ee6c18588e02a42cdfa80660b9d7",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.3205480969999712,
+        "prompt_tokens": 1035,
+        "prompt_token_ids_sha256": "23261050f97cf67808e3884798f43dbe8c89c2cc4e1f12f1858a8dd77ed7cc26"
+      }
+    },
+    {
+      "example_id": "er_a7d4ad05a36095f15fc098bd",
+      "case_id": "er_score_07",
+      "family": "score",
+      "condition": "explicit_missing",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "DEFER",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Grove, APPROVE if the evaluation score is at least 901496 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Grove is 901533.\nThe evaluation score for Evidence Score Grove is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "ec4033350d0c391f69e2fbdbd8fc3bc06a18a4eab2d27b70c2049905f2d69b11",
+      "record_file_sha256": "6d04795897495348d85a1aa449d0af8d26e0bbdcba62d7a11f490faf93fcb1c3",
+      "full_record_canonical_sha256": "abdaf706c903c414a4d1e8bc9c4e172f5c9ea7f9f9e8efcab3f868584c70c5ff",
+      "generation": {
+        "text": "DEFER",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          13649,
+          640,
+          151645
+        ],
+        "elapsed_seconds": 0.3320650669999736,
+        "prompt_tokens": 1035,
+        "prompt_token_ids_sha256": "418ba8961b5c1fffe7b3f9bc1dd7d12392d9a42f4241924b5506f2207925f86d"
+      }
+    },
+    {
+      "example_id": "er_e5b2297f2afd7a76b7138686",
+      "case_id": "er_score_08",
+      "family": "score",
+      "condition": "decisive",
+      "side": "low",
+      "expected_decision": "REJECT",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Heath, APPROVE if the evaluation score is at least 901707 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe evaluation score for Evidence Score Heath is 901676 points.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "cb2f8b59249034c8b1bf15a1193b511321c1c522253ac1a5364bba6393c66ef3",
+      "record_file_sha256": "fa0a6f914e811aeb110e9cf6ee0111de8226eefbf8badee5a83943c86494d3d0",
+      "full_record_canonical_sha256": "085d894dd07379436ace822871d79d5b232fe56a4ac149f71ab64320ba127021",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.3066761329999963,
+        "prompt_tokens": 1023,
+        "prompt_token_ids_sha256": "1659ec66cbf207c1f0f7623092dc7b218a7b1be3416947cfce1103962dba962e"
+      }
+    },
+    {
+      "example_id": "er_edd85a22f33668f864bd99a7",
+      "case_id": "er_score_08",
+      "family": "score",
+      "condition": "decisive",
+      "side": "high",
+      "expected_decision": "APPROVE",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Heath, APPROVE if the evaluation score is at least 901707 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe evaluation score for Evidence Score Heath is 901744 points.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "28ba3b4b77aac3c5747bc71f76500c0a511a28b6e0ee49e0a3afb19a15bf7ab2",
+      "record_file_sha256": "a2050a35f4b535d0eca853a3c4414893025bac6d6956fbb6dfdce3255b007dae",
+      "full_record_canonical_sha256": "ef692058663a324b0be2880acefe276b733276b632138718123051684d6f3a31",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.33389643399999613,
+        "prompt_tokens": 1023,
+        "prompt_token_ids_sha256": "d19941a93f04b190f7c27591c78ee60fc8819e4403c6f2ea7df8ebcaa7bd2605"
+      }
+    },
+    {
+      "example_id": "er_eca63aeb0b41b1b6345078ae",
+      "case_id": "er_score_08",
+      "family": "score",
+      "condition": "metadata",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Heath, APPROVE if the evaluation score is at least 901707 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Heath is 901676.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "4a53373f2acf48bc752104fb2a13d03bebb68d8513f62e2a0735c32bc3745a8a",
+      "record_file_sha256": "47467dfd8649c0861304faabbd061ddd83ea93f35dc9671f54000d6e1ce6bb48",
+      "full_record_canonical_sha256": "511fa6832f448b457b98c5f45051bc7af316ffc4429fe3f25bead8c3d032066b",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.30653403299999127,
+        "prompt_tokens": 1024,
+        "prompt_token_ids_sha256": "7eca8c89a8943beb214048fb90d0070d48ccdc14f6dd24bd89d7620627617244"
+      }
+    },
+    {
+      "example_id": "er_439bd13b0765c5c11d09d075",
+      "case_id": "er_score_08",
+      "family": "score",
+      "condition": "metadata",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "APPROVE",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Heath, APPROVE if the evaluation score is at least 901707 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Heath is 901744.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "64b7506708ad05179e2b96e207e9b98ed83a08c1f6f4f0ea113d2c91765eb96c",
+      "record_file_sha256": "66d60021af831936c18a9fe6be38da694f436594c1ab7f1fddb39edfbfc783d7",
+      "full_record_canonical_sha256": "070feb8721c58aaed25446d95a4584c9f4a5d17388ea38d2e2ffc9b828759dfc",
+      "generation": {
+        "text": "APPROVE",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          2537,
+          9117,
+          4491,
+          151645
+        ],
+        "elapsed_seconds": 0.32713125699996226,
+        "prompt_tokens": 1024,
+        "prompt_token_ids_sha256": "17c724ca83344ae5ebbdebd86ea37f77a96f131f3c780ccf39b08a8718450e42"
+      }
+    },
+    {
+      "example_id": "er_b4e82f0935b61e83f8bcf8c0",
+      "case_id": "er_score_08",
+      "family": "score",
+      "condition": "explicit_missing",
+      "side": "low",
+      "expected_decision": "DEFER",
+      "decision": "REJECT",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Heath, APPROVE if the evaluation score is at least 901707 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Heath is 901676.\nThe evaluation score for Evidence Score Heath is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "6ea6d02a71ad8957dedc82879f5d5df33102da8858db963c80596a91139ac349",
+      "record_file_sha256": "d8d658dcec3cd5ddc4f315d05396b0ba26c31bf913ba561166790e8a22a199b9",
+      "full_record_canonical_sha256": "039c7b505a310f03edc500bc8f28171bfb2f2664bcc494a328167a34988ef05d",
+      "generation": {
+        "text": "REJECT",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          787,
+          7430,
+          151645
+        ],
+        "elapsed_seconds": 0.32527370200000405,
+        "prompt_tokens": 1035,
+        "prompt_token_ids_sha256": "b0767f9d1cb59c59be191c0c3bee111579355ea71226b093cf1ca6063a525ccf"
+      }
+    },
+    {
+      "example_id": "er_8e9c527ca4f72c14f117a7c2",
+      "case_id": "er_score_08",
+      "family": "score",
+      "condition": "explicit_missing",
+      "side": "high",
+      "expected_decision": "DEFER",
+      "decision": "DEFER",
+      "actual_final_user": "Decision rule:\nFor Evidence Score Heath, APPROVE if the evaluation score is at least 901707 points; REJECT if the evaluation score is below that threshold.\n\nEvidence packet:\nThe administrative file-ID number for Evidence Score Heath is 901744.\nThe evaluation score for Evidence Score Heath is not provided.\n\nReport:\nNo report was supplied.",
+      "final_user_sha256": "e52ecc3cdf7f7635fb2274de27f3c197b18d1363701376613a753c07b86b022c",
+      "record_file_sha256": "14c7b566f85b7fd9542adef72f7488d7f5e133196e36b06c4f0ec2fd685a23fd",
+      "full_record_canonical_sha256": "bee3a3c4f7c5a2dd0fb42e9708b27b075c629964c3f6a6acae500620edfb8339",
+      "generation": {
+        "text": "DEFER",
+        "finish_reason": "eos",
+        "generated_token_ids": [
+          13649,
+          640,
+          151645
+        ],
+        "elapsed_seconds": 0.3287743749999663,
+        "prompt_tokens": 1035,
+        "prompt_token_ids_sha256": "19acb3bca381bac5bbeb760f9826ffccc4f543eaba6582c93fd875ae5b84e823"
+      }
+    }
+  ],
+  "provenance": {
+    "native_run": "/home/adirj/kcl-latent-probes-runs/evidence_role_diagnostic_v1",
+    "protocol_sha256": "6f630f2ab2e194e808e9220b154b68dd5349607314c11e2b14693e61762e8778",
+    "manifest_sha256": "cb77fe2a3d26512765367e1f9e418b6bb92201f8f8b72a6300622c5bf47601d1",
+    "rows_sha256": "3d59b54ea6a8a4042a573fc6104a8742ca018e49f47e36ca93cf0cc135e345f6",
+    "summary_sha256": "88d0067edaa19aab96909a0e324120a6b6cdcf895a28c0a62ff93e6e1512dec1",
+    "prompt_lengths_sha256": "450fc08ac2ec2878008266c834ae5dae589afda4ae87777118f6d3442c654031",
+    "panel_sha256": "a162f02af9ee87e880dc939bd7601968401b449d2668966e1a0ce185dae46fd1",
+    "source_sha256": {
+      "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/run_evidence_role_diagnostic.py": "b94626390d93057d76091994826fdb1b0b28f44c67f15438f86b01194809c840",
+      "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/communication/evidence_role_v1.json": "a162f02af9ee87e880dc939bd7601968401b449d2668966e1a0ce185dae46fd1",
+      "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/evidence_role_panel.py": "ac06994ddf66268390fd20fe7145b519a7bfdf2c4ee253ccc6df8d5ae3214767",
+      "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/calibrated_reader.py": "359f5f4a868b5e590708cb49800716d4d587b160d3c4565611b7d27f6204df77",
+      "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/forecast_panel.py": "1ba166414f9a2aec1f1a48e19e1155051768854dfa0eb137e61756b3fe51e82f",
+      "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/reader_panel.py": "8fd4fd0ebb912f3cd7b20fc9c6739af3a6f1323b3ea600f0b7730cf97c50686d",
+      "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/backends.py": "692d9778e4bf69081ab1afea702dfd573119f2b6cc454e51072bb3d2233402a2",
+      "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/configs/qwen7b_reader_4bit.json": "cfb67cb383f0bd8c20db350e63578231985ae5e1efa63341c9732813f1b9a043",
+      "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/docs/EVIDENCE_ROLE_DIAGNOSTIC_PROTOCOL.md": "9cc155c8e664ae1608f3b235eaa6edb9caf00445740999fd13d842815eb8f3df"
+    },
+    "reader_policy": {
+      "policy_id": "reader_calibration_9shot_v1",
+      "policy_sha256": "6dda261f5d5c7667ea29885bddd1c47410f34d59e1807819a317008da570c779",
+      "example_material_sha256": "fd6ab956a5f46e6fb38097d6b3ec9c745dc212a07369e84892253e7e2ae32d61",
+      "source_system_sha256": "21f694d85acdc4b3a09a932d21e011436f2394c952f8d35322ef28a23c7535d0",
+      "n_examples": 9,
+      "answer_counts": {
+        "APPROVE": 3,
+        "REJECT": 3,
+        "DEFER": 3
+      },
+      "model_id": "Qwen/Qwen2.5-7B-Instruct",
+      "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+      "max_input_tokens": 2048,
+      "max_new_tokens": 8,
+      "do_sample": false,
+      "seed": 42,
+      "needs_human_review": true
+    },
+    "model": {
+      "model_id": "Qwen/Qwen2.5-7B-Instruct",
+      "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+      "dtype": "bfloat16",
+      "quantization": "4bit",
+      "device": "cuda",
+      "capture_layers": [
+        8
+      ],
+      "max_input_tokens": 2048,
+      "max_memory": null,
+      "allow_cpu_offload": false,
+      "local_files_only": true
+    },
+    "generation": {
+      "max_new_tokens": 8,
+      "do_sample": false,
+      "temperature": 0.7,
+      "top_p": 0.95
+    },
+    "seed": 42,
+    "shared_prefix_sha256": "aee33f5bbe247850be4482ad9a5d7988b48fae6bd387de79cb94350883b51a2a"
+  },
+  "independent_audit": {
+    "implementation": "Independent stdlib/NumPy reconstruction; no project analysis helper imported.",
+    "all_numeric_summary_pairs_and_bootstraps_match": true,
+    "numeric_tolerance": 1e-15,
+    "source_hashes_verified": 9,
+    "record_files_verified": 96,
+    "prompt_preflight_and_policy_bindings_verified": 96,
+    "normative_and_actual_final_user_bindings_verified": 96,
+    "generated_tokens": 326,
+    "generation_seconds": 36.86610291899967,
+    "auditor_source_sha256": "bc68d4c9ebd0fe52916a157fc39c3b95cc5cf7a86bd2d15ef97ea5979d4970cf",
+    "numpy_version": "2.4.6"
+  }
+}
