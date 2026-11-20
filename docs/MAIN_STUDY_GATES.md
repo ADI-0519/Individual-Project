@@ -43,6 +43,25 @@ groups, repeated private-attendance pairs and uneven class recall limit the
 result. The neutral unqueried-belief transfer gate remains unmet; use this bank
 as observed validation and independently validate the eventual matching task.
 
+**Further measured update:** the [known-message diagnostic](./KNOWN_MESSAGE_RESULTS.md)
+scores 56/64 with the frozen queried sender head and 32/64 with story/world-question
+heads. Four wordings share one update rule and only 32 unique sender inputs.
+This supports a conditional evidence-channel transfer result, while unqueried
+and natural-communication transfer remain unvalidated. The [MASK pilot](./MASK_SPECIFICITY_RESULTS.md)
+also ran: its strict primary subset is empty, with secondary aggregation results
+kept separate. Human review and a declared final eligibility policy remain
+necessary before estimating behavioral specificity on an expanded fresh panel.
+
+The [exploratory future-goal context test](./BELIEF_GOAL_STRESS_RESULTS.md) now
+uses the same observed bank and frozen queried head. Neutral role framing scores
+44/64, a positive future-belief objective 50/64, and its opposing objective 34/64.
+All 32 unique inputs show a positive-minus-negative goal score increase, despite
+unchanged current evidence and gold labels. Role framing already changes scores;
+the goal contrast also differs in wording, polarity and length. This establishes
+bounded context sensitivity, not changed current belief or deceptive behavior.
+Before stronger transfer claims, use fresh rule families, direct place-A/place-B
+goal wording, irrelevant-goal and length controls, and a capable text comparator.
+
 The independent neutral task is a **necessary design gate for the intended stronger belief-transfer claim**. It must preserve the chosen target and time point. A decoder trained on an agent's prior false belief cannot automatically be called a decoder of its post-message state. Likewise, a neutral task showing the full message at training time is not semantically matched to testing before an unknown message. Do not prescribe an auxiliary dataset until this distinction is settled. A valid staged outcome is: first demonstrate a well-controlled communication-outcome forecast, then test a separately defined neutral belief/communication task with matched labels and timing. Decodability remains distinct from causal use in both stages.
 
 **Completion evidence:** a versioned specification declaring input visibility, representation time, sender/reader policies, label meaning, primary comparison and the independent-task mapping. An unresolved mapping blocks a belief-transfer claim; it does not invalidate the already measured development result.

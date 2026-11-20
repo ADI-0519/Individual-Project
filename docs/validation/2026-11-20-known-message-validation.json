@@ -1,0 +1,1698 @@
+{
+  "schema": "known_message_validation_summary_v1",
+  "date": "2026-11-20",
+  "status": "complete_development_diagnostic",
+  "annotation_origin": "agent_assisted_draft",
+  "needs_human_review": true,
+  "source_commit": "9592c752f87593f4ddbe1af4290264a3409b1122",
+  "run_directory": "runs/known_message_validation_v1",
+  "source_run_directory": "runs/belief_query_comparison_v1",
+  "research_question": "Does a frozen prior-state nested readout transfer from observed movement to an exact known-message update when world truth and actual delivery are independently dissociated?",
+  "interpretation": "Positive question-conditioned cross-channel decodability of stipulated fictional states. No known-message fitting, pressure transfer, spontaneous-belief, causal-use or unknown-message-anticipation claim.",
+  "design": {
+    "panel_path": "data/belief_diagnostic/known_message_validation_v1.json",
+    "panel_sha256": "a9b863ba6e01078bc36b7ec8664e2b32de1f2dea38610662c471185fd1c338de",
+    "n_cases": 64,
+    "n_wording_groups": 4,
+    "n_logical_families": 1,
+    "n_unique_sender_inputs_per_condition": 32,
+    "n_unique_omniscient_inputs_per_condition": 64,
+    "source_factors": [
+      "world_bit",
+      "message_bit",
+      "delivered",
+      "receipt"
+    ],
+    "initial_bit": "1 - message_bit",
+    "gold": {
+      "world": "world_bit",
+      "reader": "message_bit if delivered else 1-message_bit",
+      "nested": "message_bit if receipt else 1-message_bit"
+    },
+    "target": "nested",
+    "primary_layer": "layer_16",
+    "primary_view": "sender",
+    "phase": "known_message",
+    "split": "fresh",
+    "conditions": [
+      "story",
+      "nested_question",
+      "world_question"
+    ],
+    "capture": "Last chat-prompt token before any answer; all captures and frozen readout scoring precede any behavior generation.",
+    "exact_system_and_question_stems_reused": true,
+    "sender_hides_actual_delivery": true,
+    "actual_reader_negative_control_accuracy": 0.5,
+    "question_lengths_matched": false,
+    "independent_human_validation_complete": false
+  },
+  "primary_sender": {
+    "story": {
+      "n_rows": 64,
+      "class_counts": {
+        "0": 32,
+        "1": 32
+      },
+      "accuracy": 0.5,
+      "binary_log_loss": 0.6924837895750134,
+      "macro_f1": 0.4817813765182186,
+      "balanced_accuracy": 0.5,
+      "class_recall": {
+        "0": 0.3125,
+        "1": 0.6875
+      },
+      "class_f1": {
+        "0": 0.38461538461538464,
+        "1": 0.5789473684210527
+      },
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          10,
+          22
+        ],
+        [
+          10,
+          22
+        ]
+      ],
+      "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+      "probability_clip": 1e-15,
+      "n_templates": 4,
+      "correct": 32,
+      "head_id": "story__sender__nested__layer_16",
+      "selected_C_from_validation": 1
+    },
+    "nested_question": {
+      "n_rows": 64,
+      "class_counts": {
+        "0": 32,
+        "1": 32
+      },
+      "accuracy": 0.875,
+      "binary_log_loss": 0.6418707336506868,
+      "macro_f1": 0.8745098039215686,
+      "balanced_accuracy": 0.875,
+      "class_recall": {
+        "0": 0.8125,
+        "1": 0.9375
+      },
+      "class_f1": {
+        "0": 0.8666666666666667,
+        "1": 0.8823529411764706
+      },
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          26,
+          6
+        ],
+        [
+          2,
+          30
+        ]
+      ],
+      "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+      "probability_clip": 1e-15,
+      "n_templates": 4,
+      "correct": 56,
+      "head_id": "nested_question__sender__nested__layer_16",
+      "selected_C_from_validation": 1
+    },
+    "world_question": {
+      "n_rows": 64,
+      "class_counts": {
+        "0": 32,
+        "1": 32
+      },
+      "accuracy": 0.5,
+      "binary_log_loss": 0.6931482764037459,
+      "macro_f1": 0.3333333333333333,
+      "balanced_accuracy": 0.5,
+      "class_recall": {
+        "0": 0,
+        "1": 1
+      },
+      "class_f1": {
+        "0": 0,
+        "1": 0.6666666666666666
+      },
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          0,
+          32
+        ],
+        [
+          0,
+          32
+        ]
+      ],
+      "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+      "probability_clip": 1e-15,
+      "n_templates": 4,
+      "correct": 32,
+      "head_id": "world_question__sender__nested__layer_16",
+      "selected_C_from_validation": 0.001
+    }
+  },
+  "primary_omniscient": {
+    "story": {
+      "n_rows": 64,
+      "class_counts": {
+        "0": 32,
+        "1": 32
+      },
+      "accuracy": 0.5,
+      "binary_log_loss": 0.6931467317044676,
+      "macro_f1": 0.3333333333333333,
+      "balanced_accuracy": 0.5,
+      "class_recall": {
+        "0": 0,
+        "1": 1
+      },
+      "class_f1": {
+        "0": 0,
+        "1": 0.6666666666666666
+      },
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          0,
+          32
+        ],
+        [
+          0,
+          32
+        ]
+      ],
+      "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+      "probability_clip": 1e-15,
+      "n_templates": 4,
+      "correct": 32,
+      "head_id": "story__omniscient__nested__layer_16",
+      "selected_C_from_validation": 0.01
+    },
+    "nested_question": {
+      "n_rows": 64,
+      "class_counts": {
+        "0": 32,
+        "1": 32
+      },
+      "accuracy": 0.78125,
+      "binary_log_loss": 0.6632502792540276,
+      "macro_f1": 0.7732793522267206,
+      "balanced_accuracy": 0.78125,
+      "class_recall": {
+        "0": 0.59375,
+        "1": 0.96875
+      },
+      "class_f1": {
+        "0": 0.7307692307692307,
+        "1": 0.8157894736842105
+      },
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          19,
+          13
+        ],
+        [
+          1,
+          31
+        ]
+      ],
+      "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+      "probability_clip": 1e-15,
+      "n_templates": 4,
+      "correct": 50,
+      "head_id": "nested_question__omniscient__nested__layer_16",
+      "selected_C_from_validation": 1
+    },
+    "world_question": {
+      "n_rows": 64,
+      "class_counts": {
+        "0": 32,
+        "1": 32
+      },
+      "accuracy": 0.515625,
+      "binary_log_loss": 0.6933398220470514,
+      "macro_f1": 0.44379029997196523,
+      "balanced_accuracy": 0.515625,
+      "class_recall": {
+        "0": 0.15625,
+        "1": 0.875
+      },
+      "class_f1": {
+        "0": 0.24390243902439024,
+        "1": 0.6436781609195402
+      },
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          5,
+          27
+        ],
+        [
+          4,
+          28
+        ]
+      ],
+      "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+      "probability_clip": 1e-15,
+      "n_templates": 4,
+      "correct": 33,
+      "head_id": "world_question__omniscient__nested__layer_16",
+      "selected_C_from_validation": 1
+    }
+  },
+  "per_template_primary_sender": {
+    "km_t01": {
+      "n_rows": 16,
+      "story_correct": 8,
+      "nested_question_correct": 14,
+      "world_question_correct": 8
+    },
+    "km_t02": {
+      "n_rows": 16,
+      "story_correct": 8,
+      "nested_question_correct": 12,
+      "world_question_correct": 8
+    },
+    "km_t03": {
+      "n_rows": 16,
+      "story_correct": 8,
+      "nested_question_correct": 14,
+      "world_question_correct": 8
+    },
+    "km_t04": {
+      "n_rows": 16,
+      "story_correct": 8,
+      "nested_question_correct": 16,
+      "world_question_correct": 8
+    }
+  },
+  "primary_cross_condition": [
+    {
+      "source_condition": "story",
+      "evaluation_condition": "nested_question",
+      "view": "omniscient",
+      "target": "nested",
+      "layer": "layer_16",
+      "head_id": "story__omniscient__nested__layer_16",
+      "selected_C_from_validation": 0.01,
+      "metrics": {
+        "n_rows": 64,
+        "class_counts": {
+          "0": 32,
+          "1": 32
+        },
+        "accuracy": 0.5,
+        "binary_log_loss": 0.6931460006562962,
+        "macro_f1": 0.3333333333333333,
+        "balanced_accuracy": 0.5,
+        "class_recall": {
+          "0": 0,
+          "1": 1
+        },
+        "class_f1": {
+          "0": 0,
+          "1": 0.6666666666666666
+        },
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            0,
+            32
+          ],
+          [
+            0,
+            32
+          ]
+        ],
+        "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+        "probability_clip": 1e-15,
+        "n_templates": 4,
+        "correct": 32
+      }
+    },
+    {
+      "source_condition": "story",
+      "evaluation_condition": "world_question",
+      "view": "omniscient",
+      "target": "nested",
+      "layer": "layer_16",
+      "head_id": "story__omniscient__nested__layer_16",
+      "selected_C_from_validation": 0.01,
+      "metrics": {
+        "n_rows": 64,
+        "class_counts": {
+          "0": 32,
+          "1": 32
+        },
+        "accuracy": 0.5,
+        "binary_log_loss": 0.6931469896576785,
+        "macro_f1": 0.3333333333333333,
+        "balanced_accuracy": 0.5,
+        "class_recall": {
+          "0": 0,
+          "1": 1
+        },
+        "class_f1": {
+          "0": 0,
+          "1": 0.6666666666666666
+        },
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            0,
+            32
+          ],
+          [
+            0,
+            32
+          ]
+        ],
+        "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+        "probability_clip": 1e-15,
+        "n_templates": 4,
+        "correct": 32
+      }
+    },
+    {
+      "source_condition": "story",
+      "evaluation_condition": "nested_question",
+      "view": "sender",
+      "target": "nested",
+      "layer": "layer_16",
+      "head_id": "story__sender__nested__layer_16",
+      "selected_C_from_validation": 1,
+      "metrics": {
+        "n_rows": 64,
+        "class_counts": {
+          "0": 32,
+          "1": 32
+        },
+        "accuracy": 0.5,
+        "binary_log_loss": 0.6930737993735456,
+        "macro_f1": 0.3333333333333333,
+        "balanced_accuracy": 0.5,
+        "class_recall": {
+          "0": 0,
+          "1": 1
+        },
+        "class_f1": {
+          "0": 0,
+          "1": 0.6666666666666666
+        },
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            0,
+            32
+          ],
+          [
+            0,
+            32
+          ]
+        ],
+        "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+        "probability_clip": 1e-15,
+        "n_templates": 4,
+        "correct": 32
+      }
+    },
+    {
+      "source_condition": "story",
+      "evaluation_condition": "world_question",
+      "view": "sender",
+      "target": "nested",
+      "layer": "layer_16",
+      "head_id": "story__sender__nested__layer_16",
+      "selected_C_from_validation": 1,
+      "metrics": {
+        "n_rows": 64,
+        "class_counts": {
+          "0": 32,
+          "1": 32
+        },
+        "accuracy": 0.5,
+        "binary_log_loss": 0.6931624702083597,
+        "macro_f1": 0.5,
+        "balanced_accuracy": 0.5,
+        "class_recall": {
+          "0": 0.5,
+          "1": 0.5
+        },
+        "class_f1": {
+          "0": 0.5,
+          "1": 0.5
+        },
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            16,
+            16
+          ],
+          [
+            16,
+            16
+          ]
+        ],
+        "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+        "probability_clip": 1e-15,
+        "n_templates": 4,
+        "correct": 32
+      }
+    },
+    {
+      "source_condition": "nested_question",
+      "evaluation_condition": "story",
+      "view": "omniscient",
+      "target": "nested",
+      "layer": "layer_16",
+      "head_id": "nested_question__omniscient__nested__layer_16",
+      "selected_C_from_validation": 1,
+      "metrics": {
+        "n_rows": 64,
+        "class_counts": {
+          "0": 32,
+          "1": 32
+        },
+        "accuracy": 0.5,
+        "binary_log_loss": 0.6933406482782858,
+        "macro_f1": 0.3333333333333333,
+        "balanced_accuracy": 0.5,
+        "class_recall": {
+          "0": 0,
+          "1": 1
+        },
+        "class_f1": {
+          "0": 0,
+          "1": 0.6666666666666666
+        },
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            0,
+            32
+          ],
+          [
+            0,
+            32
+          ]
+        ],
+        "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+        "probability_clip": 1e-15,
+        "n_templates": 4,
+        "correct": 32
+      }
+    },
+    {
+      "source_condition": "nested_question",
+      "evaluation_condition": "story",
+      "view": "sender",
+      "target": "nested",
+      "layer": "layer_16",
+      "head_id": "nested_question__sender__nested__layer_16",
+      "selected_C_from_validation": 1,
+      "metrics": {
+        "n_rows": 64,
+        "class_counts": {
+          "0": 32,
+          "1": 32
+        },
+        "accuracy": 0.5,
+        "binary_log_loss": 0.6923915565645173,
+        "macro_f1": 0.3333333333333333,
+        "balanced_accuracy": 0.5,
+        "class_recall": {
+          "0": 0,
+          "1": 1
+        },
+        "class_f1": {
+          "0": 0,
+          "1": 0.6666666666666666
+        },
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            0,
+            32
+          ],
+          [
+            0,
+            32
+          ]
+        ],
+        "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+        "probability_clip": 1e-15,
+        "n_templates": 4,
+        "correct": 32
+      }
+    },
+    {
+      "source_condition": "world_question",
+      "evaluation_condition": "story",
+      "view": "omniscient",
+      "target": "nested",
+      "layer": "layer_16",
+      "head_id": "world_question__omniscient__nested__layer_16",
+      "selected_C_from_validation": 1,
+      "metrics": {
+        "n_rows": 64,
+        "class_counts": {
+          "0": 32,
+          "1": 32
+        },
+        "accuracy": 0.5,
+        "binary_log_loss": 0.6942576544139174,
+        "macro_f1": 0.3333333333333333,
+        "balanced_accuracy": 0.5,
+        "class_recall": {
+          "0": 0,
+          "1": 1
+        },
+        "class_f1": {
+          "0": 0,
+          "1": 0.6666666666666666
+        },
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            0,
+            32
+          ],
+          [
+            0,
+            32
+          ]
+        ],
+        "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+        "probability_clip": 1e-15,
+        "n_templates": 4,
+        "correct": 32
+      }
+    },
+    {
+      "source_condition": "world_question",
+      "evaluation_condition": "story",
+      "view": "sender",
+      "target": "nested",
+      "layer": "layer_16",
+      "head_id": "world_question__sender__nested__layer_16",
+      "selected_C_from_validation": 0.001,
+      "metrics": {
+        "n_rows": 64,
+        "class_counts": {
+          "0": 32,
+          "1": 32
+        },
+        "accuracy": 0.5,
+        "binary_log_loss": 0.6931472996241554,
+        "macro_f1": 0.3333333333333333,
+        "balanced_accuracy": 0.5,
+        "class_recall": {
+          "0": 0,
+          "1": 1
+        },
+        "class_f1": {
+          "0": 0,
+          "1": 0.6666666666666666
+        },
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            0,
+            32
+          ],
+          [
+            0,
+            32
+          ]
+        ],
+        "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+        "probability_clip": 1e-15,
+        "n_templates": 4,
+        "correct": 32
+      }
+    }
+  ],
+  "text_baseline": {
+    "sender": {
+      "story": {
+        "n_rows": 64,
+        "class_counts": {
+          "0": 32,
+          "1": 32
+        },
+        "accuracy": 0.5,
+        "binary_log_loss": 0.6931471805599453,
+        "macro_f1": 0.3333333333333333,
+        "balanced_accuracy": 0.5,
+        "class_recall": {
+          "0": 1,
+          "1": 0
+        },
+        "class_f1": {
+          "0": 0.6666666666666666,
+          "1": 0
+        },
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            32,
+            0
+          ],
+          [
+            32,
+            0
+          ]
+        ],
+        "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+        "probability_clip": 1e-15,
+        "n_templates": 4,
+        "correct": 32
+      },
+      "nested_question": {
+        "n_rows": 64,
+        "class_counts": {
+          "0": 32,
+          "1": 32
+        },
+        "accuracy": 0.5,
+        "binary_log_loss": 0.6931471805599453,
+        "macro_f1": 0.3333333333333333,
+        "balanced_accuracy": 0.5,
+        "class_recall": {
+          "0": 1,
+          "1": 0
+        },
+        "class_f1": {
+          "0": 0.6666666666666666,
+          "1": 0
+        },
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            32,
+            0
+          ],
+          [
+            32,
+            0
+          ]
+        ],
+        "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+        "probability_clip": 1e-15,
+        "n_templates": 4,
+        "correct": 32
+      },
+      "world_question": {
+        "n_rows": 64,
+        "class_counts": {
+          "0": 32,
+          "1": 32
+        },
+        "accuracy": 0.5,
+        "binary_log_loss": 0.6931471805599453,
+        "macro_f1": 0.3333333333333333,
+        "balanced_accuracy": 0.5,
+        "class_recall": {
+          "0": 1,
+          "1": 0
+        },
+        "class_f1": {
+          "0": 0.6666666666666666,
+          "1": 0
+        },
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            32,
+            0
+          ],
+          [
+            32,
+            0
+          ]
+        ],
+        "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+        "probability_clip": 1e-15,
+        "n_templates": 4,
+        "correct": 32
+      }
+    },
+    "omniscient": {
+      "story": {
+        "n_rows": 64,
+        "class_counts": {
+          "0": 32,
+          "1": 32
+        },
+        "accuracy": 0.5,
+        "binary_log_loss": 0.6931471805599453,
+        "macro_f1": 0.3333333333333333,
+        "balanced_accuracy": 0.5,
+        "class_recall": {
+          "0": 1,
+          "1": 0
+        },
+        "class_f1": {
+          "0": 0.6666666666666666,
+          "1": 0
+        },
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            32,
+            0
+          ],
+          [
+            32,
+            0
+          ]
+        ],
+        "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+        "probability_clip": 1e-15,
+        "n_templates": 4,
+        "correct": 32
+      },
+      "nested_question": {
+        "n_rows": 64,
+        "class_counts": {
+          "0": 32,
+          "1": 32
+        },
+        "accuracy": 0.5,
+        "binary_log_loss": 0.6931471805599453,
+        "macro_f1": 0.3333333333333333,
+        "balanced_accuracy": 0.5,
+        "class_recall": {
+          "0": 1,
+          "1": 0
+        },
+        "class_f1": {
+          "0": 0.6666666666666666,
+          "1": 0
+        },
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            32,
+            0
+          ],
+          [
+            32,
+            0
+          ]
+        ],
+        "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+        "probability_clip": 1e-15,
+        "n_templates": 4,
+        "correct": 32
+      },
+      "world_question": {
+        "n_rows": 64,
+        "class_counts": {
+          "0": 32,
+          "1": 32
+        },
+        "accuracy": 0.5,
+        "binary_log_loss": 0.6931471805599453,
+        "macro_f1": 0.3333333333333333,
+        "balanced_accuracy": 0.5,
+        "class_recall": {
+          "0": 1,
+          "1": 0
+        },
+        "class_f1": {
+          "0": 0.6666666666666666,
+          "1": 0
+        },
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            32,
+            0
+          ],
+          [
+            32,
+            0
+          ]
+        ],
+        "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+        "probability_clip": 1e-15,
+        "n_templates": 4,
+        "correct": 32
+      }
+    }
+  },
+  "primary_sender_strata": {
+    "message_true": {
+      "n_rows": 32,
+      "n_unique_sender_inputs": 16,
+      "correct": 32,
+      "accuracy": 1,
+      "binary_log_loss": 0.6361574396560085,
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          16,
+          0
+        ],
+        [
+          0,
+          16
+        ]
+      ]
+    },
+    "message_false": {
+      "n_rows": 32,
+      "n_unique_sender_inputs": 16,
+      "correct": 24,
+      "accuracy": 0.75,
+      "binary_log_loss": 0.647584027645365,
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          10,
+          6
+        ],
+        [
+          2,
+          14
+        ]
+      ]
+    },
+    "world_equals_nested": {
+      "n_rows": 32,
+      "n_unique_sender_inputs": 16,
+      "correct": 30,
+      "accuracy": 0.9375,
+      "binary_log_loss": 0.6367362540949253,
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          16,
+          0
+        ],
+        [
+          2,
+          14
+        ]
+      ]
+    },
+    "world_differs_nested": {
+      "n_rows": 32,
+      "n_unique_sender_inputs": 16,
+      "correct": 26,
+      "accuracy": 0.8125,
+      "binary_log_loss": 0.6470052132064481,
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          10,
+          6
+        ],
+        [
+          0,
+          16
+        ]
+      ]
+    },
+    "receipt_matches_actual": {
+      "n_rows": 32,
+      "n_unique_sender_inputs": 16,
+      "correct": 28,
+      "accuracy": 0.875,
+      "binary_log_loss": 0.6418707336506867,
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          13,
+          3
+        ],
+        [
+          1,
+          15
+        ]
+      ]
+    },
+    "receipt_differs_from_actual": {
+      "n_rows": 32,
+      "n_unique_sender_inputs": 16,
+      "correct": 28,
+      "accuracy": 0.875,
+      "binary_log_loss": 0.6418707336506867,
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          13,
+          3
+        ],
+        [
+          1,
+          15
+        ]
+      ]
+    },
+    "message_bit_0": {
+      "n_rows": 32,
+      "n_unique_sender_inputs": 16,
+      "correct": 24,
+      "accuracy": 0.75,
+      "binary_log_loss": 0.6591037929820721,
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          10,
+          6
+        ],
+        [
+          2,
+          14
+        ]
+      ]
+    },
+    "message_bit_1": {
+      "n_rows": 32,
+      "n_unique_sender_inputs": 16,
+      "correct": 32,
+      "accuracy": 1,
+      "binary_log_loss": 0.6246376743193015,
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          16,
+          0
+        ],
+        [
+          0,
+          16
+        ]
+      ]
+    }
+  },
+  "primary_sender_world_message_receipt_cells": {
+    "w0_m0_b0": {
+      "n_rows": 8,
+      "n_unique_sender_inputs": 4,
+      "correct": 8,
+      "accuracy": 1,
+      "binary_log_loss": 0.6450426846670168,
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          8
+        ]
+      ]
+    },
+    "w0_m0_b1": {
+      "n_rows": 8,
+      "n_unique_sender_inputs": 4,
+      "correct": 8,
+      "accuracy": 1,
+      "binary_log_loss": 0.6565530157085877,
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          8,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "w0_m1_b0": {
+      "n_rows": 8,
+      "n_unique_sender_inputs": 4,
+      "correct": 8,
+      "accuracy": 1,
+      "binary_log_loss": 0.6509498909769535,
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          8,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "w0_m1_b1": {
+      "n_rows": 8,
+      "n_unique_sender_inputs": 4,
+      "correct": 8,
+      "accuracy": 1,
+      "binary_log_loss": 0.6045667480518238,
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          8
+        ]
+      ]
+    },
+    "w1_m0_b0": {
+      "n_rows": 8,
+      "n_unique_sender_inputs": 4,
+      "correct": 6,
+      "accuracy": 0.75,
+      "binary_log_loss": 0.6409230864247819,
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          6
+        ]
+      ]
+    },
+    "w1_m0_b1": {
+      "n_rows": 8,
+      "n_unique_sender_inputs": 4,
+      "correct": 2,
+      "accuracy": 0.25,
+      "binary_log_loss": 0.6938963851279011,
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          2,
+          6
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "w1_m1_b0": {
+      "n_rows": 8,
+      "n_unique_sender_inputs": 4,
+      "correct": 8,
+      "accuracy": 1,
+      "binary_log_loss": 0.6445150349790514,
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          8,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "w1_m1_b1": {
+      "n_rows": 8,
+      "n_unique_sender_inputs": 4,
+      "correct": 8,
+      "accuracy": 1,
+      "binary_log_loss": 0.5985190232693777,
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          8
+        ]
+      ]
+    }
+  },
+  "primary_sender_error_rows": [
+    {
+      "case_id": "km_t01_w1_m0_a0_b1",
+      "template_id": "km_t01",
+      "world_bit": 1,
+      "message_bit": 0,
+      "delivered": 0,
+      "receipt": 1,
+      "label": 0,
+      "prediction": 1,
+      "p1": 0.5253818772029525
+    },
+    {
+      "case_id": "km_t01_w1_m0_a1_b1",
+      "template_id": "km_t01",
+      "world_bit": 1,
+      "message_bit": 0,
+      "delivered": 1,
+      "receipt": 1,
+      "label": 0,
+      "prediction": 1,
+      "p1": 0.5253818772029525
+    },
+    {
+      "case_id": "km_t02_w1_m0_a0_b0",
+      "template_id": "km_t02",
+      "world_bit": 1,
+      "message_bit": 0,
+      "delivered": 0,
+      "receipt": 0,
+      "label": 1,
+      "prediction": 0,
+      "p1": 0.4988372439084428
+    },
+    {
+      "case_id": "km_t02_w1_m0_a0_b1",
+      "template_id": "km_t02",
+      "world_bit": 1,
+      "message_bit": 0,
+      "delivered": 0,
+      "receipt": 1,
+      "label": 0,
+      "prediction": 1,
+      "p1": 0.519158116619652
+    },
+    {
+      "case_id": "km_t02_w1_m0_a1_b0",
+      "template_id": "km_t02",
+      "world_bit": 1,
+      "message_bit": 0,
+      "delivered": 1,
+      "receipt": 0,
+      "label": 1,
+      "prediction": 0,
+      "p1": 0.4988372439084428
+    },
+    {
+      "case_id": "km_t02_w1_m0_a1_b1",
+      "template_id": "km_t02",
+      "world_bit": 1,
+      "message_bit": 0,
+      "delivered": 1,
+      "receipt": 1,
+      "label": 0,
+      "prediction": 1,
+      "p1": 0.519158116619652
+    },
+    {
+      "case_id": "km_t03_w1_m0_a0_b1",
+      "template_id": "km_t03",
+      "world_bit": 1,
+      "message_bit": 0,
+      "delivered": 0,
+      "receipt": 1,
+      "label": 0,
+      "prediction": 1,
+      "p1": 0.53000573939742
+    },
+    {
+      "case_id": "km_t03_w1_m0_a1_b1",
+      "template_id": "km_t03",
+      "world_bit": 1,
+      "message_bit": 0,
+      "delivered": 1,
+      "receipt": 1,
+      "label": 0,
+      "prediction": 1,
+      "p1": 0.53000573939742
+    }
+  ],
+  "primary_sender_probability_range": [
+    0.4190491996398789,
+    0.5625733387265153
+  ],
+  "primary_sender_mean_prediction_confidence": 0.5317231380718657,
+  "behavior": {
+    "direct": {
+      "n_rows": 64,
+      "n_unique_prompts": 32,
+      "correct": 44,
+      "invalid": 4,
+      "length_capped": 4,
+      "accuracy_including_invalid": 0.6875,
+      "secondary_content_correct": 44,
+      "secondary_content_invalid": 4,
+      "secondary_content_accuracy_including_invalid": 0.6875,
+      "secondary_interpretation": "Predeclared content extraction independent of strict format; no explanation-validity or internal-reasoning claim.",
+      "per_template": {
+        "km_t01": {
+          "n": 16,
+          "correct": 14,
+          "invalid": 0,
+          "secondary_content_correct": 14,
+          "secondary_content_invalid": 0
+        },
+        "km_t02": {
+          "n": 16,
+          "correct": 10,
+          "invalid": 0,
+          "secondary_content_correct": 10,
+          "secondary_content_invalid": 0
+        },
+        "km_t03": {
+          "n": 16,
+          "correct": 6,
+          "invalid": 2,
+          "secondary_content_correct": 6,
+          "secondary_content_invalid": 2
+        },
+        "km_t04": {
+          "n": 16,
+          "correct": 14,
+          "invalid": 2,
+          "secondary_content_correct": 14,
+          "secondary_content_invalid": 2
+        }
+      }
+    },
+    "structured": {
+      "n_rows": 64,
+      "n_unique_prompts": 32,
+      "correct": 32,
+      "invalid": 0,
+      "length_capped": 0,
+      "accuracy_including_invalid": 0.5,
+      "secondary_content_correct": 32,
+      "secondary_content_invalid": 0,
+      "secondary_content_accuracy_including_invalid": 0.5,
+      "secondary_interpretation": "Predeclared content extraction independent of strict format; no explanation-validity or internal-reasoning claim.",
+      "per_template": {
+        "km_t01": {
+          "n": 16,
+          "correct": 8,
+          "invalid": 0,
+          "secondary_content_correct": 8,
+          "secondary_content_invalid": 0
+        },
+        "km_t02": {
+          "n": 16,
+          "correct": 8,
+          "invalid": 0,
+          "secondary_content_correct": 8,
+          "secondary_content_invalid": 0
+        },
+        "km_t03": {
+          "n": 16,
+          "correct": 8,
+          "invalid": 0,
+          "secondary_content_correct": 8,
+          "secondary_content_invalid": 0
+        },
+        "km_t04": {
+          "n": 16,
+          "correct": 8,
+          "invalid": 0,
+          "secondary_content_correct": 8,
+          "secondary_content_invalid": 0
+        }
+      }
+    }
+  },
+  "behavior_audit": {
+    "schema": "known_message_posthoc_behavior_audit_v1",
+    "posthoc": true,
+    "source_path": "runs/known_message_behavior_audit_v1.json",
+    "source_sha256": "fc359ddf504f5524f058da67beb41f73a3cbe392758dc20ea3f5c8fba024594f",
+    "created_at": "2026-11-20T11:40:32.559Z",
+    "needs_human_review": true,
+    "scope": "Read-only audit of all32unique structured responses and10unique strict direct errors. No fitting, generation, threshold changes or replacement of prospective primary metrics.",
+    "denominators": {
+      "unique_sender_inputs": 32,
+      "paired_rows": 64,
+      "wording_groups": 4
+    },
+    "structured_summary": {
+      "final_yes": 32,
+      "final_no": 0,
+      "final_correct": 16,
+      "initial_correct": 31,
+      "message_correct": 32,
+      "receipt_polarity_correct": 32,
+      "attributed_correct": 21,
+      "all_four_fields_correct": 21,
+      "attributed_correct_but_final_wrong": 12,
+      "attributed_wrong_but_final_correct": 7,
+      "final_disagrees_with_attributed": 19,
+      "receipt_destination_anomalies": 3
+    },
+    "paired_summary": {
+      "direct_correct": 22,
+      "direct_errors": 10,
+      "direct_capped": 2,
+      "probe_correct": 28,
+      "both_correct": 21,
+      "probe_only_correct": 7,
+      "direct_only_correct": 1,
+      "both_wrong": 3
+    },
+    "per_group": {
+      "km_t01": {
+        "unique_inputs": 8,
+        "direct_correct": 7,
+        "direct_capped": 0,
+        "probe_correct": 7,
+        "structured_final_correct": 4,
+        "structured_attributed_correct": 6,
+        "structured_initial_correct": 7,
+        "structured_message_copy_count": 2
+      },
+      "km_t02": {
+        "unique_inputs": 8,
+        "direct_correct": 5,
+        "direct_capped": 0,
+        "probe_correct": 6,
+        "structured_final_correct": 4,
+        "structured_attributed_correct": 6,
+        "structured_initial_correct": 8,
+        "structured_message_copy_count": 6
+      },
+      "km_t03": {
+        "unique_inputs": 8,
+        "direct_correct": 3,
+        "direct_capped": 1,
+        "probe_correct": 7,
+        "structured_final_correct": 4,
+        "structured_attributed_correct": 4,
+        "structured_initial_correct": 8,
+        "structured_message_copy_count": 8
+      },
+      "km_t04": {
+        "unique_inputs": 8,
+        "direct_correct": 7,
+        "direct_capped": 1,
+        "probe_correct": 8,
+        "structured_final_correct": 4,
+        "structured_attributed_correct": 5,
+        "structured_initial_correct": 8,
+        "structured_message_copy_count": 5
+      }
+    },
+    "caveat": "Four coded fields include receipt delivery polarity only, not complete semantic correctness. Three receipt fields mention a location rather than an unambiguous reader destination. Intermediate fields are emitted text, not evidence of an internal causal reasoning process.",
+    "structured_trace_examples": [
+      {
+        "case_ids": [
+          "km_t01_w0_m1_a0_b0",
+          "km_t01_w0_m1_a1_b0"
+        ],
+        "template_id": "km_t01",
+        "source_file": "runs/known_message_validation_v1/behavior/km_t01_w0_m1_a0_b0__structured.json",
+        "source_sha256": "5874816febdf6e564905dc1e6bb5c92e098bcdf0c64129d5f17f1e426f168416",
+        "world": 0,
+        "message": 1,
+        "receipt": 0,
+        "expected_fields": {
+          "initial": 0,
+          "message": 1,
+          "receipt_polarity": 0,
+          "attributed": 0
+        },
+        "output_fields": {
+          "initial": 0,
+          "message": 1,
+          "receipt_polarity": 0,
+          "attributed": 0
+        },
+        "field_correct": {
+          "initial": true,
+          "message": true,
+          "receipt_polarity": true,
+          "attributed": true
+        },
+        "text": "INITIAL: brass recess\nMESSAGE: pewter recess\nRECEIPT: no delivery\nATTRIBUTED: brass recess\n\nFINAL: YES",
+        "final": 1,
+        "final_correct": false,
+        "attributed_final_agree": false,
+        "all_four_fields_correct": true,
+        "attributed_equals_message": false,
+        "receipt_destination_anomaly": false
+      },
+      {
+        "case_ids": [
+          "km_t01_w1_m1_a0_b0",
+          "km_t01_w1_m1_a1_b0"
+        ],
+        "template_id": "km_t01",
+        "source_file": "runs/known_message_validation_v1/behavior/km_t01_w1_m1_a0_b0__structured.json",
+        "source_sha256": "4b421351234514d6737666836395c6133e6c7f503ac6d91919f0beea771dd8b0",
+        "world": 1,
+        "message": 1,
+        "receipt": 0,
+        "expected_fields": {
+          "initial": 0,
+          "message": 1,
+          "receipt_polarity": 0,
+          "attributed": 0
+        },
+        "output_fields": {
+          "initial": 0,
+          "message": 1,
+          "receipt_polarity": 0,
+          "attributed": 0
+        },
+        "field_correct": {
+          "initial": true,
+          "message": true,
+          "receipt_polarity": true,
+          "attributed": true
+        },
+        "text": "INITIAL: brass recess\nMESSAGE: pewter recess\nRECEIPT: no delivery\nATTRIBUTED: brass recess\n\nFINAL: YES",
+        "final": 1,
+        "final_correct": false,
+        "attributed_final_agree": false,
+        "all_four_fields_correct": true,
+        "attributed_equals_message": false,
+        "receipt_destination_anomaly": false
+      }
+    ],
+    "direct_trace_examples": [
+      {
+        "case_ids": [
+          "km_t02_w0_m0_a0_b0",
+          "km_t02_w0_m0_a1_b0"
+        ],
+        "template_id": "km_t02",
+        "gold": 1,
+        "direct": 0,
+        "direct_correct": false,
+        "direct_length_capped": false,
+        "probe": 1,
+        "probe_correct": true,
+        "direct_text": "NO",
+        "source_file": "runs/known_message_validation_v1/behavior/km_t02_w0_m0_a0_b0__direct.json"
+      },
+      {
+        "case_ids": [
+          "km_t02_w0_m1_a0_b1",
+          "km_t02_w0_m1_a1_b1"
+        ],
+        "template_id": "km_t02",
+        "gold": 1,
+        "direct": 0,
+        "direct_correct": false,
+        "direct_length_capped": false,
+        "probe": 1,
+        "probe_correct": true,
+        "direct_text": "NO",
+        "source_file": "runs/known_message_validation_v1/behavior/km_t02_w0_m1_a0_b1__direct.json"
+      }
+    ],
+    "receipt_destination_examples": [
+      {
+        "case_ids": [
+          "km_t02_w0_m1_a0_b1",
+          "km_t02_w0_m1_a1_b1"
+        ],
+        "source_file": "runs/known_message_validation_v1/behavior/km_t02_w0_m1_a0_b1__structured.json",
+        "source_sha256": "582c32ebf1802c318102a9819444b39f5cecaa2886063c6cdc236faf84ef05aa",
+        "text": "INITIAL: coral hamper\nMESSAGE: jade hamper\nRECEIPT: delivery to jade hamper\nATTRIBUTED: jade hamper\nFINAL: YES"
+      },
+      {
+        "case_ids": [
+          "km_t02_w1_m0_a0_b1",
+          "km_t02_w1_m0_a1_b1"
+        ],
+        "source_file": "runs/known_message_validation_v1/behavior/km_t02_w1_m0_a0_b1__structured.json",
+        "source_sha256": "adeb7b4a4f0a5fc17b2d824215494c24ed3f7015ec38692984cd3dbb0c3194d8",
+        "text": "INITIAL: jade hamper\nMESSAGE: coral hamper\nRECEIPT: delivered and read (coral hamper)\nATTRIBUTED: coral hamper\nFINAL: YES"
+      },
+      {
+        "case_ids": [
+          "km_t02_w1_m1_a0_b1",
+          "km_t02_w1_m1_a1_b1"
+        ],
+        "source_file": "runs/known_message_validation_v1/behavior/km_t02_w1_m1_a0_b1__structured.json",
+        "source_sha256": "c71d1e6dcce996478e80e94f291c383e608880e2149461fc183c8747a3e328c1",
+        "text": "INITIAL: coral hamper\nMESSAGE: jade hamper\nRECEIPT: delivery to jade hamper\nATTRIBUTED: jade hamper\nFINAL: YES"
+      }
+    ],
+    "limits": [
+      "Post-hoc semantic slot audit is not a replacement primary endpoint and must not be used to tune the monitor.",
+      "Receipt polarity checks delivery versus nondelivery only, not complete receipt accuracy; three unique RECEIPT fields mention a location (two as a delivery destination and one parenthetically).",
+      "Every unique sender input has two identical private-delivery rows; report32unique inputs, not64independent samples.",
+      "Four wordings share one logical family; no population precision or causal reasoning claim.",
+      "Correct emitted intermediate fields do not identify the internal causal reasoning process.",
+      "Direct capped responses are invalid under the frozen parser; their leading NO is not a rescued primary answer."
+    ]
+  },
+  "backend_identity": {
+    "backend": "huggingface",
+    "is_test_fixture": false,
+    "model_id": "meta-llama/Llama-3.1-8B-Instruct",
+    "requested_revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+    "resolved_revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+    "model_type": "llama",
+    "dtype": "bfloat16",
+    "quantization": "4bit",
+    "decoder_blocks": 32,
+    "hidden_size": 4096,
+    "capture_layers": [
+      8,
+      16,
+      24
+    ],
+    "chat_template_sha256": "ca5b86f15c19b53c24ff18228849e06ffb677b952d85171c66d9b720d924f9bb",
+    "special_token_ids": {
+      "eos": 128009,
+      "pad": null
+    },
+    "attention_implementation": "sdpa"
+  },
+  "provenance": {
+    "protocol_created_at": "2026-11-20T11:27:15.671598+00:00",
+    "model_started_at": "2026-11-20T11:34:07.805050+00:00",
+    "prefix_capture_complete_at": "2026-11-20T11:35:34.322711+00:00",
+    "run_finished_at": "2026-11-20T11:36:26.239937+00:00",
+    "protocol_sha256": "44e2be9a2bda055bf917d3067729d3d0cc2ef450da3cf6ddb7358c0ad91a153f",
+    "n_capture_rows": 384,
+    "n_unique_capture_prefixes": 288,
+    "n_behavior_rows": 128,
+    "n_unique_behavior_generations": 64,
+    "n_repeat_checks": 6,
+    "last_token_id": 271,
+    "source_unchanged": true,
+    "frozen_fits_unchanged": true,
+    "no_refit": true,
+    "no_hyperparameter_selection": true,
+    "layer_index_check": {
+      "status": "passed",
+      "n_prompts": 1,
+      "checks": {
+        "8": {
+          "hf_hidden_state_index": 9,
+          "exact": true
+        },
+        "16": {
+          "hf_hidden_state_index": 17,
+          "exact": true
+        },
+        "24": {
+          "hf_hidden_state_index": 25,
+          "exact": true
+        }
+      }
+    },
+    "repeats": [
+      {
+        "view": "omniscient",
+        "condition": "story",
+        "ids_exact": true,
+        "layers_exact": {
+          "layer_8": true,
+          "layer_16": true,
+          "layer_24": true
+        }
+      },
+      {
+        "view": "omniscient",
+        "condition": "nested_question",
+        "ids_exact": true,
+        "layers_exact": {
+          "layer_8": true,
+          "layer_16": true,
+          "layer_24": true
+        }
+      },
+      {
+        "view": "omniscient",
+        "condition": "world_question",
+        "ids_exact": true,
+        "layers_exact": {
+          "layer_8": true,
+          "layer_16": true,
+          "layer_24": true
+        }
+      },
+      {
+        "view": "sender",
+        "condition": "story",
+        "ids_exact": true,
+        "layers_exact": {
+          "layer_8": true,
+          "layer_16": true,
+          "layer_24": true
+        }
+      },
+      {
+        "view": "sender",
+        "condition": "nested_question",
+        "ids_exact": true,
+        "layers_exact": {
+          "layer_8": true,
+          "layer_16": true,
+          "layer_24": true
+        }
+      },
+      {
+        "view": "sender",
+        "condition": "world_question",
+        "ids_exact": true,
+        "layers_exact": {
+          "layer_8": true,
+          "layer_16": true,
+          "layer_24": true
+        }
+      }
+    ],
+    "raw_outputs_preserved_and_git_ignored": true
+  },
+  "independent_audit": {
+    "implementation": "Independent Node ZIP/NPY reader, source-transform scorer and TF-IDF reconstruction; no fitting or model calls.",
+    "verified_prediction_rows": 10752,
+    "max_probability_difference": 1.3322676295501878e-15,
+    "metric_objects": 168,
+    "hidden_reader_metric_cells": 28,
+    "row_layer_prefix_bindings": 1152,
+    "panel_condition_row_capture_bindings": 384,
+    "file_hash_checks": 1034,
+    "backend_signature_fields": 14,
+    "entities_case_ids_and_templates_disjoint_from_both_seen_banks": true,
+    "earliest_generated_file_mtime": "2026-11-20T11:35:35.079Z",
+    "timeline_note": "Frozen protocol and source checks precede first model call. Verified capture-before-generation source logic, direct token-ID identity and supporting filesystem chronology; file timestamps alone are not an independent execution trace."
+  },
+  "machine_hashes": {
+    "major_run_files": {
+      "runs/known_message_validation_v1/manifest.json": "2cefb611b9124ea233674f1f7b5349ca4ffd5f964b167600285eedd339d3186a",
+      "runs/known_message_validation_v1/protocol.json": "44e2be9a2bda055bf917d3067729d3d0cc2ef450da3cf6ddb7358c0ad91a153f",
+      "runs/known_message_validation_v1/rows.json": "16302798d65ab35a446435b9c00f336d0056593d7c6bc1e9a3d328935ad9c4ac",
+      "runs/known_message_validation_v1/features.npz": "bf6f9f5209d2907d7449a0b83c21da441935ccdb88abba5292d2f6ee92618c1f",
+      "runs/known_message_validation_v1/captures.json": "fc360d931d865285dbbe39f6a428d19c58a50f49b01a1258a8c4689dd1ce9d68",
+      "runs/known_message_validation_v1/repeats.json": "49de5bae0288434ef359000298ea771297c06b33f70969d6093952a948734e3d",
+      "runs/known_message_validation_v1/frozen_evaluation/report.json": "bb264f9734a96ad67f4a27595553943287bca4618a1453f538e823bbab28debe",
+      "runs/known_message_validation_v1/frozen_evaluation/predictions.csv": "b97d054123c9f62383db55b116ecef9f63ed0f0d97190e626f98dbf50a3ff72c",
+      "runs/known_message_validation_v1/behavior_report.json": "9231c2d53d6dc0664c59b10c4dff1b0db89af43b1c5cf13be1821bee7a467c57"
+    },
+    "behavior_audit": "fc359ddf504f5524f058da67beb41f73a3cbe392758dc20ea3f5c8fba024594f",
+    "source_policies": {
+      "scripts/run_message_belief_validation.py": "297ef2bdf625ccbd3564fceb984d62a43f70f34ea7a2f231be1bffaf80b92eeb",
+      "scripts/run_belief_diagnostic.py": "ae85e31fbc18c922c407806cc4d0a65579055163fb7c36b5b61fb1c15b719540",
+      "scripts/run_belief_query_comparison.py": "bdfdb58a18194019ffb9ba27ac5630480e297d5b39cc793d9d9c247759a88b44",
+      "src/latent_probes/message_belief_panel.py": "11b48505f2bffa2fe30913fbe0ad2c4a70c114c4f143ac8555f3fa10a39598ff",
+      "src/latent_probes/belief_panel.py": "b163395913cdfdd57c5f896949e4e41d22108c3b52a20718543a210cc5966679",
+      "src/latent_probes/belief_query_panel.py": "1a898db8d0b36d23ee36a7625c6891dbc4ad66fb0ac617f294d6ec6ea2180cb1",
+      "src/latent_probes/belief_query_readout.py": "a69aeb4994e2beb4a0c110d438f9bf126e3cd87eb9a3558dfd8eab8fbf90bdc7",
+      "src/latent_probes/belief_readout.py": "f225794416363b3d219b816e8aa23a7ba89343e54cef97e82d96e08624e11d3f",
+      "src/latent_probes/backends.py": "692d9778e4bf69081ab1afea702dfd573119f2b6cc454e51072bb3d2233402a2",
+      "src/latent_probes/config.py": "0fc63546c88a826bc1e87efeebb51b6a23488272e0d76de8018fdd99543bb608",
+      "src/latent_probes/storage.py": "1de87a24cc3bd701c0384d648d405ddb6066280beae3e21bf1b173c203ee0e84"
+    },
+    "fitted_artifacts": {
+      "fit_metadata.json": "501516986ca7c6aad95b0f5d939b2a902676128eba9ea707c1a0a4d4d4883c14",
+      "manifest.json": "8df46ba4a9f0f76615c309276fef8cda12eec164709d485f5fe0f1b7df3f7515",
+      "parameters.npz": "7b162cfe3b17c850cefd1fe6b62fcf2834d643983adbcdadde8eee3e2cce735d",
+      "predictions.csv": "cb835a9fcb56062f5dbee29e61cbc740b1070ca9c2ab2e8ca5b345c7242d02b8",
+      "report.json": "2b13efa53e62691a3f09ae0a8e7fcaa62ce3e9e6455156abd4290bf76ad2c080",
+      "rows.json": "2a7e035ab7eed25115143533eb21f86109813ac5e8d34ce9de5ceb28c4169e20",
+      "text_transforms.json": "67676c4fb98ccbeefcdf90aff64ac1d56507fac37dcdb479f500a5db3b18c20b"
+    },
+    "source_run_manifest": "5e7e05a1b4904828be5dab02a04806a236d547757dff911845ffa49dd2e8604f"
+  },
+  "limitations": [
+    "Agent-assisted fictional-state gold needs independent human review.",
+    "Four fresh wordings constitute one known-message logical family and retain the prior XNOR mapping.",
+    "There are 32 unique sender inputs represented by 64 paired rows; no independent-row or broad-population inference.",
+    "Query dependence persists: the queried head transferred to story states scores 32/64.",
+    "All eight primary errors have world=1 and message=0; false-message failures and probabilities near 0.5 limit robustness and calibration claims.",
+    "Question and control token lengths/positions are not matched; no isolated causal semantic effect.",
+    "Structured FINAL: YES collapse and the post-hoc field audit do not establish valid reasoning or replace the prospective endpoint.",
+    "Probe/behavior comparison is descriptive; supervised linear readout and elicited text behavior have different training histories. Strong text monitor superiority is not established.",
+    "This observed panel cannot remain an untouched future holdout.",
+    "Main natural pressured communication, broader families, precision references and independent recipients remain outstanding."
+  ]
+}

@@ -1,6 +1,11 @@
 # First pressure-specificity pilot
 
-**Status: PLANNED. No pilot cases have been acquired or selected, no pilot generations have been run, and no pilot results are reported here.** This is a validation milestone after fitting the baseline.
+**Status: the first genuine pilot executed on 20 November 2026.** Its strict
+primary comparison is not estimable; secondary label-policy results remain
+small and provisional. See the [measured results](./MASK_SPECIFICITY_RESULTS.md)
+and [source/preparation audit](./MASK_SOURCE_AUDIT.md). The protocol below
+preserves the prospectively declared design, rather than replacing it with
+rules chosen after viewing outcomes.
 
 ## Question and frozen configuration
 

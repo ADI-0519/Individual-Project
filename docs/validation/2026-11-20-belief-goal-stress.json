@@ -1,0 +1,2756 @@
+{
+  "schema": "belief_goal_context_stress_validation_v1",
+  "date": "2026-11-20",
+  "status": "complete_exploratory_assay",
+  "annotation_origin": "agent_assisted_draft",
+  "needs_human_review": true,
+  "source_commit": "41a86bbef76fb12c6245d8896a3f2f2ab8989e51",
+  "run_directory": "runs/belief_goal_stress_v2",
+  "native_run_directory": "/home/adirj/kcl-latent-probes-runs/belief_goal_stress_v2",
+  "source_known_message_run": "runs/known_message_validation_v1",
+  "frozen_fit_directory": "runs/belief_query_comparison_v1/fits",
+  "scope": "Exploratory role/incentive-context robustness assay using an already-observed bank; not new held-out validation or actual deceptive communication.",
+  "interpretation": "The fixed current-belief readout is sensitive to private future-goal context even though stipulated current nested labels and evidence remain unchanged. This is an exploratory context robustness result, not actual communication, deception detection or a causal incentive mechanism.",
+  "design": {
+    "n_cases": 64,
+    "n_unique_sender_inputs_per_condition": 32,
+    "n_wording_groups": 4,
+    "n_logical_families": 1,
+    "bank_already_observed": true,
+    "conditions": [
+      "original_neutral",
+      "role_neutral",
+      "role_goal_true",
+      "role_goal_false"
+    ],
+    "primary_head": "nested_question__sender__nested__layer_16",
+    "primary_layer": "layer_16",
+    "target": "current sender-attributed reader belief after an exact known message",
+    "labels_unchanged": true,
+    "same_sender_visible_scene_and_nested_question": true,
+    "same_role_in_three_new_conditions": true,
+    "original_baseline_has_no_added_role": true,
+    "candidate_quote_occurrences_in_shared_system_scaffold": 1,
+    "goals_only_affect_future_preference": true,
+    "future_report_written_or_delivered": false,
+    "private_current_answer_seen_by_reader": false,
+    "question_and_goal_lengths_matched": false,
+    "no_refit": true,
+    "no_threshold_change": true,
+    "no_new_hyperparameter_selection": true,
+    "no_generation": true,
+    "n_new_capture_rows": 192,
+    "n_unique_new_prefixes": 96,
+    "n_reused_original_baseline_rows": 64,
+    "n_all_scored_rows": 256
+  },
+  "primary_conditions": {
+    "original_neutral": {
+      "correct": 56,
+      "accuracy": 0.875,
+      "nll": 0.6418707336506868,
+      "n_rows": 64,
+      "n_unique_sender_inputs": 32,
+      "metrics": {
+        "n_rows": 64,
+        "class_counts": {
+          "0": 32,
+          "1": 32
+        },
+        "accuracy": 0.875,
+        "binary_log_loss": 0.6418707336506868,
+        "macro_f1": 0.8745098039215686,
+        "balanced_accuracy": 0.875,
+        "class_recall": {
+          "0": 0.8125,
+          "1": 0.9375
+        },
+        "class_f1": {
+          "0": 0.8666666666666667,
+          "1": 0.8823529411764706
+        },
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            26,
+            6
+          ],
+          [
+            2,
+            30
+          ]
+        ],
+        "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+        "probability_clip": 1e-15
+      }
+    },
+    "role_neutral": {
+      "correct": 44,
+      "accuracy": 0.6875,
+      "nll": 0.657305055846375,
+      "n_rows": 64,
+      "n_unique_sender_inputs": 32,
+      "metrics": {
+        "n_rows": 64,
+        "class_counts": {
+          "0": 32,
+          "1": 32
+        },
+        "accuracy": 0.6875,
+        "binary_log_loss": 0.657305055846375,
+        "macro_f1": 0.6666666666666667,
+        "balanced_accuracy": 0.6875,
+        "class_recall": {
+          "0": 0.9375,
+          "1": 0.4375
+        },
+        "class_f1": {
+          "0": 0.75,
+          "1": 0.5833333333333334
+        },
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            30,
+            2
+          ],
+          [
+            18,
+            14
+          ]
+        ],
+        "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+        "probability_clip": 1e-15
+      }
+    },
+    "role_goal_true": {
+      "correct": 50,
+      "accuracy": 0.78125,
+      "nll": 0.6520182146819857,
+      "n_rows": 64,
+      "n_unique_sender_inputs": 32,
+      "metrics": {
+        "n_rows": 64,
+        "class_counts": {
+          "0": 32,
+          "1": 32
+        },
+        "accuracy": 0.78125,
+        "binary_log_loss": 0.6520182146819857,
+        "macro_f1": 0.7702564102564102,
+        "balanced_accuracy": 0.78125,
+        "class_recall": {
+          "0": 1,
+          "1": 0.5625
+        },
+        "class_f1": {
+          "0": 0.8205128205128205,
+          "1": 0.72
+        },
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            32,
+            0
+          ],
+          [
+            14,
+            18
+          ]
+        ],
+        "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+        "probability_clip": 1e-15
+      }
+    },
+    "role_goal_false": {
+      "correct": 34,
+      "accuracy": 0.53125,
+      "nll": 0.6764994530128379,
+      "n_rows": 64,
+      "n_unique_sender_inputs": 32,
+      "metrics": {
+        "n_rows": 64,
+        "class_counts": {
+          "0": 32,
+          "1": 32
+        },
+        "accuracy": 0.53125,
+        "binary_log_loss": 0.6764994530128379,
+        "macro_f1": 0.3992490613266583,
+        "balanced_accuracy": 0.53125,
+        "class_recall": {
+          "0": 1,
+          "1": 0.0625
+        },
+        "class_f1": {
+          "0": 0.6808510638297872,
+          "1": 0.11764705882352941
+        },
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            32,
+            0
+          ],
+          [
+            30,
+            2
+          ]
+        ],
+        "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+        "probability_clip": 1e-15
+      }
+    }
+  },
+  "paired_summary": {
+    "goal_true_minus_false": {
+      "n_unique_sender_inputs": 32,
+      "mean_p1_difference": 0.02479912286473508,
+      "median_p1_difference": 0.020357087192460405,
+      "mean_probability_log_odds_difference": 0.09978783998681279,
+      "positive_p1_changes": 32,
+      "negative_p1_changes": 0,
+      "exact_ties": 0
+    },
+    "role_neutral_minus_original": {
+      "n_unique_sender_inputs": 32,
+      "mean_p1_difference": -0.03222398613936936,
+      "median_p1_difference": -0.030105131693105996,
+      "mean_probability_log_odds_difference": -0.1293721090281521,
+      "positive_p1_changes": 3,
+      "negative_p1_changes": 29,
+      "exact_ties": 0
+    }
+  },
+  "paired_contrasts": {
+    "nested_question__sender__nested__layer_16": {
+      "goal_true_minus_false": {
+        "summary": {
+          "n_unique_sender_inputs": 32,
+          "mean_p1_difference": 0.02479912286473508,
+          "median_p1_difference": 0.020357087192460405,
+          "mean_probability_log_odds_difference": 0.09978783998681279,
+          "positive_p1_changes": 32,
+          "negative_p1_changes": 0,
+          "exact_ties": 0
+        },
+        "per_group": {
+          "km_t01": {
+            "n_unique_sender_inputs": 8,
+            "mean_p1_difference": 0.02401604498510053,
+            "median_p1_difference": 0.020903984160790506,
+            "mean_probability_log_odds_difference": 0.09630649554922154,
+            "positive_p1_changes": 8,
+            "negative_p1_changes": 0,
+            "exact_ties": 0
+          },
+          "km_t02": {
+            "n_unique_sender_inputs": 8,
+            "mean_p1_difference": 0.02059097303650017,
+            "median_p1_difference": 0.012885345897649753,
+            "mean_probability_log_odds_difference": 0.08309016249012313,
+            "positive_p1_changes": 8,
+            "negative_p1_changes": 0,
+            "exact_ties": 0
+          },
+          "km_t03": {
+            "n_unique_sender_inputs": 8,
+            "mean_p1_difference": 0.02757850655140045,
+            "median_p1_difference": 0.02612267887952366,
+            "mean_probability_log_odds_difference": 0.11056521654206278,
+            "positive_p1_changes": 8,
+            "negative_p1_changes": 0,
+            "exact_ties": 0
+          },
+          "km_t04": {
+            "n_unique_sender_inputs": 8,
+            "mean_p1_difference": 0.027010966885939167,
+            "median_p1_difference": 0.022809038097188122,
+            "mean_probability_log_odds_difference": 0.1091894853658437,
+            "positive_p1_changes": 8,
+            "negative_p1_changes": 0,
+            "exact_ties": 0
+          }
+        },
+        "pairs": [
+          {
+            "base_messages_sha256": "075e1c993648c1b71c03ba6c4c7136613c25dd415a2772626054737f04992e82",
+            "template_id": "km_t04",
+            "nested_label": 0,
+            "p1_difference": 0.006430878411554597,
+            "probability_log_odds_difference": 0.026248980678996725
+          },
+          {
+            "base_messages_sha256": "1a8ce3f6ba060e0379334e1129926b7368cc046bda03192c0ff46e996bdc8f1b",
+            "template_id": "km_t01",
+            "nested_label": 1,
+            "p1_difference": 0.04788544536737749,
+            "probability_log_odds_difference": 0.19196981237251476
+          },
+          {
+            "base_messages_sha256": "1e625db82d26c37a7646dfe9f69bb57caaf1e0de6fd6e722e4efcf3630b0a3d7",
+            "template_id": "km_t02",
+            "nested_label": 0,
+            "p1_difference": 0.006689934342473003,
+            "probability_log_odds_difference": 0.02735028856460342
+          },
+          {
+            "base_messages_sha256": "1fb30bd9579f7d1437043ac57635219000ddd07771cdd3e9b4fee940cc38e35c",
+            "template_id": "km_t04",
+            "nested_label": 1,
+            "p1_difference": 0.02571300955768374,
+            "probability_log_odds_difference": 0.1028821140767211
+          },
+          {
+            "base_messages_sha256": "2904f33dc19c4b272bdf18072552ce2fb1bce6e00548cd60cf7d209f7f8c8c92",
+            "template_id": "km_t02",
+            "nested_label": 0,
+            "p1_difference": 0.0019684972228495856,
+            "probability_log_odds_difference": 0.008020630443949184
+          },
+          {
+            "base_messages_sha256": "30f906ea18895e8a09b6673332b5c3d5db60e4bb0a257d569cd4ebd02358788d",
+            "template_id": "km_t02",
+            "nested_label": 0,
+            "p1_difference": 0.009712666577364304,
+            "probability_log_odds_difference": 0.039360310733337345
+          },
+          {
+            "base_messages_sha256": "3c048ffa36fb9f9c26390d5268f460a87d8423544eb11bea22f7cd50ce606900",
+            "template_id": "km_t02",
+            "nested_label": 1,
+            "p1_difference": 0.07082163008109654,
+            "probability_log_odds_difference": 0.28564977732386343
+          },
+          {
+            "base_messages_sha256": "3d0723c0d1ee8f1d13189d37ad760b82e81ad0c2f42a65b930527602394013d7",
+            "template_id": "km_t04",
+            "nested_label": 1,
+            "p1_difference": 0.049908265404817576,
+            "probability_log_odds_difference": 0.2007441361074891
+          },
+          {
+            "base_messages_sha256": "3f5ec93252c0857981281882199cc91a8d6b98f3433c080b0f65a9fa6a76b213",
+            "template_id": "km_t04",
+            "nested_label": 0,
+            "p1_difference": 0.01298430554472646,
+            "probability_log_odds_difference": 0.053432042357876575
+          },
+          {
+            "base_messages_sha256": "46ace1008f77845f1bb47539e6703058afa0493919a1403a8f8abc20325fdb57",
+            "template_id": "km_t01",
+            "nested_label": 0,
+            "p1_difference": 0.0075120942599317675,
+            "probability_log_odds_difference": 0.030427840598382883
+          },
+          {
+            "base_messages_sha256": "4dd47045b79f0b396d489bb5ebb4eeaa2d2e28f864334ca97c4e0cd554ccfc8a",
+            "template_id": "km_t03",
+            "nested_label": 0,
+            "p1_difference": 0.029398990342250464,
+            "probability_log_odds_difference": 0.11814077144962498
+          },
+          {
+            "base_messages_sha256": "5eb8c4cd7e1eba7c0f41d66741f2512678c87cac9c8466e2fccdcd0a700a67c7",
+            "template_id": "km_t04",
+            "nested_label": 1,
+            "p1_difference": 0.02997966010568165,
+            "probability_log_odds_difference": 0.12078221572319969
+          },
+          {
+            "base_messages_sha256": "621fa2ae2478442f384878812d74868d07406dd215afe42470d05b156e280116",
+            "template_id": "km_t02",
+            "nested_label": 1,
+            "p1_difference": 0.0160580252179352,
+            "probability_log_odds_difference": 0.06437275213069571
+          },
+          {
+            "base_messages_sha256": "6267a300a9981e4a70422490820a9d32f9320fbd2ce6a1bdddf178703b73e3e7",
+            "template_id": "km_t04",
+            "nested_label": 0,
+            "p1_difference": 0.013021035679348703,
+            "probability_log_odds_difference": 0.0538462270731116
+          },
+          {
+            "base_messages_sha256": "75957d9263d10a756912e1afc2e9015887af0f56012cd28b2ce8dc63d92ff325",
+            "template_id": "km_t02",
+            "nested_label": 1,
+            "p1_difference": 0.00561030787017841,
+            "probability_log_odds_difference": 0.02254282367560012
+          },
+          {
+            "base_messages_sha256": "79cfa5f8393b5efd092c8d072c1051e5e6f9178f073704f38e87ba71f865ce7e",
+            "template_id": "km_t04",
+            "nested_label": 0,
+            "p1_difference": 0.019905066636692503,
+            "probability_log_odds_difference": 0.08220745519041617
+          },
+          {
+            "base_messages_sha256": "907cb2914078c1c66578194c434136b6e18cfea92359e2bd16f1e31b9ad476a3",
+            "template_id": "km_t03",
+            "nested_label": 1,
+            "p1_difference": 0.05046441352054598,
+            "probability_log_odds_difference": 0.2021126169356091
+          },
+          {
+            "base_messages_sha256": "92e4e0940c499cbdaa989b22f34ef9aceb84050b078163860ea14f54ac0c8746",
+            "template_id": "km_t02",
+            "nested_label": 0,
+            "p1_difference": 0.016641145885448405,
+            "probability_log_odds_difference": 0.067024436498059
+          },
+          {
+            "base_messages_sha256": "9ba33dccd5e13c22581ad0487a0cc20ca347620b24541239576af3a8599059dc",
+            "template_id": "km_t01",
+            "nested_label": 0,
+            "p1_difference": 0.020998860573352707,
+            "probability_log_odds_difference": 0.08439909162156312
+          },
+          {
+            "base_messages_sha256": "a4c85c66786dfbf4a7bf454390401eae30d0ff239a4ddb537b04e0230b038c8c",
+            "template_id": "km_t04",
+            "nested_label": 1,
+            "p1_difference": 0.058145513747008104,
+            "probability_log_odds_difference": 0.2333727117189387
+          },
+          {
+            "base_messages_sha256": "a9db47f1999db80a3158fc94ceb8d90d36d80d8f23a20293e3d252d0eedaa886",
+            "template_id": "km_t01",
+            "nested_label": 1,
+            "p1_difference": 0.042404253250252044,
+            "probability_log_odds_difference": 0.16980966014952703
+          },
+          {
+            "base_messages_sha256": "b2557dabe2355532ff72251b99a142cd716ead30a2d193263e1b9fd82b7416dc",
+            "template_id": "km_t03",
+            "nested_label": 0,
+            "p1_difference": 0.026768850831621227,
+            "probability_log_odds_difference": 0.1074258657290118
+          },
+          {
+            "base_messages_sha256": "b7570efeefc8729f15096049dd33d9ba46703d70ba08416726a51ab64491a5e1",
+            "template_id": "km_t01",
+            "nested_label": 1,
+            "p1_difference": 0.017812519714457575,
+            "probability_log_odds_difference": 0.07126401230897683
+          },
+          {
+            "base_messages_sha256": "be2ef0f761e44842892c57b01037f2edd9c5f48d3a146751d8ecffcc67b465d4",
+            "template_id": "km_t01",
+            "nested_label": 1,
+            "p1_difference": 0.030595307498228252,
+            "probability_log_odds_difference": 0.12262127554100088
+          },
+          {
+            "base_messages_sha256": "c0cb1a5e3ff1e46257ad73a8487663329f4dff37e2ace84ae7ec49cd7ec11b6d",
+            "template_id": "km_t01",
+            "nested_label": 0,
+            "p1_difference": 0.020809107748228306,
+            "probability_log_odds_difference": 0.08334684728139596
+          },
+          {
+            "base_messages_sha256": "c478107aa5e0f7c964fc3e4c81958cb481b8b7347af13579010f3657d50f33c3",
+            "template_id": "km_t03",
+            "nested_label": 1,
+            "p1_difference": 0.04645446170011713,
+            "probability_log_odds_difference": 0.18618705028467541
+          },
+          {
+            "base_messages_sha256": "d2b3a45dcfe29839ecdc74444f696bde8da33be5f9e4534233d4a23f44da657e",
+            "template_id": "km_t02",
+            "nested_label": 1,
+            "p1_difference": 0.037225577094655904,
+            "probability_log_odds_difference": 0.15040028055087684
+          },
+          {
+            "base_messages_sha256": "d73afc1267ca29bb35ffa4d698c45949fea1053c6b906c6dcd23cbfb533ecf7e",
+            "template_id": "km_t03",
+            "nested_label": 0,
+            "p1_difference": 0.00822796051008684,
+            "probability_log_odds_difference": 0.033017913205486527
+          },
+          {
+            "base_messages_sha256": "da5db2c91cdc6023a0f4753af54ff0804c7a5ae95d033868c53b54425bcfbe21",
+            "template_id": "km_t03",
+            "nested_label": 1,
+            "p1_difference": 0.02547650692742609,
+            "probability_log_odds_difference": 0.10193509848856319
+          },
+          {
+            "base_messages_sha256": "da754b32c1b33c569f4c1c883f2d3c4f60dd3bdd5e674175ec037e908b2cfccc",
+            "template_id": "km_t03",
+            "nested_label": 0,
+            "p1_difference": 0.018592210786759267,
+            "probability_log_odds_difference": 0.07461994378514003
+          },
+          {
+            "base_messages_sha256": "e0a9c9644a257f60e3c38035216bbb5ca752b44fc16f7837f92e6449e8314308",
+            "template_id": "km_t03",
+            "nested_label": 1,
+            "p1_difference": 0.015244657792396588,
+            "probability_log_odds_difference": 0.06108247245839116
+          },
+          {
+            "base_messages_sha256": "fd3c01cd7a4917553565550d8e06b1526873f615ca0fb01fac06969d76151edc",
+            "template_id": "km_t01",
+            "nested_label": 0,
+            "p1_difference": 0.004110771468976093,
+            "probability_log_odds_difference": 0.016613424520410813
+          }
+        ]
+      },
+      "role_neutral_minus_original": {
+        "summary": {
+          "n_unique_sender_inputs": 32,
+          "mean_p1_difference": -0.03222398613936936,
+          "median_p1_difference": -0.030105131693105996,
+          "mean_probability_log_odds_difference": -0.1293721090281521,
+          "positive_p1_changes": 3,
+          "negative_p1_changes": 29,
+          "exact_ties": 0
+        },
+        "per_group": {
+          "km_t01": {
+            "n_unique_sender_inputs": 8,
+            "mean_p1_difference": -0.027531842984877444,
+            "median_p1_difference": -0.027222173661591575,
+            "mean_probability_log_odds_difference": -0.11054768026700708,
+            "positive_p1_changes": 0,
+            "negative_p1_changes": 8,
+            "exact_ties": 0
+          },
+          "km_t02": {
+            "n_unique_sender_inputs": 8,
+            "mean_p1_difference": -0.047929030367309104,
+            "median_p1_difference": -0.0529715194927467,
+            "mean_probability_log_odds_difference": -0.19236357769731055,
+            "positive_p1_changes": 0,
+            "negative_p1_changes": 8,
+            "exact_ties": 0
+          },
+          "km_t03": {
+            "n_unique_sender_inputs": 8,
+            "mean_p1_difference": -0.02717284796394074,
+            "median_p1_difference": -0.026842719373708718,
+            "mean_probability_log_odds_difference": -0.10887593415586817,
+            "positive_p1_changes": 1,
+            "negative_p1_changes": 7,
+            "exact_ties": 0
+          },
+          "km_t04": {
+            "n_unique_sender_inputs": 8,
+            "mean_p1_difference": -0.02626222324135015,
+            "median_p1_difference": -0.028512663453087034,
+            "mean_probability_log_odds_difference": -0.10570124399242263,
+            "positive_p1_changes": 2,
+            "negative_p1_changes": 6,
+            "exact_ties": 0
+          }
+        },
+        "pairs": [
+          {
+            "base_messages_sha256": "075e1c993648c1b71c03ba6c4c7136613c25dd415a2772626054737f04992e82",
+            "template_id": "km_t04",
+            "nested_label": 0,
+            "p1_difference": 0.04162370679206279,
+            "probability_log_odds_difference": 0.1690437588640139
+          },
+          {
+            "base_messages_sha256": "1a8ce3f6ba060e0379334e1129926b7368cc046bda03192c0ff46e996bdc8f1b",
+            "template_id": "km_t01",
+            "nested_label": 1,
+            "p1_difference": -0.05879531727622367,
+            "probability_log_odds_difference": -0.23620397401342408
+          },
+          {
+            "base_messages_sha256": "1e625db82d26c37a7646dfe9f69bb57caaf1e0de6fd6e722e4efcf3630b0a3d7",
+            "template_id": "km_t02",
+            "nested_label": 0,
+            "p1_difference": -0.04764779003871278,
+            "probability_log_odds_difference": -0.19186587619386752
+          },
+          {
+            "base_messages_sha256": "1fb30bd9579f7d1437043ac57635219000ddd07771cdd3e9b4fee940cc38e35c",
+            "template_id": "km_t04",
+            "nested_label": 1,
+            "p1_difference": 0.007148565455799116,
+            "probability_log_odds_difference": 0.028621238638610103
+          },
+          {
+            "base_messages_sha256": "2904f33dc19c4b272bdf18072552ce2fb1bce6e00548cd60cf7d209f7f8c8c92",
+            "template_id": "km_t02",
+            "nested_label": 0,
+            "p1_difference": -0.05961850219667486,
+            "probability_log_odds_difference": -0.24005392986524732
+          },
+          {
+            "base_messages_sha256": "30f906ea18895e8a09b6673332b5c3d5db60e4bb0a257d569cd4ebd02358788d",
+            "template_id": "km_t02",
+            "nested_label": 0,
+            "p1_difference": -0.05417841125974532,
+            "probability_log_odds_difference": -0.21756932608762736
+          },
+          {
+            "base_messages_sha256": "3c048ffa36fb9f9c26390d5268f460a87d8423544eb11bea22f7cd50ce606900",
+            "template_id": "km_t02",
+            "nested_label": 1,
+            "p1_difference": -0.052795460966709895,
+            "probability_log_odds_difference": -0.21182244442492137
+          },
+          {
+            "base_messages_sha256": "3d0723c0d1ee8f1d13189d37ad760b82e81ad0c2f42a65b930527602394013d7",
+            "template_id": "km_t04",
+            "nested_label": 1,
+            "p1_difference": -0.07091306261034591,
+            "probability_log_odds_difference": -0.28447526528963607
+          },
+          {
+            "base_messages_sha256": "3f5ec93252c0857981281882199cc91a8d6b98f3433c080b0f65a9fa6a76b213",
+            "template_id": "km_t04",
+            "nested_label": 0,
+            "p1_difference": -0.027679406835278364,
+            "probability_log_odds_difference": -0.11245601252963877
+          },
+          {
+            "base_messages_sha256": "46ace1008f77845f1bb47539e6703058afa0493919a1403a8f8abc20325fdb57",
+            "template_id": "km_t01",
+            "nested_label": 0,
+            "p1_difference": -0.029910127337964776,
+            "probability_log_odds_difference": -0.11991936675828441
+          },
+          {
+            "base_messages_sha256": "4dd47045b79f0b396d489bb5ebb4eeaa2d2e28f864334ca97c4e0cd554ccfc8a",
+            "template_id": "km_t03",
+            "nested_label": 0,
+            "p1_difference": -0.015535300767956839,
+            "probability_log_odds_difference": -0.06223526173920513
+          },
+          {
+            "base_messages_sha256": "5eb8c4cd7e1eba7c0f41d66741f2512678c87cac9c8466e2fccdcd0a700a67c7",
+            "template_id": "km_t04",
+            "nested_label": 1,
+            "p1_difference": -0.04909534468473653,
+            "probability_log_odds_difference": -0.19654003375765305
+          },
+          {
+            "base_messages_sha256": "621fa2ae2478442f384878812d74868d07406dd215afe42470d05b156e280116",
+            "template_id": "km_t02",
+            "nested_label": 1,
+            "p1_difference": -0.005379129081456102,
+            "probability_log_odds_difference": -0.021518001258812647
+          },
+          {
+            "base_messages_sha256": "6267a300a9981e4a70422490820a9d32f9320fbd2ce6a1bdddf178703b73e3e7",
+            "template_id": "km_t04",
+            "nested_label": 0,
+            "p1_difference": -0.029345920070895704,
+            "probability_log_odds_difference": -0.11921693559441093
+          },
+          {
+            "base_messages_sha256": "75957d9263d10a756912e1afc2e9015887af0f56012cd28b2ce8dc63d92ff325",
+            "template_id": "km_t02",
+            "nested_label": 1,
+            "p1_difference": -0.0531475780187835,
+            "probability_log_odds_difference": -0.21280888279644883
+          },
+          {
+            "base_messages_sha256": "79cfa5f8393b5efd092c8d072c1051e5e6f9178f073704f38e87ba71f865ce7e",
+            "template_id": "km_t04",
+            "nested_label": 0,
+            "p1_difference": -0.02293975726011399,
+            "probability_log_odds_difference": -0.09368161024247768
+          },
+          {
+            "base_messages_sha256": "907cb2914078c1c66578194c434136b6e18cfea92359e2bd16f1e31b9ad476a3",
+            "template_id": "km_t03",
+            "nested_label": 1,
+            "p1_difference": -0.023999906439532426,
+            "probability_log_odds_difference": -0.09614367941720059
+          },
+          {
+            "base_messages_sha256": "92e4e0940c499cbdaa989b22f34ef9aceb84050b078163860ea14f54ac0c8746",
+            "template_id": "km_t02",
+            "nested_label": 0,
+            "p1_difference": -0.036722098645424917,
+            "probability_log_odds_difference": -0.1469548492950249
+          },
+          {
+            "base_messages_sha256": "9ba33dccd5e13c22581ad0487a0cc20ca347620b24541239576af3a8599059dc",
+            "template_id": "km_t01",
+            "nested_label": 0,
+            "p1_difference": -0.0009687211589084477,
+            "probability_log_odds_difference": -0.003887945033801743
+          },
+          {
+            "base_messages_sha256": "a4c85c66786dfbf4a7bf454390401eae30d0ff239a4ddb537b04e0230b038c8c",
+            "template_id": "km_t04",
+            "nested_label": 1,
+            "p1_difference": -0.0588965667172926,
+            "probability_log_odds_difference": -0.23690509202818855
+          },
+          {
+            "base_messages_sha256": "a9db47f1999db80a3158fc94ceb8d90d36d80d8f23a20293e3d252d0eedaa886",
+            "template_id": "km_t01",
+            "nested_label": 1,
+            "p1_difference": -0.056898421246441955,
+            "probability_log_odds_difference": -0.22859883779508872
+          },
+          {
+            "base_messages_sha256": "b2557dabe2355532ff72251b99a142cd716ead30a2d193263e1b9fd82b7416dc",
+            "template_id": "km_t03",
+            "nested_label": 0,
+            "p1_difference": 0.005936836914259169,
+            "probability_log_odds_difference": 0.023777206160265685
+          },
+          {
+            "base_messages_sha256": "b7570efeefc8729f15096049dd33d9ba46703d70ba08416726a51ab64491a5e1",
+            "template_id": "km_t01",
+            "nested_label": 1,
+            "p1_difference": -0.030300136048247217,
+            "probability_log_odds_difference": -0.12151760051178229
+          },
+          {
+            "base_messages_sha256": "be2ef0f761e44842892c57b01037f2edd9c5f48d3a146751d8ecffcc67b465d4",
+            "template_id": "km_t01",
+            "nested_label": 1,
+            "p1_difference": -0.00737139235821227,
+            "probability_log_odds_difference": -0.029745640411624308
+          },
+          {
+            "base_messages_sha256": "c0cb1a5e3ff1e46257ad73a8487663329f4dff37e2ace84ae7ec49cd7ec11b6d",
+            "template_id": "km_t01",
+            "nested_label": 0,
+            "p1_difference": -0.011476408467802846,
+            "probability_log_odds_difference": -0.04597863282510328
+          },
+          {
+            "base_messages_sha256": "c478107aa5e0f7c964fc3e4c81958cb481b8b7347af13579010f3657d50f33c3",
+            "template_id": "km_t03",
+            "nested_label": 1,
+            "p1_difference": -0.0445481912903844,
+            "probability_log_odds_difference": -0.17846932368837087
+          },
+          {
+            "base_messages_sha256": "d2b3a45dcfe29839ecdc74444f696bde8da33be5f9e4534233d4a23f44da657e",
+            "template_id": "km_t02",
+            "nested_label": 1,
+            "p1_difference": -0.07394327273096546,
+            "probability_log_odds_difference": -0.29631531165653446
+          },
+          {
+            "base_messages_sha256": "d73afc1267ca29bb35ffa4d698c45949fea1053c6b906c6dcd23cbfb533ecf7e",
+            "template_id": "km_t03",
+            "nested_label": 0,
+            "p1_difference": -0.02968553230788501,
+            "probability_log_odds_difference": -0.11891888815759921
+          },
+          {
+            "base_messages_sha256": "da5db2c91cdc6023a0f4753af54ff0804c7a5ae95d033868c53b54425bcfbe21",
+            "template_id": "km_t03",
+            "nested_label": 1,
+            "p1_difference": -0.03848534253882008,
+            "probability_log_odds_difference": -0.154540445275405
+          },
+          {
+            "base_messages_sha256": "da754b32c1b33c569f4c1c883f2d3c4f60dd3bdd5e674175ec037e908b2cfccc",
+            "template_id": "km_t03",
+            "nested_label": 0,
+            "p1_difference": -0.048108949412064284,
+            "probability_log_odds_difference": -0.19261185947782833
+          },
+          {
+            "base_messages_sha256": "e0a9c9644a257f60e3c38035216bbb5ca752b44fc16f7837f92e6449e8314308",
+            "template_id": "km_t03",
+            "nested_label": 1,
+            "p1_difference": -0.022956397869142053,
+            "probability_log_odds_difference": -0.09186522165160194
+          },
+          {
+            "base_messages_sha256": "fd3c01cd7a4917553565550d8e06b1526873f615ca0fb01fac06969d76151edc",
+            "template_id": "km_t01",
+            "nested_label": 0,
+            "p1_difference": -0.024534219985218375,
+            "probability_log_odds_difference": -0.0985294447869478
+          }
+        ]
+      }
+    },
+    "nested_question__sender__nested__text": {
+      "goal_true_minus_false": {
+        "summary": {
+          "n_unique_sender_inputs": 32,
+          "mean_p1_difference": 0,
+          "median_p1_difference": 0,
+          "mean_probability_log_odds_difference": 0,
+          "positive_p1_changes": 0,
+          "negative_p1_changes": 0,
+          "exact_ties": 32
+        },
+        "per_group": {
+          "km_t01": {
+            "n_unique_sender_inputs": 8,
+            "mean_p1_difference": 0,
+            "median_p1_difference": 0,
+            "mean_probability_log_odds_difference": 0,
+            "positive_p1_changes": 0,
+            "negative_p1_changes": 0,
+            "exact_ties": 8
+          },
+          "km_t02": {
+            "n_unique_sender_inputs": 8,
+            "mean_p1_difference": 0,
+            "median_p1_difference": 0,
+            "mean_probability_log_odds_difference": 0,
+            "positive_p1_changes": 0,
+            "negative_p1_changes": 0,
+            "exact_ties": 8
+          },
+          "km_t03": {
+            "n_unique_sender_inputs": 8,
+            "mean_p1_difference": 0,
+            "median_p1_difference": 0,
+            "mean_probability_log_odds_difference": 0,
+            "positive_p1_changes": 0,
+            "negative_p1_changes": 0,
+            "exact_ties": 8
+          },
+          "km_t04": {
+            "n_unique_sender_inputs": 8,
+            "mean_p1_difference": 0,
+            "median_p1_difference": 0,
+            "mean_probability_log_odds_difference": 0,
+            "positive_p1_changes": 0,
+            "negative_p1_changes": 0,
+            "exact_ties": 8
+          }
+        },
+        "pairs": [
+          {
+            "base_messages_sha256": "075e1c993648c1b71c03ba6c4c7136613c25dd415a2772626054737f04992e82",
+            "template_id": "km_t04",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "1a8ce3f6ba060e0379334e1129926b7368cc046bda03192c0ff46e996bdc8f1b",
+            "template_id": "km_t01",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "1e625db82d26c37a7646dfe9f69bb57caaf1e0de6fd6e722e4efcf3630b0a3d7",
+            "template_id": "km_t02",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "1fb30bd9579f7d1437043ac57635219000ddd07771cdd3e9b4fee940cc38e35c",
+            "template_id": "km_t04",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "2904f33dc19c4b272bdf18072552ce2fb1bce6e00548cd60cf7d209f7f8c8c92",
+            "template_id": "km_t02",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "30f906ea18895e8a09b6673332b5c3d5db60e4bb0a257d569cd4ebd02358788d",
+            "template_id": "km_t02",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "3c048ffa36fb9f9c26390d5268f460a87d8423544eb11bea22f7cd50ce606900",
+            "template_id": "km_t02",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "3d0723c0d1ee8f1d13189d37ad760b82e81ad0c2f42a65b930527602394013d7",
+            "template_id": "km_t04",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "3f5ec93252c0857981281882199cc91a8d6b98f3433c080b0f65a9fa6a76b213",
+            "template_id": "km_t04",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "46ace1008f77845f1bb47539e6703058afa0493919a1403a8f8abc20325fdb57",
+            "template_id": "km_t01",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "4dd47045b79f0b396d489bb5ebb4eeaa2d2e28f864334ca97c4e0cd554ccfc8a",
+            "template_id": "km_t03",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "5eb8c4cd7e1eba7c0f41d66741f2512678c87cac9c8466e2fccdcd0a700a67c7",
+            "template_id": "km_t04",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "621fa2ae2478442f384878812d74868d07406dd215afe42470d05b156e280116",
+            "template_id": "km_t02",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "6267a300a9981e4a70422490820a9d32f9320fbd2ce6a1bdddf178703b73e3e7",
+            "template_id": "km_t04",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "75957d9263d10a756912e1afc2e9015887af0f56012cd28b2ce8dc63d92ff325",
+            "template_id": "km_t02",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "79cfa5f8393b5efd092c8d072c1051e5e6f9178f073704f38e87ba71f865ce7e",
+            "template_id": "km_t04",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "907cb2914078c1c66578194c434136b6e18cfea92359e2bd16f1e31b9ad476a3",
+            "template_id": "km_t03",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "92e4e0940c499cbdaa989b22f34ef9aceb84050b078163860ea14f54ac0c8746",
+            "template_id": "km_t02",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "9ba33dccd5e13c22581ad0487a0cc20ca347620b24541239576af3a8599059dc",
+            "template_id": "km_t01",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "a4c85c66786dfbf4a7bf454390401eae30d0ff239a4ddb537b04e0230b038c8c",
+            "template_id": "km_t04",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "a9db47f1999db80a3158fc94ceb8d90d36d80d8f23a20293e3d252d0eedaa886",
+            "template_id": "km_t01",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "b2557dabe2355532ff72251b99a142cd716ead30a2d193263e1b9fd82b7416dc",
+            "template_id": "km_t03",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "b7570efeefc8729f15096049dd33d9ba46703d70ba08416726a51ab64491a5e1",
+            "template_id": "km_t01",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "be2ef0f761e44842892c57b01037f2edd9c5f48d3a146751d8ecffcc67b465d4",
+            "template_id": "km_t01",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "c0cb1a5e3ff1e46257ad73a8487663329f4dff37e2ace84ae7ec49cd7ec11b6d",
+            "template_id": "km_t01",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "c478107aa5e0f7c964fc3e4c81958cb481b8b7347af13579010f3657d50f33c3",
+            "template_id": "km_t03",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "d2b3a45dcfe29839ecdc74444f696bde8da33be5f9e4534233d4a23f44da657e",
+            "template_id": "km_t02",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "d73afc1267ca29bb35ffa4d698c45949fea1053c6b906c6dcd23cbfb533ecf7e",
+            "template_id": "km_t03",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "da5db2c91cdc6023a0f4753af54ff0804c7a5ae95d033868c53b54425bcfbe21",
+            "template_id": "km_t03",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "da754b32c1b33c569f4c1c883f2d3c4f60dd3bdd5e674175ec037e908b2cfccc",
+            "template_id": "km_t03",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "e0a9c9644a257f60e3c38035216bbb5ca752b44fc16f7837f92e6449e8314308",
+            "template_id": "km_t03",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "fd3c01cd7a4917553565550d8e06b1526873f615ca0fb01fac06969d76151edc",
+            "template_id": "km_t01",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          }
+        ]
+      },
+      "role_neutral_minus_original": {
+        "summary": {
+          "n_unique_sender_inputs": 32,
+          "mean_p1_difference": 0,
+          "median_p1_difference": 0,
+          "mean_probability_log_odds_difference": 0,
+          "positive_p1_changes": 0,
+          "negative_p1_changes": 0,
+          "exact_ties": 32
+        },
+        "per_group": {
+          "km_t01": {
+            "n_unique_sender_inputs": 8,
+            "mean_p1_difference": 0,
+            "median_p1_difference": 0,
+            "mean_probability_log_odds_difference": 0,
+            "positive_p1_changes": 0,
+            "negative_p1_changes": 0,
+            "exact_ties": 8
+          },
+          "km_t02": {
+            "n_unique_sender_inputs": 8,
+            "mean_p1_difference": 0,
+            "median_p1_difference": 0,
+            "mean_probability_log_odds_difference": 0,
+            "positive_p1_changes": 0,
+            "negative_p1_changes": 0,
+            "exact_ties": 8
+          },
+          "km_t03": {
+            "n_unique_sender_inputs": 8,
+            "mean_p1_difference": 0,
+            "median_p1_difference": 0,
+            "mean_probability_log_odds_difference": 0,
+            "positive_p1_changes": 0,
+            "negative_p1_changes": 0,
+            "exact_ties": 8
+          },
+          "km_t04": {
+            "n_unique_sender_inputs": 8,
+            "mean_p1_difference": 0,
+            "median_p1_difference": 0,
+            "mean_probability_log_odds_difference": 0,
+            "positive_p1_changes": 0,
+            "negative_p1_changes": 0,
+            "exact_ties": 8
+          }
+        },
+        "pairs": [
+          {
+            "base_messages_sha256": "075e1c993648c1b71c03ba6c4c7136613c25dd415a2772626054737f04992e82",
+            "template_id": "km_t04",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "1a8ce3f6ba060e0379334e1129926b7368cc046bda03192c0ff46e996bdc8f1b",
+            "template_id": "km_t01",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "1e625db82d26c37a7646dfe9f69bb57caaf1e0de6fd6e722e4efcf3630b0a3d7",
+            "template_id": "km_t02",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "1fb30bd9579f7d1437043ac57635219000ddd07771cdd3e9b4fee940cc38e35c",
+            "template_id": "km_t04",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "2904f33dc19c4b272bdf18072552ce2fb1bce6e00548cd60cf7d209f7f8c8c92",
+            "template_id": "km_t02",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "30f906ea18895e8a09b6673332b5c3d5db60e4bb0a257d569cd4ebd02358788d",
+            "template_id": "km_t02",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "3c048ffa36fb9f9c26390d5268f460a87d8423544eb11bea22f7cd50ce606900",
+            "template_id": "km_t02",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "3d0723c0d1ee8f1d13189d37ad760b82e81ad0c2f42a65b930527602394013d7",
+            "template_id": "km_t04",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "3f5ec93252c0857981281882199cc91a8d6b98f3433c080b0f65a9fa6a76b213",
+            "template_id": "km_t04",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "46ace1008f77845f1bb47539e6703058afa0493919a1403a8f8abc20325fdb57",
+            "template_id": "km_t01",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "4dd47045b79f0b396d489bb5ebb4eeaa2d2e28f864334ca97c4e0cd554ccfc8a",
+            "template_id": "km_t03",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "5eb8c4cd7e1eba7c0f41d66741f2512678c87cac9c8466e2fccdcd0a700a67c7",
+            "template_id": "km_t04",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "621fa2ae2478442f384878812d74868d07406dd215afe42470d05b156e280116",
+            "template_id": "km_t02",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "6267a300a9981e4a70422490820a9d32f9320fbd2ce6a1bdddf178703b73e3e7",
+            "template_id": "km_t04",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "75957d9263d10a756912e1afc2e9015887af0f56012cd28b2ce8dc63d92ff325",
+            "template_id": "km_t02",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "79cfa5f8393b5efd092c8d072c1051e5e6f9178f073704f38e87ba71f865ce7e",
+            "template_id": "km_t04",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "907cb2914078c1c66578194c434136b6e18cfea92359e2bd16f1e31b9ad476a3",
+            "template_id": "km_t03",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "92e4e0940c499cbdaa989b22f34ef9aceb84050b078163860ea14f54ac0c8746",
+            "template_id": "km_t02",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "9ba33dccd5e13c22581ad0487a0cc20ca347620b24541239576af3a8599059dc",
+            "template_id": "km_t01",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "a4c85c66786dfbf4a7bf454390401eae30d0ff239a4ddb537b04e0230b038c8c",
+            "template_id": "km_t04",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "a9db47f1999db80a3158fc94ceb8d90d36d80d8f23a20293e3d252d0eedaa886",
+            "template_id": "km_t01",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "b2557dabe2355532ff72251b99a142cd716ead30a2d193263e1b9fd82b7416dc",
+            "template_id": "km_t03",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "b7570efeefc8729f15096049dd33d9ba46703d70ba08416726a51ab64491a5e1",
+            "template_id": "km_t01",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "be2ef0f761e44842892c57b01037f2edd9c5f48d3a146751d8ecffcc67b465d4",
+            "template_id": "km_t01",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "c0cb1a5e3ff1e46257ad73a8487663329f4dff37e2ace84ae7ec49cd7ec11b6d",
+            "template_id": "km_t01",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "c478107aa5e0f7c964fc3e4c81958cb481b8b7347af13579010f3657d50f33c3",
+            "template_id": "km_t03",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "d2b3a45dcfe29839ecdc74444f696bde8da33be5f9e4534233d4a23f44da657e",
+            "template_id": "km_t02",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "d73afc1267ca29bb35ffa4d698c45949fea1053c6b906c6dcd23cbfb533ecf7e",
+            "template_id": "km_t03",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "da5db2c91cdc6023a0f4753af54ff0804c7a5ae95d033868c53b54425bcfbe21",
+            "template_id": "km_t03",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "da754b32c1b33c569f4c1c883f2d3c4f60dd3bdd5e674175ec037e908b2cfccc",
+            "template_id": "km_t03",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "e0a9c9644a257f60e3c38035216bbb5ca752b44fc16f7837f92e6449e8314308",
+            "template_id": "km_t03",
+            "nested_label": 1,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          },
+          {
+            "base_messages_sha256": "fd3c01cd7a4917553565550d8e06b1526873f615ca0fb01fac06969d76151edc",
+            "template_id": "km_t01",
+            "nested_label": 0,
+            "p1_difference": 0,
+            "probability_log_odds_difference": 0
+          }
+        ]
+      }
+    }
+  },
+  "per_group": {
+    "km_t01": {
+      "n_rows": 16,
+      "n_unique_sender_inputs": 8,
+      "original_neutral": {
+        "correct": 14,
+        "accuracy": 0.875,
+        "nll": 0.6377583225824586,
+        "metrics": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 0.875,
+          "binary_log_loss": 0.6377583225824586,
+          "macro_f1": 0.873015873015873,
+          "balanced_accuracy": 0.875,
+          "class_recall": {
+            "0": 0.75,
+            "1": 1
+          },
+          "class_f1": {
+            "0": 0.8571428571428571,
+            "1": 0.8888888888888888
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              6,
+              2
+            ],
+            [
+              0,
+              8
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        }
+      },
+      "role_neutral": {
+        "correct": 12,
+        "accuracy": 0.75,
+        "nll": 0.6579171434998055,
+        "metrics": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 0.75,
+          "binary_log_loss": 0.6579171434998055,
+          "macro_f1": 0.75,
+          "balanced_accuracy": 0.75,
+          "class_recall": {
+            "0": 0.75,
+            "1": 0.75
+          },
+          "class_f1": {
+            "0": 0.75,
+            "1": 0.75
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              6,
+              2
+            ],
+            [
+              2,
+              6
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        }
+      },
+      "role_goal_true": {
+        "correct": 16,
+        "accuracy": 1,
+        "nll": 0.6485343153917049,
+        "metrics": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 1,
+          "binary_log_loss": 0.6485343153917049,
+          "macro_f1": 1,
+          "balanced_accuracy": 1,
+          "class_recall": {
+            "0": 1,
+            "1": 1
+          },
+          "class_f1": {
+            "0": 1,
+            "1": 1
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0
+            ],
+            [
+              0,
+              8
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        }
+      },
+      "role_goal_false": {
+        "correct": 10,
+        "accuracy": 0.625,
+        "nll": 0.6711305727872653,
+        "metrics": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 0.625,
+          "binary_log_loss": 0.6711305727872653,
+          "macro_f1": 0.5636363636363637,
+          "balanced_accuracy": 0.625,
+          "class_recall": {
+            "0": 1,
+            "1": 0.25
+          },
+          "class_f1": {
+            "0": 0.7272727272727273,
+            "1": 0.4
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0
+            ],
+            [
+              6,
+              2
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        }
+      }
+    },
+    "km_t02": {
+      "n_rows": 16,
+      "n_unique_sender_inputs": 8,
+      "original_neutral": {
+        "correct": 12,
+        "accuracy": 0.75,
+        "nll": 0.6645822339768226,
+        "metrics": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 0.75,
+          "binary_log_loss": 0.6645822339768226,
+          "macro_f1": 0.75,
+          "balanced_accuracy": 0.75,
+          "class_recall": {
+            "0": 0.75,
+            "1": 0.75
+          },
+          "class_f1": {
+            "0": 0.75,
+            "1": 0.75
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              6,
+              2
+            ],
+            [
+              2,
+              6
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        }
+      },
+      "role_neutral": {
+        "correct": 8,
+        "accuracy": 0.5,
+        "nll": 0.6631969609735948,
+        "metrics": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 0.6631969609735948,
+          "macro_f1": 0.3333333333333333,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 1,
+            "1": 0
+          },
+          "class_f1": {
+            "0": 0.6666666666666666,
+            "1": 0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0
+            ],
+            [
+              8,
+              0
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        }
+      },
+      "role_goal_true": {
+        "correct": 8,
+        "accuracy": 0.5,
+        "nll": 0.6615362328810648,
+        "metrics": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 0.6615362328810648,
+          "macro_f1": 0.3333333333333333,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 1,
+            "1": 0
+          },
+          "class_f1": {
+            "0": 0.6666666666666666,
+            "1": 0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0
+            ],
+            [
+              8,
+              0
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        }
+      },
+      "role_goal_false": {
+        "correct": 8,
+        "accuracy": 0.5,
+        "nll": 0.6889501478021642,
+        "metrics": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 0.6889501478021642,
+          "macro_f1": 0.3333333333333333,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 1,
+            "1": 0
+          },
+          "class_f1": {
+            "0": 0.6666666666666666,
+            "1": 0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0
+            ],
+            [
+              8,
+              0
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        }
+      }
+    },
+    "km_t03": {
+      "n_rows": 16,
+      "n_unique_sender_inputs": 8,
+      "original_neutral": {
+        "correct": 14,
+        "accuracy": 0.875,
+        "nll": 0.6638267818511292,
+        "metrics": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 0.875,
+          "binary_log_loss": 0.6638267818511292,
+          "macro_f1": 0.873015873015873,
+          "balanced_accuracy": 0.875,
+          "class_recall": {
+            "0": 0.75,
+            "1": 1
+          },
+          "class_f1": {
+            "0": 0.8571428571428571,
+            "1": 0.8888888888888888
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              6,
+              2
+            ],
+            [
+              0,
+              8
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        }
+      },
+      "role_neutral": {
+        "correct": 12,
+        "accuracy": 0.75,
+        "nll": 0.6737045635825799,
+        "metrics": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 0.75,
+          "binary_log_loss": 0.6737045635825799,
+          "macro_f1": 0.7333333333333334,
+          "balanced_accuracy": 0.75,
+          "class_recall": {
+            "0": 1,
+            "1": 0.5
+          },
+          "class_f1": {
+            "0": 0.8,
+            "1": 0.6666666666666666
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        }
+      },
+      "role_goal_true": {
+        "correct": 14,
+        "accuracy": 0.875,
+        "nll": 0.6705690459358353,
+        "metrics": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 0.875,
+          "binary_log_loss": 0.6705690459358353,
+          "macro_f1": 0.873015873015873,
+          "balanced_accuracy": 0.875,
+          "class_recall": {
+            "0": 1,
+            "1": 0.75
+          },
+          "class_f1": {
+            "0": 0.8888888888888888,
+            "1": 0.8571428571428571
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0
+            ],
+            [
+              2,
+              6
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        }
+      },
+      "role_goal_false": {
+        "correct": 8,
+        "accuracy": 0.5,
+        "nll": 0.6863148189891692,
+        "metrics": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 0.6863148189891692,
+          "macro_f1": 0.3333333333333333,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 1,
+            "1": 0
+          },
+          "class_f1": {
+            "0": 0.6666666666666666,
+            "1": 0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0
+            ],
+            [
+              8,
+              0
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        }
+      }
+    },
+    "km_t04": {
+      "n_rows": 16,
+      "n_unique_sender_inputs": 8,
+      "original_neutral": {
+        "correct": 16,
+        "accuracy": 1,
+        "nll": 0.6013155961923367,
+        "metrics": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 1,
+          "binary_log_loss": 0.6013155961923367,
+          "macro_f1": 1,
+          "balanced_accuracy": 1,
+          "class_recall": {
+            "0": 1,
+            "1": 1
+          },
+          "class_f1": {
+            "0": 1,
+            "1": 1
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0
+            ],
+            [
+              0,
+              8
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        }
+      },
+      "role_neutral": {
+        "correct": 12,
+        "accuracy": 0.75,
+        "nll": 0.6344015553295199,
+        "metrics": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 0.75,
+          "binary_log_loss": 0.6344015553295199,
+          "macro_f1": 0.7333333333333334,
+          "balanced_accuracy": 0.75,
+          "class_recall": {
+            "0": 1,
+            "1": 0.5
+          },
+          "class_f1": {
+            "0": 0.8,
+            "1": 0.6666666666666666
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        }
+      },
+      "role_goal_true": {
+        "correct": 12,
+        "accuracy": 0.75,
+        "nll": 0.6274332645193375,
+        "metrics": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 0.75,
+          "binary_log_loss": 0.6274332645193375,
+          "macro_f1": 0.7333333333333334,
+          "balanced_accuracy": 0.75,
+          "class_recall": {
+            "0": 1,
+            "1": 0.5
+          },
+          "class_f1": {
+            "0": 0.8,
+            "1": 0.6666666666666666
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        }
+      },
+      "role_goal_false": {
+        "correct": 8,
+        "accuracy": 0.5,
+        "nll": 0.6596022724727526,
+        "metrics": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 0.6596022724727526,
+          "macro_f1": 0.3333333333333333,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 1,
+            "1": 0
+          },
+          "class_f1": {
+            "0": 0.6666666666666666,
+            "1": 0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0
+            ],
+            [
+              8,
+              0
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        }
+      }
+    }
+  },
+  "comparators_and_visibility_controls": {
+    "nested_question__sender__nested__text": {
+      "original_neutral": {
+        "metrics": {
+          "n_rows": 64,
+          "class_counts": {
+            "0": 32,
+            "1": 32
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 0.6931471805599453,
+          "macro_f1": 0.3333333333333333,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 1,
+            "1": 0
+          },
+          "class_f1": {
+            "0": 0.6666666666666666,
+            "1": 0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              32,
+              0
+            ],
+            [
+              32,
+              0
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "n_rows": 64,
+        "n_unique_sender_inputs": 32
+      },
+      "role_neutral": {
+        "metrics": {
+          "n_rows": 64,
+          "class_counts": {
+            "0": 32,
+            "1": 32
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 0.6931471805599453,
+          "macro_f1": 0.3333333333333333,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 1,
+            "1": 0
+          },
+          "class_f1": {
+            "0": 0.6666666666666666,
+            "1": 0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              32,
+              0
+            ],
+            [
+              32,
+              0
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "n_rows": 64,
+        "n_unique_sender_inputs": 32
+      },
+      "role_goal_true": {
+        "metrics": {
+          "n_rows": 64,
+          "class_counts": {
+            "0": 32,
+            "1": 32
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 0.6931471805599453,
+          "macro_f1": 0.3333333333333333,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 1,
+            "1": 0
+          },
+          "class_f1": {
+            "0": 0.6666666666666666,
+            "1": 0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              32,
+              0
+            ],
+            [
+              32,
+              0
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "n_rows": 64,
+        "n_unique_sender_inputs": 32
+      },
+      "role_goal_false": {
+        "metrics": {
+          "n_rows": 64,
+          "class_counts": {
+            "0": 32,
+            "1": 32
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 0.6931471805599453,
+          "macro_f1": 0.3333333333333333,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 1,
+            "1": 0
+          },
+          "class_f1": {
+            "0": 0.6666666666666666,
+            "1": 0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              32,
+              0
+            ],
+            [
+              32,
+              0
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "n_rows": 64,
+        "n_unique_sender_inputs": 32
+      }
+    },
+    "nested_question__sender__reader__layer_16": {
+      "original_neutral": {
+        "metrics": {
+          "n_rows": 64,
+          "class_counts": {
+            "0": 32,
+            "1": 32
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 0.6931471805599453,
+          "macro_f1": 0.3333333333333333,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 1,
+            "1": 0
+          },
+          "class_f1": {
+            "0": 0.6666666666666666,
+            "1": 0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              32,
+              0
+            ],
+            [
+              32,
+              0
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "n_rows": 64,
+        "n_unique_sender_inputs": 32
+      },
+      "role_neutral": {
+        "metrics": {
+          "n_rows": 64,
+          "class_counts": {
+            "0": 32,
+            "1": 32
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 0.6931471805599453,
+          "macro_f1": 0.3333333333333333,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 1,
+            "1": 0
+          },
+          "class_f1": {
+            "0": 0.6666666666666666,
+            "1": 0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              32,
+              0
+            ],
+            [
+              32,
+              0
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "n_rows": 64,
+        "n_unique_sender_inputs": 32
+      },
+      "role_goal_true": {
+        "metrics": {
+          "n_rows": 64,
+          "class_counts": {
+            "0": 32,
+            "1": 32
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 0.6931471805599453,
+          "macro_f1": 0.3333333333333333,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 1,
+            "1": 0
+          },
+          "class_f1": {
+            "0": 0.6666666666666666,
+            "1": 0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              32,
+              0
+            ],
+            [
+              32,
+              0
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "n_rows": 64,
+        "n_unique_sender_inputs": 32
+      },
+      "role_goal_false": {
+        "metrics": {
+          "n_rows": 64,
+          "class_counts": {
+            "0": 32,
+            "1": 32
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 0.6931471805599453,
+          "macro_f1": 0.3333333333333333,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 1,
+            "1": 0
+          },
+          "class_f1": {
+            "0": 0.6666666666666666,
+            "1": 0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              32,
+              0
+            ],
+            [
+              32,
+              0
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "n_rows": 64,
+        "n_unique_sender_inputs": 32
+      }
+    },
+    "nested_question__sender__reader__text": {
+      "original_neutral": {
+        "metrics": {
+          "n_rows": 64,
+          "class_counts": {
+            "0": 32,
+            "1": 32
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 0.6931471805599453,
+          "macro_f1": 0.3333333333333333,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 1,
+            "1": 0
+          },
+          "class_f1": {
+            "0": 0.6666666666666666,
+            "1": 0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              32,
+              0
+            ],
+            [
+              32,
+              0
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "n_rows": 64,
+        "n_unique_sender_inputs": 32
+      },
+      "role_neutral": {
+        "metrics": {
+          "n_rows": 64,
+          "class_counts": {
+            "0": 32,
+            "1": 32
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 0.6931471805599453,
+          "macro_f1": 0.3333333333333333,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 1,
+            "1": 0
+          },
+          "class_f1": {
+            "0": 0.6666666666666666,
+            "1": 0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              32,
+              0
+            ],
+            [
+              32,
+              0
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "n_rows": 64,
+        "n_unique_sender_inputs": 32
+      },
+      "role_goal_true": {
+        "metrics": {
+          "n_rows": 64,
+          "class_counts": {
+            "0": 32,
+            "1": 32
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 0.6931471805599453,
+          "macro_f1": 0.3333333333333333,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 1,
+            "1": 0
+          },
+          "class_f1": {
+            "0": 0.6666666666666666,
+            "1": 0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              32,
+              0
+            ],
+            [
+              32,
+              0
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "n_rows": 64,
+        "n_unique_sender_inputs": 32
+      },
+      "role_goal_false": {
+        "metrics": {
+          "n_rows": 64,
+          "class_counts": {
+            "0": 32,
+            "1": 32
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 0.6931471805599453,
+          "macro_f1": 0.3333333333333333,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 1,
+            "1": 0
+          },
+          "class_f1": {
+            "0": 0.6666666666666666,
+            "1": 0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              32,
+              0
+            ],
+            [
+              32,
+              0
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "n_rows": 64,
+        "n_unique_sender_inputs": 32
+      }
+    }
+  },
+  "auroc_diagnostic": {
+    "posthoc": true,
+    "predeclared_primary": false,
+    "threshold_changed": false,
+    "method": "Pairwise positive-negative ranking on 32 unique sender inputs; ties receive half credit. Uniformly duplicated 64-row AUROC is identical. No threshold was chosen, moved or retrospectively optimized.",
+    "conditions": {
+      "original_neutral": {
+        "auroc": 0.95703125,
+        "n_unique_sender_inputs": 32,
+        "class_counts": {
+          "0": 16,
+          "1": 16
+        },
+        "per_group_auroc": {
+          "km_t01": 1,
+          "km_t02": 0.875,
+          "km_t03": 0.9375,
+          "km_t04": 1
+        }
+      },
+      "role_neutral": {
+        "auroc": 0.87890625,
+        "n_unique_sender_inputs": 32,
+        "class_counts": {
+          "0": 16,
+          "1": 16
+        },
+        "per_group_auroc": {
+          "km_t01": 0.8125,
+          "km_t02": 0.875,
+          "km_t03": 0.875,
+          "km_t04": 1
+        }
+      },
+      "role_goal_true": {
+        "auroc": 0.9140625,
+        "n_unique_sender_inputs": 32,
+        "class_counts": {
+          "0": 16,
+          "1": 16
+        },
+        "per_group_auroc": {
+          "km_t01": 1,
+          "km_t02": 1,
+          "km_t03": 1,
+          "km_t04": 1
+        }
+      },
+      "role_goal_false": {
+        "auroc": 0.7578125,
+        "n_unique_sender_inputs": 32,
+        "class_counts": {
+          "0": 16,
+          "1": 16
+        },
+        "per_group_auroc": {
+          "km_t01": 0.875,
+          "km_t02": 0.6875,
+          "km_t03": 0.75,
+          "km_t04": 1
+        }
+      }
+    },
+    "interpretation": "Accuracy changes at the frozen 0.5 threshold combine score displacement and loss of pooled class ranking. Goal-false AUROC remains above chance on this panel; this is neither absence of all predictive information nor a pure constant offset. Goal-true achieves within-wording AUROC 1.0 in all four wordings but pooled AUROC is 0.9140625, indicating between-wording score offsets. No calibration or population-level inference."
+  },
+  "class_score_summary": {
+    "original_neutral": {
+      "mean_p1": 0.5100703285191213,
+      "mean_probability_log_odds": 0.04035140381907726,
+      "class_means": {
+        "0": {
+          "n_unique_sender_inputs": 16,
+          "mean_p1": 0.4830789710292296,
+          "mean_probability_log_odds": -0.06800412838614048,
+          "min_p1": 0.4190491996398789,
+          "max_p1": 0.53000573939742
+        },
+        "1": {
+          "n_unique_sender_inputs": 16,
+          "mean_p1": 0.5370616860090133,
+          "mean_probability_log_odds": 0.14870693602429502,
+          "min_p1": 0.4988372439084428,
+          "max_p1": 0.5625733387265153
+        }
+      }
+    },
+    "role_neutral": {
+      "mean_p1": 0.47784634237975204,
+      "mean_probability_log_odds": -0.08902070520907485,
+      "class_means": {
+        "0": {
+          "n_unique_sender_inputs": 16,
+          "mean_p1": 0.4586545584018343,
+          "mean_probability_log_odds": -0.16619531423381453,
+          "min_p1": 0.4172340896545468,
+          "max_p1": 0.5139054687351496
+        },
+        "1": {
+          "n_unique_sender_inputs": 16,
+          "mean_p1": 0.4970381263576699,
+          "mean_probability_log_odds": -0.011846096184335152,
+          "min_p1": 0.46410570525285755,
+          "max_p1": 0.5430165854668494
+        }
+      }
+    },
+    "role_goal_true": {
+      "mean_p1": 0.47604916471082565,
+      "mean_probability_log_odds": -0.09630673043788449,
+      "class_means": {
+        "0": {
+          "n_unique_sender_inputs": 16,
+          "mean_p1": 0.45406853295523497,
+          "mean_probability_log_odds": -0.1847227799408411,
+          "min_p1": 0.41614981469016077,
+          "max_p1": 0.4932308675666611
+        },
+        "1": {
+          "n_unique_sender_inputs": 16,
+          "mean_p1": 0.49802979646641643,
+          "mean_probability_log_odds": -0.007890680934927848,
+          "min_p1": 0.4692792317886709,
+          "max_p1": 0.5355674486991159
+        }
+      }
+    },
+    "role_goal_false": {
+      "mean_p1": 0.4512500418460907,
+      "mean_probability_log_odds": -0.19609457042469722,
+      "class_means": {
+        "0": {
+          "n_unique_sender_inputs": 16,
+          "mean_p1": 0.44008275940388103,
+          "mean_probability_log_odds": -0.24131540929905146,
+          "min_p1": 0.40155695181566714,
+          "max_p1": 0.4724217598184328
+        },
+        "1": {
+          "n_unique_sender_inputs": 16,
+          "mean_p1": 0.4624173242883002,
+          "mean_probability_log_odds": -0.15087373155034303,
+          "min_p1": 0.42410854392287595,
+          "max_p1": 0.5049721412008876
+        }
+      }
+    }
+  },
+  "provenance": {
+    "protocol_created_at": "2026-11-20T12:08:36.386183+00:00",
+    "model_started_at": "2026-11-20T12:11:29.149478+00:00",
+    "finished_at": "2026-11-20T12:12:11.264590+00:00",
+    "protocol_sha256": "21c6d53d12ca2c49153f20c8ac67af4db3d8ce154fa6c0fdad872628a216bc5a",
+    "n_new_capture_rows": 192,
+    "n_unique_new_prefixes": 96,
+    "n_reference_checks": 4,
+    "n_repeat_checks": 3,
+    "reference_exact": true,
+    "original_to_role_comparison_status": "reference_exact",
+    "source_unchanged": true,
+    "frozen_fits_unchanged": true,
+    "generated_answers": 0,
+    "layer_index_check": {
+      "status": "passed",
+      "n_prompts": 1,
+      "checks": {
+        "8": {
+          "hf_hidden_state_index": 9,
+          "exact": true
+        },
+        "16": {
+          "hf_hidden_state_index": 17,
+          "exact": true
+        },
+        "24": {
+          "hf_hidden_state_index": 25,
+          "exact": true
+        }
+      }
+    },
+    "reference_checks": [
+      {
+        "case_id": "km_t01_w0_m0_a0_b0",
+        "template_id": "km_t01",
+        "feature_file": "reference_features/km_t01_w0_m0_a0_b0.npz",
+        "ids_exact": true,
+        "layers": {
+          "layer_8": {
+            "exact": true,
+            "max_absolute_difference": 0
+          },
+          "layer_16": {
+            "exact": true,
+            "max_absolute_difference": 0
+          },
+          "layer_24": {
+            "exact": true,
+            "max_absolute_difference": 0
+          }
+        }
+      },
+      {
+        "case_id": "km_t02_w0_m0_a0_b0",
+        "template_id": "km_t02",
+        "feature_file": "reference_features/km_t02_w0_m0_a0_b0.npz",
+        "ids_exact": true,
+        "layers": {
+          "layer_8": {
+            "exact": true,
+            "max_absolute_difference": 0
+          },
+          "layer_16": {
+            "exact": true,
+            "max_absolute_difference": 0
+          },
+          "layer_24": {
+            "exact": true,
+            "max_absolute_difference": 0
+          }
+        }
+      },
+      {
+        "case_id": "km_t03_w0_m0_a0_b0",
+        "template_id": "km_t03",
+        "feature_file": "reference_features/km_t03_w0_m0_a0_b0.npz",
+        "ids_exact": true,
+        "layers": {
+          "layer_8": {
+            "exact": true,
+            "max_absolute_difference": 0
+          },
+          "layer_16": {
+            "exact": true,
+            "max_absolute_difference": 0
+          },
+          "layer_24": {
+            "exact": true,
+            "max_absolute_difference": 0
+          }
+        }
+      },
+      {
+        "case_id": "km_t04_w0_m0_a0_b0",
+        "template_id": "km_t04",
+        "feature_file": "reference_features/km_t04_w0_m0_a0_b0.npz",
+        "ids_exact": true,
+        "layers": {
+          "layer_8": {
+            "exact": true,
+            "max_absolute_difference": 0
+          },
+          "layer_16": {
+            "exact": true,
+            "max_absolute_difference": 0
+          },
+          "layer_24": {
+            "exact": true,
+            "max_absolute_difference": 0
+          }
+        }
+      }
+    ],
+    "repeats": [
+      {
+        "condition": "role_neutral",
+        "ids_exact": true,
+        "layers_exact": {
+          "layer_8": true,
+          "layer_16": true,
+          "layer_24": true
+        }
+      },
+      {
+        "condition": "role_goal_true",
+        "ids_exact": true,
+        "layers_exact": {
+          "layer_8": true,
+          "layer_16": true,
+          "layer_24": true
+        }
+      },
+      {
+        "condition": "role_goal_false",
+        "ids_exact": true,
+        "layers_exact": {
+          "layer_8": true,
+          "layer_16": true,
+          "layer_24": true
+        }
+      }
+    ],
+    "raw_runs_preserved_and_git_ignored": true
+  },
+  "retry_ledger": {
+    "failed_run": "runs/belief_goal_stress_v1",
+    "failed_status": "failed",
+    "failed_started_at": "2026-11-20T12:05:40.623803+00:00",
+    "failed_finished_at": "2026-11-20T12:06:21.652491+00:00",
+    "failed_capture_rows": 152,
+    "error_type": "PermissionError",
+    "error": "[Errno 13] Permission denied: '/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/runs/belief_goal_stress_v1/captures.json.6zn3_84d.tmp' -> '/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/runs/belief_goal_stress_v1/captures.json'",
+    "failed_run_has_report": false,
+    "failed_run_has_predictions": false,
+    "action": "Preserved the failed partial run unscored. Repeated the identical prospective assay once into a new WSL-native output directory, avoiding the OneDrive-hosted atomic-write path.",
+    "policy_changed": false,
+    "planned_inputs_changed": false,
+    "model_or_probe_settings_changed": false,
+    "result_based_selection": false,
+    "shared_surviving_vector_files": 82,
+    "shared_vector_files_byte_identical": 82,
+    "one_drive_cause_note": "The recorded fact is PermissionError during atomic replacement in a OneDrive-hosted directory. The identity of the process responsible for the access failure was not established."
+  },
+  "independent_audit": {
+    "implementation": "Independent read-only Node ZIP/NPY parser, source-transform scorer and TF-IDF reconstruction; no fitting or model calls.",
+    "status": "passed",
+    "file_hash_checks": 615,
+    "native_mirror_files_byte_verified": 109,
+    "verified_prediction_rows": 1024,
+    "max_probability_difference": 4.996003610813204e-16,
+    "metric_objects_checked_including_per_group": 80,
+    "hidden_reader_metric_objects": 40,
+    "new_row_layer_prefix_bindings": 576,
+    "reference_layer_bindings": 12,
+    "backend_signature_fields": 14,
+    "new_input_roster_matches_protocol": true,
+    "current_labels_and_visible_scene_question_invariant": true,
+    "shared_system_scaffold_and_candidate_frequency_equal": true,
+    "actual_delivery_pairs_hidden": true,
+    "source_and_fits_unchanged": true,
+    "failed_and_complete_run_policies_and_inputs_identical": true
+  },
+  "backend_identity": {
+    "backend": "huggingface",
+    "is_test_fixture": false,
+    "model_id": "meta-llama/Llama-3.1-8B-Instruct",
+    "resolved_revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+    "dtype": "bfloat16",
+    "quantization": "4bit",
+    "decoder_blocks": 32,
+    "hidden_size": 4096,
+    "capture_layers": [
+      8,
+      16,
+      24
+    ],
+    "chat_template_sha256": "ca5b86f15c19b53c24ff18228849e06ffb677b952d85171c66d9b720d924f9bb",
+    "special_token_ids": {
+      "eos": 128009,
+      "pad": null
+    },
+    "attention_implementation": "sdpa"
+  },
+  "machine_hashes": {
+    "major_complete_run_files": {
+      "runs/belief_goal_stress_v2/manifest.json": "760c7e120254d86bd270114742f1e7163de482c2ee00cde42803c30f6cadd324",
+      "runs/belief_goal_stress_v2/protocol.json": "21c6d53d12ca2c49153f20c8ac67af4db3d8ce154fa6c0fdad872628a216bc5a",
+      "runs/belief_goal_stress_v2/rows.json": "7f9f229a9f727934591ba92d0fbdea6c00897b5fb4de251300b0f19bfd5e5a6a",
+      "runs/belief_goal_stress_v2/features.npz": "58eaeae48dc3052d71da4c9ddcc6f6661a5e8e7d567cc7793952335641029485",
+      "runs/belief_goal_stress_v2/captures.json": "f606a70172b19344cfcbdc4ec7b747be78d4224354b86db64bceac27d93cd49d",
+      "runs/belief_goal_stress_v2/reference_checks.json": "b4b334062cebb5ec78c526c52c2604c051980fc983923fd771d8d78703809fdd",
+      "runs/belief_goal_stress_v2/repeats.json": "237fd7ae65bf7e6ed1718719263dec6ae5c2fab88ee09ff6d73b53be6e2a3841",
+      "runs/belief_goal_stress_v2/report.json": "696976e54d0c6257e66ddd91b88f17748d44b17ed123fa63a0bd11a348450a5a",
+      "runs/belief_goal_stress_v2/predictions.json": "1b02bcfcedf1db18152cc57c538eb3bf1922a783137d7b213c5ac7e445cec68f"
+    },
+    "failed_run_manifest": "cb9555f88b83ca153679f6052f15de5d97e8fdebfec1a612d4ef2d89478a2a65",
+    "failed_run_protocol": "dd79e3801f310110ee12c82bc8e2a60026e6876682de9cad30ec7d2f6f33137a",
+    "known_message_source_manifest": "2cefb611b9124ea233674f1f7b5349ca4ffd5f964b167600285eedd339d3186a",
+    "source_policies": {
+      "scripts/run_belief_goal_stress.py": "1979186ca9119a89a62620e4a33779a6da99c7407245fda32f24f3f0e5f84495",
+      "scripts/run_belief_diagnostic.py": "ae85e31fbc18c922c407806cc4d0a65579055163fb7c36b5b61fb1c15b719540",
+      "scripts/run_belief_query_comparison.py": "bdfdb58a18194019ffb9ba27ac5630480e297d5b39cc793d9d9c247759a88b44",
+      "src/latent_probes/message_belief_panel.py": "11b48505f2bffa2fe30913fbe0ad2c4a70c114c4f143ac8555f3fa10a39598ff",
+      "src/latent_probes/belief_panel.py": "b163395913cdfdd57c5f896949e4e41d22108c3b52a20718543a210cc5966679",
+      "src/latent_probes/belief_query_panel.py": "1a898db8d0b36d23ee36a7625c6891dbc4ad66fb0ac617f294d6ec6ea2180cb1",
+      "src/latent_probes/belief_query_readout.py": "a69aeb4994e2beb4a0c110d438f9bf126e3cd87eb9a3558dfd8eab8fbf90bdc7",
+      "src/latent_probes/belief_readout.py": "f225794416363b3d219b816e8aa23a7ba89343e54cef97e82d96e08624e11d3f",
+      "src/latent_probes/backends.py": "692d9778e4bf69081ab1afea702dfd573119f2b6cc454e51072bb3d2233402a2",
+      "src/latent_probes/config.py": "0fc63546c88a826bc1e87efeebb51b6a23488272e0d76de8018fdd99543bb608",
+      "src/latent_probes/storage.py": "1de87a24cc3bd701c0384d648d405ddb6066280beae3e21bf1b173c203ee0e84"
+    },
+    "fitted_artifacts": {
+      "fit_metadata.json": "501516986ca7c6aad95b0f5d939b2a902676128eba9ea707c1a0a4d4d4883c14",
+      "manifest.json": "8df46ba4a9f0f76615c309276fef8cda12eec164709d485f5fe0f1b7df3f7515",
+      "parameters.npz": "7b162cfe3b17c850cefd1fe6b62fcf2834d643983adbcdadde8eee3e2cce735d",
+      "predictions.csv": "cb835a9fcb56062f5dbee29e61cbc740b1070ca9c2ab2e8ca5b345c7242d02b8",
+      "report.json": "2b13efa53e62691a3f09ae0a8e7fcaa62ce3e9e6455156abd4290bf76ad2c080",
+      "rows.json": "2a7e035ab7eed25115143533eb21f86109813ac5e8d34ce9de5ceb28c4169e20",
+      "text_transforms.json": "67676c4fb98ccbeefcdf90aff64ac1d56507fac37dcdb479f500a5db3b18c20b"
+    }
+  },
+  "limitations": [
+    "Future goals do not change stipulated current nested beliefs. Score shifts can reflect goal wording, polarity, token length/position, or task framing.",
+    "Original baseline has no added role; role_neutral controls that framing in comparisons between new conditions.",
+    "Sixty-four rows contain 32 unique sender inputs within four authored wording groups. These are not 64 independent samples.",
+    "No actual report, reader outcome, deceptive behavior, causal belief mechanism or calibrated deception probability is measured.",
+    "The prior-trained queried head and text counterpart remain frozen; no layer search or new head training.",
+    "Already-observed cases and four wordings of one logical family; no fresh validation or independent-row p-value.",
+    "The neutral role scaffold alone changes the baseline. Do not attribute original-to-goal differences wholly to the future objective.",
+    "Goal-true versus goal-false differences confound intended preference with negation wording, polarity and length.",
+    "Post-hoc AUROC and emitted score summaries do not license retrospective threshold tuning, calibration or an information-absence claim.",
+    "TF-IDF is a limited comparator; actual communication and competitive text-reasoning monitoring remain untested by this assay.",
+    "Fictional data and added prompt materials remain agent-assisted drafts needing independent human review."
+  ],
+  "next_controls": [
+    "Express desired later beliefs directly as the first versus second named location, avoiding the word negation.",
+    "Add irrelevant future goals and matched-length task controls before isolating semantic goal sensitivity.",
+    "Freeze fresh human-reviewed families and independent neutral calibration before transferring to actual pressured communication."
+  ]
+}

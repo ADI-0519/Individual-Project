@@ -191,6 +191,79 @@ def _load_results(path: Path | None) -> dict[str, Any]:
                 raise ValueError(f"{key} cannot exceed test_rows_per_condition.")
         if readout["status"] != "complete":
             raise ValueError("Supply measured natural-pilot counts only with a completed readout.")
+    if "known_message" in result:
+        known = result["known_message"]
+        mask = result.get("mask_specificity")
+        if not isinstance(known, dict) or not isinstance(mask, dict):
+            raise ValueError("The latest milestone requires known_message and mask_specificity.")
+        known_counts = (
+            "n_rows",
+            "n_unique_inputs",
+            "n_wording_groups",
+            "queried_correct",
+            "story_correct",
+            "world_question_correct",
+            "direct_correct",
+            "direct_invalid",
+            "structured_correct",
+        )
+        mask_counts = (
+            "source_cases",
+            "natural_responses",
+            "calibration_responses",
+            "belief_responses",
+            "pressure_responses",
+            "ablated_responses",
+            "strict_belief_cases",
+            "strict_clean_task_responses",
+            "secondary_honest_responses",
+            "secondary_opposing_responses",
+            "secondary_honest_cases",
+            "secondary_opposing_cases",
+            "secondary_pooled_cases",
+        )
+        for values, keys in ((known, known_counts), (mask, mask_counts)):
+            for key in keys:
+                if type(values.get(key)) is not int or values[key] < 0:
+                    raise ValueError(f"Latest measured count {key} must be a nonnegative integer.")
+        if known["n_rows"] != 2 * known["n_unique_inputs"] or known["n_unique_inputs"] == 0:
+            raise ValueError("Known-message rows must preserve paired sender-input denominators.")
+        for key in known_counts[3:]:
+            if known[key] > known["n_rows"]:
+                raise ValueError(f"{key} cannot exceed the known-message row count.")
+        if known["direct_correct"] + known["direct_invalid"] > known["n_rows"]:
+            raise ValueError("Direct correct and invalid counts cannot overlap.")
+        if mask["natural_responses"] != sum(
+            mask[key]
+            for key in (
+                "calibration_responses",
+                "belief_responses",
+                "pressure_responses",
+                "ablated_responses",
+            )
+        ):
+            raise ValueError("MASK response counts must include reference, belief and task draws.")
+        for key in (
+            "strict_belief_cases",
+            "secondary_honest_cases",
+            "secondary_opposing_cases",
+            "secondary_pooled_cases",
+        ):
+            if mask[key] > mask["source_cases"]:
+                raise ValueError(f"{key} cannot exceed the MASK source panel.")
+        if (
+            mask["strict_clean_task_responses"]
+            > mask["pressure_responses"] + mask["ablated_responses"]
+        ):
+            raise ValueError("Strict clean task responses cannot exceed task generations.")
+        if (
+            not max(mask["secondary_honest_cases"], mask["secondary_opposing_cases"])
+            <= mask["secondary_pooled_cases"]
+            <= mask["secondary_honest_cases"] + mask["secondary_opposing_cases"]
+        ):
+            raise ValueError("Secondary pooled cases must preserve the class-case union.")
+        if mask.get("label_audited") is not False or mask.get("needs_human_review") is not True:
+            raise ValueError("Current MASK labels must remain explicitly provisional.")
     return result
 
 
@@ -275,6 +348,8 @@ def _header(slide: Slide, section: str, title: str, number: int, date: str) -> N
 
 
 def _slides(results: dict[str, Any]) -> list[Slide]:
+    if "known_message" in results:
+        return _latest_slides(results)
     date = results["progress_date"]
     provenance = (
         "Measured snapshot: " + results["snapshot_date"] + ". Defaults are sourced from "
@@ -660,7 +735,310 @@ def _slides(results: dict[str, Any]) -> list[Slide]:
     return [title, current, barriers, next_steps]
 
 
-def _write_deck(template: Path, pptx_path: Path, pdf_path: Path, slides: list[Slide]) -> None:
+def _latest_slides(results: dict[str, Any]) -> list[Slide]:
+    """Four-slide measured update; retain legacy snapshots and the original renderer."""
+    date, known, mask = (
+        results["progress_date"],
+        results["known_message"],
+        results["mask_specificity"],
+    )
+    provenance = (
+        "Measured snapshot: " + results["snapshot_date"] + ". All supplied results, including "
+        "historical pilot metrics, are retained below. Software-test counts are historical "
+        "verification records, not independent model experiments.\n"
+        + json.dumps(results, ensure_ascii=False, indent=2)
+    )
+    title = Slide(NAVY)
+    title.text("KING'S COLLEGE LONDON / 6CCSAPRJ", 0.7, 0.4, 12, 10, "#B7CBCF", True)
+    title.text("VARIANT 02 · LATENT PROBES UNDER DISTRIBUTION SHIFT", 0.7, 0.95, 12, 11, GOLD, True)
+    title.text("Latent Probes\nand Listener Beliefs", 0.7, 1.6, 8.2, 43, WHITE, True, leading=1.1)
+    title.text(
+        "Testing robustness under reporting pressure and shifts in what a reader knows.",
+        0.75,
+        3.45,
+        7.5,
+        23,
+        "#E2EBEA",
+        max_height=1.65,
+    )
+    title.text("ADITYA RANJAN", 0.75, 6.25, 7.8, 16, WHITE, True)
+    title.text(f"Hanqi Yan · Supervisor\nProgress 2 · {date}", 0.75, 6.65, 7.8, 12, "#B7CBCF")
+    for y, label, body in (
+        (1.65, "FROZEN COMPARATOR", "8B Apollo adaptation; audited training pipeline"),
+        (3.2, "NEUTRAL VALIDATION", "Separate reality, reader belief and sender attribution"),
+        (4.75, "PRESSURE TRANSFER", "Main study follows independent validation"),
+    ):
+        title.rect(9, y, 3.6, 1.15, "#243D50")
+        title.text(label, 9.2, y + 0.15, 3.18, 11, GOLD, True)
+        title.text(body, 9.2, y + 0.44, 3.15, 16, WHITE, max_height=0.65)
+    title.line(10.8, 2.85, 10.8, 3.13, "#A9C2C5")
+    title.line(10.8, 4.40, 10.8, 4.68, "#A9C2C5")
+    title.text(
+        "Belief labels are stipulated; a causal mechanism remains unproven.",
+        9,
+        6.25,
+        3.6,
+        12,
+        "#B7CBCF",
+    )
+    title.notes = (
+        "This preserves the submitted Week 1 project title and the neutral-readout-to-pressure "
+        "research direction. The supervisor's classic Apollo/MASK test and omission extension "
+        "remain required. The nested-belief diagnostic is an additional controlled validation "
+        "stage, not an already validated communication monitor. Neither readout accuracy nor "
+        "a reader decision establishes deceptive intent or spontaneous second-order reasoning.\n\n"
+        + provenance
+    )
+
+    current = Slide()
+    _header(
+        current,
+        "CURRENT STATE · SINCE PROGRESS 1",
+        "Baselines built; new frozen transfer evidence",
+        2,
+        date,
+    )
+    cards = (
+        (
+            "APOLLO ADAPTATION",
+            str(results["baseline_examples"]),
+            "saved 8B dialogue captures",
+            f"Instruction AUROC {results['baseline_instruction_auroc']:.2f};\nbehavioural validation is separate.",
+        ),
+        (
+            "MASK SPECIFICITY PILOT",
+            str(mask["natural_responses"]),
+            "88 MASK + 32 neutral reference",
+            f"Strict: {mask['strict_clean_task_responses']} clean task answers.\nHuman review is pending.",
+        ),
+        (
+            "FROZEN BELIEF TRANSFER",
+            f"{known['queried_correct']}/{known['n_rows']}",
+            f"{known['queried_correct'] // 2}/{known['n_unique_inputs']} unique sender inputs",
+            "Known-message task, after belief question. No refitting on these cases.",
+        ),
+    )
+    for x, (label, value, unit, body) in zip((0.65, 4.78, 8.91), cards, strict=True):
+        current.rect(x, 2.03, 3.78, 2.73, PALE)
+        current.text(label, x + 0.18, 2.22, 3.42, 11.5, TEAL, True)
+        current.text(value, x + 0.18, 2.58, 3.35, 37, INK, True)
+        current.text(unit, x + 0.18, 3.21, 3.38, 14, MUTED, True, max_height=0.5)
+        current.text(body, x + 0.18, 3.65, 3.36, 17, INK, max_height=1.02)
+    current.rect(0.65, 4.99, 12.03, 1.10, NAVY)
+    current.text(
+        "Promising queried transfer; sensitive to context and questions",
+        0.85,
+        5.13,
+        11.60,
+        20,
+        WHITE,
+        True,
+        max_height=0.40,
+    )
+    current.text(
+        f"Story / world-question heads: {known['story_correct']}/{known['n_rows']}. Direct answers: {known['direct_correct']}/{known['n_rows']}; {known['direct_invalid']} capped invalids.",
+        0.85,
+        5.60,
+        11.60,
+        15,
+        "#DFE9E9",
+        max_height=0.40,
+    )
+    current.text(
+        "64 rows = 32 unique inputs; four wordings of one logical family; human review pending.",
+        0.7,
+        6.27,
+        12,
+        11,
+        MUTED,
+    )
+    current.text(
+        "Plan: baseline complete → validation pilots complete → main pressure-transfer study ahead",
+        0.7,
+        6.59,
+        12,
+        15,
+        INK,
+        True,
+    )
+    current.notes = (
+        "Apollo: 268 eligible fact pairs / 536 dialogues. Training separates honest versus "
+        "dishonest instructions using the same truthful continuation. Prompt-only text AUROC "
+        "also reaches 1.00; this is a documented smaller-model/quantization adaptation, not "
+        "reproduction of the paper's full strategic-deception evaluation.\n\n"
+        "MASK: eight prospectively chosen source cases; 32 independent neutral-reference "
+        "responses, 40 belief-elicitation responses, 24 pressure and 24 incentive-ablated "
+        "responses. Two cases pass the strict five-clear-concordant belief gate, but no "
+        "task response also passes the clean-assertion gate. The separate upstream-code-"
+        "compatible diagnostic yields four pressured honest assertions from two cases and "
+        "five pressured opposing assertions from two cases, with three cases in their union. These "
+        "secondary counts apply the clean whole-response exclusions to draft annotations; "
+        "they are not merely focal-only counts, primary clean negatives or a general "
+        "false-positive-rate estimate. Refusals, truncation and ambiguity stay "
+        "visible. The reference cutoff is not a validated honesty FPR.\n\n"
+        "Known-message transfer: the previously frozen neutral nested-question block-16 "
+        "sender head scores 56/64 paired rows = 28/32 unique inputs. No refitting, layer "
+        "choice or recalibration used this panel. Corresponding story and world-question "
+        "heads score 32/64; the queried head transferred unchanged to story-only states "
+        "also scores 32/64. This is question-conditioned transfer from observation evidence "
+        "to an exact known message. Source and new tasks retain the same XNOR composition. "
+        "It is not anticipation of an unknown report, natural pressure transfer, a causal "
+        "mechanism or validated unqueried belief decoding. Four wordings are one family; "
+        "labels specify fictional states and need human review.\n\n"
+        "Direct answers score 44/64, including four length-capped invalid rows. Structured "
+        "answers score 32/64 and all 32 unique outputs end FINAL:YES; the scaffold has not "
+        "established a capable text monitor. Post-hoc emitted-field inspection finds 21/32 "
+        "attributed places correct, but 19/32 finals disagree with their own attribution. "
+        "This does not identify internal causal reasoning or replace the frozen endpoint.\n\n"
+        "Earlier natural-report pilot: 84 reports across 24 development cases; after-report "
+        "activation predicts 10/12 pressure outcomes while an exploratory literal text-copy "
+        "rule gets 11/12. Added value beyond text remains unestablished.\n\n" + provenance
+    )
+
+    barriers = Slide()
+    _header(barriers, "CURRENT BARRIERS", "Validation limits come before scaling", 3, date)
+    issues = (
+        (
+            "Behaviour labels",
+            "The strict clean MASK task subset is empty; draft labels need human review.",
+            "Review assertions and belief evidence; freeze the next sample and both eligibility rules.",
+        ),
+        (
+            "Context robustness",
+            "Role: 44/64. Future goals: 50/64 versus 34/64; current target unchanged.",
+            "Question dependence and observed-bank sensitivity need independent neutral validation.",
+        ),
+        (
+            "Text comparator",
+            "Structured answers always end YES; direct answers include capped failures.",
+            "Preserve failures and improve the comparator prospectively before claiming an advantage.",
+        ),
+        (
+            "Compute / scale",
+            "Local NF4 results do not establish BF16 or cross-model robustness.",
+            "Request one CREATE A100 40 GB for a matched BF16 reference, then second-reader replay.",
+        ),
+    )
+    for index, (label, issue, response) in enumerate(issues):
+        y = 2.03 + 1.12 * index
+        if index % 2 == 0:
+            barriers.rect(0.65, y - 0.08, 12.03, 1.05, PALE)
+        barriers.text(label, 0.82, y + 0.08, 1.95, 16, TEAL, True, max_height=0.8)
+        barriers.text(issue, 3, y + 0.04, 4.1, 16.5, INK, max_height=0.9)
+        barriers.text(response, 7.58, y + 0.04, 4.8, 16.5, INK, max_height=0.9)
+    barriers.notes = (
+        "The small purposive MASK sample does not support representative prevalence or "
+        "a model-wide honest false-positive rate. Strict and upstream-compatible labels "
+        "are different estimands and must remain separately reported. Human review is "
+        "required before research-grade behavioral-label claims. A larger sample and its "
+        "rules must be defined before new outputs; do not substitute favorable cases.\n\n"
+        "The frozen known-message head improves on this authored task but fails in some "
+        "false-message cases. Explicit answers and the text scaffold are not competitive "
+        "monitors merely because they use the same model. Question length/position is not "
+        "matched, and no causal question mechanism is isolated. Pairing means 64 rows are "
+        "32 unique inputs, not 64 independent experimental units.\n\n"
+        "Exploratory goal-context stress test on the already-observed known-message bank: "
+        "the original queried head scores 56/64, a neutral role scaffold 44/64, a future "
+        "goal for the reader to believe the candidate 50/64, and the opposite future goal "
+        "34/64. No new head is fitted and no answer or report is generated. The current "
+        "nested target is unchanged; future objectives are explicitly not new evidence. "
+        "All 32 unique matched inputs have a higher positive-label probability under "
+        "goal-true than goal-false, with mean difference approximately +0.0248. Role framing "
+        "already lowers accuracy, and the goals differ in wording, negation and length. "
+        "This is bounded context sensitivity, not a fresh holdout, changed current belief, "
+        "natural pressured communication, actual deception, reader impact or a causal "
+        "goal effect. Four wordings still share one logical family.\n\n"
+        "CREATE would resolve a defined precision uncertainty: compare NF4 and BF16 "
+        "with the same checkpoint, cases, prompts, extraction and frozen heads on matched "
+        "CREATE hardware/software. No evidence currently establishes that quantization "
+        "caused any failure. A 40 GB GPU permits the roughly 16 GB BF16 weights plus "
+        "runtime overhead. Profile first; later evaluate a second reader on saved reports.\n\n"
+        + provenance
+    )
+
+    next_steps = Slide()
+    _header(
+        next_steps,
+        "PLANNED NEXT STEPS",
+        "Audit labels, validate neutral transfer, then test pressure",
+        4,
+        date,
+    )
+    plans = (
+        (
+            "NOW → 27 NOV",
+            "Human-review MASK labels and neutral stories. Freeze a larger panel and report strict and code-compatible eligibility.",
+        ),
+        (
+            "BY 11 DEC",
+            "Validate neutral belief readouts on new families. Match capture time before pressure transfer; strengthen text controls.",
+        ),
+        (
+            "18 DEC · BSPR",
+            "Report frozen pilots and limitations. Profile a matched BF16 reference on one CREATE A100 40 GB.",
+        ),
+    )
+    for x, (label, body) in zip((0.65, 4.78, 8.91), plans, strict=True):
+        next_steps.rect(x, 2.03, 3.78, 2.82, PALE)
+        next_steps.text(label, x + 0.18, 2.25, 3.42, 13, TEAL, True)
+        next_steps.text(body, x + 0.18, 2.79, 3.38, 19, INK, max_height=1.95)
+    next_steps.text(
+        "JAN: freeze study → FEB: validation → MAR: held-out families + second reader",
+        0.72,
+        5.18,
+        11.9,
+        20,
+        INK,
+        True,
+        max_height=0.75,
+    )
+    next_steps.text(
+        "APR: reproduce figures, finish report / code · Final submission 22 April 2027",
+        0.72,
+        5.94,
+        11.9,
+        17.5,
+        MUTED,
+        max_height=0.4,
+    )
+    next_steps.rect(0.65, 6.47, 12.03, 0.36, NAVY)
+    next_steps.text(
+        "Main-study gate: audited labels and independent neutral validation before pressure transfer.",
+        0.83,
+        6.55,
+        11.65,
+        12,
+        WHITE,
+        max_height=0.25,
+    )
+    next_steps.notes = (
+        "Baseline implementation and development validation pilots are complete; the "
+        "main robustness study is still ahead. Preserve Apollo/MASK and the same-summary "
+        "recipient-knowledge omission comparison from the supervisor's brief. Neutral "
+        "belief readouts add a testable comparator, conditional on construct validation.\n\n"
+        "First obtain independent human review, then prospectively define a larger MASK "
+        "panel and preserve both strict-five and upstream-code-compatible eligibility. "
+        "Do not call every non-lying or refusing response honest. Fix neutral target "
+        "semantics, visibility and activation timing before transferring to pressure. "
+        "Known-message updating and prediction before an unknown future report differ.\n\n"
+        "Later freeze fresh scenario-family holdouts, sampling, monitors and metrics, then "
+        "replay saved reports with a second reader. Main-study uncertainty should resample "
+        "the actual independent scenario units, not token rows. CREATE supports a matched "
+        "precision reference and replication, not repair of ambiguous labels.\n\n"
+        "Intermediate dates are proposed internal milestones. BSPR is 18 December; check "
+        "KEATS for the submission time. The supplied module schedule lists final report "
+        "and source submission on 22 April 2027.\n\n" + provenance
+    )
+    return [title, current, barriers, next_steps]
+
+
+def _write_deck(
+    template: Path,
+    pptx_path: Path,
+    pdf_path: Path,
+    slides: list[Slide],
+    project_name: str = "Same Report, Different Reader",
+) -> None:
     presentation = Presentation(str(template))
     if len(presentation.slides) != 4:
         raise ValueError("The source template must contain exactly four slides.")
@@ -671,9 +1049,9 @@ def _write_deck(template: Path, pptx_path: Path, pdf_path: Path, slides: list[Sl
         raise ValueError("The template must use the original 13.333 × 7.5 inch page.")
     regular, bold_font = _register_fonts()
     pdf = canvas.Canvas(str(pdf_path), pagesize=(WIDTH * 72, HEIGHT * 72))
-    pdf.setTitle("Progress 2 — Same Report, Different Reader — measured results")
+    pdf.setTitle(f"Progress 2 — {project_name} — measured results")
     pdf.setAuthor("Aditya Ranjan")
-    presentation.core_properties.title = "Progress 2 — Same Report, Different Reader"
+    presentation.core_properties.title = f"Progress 2 — {project_name}"
     presentation.core_properties.subject = "Measured project progress, barriers and next steps"
     presentation.core_properties.author = "Aditya Ranjan"
     for index, model in enumerate(slides):
@@ -775,7 +1153,13 @@ def build_progress2(
         temporary_path = Path(temporary)
         temporary_pptx = temporary_path / "measured.pptx"
         temporary_pdf = temporary_path / "measured.pdf"
-        _write_deck(template, temporary_pptx, temporary_pdf, models)
+        _write_deck(
+            template,
+            temporary_pptx,
+            temporary_pdf,
+            models,
+            results.get("project_name", "Same Report, Different Reader"),
+        )
         if _sha256(template) != template_hash:
             raise RuntimeError("Source template changed during generation; outputs not published.")
         # Both outputs have been built successfully before either deliverable is replaced.

@@ -20,7 +20,7 @@ holdouts, a second reader and the final analysis/write-up remain ahead. The
 **Start here:** [Apollo quickstart](docs/APOLLO_QUICKSTART.md) ·
 [paper/source audit](docs/APOLLO_METHOD.md) · [reading log](docs/READING_LOG.md) ·
 [starter audit](docs/STARTER_AUDIT.md) ·
-[planned pressure pilot](docs/PRESSURE_PILOT.md).
+[pressure-pilot protocol](docs/PRESSURE_PILOT.md).
 
 **Current research decision:** [direction and scope](docs/RESEARCH_DIRECTION.md),
 [deep literature audit](docs/LITERATURE_PROBE_AUDIT.md), and
@@ -56,6 +56,28 @@ nested question, and 16/32 after the world-question control. Its unchanged
 question-conditioned head scores 16/32 on story-only states. This is conditional
 decodability across four wording groups, with uneven class recall; it does not
 yet validate an unqueried belief readout for pressured communication.
+
+The [known-message transfer test](docs/KNOWN_MESSAGE_RESULTS.md) now gives a
+positive conditional result: the unchanged queried block-16 head gets **56/64**
+on a new message/receipt mechanism, versus 32/64 for story/world-question heads.
+Direct answers get 44/64 and structured answers 32/64. These are four wording
+groups and 32 unique sender inputs, with human semantic review still required.
+Unqueried transfer, natural pressure transfer and causal belief use remain open.
+
+The [exploratory future-goal context stress test](docs/BELIEF_GOAL_STRESS_RESULTS.md)
+now exposes a robustness limit on those already-observed cases. The same frozen
+head scores 44/64 with a neutral sender-role scaffold, 50/64 with a future
+positive-belief goal and 34/64 with the opposing goal. All 32 unique matched
+inputs shift toward the positive goal in probe probability. No answer or report
+was generated, current gold labels stayed fixed, and role, wording and polarity
+confounds prevent interpreting this as changed belief or deceptive intent.
+
+The [real MASK specificity pilot](docs/MASK_SPECIFICITY_RESULTS.md) is also
+complete: 120 generations and 88 score-blind draft annotations. Strict primary
+eligibility leaves no clean behavioral comparison. A documented secondary
+aggregation retains four pressured honest and five opposing assertions, with
+pooled AUROC 0.50 and only one within-case contrast. These small draft-label
+results do not establish a general honest-response false-positive rate.
 
 The Apollo path trains on selected token rows and scores mean raw projections.
 It is separate from the original last-token baseline documented below.

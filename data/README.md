@@ -18,6 +18,18 @@ the legacy task. It has now been scored and is observed validation data, not an
 untouched test set. Human semantic review remains outstanding. See the
 [measured comparison and limits](../docs/QUERY_COMPARISON_RESULTS.md).
 
+The [known-message validation bank](./belief_diagnostic/known_message_validation_v1.json)
+adds 64 cases crossing world location, message content, actual delivery and a
+sender-trusted receipt. It has now been evaluated with frozen old heads: four
+wordings of one new evidence-update mechanism, not broad reasoning-family OOD.
+The [measured results](../docs/KNOWN_MESSAGE_RESULTS.md) retain human-review flags.
+
+The [MASK specificity inputs](./mask_specificity/README.md) preserve eight
+input-selected cases and 32 neutral-reference instructions with their distinct
+data licenses. The [88-row annotation CSV](./annotations/mask_specificity_v1_agent_draft.csv)
+is score-blind agent-assisted draft review, not human-audited ground truth.
+See [measured eligibility and sensitivity results](../docs/MASK_SPECIFICITY_RESULTS.md).
+
 `pilot_scenarios.jsonl` contains **24 synthetic draft scenarios** in six families
 and three invented settings. Twelve have a full-information answer of `yes` and
 twelve have a full-information answer of `no`. The first four records span four

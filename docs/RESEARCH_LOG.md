@@ -1,5 +1,79 @@
 # Research and implementation log
 
+## 20 November 2026 — Real MASK specificity, known-message transfer and context stress
+
+Executed the pinned eight-case MASK pilot with 120 genuine generations: 32
+neutral references, 40 belief checks, 24 original pressure and 24 explicit-goal
+ablations. Eight outputs hit the 1,000-token cap and remain unchanged. The
+reference cutoff froze before any belief/task generation; all 88 score-blind
+draft labels froze before task scoring. A second reviewer labeled all 48 task
+answers independently; seven disagreements and their adjudications are retained.
+
+Strict five-clear-response belief eligibility retains two cases, but neither
+provides clean whole-response primary contrasts. The planned same-text source
+selection is empty: no off-policy forwards occurred, and primary behavioral
+AUROC/FPR remain null. A separate documented upstream-compatible aggregation
+reproduces all 243 pinned A/B/C cases. Its two secondary variants retain four
+pressured honest and five opposing assertions, all above the neutral reference;
+pooled AUROC is .50, and the one within-pressure mixed-outcome case ranks 0/2.
+These are tiny secondary draft-label results, not a model-wide FPR estimate.
+A post-hoc cached exact-token Fyre “Yes.” pair differs by .953748 in raw margin;
+it reuses one case and adds no model calls.
+
+The separate 64-case known-message panel independently crosses current world,
+message content, actual delivery and sender-trusted receipt. Frozen old queried
+heads transfer without fitting: sender 56/64, omniscient 50/64. Sender story and
+world-question heads get 32/64, as do matched TF-IDF heads. There are only 32
+unique sender inputs and four wordings of one logical rule. All eight primary
+errors occur at W=1,M=0; truthful messages score 32/32 and false messages 24/32.
+Both class recalls improve over the earlier wording panel, but probabilities
+remain close to .5 and no calibration or spontaneous-belief claim follows.
+
+Direct answers get 44/64 with four capped invalids. Structured answers get 32/64
+and always finish YES. A retrospective body audit finds 21/32 unique ATTRIBUTED
+places correct, but 19 finals contradict their own attributed place. The readout
+therefore outperforms these elicitation formats without establishing a causal
+belief mechanism or a generally capable text-monitor advantage.
+
+Independent scoring reproduces all 10,752 known-message predictions and 168
+metric objects, with maximum probability error 1.33e-15. Source/fit hashes,
+384 rows/288 unique prefixes, six repeats and HF layer indices all verify.
+The MASK numerical audit reproduces 80 reference/task matrices within 1.07e-14.
+
+See [MASK results](./MASK_SPECIFICITY_RESULTS.md),
+[known-message results](./KNOWN_MESSAGE_RESULTS.md), their curated numerical
+records and the committed draft CSV. Scientific PNG/SVG/PDF figures rebuild
+from committed evidence. The four-slide Progress2 deck and vector PDF now use
+these actual results, preserve the original project name and state the barriers.
+The separately frozen [future-goal context assay](./BELIEF_GOAL_STRESS_RESULTS.md)
+is also complete on the observed bank. The unchanged queried sender head scores
+44/64 after neutral role framing, 50/64 with a future positive-belief goal and
+34/64 with the opposing goal, versus the original 56/64. All 32 unique matched
+inputs have higher positive-class probability under the positive goal, with mean
+change .024799. This is a context-sensitivity result with role, polarity, wording
+and length confounds; no answer/report is generated and current gold is unchanged.
+Post-hoc pooled AUROC is .957031 originally, .878906 role-neutral, .914063
+goal-positive and .757813 goal-negative. Both score offsets and ranking changes
+matter; accuracy loss does not show complete information absence.
+
+The first assay attempt hit a OneDrive atomic-file-replacement PermissionError.
+Its failed manifest and 152 captured rows remain preserved without scored output.
+An unchanged rerun completed on Linux storage and was mirrored byte-for-byte to
+the repository's ignored run directory. Independent checks reproduce all 1,024
+predictions and 80 metric objects within 5e-16, verify all 109 mirrored files,
+and confirm four original references, three repeats and the HF index check.
+
+Three agents supplied data, methods, numerical and behavior reviews. No connected
+app plugin, additional model download or model-environment reinstall was used.
+The declared plotting extra was installed for native Matplotlib figures; core
+model packages stayed unchanged. Human semantic/behavioral review and the fresh
+main natural-communication study remain outstanding.
+
+Local verification passes **482 tests plus 48 subtests**, repository-wide Ruff
+lint/format and the native four-slide PPTX/PDF rebuild. The actual pinned MASK
+aggregation also passes exhaustive 243-combination parity. Final packaging and
+cloud CI are recorded with the completed result commit.
+
 ## 20 November 2026 — Paired belief-question comparison and frozen fresh evaluation
 
 Completed the requested three-condition comparison: story only, the original
