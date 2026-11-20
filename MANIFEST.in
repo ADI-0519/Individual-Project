@@ -3,6 +3,7 @@ include data/README.md data/pilot_scenarios.jsonl data/probe_examples_template.j
 recursive-include data/examples *.jsonl
 recursive-include data/reader_panel *.json
 recursive-include data/reader_forecast *.json
+recursive-include data/belief_diagnostic *.json
 recursive-include data/annotations *.csv
 recursive-include configs *.json
 recursive-include docs *.md
