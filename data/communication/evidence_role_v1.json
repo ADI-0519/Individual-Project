@@ -1,0 +1,878 @@
+{
+  "schema_version": 1,
+  "panel_id": "evidence_role_substitution_v1",
+  "reader_policy_sha256": "6dda261f5d5c7667ea29885bddd1c47410f34d59e1807819a317008da570c779",
+  "status": "Prospective reader-only failure diagnostic; no outputs observed.",
+  "authoring_notes": [
+    "Six conditions per case cross two value sides with decisive, administrative metadata, or metadata plus explicit missing-decisive-attribute wording.",
+    "Date comparisons use completion dates versus administrative registration dates; score comparisons use evaluation scores versus administrative file-ID numbers. A missing target attribute supports DEFER.",
+    "The exact original nine-shot prefix/system/checkpoint/parser/eight-token budget remain frozen. This panel neither qualifies a reader nor licenses probe fitting or ct generation.",
+    "All96conditions are reported from one batch. Repeated conditions share16case clusters and two authored grammars; no broad population or intent claim."
+  ],
+  "cases": [
+    {
+      "id": "er_date_01",
+      "family": "date",
+      "entity": "Evidence Date Aster",
+      "boundary": "2022-01-15",
+      "low": "2022-01-13",
+      "high": "2022-01-17",
+      "conditions": {
+        "decisive/low": {
+          "rule": "For Evidence Date Aster, APPROVE if the completion date is on or before 2022-01-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The completion date for Evidence Date Aster is 2022-01-13."
+          ],
+          "expected_decision": "APPROVE"
+        },
+        "decisive/high": {
+          "rule": "For Evidence Date Aster, APPROVE if the completion date is on or before 2022-01-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The completion date for Evidence Date Aster is 2022-01-17."
+          ],
+          "expected_decision": "REJECT"
+        },
+        "metadata/low": {
+          "rule": "For Evidence Date Aster, APPROVE if the completion date is on or before 2022-01-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Aster is 2022-01-13."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "metadata/high": {
+          "rule": "For Evidence Date Aster, APPROVE if the completion date is on or before 2022-01-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Aster is 2022-01-17."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/low": {
+          "rule": "For Evidence Date Aster, APPROVE if the completion date is on or before 2022-01-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Aster is 2022-01-13.",
+            "The completion date for Evidence Date Aster is not provided."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/high": {
+          "rule": "For Evidence Date Aster, APPROVE if the completion date is on or before 2022-01-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Aster is 2022-01-17.",
+            "The completion date for Evidence Date Aster is not provided."
+          ],
+          "expected_decision": "DEFER"
+        }
+      }
+    },
+    {
+      "id": "er_date_02",
+      "family": "date",
+      "entity": "Evidence Date Birch",
+      "boundary": "2022-02-15",
+      "low": "2022-02-13",
+      "high": "2022-02-17",
+      "conditions": {
+        "decisive/low": {
+          "rule": "For Evidence Date Birch, APPROVE if the completion date is on or before 2022-02-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The completion date for Evidence Date Birch is 2022-02-13."
+          ],
+          "expected_decision": "APPROVE"
+        },
+        "decisive/high": {
+          "rule": "For Evidence Date Birch, APPROVE if the completion date is on or before 2022-02-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The completion date for Evidence Date Birch is 2022-02-17."
+          ],
+          "expected_decision": "REJECT"
+        },
+        "metadata/low": {
+          "rule": "For Evidence Date Birch, APPROVE if the completion date is on or before 2022-02-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Birch is 2022-02-13."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "metadata/high": {
+          "rule": "For Evidence Date Birch, APPROVE if the completion date is on or before 2022-02-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Birch is 2022-02-17."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/low": {
+          "rule": "For Evidence Date Birch, APPROVE if the completion date is on or before 2022-02-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Birch is 2022-02-13.",
+            "The completion date for Evidence Date Birch is not provided."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/high": {
+          "rule": "For Evidence Date Birch, APPROVE if the completion date is on or before 2022-02-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Birch is 2022-02-17.",
+            "The completion date for Evidence Date Birch is not provided."
+          ],
+          "expected_decision": "DEFER"
+        }
+      }
+    },
+    {
+      "id": "er_date_03",
+      "family": "date",
+      "entity": "Evidence Date Clover",
+      "boundary": "2022-03-15",
+      "low": "2022-03-13",
+      "high": "2022-03-17",
+      "conditions": {
+        "decisive/low": {
+          "rule": "For Evidence Date Clover, APPROVE if the completion date is on or before 2022-03-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The completion date for Evidence Date Clover is 2022-03-13."
+          ],
+          "expected_decision": "APPROVE"
+        },
+        "decisive/high": {
+          "rule": "For Evidence Date Clover, APPROVE if the completion date is on or before 2022-03-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The completion date for Evidence Date Clover is 2022-03-17."
+          ],
+          "expected_decision": "REJECT"
+        },
+        "metadata/low": {
+          "rule": "For Evidence Date Clover, APPROVE if the completion date is on or before 2022-03-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Clover is 2022-03-13."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "metadata/high": {
+          "rule": "For Evidence Date Clover, APPROVE if the completion date is on or before 2022-03-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Clover is 2022-03-17."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/low": {
+          "rule": "For Evidence Date Clover, APPROVE if the completion date is on or before 2022-03-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Clover is 2022-03-13.",
+            "The completion date for Evidence Date Clover is not provided."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/high": {
+          "rule": "For Evidence Date Clover, APPROVE if the completion date is on or before 2022-03-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Clover is 2022-03-17.",
+            "The completion date for Evidence Date Clover is not provided."
+          ],
+          "expected_decision": "DEFER"
+        }
+      }
+    },
+    {
+      "id": "er_date_04",
+      "family": "date",
+      "entity": "Evidence Date Dune",
+      "boundary": "2022-04-15",
+      "low": "2022-04-13",
+      "high": "2022-04-17",
+      "conditions": {
+        "decisive/low": {
+          "rule": "For Evidence Date Dune, APPROVE if the completion date is on or before 2022-04-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The completion date for Evidence Date Dune is 2022-04-13."
+          ],
+          "expected_decision": "APPROVE"
+        },
+        "decisive/high": {
+          "rule": "For Evidence Date Dune, APPROVE if the completion date is on or before 2022-04-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The completion date for Evidence Date Dune is 2022-04-17."
+          ],
+          "expected_decision": "REJECT"
+        },
+        "metadata/low": {
+          "rule": "For Evidence Date Dune, APPROVE if the completion date is on or before 2022-04-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Dune is 2022-04-13."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "metadata/high": {
+          "rule": "For Evidence Date Dune, APPROVE if the completion date is on or before 2022-04-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Dune is 2022-04-17."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/low": {
+          "rule": "For Evidence Date Dune, APPROVE if the completion date is on or before 2022-04-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Dune is 2022-04-13.",
+            "The completion date for Evidence Date Dune is not provided."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/high": {
+          "rule": "For Evidence Date Dune, APPROVE if the completion date is on or before 2022-04-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Dune is 2022-04-17.",
+            "The completion date for Evidence Date Dune is not provided."
+          ],
+          "expected_decision": "DEFER"
+        }
+      }
+    },
+    {
+      "id": "er_date_05",
+      "family": "date",
+      "entity": "Evidence Date Elder",
+      "boundary": "2022-05-15",
+      "low": "2022-05-13",
+      "high": "2022-05-17",
+      "conditions": {
+        "decisive/low": {
+          "rule": "For Evidence Date Elder, APPROVE if the completion date is on or before 2022-05-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The completion date for Evidence Date Elder is 2022-05-13."
+          ],
+          "expected_decision": "APPROVE"
+        },
+        "decisive/high": {
+          "rule": "For Evidence Date Elder, APPROVE if the completion date is on or before 2022-05-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The completion date for Evidence Date Elder is 2022-05-17."
+          ],
+          "expected_decision": "REJECT"
+        },
+        "metadata/low": {
+          "rule": "For Evidence Date Elder, APPROVE if the completion date is on or before 2022-05-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Elder is 2022-05-13."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "metadata/high": {
+          "rule": "For Evidence Date Elder, APPROVE if the completion date is on or before 2022-05-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Elder is 2022-05-17."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/low": {
+          "rule": "For Evidence Date Elder, APPROVE if the completion date is on or before 2022-05-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Elder is 2022-05-13.",
+            "The completion date for Evidence Date Elder is not provided."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/high": {
+          "rule": "For Evidence Date Elder, APPROVE if the completion date is on or before 2022-05-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Elder is 2022-05-17.",
+            "The completion date for Evidence Date Elder is not provided."
+          ],
+          "expected_decision": "DEFER"
+        }
+      }
+    },
+    {
+      "id": "er_date_06",
+      "family": "date",
+      "entity": "Evidence Date Flint",
+      "boundary": "2022-06-15",
+      "low": "2022-06-13",
+      "high": "2022-06-17",
+      "conditions": {
+        "decisive/low": {
+          "rule": "For Evidence Date Flint, APPROVE if the completion date is on or before 2022-06-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The completion date for Evidence Date Flint is 2022-06-13."
+          ],
+          "expected_decision": "APPROVE"
+        },
+        "decisive/high": {
+          "rule": "For Evidence Date Flint, APPROVE if the completion date is on or before 2022-06-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The completion date for Evidence Date Flint is 2022-06-17."
+          ],
+          "expected_decision": "REJECT"
+        },
+        "metadata/low": {
+          "rule": "For Evidence Date Flint, APPROVE if the completion date is on or before 2022-06-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Flint is 2022-06-13."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "metadata/high": {
+          "rule": "For Evidence Date Flint, APPROVE if the completion date is on or before 2022-06-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Flint is 2022-06-17."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/low": {
+          "rule": "For Evidence Date Flint, APPROVE if the completion date is on or before 2022-06-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Flint is 2022-06-13.",
+            "The completion date for Evidence Date Flint is not provided."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/high": {
+          "rule": "For Evidence Date Flint, APPROVE if the completion date is on or before 2022-06-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Flint is 2022-06-17.",
+            "The completion date for Evidence Date Flint is not provided."
+          ],
+          "expected_decision": "DEFER"
+        }
+      }
+    },
+    {
+      "id": "er_date_07",
+      "family": "date",
+      "entity": "Evidence Date Grove",
+      "boundary": "2022-07-15",
+      "low": "2022-07-13",
+      "high": "2022-07-17",
+      "conditions": {
+        "decisive/low": {
+          "rule": "For Evidence Date Grove, APPROVE if the completion date is on or before 2022-07-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The completion date for Evidence Date Grove is 2022-07-13."
+          ],
+          "expected_decision": "APPROVE"
+        },
+        "decisive/high": {
+          "rule": "For Evidence Date Grove, APPROVE if the completion date is on or before 2022-07-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The completion date for Evidence Date Grove is 2022-07-17."
+          ],
+          "expected_decision": "REJECT"
+        },
+        "metadata/low": {
+          "rule": "For Evidence Date Grove, APPROVE if the completion date is on or before 2022-07-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Grove is 2022-07-13."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "metadata/high": {
+          "rule": "For Evidence Date Grove, APPROVE if the completion date is on or before 2022-07-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Grove is 2022-07-17."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/low": {
+          "rule": "For Evidence Date Grove, APPROVE if the completion date is on or before 2022-07-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Grove is 2022-07-13.",
+            "The completion date for Evidence Date Grove is not provided."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/high": {
+          "rule": "For Evidence Date Grove, APPROVE if the completion date is on or before 2022-07-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Grove is 2022-07-17.",
+            "The completion date for Evidence Date Grove is not provided."
+          ],
+          "expected_decision": "DEFER"
+        }
+      }
+    },
+    {
+      "id": "er_date_08",
+      "family": "date",
+      "entity": "Evidence Date Heath",
+      "boundary": "2022-08-15",
+      "low": "2022-08-13",
+      "high": "2022-08-17",
+      "conditions": {
+        "decisive/low": {
+          "rule": "For Evidence Date Heath, APPROVE if the completion date is on or before 2022-08-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The completion date for Evidence Date Heath is 2022-08-13."
+          ],
+          "expected_decision": "APPROVE"
+        },
+        "decisive/high": {
+          "rule": "For Evidence Date Heath, APPROVE if the completion date is on or before 2022-08-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The completion date for Evidence Date Heath is 2022-08-17."
+          ],
+          "expected_decision": "REJECT"
+        },
+        "metadata/low": {
+          "rule": "For Evidence Date Heath, APPROVE if the completion date is on or before 2022-08-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Heath is 2022-08-13."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "metadata/high": {
+          "rule": "For Evidence Date Heath, APPROVE if the completion date is on or before 2022-08-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Heath is 2022-08-17."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/low": {
+          "rule": "For Evidence Date Heath, APPROVE if the completion date is on or before 2022-08-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Heath is 2022-08-13.",
+            "The completion date for Evidence Date Heath is not provided."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/high": {
+          "rule": "For Evidence Date Heath, APPROVE if the completion date is on or before 2022-08-15; REJECT if completion was after that deadline.",
+          "evidence_packet": [
+            "The administrative file registration date for Evidence Date Heath is 2022-08-17.",
+            "The completion date for Evidence Date Heath is not provided."
+          ],
+          "expected_decision": "DEFER"
+        }
+      }
+    },
+    {
+      "id": "er_score_01",
+      "family": "score",
+      "entity": "Evidence Score Aster",
+      "boundary": 900230,
+      "low": 900199,
+      "high": 900267,
+      "conditions": {
+        "decisive/low": {
+          "rule": "For Evidence Score Aster, APPROVE if the evaluation score is at least 900230 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The evaluation score for Evidence Score Aster is 900199 points."
+          ],
+          "expected_decision": "REJECT"
+        },
+        "decisive/high": {
+          "rule": "For Evidence Score Aster, APPROVE if the evaluation score is at least 900230 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The evaluation score for Evidence Score Aster is 900267 points."
+          ],
+          "expected_decision": "APPROVE"
+        },
+        "metadata/low": {
+          "rule": "For Evidence Score Aster, APPROVE if the evaluation score is at least 900230 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Aster is 900199."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "metadata/high": {
+          "rule": "For Evidence Score Aster, APPROVE if the evaluation score is at least 900230 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Aster is 900267."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/low": {
+          "rule": "For Evidence Score Aster, APPROVE if the evaluation score is at least 900230 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Aster is 900199.",
+            "The evaluation score for Evidence Score Aster is not provided."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/high": {
+          "rule": "For Evidence Score Aster, APPROVE if the evaluation score is at least 900230 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Aster is 900267.",
+            "The evaluation score for Evidence Score Aster is not provided."
+          ],
+          "expected_decision": "DEFER"
+        }
+      }
+    },
+    {
+      "id": "er_score_02",
+      "family": "score",
+      "entity": "Evidence Score Birch",
+      "boundary": 900441,
+      "low": 900410,
+      "high": 900478,
+      "conditions": {
+        "decisive/low": {
+          "rule": "For Evidence Score Birch, APPROVE if the evaluation score is at least 900441 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The evaluation score for Evidence Score Birch is 900410 points."
+          ],
+          "expected_decision": "REJECT"
+        },
+        "decisive/high": {
+          "rule": "For Evidence Score Birch, APPROVE if the evaluation score is at least 900441 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The evaluation score for Evidence Score Birch is 900478 points."
+          ],
+          "expected_decision": "APPROVE"
+        },
+        "metadata/low": {
+          "rule": "For Evidence Score Birch, APPROVE if the evaluation score is at least 900441 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Birch is 900410."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "metadata/high": {
+          "rule": "For Evidence Score Birch, APPROVE if the evaluation score is at least 900441 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Birch is 900478."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/low": {
+          "rule": "For Evidence Score Birch, APPROVE if the evaluation score is at least 900441 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Birch is 900410.",
+            "The evaluation score for Evidence Score Birch is not provided."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/high": {
+          "rule": "For Evidence Score Birch, APPROVE if the evaluation score is at least 900441 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Birch is 900478.",
+            "The evaluation score for Evidence Score Birch is not provided."
+          ],
+          "expected_decision": "DEFER"
+        }
+      }
+    },
+    {
+      "id": "er_score_03",
+      "family": "score",
+      "entity": "Evidence Score Clover",
+      "boundary": 900652,
+      "low": 900621,
+      "high": 900689,
+      "conditions": {
+        "decisive/low": {
+          "rule": "For Evidence Score Clover, APPROVE if the evaluation score is at least 900652 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The evaluation score for Evidence Score Clover is 900621 points."
+          ],
+          "expected_decision": "REJECT"
+        },
+        "decisive/high": {
+          "rule": "For Evidence Score Clover, APPROVE if the evaluation score is at least 900652 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The evaluation score for Evidence Score Clover is 900689 points."
+          ],
+          "expected_decision": "APPROVE"
+        },
+        "metadata/low": {
+          "rule": "For Evidence Score Clover, APPROVE if the evaluation score is at least 900652 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Clover is 900621."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "metadata/high": {
+          "rule": "For Evidence Score Clover, APPROVE if the evaluation score is at least 900652 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Clover is 900689."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/low": {
+          "rule": "For Evidence Score Clover, APPROVE if the evaluation score is at least 900652 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Clover is 900621.",
+            "The evaluation score for Evidence Score Clover is not provided."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/high": {
+          "rule": "For Evidence Score Clover, APPROVE if the evaluation score is at least 900652 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Clover is 900689.",
+            "The evaluation score for Evidence Score Clover is not provided."
+          ],
+          "expected_decision": "DEFER"
+        }
+      }
+    },
+    {
+      "id": "er_score_04",
+      "family": "score",
+      "entity": "Evidence Score Dune",
+      "boundary": 900863,
+      "low": 900832,
+      "high": 900900,
+      "conditions": {
+        "decisive/low": {
+          "rule": "For Evidence Score Dune, APPROVE if the evaluation score is at least 900863 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The evaluation score for Evidence Score Dune is 900832 points."
+          ],
+          "expected_decision": "REJECT"
+        },
+        "decisive/high": {
+          "rule": "For Evidence Score Dune, APPROVE if the evaluation score is at least 900863 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The evaluation score for Evidence Score Dune is 900900 points."
+          ],
+          "expected_decision": "APPROVE"
+        },
+        "metadata/low": {
+          "rule": "For Evidence Score Dune, APPROVE if the evaluation score is at least 900863 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Dune is 900832."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "metadata/high": {
+          "rule": "For Evidence Score Dune, APPROVE if the evaluation score is at least 900863 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Dune is 900900."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/low": {
+          "rule": "For Evidence Score Dune, APPROVE if the evaluation score is at least 900863 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Dune is 900832.",
+            "The evaluation score for Evidence Score Dune is not provided."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/high": {
+          "rule": "For Evidence Score Dune, APPROVE if the evaluation score is at least 900863 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Dune is 900900.",
+            "The evaluation score for Evidence Score Dune is not provided."
+          ],
+          "expected_decision": "DEFER"
+        }
+      }
+    },
+    {
+      "id": "er_score_05",
+      "family": "score",
+      "entity": "Evidence Score Elder",
+      "boundary": 901074,
+      "low": 901043,
+      "high": 901111,
+      "conditions": {
+        "decisive/low": {
+          "rule": "For Evidence Score Elder, APPROVE if the evaluation score is at least 901074 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The evaluation score for Evidence Score Elder is 901043 points."
+          ],
+          "expected_decision": "REJECT"
+        },
+        "decisive/high": {
+          "rule": "For Evidence Score Elder, APPROVE if the evaluation score is at least 901074 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The evaluation score for Evidence Score Elder is 901111 points."
+          ],
+          "expected_decision": "APPROVE"
+        },
+        "metadata/low": {
+          "rule": "For Evidence Score Elder, APPROVE if the evaluation score is at least 901074 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Elder is 901043."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "metadata/high": {
+          "rule": "For Evidence Score Elder, APPROVE if the evaluation score is at least 901074 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Elder is 901111."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/low": {
+          "rule": "For Evidence Score Elder, APPROVE if the evaluation score is at least 901074 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Elder is 901043.",
+            "The evaluation score for Evidence Score Elder is not provided."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/high": {
+          "rule": "For Evidence Score Elder, APPROVE if the evaluation score is at least 901074 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Elder is 901111.",
+            "The evaluation score for Evidence Score Elder is not provided."
+          ],
+          "expected_decision": "DEFER"
+        }
+      }
+    },
+    {
+      "id": "er_score_06",
+      "family": "score",
+      "entity": "Evidence Score Flint",
+      "boundary": 901285,
+      "low": 901254,
+      "high": 901322,
+      "conditions": {
+        "decisive/low": {
+          "rule": "For Evidence Score Flint, APPROVE if the evaluation score is at least 901285 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The evaluation score for Evidence Score Flint is 901254 points."
+          ],
+          "expected_decision": "REJECT"
+        },
+        "decisive/high": {
+          "rule": "For Evidence Score Flint, APPROVE if the evaluation score is at least 901285 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The evaluation score for Evidence Score Flint is 901322 points."
+          ],
+          "expected_decision": "APPROVE"
+        },
+        "metadata/low": {
+          "rule": "For Evidence Score Flint, APPROVE if the evaluation score is at least 901285 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Flint is 901254."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "metadata/high": {
+          "rule": "For Evidence Score Flint, APPROVE if the evaluation score is at least 901285 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Flint is 901322."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/low": {
+          "rule": "For Evidence Score Flint, APPROVE if the evaluation score is at least 901285 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Flint is 901254.",
+            "The evaluation score for Evidence Score Flint is not provided."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/high": {
+          "rule": "For Evidence Score Flint, APPROVE if the evaluation score is at least 901285 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Flint is 901322.",
+            "The evaluation score for Evidence Score Flint is not provided."
+          ],
+          "expected_decision": "DEFER"
+        }
+      }
+    },
+    {
+      "id": "er_score_07",
+      "family": "score",
+      "entity": "Evidence Score Grove",
+      "boundary": 901496,
+      "low": 901465,
+      "high": 901533,
+      "conditions": {
+        "decisive/low": {
+          "rule": "For Evidence Score Grove, APPROVE if the evaluation score is at least 901496 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The evaluation score for Evidence Score Grove is 901465 points."
+          ],
+          "expected_decision": "REJECT"
+        },
+        "decisive/high": {
+          "rule": "For Evidence Score Grove, APPROVE if the evaluation score is at least 901496 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The evaluation score for Evidence Score Grove is 901533 points."
+          ],
+          "expected_decision": "APPROVE"
+        },
+        "metadata/low": {
+          "rule": "For Evidence Score Grove, APPROVE if the evaluation score is at least 901496 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Grove is 901465."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "metadata/high": {
+          "rule": "For Evidence Score Grove, APPROVE if the evaluation score is at least 901496 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Grove is 901533."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/low": {
+          "rule": "For Evidence Score Grove, APPROVE if the evaluation score is at least 901496 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Grove is 901465.",
+            "The evaluation score for Evidence Score Grove is not provided."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/high": {
+          "rule": "For Evidence Score Grove, APPROVE if the evaluation score is at least 901496 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Grove is 901533.",
+            "The evaluation score for Evidence Score Grove is not provided."
+          ],
+          "expected_decision": "DEFER"
+        }
+      }
+    },
+    {
+      "id": "er_score_08",
+      "family": "score",
+      "entity": "Evidence Score Heath",
+      "boundary": 901707,
+      "low": 901676,
+      "high": 901744,
+      "conditions": {
+        "decisive/low": {
+          "rule": "For Evidence Score Heath, APPROVE if the evaluation score is at least 901707 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The evaluation score for Evidence Score Heath is 901676 points."
+          ],
+          "expected_decision": "REJECT"
+        },
+        "decisive/high": {
+          "rule": "For Evidence Score Heath, APPROVE if the evaluation score is at least 901707 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The evaluation score for Evidence Score Heath is 901744 points."
+          ],
+          "expected_decision": "APPROVE"
+        },
+        "metadata/low": {
+          "rule": "For Evidence Score Heath, APPROVE if the evaluation score is at least 901707 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Heath is 901676."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "metadata/high": {
+          "rule": "For Evidence Score Heath, APPROVE if the evaluation score is at least 901707 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Heath is 901744."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/low": {
+          "rule": "For Evidence Score Heath, APPROVE if the evaluation score is at least 901707 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Heath is 901676.",
+            "The evaluation score for Evidence Score Heath is not provided."
+          ],
+          "expected_decision": "DEFER"
+        },
+        "explicit_missing/high": {
+          "rule": "For Evidence Score Heath, APPROVE if the evaluation score is at least 901707 points; REJECT if the evaluation score is below that threshold.",
+          "evidence_packet": [
+            "The administrative file-ID number for Evidence Score Heath is 901744.",
+            "The evaluation score for Evidence Score Heath is not provided."
+          ],
+          "expected_decision": "DEFER"
+        }
+      }
+    }
+  ]
+}
