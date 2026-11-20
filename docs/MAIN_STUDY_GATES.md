@@ -6,6 +6,33 @@ The main question remains: **can a latent reader-outcome forecast trained during
 
 ## The present boundary
 
+**Natural communication update, 20 November:** the separately frozen
+[fresh communication study](./COMMUNICATION_TRANSFER_RESULTS.md) now includes
+144 reports over 24 new cases, six explicit task families, 144 aligned reader
+conditions, 72 no-report controls and 288 same-report replay conditions. The
+old neutral-trained block-8 outcome readouts remain unchanged. The pressured
+66/71 activation accuracy matches an APPROVE constant, with zero REJECT recall;
+this is not an activation-advantage result. All 144 reports received score-blind
+agent draft reviews, with human review still required. Only four clean supported
+current-fact omissions remain, so the omission-specific dataset gate is open.
+
+The next empirical priority is a validated reader and an adequately completed
+text comparator. The direct reader passes only 4/24 missing-evidence deferral
+controls, while 66/144 full-context forecasts hit their original token cap.
+The completed 512-token recovery produces 43/72 neutral and 42/71 pressured
+forecasts, with no invalid predictions and every original token prefix intact.
+The instruction-only Qwen reader failed (22/24 informed, 12/24 absent, 15/24
+stale). One fixed balanced nine-example policy, frozen before fresh `cv` outputs,
+then scored 24/24, 17/24 and 24/24, with no invalids. Its absent threshold was
+20/24; **the fresh qualification failed**. New recipient-specific label
+collection/fitting and all untouched `ct` natural-report calls remain unexecuted.
+The [source-excerpt protocol](./NEUTRAL_RECIPIENT_PROBE_PROTOCOL.md) is conditional
+software/design work, not a result. Review the seven missing-evidence errors and
+the task semantics before any new policy-development decision. Further belief-story variants do not substitute for these
+communication-validity gates. The [compute request](./CREATE_COMPUTE_REQUEST.md)
+specifies a paired NF4/BF16 behavioral reference without claiming that precision
+caused the failures or that HPC will remove them.
+
 | Workstream | What actually exists | What is still missing |
 | --- | --- | --- |
 | Engineering | Pinned 8B NF4/BF16 execution; 536 Apollo-style forced dialogues; numerical, artifact, masking and actual GPU replay checks | A BF16 precision reference, if needed for the final scope; validation of subsequent changes |

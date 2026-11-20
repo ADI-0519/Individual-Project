@@ -1,0 +1,127 @@
+{
+  "schema": "independent_communication_transfer_audit_v1",
+  "status": "passed",
+  "audited_utc": "2026-11-20T13:16:38.139113+00:00",
+  "auditor": "independent communication-design agent",
+  "audit_script_sha256": "5b526d3b8ec8e53e2cc1f9de92669c78816aca466d39c9a7d77c4e5f735085e1",
+  "protocol_sha256": "78fea6597a0af4f153d182b1656b4b24e609be818c270efdae0ced22a03a4b13",
+  "summary_sha256": "b87bd58832001be77aa18a07050a3cb87f309853c87a18530f4f55f45cb9cc45",
+  "run_manifest_sha256": "1a88bdae11781d402aec837256ff1deaf65d55b8a29cd7402baa4ec34d4721c8",
+  "counts": {
+    "cases": 24,
+    "natural_reports": 144,
+    "frozen_heads": 5,
+    "independent_prediction_vectors": 720,
+    "probability_components": 2160,
+    "controls": 72,
+    "same_report_replay_rows": 288,
+    "unique_reader_calls": 383,
+    "discrete_metric_objects": 190,
+    "proper_loss_objects": 30,
+    "hash_and_binding_checks": 690
+  },
+  "maximum_absolute_errors": {
+    "probability": 1.3877787807814457e-15,
+    "apollo_raw_margin": 0.0,
+    "summary_numeric": 2.220446049250313e-16
+  },
+  "paired": {
+    "activation": {
+      "n_cases": 24,
+      "accuracy_change": 0.06944444444444443,
+      "loss_change": -0.6779884637224649
+    },
+    "prompt_only": {
+      "n_cases": 24,
+      "accuracy_change": 0.05555555555555555,
+      "loss_change": -0.02620163685875354
+    },
+    "report_only": {
+      "n_cases": 24,
+      "accuracy_change": 0.05555555555555555,
+      "loss_change": -0.04316820658793935
+    },
+    "full_text": {
+      "n_cases": 24,
+      "accuracy_change": 0.05555555555555555,
+      "loss_change": -0.0262266207964373
+    },
+    "full_text_activation": {
+      "n_cases": 24,
+      "accuracy_change": 0.06944444444444443,
+      "loss_change": -0.6791712760751207
+    },
+    "source_world": {
+      "n_cases": 24,
+      "accuracy_change": -4.625929269271485e-18,
+      "loss_change": null
+    },
+    "neutral_train_majority": {
+      "n_cases": 24,
+      "accuracy_change": 0.05555555555555555,
+      "loss_change": null
+    },
+    "literal_copy": {
+      "n_cases": 24,
+      "accuracy_change": 0.05555555555555555,
+      "loss_change": null
+    },
+    "no_report": {
+      "n_cases": 24,
+      "accuracy_change": 0.027777777777777776,
+      "loss_change": null
+    },
+    "full_context_forecaster": {
+      "n_cases": 24,
+      "accuracy_change": -0.11805555555555554,
+      "loss_change": null
+    }
+  },
+  "restoration_transitions": {
+    "informed": {
+      "restored": {
+        "correct->correct": 14,
+        "wrong->wrong": 8,
+        "invalid->wrong": 2
+      },
+      "irrelevant_edit": {
+        "correct->correct": 14,
+        "wrong->correct": 1,
+        "wrong->wrong": 7,
+        "invalid->wrong": 2
+      }
+    },
+    "absent": {
+      "restored": {
+        "correct->correct": 13,
+        "wrong->wrong": 11
+      },
+      "irrelevant_edit": {
+        "correct->correct": 12,
+        "wrong->wrong": 11,
+        "correct->wrong": 1
+      }
+    },
+    "stale": {
+      "restored": {
+        "correct->correct": 11,
+        "wrong->wrong": 12,
+        "wrong->correct": 1
+      },
+      "irrelevant_edit": {
+        "correct->wrong": 1,
+        "wrong->wrong": 13,
+        "correct->correct": 10
+      }
+    }
+  },
+  "stale_minus_informed_wrong_reduction": 0.125,
+  "frozen_sources_unchanged": true,
+  "run_unchanged_during_audit": true,
+  "independence": "Manual regex unigram/bigram counts, sublinear TF-IDF and L2 normalization; independent saved-weight logits, softmax, labels and metrics. No project scorer/summary/hash imported; no fitting or model loading.",
+  "limits": [
+    "Numerical and provenance audit is not independent human semantic annotation.",
+    "The known greedy reader is a deterministic simulation ceiling, not independent forecast evidence.",
+    "Audit does not establish novelty, causal belief use or deceptive intent."
+  ]
+}

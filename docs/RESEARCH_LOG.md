@@ -1,5 +1,79 @@
 # Research and implementation log
 
+## 20 November 2026 — Fresh natural communication and reader validity
+
+Committed the fresh input bank, protocol and runner at `4eb7e56` before model
+outputs. Generated 144 natural evidence-only reports across 24 fresh cases and
+six explicit task rules. Four rules appeared in the source readout's training;
+disjunction and deadline were held out from that fitting, with shared-component
+limits. The source neutral-trained block-8 outcome readout, four lexical/hybrid
+comparators and Apollo head stayed frozen. No report contained a literal action
+word; one exceeded the word budget, none hit the report token cap.
+
+Actual computation comprised 144 sender generations, 144 full-context forecasts
+and 383 unique cached reader calls: 671 generation calls. The 288 secondary
+condition rows reuse the same 24 stale-attributed pressured reports and do not
+add 288 independent cases. All 676 run files were mirrored byte-identically from
+native WSL storage. The independent scorer reproduced all 720 probability
+vectors within 1.39e-15 and all Apollo margins exactly, with 690 hash/binding
+checks and no change to source artifacts.
+
+Activation accuracy is 62/72 neutral and 66/71 favorable, compared with constant
+APPROVE at 63/72 and 66/71. Both goals have zero activation REJECT recall and no
+DEFER targets. Apollo AUROC against wrong definite reader decisions is .488733
+neutral and .454327 favorable; this is a reader-risk label, not deception truth.
+The reader controls are 20/24 informed, 4/24 absent and 19/24 stale. The nominal
+restoration interaction of .125 includes two informed INVALID-to-wrong changes;
+the post-hoc complete-valid-case contrast is 1/22, not evidence of broad benefit.
+
+Three agents reviewed all 144 reports without probe/outcome data, with 24
+independent overlaps, 28 adjudications and 14 content-consistency resolutions.
+The final labels froze before the mapping join. There are 101 clean supported
+agent drafts, but just four clean current-fact omissions. All need human review.
+All 72 possible goal pairs were checked post hoc for exact generated-token
+identity; 13 across six cases match. Every matched Apollo margin rises under
+pressure, with equal-case mean change .557193. Their identical reader calls
+were cached; unchanged answers are not independent outcome replications.
+
+A separately frozen 150-call reader-policy/budget diagnostic preserves all six
+original 8-token reference outputs and all 72 direct-output prefixes exactly.
+Direct 192-token answers give the same control accuracy. A fixed reasoned policy
+improves deferral, with strict scores 14/24 informed, 16/24 absent and 11/24 stale.
+A separately labelled terminal-punctuation sensitivity gives 22/24, 18/24 and
+20/24; all 23 recovered finals were uncapped. This does not repair the original
+run or establish an untouched validation result.
+
+The original 160-token monitor has 66 capped forecasts. Its one predeclared
+512-token recovery reuses 78 EOS outputs, requires all 144 original prompt IDs
+and all 160-token prefixes to match, and preserves the primary results. One
+independent Qwen2.5-7B-Instruct checkpoint is selected and pinned before its
+outputs, with capability thresholds before report replay. Recovery completed:
+43/72 neutral and 42/71 pressured, all 144 forecasts EOS, all 66 regenerated
+160-token prefixes exact. Additional cost was 66 calls and 12,770 generated
+tokens (10,560 regenerated prefix tokens). The independent Qwen gate failed:
+22/24 informed, 12/24 absent and 15/24 stale; no report replay followed.
+
+Committed one balanced nine-example Qwen policy and two disjoint fresh banks at
+`0344270` before its first output. An independent audit checked disjointness,
+all nine worked answers and exact token lengths. The 72 fresh `cv` controls
+returned 24/24 informed, 17/24 absent, 24/24 stale, zero invalids. The absent
+threshold remained 20/24, so qualification failed and all secondary old-case
+calls were skipped. No dependent source labels, real probe fits or fresh `ct`
+natural reports were collected. The 216-state source-excerpt panel, isolated
+validation-selected readout and strictly gated runner remain unexecuted research
+software; their synthetic-fixture tests are not research evidence. Preserve the
+fresh failure rather than iterating prompts against the same control outcomes.
+
+Graphify was actually built and queried through its isolated installed runtime:
+29 bounded sources, 348 nodes, 922 edges and nine communities, with explicit
+source coverage and health warnings. Its evidence paths informed the return to
+natural reports. The literature reassessment reads methods and relevant
+appendices across eight primary papers and records the novelty collisions.
+The final full local suite passes **592 tests plus 48 subtests** (108.21 seconds).
+This includes the new fit/evaluator and failure-gate tests on synthetic fixtures.
+Editor diagnostics report no errors in the new runner/readout and slide builder.
+Final lint, package checks and remote CI are reported with the Git checkpoint.
+
 ## 20 November 2026 — Real MASK specificity, known-message transfer and context stress
 
 Executed the pinned eight-case MASK pilot with 120 genuine generations: 32

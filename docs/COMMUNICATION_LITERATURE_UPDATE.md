@@ -45,6 +45,33 @@ Freeze these interpretations before inspecting the new run:
 
 The unfavorable alternatives must remain in the report: little natural omission, unsupported reports dominating the sample, missing decision classes, failed full-evidence controls, or apparent performance explained by source truth and copied recommendations. Repeatedly changing prompts until one metric looks impressive would weaken the project. Correction-benefit ranking, activation steering, a causal belief mechanism and another model-scale sweep should wait until this assay yields a valid varied target.
 
+## Proposed source-excerpt training: a narrower transfer question
+
+This assessment follows the failed original recipient gates and is **prospective**, not a new result. A candidate repair would fit a recipient-conditioned outcome readout on source-supported excerpts under neutral sender framing, then freeze it before evaluating untouched naturally generated neutral and pressured reports. It must wait for a capable independently validated recipient; the original Llama and instruction-only Qwen gates do not provide one.
+
+An additional close precedent is Thormann's [*Probing the Limits of the Lie Detector Approach to LLM Deception*, v2, 2 November 2026](https://arxiv.org/html/2603.10003v2). Section 2.4 already teacher-forces contextual answers, adds authored misleading non-falsities during probe training and tests held-out deception types. Sections 3.2 and 4 distinguish context effects from adding misleading examples. The discussion explicitly proposes another-agent belief readouts. Its behavioral task is forced-choice; it does not establish natural generation or propensity. Consequently neither contextual teacher-forced training nor the listener-belief motivation is new.
+
+Other precedents further restrict the candidate claim:
+
+- **Apollo** already transfers from simplified off-policy instruction pairs to on-policy behavior. Changing training origin is not a contribution by itself.
+- **Kim** already combines natural reports, reader decisions and pre-generation fact-coverage probes. The proposed target differs by predicting a recipient's actual response under its assigned evidence, but adding an outcome label alone establishes neither a mechanism nor substantial novelty.
+- **Luikham** already studies instructed/spontaneous omission-probe transfer. Its output/judge labels differ from a support-controlled excerpt curriculum with measured reader outcomes, yet the broad transfer claim is occupied.
+- **JANUS, TRACER and Shkolnikov** respectively cover goal-conditioned factual communication, counterfactual omitted-evidence assessment and recipient-information interventions. These are precedents for the ingredients, not gaps filled by merely combining their names.
+
+**Off-policy refers to report origin, not whether activation extraction uses teacher forcing.** A prescribed source excerpt inserted as an assistant continuation is off-policy: the sender did not choose it under that prompt. A report generated naturally by that sender under the declared prompt is on-policy even when its exact token IDs are replayed later for activation extraction. Training on neutral source excerpts is therefore different from training on natural neutral communication. Success would not show that the sender voluntarily chose those training omissions.
+
+There are also **two simultaneous shifts**: prescribed excerpt to natural wording, and neutral to pressured incentive. A result only on natural pressured reports cannot attribute success or failure specifically to pressure. Score the unchanged readout on both untouched natural neutral and natural pressured reports from the same new cases, showing the paired contrast and class counts. An exact-text goal-context comparison can separately diagnose a context shortcut without replacing natural-output evaluation.
+
+The defensible candidate contribution is:
+
+> Test whether a low-cost recipient-conditioned outcome readout, fitted only on source-supported neutral excerpts, retains specific predictive value on untouched natural communication under pressure, beyond source-world, packet-only and appropriately informed text controls.
+
+Specificity requires examples where **the same source and report produce different observed outcomes under different recipient evidence**. Otherwise source truth, coverage or the majority response may solve the target. Keep excerpts truthful and temporally explicit; obtain labels from actual recipient runs rather than assume every omission harmful. Freeze case-level splits, transforms and fitted weights before communication-test outputs. Keep reader qualification and untouched communication testing separate. Unsupported natural outputs remain visible and receive their own audit stratum.
+
+A sender state cannot identify recipient evidence assigned independently after generation. Initially align attributed and actual evidence. A later monitor receiving an independently changed actual packet must give it to the text comparator too; its reread activation is not the sender's original state.
+
+This differs from the exact inspected tasks, but the search does **not** establish firstness. A useful contribution still needs held-out outcome variation, minority-class performance, a fair text comparison and evidence that source/coverage shortcuts do not explain it. Exact simulation of a known deterministic reader remains a text ceiling; efficiency claims additionally require a common budget and measured activation-extraction cost. A favorable score on a scripted excerpt panel alone would not establish the proposed contribution.
+
 ## Reading coverage and audit limits
 
 All sources above were opened at primary publishers/arXiv in this reassessment, and the existing local primary-paper extracts were used for longer section reads. This was not an abstract-only review.
@@ -57,5 +84,7 @@ All sources above were opened at primary publishers/arXiv in this reassessment, 
 - **TRACER:** read dataset/annotation construction, full pipeline 5.1–5.4, main experiment/ablation tables and limitations. Not a complete all-prompt appendix or implementation audit. Its counterfactual prompting should not be described as an observed recipient intervention.
 - **Shkolnikov:** read causal definitions, 4.2–4.3, methods appendix A, the full recipient/payoff and belief-follow-up specification B.3/B.5, and corrections C. Not all other experimental material was re-audited. The failed follow-up is part of the conclusion.
 - **JANUS:** reread benchmark/matched prompts, main interpretation/limitations, C.2 example prompts, D matching/framing/human validation, and F/G inclusion/ordering controls. Other appendices and the implementation were not exhaustively audited.
+
+- **Thormann v2:** verified author/version through the primary arXiv record, then read complete methods 2.1–2.4, probe results 3.2, discussion 4 and limitations 4.1, including contextual forced-answer training, held-out deception types and the explicit future listener-belief proposal. No independent implementation/data reproduction is claimed. Stale secondary records listing Berger or the smaller v1 experiment should not supply the current citation.
 
 No novelty, publication, first-class mark or admissions outcome is guaranteed by this literature review. The next useful deliverable is a table of actual reports and recipient outcomes under a frozen protocol, with strong controls and every failure preserved.

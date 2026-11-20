@@ -1,204 +1,521 @@
 {
-  "node_count": 312,
-  "unverified_node_count": 0,
-  "raw_edge_count": 927,
-  "non_object_edges": 0,
-  "missing_endpoint_edges": 0,
-  "dangling_endpoint_edges": 242,
-  "external_reference_edges": 0,
-  "self_loop_edges": 0,
-  "valid_candidate_edges": 685,
-  "exact_duplicate_edges": 0,
-  "directed_unique_endpoint_pairs": 680,
-  "directed_same_endpoint_collapsed_edges": 5,
-  "undirected_unique_endpoint_pairs": 680,
-  "undirected_same_endpoint_collapsed_edges": 5,
-  "same_endpoint_group_count": 5,
-  "relation_variant_groups": 4,
-  "source_file_variant_groups": 0,
-  "source_location_variant_groups": 0,
-  "context_variant_groups": 1,
-  "post_build_graph_type": "Graph",
-  "post_build_node_count": 348,
-  "post_build_edge_count": 922,
-  "post_build_error": "",
-  "producer_suppression": {
-    "path": "C:\\Users\\adirj\\AppData\\Roaming\\uv\\tools\\graphifyy\\Lib\\site-packages\\graphify\\extract.py",
-    "total_sites": 12,
-    "sites": [
+  "schema": "graphify_research_health_v2",
+  "initial_extraction": {
+    "node_count": 312,
+    "unverified_node_count": 0,
+    "raw_edge_count": 927,
+    "non_object_edges": 0,
+    "missing_endpoint_edges": 0,
+    "dangling_endpoint_edges": 242,
+    "external_reference_edges": 0,
+    "self_loop_edges": 0,
+    "valid_candidate_edges": 685,
+    "exact_duplicate_edges": 0,
+    "directed_unique_endpoint_pairs": 680,
+    "directed_same_endpoint_collapsed_edges": 5,
+    "undirected_unique_endpoint_pairs": 680,
+    "undirected_same_endpoint_collapsed_edges": 5,
+    "same_endpoint_group_count": 5,
+    "relation_variant_groups": 4,
+    "source_file_variant_groups": 0,
+    "source_location_variant_groups": 0,
+    "context_variant_groups": 1,
+    "post_build_graph_type": "Graph",
+    "post_build_node_count": 348,
+    "post_build_edge_count": 922,
+    "post_build_error": "",
+    "producer_suppression": {
+      "path": "C:\\Users\\adirj\\AppData\\Roaming\\uv\\tools\\graphifyy\\Lib\\site-packages\\graphify\\extract.py",
+      "total_sites": 12,
+      "sites": [
+        {
+          "line": 1830,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids = {n[\"id\"] for n in nodes}"
+        },
+        {
+          "line": 2393,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids = {n[\"id\"] for n in nodes}"
+        },
+        {
+          "line": 2395,
+          "name": "seen_doc_refs",
+          "tuple_arity": 0,
+          "sample": "seen_doc_refs: set[str] = set()"
+        },
+        {
+          "line": 3062,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = {n[\"id\"] for n in nodes}"
+        },
+        {
+          "line": 3209,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids = {n.get(\"id\") for n in nodes}"
+        },
+        {
+          "line": 4350,
+          "name": "seen_keys",
+          "tuple_arity": 0,
+          "sample": "seen_keys: set[tuple] = set()"
+        },
+        {
+          "line": 4536,
+          "name": "seen_keys",
+          "tuple_arity": 0,
+          "sample": "seen_keys: set[tuple] = set()"
+        },
+        {
+          "line": 8160,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = set()"
+        },
+        {
+          "line": 8268,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = set()"
+        },
+        {
+          "line": 8347,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = set()"
+        },
+        {
+          "line": 8872,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = set()"
+        },
+        {
+          "line": 8873,
+          "name": "seen_edges",
+          "tuple_arity": 4,
+          "sample": "seen_edges: set[tuple[str, str, str, str | None]] = set()"
+        }
+      ],
+      "error": ""
+    },
+    "examples": [
       {
-        "line": 1830,
-        "name": "seen_ids",
-        "tuple_arity": 0,
-        "sample": "seen_ids = {n[\"id\"] for n in nodes}"
+        "source": "src_latent_probes_apollo_probe_sidecar",
+        "target": "path",
+        "edge_count": 2,
+        "relations": [
+          "references"
+        ],
+        "source_files": [
+          "src/latent_probes/apollo_probe.py"
+        ],
+        "source_locations": [
+          "L140"
+        ],
+        "contexts": [
+          "parameter_type",
+          "return_type"
+        ]
       },
       {
-        "line": 2393,
-        "name": "seen_ids",
-        "tuple_arity": 0,
-        "sample": "seen_ids = {n[\"id\"] for n in nodes}"
+        "source": "scripts_run_mask_specificity_build_jobs",
+        "target": "scripts_run_mask_specificity_build_jobs_add",
+        "edge_count": 2,
+        "relations": [
+          "calls",
+          "contains"
+        ],
+        "source_files": [
+          "scripts/run_mask_specificity.py"
+        ],
+        "source_locations": [
+          "L129",
+          "L148"
+        ],
+        "contexts": [
+          "",
+          "call"
+        ]
       },
       {
-        "line": 2395,
-        "name": "seen_doc_refs",
-        "tuple_arity": 0,
-        "sample": "seen_doc_refs: set[str] = set()"
+        "source": "scripts_run_belief_goal_stress_paired_contrasts",
+        "target": "scripts_run_belief_goal_stress_paired_contrasts_summarize",
+        "edge_count": 2,
+        "relations": [
+          "calls",
+          "contains"
+        ],
+        "source_files": [
+          "scripts/run_belief_goal_stress.py"
+        ],
+        "source_locations": [
+          "L374",
+          "L388"
+        ],
+        "contexts": [
+          "",
+          "call"
+        ]
       },
       {
-        "line": 3062,
-        "name": "seen_ids",
-        "tuple_arity": 0,
-        "sample": "seen_ids: set[str] = {n[\"id\"] for n in nodes}"
+        "source": "scripts_run_belief_diagnostic_validate_layer_indices",
+        "target": "scripts_run_belief_diagnostic_validate_layer_indices_hook_for",
+        "edge_count": 2,
+        "relations": [
+          "calls",
+          "contains"
+        ],
+        "source_files": [
+          "scripts/run_belief_diagnostic.py"
+        ],
+        "source_locations": [
+          "L76",
+          "L85"
+        ],
+        "contexts": [
+          "",
+          "call"
+        ]
       },
       {
-        "line": 3209,
-        "name": "seen_ids",
-        "tuple_arity": 0,
-        "sample": "seen_ids = {n.get(\"id\") for n in nodes}"
-      },
-      {
-        "line": 4350,
-        "name": "seen_keys",
-        "tuple_arity": 0,
-        "sample": "seen_keys: set[tuple] = set()"
-      },
-      {
-        "line": 4536,
-        "name": "seen_keys",
-        "tuple_arity": 0,
-        "sample": "seen_keys: set[tuple] = set()"
-      },
-      {
-        "line": 8160,
-        "name": "seen_ids",
-        "tuple_arity": 0,
-        "sample": "seen_ids: set[str] = set()"
-      },
-      {
-        "line": 8268,
-        "name": "seen_ids",
-        "tuple_arity": 0,
-        "sample": "seen_ids: set[str] = set()"
-      },
-      {
-        "line": 8347,
-        "name": "seen_ids",
-        "tuple_arity": 0,
-        "sample": "seen_ids: set[str] = set()"
-      },
-      {
-        "line": 8872,
-        "name": "seen_ids",
-        "tuple_arity": 0,
-        "sample": "seen_ids: set[str] = set()"
-      },
-      {
-        "line": 8873,
-        "name": "seen_edges",
-        "tuple_arity": 4,
-        "sample": "seen_edges: set[tuple[str, str, str, str | None]] = set()"
+        "source": "scripts_run_belief_diagnostic_validate_layer_indices_hook_for",
+        "target": "scripts_run_belief_diagnostic_validate_layer_indices_hook_for_hook",
+        "edge_count": 2,
+        "relations": [
+          "contains",
+          "indirect_call"
+        ],
+        "source_files": [
+          "scripts/run_belief_diagnostic.py"
+        ],
+        "source_locations": [
+          "L77",
+          "L81"
+        ],
+        "contexts": [
+          "",
+          "return"
+        ]
       }
-    ],
-    "error": ""
+    ]
   },
-  "examples": [
-    {
-      "source": "src_latent_probes_apollo_probe_sidecar",
-      "target": "path",
-      "edge_count": 2,
-      "relations": [
-        "references"
+  "incremental_extraction": {
+    "node_count": 283,
+    "unverified_node_count": 0,
+    "raw_edge_count": 915,
+    "non_object_edges": 0,
+    "missing_endpoint_edges": 0,
+    "dangling_endpoint_edges": 220,
+    "external_reference_edges": 0,
+    "self_loop_edges": 0,
+    "valid_candidate_edges": 695,
+    "exact_duplicate_edges": 0,
+    "directed_unique_endpoint_pairs": 688,
+    "directed_same_endpoint_collapsed_edges": 7,
+    "undirected_unique_endpoint_pairs": 688,
+    "undirected_same_endpoint_collapsed_edges": 7,
+    "same_endpoint_group_count": 7,
+    "relation_variant_groups": 5,
+    "source_file_variant_groups": 0,
+    "source_location_variant_groups": 2,
+    "context_variant_groups": 0,
+    "post_build_graph_type": "Graph",
+    "post_build_node_count": 314,
+    "post_build_edge_count": 885,
+    "post_build_error": "",
+    "producer_suppression": {
+      "path": "C:\\Users\\adirj\\AppData\\Roaming\\uv\\tools\\graphifyy\\Lib\\site-packages\\graphify\\extract.py",
+      "total_sites": 12,
+      "sites": [
+        {
+          "line": 1830,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids = {n[\"id\"] for n in nodes}"
+        },
+        {
+          "line": 2393,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids = {n[\"id\"] for n in nodes}"
+        },
+        {
+          "line": 2395,
+          "name": "seen_doc_refs",
+          "tuple_arity": 0,
+          "sample": "seen_doc_refs: set[str] = set()"
+        },
+        {
+          "line": 3062,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = {n[\"id\"] for n in nodes}"
+        },
+        {
+          "line": 3209,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids = {n.get(\"id\") for n in nodes}"
+        },
+        {
+          "line": 4350,
+          "name": "seen_keys",
+          "tuple_arity": 0,
+          "sample": "seen_keys: set[tuple] = set()"
+        },
+        {
+          "line": 4536,
+          "name": "seen_keys",
+          "tuple_arity": 0,
+          "sample": "seen_keys: set[tuple] = set()"
+        },
+        {
+          "line": 8160,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = set()"
+        },
+        {
+          "line": 8268,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = set()"
+        },
+        {
+          "line": 8347,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = set()"
+        },
+        {
+          "line": 8872,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = set()"
+        },
+        {
+          "line": 8873,
+          "name": "seen_edges",
+          "tuple_arity": 4,
+          "sample": "seen_edges: set[tuple[str, str, str, str | None]] = set()"
+        }
       ],
-      "source_files": [
-        "src/latent_probes/apollo_probe.py"
-      ],
-      "source_locations": [
-        "L140"
-      ],
-      "contexts": [
-        "parameter_type",
-        "return_type"
-      ]
+      "error": ""
     },
-    {
-      "source": "scripts_run_mask_specificity_build_jobs",
-      "target": "scripts_run_mask_specificity_build_jobs_add",
-      "edge_count": 2,
-      "relations": [
-        "calls",
-        "contains"
+    "examples": [
+      {
+        "source": "scripts_extend_communication_monitor_summarize_recovery",
+        "target": "scripts_extend_communication_monitor_summarize_recovery_cost",
+        "edge_count": 2,
+        "relations": [
+          "calls",
+          "contains"
+        ],
+        "source_files": [
+          "scripts/extend_communication_monitor.py"
+        ],
+        "source_locations": [
+          "L118",
+          "L146"
+        ],
+        "contexts": [
+          "",
+          "call"
+        ]
+      },
+      {
+        "source": "scripts_replay_communication_reader_run",
+        "target": "scripts_replay_communication_reader_run_reader_call",
+        "edge_count": 2,
+        "relations": [
+          "calls",
+          "contains"
+        ],
+        "source_files": [
+          "scripts/replay_communication_reader.py"
+        ],
+        "source_locations": [
+          "L129",
+          "L144"
+        ],
+        "contexts": [
+          "",
+          "call"
+        ]
+      },
+      {
+        "source": "scripts_run_communication_transfer_run",
+        "target": "scripts_run_communication_transfer_run_reader_call",
+        "edge_count": 2,
+        "relations": [
+          "calls",
+          "contains"
+        ],
+        "source_files": [
+          "scripts/run_communication_transfer.py"
+        ],
+        "source_locations": [
+          "L461",
+          "L477"
+        ],
+        "contexts": [
+          "",
+          "call"
+        ]
+      },
+      {
+        "source": "scripts_validate_calibrated_reader_run_validation_batches",
+        "target": "scripts_validate_calibrated_reader_run_validation_batches_collect",
+        "edge_count": 2,
+        "relations": [
+          "calls",
+          "contains"
+        ],
+        "source_files": [
+          "scripts/validate_calibrated_reader.py"
+        ],
+        "source_locations": [
+          "L149",
+          "L156"
+        ],
+        "contexts": [
+          "",
+          "call"
+        ]
+      },
+      {
+        "source": "src_latent_probes_backends_hfbackend_capture",
+        "target": "src_latent_probes_backends_hfbackend_capture_capture",
+        "edge_count": 2,
+        "relations": [
+          "contains",
+          "indirect_call"
+        ],
+        "source_files": [
+          "src/latent_probes/backends.py"
+        ],
+        "source_locations": [
+          "L197",
+          "L211"
+        ],
+        "contexts": [
+          "",
+          "argument"
+        ]
+      }
+    ]
+  },
+  "merged_graph": {
+    "node_count": 630,
+    "unverified_node_count": 0,
+    "raw_edge_count": 1815,
+    "non_object_edges": 0,
+    "missing_endpoint_edges": 0,
+    "dangling_endpoint_edges": 0,
+    "external_reference_edges": 0,
+    "self_loop_edges": 0,
+    "valid_candidate_edges": 1815,
+    "exact_duplicate_edges": 0,
+    "directed_unique_endpoint_pairs": 1815,
+    "directed_same_endpoint_collapsed_edges": 0,
+    "undirected_unique_endpoint_pairs": 1815,
+    "undirected_same_endpoint_collapsed_edges": 0,
+    "same_endpoint_group_count": 0,
+    "relation_variant_groups": 0,
+    "source_file_variant_groups": 0,
+    "source_location_variant_groups": 0,
+    "context_variant_groups": 0,
+    "post_build_graph_type": "Graph",
+    "post_build_node_count": 630,
+    "post_build_edge_count": 1815,
+    "post_build_error": "",
+    "producer_suppression": {
+      "path": "C:\\Users\\adirj\\AppData\\Roaming\\uv\\tools\\graphifyy\\Lib\\site-packages\\graphify\\extract.py",
+      "total_sites": 12,
+      "sites": [
+        {
+          "line": 1830,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids = {n[\"id\"] for n in nodes}"
+        },
+        {
+          "line": 2393,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids = {n[\"id\"] for n in nodes}"
+        },
+        {
+          "line": 2395,
+          "name": "seen_doc_refs",
+          "tuple_arity": 0,
+          "sample": "seen_doc_refs: set[str] = set()"
+        },
+        {
+          "line": 3062,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = {n[\"id\"] for n in nodes}"
+        },
+        {
+          "line": 3209,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids = {n.get(\"id\") for n in nodes}"
+        },
+        {
+          "line": 4350,
+          "name": "seen_keys",
+          "tuple_arity": 0,
+          "sample": "seen_keys: set[tuple] = set()"
+        },
+        {
+          "line": 4536,
+          "name": "seen_keys",
+          "tuple_arity": 0,
+          "sample": "seen_keys: set[tuple] = set()"
+        },
+        {
+          "line": 8160,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = set()"
+        },
+        {
+          "line": 8268,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = set()"
+        },
+        {
+          "line": 8347,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = set()"
+        },
+        {
+          "line": 8872,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = set()"
+        },
+        {
+          "line": 8873,
+          "name": "seen_edges",
+          "tuple_arity": 4,
+          "sample": "seen_edges: set[tuple[str, str, str, str | None]] = set()"
+        }
       ],
-      "source_files": [
-        "scripts/run_mask_specificity.py"
-      ],
-      "source_locations": [
-        "L129",
-        "L148"
-      ],
-      "contexts": [
-        "",
-        "call"
-      ]
+      "error": ""
     },
-    {
-      "source": "scripts_run_belief_goal_stress_paired_contrasts",
-      "target": "scripts_run_belief_goal_stress_paired_contrasts_summarize",
-      "edge_count": 2,
-      "relations": [
-        "calls",
-        "contains"
-      ],
-      "source_files": [
-        "scripts/run_belief_goal_stress.py"
-      ],
-      "source_locations": [
-        "L374",
-        "L388"
-      ],
-      "contexts": [
-        "",
-        "call"
-      ]
-    },
-    {
-      "source": "scripts_run_belief_diagnostic_validate_layer_indices",
-      "target": "scripts_run_belief_diagnostic_validate_layer_indices_hook_for",
-      "edge_count": 2,
-      "relations": [
-        "calls",
-        "contains"
-      ],
-      "source_files": [
-        "scripts/run_belief_diagnostic.py"
-      ],
-      "source_locations": [
-        "L76",
-        "L85"
-      ],
-      "contexts": [
-        "",
-        "call"
-      ]
-    },
-    {
-      "source": "scripts_run_belief_diagnostic_validate_layer_indices_hook_for",
-      "target": "scripts_run_belief_diagnostic_validate_layer_indices_hook_for_hook",
-      "edge_count": 2,
-      "relations": [
-        "contains",
-        "indirect_call"
-      ],
-      "source_files": [
-        "scripts/run_belief_diagnostic.py"
-      ],
-      "source_locations": [
-        "L77",
-        "L81"
-      ],
-      "contexts": [
-        "",
-        "return"
-      ]
-    }
-  ]
+    "examples": []
+  },
+  "semantic_endpoint_errors": [],
+  "unindexed_reference_placeholders": 46,
+  "scope_note": "Initial raw warnings remain historical; current merged graph materializes external references. Bounded graph is not a complete dependency audit."
 }

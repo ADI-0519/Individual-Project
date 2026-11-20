@@ -50,17 +50,17 @@ def plot_record(record_path, output):
         axes[0].legend(loc="upper center", fontsize=8, ncol=2)
         methods = (
             "activation",
+            "neutral_train_majority",
             "full_text",
-            "full_text_activation",
             "source_world",
             "full_context_forecaster",
         )
         labels = (
             "Frozen\nactivation",
+            "Always\nAPPROVE",
             "Frozen\nTF-IDF",
-            "Frozen text\n+ activation",
             "Source\nworld",
-            "Full-context\nforecaster",
+            "160-token\nforecaster",
         )
         x = np.arange(len(methods))
         for i, (objective, color) in enumerate(
@@ -85,7 +85,7 @@ def plot_record(record_path, output):
         axes[1].legend(loc="lower left", fontsize=8)
         fig.suptitle("Fresh natural communication: frozen neutral-trained readout under pressure")
         fig.supxlabel(
-            "24 authored case clusters; six explicit task rules (two held out from readout fitting). Human review pending.",
+            "24 authored case clusters; two explicit task rules held out from readout fitting. 66 forecaster calls capped. Human review pending.",
             fontsize=9,
         )
         for suffix in ("png", "svg", "pdf"):

@@ -42,6 +42,20 @@ The defaults are a dated, already measured snapshot, not a live test count.
 Unprovided future results stay pending.  Additional JSON metrics appear only in
 speaker notes; the caller must supply the intended measured interpretation.
 
+An optional completed ``communication_transfer`` object takes precedence over
+earlier diagnostic slides. It requires counts (n_cases, n_rule_families,
+n_heldout_rule_types, n_reports, n_neutral_reports, n_pressure_reports,
+n_reader_calls, n_secondary_conditions), a headline/detail, forecast and
+full_context_monitor objects keyed neutral/pressure with correct/n fields
+(forecast also requires nll), reader_controls with full_evidence_correct,
+full_evidence_total and no_report_calls, and reader_outcomes keyed
+neutral/pressure with world_correct/n/deferrals/invalid. A baseline_comparison
+list contains name/neutral_correct/pressure_correct records. Optional neutral_n
+and pressure_n preserve different valid-target denominators; a shared n is
+accepted only when it matches both goals. Omitted denominators use each goal's
+forecast denominator. Further supplied metrics remain in speaker notes, without
+invented results.
+
 Usage from the repository, using an environment with the presentation deps::
 
     python scripts/update_progress2.py --results presentations/progress2/results.json
@@ -264,7 +278,98 @@ def _load_results(path: Path | None) -> dict[str, Any]:
             raise ValueError("Secondary pooled cases must preserve the class-case union.")
         if mask.get("label_audited") is not False or mask.get("needs_human_review") is not True:
             raise ValueError("Current MASK labels must remain explicitly provisional.")
+    if "communication_transfer" in result:
+        _validate_communication_results(result["communication_transfer"])
+        result.setdefault("project_name", "Latent Probes and Listener Beliefs")
     return result
+
+
+def _validate_communication_results(study: Any) -> None:
+    """Require explicit measured denominators; no fresh result uses a legacy default."""
+    if not isinstance(study, dict) or study.get("status") != "complete":
+        raise ValueError("communication_transfer requires a completed measured object.")
+    counts = (
+        "n_cases",
+        "n_rule_families",
+        "n_heldout_rule_types",
+        "n_reports",
+        "n_neutral_reports",
+        "n_pressure_reports",
+        "n_reader_calls",
+        "n_secondary_conditions",
+    )
+    for key in counts:
+        if type(study.get(key)) is not int or study[key] < 0:
+            raise ValueError(f"communication_transfer.{key} must be a nonnegative integer.")
+    if min(study["n_cases"], study["n_rule_families"], study["n_reports"]) == 0:
+        raise ValueError("A completed communication study requires cases, families and reports.")
+    if study["n_reports"] != study["n_neutral_reports"] + study["n_pressure_reports"]:
+        raise ValueError("Communication reports must equal neutral plus pressured reports.")
+    if study["n_reader_calls"] != study["n_reports"]:
+        raise ValueError("Communication slide assumes one aligned reader answer per report.")
+    if not study["n_heldout_rule_types"] <= study["n_rule_families"] <= study["n_cases"]:
+        raise ValueError("Held-out rule, family and case counts are inconsistent.")
+    for key, limit in (("headline", 100), ("detail", 165)):
+        value = study.get(key)
+        if not isinstance(value, str) or not value.strip() or len(value) > limit:
+            raise ValueError(f"communication_transfer.{key} requires 1 to {limit} characters.")
+    for name in ("forecast", "full_context_monitor", "reader_outcomes"):
+        if not isinstance(study.get(name), dict):
+            raise ValueError(f"communication_transfer.{name} must be an object.")
+        for condition in ("neutral", "pressure"):
+            metric = study[name].get(condition)
+            if not isinstance(metric, dict):
+                raise ValueError(f"{name}.{condition} must provide its measured counts.")
+            fields = (
+                ("world_correct", "n", "deferrals", "invalid")
+                if name == "reader_outcomes"
+                else ("correct", "n")
+            )
+            for key in fields:
+                if type(metric.get(key)) is not int or metric[key] < 0:
+                    raise ValueError(f"{name}.{condition}.{key} must be a nonnegative integer.")
+            available = study[
+                "n_pressure_reports" if condition == "pressure" else "n_neutral_reports"
+            ]
+            if not 0 < metric["n"] <= available:
+                raise ValueError(f"{name}.{condition}.n must identify nonempty measured rows.")
+            if any(metric[key] > metric["n"] for key in fields if key != "n"):
+                raise ValueError(f"{name}.{condition} numerators cannot exceed its denominator.")
+            if name == "forecast":
+                nll = metric.get("nll")
+                if type(nll) not in (int, float) or not math.isfinite(nll) or nll < 0:
+                    raise ValueError(f"forecast.{condition}.nll must be finite and nonnegative.")
+    for condition in ("neutral", "pressure"):
+        if study["forecast"][condition]["n"] != study["full_context_monitor"][condition]["n"]:
+            raise ValueError("Activation and text accuracy must use the same target denominator.")
+    controls = study.get("reader_controls")
+    if not isinstance(controls, dict):
+        raise ValueError("reader_controls must provide full-evidence and no-report counts.")
+    for key in ("full_evidence_correct", "full_evidence_total", "no_report_calls"):
+        if type(controls.get(key)) is not int or controls[key] < 0:
+            raise ValueError(f"reader_controls.{key} must be a nonnegative integer.")
+    if not controls["full_evidence_correct"] <= controls["full_evidence_total"] <= study["n_cases"]:
+        raise ValueError("Full-evidence control counts cannot exceed the independent case count.")
+    comparisons = study.get("baseline_comparison")
+    if not isinstance(comparisons, list) or not comparisons:
+        raise ValueError("baseline_comparison requires the measured frozen comparator records.")
+    for comparison in comparisons:
+        if not isinstance(comparison, dict) or not isinstance(comparison.get("name"), str):
+            raise ValueError("Every comparator must have a name and explicit measured counts.")
+        if not comparison["name"].strip():
+            raise ValueError("Comparator names cannot be empty.")
+        for key in ("neutral_correct", "pressure_correct"):
+            if type(comparison.get(key)) is not int or comparison[key] < 0:
+                raise ValueError(f"Comparator {key} must be a nonnegative integer.")
+        for condition in ("neutral", "pressure"):
+            expected_n = study["forecast"][condition]["n"]
+            actual_n = comparison.get(f"{condition}_n", comparison.get("n", expected_n))
+            if type(actual_n) is not int or actual_n <= 0:
+                raise ValueError(f"Comparator {condition}_n must be a positive integer.")
+            if actual_n != expected_n:
+                raise ValueError("Comparator denominators must match that goal's forecast targets.")
+            if comparison[f"{condition}_correct"] > actual_n:
+                raise ValueError("Comparator numerator cannot exceed that goal's denominator.")
 
 
 def _register_fonts() -> tuple[str, str]:
@@ -348,6 +453,8 @@ def _header(slide: Slide, section: str, title: str, number: int, date: str) -> N
 
 
 def _slides(results: dict[str, Any]) -> list[Slide]:
+    if "communication_transfer" in results:
+        return _communication_slides(results)
     if "known_message" in results:
         return _latest_slides(results)
     date = results["progress_date"]
@@ -732,6 +839,287 @@ def _slides(results: dict[str, Any]) -> list[Slide]:
             "belief task before testing pressure transfer. Pre-report decodability "
             "alone still does not establish a belief mechanism or causal role."
         )
+    return [title, current, barriers, next_steps]
+
+
+def _communication_slides(results: dict[str, Any]) -> list[Slide]:
+    """Present actual report/reader transfer before the auxiliary story diagnostics."""
+    date, study = results["progress_date"], results["communication_transfer"]
+    forecast, monitor = study["forecast"], study["full_context_monitor"]
+    neutral, pressure = forecast["neutral"], forecast["pressure"]
+    controls = study["reader_controls"]
+    provenance = (
+        "Measured communication snapshot: "
+        + results["snapshot_date"]
+        + ". The caller supplies every new measured count and interpretation. All supplied "
+        "metrics, comparator records, annotations and secondary contrasts are retained here; "
+        "a condition count is not a unique model-forward count.\n"
+        + json.dumps(results, ensure_ascii=False, indent=2)
+    )
+    title = Slide(NAVY)
+    title.text("KING'S COLLEGE LONDON / 6CCSAPRJ", 0.7, 0.4, 12, 10, "#B7CBCF", True)
+    title.text("VARIANT 02 · LATENT PROBES UNDER DISTRIBUTION SHIFT", 0.7, 0.95, 12, 11, GOLD, True)
+    title.text("Latent Probes\nand Listener Beliefs", 0.7, 1.6, 8.2, 43, WHITE, True, leading=1.1)
+    title.text(
+        "Do neutral-trained monitors transfer when reporting pressure and reader evidence change?",
+        0.75,
+        3.45,
+        7.5,
+        23,
+        "#E2EBEA",
+        max_height=1.65,
+    )
+    title.text("ADITYA RANJAN", 0.75, 6.25, 7.8, 16, WHITE, True)
+    title.text(f"Hanqi Yan · Supervisor\nProgress 2 · {date}", 0.75, 6.65, 7.8, 12, "#B7CBCF")
+    for y, label, body in (
+        (1.65, "NATURAL REPORTS", "Matched source and reader packet; two reporting goals"),
+        (3.2, "FROZEN MONITORS", "Neutral-trained readout, Apollo and text controls"),
+        (4.75, "MEASURED RECIPIENTS", "Fresh reader decisions; same-report evidence replay"),
+    ):
+        title.rect(9, y, 3.6, 1.15, "#243D50")
+        title.text(label, 9.2, y + 0.15, 3.18, 11, GOLD, True)
+        title.text(body, 9.2, y + 0.44, 3.15, 16, WHITE, max_height=0.65)
+    title.line(10.8, 2.85, 10.8, 3.13, "#A9C2C5")
+    title.line(10.8, 4.40, 10.8, 4.68, "#A9C2C5")
+    title.text(
+        "Actual decisions are outcomes; deceptive intent remains a separate claim.",
+        9,
+        6.25,
+        3.6,
+        12,
+        "#B7CBCF",
+    )
+    title.notes = (
+        "The original Week 1 title is preserved. This presentation returns the primary "
+        "evidence to naturally generated communication and observed recipient decisions. "
+        "World-only and belief-question stories remain auxiliary construct diagnostics. "
+        "The supervisor's Apollo/MASK comparator and omission/recipient-knowledge extension "
+        "remain part of the project. Neither forecast accuracy nor recipient error proves "
+        "deceptive intention, a causal belief mechanism or unknown-message anticipation.\n\n"
+        + provenance
+    )
+
+    current = Slide()
+    _header(
+        current,
+        "CURRENT STATE · SINCE PROGRESS 1",
+        "Natural reports and reader decisions measured",
+        2,
+        date,
+    )
+    denominator = (
+        f"correct / {neutral['n']}: neutral → pressure"
+        if neutral["n"] == pressure["n"]
+        else f"neutral / {neutral['n']}; pressure / {pressure['n']}"
+    )
+    cards = (
+        (
+            "NATURAL COMMUNICATION",
+            str(study["n_reports"]),
+            f"reports · {study['n_cases']} cases · {study['n_rule_families']} rules",
+            f"{study['n_neutral_reports']} neutral + {study['n_pressure_reports']} pressured.\n"
+            f"{study['n_secondary_conditions']} secondary reader conditions.\n"
+            f"Comparator: {results['baseline_examples']} Apollo captures.",
+        ),
+        (
+            "FROZEN OUTCOME READOUT",
+            f"{neutral['correct']} → {pressure['correct']}",
+            denominator,
+            f"Log loss {neutral['nll']:.3f} → {pressure['nll']:.3f}.\n"
+            "Original neutral weights unchanged.",
+        ),
+        (
+            "FULL-CONTEXT TEXT MONITOR",
+            f"{monitor['pressure']['correct']}/{monitor['pressure']['n']}",
+            "correct pressured forecasts",
+            f"Neutral: {monitor['neutral']['correct']}/{monitor['neutral']['n']}.\n"
+            + (
+                f"{study['monitor_budget']}-token recovery; primary retained."
+                if study.get("monitor_budget")
+                else "Same-checkpoint text comparator."
+            ),
+        ),
+    )
+    for x, (label, value, unit, body) in zip((0.65, 4.78, 8.91), cards, strict=True):
+        current.rect(x, 2.03, 3.78, 2.73, PALE)
+        current.text(label, x + 0.18, 2.22, 3.42, 11, TEAL, True)
+        current.text(value, x + 0.18, 2.58, 3.35, 37, INK, True)
+        current.text(unit, x + 0.18, 3.21, 3.38, 13, MUTED, True, max_height=0.5)
+        current.text(body, x + 0.18, 3.65, 3.36, 16, INK, max_height=1.02)
+    current.rect(0.65, 4.99, 12.03, 1.10, NAVY)
+    current.text(study["headline"], 0.85, 5.12, 11.60, 18, WHITE, True, max_height=0.48)
+    current.text(study["detail"], 0.85, 5.54, 11.60, 14, "#DFE9E9", max_height=0.52)
+    outcomes = study["reader_outcomes"]
+    current.text(
+        f"World-correct reader decisions: neutral {outcomes['neutral']['world_correct']}/{outcomes['neutral']['n']}; "
+        f"pressure {outcomes['pressure']['world_correct']}/{outcomes['pressure']['n']}. Deferrals / invalids separate.",
+        0.7,
+        6.27,
+        12,
+        11,
+        MUTED,
+    )
+    current.text(
+        "Plan: frozen baseline → fresh communication transfer → targeted validation and replication",
+        0.7,
+        6.59,
+        12,
+        15,
+        INK,
+        True,
+    )
+    current.notes = (
+        "The forecast target is the actual aligned reader's APPROVE/REJECT/DEFER answer, "
+        "not world correctness or an annotated deception label. The activation readout "
+        "uses its original neutral training artifacts and block-8 final report-token "
+        "features. This is after-report transfer; it does not establish anticipation "
+        "before composing the report. Invalid target handling and monitor failures must "
+        "retain their declared denominators. Every supplied baseline result is retained below.\n\n"
+        "The natural reports and the text monitor use the same checkpoint as the reader. "
+        "A deterministic reader can be simulated by running its exact prompt; that is an "
+        "oracle ceiling, not an independent monitoring discovery. No claim of beating "
+        "unlimited text simulation or saving compute follows from these counts.\n\n"
+        f"The completed Apollo adaptation has {results['baseline_examples']} instruction-conditioned "
+        "dialogues. It is a comparator, not validated natural-deception ground truth. "
+        "Raw Apollo margins are not probabilities. The new natural-report format also "
+        "differs from the readout's original training distribution.\n\n"
+        f"The supporting assay has {study['n_secondary_conditions']} same-report reader conditions. "
+        "Exact-prompt caching can reduce unique forwards; conditions are not new independent "
+        "cases. Preserve no-report, original, decisive-fact restoration and irrelevant-edit "
+        "outcomes. Wrong-to-defer differs from wrong-to-correct; an old error persisting "
+        "differs from a newly induced error. These contrasts require measured results, "
+        "rather than an assumed effect of omitted content.\n\n" + provenance
+    )
+
+    barriers = Slide()
+    _header(barriers, "CURRENT BARRIERS", "Bound the evidence before claiming a mechanism", 3, date)
+    issues = (
+        (
+            "Report validity",
+            "Factuality, current decisive evidence and recommendation labels need human review.",
+            "Keep false, partial, capped and ambiguous reports visible; content labels are not intent.",
+        ),
+        (
+            "Reader controls",
+            f"Full-evidence decisions: {controls['full_evidence_correct']}/{controls['full_evidence_total']}; "
+            "retain every failed control.",
+            "Separate world error, justified deferral and invalid output before interpreting omissions.",
+        ),
+        (
+            "Generalisation",
+            f"{study['n_cases']} case clusters; {study['n_heldout_rule_types']} held-out rules share components.",
+            "Show each family and goal contrast; repeated packets do not increase case count.",
+        ),
+        (
+            "Reader / precision",
+            study.get(
+                "reader_validation_summary",
+                "Sender, reader and text monitor share one locally quantized checkpoint.",
+            ),
+            study.get(
+                "reader_validation_response",
+                "Qualify an independent reader; profile a matched CREATE precision reference.",
+            ),
+        ),
+    )
+    for index, (label, issue, response) in enumerate(issues):
+        y = 2.03 + 1.12 * index
+        if index % 2 == 0:
+            barriers.rect(0.65, y - 0.08, 12.03, 1.05, PALE)
+        barriers.text(label, 0.82, y + 0.08, 1.95, 16, TEAL, True, max_height=0.8)
+        barriers.text(issue, 3, y + 0.04, 4.1, 16, INK, max_height=0.9)
+        barriers.text(response, 7.58, y + 0.04, 4.8, 16, INK, max_height=0.9)
+    barriers.notes = (
+        "Agent draft factuality and coverage annotations require independent human review. "
+        "Supported reports, truthful historical-only reports, contradictions, unsupported "
+        "claims and incomplete outputs are different strata. Omission does not establish "
+        "recipient harm or sender intention. Full-evidence reader failures remain in the "
+        "record; no examples are silently regenerated.\n\n"
+        f"There are {study['n_cases']} independent case clusters, not {study['n_reports']} "
+        f"independent scenarios. The {study['n_heldout_rule_types']} explicit held-out decision "
+        "rules share comparisons, temporal precedence or other components with the source "
+        "training families. Held out refers to readout fitting, not LLM pretraining. "
+        "Same-checkpoint results do not establish a stronger independent text baseline, "
+        "new-reader transfer, human-reader effects or a causal belief representation.\n\n"
+        "CREATE addresses precision and model-policy uncertainties through a frozen, "
+        "profiled comparison. Quantization is not established as the cause of any failure. "
+        "The first matched BF16 reference preserves prompts and cases for behavior-only "
+        "comparison on the same CREATE device/runtime. Existing NF4 probe weights cannot "
+        "be treated as validated BF16-coordinate monitors. The failed fresh few-shot "
+        "qualification leaves new source-excerpt training and ct natural transfer unexecuted.\n\n"
+        + provenance
+    )
+
+    next_steps = Slide()
+    _header(
+        next_steps,
+        "PLANNED NEXT STEPS",
+        "Validate the communication finding on fresh evidence",
+        4,
+        date,
+    )
+    plans = (
+        (
+            "NOW → 27 NOV",
+            "Human-review report claims and fresh missing-evidence errors. Preserve failed gates; confirm the outcome target.",
+        ),
+        (
+            "BY 11 DEC",
+            "Run a paired precision reference on CREATE. Qualify a reader before source-excerpt fitting and untouched natural transfer.",
+        ),
+        (
+            "18 DEC · BSPR",
+            "Report transfer and restoration contrasts with limits. Profile a matched BF16 reference on CREATE before scaling.",
+        ),
+    )
+    for x, (label, body) in zip((0.65, 4.78, 8.91), plans, strict=True):
+        next_steps.rect(x, 2.03, 3.78, 2.82, PALE)
+        next_steps.text(label, x + 0.18, 2.25, 3.42, 13, TEAL, True)
+        next_steps.text(body, x + 0.18, 2.79, 3.38, 18, INK, max_height=1.95)
+    next_steps.text(
+        "JAN: frozen study → FEB: validation → MAR: independent families + second reader",
+        0.72,
+        5.18,
+        11.9,
+        20,
+        INK,
+        True,
+        max_height=0.75,
+    )
+    next_steps.text(
+        "APR: reproduce figures, finish report / code · Final submission 22 April 2027",
+        0.72,
+        5.94,
+        11.9,
+        17.5,
+        MUTED,
+        max_height=0.4,
+    )
+    next_steps.rect(0.65, 6.47, 12.03, 0.36, NAVY)
+    next_steps.text(
+        "Next gate: independently validated communication results, with strong controls and honest uncertainty.",
+        0.83,
+        6.55,
+        11.65,
+        12,
+        WHITE,
+        max_height=0.25,
+    )
+    next_steps.notes = (
+        "The model-execution milestone is complete; the individual research project is "
+        "not complete. The next experiment should resolve an identified uncertainty from "
+        "the actual communication result. Freeze new cases, comparison rules, metrics and "
+        "stopping conditions before fresh outcomes rather than searching until favorable "
+        "scores appear. Same-report evidence and restoration effects remain separately "
+        "measured supporting outcomes.\n\n"
+        "The second-reader replay holds natural report wording fixed. It tests dependence "
+        "on reader policy, not knowledge of an unannounced recipient. Request one CREATE "
+        "A100 40 GB for a profiled precision reference, with a defined prompt/case subset. "
+        "More compute cannot substitute for human case review or an identified target.\n\n"
+        "Intermediate dates are proposed project milestones. Check KEATS for BSPR timing "
+        "and the supplied final submission date. The full results JSON below contains "
+        "all primary, control and secondary figures supplied to this presentation.\n\n" + provenance
+    )
     return [title, current, barriers, next_steps]
 
 
@@ -1173,7 +1561,9 @@ def build_progress2(
         "results_sha256": _sha256(result_path) if result_path else None,
         "pptx_sha256": _sha256(pptx_path),
         "pdf_sha256": _sha256(pdf_path),
-        "neutral_readout_status": results["neutral_readout"]["status"],
+        "neutral_readout_status": results.get("communication_transfer", results["neutral_readout"])[
+            "status"
+        ],
         "pdf_renderer": "ReportLab vector layout with the same Arial geometry as the PPTX",
     }
 

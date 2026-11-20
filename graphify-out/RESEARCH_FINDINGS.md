@@ -1,95 +1,56 @@
-# Graphify evidence map: current project to the next experiment
+# Graphify evidence map: natural communication and terminal reader checks
 
-Built 20 November 2026 using the installed Graphify 0.9.100 isolated uv runtime.
-The [interactive map](./graph.html), [graph data](./graph.json),
-[native Graphify report](./GRAPH_REPORT.md) and [source hashes](./RESEARCH_MAP_PROVENANCE.json)
-are a bounded navigation aid. This graph is not a new experiment or an independent
-verification of the external literature. Paper nodes summarize the reading scopes
-already recorded in the repository.
+Updated 20 November 2026 using installed **Graphify 0.9.100** in its isolated uv runtime. The [interactive graph](./graph.html), [data](./graph.json), [native report](./GRAPH_REPORT.md), [health checks](./GRAPH_HEALTH.json) and [source provenance](./RESEARCH_MAP_PROVENANCE.json) now include the completed communication study and terminal follow-ups.
 
-## What was actually indexed
+## Actual scope and extraction
 
-The detection and extraction cover 29 explicitly allowlisted files: 15 completely
-read Markdown research reports and 14 Python experiment/readout modules, approximately
-52,415 words. Graphify classifies four citation-heavy Markdown reports as papers;
-no new external PDF is included. No raw runs, cached weights, credentials or
-third-party archives were scanned. The final graph has **348 nodes, 922 edges
-and nine communities**. The semantic pass added 87 nodes and 144 edges to
-225 AST nodes and 783 AST edges. Graphify creates external dependency placeholders.
+Real `detect_incremental`, cached AST extraction, host-agent semantic extraction, `build_merge`, clustering, exports and CLI queries were used. The bounded corpus expands from 29 to **55 sources: 26 completely read Markdown research documents and 29 Python modules**, approximately 94,903 detected words. Twelve new/changed documents received fresh semantic extraction; 15 new/changed code modules received AST extraction. The graph has **630 nodes, 1,815 edges and 26 labelled communities**, adding 282 nodes and 893 edges.
 
-Semantic extraction used this delegated host agent. No external model API was called.
-The collaboration tool does not expose per-agent token totals, so its semantic
-token cost is **unmeasured**, rather than zero. The generic Graphify benchmark
-estimates 14.3x query token reduction on its synthetic questions; that is not a
-measured runtime saving or a scientific result. Its naive-corpus estimate also
-differs from the actual detector word count and is not used for study claims.
+The corpus excludes raw runs, result JSON arrays, credentials, weights, generated slides/figures and Graphify's own query-feedback files. Paper nodes summarize the reading scopes recorded in repository audits. External PDFs were not newly read during this graph operation; EXTRACTED means source-explicit, not independently experimentally verified.
 
-## Questions and traversals actually executed
+Semantic token usage is **unmeasured**, because the agent interface exposes no usage totals. No external LLM API was called. Graphify's generic benchmark estimates 25.9 times fewer tokens per query on synthetic questions; its naive-corpus estimate differs from detector word counts. This is not measured runtime saving or research evidence.
 
-Query expansion was restricted to tokens present in the graph's 641-token label
-vocabulary. Three query groups were used:
+## Evidence now represented
 
-1. `apollo mask specificity pressure honest` — broad BFS, followed by an exact
-   path from the strict eligibility result to the scoring implementation.
-2. `natural reader outcome transfer report` — broad BFS, followed by exact paths
-   connecting the Apollo paper, natural protocol and observed reader outcomes.
-3. `future goal current belief` — seeded at the all-32 paired-goal result, returning
-   seven complete nodes and nine source-bound semantic edges without truncation.
+| Source-explicit result | Interpretation retained in the graph |
+| --- | --- |
+| 144 natural reports, 24 cases and 671 primary generation calls | The actual communication experiment ran; story-only diagnostics do not replace it. |
+| Activation 62/72 neutral and 66/71 pressured; constant APPROVE 63/72 and 66/71 | Zero REJECT recall and missing DEFER targets prevent an activation-advantage claim. |
+| Exact-prefix monitor recovery 43/72 and 42/71 | All 66 regenerated prefixes match; recovered forecasts finish normally. The larger budget and original baseline remain separate. |
+| Four clean current-fact omissions among 144 draft annotations | The batch is not a human-validated truthful-omission benchmark. |
+| Thirteen identical-output goal pairs across six cases raise Apollo scores | Exploratory context sensitivity supports a known concern; it is not an intent mechanism or general false-positive rate. |
+| Fresh fixed-policy Qwen: 24/24 informed, 17/24 absent, 24/24 stale, zero INVALID | The absent-evidence minimum was 20/24, so qualification failed. A high overall score does not waive the gate. |
+| Zero dependent source labels, real recipient-probe fits or untouched ct report calls | The 216-state excerpt curriculum, selected-readout module and transfer runner remain **unexecuted research software**. Fixture tests are not empirical research results. |
 
-Broad BFS responses were explicitly truncated by the CLI at the requested budget;
-they were not treated as complete. Exact-node paths and the narrow seeded query
-provided the source-bound evidence below.
+These claims come from the [measured report](../docs/COMMUNICATION_TRANSFER_RESULTS.md) and [supervisor brief](../docs/SUPERVISOR_PROGRESS_2_BRIEF.md), not new Graphify observations. All seven fresh reader errors remain visible; four concern registration dates that do not establish completion dates. Outputs alone do not establish an internal reasoning shortcut.
+
+The known-message **56/64** result remains auxiliary: that normative queried-belief head was not transferred into this natural communication batch. The [literature reassessment](../docs/COMMUNICATION_LITERATURE_UPDATE.md), including Thormann, records precedents for contextual forced-answer probes, omissions and other-agent belief readouts. Those ingredients do not establish novelty by themselves.
+
+## CLI queries and paths actually executed
+
+Query expansion used only existing label vocabulary: `reader gate failed absent` and `monitor recovery prefixes`. An attempted expansion containing `majority` was rejected because that token was absent from the label vocabulary.
 
 ```text
-graphify path docs_literature_probe_audit_apollo docs_experiment_protocol_recipient_outcomes --undirected
-graphify path docs_mask_specificity_results_strict_empty scripts_run_mask_specificity_score_draft --undirected
-graphify path docs_known_message_results_conditional_transfer docs_main_study_gates_main_question --undirected
-graphify query "future goal current belief" --seed docs_belief_goal_stress_results_paired_goal_shift --budget 5000
-graphify explain docs_main_study_gates_main_question
+graphify query "monitor recovery prefixes" --seed docs_monitor_budget_recovery_protocol_exact_prefix_gate --budget 1800
+graphify path docs_communication_transfer_results_fresh_gate_failure docs_communication_transfer_results_dependent_study_not_run --undirected
+graphify path docs_communication_transfer_results_fresh_gate_failure src_latent_probes_recipient_readout_fit_recipient_readouts --undirected
+graphify explain docs_communication_transfer_results_fresh_gate_failure
 ```
 
-## What the paths establish, and what is inferred
+The recovery query returns a complete six-node/six-edge neighborhood linking the exact-prefix gate, selection, runner, completed recovery and extra cost. The failure-to-no-execution path is one hop, **EXTRACTED**, grounded in “Completed terminal controls.”
 
-**Explicit source chain:** Apollo's paper is cited by the natural communication
-protocol; that protocol separately defines observed correct, wrong, deferred and
-invalid reader decisions. This is a two-hop path. The original brief's probe
-evaluation and the natural recipient study are connected in the documented plan.
+The four-hop path to `fit_recipient_readouts()` crosses the conditional protocol and runner. Its weakest edge is **INFERRED, confidence 0.85**. This is a dependency path, not evidence that fitting ran. A broader gate query exceeded the requested output budget and tool display; it was not treated as a completely inspected answer. Exact paths and the eight-connection gate explanation supplied the bounded evidence used here.
 
-**Explicit source chain:** the 56/64 known-message result connects through its
-crossed message/receipt design to the target-and-timing distinction and then the
-main natural neutral-to-pressure question. This is a three-hop path. A successful
-normative known-message decoder does not itself supply the missing natural-reader
-outcome result.
+## Next methods decision
 
-**Explicit source chain:** the strict MASK result connects to the measured report,
-the runner and `score_draft()`. Its two strict-belief cases yield no eligible clean
-task responses. The secondary nine-output AUROC .50 remains a distinct draft-label
-analysis. Graph edges labelled EXTRACTED mean the relationship is explicit in a
-document or code, not that the scientific interpretation has been proved.
+Human-review the draft report labels and seven failed reader controls before another transfer claim. Keep the untouched communication bank untouched while its dependencies remain unmet. A deterministic rule executor can check normative labels, but replacing the LLM recipient changes the target rather than demonstrates a belief mechanism.
 
-**Explicit matched-context finding:** the future-goal result, fixed current labels,
-role-framing effect and wording/negation/length caveat all occur in the same narrow
-neighborhood. Reporting only the consistent goal-aligned score shift would omit
-an explicit alternative explanation already preserved in the source report.
+The [CREATE request](../docs/CREATE_COMPUTE_REQUEST.md) now proposes the same 72 observed fixed-policy Qwen qualification prompts under NF4 and BF16 on matched CREATE hardware/runtime: **144 conditions**, with an initial two GPU-hour cap. This is a proposed precision diagnostic, not an executed allocation or promised fix. Improvement on observed controls would still require fresh qualification.
 
-**Actionable inference from these paths:** the next main project milestone should
-produce natural report and actual reader outcomes with a strong information-matched
-text comparator and a fixed neutral-to-pressure evaluation. Further controlled
-belief stories can answer a specific construct question, but should not substitute
-for this missing communication result. This is a project-prioritization inference,
-not evidence of a new mechanism or guaranteed novelty. Fresh input selection,
-human review, untouched holdouts and complete failure accounting remain necessary.
+## Integrity limits and plugins
 
-## Integrity limits
+The initial raw extraction had 242 edges to 36 unindexed targets and five same-endpoint relation collapses. The new raw increment has 220 edges with endpoints outside that increment and seven same-endpoint collapses; many resolve through the existing graph. Post-merge references are materialized, so there are no dangling/missing endpoints or self-loops, but **46 unindexed dependency placeholders remain**. Collapsed raw relations are not recovered by the simple graph. The health file preserves these stages; all semantic endpoints resolve. This is a bounded map, not a complete dependency audit.
 
-The [health diagnostic](./GRAPH_HEALTH.json) reports 242 raw AST edges to 36
-unindexed dependency/import targets, and five same-endpoint relation collapses in
-the default undirected graph. All semantic endpoints resolve. Therefore the
-bounded map is useful for the project evidence chain but is not a complete
-dependency graph. Algorithmic community boundaries and weak-node warnings reflect
-this extraction scope, not independent evidence about research importance.
+All 55 source hashes were checked after final documentation and test updates. Indexed sources use LF endings. Provenance records source hashes only, avoiding self-referential output hashes. All 26 raw community cohesion scores appear in the native report.
 
-Source documents were hashed before extraction and their reported complete-line
-coverage was checked against disk. All nine raw community cohesion scores appear
-in the native report; none is hidden by a qualitative label. The graph should be
-updated when the underlying reports or experiment modules change.
+Plugin use for this mapping: **installed Graphify only**. No Obsidian, Playwright, other app plugin or model/GPU experiment was used by the graph update.

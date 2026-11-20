@@ -17,6 +17,21 @@ targets, human-reviewed data, competitive frozen controls, independent family
 holdouts, a second reader and the final analysis/write-up remain ahead. The
 [main-study gates](docs/MAIN_STUDY_GATES.md) define what counts as completion.
 
+**Latest communication milestone:** [144 naturally generated reports on 24 fresh
+decision cases](docs/COMMUNICATION_TRANSFER_RESULTS.md), with actual readers,
+frozen neutral-trained outcome readouts and score-blind draft content review.
+The activation readout gets 62/72 neutral and 66/71 pressured outcomes correct;
+always predicting APPROVE gets 63/72 and 66/71. Zero REJECT recall and missing
+DEFER outcomes prevent an activation-advantage claim. Reader capability checks,
+and exact-prefix monitor recovery are complete. The independent Qwen reader
+failed qualification; a single fixed nine-shot policy on 24 separate fresh cases
+scored 24/24 informed, 17/24 missing-evidence and 24/24 stale controls. It failed
+the predefined missing-evidence threshold, so new recipient-specific training
+and untouched natural-transfer evaluation **were not run**. See the
+[terminal follow-up record](docs/validation/2026-11-20-reader-followups.json).
+The location/belief-query studies
+below remain auxiliary diagnostics, rather than the main empirical result.
+
 **Start here:** [Apollo quickstart](docs/APOLLO_QUICKSTART.md) ·
 [paper/source audit](docs/APOLLO_METHOD.md) · [reading log](docs/READING_LOG.md) ·
 [starter audit](docs/STARTER_AUDIT.md) ·
