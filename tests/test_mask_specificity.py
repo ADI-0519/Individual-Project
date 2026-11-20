@@ -156,9 +156,9 @@ def draft_csv(source, path):
 
 def test_frozen_real_inputs_and_exact_counts(inputs):
     panel, calibration = inputs
-    assert file_sha256(ROOT / "data/processed/mask_specificity_v1.json") == runner.PANEL_SHA
+    assert file_sha256(ROOT / "data/mask_specificity/mask_specificity_v1.json") == runner.PANEL_SHA
     assert (
-        file_sha256(ROOT / "data/processed/mask_neutral_calibration_v1.json")
+        file_sha256(ROOT / "data/mask_specificity/mask_neutral_calibration_v1.json")
         == runner.CALIBRATION_SHA
     )
     jobs = runner.build_jobs(panel, calibration)

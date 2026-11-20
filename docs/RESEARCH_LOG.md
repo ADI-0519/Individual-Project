@@ -74,6 +74,12 @@ lint/format and the native four-slide PPTX/PDF rebuild. The actual pinned MASK
 aggregation also passes exhaustive 243-combination parity. Final packaging and
 cloud CI are recorded with the completed result commit.
 
+The first clean-checkout CI exposed two stale hash-test paths pointing to ignored
+processed copies of the MASK inputs. The fixtures and runner already used the
+tracked canonical bank. Corrected only those test paths to the identical pinned
+files under `data/mask_specificity`; no model, protocol, label or result changed.
+The failed CI run remains recorded in GitHub Actions rather than being hidden.
+
 ## 20 November 2026 — Paired belief-question comparison and frozen fresh evaluation
 
 Completed the requested three-condition comparison: story only, the original
