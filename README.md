@@ -49,6 +49,14 @@ second-order beliefs. The new query-free nested heads remain near chance;
 the [primary-methods audit](docs/BELIEF_TARGET_AUDIT.md) and capability controls
 explain the next validity checks before communication transfer.
 
+The [controlled belief-question comparison](docs/QUERY_COMPARISON_RESULTS.md)
+and frozen fresh-wording evaluation are now complete. On 32 fresh sender-view
+rows, the primary nested readout scores 16/32 before a question, 24/32 after the
+nested question, and 16/32 after the world-question control. Its unchanged
+question-conditioned head scores 16/32 on story-only states. This is conditional
+decodability across four wording groups, with uneven class recall; it does not
+yet validate an unqueried belief readout for pressured communication.
+
 The Apollo path trains on selected token rows and scores mean raw projections.
 It is separate from the original last-token baseline documented below.
 Dependency locks, offline CI on Linux/Windows, packaging artifacts and a manual

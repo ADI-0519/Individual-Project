@@ -10,6 +10,14 @@ private-attendance inputs identical. Labels are normative fictional states,
 not measured beliefs of a reader model. See the
 [target and primary-methods audit](../docs/BELIEF_TARGET_AUDIT.md).
 
+The [fresh query-validation bank](./belief_diagnostic/fresh_query_validation_v1.json)
+adds 32 prior cases in four new wording/entity groups within the same logical
+family. It was frozen before the query-comparison model run; fitted readouts
+were then frozen before its first capture. The system and question stems match
+the legacy task. It has now been scored and is observed validation data, not an
+untouched test set. Human semantic review remains outstanding. See the
+[measured comparison and limits](../docs/QUERY_COMPARISON_RESULTS.md).
+
 `pilot_scenarios.jsonl` contains **24 synthetic draft scenarios** in six families
 and three invented settings. Twelve have a full-information answer of `yes` and
 twelve have a full-information answer of `no`. The first four records span four

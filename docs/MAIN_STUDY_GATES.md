@@ -35,6 +35,14 @@ These four targets are different:
 
 **Development decision, 20 November:** preserve Option A's measured outcome pilot as an operational baseline and establish the missing neutral nested-perspective target next. The [belief-target audit](./BELIEF_TARGET_AUDIT.md) specifies a fresh factorial diagnostic separating world truth, actual reader perspective and sender-attributed reader perspective. A failure of the existing before-report outcome readout does not settle that question. Validate this target before freezing its communication transfer study. Keep prior perspective tracking, known-message updating and unknown-message forecasting distinct; do not promote a same-data diagnostic into a fresh primary endpoint.
 
+**Measured update, 20 November:** the [controlled query comparison](./QUERY_COMPARISON_RESULTS.md)
+and frozen fresh-wording evaluation now exist. Sender-view nested decodability
+is 16/32 without a question and 24/32 after the nested question, but the queried
+head gets 16/32 when transferred unchanged to unqueried states. Four new wording
+groups, repeated private-attendance pairs and uneven class recall limit the
+result. The neutral unqueried-belief transfer gate remains unmet; use this bank
+as observed validation and independently validate the eventual matching task.
+
 The independent neutral task is a **necessary design gate for the intended stronger belief-transfer claim**. It must preserve the chosen target and time point. A decoder trained on an agent's prior false belief cannot automatically be called a decoder of its post-message state. Likewise, a neutral task showing the full message at training time is not semantically matched to testing before an unknown message. Do not prescribe an auxiliary dataset until this distinction is settled. A valid staged outcome is: first demonstrate a well-controlled communication-outcome forecast, then test a separately defined neutral belief/communication task with matched labels and timing. Decodability remains distinct from causal use in both stages.
 
 **Completion evidence:** a versioned specification declaring input visibility, representation time, sender/reader policies, label meaning, primary comparison and the independent-task mapping. An unresolved mapping blocks a belief-transfer claim; it does not invalidate the already measured development result.

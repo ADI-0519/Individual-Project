@@ -104,7 +104,17 @@ All three decoder hooks exactly match HF hidden-state indices 9, 17 and 25 in a 
 
 The neutral nested-belief gate has **not passed**. Positive world/first-order controls and the hidden-information negative control help localize the problem; they do not establish spontaneous nested reasoning or a causal mechanism. The immediate decision is to diagnose elicitation/readout timing and, if needed, use a targeted model/precision reference before scaling belief transfer. The natural-report pilot remains an operational baseline. No original report, label, failed output or frozen fit is replaced.
 
-The next bounded experiment should compare story-only states with states after a belief question is introduced, using the same normative targets and an independently frozen validation scheme. Factored factual readouts remain controls. If elicited perspective behavior still collapses, check an established ToMi task and a targeted reference model/precision before scaling this panel. A successful neutral gate must precede a new natural-communication transfer claim; the existing four-case results are not its final test set.
+The bounded comparison of story-only states with states after a belief question
+has now run, with the same normative targets, a world-question control and a
+separately frozen fresh-wording evaluation. The [measured query comparison](./QUERY_COMPARISON_RESULTS.md)
+finds sender nested decodability of 16/32 before versus 24/32 after the question,
+but frozen transfer back to story-only states remains 16/32. This conditional
+result does not validate spontaneous use or an unqueried communication decoder.
+Factored factual readouts remain controls. If elicited perspective behavior
+still collapses, check an established ToMi task and a targeted model/precision
+reference before scaling this panel. A successful neutral gate must precede a
+new natural-communication transfer claim; the existing four-case results are
+not its final test set.
 
 Before testing a specifically post-message decoder, add a separate balanced delivery/receipt block: the reader initially misses the move; a truthful current-location message is actually delivered or not, independently of the delivery receipt trusted by the sender. This separates post-message world, reader and nested perspectives. The present 16 fully delivered controls collapse all three labels and cannot validate that distinction. Transfer to natural reports must preserve the chosen prior or post-message target.
 

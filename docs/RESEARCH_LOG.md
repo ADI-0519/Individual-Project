@@ -1,5 +1,42 @@
 # Research and implementation log
 
+## 20 November 2026 — Paired belief-question comparison and frozen fresh evaluation
+
+Completed the requested three-condition comparison: story only, the original
+nested-belief question, and the original world question. All captures precede
+answers; no new answers are generated. The source and new 32-case/four-wording
+bank were committed at `98ca1eb` before execution. Every legacy fit and text
+transformation was saved and hashed before the first fresh capture. Fresh
+evaluation never fits or selects a setting.
+
+On fresh sender-view rows, the primary block-16 nested readout gets 16/32 story,
+24/32 nested question and 16/32 world question. Omniscient counts are 16, 22 and
+17 of 32. Matched TF-IDF heads get 16/32. All four frozen cross-condition primary
+directions get 16/32 in both views. Query-conditioned decodability improves,
+but unchanged transfer to unqueried states is not validated. The sender queried
+head has positive recall 1 and negative recall 0.5, only 16 unique inputs and four
+wording groups. Legacy validation remains 6/16. Proper-loss improvements are
+modest; no population significance or calibrated-confidence claim is made.
+
+The run preserves 672 feature rows/504 unique prefixes, 18 exact repeats and
+two genuine layer-index references. All 160 legacy story rows match the old
+captures exactly at all three blocks. Independent implementations reproduce
+all 18,816 saved predictions (maximum probability error 1.44e-15), all 840 metric
+cells, all 72 validation-only selections and hidden-reader controls. Source and
+frozen-fit hashes remain unchanged. Original failed behavior traces are retained.
+
+See [measured results and interpretation](./QUERY_COMPARISON_RESULTS.md) and the
+[curated machine record](./validation/2026-11-20-belief-query-comparison.json).
+The next gate is human-reviewed, broader neutral validation with matched capture
+timing before pressure transfer. This fresh bank is now observed validation data.
+The original research direction remains unchanged. Three agents contributed;
+no connected-app plugin, extra model download or environment reinstall was used.
+
+Local verification passes 361 tests plus 48 subtests, repository-wide Ruff
+lint/format checks, repository hygiene, source/wheel builds and package metadata.
+Independent checks validate computation and provenance,
+not the semantic quality of the case bank or the final research hypothesis.
+
 ## 20 November 2026 — Direct nested target, elicitation controls and composition
 
 Corrected an overly broad timing interpretation: an after-report state still
