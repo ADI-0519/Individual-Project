@@ -1,0 +1,133 @@
+{
+  "scope": "Bounded project evidence map; not a new literature review or experiment.",
+  "graphify_version": "0.9.100",
+  "source_root": "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project",
+  "source_files": {
+    "docs/BELIEF_DIAGNOSTIC_RESULTS.md": {
+      "sha256": "13e48c3da74826cbd9ff29dface5a1cd9e6654a7616a39439fe9813b8a91fa7e",
+      "lines": 153
+    },
+    "docs/BELIEF_GOAL_STRESS_PROTOCOL.md": {
+      "sha256": "54a8c6e748df86dc482ca449c48995631f312db783ed320bac94eed7b350d4ac",
+      "lines": 111
+    },
+    "docs/BELIEF_GOAL_STRESS_RESULTS.md": {
+      "sha256": "1a41c6f8b3ab7d38e9623a4d1d4db81ba3d11b174b22bbdb3b19f6adf92460bd",
+      "lines": 186
+    },
+    "docs/BELIEF_TARGET_AUDIT.md": {
+      "sha256": "ca4d7529fc10729e4562edf08039d3fe34877ea2e0a044ffa90b0fbcf2b7fc3b",
+      "lines": 87
+    },
+    "docs/EXPERIMENT_PROTOCOL.md": {
+      "sha256": "f5b3b079a6b86867db18767f1789ef280234fc9a4c230b7547714791cd67754e",
+      "lines": 209
+    },
+    "docs/KNOWN_MESSAGE_PROTOCOL.md": {
+      "sha256": "8822074d8ca1d28b5bfe10460c55949f66a1d167c91e2616657df863a1013701",
+      "lines": 118
+    },
+    "docs/KNOWN_MESSAGE_RESULTS.md": {
+      "sha256": "a20025d135aa87c9475229f00b81e7003ba2581b52fbc8a03d09dc64d50ef79b",
+      "lines": 248
+    },
+    "docs/LITERATURE_PROBE_AUDIT.md": {
+      "sha256": "186eef5c202b9f265dfeac114dc08f51bffbb9a604a9673ef2b3ca468c7aa873",
+      "lines": 184
+    },
+    "docs/MAIN_STUDY_GATES.md": {
+      "sha256": "42371617523a6d8672b52da57c3dadc2446b5a078b4cb04b98cf39f71d7b65b1",
+      "lines": 147
+    },
+    "docs/MASK_SOURCE_AUDIT.md": {
+      "sha256": "035cbe77d1f415d949f3ea533ad9256fcdcce296e135dadd493f9bb2b87409f9",
+      "lines": 63
+    },
+    "docs/MASK_SPECIFICITY_RESULTS.md": {
+      "sha256": "adab49dc3fc4b2736fe61798b6136ffb458877e361b18ca0b03e5debc3040b68",
+      "lines": 187
+    },
+    "docs/NEUTRAL_FORECAST_RESULTS.md": {
+      "sha256": "bf251a657cd9e5c5cb8d371a706b8c958ffc16a6a1622f28438666173b676ddc",
+      "lines": 91
+    },
+    "docs/PILOT_RESULTS.md": {
+      "sha256": "ff5beba52b5d9ee25a5868cb08d615c7cb2368ab6f560684e6c395725985ac07",
+      "lines": 77
+    },
+    "docs/PRESSURE_PILOT.md": {
+      "sha256": "5864523af8bb18494b7409c99891cbda0e9d258a25ac17c24d5f0a70ac4a34a9",
+      "lines": 64
+    },
+    "docs/READING_LOG.md": {
+      "sha256": "a7d6bbf58ad74818dca2791a801accddd80661818503ae12710a8d287fa82136",
+      "lines": 158
+    },
+    "scripts/analyse_mask_sensitivity.py": {
+      "sha256": "5a2f248ee568a588a7d0c973ccb4e0a1d8647a8ed03949d9bec8d5d3b6e9d00c",
+      "lines": 441
+    },
+    "scripts/run_belief_diagnostic.py": {
+      "sha256": "ae85e31fbc18c922c407806cc4d0a65579055163fb7c36b5b61fb1c15b719540",
+      "lines": 342
+    },
+    "scripts/run_belief_goal_stress.py": {
+      "sha256": "1979186ca9119a89a62620e4a33779a6da99c7407245fda32f24f3f0e5f84495",
+      "lines": 625
+    },
+    "scripts/run_belief_query_comparison.py": {
+      "sha256": "bdfdb58a18194019ffb9ba27ac5630480e297d5b39cc793d9d9c247759a88b44",
+      "lines": 377
+    },
+    "scripts/run_mask_same_text.py": {
+      "sha256": "b9e6ebb986ab063546ebfdd5fad04b2fdbc303e55bc5a6fc2a896835315e5fa4",
+      "lines": 371
+    },
+    "scripts/run_mask_specificity.py": {
+      "sha256": "7d0d437b339ebd14b9fbe97ccce5cfe991ca18d86d3f4ba779b02d6169085885",
+      "lines": 841
+    },
+    "scripts/run_message_belief_validation.py": {
+      "sha256": "297ef2bdf625ccbd3564fceb984d62a43f70f34ea7a2f231be1bffaf80b92eeb",
+      "lines": 635
+    },
+    "src/latent_probes/apollo.py": {
+      "sha256": "717f46468d512bb1660d6db1040611e33af351dd593f70dcfaae816e43fa548d",
+      "lines": 436
+    },
+    "src/latent_probes/apollo_probe.py": {
+      "sha256": "2b69caadf2cdb52078eb146cf282c99f75bf61f492c930de9c29b39b04b0a40a",
+      "lines": 554
+    },
+    "src/latent_probes/belief_panel.py": {
+      "sha256": "b163395913cdfdd57c5f896949e4e41d22108c3b52a20718543a210cc5966679",
+      "lines": 452
+    },
+    "src/latent_probes/belief_query_panel.py": {
+      "sha256": "1a898db8d0b36d23ee36a7625c6891dbc4ad66fb0ac617f294d6ec6ea2180cb1",
+      "lines": 343
+    },
+    "src/latent_probes/belief_query_readout.py": {
+      "sha256": "a69aeb4994e2beb4a0c110d438f9bf126e3cd87eb9a3558dfd8eab8fbf90bdc7",
+      "lines": 698
+    },
+    "src/latent_probes/belief_readout.py": {
+      "sha256": "f225794416363b3d219b816e8aa23a7ba89343e54cef97e82d96e08624e11d3f",
+      "lines": 409
+    },
+    "src/latent_probes/message_belief_panel.py": {
+      "sha256": "11b48505f2bffa2fe30913fbe0ad2c4a70c114c4f143ac8555f3fa10a39598ff",
+      "lines": 366
+    }
+  },
+  "excluded": [
+    "raw experiments",
+    "weights",
+    "credentials",
+    "caches",
+    "external source archives"
+  ],
+  "semantic_extraction": "Delegated host agent, no external API call.",
+  "external_api_key_configured": false,
+  "token_accounting": "Host collaboration tool does not expose usage; semantic tokens unmeasured, not zero cost."
+}

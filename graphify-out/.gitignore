@@ -1,0 +1,9 @@
+# Rebuild state and machine-specific paths stay local.
+*
+!.gitignore
+!graph.json
+!graph.html
+!GRAPH_REPORT.md
+!GRAPH_HEALTH.json
+!RESEARCH_MAP_PROVENANCE.json
+!RESEARCH_FINDINGS.md

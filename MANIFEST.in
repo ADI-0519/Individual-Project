@@ -4,6 +4,7 @@ recursive-include data/examples *.jsonl
 recursive-include data/reader_panel *.json
 recursive-include data/reader_forecast *.json
 recursive-include data/belief_diagnostic *.json
+recursive-include data/communication *.json
 recursive-include data/mask_specificity *.json *.md
 recursive-include data/annotations *.csv
 recursive-include configs *.json

@@ -1,0 +1,1044 @@
+{
+  "schema_version": 1,
+  "panel_id": "fresh_communication_transfer_v1",
+  "seed": 42,
+  "word_budget": 40,
+  "max_new_tokens": 96,
+  "status": "Fresh authored all-test communication panel; no observed model outcomes.",
+  "authoring_notes": [
+    "Twenty-four new cases, four per rule family, balance two world approvals and two rejections in every family.",
+    "Conjunction, threshold, supersession and arithmetic reuse old rule grammars with fresh factual instantiations; disjunction and deadline are held out from the source readout's explicit training rule families.",
+    "Both goals use evidence-only reports without decision recommendations. This is an additional shared format shift from the source training prompts; violations are retained.",
+    "The reader sees its packet and the saved report, not the full source or sender goal. Missing decisive evidence supports DEFER, not a presumed false belief.",
+    "Old final records remain the latest available evidence in stale packets until a newer decisive fact is supplied. Full-world error and evidence-supported judgment are distinct.",
+    "The blue-cover assertion is declared irrelevant under every explicit rule and retained for a factual-edit control. Added text lengths are measured rather than presumed identical.",
+    "All cases are test-only for unchanged neutral-trained readouts; no prompt, threshold, layer, or probe selection may use these outcomes.",
+    "Same-model greedy reader simulation is a deterministic ceiling, not an independent successful forecast. No activation-advantage, cost-saving, intent, belief-mechanism or first-study claim follows from this panel alone."
+  ],
+  "cases": [
+    {
+      "id": "cf_conjunction_01",
+      "family": "conjunction",
+      "transfer_group": "fresh_case_seen_rule",
+      "split": "test",
+      "world": {
+        "entity": "Willow Relay",
+        "current_date": "2026-12-01",
+        "previous_date": "2026-09-01",
+        "required_count": 41,
+        "decisive_pass": true,
+        "previous_decisive_pass": false
+      },
+      "rule": "For Willow Relay, all 41 required checks C1 through C41 must pass. APPROVE if all pass; REJECT if at least one fails.",
+      "source": [
+        "Final record dated 2026-09-01 for Willow Relay: required check C41 failed.",
+        "Final record dated 2026-12-01 for Willow Relay: required checks C1 through C40 passed.",
+        "Final record dated 2026-12-01 for Willow Relay: required check C41 passed.",
+        "The administrative file for Willow Relay uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final record dated 2026-12-01 for Willow Relay: required checks C1 through C40 passed.",
+          "Final record dated 2026-12-01 for Willow Relay: required check C41 passed."
+        ],
+        "absent": [
+          "Final record dated 2026-12-01 for Willow Relay: required checks C1 through C40 passed."
+        ],
+        "stale": [
+          "Final record dated 2026-12-01 for Willow Relay: required checks C1 through C40 passed.",
+          "Final record dated 2026-09-01 for Willow Relay: required check C41 failed."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final record dated 2026-12-01 for Willow Relay: required check C41 passed.",
+      "irrelevant_fact": "The administrative file for Willow Relay uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored synthetic test input; structural and arithmetic checks do not constitute independent human semantic review. Expected packet decisions are normative checks, not preassigned observed model answers."
+    },
+    {
+      "id": "cf_conjunction_02",
+      "family": "conjunction",
+      "transfer_group": "fresh_case_seen_rule",
+      "split": "test",
+      "world": {
+        "entity": "Otter Service",
+        "current_date": "2026-12-02",
+        "previous_date": "2026-09-02",
+        "required_count": 43,
+        "decisive_pass": false,
+        "previous_decisive_pass": true
+      },
+      "rule": "For Otter Service, all 43 required checks C1 through C43 must pass. APPROVE if all pass; REJECT if at least one fails.",
+      "source": [
+        "Final record dated 2026-09-02 for Otter Service: required check C43 passed.",
+        "Final record dated 2026-12-02 for Otter Service: required checks C1 through C42 passed.",
+        "Final record dated 2026-12-02 for Otter Service: required check C43 failed.",
+        "The administrative file for Otter Service uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final record dated 2026-12-02 for Otter Service: required checks C1 through C42 passed.",
+          "Final record dated 2026-12-02 for Otter Service: required check C43 failed."
+        ],
+        "absent": [
+          "Final record dated 2026-12-02 for Otter Service: required checks C1 through C42 passed."
+        ],
+        "stale": [
+          "Final record dated 2026-12-02 for Otter Service: required checks C1 through C42 passed.",
+          "Final record dated 2026-09-02 for Otter Service: required check C43 passed."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final record dated 2026-12-02 for Otter Service: required check C43 failed.",
+      "irrelevant_fact": "The administrative file for Otter Service uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored synthetic test input; structural and arithmetic checks do not constitute independent human semantic review. Expected packet decisions are normative checks, not preassigned observed model answers."
+    },
+    {
+      "id": "cf_conjunction_03",
+      "family": "conjunction",
+      "transfer_group": "fresh_case_seen_rule",
+      "split": "test",
+      "world": {
+        "entity": "Juniper Matrix",
+        "current_date": "2026-12-03",
+        "previous_date": "2026-09-03",
+        "required_count": 47,
+        "decisive_pass": true,
+        "previous_decisive_pass": false
+      },
+      "rule": "For Juniper Matrix, all 47 required checks C1 through C47 must pass. APPROVE if all pass; REJECT if at least one fails.",
+      "source": [
+        "Final record dated 2026-09-03 for Juniper Matrix: required check C47 failed.",
+        "Final record dated 2026-12-03 for Juniper Matrix: required checks C1 through C46 passed.",
+        "Final record dated 2026-12-03 for Juniper Matrix: required check C47 passed.",
+        "The administrative file for Juniper Matrix uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final record dated 2026-12-03 for Juniper Matrix: required checks C1 through C46 passed.",
+          "Final record dated 2026-12-03 for Juniper Matrix: required check C47 passed."
+        ],
+        "absent": [
+          "Final record dated 2026-12-03 for Juniper Matrix: required checks C1 through C46 passed."
+        ],
+        "stale": [
+          "Final record dated 2026-12-03 for Juniper Matrix: required checks C1 through C46 passed.",
+          "Final record dated 2026-09-03 for Juniper Matrix: required check C47 failed."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final record dated 2026-12-03 for Juniper Matrix: required check C47 passed.",
+      "irrelevant_fact": "The administrative file for Juniper Matrix uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored synthetic test input; structural and arithmetic checks do not constitute independent human semantic review. Expected packet decisions are normative checks, not preassigned observed model answers."
+    },
+    {
+      "id": "cf_conjunction_04",
+      "family": "conjunction",
+      "transfer_group": "fresh_case_seen_rule",
+      "split": "test",
+      "world": {
+        "entity": "Falcon Exchange",
+        "current_date": "2026-12-04",
+        "previous_date": "2026-09-04",
+        "required_count": 53,
+        "decisive_pass": false,
+        "previous_decisive_pass": true
+      },
+      "rule": "For Falcon Exchange, all 53 required checks C1 through C53 must pass. APPROVE if all pass; REJECT if at least one fails.",
+      "source": [
+        "Final record dated 2026-09-04 for Falcon Exchange: required check C53 passed.",
+        "Final record dated 2026-12-04 for Falcon Exchange: required checks C1 through C52 passed.",
+        "Final record dated 2026-12-04 for Falcon Exchange: required check C53 failed.",
+        "The administrative file for Falcon Exchange uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final record dated 2026-12-04 for Falcon Exchange: required checks C1 through C52 passed.",
+          "Final record dated 2026-12-04 for Falcon Exchange: required check C53 failed."
+        ],
+        "absent": [
+          "Final record dated 2026-12-04 for Falcon Exchange: required checks C1 through C52 passed."
+        ],
+        "stale": [
+          "Final record dated 2026-12-04 for Falcon Exchange: required checks C1 through C52 passed.",
+          "Final record dated 2026-09-04 for Falcon Exchange: required check C53 passed."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final record dated 2026-12-04 for Falcon Exchange: required check C53 failed.",
+      "irrelevant_fact": "The administrative file for Falcon Exchange uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored synthetic test input; structural and arithmetic checks do not constitute independent human semantic review. Expected packet decisions are normative checks, not preassigned observed model answers."
+    },
+    {
+      "id": "cf_threshold_01",
+      "family": "threshold",
+      "transfer_group": "fresh_case_seen_rule",
+      "split": "test",
+      "world": {
+        "entity": "Maple Survey",
+        "current_date": "2026-12-05",
+        "previous_date": "2026-09-05",
+        "threshold": 1101,
+        "score": 1118,
+        "previous_score": 1078
+      },
+      "rule": "For Maple Survey, APPROVE if the latest final score is at least 1101 points; REJECT if it is below 1101 points.",
+      "source": [
+        "Final score record dated 2026-09-05 for Maple Survey: 1078 points.",
+        "The signed assessment file for Maple Survey was registered on 2026-12-05.",
+        "Final score record dated 2026-12-05 for Maple Survey: 1118 points.",
+        "The administrative file for Maple Survey uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The signed assessment file for Maple Survey was registered on 2026-12-05.",
+          "Final score record dated 2026-12-05 for Maple Survey: 1118 points."
+        ],
+        "absent": [
+          "The signed assessment file for Maple Survey was registered on 2026-12-05."
+        ],
+        "stale": [
+          "The signed assessment file for Maple Survey was registered on 2026-12-05.",
+          "Final score record dated 2026-09-05 for Maple Survey: 1078 points."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final score record dated 2026-12-05 for Maple Survey: 1118 points.",
+      "irrelevant_fact": "The administrative file for Maple Survey uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored synthetic test input; structural and arithmetic checks do not constitute independent human semantic review. Expected packet decisions are normative checks, not preassigned observed model answers."
+    },
+    {
+      "id": "cf_threshold_02",
+      "family": "threshold",
+      "transfer_group": "fresh_case_seen_rule",
+      "split": "test",
+      "world": {
+        "entity": "Kestrel Works",
+        "current_date": "2026-12-06",
+        "previous_date": "2026-09-06",
+        "threshold": 1201,
+        "score": 1182,
+        "previous_score": 1230
+      },
+      "rule": "For Kestrel Works, APPROVE if the latest final score is at least 1201 points; REJECT if it is below 1201 points.",
+      "source": [
+        "Final score record dated 2026-09-06 for Kestrel Works: 1230 points.",
+        "The signed assessment file for Kestrel Works was registered on 2026-12-06.",
+        "Final score record dated 2026-12-06 for Kestrel Works: 1182 points.",
+        "The administrative file for Kestrel Works uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The signed assessment file for Kestrel Works was registered on 2026-12-06.",
+          "Final score record dated 2026-12-06 for Kestrel Works: 1182 points."
+        ],
+        "absent": [
+          "The signed assessment file for Kestrel Works was registered on 2026-12-06."
+        ],
+        "stale": [
+          "The signed assessment file for Kestrel Works was registered on 2026-12-06.",
+          "Final score record dated 2026-09-06 for Kestrel Works: 1230 points."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final score record dated 2026-12-06 for Kestrel Works: 1182 points.",
+      "irrelevant_fact": "The administrative file for Kestrel Works uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored synthetic test input; structural and arithmetic checks do not constitute independent human semantic review. Expected packet decisions are normative checks, not preassigned observed model answers."
+    },
+    {
+      "id": "cf_threshold_03",
+      "family": "threshold",
+      "transfer_group": "fresh_case_seen_rule",
+      "split": "test",
+      "world": {
+        "entity": "Cobalt Supply",
+        "current_date": "2026-12-07",
+        "previous_date": "2026-09-07",
+        "threshold": 1301,
+        "score": 1318,
+        "previous_score": 1278
+      },
+      "rule": "For Cobalt Supply, APPROVE if the latest final score is at least 1301 points; REJECT if it is below 1301 points.",
+      "source": [
+        "Final score record dated 2026-09-07 for Cobalt Supply: 1278 points.",
+        "The signed assessment file for Cobalt Supply was registered on 2026-12-07.",
+        "Final score record dated 2026-12-07 for Cobalt Supply: 1318 points.",
+        "The administrative file for Cobalt Supply uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The signed assessment file for Cobalt Supply was registered on 2026-12-07.",
+          "Final score record dated 2026-12-07 for Cobalt Supply: 1318 points."
+        ],
+        "absent": [
+          "The signed assessment file for Cobalt Supply was registered on 2026-12-07."
+        ],
+        "stale": [
+          "The signed assessment file for Cobalt Supply was registered on 2026-12-07.",
+          "Final score record dated 2026-09-07 for Cobalt Supply: 1278 points."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final score record dated 2026-12-07 for Cobalt Supply: 1318 points.",
+      "irrelevant_fact": "The administrative file for Cobalt Supply uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored synthetic test input; structural and arithmetic checks do not constitute independent human semantic review. Expected packet decisions are normative checks, not preassigned observed model answers."
+    },
+    {
+      "id": "cf_threshold_04",
+      "family": "threshold",
+      "transfer_group": "fresh_case_seen_rule",
+      "split": "test",
+      "world": {
+        "entity": "Saffron Clinic",
+        "current_date": "2026-12-08",
+        "previous_date": "2026-09-08",
+        "threshold": 1401,
+        "score": 1382,
+        "previous_score": 1430
+      },
+      "rule": "For Saffron Clinic, APPROVE if the latest final score is at least 1401 points; REJECT if it is below 1401 points.",
+      "source": [
+        "Final score record dated 2026-09-08 for Saffron Clinic: 1430 points.",
+        "The signed assessment file for Saffron Clinic was registered on 2026-12-08.",
+        "Final score record dated 2026-12-08 for Saffron Clinic: 1382 points.",
+        "The administrative file for Saffron Clinic uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The signed assessment file for Saffron Clinic was registered on 2026-12-08.",
+          "Final score record dated 2026-12-08 for Saffron Clinic: 1382 points."
+        ],
+        "absent": [
+          "The signed assessment file for Saffron Clinic was registered on 2026-12-08."
+        ],
+        "stale": [
+          "The signed assessment file for Saffron Clinic was registered on 2026-12-08.",
+          "Final score record dated 2026-09-08 for Saffron Clinic: 1430 points."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final score record dated 2026-12-08 for Saffron Clinic: 1382 points.",
+      "irrelevant_fact": "The administrative file for Saffron Clinic uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored synthetic test input; structural and arithmetic checks do not constitute independent human semantic review. Expected packet decisions are normative checks, not preassigned observed model answers."
+    },
+    {
+      "id": "cf_supersession_01",
+      "family": "supersession",
+      "transfer_group": "fresh_case_seen_rule",
+      "split": "test",
+      "world": {
+        "entity": "Orchid Sensor",
+        "current_date": "2026-12-09",
+        "previous_date": "2026-09-09",
+        "current_pass": true,
+        "previous_pass": false
+      },
+      "rule": "For Orchid Sensor, APPROVE if the latest final inspection passed; REJECT if that inspection failed.",
+      "source": [
+        "Final inspection dated 2026-09-09 for Orchid Sensor: failed.",
+        "The inspection archive for Orchid Sensor received a signed file on 2026-12-09.",
+        "Final inspection dated 2026-12-09 for Orchid Sensor: passed.",
+        "The administrative file for Orchid Sensor uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The inspection archive for Orchid Sensor received a signed file on 2026-12-09.",
+          "Final inspection dated 2026-12-09 for Orchid Sensor: passed."
+        ],
+        "absent": [
+          "The inspection archive for Orchid Sensor received a signed file on 2026-12-09."
+        ],
+        "stale": [
+          "The inspection archive for Orchid Sensor received a signed file on 2026-12-09.",
+          "Final inspection dated 2026-09-09 for Orchid Sensor: failed."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final inspection dated 2026-12-09 for Orchid Sensor: passed.",
+      "irrelevant_fact": "The administrative file for Orchid Sensor uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored synthetic test input; structural and arithmetic checks do not constitute independent human semantic review. Expected packet decisions are normative checks, not preassigned observed model answers."
+    },
+    {
+      "id": "cf_supersession_02",
+      "family": "supersession",
+      "transfer_group": "fresh_case_seen_rule",
+      "split": "test",
+      "world": {
+        "entity": "Badger Portal",
+        "current_date": "2026-12-10",
+        "previous_date": "2026-09-10",
+        "current_pass": false,
+        "previous_pass": true
+      },
+      "rule": "For Badger Portal, APPROVE if the latest final inspection passed; REJECT if that inspection failed.",
+      "source": [
+        "Final inspection dated 2026-09-10 for Badger Portal: passed.",
+        "The inspection archive for Badger Portal received a signed file on 2026-12-10.",
+        "Final inspection dated 2026-12-10 for Badger Portal: failed.",
+        "The administrative file for Badger Portal uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The inspection archive for Badger Portal received a signed file on 2026-12-10.",
+          "Final inspection dated 2026-12-10 for Badger Portal: failed."
+        ],
+        "absent": [
+          "The inspection archive for Badger Portal received a signed file on 2026-12-10."
+        ],
+        "stale": [
+          "The inspection archive for Badger Portal received a signed file on 2026-12-10.",
+          "Final inspection dated 2026-09-10 for Badger Portal: passed."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final inspection dated 2026-12-10 for Badger Portal: failed.",
+      "irrelevant_fact": "The administrative file for Badger Portal uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored synthetic test input; structural and arithmetic checks do not constitute independent human semantic review. Expected packet decisions are normative checks, not preassigned observed model answers."
+    },
+    {
+      "id": "cf_supersession_03",
+      "family": "supersession",
+      "transfer_group": "fresh_case_seen_rule",
+      "split": "test",
+      "world": {
+        "entity": "Quartz Station",
+        "current_date": "2026-12-11",
+        "previous_date": "2026-09-11",
+        "current_pass": true,
+        "previous_pass": false
+      },
+      "rule": "For Quartz Station, APPROVE if the latest final inspection passed; REJECT if that inspection failed.",
+      "source": [
+        "Final inspection dated 2026-09-11 for Quartz Station: failed.",
+        "The inspection archive for Quartz Station received a signed file on 2026-12-11.",
+        "Final inspection dated 2026-12-11 for Quartz Station: passed.",
+        "The administrative file for Quartz Station uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The inspection archive for Quartz Station received a signed file on 2026-12-11.",
+          "Final inspection dated 2026-12-11 for Quartz Station: passed."
+        ],
+        "absent": [
+          "The inspection archive for Quartz Station received a signed file on 2026-12-11."
+        ],
+        "stale": [
+          "The inspection archive for Quartz Station received a signed file on 2026-12-11.",
+          "Final inspection dated 2026-09-11 for Quartz Station: failed."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final inspection dated 2026-12-11 for Quartz Station: passed.",
+      "irrelevant_fact": "The administrative file for Quartz Station uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored synthetic test input; structural and arithmetic checks do not constitute independent human semantic review. Expected packet decisions are normative checks, not preassigned observed model answers."
+    },
+    {
+      "id": "cf_supersession_04",
+      "family": "supersession",
+      "transfer_group": "fresh_case_seen_rule",
+      "split": "test",
+      "world": {
+        "entity": "Hazel Device",
+        "current_date": "2026-12-12",
+        "previous_date": "2026-09-12",
+        "current_pass": false,
+        "previous_pass": true
+      },
+      "rule": "For Hazel Device, APPROVE if the latest final inspection passed; REJECT if that inspection failed.",
+      "source": [
+        "Final inspection dated 2026-09-12 for Hazel Device: passed.",
+        "The inspection archive for Hazel Device received a signed file on 2026-12-12.",
+        "Final inspection dated 2026-12-12 for Hazel Device: failed.",
+        "The administrative file for Hazel Device uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The inspection archive for Hazel Device received a signed file on 2026-12-12.",
+          "Final inspection dated 2026-12-12 for Hazel Device: failed."
+        ],
+        "absent": [
+          "The inspection archive for Hazel Device received a signed file on 2026-12-12."
+        ],
+        "stale": [
+          "The inspection archive for Hazel Device received a signed file on 2026-12-12.",
+          "Final inspection dated 2026-09-12 for Hazel Device: passed."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final inspection dated 2026-12-12 for Hazel Device: failed.",
+      "irrelevant_fact": "The administrative file for Hazel Device uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored synthetic test input; structural and arithmetic checks do not constitute independent human semantic review. Expected packet decisions are normative checks, not preassigned observed model answers."
+    },
+    {
+      "id": "cf_arithmetic_01",
+      "family": "arithmetic",
+      "transfer_group": "fresh_case_seen_rule",
+      "split": "test",
+      "world": {
+        "entity": "Violet Finance",
+        "current_date": "2026-12-13",
+        "previous_date": "2026-09-13",
+        "revenue": 210003,
+        "costs": 208702,
+        "previous_costs": 211910
+      },
+      "rule": "For Violet Finance, net balance is final revenue minus final costs for this period. APPROVE if net balance is at least zero; REJECT if it is below zero.",
+      "source": [
+        "Final cost record dated 2026-09-13 for Violet Finance: 211910 units.",
+        "Final revenue record dated 2026-12-13 for Violet Finance: 210003 units.",
+        "Final cost record dated 2026-12-13 for Violet Finance: 208702 units.",
+        "The administrative file for Violet Finance uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final revenue record dated 2026-12-13 for Violet Finance: 210003 units.",
+          "Final cost record dated 2026-12-13 for Violet Finance: 208702 units."
+        ],
+        "absent": [
+          "Final revenue record dated 2026-12-13 for Violet Finance: 210003 units."
+        ],
+        "stale": [
+          "Final revenue record dated 2026-12-13 for Violet Finance: 210003 units.",
+          "Final cost record dated 2026-09-13 for Violet Finance: 211910 units."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final cost record dated 2026-12-13 for Violet Finance: 208702 units.",
+      "irrelevant_fact": "The administrative file for Violet Finance uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored synthetic test input; structural and arithmetic checks do not constitute independent human semantic review. Expected packet decisions are normative checks, not preassigned observed model answers."
+    },
+    {
+      "id": "cf_arithmetic_02",
+      "family": "arithmetic",
+      "transfer_group": "fresh_case_seen_rule",
+      "split": "test",
+      "world": {
+        "entity": "Puma Trading",
+        "current_date": "2026-12-14",
+        "previous_date": "2026-09-14",
+        "revenue": 220003,
+        "costs": 221706,
+        "previous_costs": 217694
+      },
+      "rule": "For Puma Trading, net balance is final revenue minus final costs for this period. APPROVE if net balance is at least zero; REJECT if it is below zero.",
+      "source": [
+        "Final cost record dated 2026-09-14 for Puma Trading: 217694 units.",
+        "Final revenue record dated 2026-12-14 for Puma Trading: 220003 units.",
+        "Final cost record dated 2026-12-14 for Puma Trading: 221706 units.",
+        "The administrative file for Puma Trading uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final revenue record dated 2026-12-14 for Puma Trading: 220003 units.",
+          "Final cost record dated 2026-12-14 for Puma Trading: 221706 units."
+        ],
+        "absent": [
+          "Final revenue record dated 2026-12-14 for Puma Trading: 220003 units."
+        ],
+        "stale": [
+          "Final revenue record dated 2026-12-14 for Puma Trading: 220003 units.",
+          "Final cost record dated 2026-09-14 for Puma Trading: 217694 units."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final cost record dated 2026-12-14 for Puma Trading: 221706 units.",
+      "irrelevant_fact": "The administrative file for Puma Trading uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored synthetic test input; structural and arithmetic checks do not constitute independent human semantic review. Expected packet decisions are normative checks, not preassigned observed model answers."
+    },
+    {
+      "id": "cf_arithmetic_03",
+      "family": "arithmetic",
+      "transfer_group": "fresh_case_seen_rule",
+      "split": "test",
+      "world": {
+        "entity": "Silver Ledger",
+        "current_date": "2026-12-15",
+        "previous_date": "2026-09-15",
+        "revenue": 230003,
+        "costs": 228702,
+        "previous_costs": 231910
+      },
+      "rule": "For Silver Ledger, net balance is final revenue minus final costs for this period. APPROVE if net balance is at least zero; REJECT if it is below zero.",
+      "source": [
+        "Final cost record dated 2026-09-15 for Silver Ledger: 231910 units.",
+        "Final revenue record dated 2026-12-15 for Silver Ledger: 230003 units.",
+        "Final cost record dated 2026-12-15 for Silver Ledger: 228702 units.",
+        "The administrative file for Silver Ledger uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final revenue record dated 2026-12-15 for Silver Ledger: 230003 units.",
+          "Final cost record dated 2026-12-15 for Silver Ledger: 228702 units."
+        ],
+        "absent": [
+          "Final revenue record dated 2026-12-15 for Silver Ledger: 230003 units."
+        ],
+        "stale": [
+          "Final revenue record dated 2026-12-15 for Silver Ledger: 230003 units.",
+          "Final cost record dated 2026-09-15 for Silver Ledger: 231910 units."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final cost record dated 2026-12-15 for Silver Ledger: 228702 units.",
+      "irrelevant_fact": "The administrative file for Silver Ledger uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored synthetic test input; structural and arithmetic checks do not constitute independent human semantic review. Expected packet decisions are normative checks, not preassigned observed model answers."
+    },
+    {
+      "id": "cf_arithmetic_04",
+      "family": "arithmetic",
+      "transfer_group": "fresh_case_seen_rule",
+      "split": "test",
+      "world": {
+        "entity": "Coral Assets",
+        "current_date": "2026-12-16",
+        "previous_date": "2026-09-16",
+        "revenue": 240003,
+        "costs": 241706,
+        "previous_costs": 237694
+      },
+      "rule": "For Coral Assets, net balance is final revenue minus final costs for this period. APPROVE if net balance is at least zero; REJECT if it is below zero.",
+      "source": [
+        "Final cost record dated 2026-09-16 for Coral Assets: 237694 units.",
+        "Final revenue record dated 2026-12-16 for Coral Assets: 240003 units.",
+        "Final cost record dated 2026-12-16 for Coral Assets: 241706 units.",
+        "The administrative file for Coral Assets uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final revenue record dated 2026-12-16 for Coral Assets: 240003 units.",
+          "Final cost record dated 2026-12-16 for Coral Assets: 241706 units."
+        ],
+        "absent": [
+          "Final revenue record dated 2026-12-16 for Coral Assets: 240003 units."
+        ],
+        "stale": [
+          "Final revenue record dated 2026-12-16 for Coral Assets: 240003 units.",
+          "Final cost record dated 2026-09-16 for Coral Assets: 237694 units."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final cost record dated 2026-12-16 for Coral Assets: 241706 units.",
+      "irrelevant_fact": "The administrative file for Coral Assets uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored synthetic test input; structural and arithmetic checks do not constitute independent human semantic review. Expected packet decisions are normative checks, not preassigned observed model answers."
+    },
+    {
+      "id": "cf_disjunction_01",
+      "family": "disjunction",
+      "transfer_group": "heldout_rule_family",
+      "split": "test",
+      "world": {
+        "entity": "Sparrow Route",
+        "current_date": "2026-12-17",
+        "previous_date": "2026-09-17",
+        "route_b_pass": true,
+        "previous_route_b_pass": false
+      },
+      "rule": "For Sparrow Route, at least one of alternative routes A and B must pass. APPROVE if either route passes; REJECT if both routes fail.",
+      "source": [
+        "Final record dated 2026-09-17 for Sparrow Route: alternative route B failed.",
+        "Final record dated 2026-12-17 for Sparrow Route: alternative route A failed.",
+        "Final record dated 2026-12-17 for Sparrow Route: alternative route B passed.",
+        "The administrative file for Sparrow Route uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final record dated 2026-12-17 for Sparrow Route: alternative route A failed.",
+          "Final record dated 2026-12-17 for Sparrow Route: alternative route B passed."
+        ],
+        "absent": [
+          "Final record dated 2026-12-17 for Sparrow Route: alternative route A failed."
+        ],
+        "stale": [
+          "Final record dated 2026-12-17 for Sparrow Route: alternative route A failed.",
+          "Final record dated 2026-09-17 for Sparrow Route: alternative route B failed."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final record dated 2026-12-17 for Sparrow Route: alternative route B passed.",
+      "irrelevant_fact": "The administrative file for Sparrow Route uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored synthetic test input; structural and arithmetic checks do not constitute independent human semantic review. Expected packet decisions are normative checks, not preassigned observed model answers."
+    },
+    {
+      "id": "cf_disjunction_02",
+      "family": "disjunction",
+      "transfer_group": "heldout_rule_family",
+      "split": "test",
+      "world": {
+        "entity": "Copper Transit",
+        "current_date": "2026-12-18",
+        "previous_date": "2026-09-18",
+        "route_b_pass": false,
+        "previous_route_b_pass": true
+      },
+      "rule": "For Copper Transit, at least one of alternative routes A and B must pass. APPROVE if either route passes; REJECT if both routes fail.",
+      "source": [
+        "Final record dated 2026-09-18 for Copper Transit: alternative route B passed.",
+        "Final record dated 2026-12-18 for Copper Transit: alternative route A failed.",
+        "Final record dated 2026-12-18 for Copper Transit: alternative route B failed.",
+        "The administrative file for Copper Transit uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final record dated 2026-12-18 for Copper Transit: alternative route A failed.",
+          "Final record dated 2026-12-18 for Copper Transit: alternative route B failed."
+        ],
+        "absent": [
+          "Final record dated 2026-12-18 for Copper Transit: alternative route A failed."
+        ],
+        "stale": [
+          "Final record dated 2026-12-18 for Copper Transit: alternative route A failed.",
+          "Final record dated 2026-09-18 for Copper Transit: alternative route B passed."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final record dated 2026-12-18 for Copper Transit: alternative route B failed.",
+      "irrelevant_fact": "The administrative file for Copper Transit uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored synthetic test input; structural and arithmetic checks do not constitute independent human semantic review. Expected packet decisions are normative checks, not preassigned observed model answers."
+    },
+    {
+      "id": "cf_disjunction_03",
+      "family": "disjunction",
+      "transfer_group": "heldout_rule_family",
+      "split": "test",
+      "world": {
+        "entity": "Dahlia Link",
+        "current_date": "2026-12-19",
+        "previous_date": "2026-09-19",
+        "route_b_pass": true,
+        "previous_route_b_pass": false
+      },
+      "rule": "For Dahlia Link, at least one of alternative routes A and B must pass. APPROVE if either route passes; REJECT if both routes fail.",
+      "source": [
+        "Final record dated 2026-09-19 for Dahlia Link: alternative route B failed.",
+        "Final record dated 2026-12-19 for Dahlia Link: alternative route A failed.",
+        "Final record dated 2026-12-19 for Dahlia Link: alternative route B passed.",
+        "The administrative file for Dahlia Link uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final record dated 2026-12-19 for Dahlia Link: alternative route A failed.",
+          "Final record dated 2026-12-19 for Dahlia Link: alternative route B passed."
+        ],
+        "absent": [
+          "Final record dated 2026-12-19 for Dahlia Link: alternative route A failed."
+        ],
+        "stale": [
+          "Final record dated 2026-12-19 for Dahlia Link: alternative route A failed.",
+          "Final record dated 2026-09-19 for Dahlia Link: alternative route B failed."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final record dated 2026-12-19 for Dahlia Link: alternative route B passed.",
+      "irrelevant_fact": "The administrative file for Dahlia Link uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored synthetic test input; structural and arithmetic checks do not constitute independent human semantic review. Expected packet decisions are normative checks, not preassigned observed model answers."
+    },
+    {
+      "id": "cf_disjunction_04",
+      "family": "disjunction",
+      "transfer_group": "heldout_rule_family",
+      "split": "test",
+      "world": {
+        "entity": "Osprey Network",
+        "current_date": "2026-12-20",
+        "previous_date": "2026-09-20",
+        "route_b_pass": false,
+        "previous_route_b_pass": true
+      },
+      "rule": "For Osprey Network, at least one of alternative routes A and B must pass. APPROVE if either route passes; REJECT if both routes fail.",
+      "source": [
+        "Final record dated 2026-09-20 for Osprey Network: alternative route B passed.",
+        "Final record dated 2026-12-20 for Osprey Network: alternative route A failed.",
+        "Final record dated 2026-12-20 for Osprey Network: alternative route B failed.",
+        "The administrative file for Osprey Network uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final record dated 2026-12-20 for Osprey Network: alternative route A failed.",
+          "Final record dated 2026-12-20 for Osprey Network: alternative route B failed."
+        ],
+        "absent": [
+          "Final record dated 2026-12-20 for Osprey Network: alternative route A failed."
+        ],
+        "stale": [
+          "Final record dated 2026-12-20 for Osprey Network: alternative route A failed.",
+          "Final record dated 2026-09-20 for Osprey Network: alternative route B passed."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final record dated 2026-12-20 for Osprey Network: alternative route B failed.",
+      "irrelevant_fact": "The administrative file for Osprey Network uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored synthetic test input; structural and arithmetic checks do not constitute independent human semantic review. Expected packet decisions are normative checks, not preassigned observed model answers."
+    },
+    {
+      "id": "cf_deadline_01",
+      "family": "deadline",
+      "transfer_group": "heldout_rule_family",
+      "split": "test",
+      "world": {
+        "entity": "Amber Delivery",
+        "current_date": "2026-12-21",
+        "previous_date": "2026-09-21",
+        "deadline": "2026-08-11",
+        "completion_date": "2026-08-09",
+        "previous_completion_date": "2026-08-14"
+      },
+      "rule": "For Amber Delivery, use the completion date in the latest dated final record. APPROVE if completion was on or before 2026-08-11; REJECT if completion was after that deadline.",
+      "source": [
+        "Final completion record dated 2026-09-21 for Amber Delivery: completion date 2026-08-14.",
+        "The signed completion file for Amber Delivery was registered on 2026-12-21.",
+        "Final completion record dated 2026-12-21 for Amber Delivery: completion date 2026-08-09.",
+        "The administrative file for Amber Delivery uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The signed completion file for Amber Delivery was registered on 2026-12-21.",
+          "Final completion record dated 2026-12-21 for Amber Delivery: completion date 2026-08-09."
+        ],
+        "absent": [
+          "The signed completion file for Amber Delivery was registered on 2026-12-21."
+        ],
+        "stale": [
+          "The signed completion file for Amber Delivery was registered on 2026-12-21.",
+          "Final completion record dated 2026-09-21 for Amber Delivery: completion date 2026-08-14."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final completion record dated 2026-12-21 for Amber Delivery: completion date 2026-08-09.",
+      "irrelevant_fact": "The administrative file for Amber Delivery uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored synthetic test input; structural and arithmetic checks do not constitute independent human semantic review. Expected packet decisions are normative checks, not preassigned observed model answers."
+    },
+    {
+      "id": "cf_deadline_02",
+      "family": "deadline",
+      "transfer_group": "heldout_rule_family",
+      "split": "test",
+      "world": {
+        "entity": "Cypress Filing",
+        "current_date": "2026-12-22",
+        "previous_date": "2026-09-22",
+        "deadline": "2026-08-12",
+        "completion_date": "2026-08-14",
+        "previous_completion_date": "2026-08-09"
+      },
+      "rule": "For Cypress Filing, use the completion date in the latest dated final record. APPROVE if completion was on or before 2026-08-12; REJECT if completion was after that deadline.",
+      "source": [
+        "Final completion record dated 2026-09-22 for Cypress Filing: completion date 2026-08-09.",
+        "The signed completion file for Cypress Filing was registered on 2026-12-22.",
+        "Final completion record dated 2026-12-22 for Cypress Filing: completion date 2026-08-14.",
+        "The administrative file for Cypress Filing uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The signed completion file for Cypress Filing was registered on 2026-12-22.",
+          "Final completion record dated 2026-12-22 for Cypress Filing: completion date 2026-08-14."
+        ],
+        "absent": [
+          "The signed completion file for Cypress Filing was registered on 2026-12-22."
+        ],
+        "stale": [
+          "The signed completion file for Cypress Filing was registered on 2026-12-22.",
+          "Final completion record dated 2026-09-22 for Cypress Filing: completion date 2026-08-09."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final completion record dated 2026-12-22 for Cypress Filing: completion date 2026-08-14.",
+      "irrelevant_fact": "The administrative file for Cypress Filing uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored synthetic test input; structural and arithmetic checks do not constitute independent human semantic review. Expected packet decisions are normative checks, not preassigned observed model answers."
+    },
+    {
+      "id": "cf_deadline_03",
+      "family": "deadline",
+      "transfer_group": "heldout_rule_family",
+      "split": "test",
+      "world": {
+        "entity": "Opal Package",
+        "current_date": "2026-12-23",
+        "previous_date": "2026-09-23",
+        "deadline": "2026-08-13",
+        "completion_date": "2026-08-11",
+        "previous_completion_date": "2026-08-16"
+      },
+      "rule": "For Opal Package, use the completion date in the latest dated final record. APPROVE if completion was on or before 2026-08-13; REJECT if completion was after that deadline.",
+      "source": [
+        "Final completion record dated 2026-09-23 for Opal Package: completion date 2026-08-16.",
+        "The signed completion file for Opal Package was registered on 2026-12-23.",
+        "Final completion record dated 2026-12-23 for Opal Package: completion date 2026-08-11.",
+        "The administrative file for Opal Package uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The signed completion file for Opal Package was registered on 2026-12-23.",
+          "Final completion record dated 2026-12-23 for Opal Package: completion date 2026-08-11."
+        ],
+        "absent": [
+          "The signed completion file for Opal Package was registered on 2026-12-23."
+        ],
+        "stale": [
+          "The signed completion file for Opal Package was registered on 2026-12-23.",
+          "Final completion record dated 2026-09-23 for Opal Package: completion date 2026-08-16."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final completion record dated 2026-12-23 for Opal Package: completion date 2026-08-11.",
+      "irrelevant_fact": "The administrative file for Opal Package uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored synthetic test input; structural and arithmetic checks do not constitute independent human semantic review. Expected packet decisions are normative checks, not preassigned observed model answers."
+    },
+    {
+      "id": "cf_deadline_04",
+      "family": "deadline",
+      "transfer_group": "heldout_rule_family",
+      "split": "test",
+      "world": {
+        "entity": "Lynx Submission",
+        "current_date": "2026-12-24",
+        "previous_date": "2026-09-24",
+        "deadline": "2026-08-14",
+        "completion_date": "2026-08-16",
+        "previous_completion_date": "2026-08-11"
+      },
+      "rule": "For Lynx Submission, use the completion date in the latest dated final record. APPROVE if completion was on or before 2026-08-14; REJECT if completion was after that deadline.",
+      "source": [
+        "Final completion record dated 2026-09-24 for Lynx Submission: completion date 2026-08-11.",
+        "The signed completion file for Lynx Submission was registered on 2026-12-24.",
+        "Final completion record dated 2026-12-24 for Lynx Submission: completion date 2026-08-16.",
+        "The administrative file for Lynx Submission uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The signed completion file for Lynx Submission was registered on 2026-12-24.",
+          "Final completion record dated 2026-12-24 for Lynx Submission: completion date 2026-08-16."
+        ],
+        "absent": [
+          "The signed completion file for Lynx Submission was registered on 2026-12-24."
+        ],
+        "stale": [
+          "The signed completion file for Lynx Submission was registered on 2026-12-24.",
+          "Final completion record dated 2026-09-24 for Lynx Submission: completion date 2026-08-11."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final completion record dated 2026-12-24 for Lynx Submission: completion date 2026-08-16.",
+      "irrelevant_fact": "The administrative file for Lynx Submission uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored synthetic test input; structural and arithmetic checks do not constitute independent human semantic review. Expected packet decisions are normative checks, not preassigned observed model answers."
+    }
+  ]
+}
