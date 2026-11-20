@@ -1,0 +1,1042 @@
+{
+  "schema_version": 1,
+  "panel_id": "fresh_recipient_transfer_test_v1",
+  "seed": 42,
+  "word_budget": 40,
+  "max_new_tokens": 96,
+  "status": "Untouched all-test natural-communication bank; no case is used to qualify or select the reader.",
+  "authoring_notes": [
+    "Twenty-four untouched all-test natural communication cases; four per six rule families with both source-world decisions balanced.",
+    "This bank is separate from cv_* reader qualification. Its controls and outputs must not be used to choose, gate or revise the policy, training fit or prompts.",
+    "IDs, entities, source assertions, record dates and integer instantiations must be disjoint from original development, observed main and cv qualification banks.",
+    "Current records are April 2027, previous records February 2027; deadline events are July 2026, before both records. All dates are hypothetical.",
+    "The future outcome readout must be fitted and frozen before sender/recipient outcomes from this bank are generated.",
+    "Agent-authored inputs require independent human semantic review."
+  ],
+  "cases": [
+    {
+      "id": "ct_conjunction_01",
+      "family": "conjunction",
+      "transfer_group": "untouched_recipient_transfer_test",
+      "split": "test",
+      "world": {
+        "entity": "Aurora Beacon",
+        "current_date": "2027-04-01",
+        "previous_date": "2027-02-01",
+        "required_count": 701,
+        "decisive_pass": true,
+        "previous_decisive_pass": false
+      },
+      "rule": "For Aurora Beacon, all 701 required checks C1 through C701 must pass. APPROVE if all pass; REJECT if at least one fails.",
+      "source": [
+        "Final record dated 2027-02-01 for Aurora Beacon: required check C701 failed.",
+        "Final record dated 2027-04-01 for Aurora Beacon: required checks C1 through C700 passed.",
+        "Final record dated 2027-04-01 for Aurora Beacon: required check C701 passed.",
+        "The administrative file for Aurora Beacon uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final record dated 2027-04-01 for Aurora Beacon: required checks C1 through C700 passed.",
+          "Final record dated 2027-04-01 for Aurora Beacon: required check C701 passed."
+        ],
+        "absent": [
+          "Final record dated 2027-04-01 for Aurora Beacon: required checks C1 through C700 passed."
+        ],
+        "stale": [
+          "Final record dated 2027-04-01 for Aurora Beacon: required checks C1 through C700 passed.",
+          "Final record dated 2027-02-01 for Aurora Beacon: required check C701 failed."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final record dated 2027-04-01 for Aurora Beacon: required check C701 passed.",
+      "irrelevant_fact": "The administrative file for Aurora Beacon uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored untouched natural-communication test case. No observed model output, reader gate or fit selection may use this case before the future fit is frozen. Synthetic dates describe records and events only."
+    },
+    {
+      "id": "ct_conjunction_02",
+      "family": "conjunction",
+      "transfer_group": "untouched_recipient_transfer_test",
+      "split": "test",
+      "world": {
+        "entity": "Bramble Harbor",
+        "current_date": "2027-04-02",
+        "previous_date": "2027-02-02",
+        "required_count": 709,
+        "decisive_pass": false,
+        "previous_decisive_pass": true
+      },
+      "rule": "For Bramble Harbor, all 709 required checks C1 through C709 must pass. APPROVE if all pass; REJECT if at least one fails.",
+      "source": [
+        "Final record dated 2027-02-02 for Bramble Harbor: required check C709 passed.",
+        "Final record dated 2027-04-02 for Bramble Harbor: required checks C1 through C708 passed.",
+        "Final record dated 2027-04-02 for Bramble Harbor: required check C709 failed.",
+        "The administrative file for Bramble Harbor uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final record dated 2027-04-02 for Bramble Harbor: required checks C1 through C708 passed.",
+          "Final record dated 2027-04-02 for Bramble Harbor: required check C709 failed."
+        ],
+        "absent": [
+          "Final record dated 2027-04-02 for Bramble Harbor: required checks C1 through C708 passed."
+        ],
+        "stale": [
+          "Final record dated 2027-04-02 for Bramble Harbor: required checks C1 through C708 passed.",
+          "Final record dated 2027-02-02 for Bramble Harbor: required check C709 passed."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final record dated 2027-04-02 for Bramble Harbor: required check C709 failed.",
+      "irrelevant_fact": "The administrative file for Bramble Harbor uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored untouched natural-communication test case. No observed model output, reader gate or fit selection may use this case before the future fit is frozen. Synthetic dates describe records and events only."
+    },
+    {
+      "id": "ct_conjunction_03",
+      "family": "conjunction",
+      "transfer_group": "untouched_recipient_transfer_test",
+      "split": "test",
+      "world": {
+        "entity": "Cascade Sentry",
+        "current_date": "2027-04-03",
+        "previous_date": "2027-02-03",
+        "required_count": 719,
+        "decisive_pass": true,
+        "previous_decisive_pass": false
+      },
+      "rule": "For Cascade Sentry, all 719 required checks C1 through C719 must pass. APPROVE if all pass; REJECT if at least one fails.",
+      "source": [
+        "Final record dated 2027-02-03 for Cascade Sentry: required check C719 failed.",
+        "Final record dated 2027-04-03 for Cascade Sentry: required checks C1 through C718 passed.",
+        "Final record dated 2027-04-03 for Cascade Sentry: required check C719 passed.",
+        "The administrative file for Cascade Sentry uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final record dated 2027-04-03 for Cascade Sentry: required checks C1 through C718 passed.",
+          "Final record dated 2027-04-03 for Cascade Sentry: required check C719 passed."
+        ],
+        "absent": [
+          "Final record dated 2027-04-03 for Cascade Sentry: required checks C1 through C718 passed."
+        ],
+        "stale": [
+          "Final record dated 2027-04-03 for Cascade Sentry: required checks C1 through C718 passed.",
+          "Final record dated 2027-02-03 for Cascade Sentry: required check C719 failed."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final record dated 2027-04-03 for Cascade Sentry: required check C719 passed.",
+      "irrelevant_fact": "The administrative file for Cascade Sentry uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored untouched natural-communication test case. No observed model output, reader gate or fit selection may use this case before the future fit is frozen. Synthetic dates describe records and events only."
+    },
+    {
+      "id": "ct_conjunction_04",
+      "family": "conjunction",
+      "transfer_group": "untouched_recipient_transfer_test",
+      "split": "test",
+      "world": {
+        "entity": "Dune Switch",
+        "current_date": "2027-04-04",
+        "previous_date": "2027-02-04",
+        "required_count": 727,
+        "decisive_pass": false,
+        "previous_decisive_pass": true
+      },
+      "rule": "For Dune Switch, all 727 required checks C1 through C727 must pass. APPROVE if all pass; REJECT if at least one fails.",
+      "source": [
+        "Final record dated 2027-02-04 for Dune Switch: required check C727 passed.",
+        "Final record dated 2027-04-04 for Dune Switch: required checks C1 through C726 passed.",
+        "Final record dated 2027-04-04 for Dune Switch: required check C727 failed.",
+        "The administrative file for Dune Switch uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final record dated 2027-04-04 for Dune Switch: required checks C1 through C726 passed.",
+          "Final record dated 2027-04-04 for Dune Switch: required check C727 failed."
+        ],
+        "absent": [
+          "Final record dated 2027-04-04 for Dune Switch: required checks C1 through C726 passed."
+        ],
+        "stale": [
+          "Final record dated 2027-04-04 for Dune Switch: required checks C1 through C726 passed.",
+          "Final record dated 2027-02-04 for Dune Switch: required check C727 passed."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final record dated 2027-04-04 for Dune Switch: required check C727 failed.",
+      "irrelevant_fact": "The administrative file for Dune Switch uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored untouched natural-communication test case. No observed model output, reader gate or fit selection may use this case before the future fit is frozen. Synthetic dates describe records and events only."
+    },
+    {
+      "id": "ct_threshold_01",
+      "family": "threshold",
+      "transfer_group": "untouched_recipient_transfer_test",
+      "split": "test",
+      "world": {
+        "entity": "Ember Review",
+        "current_date": "2027-04-05",
+        "previous_date": "2027-02-05",
+        "threshold": 4201,
+        "score": 4248,
+        "previous_score": 4142
+      },
+      "rule": "For Ember Review, APPROVE if the latest final score is at least 4201 points; REJECT if it is below 4201 points.",
+      "source": [
+        "Final score record dated 2027-02-05 for Ember Review: 4142 points.",
+        "The signed assessment file for Ember Review was registered on 2027-04-05.",
+        "Final score record dated 2027-04-05 for Ember Review: 4248 points.",
+        "The administrative file for Ember Review uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The signed assessment file for Ember Review was registered on 2027-04-05.",
+          "Final score record dated 2027-04-05 for Ember Review: 4248 points."
+        ],
+        "absent": [
+          "The signed assessment file for Ember Review was registered on 2027-04-05."
+        ],
+        "stale": [
+          "The signed assessment file for Ember Review was registered on 2027-04-05.",
+          "Final score record dated 2027-02-05 for Ember Review: 4142 points."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final score record dated 2027-04-05 for Ember Review: 4248 points.",
+      "irrelevant_fact": "The administrative file for Ember Review uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored untouched natural-communication test case. No observed model output, reader gate or fit selection may use this case before the future fit is frozen. Synthetic dates describe records and events only."
+    },
+    {
+      "id": "ct_threshold_02",
+      "family": "threshold",
+      "transfer_group": "untouched_recipient_transfer_test",
+      "split": "test",
+      "world": {
+        "entity": "Fable Metric",
+        "current_date": "2027-04-06",
+        "previous_date": "2027-02-06",
+        "threshold": 4301,
+        "score": 4248,
+        "previous_score": 4362
+      },
+      "rule": "For Fable Metric, APPROVE if the latest final score is at least 4301 points; REJECT if it is below 4301 points.",
+      "source": [
+        "Final score record dated 2027-02-06 for Fable Metric: 4362 points.",
+        "The signed assessment file for Fable Metric was registered on 2027-04-06.",
+        "Final score record dated 2027-04-06 for Fable Metric: 4248 points.",
+        "The administrative file for Fable Metric uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The signed assessment file for Fable Metric was registered on 2027-04-06.",
+          "Final score record dated 2027-04-06 for Fable Metric: 4248 points."
+        ],
+        "absent": [
+          "The signed assessment file for Fable Metric was registered on 2027-04-06."
+        ],
+        "stale": [
+          "The signed assessment file for Fable Metric was registered on 2027-04-06.",
+          "Final score record dated 2027-02-06 for Fable Metric: 4362 points."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final score record dated 2027-04-06 for Fable Metric: 4248 points.",
+      "irrelevant_fact": "The administrative file for Fable Metric uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored untouched natural-communication test case. No observed model output, reader gate or fit selection may use this case before the future fit is frozen. Synthetic dates describe records and events only."
+    },
+    {
+      "id": "ct_threshold_03",
+      "family": "threshold",
+      "transfer_group": "untouched_recipient_transfer_test",
+      "split": "test",
+      "world": {
+        "entity": "Garnet Signal",
+        "current_date": "2027-04-07",
+        "previous_date": "2027-02-07",
+        "threshold": 4401,
+        "score": 4448,
+        "previous_score": 4342
+      },
+      "rule": "For Garnet Signal, APPROVE if the latest final score is at least 4401 points; REJECT if it is below 4401 points.",
+      "source": [
+        "Final score record dated 2027-02-07 for Garnet Signal: 4342 points.",
+        "The signed assessment file for Garnet Signal was registered on 2027-04-07.",
+        "Final score record dated 2027-04-07 for Garnet Signal: 4448 points.",
+        "The administrative file for Garnet Signal uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The signed assessment file for Garnet Signal was registered on 2027-04-07.",
+          "Final score record dated 2027-04-07 for Garnet Signal: 4448 points."
+        ],
+        "absent": [
+          "The signed assessment file for Garnet Signal was registered on 2027-04-07."
+        ],
+        "stale": [
+          "The signed assessment file for Garnet Signal was registered on 2027-04-07.",
+          "Final score record dated 2027-02-07 for Garnet Signal: 4342 points."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final score record dated 2027-04-07 for Garnet Signal: 4448 points.",
+      "irrelevant_fact": "The administrative file for Garnet Signal uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored untouched natural-communication test case. No observed model output, reader gate or fit selection may use this case before the future fit is frozen. Synthetic dates describe records and events only."
+    },
+    {
+      "id": "ct_threshold_04",
+      "family": "threshold",
+      "transfer_group": "untouched_recipient_transfer_test",
+      "split": "test",
+      "world": {
+        "entity": "Hearth Gauge",
+        "current_date": "2027-04-08",
+        "previous_date": "2027-02-08",
+        "threshold": 4501,
+        "score": 4448,
+        "previous_score": 4562
+      },
+      "rule": "For Hearth Gauge, APPROVE if the latest final score is at least 4501 points; REJECT if it is below 4501 points.",
+      "source": [
+        "Final score record dated 2027-02-08 for Hearth Gauge: 4562 points.",
+        "The signed assessment file for Hearth Gauge was registered on 2027-04-08.",
+        "Final score record dated 2027-04-08 for Hearth Gauge: 4448 points.",
+        "The administrative file for Hearth Gauge uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The signed assessment file for Hearth Gauge was registered on 2027-04-08.",
+          "Final score record dated 2027-04-08 for Hearth Gauge: 4448 points."
+        ],
+        "absent": [
+          "The signed assessment file for Hearth Gauge was registered on 2027-04-08."
+        ],
+        "stale": [
+          "The signed assessment file for Hearth Gauge was registered on 2027-04-08.",
+          "Final score record dated 2027-02-08 for Hearth Gauge: 4562 points."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final score record dated 2027-04-08 for Hearth Gauge: 4448 points.",
+      "irrelevant_fact": "The administrative file for Hearth Gauge uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored untouched natural-communication test case. No observed model output, reader gate or fit selection may use this case before the future fit is frozen. Synthetic dates describe records and events only."
+    },
+    {
+      "id": "ct_supersession_01",
+      "family": "supersession",
+      "transfer_group": "untouched_recipient_transfer_test",
+      "split": "test",
+      "world": {
+        "entity": "Ivory Check",
+        "current_date": "2027-04-09",
+        "previous_date": "2027-02-09",
+        "current_pass": true,
+        "previous_pass": false
+      },
+      "rule": "For Ivory Check, APPROVE if the latest final inspection passed; REJECT if that inspection failed.",
+      "source": [
+        "Final inspection dated 2027-02-09 for Ivory Check: failed.",
+        "The inspection archive for Ivory Check received a signed file on 2027-04-09.",
+        "Final inspection dated 2027-04-09 for Ivory Check: passed.",
+        "The administrative file for Ivory Check uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The inspection archive for Ivory Check received a signed file on 2027-04-09.",
+          "Final inspection dated 2027-04-09 for Ivory Check: passed."
+        ],
+        "absent": [
+          "The inspection archive for Ivory Check received a signed file on 2027-04-09."
+        ],
+        "stale": [
+          "The inspection archive for Ivory Check received a signed file on 2027-04-09.",
+          "Final inspection dated 2027-02-09 for Ivory Check: failed."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final inspection dated 2027-04-09 for Ivory Check: passed.",
+      "irrelevant_fact": "The administrative file for Ivory Check uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored untouched natural-communication test case. No observed model output, reader gate or fit selection may use this case before the future fit is frozen. Synthetic dates describe records and events only."
+    },
+    {
+      "id": "ct_supersession_02",
+      "family": "supersession",
+      "transfer_group": "untouched_recipient_transfer_test",
+      "split": "test",
+      "world": {
+        "entity": "Jade Audit",
+        "current_date": "2027-04-10",
+        "previous_date": "2027-02-10",
+        "current_pass": false,
+        "previous_pass": true
+      },
+      "rule": "For Jade Audit, APPROVE if the latest final inspection passed; REJECT if that inspection failed.",
+      "source": [
+        "Final inspection dated 2027-02-10 for Jade Audit: passed.",
+        "The inspection archive for Jade Audit received a signed file on 2027-04-10.",
+        "Final inspection dated 2027-04-10 for Jade Audit: failed.",
+        "The administrative file for Jade Audit uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The inspection archive for Jade Audit received a signed file on 2027-04-10.",
+          "Final inspection dated 2027-04-10 for Jade Audit: failed."
+        ],
+        "absent": [
+          "The inspection archive for Jade Audit received a signed file on 2027-04-10."
+        ],
+        "stale": [
+          "The inspection archive for Jade Audit received a signed file on 2027-04-10.",
+          "Final inspection dated 2027-02-10 for Jade Audit: passed."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final inspection dated 2027-04-10 for Jade Audit: failed.",
+      "irrelevant_fact": "The administrative file for Jade Audit uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored untouched natural-communication test case. No observed model output, reader gate or fit selection may use this case before the future fit is frozen. Synthetic dates describe records and events only."
+    },
+    {
+      "id": "ct_supersession_03",
+      "family": "supersession",
+      "transfer_group": "untouched_recipient_transfer_test",
+      "split": "test",
+      "world": {
+        "entity": "Kyanite Archive",
+        "current_date": "2027-04-11",
+        "previous_date": "2027-02-11",
+        "current_pass": true,
+        "previous_pass": false
+      },
+      "rule": "For Kyanite Archive, APPROVE if the latest final inspection passed; REJECT if that inspection failed.",
+      "source": [
+        "Final inspection dated 2027-02-11 for Kyanite Archive: failed.",
+        "The inspection archive for Kyanite Archive received a signed file on 2027-04-11.",
+        "Final inspection dated 2027-04-11 for Kyanite Archive: passed.",
+        "The administrative file for Kyanite Archive uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The inspection archive for Kyanite Archive received a signed file on 2027-04-11.",
+          "Final inspection dated 2027-04-11 for Kyanite Archive: passed."
+        ],
+        "absent": [
+          "The inspection archive for Kyanite Archive received a signed file on 2027-04-11."
+        ],
+        "stale": [
+          "The inspection archive for Kyanite Archive received a signed file on 2027-04-11.",
+          "Final inspection dated 2027-02-11 for Kyanite Archive: failed."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final inspection dated 2027-04-11 for Kyanite Archive: passed.",
+      "irrelevant_fact": "The administrative file for Kyanite Archive uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored untouched natural-communication test case. No observed model output, reader gate or fit selection may use this case before the future fit is frozen. Synthetic dates describe records and events only."
+    },
+    {
+      "id": "ct_supersession_04",
+      "family": "supersession",
+      "transfer_group": "untouched_recipient_transfer_test",
+      "split": "test",
+      "world": {
+        "entity": "Lotus Panel",
+        "current_date": "2027-04-12",
+        "previous_date": "2027-02-12",
+        "current_pass": false,
+        "previous_pass": true
+      },
+      "rule": "For Lotus Panel, APPROVE if the latest final inspection passed; REJECT if that inspection failed.",
+      "source": [
+        "Final inspection dated 2027-02-12 for Lotus Panel: passed.",
+        "The inspection archive for Lotus Panel received a signed file on 2027-04-12.",
+        "Final inspection dated 2027-04-12 for Lotus Panel: failed.",
+        "The administrative file for Lotus Panel uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The inspection archive for Lotus Panel received a signed file on 2027-04-12.",
+          "Final inspection dated 2027-04-12 for Lotus Panel: failed."
+        ],
+        "absent": [
+          "The inspection archive for Lotus Panel received a signed file on 2027-04-12."
+        ],
+        "stale": [
+          "The inspection archive for Lotus Panel received a signed file on 2027-04-12.",
+          "Final inspection dated 2027-02-12 for Lotus Panel: passed."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final inspection dated 2027-04-12 for Lotus Panel: failed.",
+      "irrelevant_fact": "The administrative file for Lotus Panel uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored untouched natural-communication test case. No observed model output, reader gate or fit selection may use this case before the future fit is frozen. Synthetic dates describe records and events only."
+    },
+    {
+      "id": "ct_arithmetic_01",
+      "family": "arithmetic",
+      "transfer_group": "untouched_recipient_transfer_test",
+      "split": "test",
+      "world": {
+        "entity": "Meadow Accounts",
+        "current_date": "2027-04-13",
+        "previous_date": "2027-02-13",
+        "revenue": 810003,
+        "costs": 804702,
+        "previous_costs": 815910
+      },
+      "rule": "For Meadow Accounts, net balance is final revenue minus final costs for this period. APPROVE if net balance is at least zero; REJECT if it is below zero.",
+      "source": [
+        "Final cost record dated 2027-02-13 for Meadow Accounts: 815910 units.",
+        "Final revenue record dated 2027-04-13 for Meadow Accounts: 810003 units.",
+        "Final cost record dated 2027-04-13 for Meadow Accounts: 804702 units.",
+        "The administrative file for Meadow Accounts uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final revenue record dated 2027-04-13 for Meadow Accounts: 810003 units.",
+          "Final cost record dated 2027-04-13 for Meadow Accounts: 804702 units."
+        ],
+        "absent": [
+          "Final revenue record dated 2027-04-13 for Meadow Accounts: 810003 units."
+        ],
+        "stale": [
+          "Final revenue record dated 2027-04-13 for Meadow Accounts: 810003 units.",
+          "Final cost record dated 2027-02-13 for Meadow Accounts: 815910 units."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final cost record dated 2027-04-13 for Meadow Accounts: 804702 units.",
+      "irrelevant_fact": "The administrative file for Meadow Accounts uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored untouched natural-communication test case. No observed model output, reader gate or fit selection may use this case before the future fit is frozen. Synthetic dates describe records and events only."
+    },
+    {
+      "id": "ct_arithmetic_02",
+      "family": "arithmetic",
+      "transfer_group": "untouched_recipient_transfer_test",
+      "split": "test",
+      "world": {
+        "entity": "Nectar Balance",
+        "current_date": "2027-04-14",
+        "previous_date": "2027-02-14",
+        "revenue": 820003,
+        "costs": 825706,
+        "previous_costs": 813694
+      },
+      "rule": "For Nectar Balance, net balance is final revenue minus final costs for this period. APPROVE if net balance is at least zero; REJECT if it is below zero.",
+      "source": [
+        "Final cost record dated 2027-02-14 for Nectar Balance: 813694 units.",
+        "Final revenue record dated 2027-04-14 for Nectar Balance: 820003 units.",
+        "Final cost record dated 2027-04-14 for Nectar Balance: 825706 units.",
+        "The administrative file for Nectar Balance uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final revenue record dated 2027-04-14 for Nectar Balance: 820003 units.",
+          "Final cost record dated 2027-04-14 for Nectar Balance: 825706 units."
+        ],
+        "absent": [
+          "Final revenue record dated 2027-04-14 for Nectar Balance: 820003 units."
+        ],
+        "stale": [
+          "Final revenue record dated 2027-04-14 for Nectar Balance: 820003 units.",
+          "Final cost record dated 2027-02-14 for Nectar Balance: 813694 units."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final cost record dated 2027-04-14 for Nectar Balance: 825706 units.",
+      "irrelevant_fact": "The administrative file for Nectar Balance uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored untouched natural-communication test case. No observed model output, reader gate or fit selection may use this case before the future fit is frozen. Synthetic dates describe records and events only."
+    },
+    {
+      "id": "ct_arithmetic_03",
+      "family": "arithmetic",
+      "transfer_group": "untouched_recipient_transfer_test",
+      "split": "test",
+      "world": {
+        "entity": "Onyx Budget",
+        "current_date": "2027-04-15",
+        "previous_date": "2027-02-15",
+        "revenue": 830003,
+        "costs": 824702,
+        "previous_costs": 835910
+      },
+      "rule": "For Onyx Budget, net balance is final revenue minus final costs for this period. APPROVE if net balance is at least zero; REJECT if it is below zero.",
+      "source": [
+        "Final cost record dated 2027-02-15 for Onyx Budget: 835910 units.",
+        "Final revenue record dated 2027-04-15 for Onyx Budget: 830003 units.",
+        "Final cost record dated 2027-04-15 for Onyx Budget: 824702 units.",
+        "The administrative file for Onyx Budget uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final revenue record dated 2027-04-15 for Onyx Budget: 830003 units.",
+          "Final cost record dated 2027-04-15 for Onyx Budget: 824702 units."
+        ],
+        "absent": [
+          "Final revenue record dated 2027-04-15 for Onyx Budget: 830003 units."
+        ],
+        "stale": [
+          "Final revenue record dated 2027-04-15 for Onyx Budget: 830003 units.",
+          "Final cost record dated 2027-02-15 for Onyx Budget: 835910 units."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final cost record dated 2027-04-15 for Onyx Budget: 824702 units.",
+      "irrelevant_fact": "The administrative file for Onyx Budget uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored untouched natural-communication test case. No observed model output, reader gate or fit selection may use this case before the future fit is frozen. Synthetic dates describe records and events only."
+    },
+    {
+      "id": "ct_arithmetic_04",
+      "family": "arithmetic",
+      "transfer_group": "untouched_recipient_transfer_test",
+      "split": "test",
+      "world": {
+        "entity": "Prairie Ledger",
+        "current_date": "2027-04-16",
+        "previous_date": "2027-02-16",
+        "revenue": 840003,
+        "costs": 845706,
+        "previous_costs": 833694
+      },
+      "rule": "For Prairie Ledger, net balance is final revenue minus final costs for this period. APPROVE if net balance is at least zero; REJECT if it is below zero.",
+      "source": [
+        "Final cost record dated 2027-02-16 for Prairie Ledger: 833694 units.",
+        "Final revenue record dated 2027-04-16 for Prairie Ledger: 840003 units.",
+        "Final cost record dated 2027-04-16 for Prairie Ledger: 845706 units.",
+        "The administrative file for Prairie Ledger uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final revenue record dated 2027-04-16 for Prairie Ledger: 840003 units.",
+          "Final cost record dated 2027-04-16 for Prairie Ledger: 845706 units."
+        ],
+        "absent": [
+          "Final revenue record dated 2027-04-16 for Prairie Ledger: 840003 units."
+        ],
+        "stale": [
+          "Final revenue record dated 2027-04-16 for Prairie Ledger: 840003 units.",
+          "Final cost record dated 2027-02-16 for Prairie Ledger: 833694 units."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final cost record dated 2027-04-16 for Prairie Ledger: 845706 units.",
+      "irrelevant_fact": "The administrative file for Prairie Ledger uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored untouched natural-communication test case. No observed model output, reader gate or fit selection may use this case before the future fit is frozen. Synthetic dates describe records and events only."
+    },
+    {
+      "id": "ct_disjunction_01",
+      "family": "disjunction",
+      "transfer_group": "untouched_recipient_transfer_test",
+      "split": "test",
+      "world": {
+        "entity": "Reed Corridor",
+        "current_date": "2027-04-17",
+        "previous_date": "2027-02-17",
+        "route_b_pass": true,
+        "previous_route_b_pass": false
+      },
+      "rule": "For Reed Corridor, at least one of alternative routes A and B must pass. APPROVE if either route passes; REJECT if both routes fail.",
+      "source": [
+        "Final record dated 2027-02-17 for Reed Corridor: alternative route B failed.",
+        "Final record dated 2027-04-17 for Reed Corridor: alternative route A failed.",
+        "Final record dated 2027-04-17 for Reed Corridor: alternative route B passed.",
+        "The administrative file for Reed Corridor uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final record dated 2027-04-17 for Reed Corridor: alternative route A failed.",
+          "Final record dated 2027-04-17 for Reed Corridor: alternative route B passed."
+        ],
+        "absent": [
+          "Final record dated 2027-04-17 for Reed Corridor: alternative route A failed."
+        ],
+        "stale": [
+          "Final record dated 2027-04-17 for Reed Corridor: alternative route A failed.",
+          "Final record dated 2027-02-17 for Reed Corridor: alternative route B failed."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final record dated 2027-04-17 for Reed Corridor: alternative route B passed.",
+      "irrelevant_fact": "The administrative file for Reed Corridor uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored untouched natural-communication test case. No observed model output, reader gate or fit selection may use this case before the future fit is frozen. Synthetic dates describe records and events only."
+    },
+    {
+      "id": "ct_disjunction_02",
+      "family": "disjunction",
+      "transfer_group": "untouched_recipient_transfer_test",
+      "split": "test",
+      "world": {
+        "entity": "Sage Junction",
+        "current_date": "2027-04-18",
+        "previous_date": "2027-02-18",
+        "route_b_pass": false,
+        "previous_route_b_pass": true
+      },
+      "rule": "For Sage Junction, at least one of alternative routes A and B must pass. APPROVE if either route passes; REJECT if both routes fail.",
+      "source": [
+        "Final record dated 2027-02-18 for Sage Junction: alternative route B passed.",
+        "Final record dated 2027-04-18 for Sage Junction: alternative route A failed.",
+        "Final record dated 2027-04-18 for Sage Junction: alternative route B failed.",
+        "The administrative file for Sage Junction uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final record dated 2027-04-18 for Sage Junction: alternative route A failed.",
+          "Final record dated 2027-04-18 for Sage Junction: alternative route B failed."
+        ],
+        "absent": [
+          "Final record dated 2027-04-18 for Sage Junction: alternative route A failed."
+        ],
+        "stale": [
+          "Final record dated 2027-04-18 for Sage Junction: alternative route A failed.",
+          "Final record dated 2027-02-18 for Sage Junction: alternative route B passed."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final record dated 2027-04-18 for Sage Junction: alternative route B failed.",
+      "irrelevant_fact": "The administrative file for Sage Junction uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored untouched natural-communication test case. No observed model output, reader gate or fit selection may use this case before the future fit is frozen. Synthetic dates describe records and events only."
+    },
+    {
+      "id": "ct_disjunction_03",
+      "family": "disjunction",
+      "transfer_group": "untouched_recipient_transfer_test",
+      "split": "test",
+      "world": {
+        "entity": "Thistle Pathway",
+        "current_date": "2027-04-19",
+        "previous_date": "2027-02-19",
+        "route_b_pass": true,
+        "previous_route_b_pass": false
+      },
+      "rule": "For Thistle Pathway, at least one of alternative routes A and B must pass. APPROVE if either route passes; REJECT if both routes fail.",
+      "source": [
+        "Final record dated 2027-02-19 for Thistle Pathway: alternative route B failed.",
+        "Final record dated 2027-04-19 for Thistle Pathway: alternative route A failed.",
+        "Final record dated 2027-04-19 for Thistle Pathway: alternative route B passed.",
+        "The administrative file for Thistle Pathway uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final record dated 2027-04-19 for Thistle Pathway: alternative route A failed.",
+          "Final record dated 2027-04-19 for Thistle Pathway: alternative route B passed."
+        ],
+        "absent": [
+          "Final record dated 2027-04-19 for Thistle Pathway: alternative route A failed."
+        ],
+        "stale": [
+          "Final record dated 2027-04-19 for Thistle Pathway: alternative route A failed.",
+          "Final record dated 2027-02-19 for Thistle Pathway: alternative route B failed."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final record dated 2027-04-19 for Thistle Pathway: alternative route B passed.",
+      "irrelevant_fact": "The administrative file for Thistle Pathway uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored untouched natural-communication test case. No observed model output, reader gate or fit selection may use this case before the future fit is frozen. Synthetic dates describe records and events only."
+    },
+    {
+      "id": "ct_disjunction_04",
+      "family": "disjunction",
+      "transfer_group": "untouched_recipient_transfer_test",
+      "split": "test",
+      "world": {
+        "entity": "Umber Transit",
+        "current_date": "2027-04-20",
+        "previous_date": "2027-02-20",
+        "route_b_pass": false,
+        "previous_route_b_pass": true
+      },
+      "rule": "For Umber Transit, at least one of alternative routes A and B must pass. APPROVE if either route passes; REJECT if both routes fail.",
+      "source": [
+        "Final record dated 2027-02-20 for Umber Transit: alternative route B passed.",
+        "Final record dated 2027-04-20 for Umber Transit: alternative route A failed.",
+        "Final record dated 2027-04-20 for Umber Transit: alternative route B failed.",
+        "The administrative file for Umber Transit uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final record dated 2027-04-20 for Umber Transit: alternative route A failed.",
+          "Final record dated 2027-04-20 for Umber Transit: alternative route B failed."
+        ],
+        "absent": [
+          "Final record dated 2027-04-20 for Umber Transit: alternative route A failed."
+        ],
+        "stale": [
+          "Final record dated 2027-04-20 for Umber Transit: alternative route A failed.",
+          "Final record dated 2027-02-20 for Umber Transit: alternative route B passed."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final record dated 2027-04-20 for Umber Transit: alternative route B failed.",
+      "irrelevant_fact": "The administrative file for Umber Transit uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored untouched natural-communication test case. No observed model output, reader gate or fit selection may use this case before the future fit is frozen. Synthetic dates describe records and events only."
+    },
+    {
+      "id": "ct_deadline_01",
+      "family": "deadline",
+      "transfer_group": "untouched_recipient_transfer_test",
+      "split": "test",
+      "world": {
+        "entity": "Verbena Dispatch",
+        "current_date": "2027-04-21",
+        "previous_date": "2027-02-21",
+        "deadline": "2026-07-21",
+        "completion_date": "2026-07-19",
+        "previous_completion_date": "2026-07-24"
+      },
+      "rule": "For Verbena Dispatch, use the completion date in the latest dated final record. APPROVE if completion was on or before 2026-07-21; REJECT if completion was after that deadline.",
+      "source": [
+        "Final completion record dated 2027-02-21 for Verbena Dispatch: completion date 2026-07-24.",
+        "The signed completion file for Verbena Dispatch was registered on 2027-04-21.",
+        "Final completion record dated 2027-04-21 for Verbena Dispatch: completion date 2026-07-19.",
+        "The administrative file for Verbena Dispatch uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The signed completion file for Verbena Dispatch was registered on 2027-04-21.",
+          "Final completion record dated 2027-04-21 for Verbena Dispatch: completion date 2026-07-19."
+        ],
+        "absent": [
+          "The signed completion file for Verbena Dispatch was registered on 2027-04-21."
+        ],
+        "stale": [
+          "The signed completion file for Verbena Dispatch was registered on 2027-04-21.",
+          "Final completion record dated 2027-02-21 for Verbena Dispatch: completion date 2026-07-24."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final completion record dated 2027-04-21 for Verbena Dispatch: completion date 2026-07-19.",
+      "irrelevant_fact": "The administrative file for Verbena Dispatch uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored untouched natural-communication test case. No observed model output, reader gate or fit selection may use this case before the future fit is frozen. Synthetic dates describe records and events only."
+    },
+    {
+      "id": "ct_deadline_02",
+      "family": "deadline",
+      "transfer_group": "untouched_recipient_transfer_test",
+      "split": "test",
+      "world": {
+        "entity": "Wisteria Filing",
+        "current_date": "2027-04-22",
+        "previous_date": "2027-02-22",
+        "deadline": "2026-07-22",
+        "completion_date": "2026-07-24",
+        "previous_completion_date": "2026-07-19"
+      },
+      "rule": "For Wisteria Filing, use the completion date in the latest dated final record. APPROVE if completion was on or before 2026-07-22; REJECT if completion was after that deadline.",
+      "source": [
+        "Final completion record dated 2027-02-22 for Wisteria Filing: completion date 2026-07-19.",
+        "The signed completion file for Wisteria Filing was registered on 2027-04-22.",
+        "Final completion record dated 2027-04-22 for Wisteria Filing: completion date 2026-07-24.",
+        "The administrative file for Wisteria Filing uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The signed completion file for Wisteria Filing was registered on 2027-04-22.",
+          "Final completion record dated 2027-04-22 for Wisteria Filing: completion date 2026-07-24."
+        ],
+        "absent": [
+          "The signed completion file for Wisteria Filing was registered on 2027-04-22."
+        ],
+        "stale": [
+          "The signed completion file for Wisteria Filing was registered on 2027-04-22.",
+          "Final completion record dated 2027-02-22 for Wisteria Filing: completion date 2026-07-19."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final completion record dated 2027-04-22 for Wisteria Filing: completion date 2026-07-24.",
+      "irrelevant_fact": "The administrative file for Wisteria Filing uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored untouched natural-communication test case. No observed model output, reader gate or fit selection may use this case before the future fit is frozen. Synthetic dates describe records and events only."
+    },
+    {
+      "id": "ct_deadline_03",
+      "family": "deadline",
+      "transfer_group": "untouched_recipient_transfer_test",
+      "split": "test",
+      "world": {
+        "entity": "Yarrow Parcel",
+        "current_date": "2027-04-23",
+        "previous_date": "2027-02-23",
+        "deadline": "2026-07-23",
+        "completion_date": "2026-07-21",
+        "previous_completion_date": "2026-07-26"
+      },
+      "rule": "For Yarrow Parcel, use the completion date in the latest dated final record. APPROVE if completion was on or before 2026-07-23; REJECT if completion was after that deadline.",
+      "source": [
+        "Final completion record dated 2027-02-23 for Yarrow Parcel: completion date 2026-07-26.",
+        "The signed completion file for Yarrow Parcel was registered on 2027-04-23.",
+        "Final completion record dated 2027-04-23 for Yarrow Parcel: completion date 2026-07-21.",
+        "The administrative file for Yarrow Parcel uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The signed completion file for Yarrow Parcel was registered on 2027-04-23.",
+          "Final completion record dated 2027-04-23 for Yarrow Parcel: completion date 2026-07-21."
+        ],
+        "absent": [
+          "The signed completion file for Yarrow Parcel was registered on 2027-04-23."
+        ],
+        "stale": [
+          "The signed completion file for Yarrow Parcel was registered on 2027-04-23.",
+          "Final completion record dated 2027-02-23 for Yarrow Parcel: completion date 2026-07-26."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final completion record dated 2027-04-23 for Yarrow Parcel: completion date 2026-07-21.",
+      "irrelevant_fact": "The administrative file for Yarrow Parcel uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored untouched natural-communication test case. No observed model output, reader gate or fit selection may use this case before the future fit is frozen. Synthetic dates describe records and events only."
+    },
+    {
+      "id": "ct_deadline_04",
+      "family": "deadline",
+      "transfer_group": "untouched_recipient_transfer_test",
+      "split": "test",
+      "world": {
+        "entity": "Zinnia Submission",
+        "current_date": "2027-04-24",
+        "previous_date": "2027-02-24",
+        "deadline": "2026-07-24",
+        "completion_date": "2026-07-26",
+        "previous_completion_date": "2026-07-21"
+      },
+      "rule": "For Zinnia Submission, use the completion date in the latest dated final record. APPROVE if completion was on or before 2026-07-24; REJECT if completion was after that deadline.",
+      "source": [
+        "Final completion record dated 2027-02-24 for Zinnia Submission: completion date 2026-07-21.",
+        "The signed completion file for Zinnia Submission was registered on 2027-04-24.",
+        "Final completion record dated 2027-04-24 for Zinnia Submission: completion date 2026-07-26.",
+        "The administrative file for Zinnia Submission uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The signed completion file for Zinnia Submission was registered on 2027-04-24.",
+          "Final completion record dated 2027-04-24 for Zinnia Submission: completion date 2026-07-26."
+        ],
+        "absent": [
+          "The signed completion file for Zinnia Submission was registered on 2027-04-24."
+        ],
+        "stale": [
+          "The signed completion file for Zinnia Submission was registered on 2027-04-24.",
+          "Final completion record dated 2027-02-24 for Zinnia Submission: completion date 2026-07-21."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final completion record dated 2027-04-24 for Zinnia Submission: completion date 2026-07-26.",
+      "irrelevant_fact": "The administrative file for Zinnia Submission uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored untouched natural-communication test case. No observed model output, reader gate or fit selection may use this case before the future fit is frozen. Synthetic dates describe records and events only."
+    }
+  ]
+}

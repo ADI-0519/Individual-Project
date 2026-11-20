@@ -1,0 +1,1042 @@
+{
+  "schema_version": 1,
+  "panel_id": "fresh_calibration_validation_v1",
+  "seed": 42,
+  "word_budget": 40,
+  "max_new_tokens": 96,
+  "status": "Fresh fixed-policy reader validation bank; no model outcomes observed before freezing.",
+  "authoring_notes": [
+    "Twenty-four unseen all-test cases, four per six rule families and two world approvals plus two rejections per family.",
+    "IDs, entities, source assertions, record dates and integer instantiations must be disjoint from original development and main communication banks.",
+    "The fixed nine-shot reader policy is developed after failures on old cases; this bank is a new-case validation, not a new policy search.",
+    "Current final records are in March 2027 and older final records in January 2027; deadline events are in June 2026 and precede both records.",
+    "Recipient prompts contain only the assigned evidence packet and empty report, never the complete source or normative label.",
+    "All agent-authored materials still require independent human semantic review."
+  ],
+  "cases": [
+    {
+      "id": "cv_conjunction_01",
+      "family": "conjunction",
+      "transfer_group": "fresh_policy_validation",
+      "split": "test",
+      "world": {
+        "entity": "Elm Beacon",
+        "current_date": "2027-03-01",
+        "previous_date": "2027-01-01",
+        "required_count": 61,
+        "decisive_pass": true,
+        "previous_decisive_pass": false
+      },
+      "rule": "For Elm Beacon, all 61 required checks C1 through C61 must pass. APPROVE if all pass; REJECT if at least one fails.",
+      "source": [
+        "Final record dated 2027-01-01 for Elm Beacon: required check C61 failed.",
+        "Final record dated 2027-03-01 for Elm Beacon: required checks C1 through C60 passed.",
+        "Final record dated 2027-03-01 for Elm Beacon: required check C61 passed.",
+        "The administrative file for Elm Beacon uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final record dated 2027-03-01 for Elm Beacon: required checks C1 through C60 passed.",
+          "Final record dated 2027-03-01 for Elm Beacon: required check C61 passed."
+        ],
+        "absent": [
+          "Final record dated 2027-03-01 for Elm Beacon: required checks C1 through C60 passed."
+        ],
+        "stale": [
+          "Final record dated 2027-03-01 for Elm Beacon: required checks C1 through C60 passed.",
+          "Final record dated 2027-01-01 for Elm Beacon: required check C61 failed."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final record dated 2027-03-01 for Elm Beacon: required check C61 passed.",
+      "irrelevant_fact": "The administrative file for Elm Beacon uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored fresh all-test reader-policy validation case. Normative packet labels follow explicit rules; no observed reader output was used. Dates are synthetic record/event dates, not claims about real events."
+    },
+    {
+      "id": "cv_conjunction_02",
+      "family": "conjunction",
+      "transfer_group": "fresh_policy_validation",
+      "split": "test",
+      "world": {
+        "entity": "Larch Harbor",
+        "current_date": "2027-03-02",
+        "previous_date": "2027-01-02",
+        "required_count": 67,
+        "decisive_pass": false,
+        "previous_decisive_pass": true
+      },
+      "rule": "For Larch Harbor, all 67 required checks C1 through C67 must pass. APPROVE if all pass; REJECT if at least one fails.",
+      "source": [
+        "Final record dated 2027-01-02 for Larch Harbor: required check C67 passed.",
+        "Final record dated 2027-03-02 for Larch Harbor: required checks C1 through C66 passed.",
+        "Final record dated 2027-03-02 for Larch Harbor: required check C67 failed.",
+        "The administrative file for Larch Harbor uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final record dated 2027-03-02 for Larch Harbor: required checks C1 through C66 passed.",
+          "Final record dated 2027-03-02 for Larch Harbor: required check C67 failed."
+        ],
+        "absent": [
+          "Final record dated 2027-03-02 for Larch Harbor: required checks C1 through C66 passed."
+        ],
+        "stale": [
+          "Final record dated 2027-03-02 for Larch Harbor: required checks C1 through C66 passed.",
+          "Final record dated 2027-01-02 for Larch Harbor: required check C67 passed."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final record dated 2027-03-02 for Larch Harbor: required check C67 failed.",
+      "irrelevant_fact": "The administrative file for Larch Harbor uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored fresh all-test reader-policy validation case. Normative packet labels follow explicit rules; no observed reader output was used. Dates are synthetic record/event dates, not claims about real events."
+    },
+    {
+      "id": "cv_conjunction_03",
+      "family": "conjunction",
+      "transfer_group": "fresh_policy_validation",
+      "split": "test",
+      "world": {
+        "entity": "Birch Sentry",
+        "current_date": "2027-03-03",
+        "previous_date": "2027-01-03",
+        "required_count": 71,
+        "decisive_pass": true,
+        "previous_decisive_pass": false
+      },
+      "rule": "For Birch Sentry, all 71 required checks C1 through C71 must pass. APPROVE if all pass; REJECT if at least one fails.",
+      "source": [
+        "Final record dated 2027-01-03 for Birch Sentry: required check C71 failed.",
+        "Final record dated 2027-03-03 for Birch Sentry: required checks C1 through C70 passed.",
+        "Final record dated 2027-03-03 for Birch Sentry: required check C71 passed.",
+        "The administrative file for Birch Sentry uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final record dated 2027-03-03 for Birch Sentry: required checks C1 through C70 passed.",
+          "Final record dated 2027-03-03 for Birch Sentry: required check C71 passed."
+        ],
+        "absent": [
+          "Final record dated 2027-03-03 for Birch Sentry: required checks C1 through C70 passed."
+        ],
+        "stale": [
+          "Final record dated 2027-03-03 for Birch Sentry: required checks C1 through C70 passed.",
+          "Final record dated 2027-01-03 for Birch Sentry: required check C71 failed."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final record dated 2027-03-03 for Birch Sentry: required check C71 passed.",
+      "irrelevant_fact": "The administrative file for Birch Sentry uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored fresh all-test reader-policy validation case. Normative packet labels follow explicit rules; no observed reader output was used. Dates are synthetic record/event dates, not claims about real events."
+    },
+    {
+      "id": "cv_conjunction_04",
+      "family": "conjunction",
+      "transfer_group": "fresh_policy_validation",
+      "split": "test",
+      "world": {
+        "entity": "Rowan Switch",
+        "current_date": "2027-03-04",
+        "previous_date": "2027-01-04",
+        "required_count": 73,
+        "decisive_pass": false,
+        "previous_decisive_pass": true
+      },
+      "rule": "For Rowan Switch, all 73 required checks C1 through C73 must pass. APPROVE if all pass; REJECT if at least one fails.",
+      "source": [
+        "Final record dated 2027-01-04 for Rowan Switch: required check C73 passed.",
+        "Final record dated 2027-03-04 for Rowan Switch: required checks C1 through C72 passed.",
+        "Final record dated 2027-03-04 for Rowan Switch: required check C73 failed.",
+        "The administrative file for Rowan Switch uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final record dated 2027-03-04 for Rowan Switch: required checks C1 through C72 passed.",
+          "Final record dated 2027-03-04 for Rowan Switch: required check C73 failed."
+        ],
+        "absent": [
+          "Final record dated 2027-03-04 for Rowan Switch: required checks C1 through C72 passed."
+        ],
+        "stale": [
+          "Final record dated 2027-03-04 for Rowan Switch: required checks C1 through C72 passed.",
+          "Final record dated 2027-01-04 for Rowan Switch: required check C73 passed."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final record dated 2027-03-04 for Rowan Switch: required check C73 failed.",
+      "irrelevant_fact": "The administrative file for Rowan Switch uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored fresh all-test reader-policy validation case. Normative packet labels follow explicit rules; no observed reader output was used. Dates are synthetic record/event dates, not claims about real events."
+    },
+    {
+      "id": "cv_threshold_01",
+      "family": "threshold",
+      "transfer_group": "fresh_policy_validation",
+      "split": "test",
+      "world": {
+        "entity": "Aspen Review",
+        "current_date": "2027-03-05",
+        "previous_date": "2027-01-05",
+        "threshold": 2201,
+        "score": 2232,
+        "previous_score": 2160
+      },
+      "rule": "For Aspen Review, APPROVE if the latest final score is at least 2201 points; REJECT if it is below 2201 points.",
+      "source": [
+        "Final score record dated 2027-01-05 for Aspen Review: 2160 points.",
+        "The signed assessment file for Aspen Review was registered on 2027-03-05.",
+        "Final score record dated 2027-03-05 for Aspen Review: 2232 points.",
+        "The administrative file for Aspen Review uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The signed assessment file for Aspen Review was registered on 2027-03-05.",
+          "Final score record dated 2027-03-05 for Aspen Review: 2232 points."
+        ],
+        "absent": [
+          "The signed assessment file for Aspen Review was registered on 2027-03-05."
+        ],
+        "stale": [
+          "The signed assessment file for Aspen Review was registered on 2027-03-05.",
+          "Final score record dated 2027-01-05 for Aspen Review: 2160 points."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final score record dated 2027-03-05 for Aspen Review: 2232 points.",
+      "irrelevant_fact": "The administrative file for Aspen Review uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored fresh all-test reader-policy validation case. Normative packet labels follow explicit rules; no observed reader output was used. Dates are synthetic record/event dates, not claims about real events."
+    },
+    {
+      "id": "cv_threshold_02",
+      "family": "threshold",
+      "transfer_group": "fresh_policy_validation",
+      "split": "test",
+      "world": {
+        "entity": "Cedar Metric",
+        "current_date": "2027-03-06",
+        "previous_date": "2027-01-06",
+        "threshold": 2301,
+        "score": 2264,
+        "previous_score": 2344
+      },
+      "rule": "For Cedar Metric, APPROVE if the latest final score is at least 2301 points; REJECT if it is below 2301 points.",
+      "source": [
+        "Final score record dated 2027-01-06 for Cedar Metric: 2344 points.",
+        "The signed assessment file for Cedar Metric was registered on 2027-03-06.",
+        "Final score record dated 2027-03-06 for Cedar Metric: 2264 points.",
+        "The administrative file for Cedar Metric uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The signed assessment file for Cedar Metric was registered on 2027-03-06.",
+          "Final score record dated 2027-03-06 for Cedar Metric: 2264 points."
+        ],
+        "absent": [
+          "The signed assessment file for Cedar Metric was registered on 2027-03-06."
+        ],
+        "stale": [
+          "The signed assessment file for Cedar Metric was registered on 2027-03-06.",
+          "Final score record dated 2027-01-06 for Cedar Metric: 2344 points."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final score record dated 2027-03-06 for Cedar Metric: 2264 points.",
+      "irrelevant_fact": "The administrative file for Cedar Metric uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored fresh all-test reader-policy validation case. Normative packet labels follow explicit rules; no observed reader output was used. Dates are synthetic record/event dates, not claims about real events."
+    },
+    {
+      "id": "cv_threshold_03",
+      "family": "threshold",
+      "transfer_group": "fresh_policy_validation",
+      "split": "test",
+      "world": {
+        "entity": "Alder Signal",
+        "current_date": "2027-03-07",
+        "previous_date": "2027-01-07",
+        "threshold": 2401,
+        "score": 2432,
+        "previous_score": 2360
+      },
+      "rule": "For Alder Signal, APPROVE if the latest final score is at least 2401 points; REJECT if it is below 2401 points.",
+      "source": [
+        "Final score record dated 2027-01-07 for Alder Signal: 2360 points.",
+        "The signed assessment file for Alder Signal was registered on 2027-03-07.",
+        "Final score record dated 2027-03-07 for Alder Signal: 2432 points.",
+        "The administrative file for Alder Signal uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The signed assessment file for Alder Signal was registered on 2027-03-07.",
+          "Final score record dated 2027-03-07 for Alder Signal: 2432 points."
+        ],
+        "absent": [
+          "The signed assessment file for Alder Signal was registered on 2027-03-07."
+        ],
+        "stale": [
+          "The signed assessment file for Alder Signal was registered on 2027-03-07.",
+          "Final score record dated 2027-01-07 for Alder Signal: 2360 points."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final score record dated 2027-03-07 for Alder Signal: 2432 points.",
+      "irrelevant_fact": "The administrative file for Alder Signal uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored fresh all-test reader-policy validation case. Normative packet labels follow explicit rules; no observed reader output was used. Dates are synthetic record/event dates, not claims about real events."
+    },
+    {
+      "id": "cv_threshold_04",
+      "family": "threshold",
+      "transfer_group": "fresh_policy_validation",
+      "split": "test",
+      "world": {
+        "entity": "Spruce Gauge",
+        "current_date": "2027-03-08",
+        "previous_date": "2027-01-08",
+        "threshold": 2501,
+        "score": 2464,
+        "previous_score": 2544
+      },
+      "rule": "For Spruce Gauge, APPROVE if the latest final score is at least 2501 points; REJECT if it is below 2501 points.",
+      "source": [
+        "Final score record dated 2027-01-08 for Spruce Gauge: 2544 points.",
+        "The signed assessment file for Spruce Gauge was registered on 2027-03-08.",
+        "Final score record dated 2027-03-08 for Spruce Gauge: 2464 points.",
+        "The administrative file for Spruce Gauge uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The signed assessment file for Spruce Gauge was registered on 2027-03-08.",
+          "Final score record dated 2027-03-08 for Spruce Gauge: 2464 points."
+        ],
+        "absent": [
+          "The signed assessment file for Spruce Gauge was registered on 2027-03-08."
+        ],
+        "stale": [
+          "The signed assessment file for Spruce Gauge was registered on 2027-03-08.",
+          "Final score record dated 2027-01-08 for Spruce Gauge: 2544 points."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final score record dated 2027-03-08 for Spruce Gauge: 2464 points.",
+      "irrelevant_fact": "The administrative file for Spruce Gauge uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored fresh all-test reader-policy validation case. Normative packet labels follow explicit rules; no observed reader output was used. Dates are synthetic record/event dates, not claims about real events."
+    },
+    {
+      "id": "cv_supersession_01",
+      "family": "supersession",
+      "transfer_group": "fresh_policy_validation",
+      "split": "test",
+      "world": {
+        "entity": "Sequoia Check",
+        "current_date": "2027-03-09",
+        "previous_date": "2027-01-09",
+        "current_pass": true,
+        "previous_pass": false
+      },
+      "rule": "For Sequoia Check, APPROVE if the latest final inspection passed; REJECT if that inspection failed.",
+      "source": [
+        "Final inspection dated 2027-01-09 for Sequoia Check: failed.",
+        "The inspection archive for Sequoia Check received a signed file on 2027-03-09.",
+        "Final inspection dated 2027-03-09 for Sequoia Check: passed.",
+        "The administrative file for Sequoia Check uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The inspection archive for Sequoia Check received a signed file on 2027-03-09.",
+          "Final inspection dated 2027-03-09 for Sequoia Check: passed."
+        ],
+        "absent": [
+          "The inspection archive for Sequoia Check received a signed file on 2027-03-09."
+        ],
+        "stale": [
+          "The inspection archive for Sequoia Check received a signed file on 2027-03-09.",
+          "Final inspection dated 2027-01-09 for Sequoia Check: failed."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final inspection dated 2027-03-09 for Sequoia Check: passed.",
+      "irrelevant_fact": "The administrative file for Sequoia Check uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored fresh all-test reader-policy validation case. Normative packet labels follow explicit rules; no observed reader output was used. Dates are synthetic record/event dates, not claims about real events."
+    },
+    {
+      "id": "cv_supersession_02",
+      "family": "supersession",
+      "transfer_group": "fresh_policy_validation",
+      "split": "test",
+      "world": {
+        "entity": "Magnolia Audit",
+        "current_date": "2027-03-10",
+        "previous_date": "2027-01-10",
+        "current_pass": false,
+        "previous_pass": true
+      },
+      "rule": "For Magnolia Audit, APPROVE if the latest final inspection passed; REJECT if that inspection failed.",
+      "source": [
+        "Final inspection dated 2027-01-10 for Magnolia Audit: passed.",
+        "The inspection archive for Magnolia Audit received a signed file on 2027-03-10.",
+        "Final inspection dated 2027-03-10 for Magnolia Audit: failed.",
+        "The administrative file for Magnolia Audit uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The inspection archive for Magnolia Audit received a signed file on 2027-03-10.",
+          "Final inspection dated 2027-03-10 for Magnolia Audit: failed."
+        ],
+        "absent": [
+          "The inspection archive for Magnolia Audit received a signed file on 2027-03-10."
+        ],
+        "stale": [
+          "The inspection archive for Magnolia Audit received a signed file on 2027-03-10.",
+          "Final inspection dated 2027-01-10 for Magnolia Audit: passed."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final inspection dated 2027-03-10 for Magnolia Audit: failed.",
+      "irrelevant_fact": "The administrative file for Magnolia Audit uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored fresh all-test reader-policy validation case. Normative packet labels follow explicit rules; no observed reader output was used. Dates are synthetic record/event dates, not claims about real events."
+    },
+    {
+      "id": "cv_supersession_03",
+      "family": "supersession",
+      "transfer_group": "fresh_policy_validation",
+      "split": "test",
+      "world": {
+        "entity": "Holly Archive",
+        "current_date": "2027-03-11",
+        "previous_date": "2027-01-11",
+        "current_pass": true,
+        "previous_pass": false
+      },
+      "rule": "For Holly Archive, APPROVE if the latest final inspection passed; REJECT if that inspection failed.",
+      "source": [
+        "Final inspection dated 2027-01-11 for Holly Archive: failed.",
+        "The inspection archive for Holly Archive received a signed file on 2027-03-11.",
+        "Final inspection dated 2027-03-11 for Holly Archive: passed.",
+        "The administrative file for Holly Archive uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The inspection archive for Holly Archive received a signed file on 2027-03-11.",
+          "Final inspection dated 2027-03-11 for Holly Archive: passed."
+        ],
+        "absent": [
+          "The inspection archive for Holly Archive received a signed file on 2027-03-11."
+        ],
+        "stale": [
+          "The inspection archive for Holly Archive received a signed file on 2027-03-11.",
+          "Final inspection dated 2027-01-11 for Holly Archive: failed."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final inspection dated 2027-03-11 for Holly Archive: passed.",
+      "irrelevant_fact": "The administrative file for Holly Archive uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored fresh all-test reader-policy validation case. Normative packet labels follow explicit rules; no observed reader output was used. Dates are synthetic record/event dates, not claims about real events."
+    },
+    {
+      "id": "cv_supersession_04",
+      "family": "supersession",
+      "transfer_group": "fresh_policy_validation",
+      "split": "test",
+      "world": {
+        "entity": "Poplar Panel",
+        "current_date": "2027-03-12",
+        "previous_date": "2027-01-12",
+        "current_pass": false,
+        "previous_pass": true
+      },
+      "rule": "For Poplar Panel, APPROVE if the latest final inspection passed; REJECT if that inspection failed.",
+      "source": [
+        "Final inspection dated 2027-01-12 for Poplar Panel: passed.",
+        "The inspection archive for Poplar Panel received a signed file on 2027-03-12.",
+        "Final inspection dated 2027-03-12 for Poplar Panel: failed.",
+        "The administrative file for Poplar Panel uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The inspection archive for Poplar Panel received a signed file on 2027-03-12.",
+          "Final inspection dated 2027-03-12 for Poplar Panel: failed."
+        ],
+        "absent": [
+          "The inspection archive for Poplar Panel received a signed file on 2027-03-12."
+        ],
+        "stale": [
+          "The inspection archive for Poplar Panel received a signed file on 2027-03-12.",
+          "Final inspection dated 2027-01-12 for Poplar Panel: passed."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final inspection dated 2027-03-12 for Poplar Panel: failed.",
+      "irrelevant_fact": "The administrative file for Poplar Panel uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored fresh all-test reader-policy validation case. Normative packet labels follow explicit rules; no observed reader output was used. Dates are synthetic record/event dates, not claims about real events."
+    },
+    {
+      "id": "cv_arithmetic_01",
+      "family": "arithmetic",
+      "transfer_group": "fresh_policy_validation",
+      "split": "test",
+      "world": {
+        "entity": "Laurel Accounts",
+        "current_date": "2027-03-13",
+        "previous_date": "2027-01-13",
+        "revenue": 410003,
+        "costs": 406702,
+        "previous_costs": 413910
+      },
+      "rule": "For Laurel Accounts, net balance is final revenue minus final costs for this period. APPROVE if net balance is at least zero; REJECT if it is below zero.",
+      "source": [
+        "Final cost record dated 2027-01-13 for Laurel Accounts: 413910 units.",
+        "Final revenue record dated 2027-03-13 for Laurel Accounts: 410003 units.",
+        "Final cost record dated 2027-03-13 for Laurel Accounts: 406702 units.",
+        "The administrative file for Laurel Accounts uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final revenue record dated 2027-03-13 for Laurel Accounts: 410003 units.",
+          "Final cost record dated 2027-03-13 for Laurel Accounts: 406702 units."
+        ],
+        "absent": [
+          "Final revenue record dated 2027-03-13 for Laurel Accounts: 410003 units."
+        ],
+        "stale": [
+          "Final revenue record dated 2027-03-13 for Laurel Accounts: 410003 units.",
+          "Final cost record dated 2027-01-13 for Laurel Accounts: 413910 units."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final cost record dated 2027-03-13 for Laurel Accounts: 406702 units.",
+      "irrelevant_fact": "The administrative file for Laurel Accounts uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored fresh all-test reader-policy validation case. Normative packet labels follow explicit rules; no observed reader output was used. Dates are synthetic record/event dates, not claims about real events."
+    },
+    {
+      "id": "cv_arithmetic_02",
+      "family": "arithmetic",
+      "transfer_group": "fresh_policy_validation",
+      "split": "test",
+      "world": {
+        "entity": "Olive Balance",
+        "current_date": "2027-03-14",
+        "previous_date": "2027-01-14",
+        "revenue": 420003,
+        "costs": 423706,
+        "previous_costs": 415694
+      },
+      "rule": "For Olive Balance, net balance is final revenue minus final costs for this period. APPROVE if net balance is at least zero; REJECT if it is below zero.",
+      "source": [
+        "Final cost record dated 2027-01-14 for Olive Balance: 415694 units.",
+        "Final revenue record dated 2027-03-14 for Olive Balance: 420003 units.",
+        "Final cost record dated 2027-03-14 for Olive Balance: 423706 units.",
+        "The administrative file for Olive Balance uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final revenue record dated 2027-03-14 for Olive Balance: 420003 units.",
+          "Final cost record dated 2027-03-14 for Olive Balance: 423706 units."
+        ],
+        "absent": [
+          "Final revenue record dated 2027-03-14 for Olive Balance: 420003 units."
+        ],
+        "stale": [
+          "Final revenue record dated 2027-03-14 for Olive Balance: 420003 units.",
+          "Final cost record dated 2027-01-14 for Olive Balance: 415694 units."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final cost record dated 2027-03-14 for Olive Balance: 423706 units.",
+      "irrelevant_fact": "The administrative file for Olive Balance uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored fresh all-test reader-policy validation case. Normative packet labels follow explicit rules; no observed reader output was used. Dates are synthetic record/event dates, not claims about real events."
+    },
+    {
+      "id": "cv_arithmetic_03",
+      "family": "arithmetic",
+      "transfer_group": "fresh_policy_validation",
+      "split": "test",
+      "world": {
+        "entity": "Pine Budget",
+        "current_date": "2027-03-15",
+        "previous_date": "2027-01-15",
+        "revenue": 430003,
+        "costs": 426702,
+        "previous_costs": 433910
+      },
+      "rule": "For Pine Budget, net balance is final revenue minus final costs for this period. APPROVE if net balance is at least zero; REJECT if it is below zero.",
+      "source": [
+        "Final cost record dated 2027-01-15 for Pine Budget: 433910 units.",
+        "Final revenue record dated 2027-03-15 for Pine Budget: 430003 units.",
+        "Final cost record dated 2027-03-15 for Pine Budget: 426702 units.",
+        "The administrative file for Pine Budget uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final revenue record dated 2027-03-15 for Pine Budget: 430003 units.",
+          "Final cost record dated 2027-03-15 for Pine Budget: 426702 units."
+        ],
+        "absent": [
+          "Final revenue record dated 2027-03-15 for Pine Budget: 430003 units."
+        ],
+        "stale": [
+          "Final revenue record dated 2027-03-15 for Pine Budget: 430003 units.",
+          "Final cost record dated 2027-01-15 for Pine Budget: 433910 units."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final cost record dated 2027-03-15 for Pine Budget: 426702 units.",
+      "irrelevant_fact": "The administrative file for Pine Budget uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored fresh all-test reader-policy validation case. Normative packet labels follow explicit rules; no observed reader output was used. Dates are synthetic record/event dates, not claims about real events."
+    },
+    {
+      "id": "cv_arithmetic_04",
+      "family": "arithmetic",
+      "transfer_group": "fresh_policy_validation",
+      "split": "test",
+      "world": {
+        "entity": "Clover Ledger",
+        "current_date": "2027-03-16",
+        "previous_date": "2027-01-16",
+        "revenue": 440003,
+        "costs": 443706,
+        "previous_costs": 435694
+      },
+      "rule": "For Clover Ledger, net balance is final revenue minus final costs for this period. APPROVE if net balance is at least zero; REJECT if it is below zero.",
+      "source": [
+        "Final cost record dated 2027-01-16 for Clover Ledger: 435694 units.",
+        "Final revenue record dated 2027-03-16 for Clover Ledger: 440003 units.",
+        "Final cost record dated 2027-03-16 for Clover Ledger: 443706 units.",
+        "The administrative file for Clover Ledger uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final revenue record dated 2027-03-16 for Clover Ledger: 440003 units.",
+          "Final cost record dated 2027-03-16 for Clover Ledger: 443706 units."
+        ],
+        "absent": [
+          "Final revenue record dated 2027-03-16 for Clover Ledger: 440003 units."
+        ],
+        "stale": [
+          "Final revenue record dated 2027-03-16 for Clover Ledger: 440003 units.",
+          "Final cost record dated 2027-01-16 for Clover Ledger: 435694 units."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final cost record dated 2027-03-16 for Clover Ledger: 443706 units.",
+      "irrelevant_fact": "The administrative file for Clover Ledger uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored fresh all-test reader-policy validation case. Normative packet labels follow explicit rules; no observed reader output was used. Dates are synthetic record/event dates, not claims about real events."
+    },
+    {
+      "id": "cv_disjunction_01",
+      "family": "disjunction",
+      "transfer_group": "fresh_policy_validation",
+      "split": "test",
+      "world": {
+        "entity": "Iris Corridor",
+        "current_date": "2027-03-17",
+        "previous_date": "2027-01-17",
+        "route_b_pass": true,
+        "previous_route_b_pass": false
+      },
+      "rule": "For Iris Corridor, at least one of alternative routes A and B must pass. APPROVE if either route passes; REJECT if both routes fail.",
+      "source": [
+        "Final record dated 2027-01-17 for Iris Corridor: alternative route B failed.",
+        "Final record dated 2027-03-17 for Iris Corridor: alternative route A failed.",
+        "Final record dated 2027-03-17 for Iris Corridor: alternative route B passed.",
+        "The administrative file for Iris Corridor uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final record dated 2027-03-17 for Iris Corridor: alternative route A failed.",
+          "Final record dated 2027-03-17 for Iris Corridor: alternative route B passed."
+        ],
+        "absent": [
+          "Final record dated 2027-03-17 for Iris Corridor: alternative route A failed."
+        ],
+        "stale": [
+          "Final record dated 2027-03-17 for Iris Corridor: alternative route A failed.",
+          "Final record dated 2027-01-17 for Iris Corridor: alternative route B failed."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final record dated 2027-03-17 for Iris Corridor: alternative route B passed.",
+      "irrelevant_fact": "The administrative file for Iris Corridor uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored fresh all-test reader-policy validation case. Normative packet labels follow explicit rules; no observed reader output was used. Dates are synthetic record/event dates, not claims about real events."
+    },
+    {
+      "id": "cv_disjunction_02",
+      "family": "disjunction",
+      "transfer_group": "fresh_policy_validation",
+      "split": "test",
+      "world": {
+        "entity": "Fern Junction",
+        "current_date": "2027-03-18",
+        "previous_date": "2027-01-18",
+        "route_b_pass": false,
+        "previous_route_b_pass": true
+      },
+      "rule": "For Fern Junction, at least one of alternative routes A and B must pass. APPROVE if either route passes; REJECT if both routes fail.",
+      "source": [
+        "Final record dated 2027-01-18 for Fern Junction: alternative route B passed.",
+        "Final record dated 2027-03-18 for Fern Junction: alternative route A failed.",
+        "Final record dated 2027-03-18 for Fern Junction: alternative route B failed.",
+        "The administrative file for Fern Junction uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final record dated 2027-03-18 for Fern Junction: alternative route A failed.",
+          "Final record dated 2027-03-18 for Fern Junction: alternative route B failed."
+        ],
+        "absent": [
+          "Final record dated 2027-03-18 for Fern Junction: alternative route A failed."
+        ],
+        "stale": [
+          "Final record dated 2027-03-18 for Fern Junction: alternative route A failed.",
+          "Final record dated 2027-01-18 for Fern Junction: alternative route B passed."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final record dated 2027-03-18 for Fern Junction: alternative route B failed.",
+      "irrelevant_fact": "The administrative file for Fern Junction uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored fresh all-test reader-policy validation case. Normative packet labels follow explicit rules; no observed reader output was used. Dates are synthetic record/event dates, not claims about real events."
+    },
+    {
+      "id": "cv_disjunction_03",
+      "family": "disjunction",
+      "transfer_group": "fresh_policy_validation",
+      "split": "test",
+      "world": {
+        "entity": "Moss Pathway",
+        "current_date": "2027-03-19",
+        "previous_date": "2027-01-19",
+        "route_b_pass": true,
+        "previous_route_b_pass": false
+      },
+      "rule": "For Moss Pathway, at least one of alternative routes A and B must pass. APPROVE if either route passes; REJECT if both routes fail.",
+      "source": [
+        "Final record dated 2027-01-19 for Moss Pathway: alternative route B failed.",
+        "Final record dated 2027-03-19 for Moss Pathway: alternative route A failed.",
+        "Final record dated 2027-03-19 for Moss Pathway: alternative route B passed.",
+        "The administrative file for Moss Pathway uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final record dated 2027-03-19 for Moss Pathway: alternative route A failed.",
+          "Final record dated 2027-03-19 for Moss Pathway: alternative route B passed."
+        ],
+        "absent": [
+          "Final record dated 2027-03-19 for Moss Pathway: alternative route A failed."
+        ],
+        "stale": [
+          "Final record dated 2027-03-19 for Moss Pathway: alternative route A failed.",
+          "Final record dated 2027-01-19 for Moss Pathway: alternative route B failed."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final record dated 2027-03-19 for Moss Pathway: alternative route B passed.",
+      "irrelevant_fact": "The administrative file for Moss Pathway uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored fresh all-test reader-policy validation case. Normative packet labels follow explicit rules; no observed reader output was used. Dates are synthetic record/event dates, not claims about real events."
+    },
+    {
+      "id": "cv_disjunction_04",
+      "family": "disjunction",
+      "transfer_group": "fresh_policy_validation",
+      "split": "test",
+      "world": {
+        "entity": "Heather Transit",
+        "current_date": "2027-03-20",
+        "previous_date": "2027-01-20",
+        "route_b_pass": false,
+        "previous_route_b_pass": true
+      },
+      "rule": "For Heather Transit, at least one of alternative routes A and B must pass. APPROVE if either route passes; REJECT if both routes fail.",
+      "source": [
+        "Final record dated 2027-01-20 for Heather Transit: alternative route B passed.",
+        "Final record dated 2027-03-20 for Heather Transit: alternative route A failed.",
+        "Final record dated 2027-03-20 for Heather Transit: alternative route B failed.",
+        "The administrative file for Heather Transit uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "Final record dated 2027-03-20 for Heather Transit: alternative route A failed.",
+          "Final record dated 2027-03-20 for Heather Transit: alternative route B failed."
+        ],
+        "absent": [
+          "Final record dated 2027-03-20 for Heather Transit: alternative route A failed."
+        ],
+        "stale": [
+          "Final record dated 2027-03-20 for Heather Transit: alternative route A failed.",
+          "Final record dated 2027-01-20 for Heather Transit: alternative route B passed."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final record dated 2027-03-20 for Heather Transit: alternative route B failed.",
+      "irrelevant_fact": "The administrative file for Heather Transit uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored fresh all-test reader-policy validation case. Normative packet labels follow explicit rules; no observed reader output was used. Dates are synthetic record/event dates, not claims about real events."
+    },
+    {
+      "id": "cv_deadline_01",
+      "family": "deadline",
+      "transfer_group": "fresh_policy_validation",
+      "split": "test",
+      "world": {
+        "entity": "Daisy Dispatch",
+        "current_date": "2027-03-21",
+        "previous_date": "2027-01-21",
+        "deadline": "2026-06-21",
+        "completion_date": "2026-06-19",
+        "previous_completion_date": "2026-06-24"
+      },
+      "rule": "For Daisy Dispatch, use the completion date in the latest dated final record. APPROVE if completion was on or before 2026-06-21; REJECT if completion was after that deadline.",
+      "source": [
+        "Final completion record dated 2027-01-21 for Daisy Dispatch: completion date 2026-06-24.",
+        "The signed completion file for Daisy Dispatch was registered on 2027-03-21.",
+        "Final completion record dated 2027-03-21 for Daisy Dispatch: completion date 2026-06-19.",
+        "The administrative file for Daisy Dispatch uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The signed completion file for Daisy Dispatch was registered on 2027-03-21.",
+          "Final completion record dated 2027-03-21 for Daisy Dispatch: completion date 2026-06-19."
+        ],
+        "absent": [
+          "The signed completion file for Daisy Dispatch was registered on 2027-03-21."
+        ],
+        "stale": [
+          "The signed completion file for Daisy Dispatch was registered on 2027-03-21.",
+          "Final completion record dated 2027-01-21 for Daisy Dispatch: completion date 2026-06-24."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final completion record dated 2027-03-21 for Daisy Dispatch: completion date 2026-06-19.",
+      "irrelevant_fact": "The administrative file for Daisy Dispatch uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored fresh all-test reader-policy validation case. Normative packet labels follow explicit rules; no observed reader output was used. Dates are synthetic record/event dates, not claims about real events."
+    },
+    {
+      "id": "cv_deadline_02",
+      "family": "deadline",
+      "transfer_group": "fresh_policy_validation",
+      "split": "test",
+      "world": {
+        "entity": "Tulip Filing",
+        "current_date": "2027-03-22",
+        "previous_date": "2027-01-22",
+        "deadline": "2026-06-22",
+        "completion_date": "2026-06-24",
+        "previous_completion_date": "2026-06-19"
+      },
+      "rule": "For Tulip Filing, use the completion date in the latest dated final record. APPROVE if completion was on or before 2026-06-22; REJECT if completion was after that deadline.",
+      "source": [
+        "Final completion record dated 2027-01-22 for Tulip Filing: completion date 2026-06-19.",
+        "The signed completion file for Tulip Filing was registered on 2027-03-22.",
+        "Final completion record dated 2027-03-22 for Tulip Filing: completion date 2026-06-24.",
+        "The administrative file for Tulip Filing uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The signed completion file for Tulip Filing was registered on 2027-03-22.",
+          "Final completion record dated 2027-03-22 for Tulip Filing: completion date 2026-06-24."
+        ],
+        "absent": [
+          "The signed completion file for Tulip Filing was registered on 2027-03-22."
+        ],
+        "stale": [
+          "The signed completion file for Tulip Filing was registered on 2027-03-22.",
+          "Final completion record dated 2027-01-22 for Tulip Filing: completion date 2026-06-19."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final completion record dated 2027-03-22 for Tulip Filing: completion date 2026-06-24.",
+      "irrelevant_fact": "The administrative file for Tulip Filing uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored fresh all-test reader-policy validation case. Normative packet labels follow explicit rules; no observed reader output was used. Dates are synthetic record/event dates, not claims about real events."
+    },
+    {
+      "id": "cv_deadline_03",
+      "family": "deadline",
+      "transfer_group": "fresh_policy_validation",
+      "split": "test",
+      "world": {
+        "entity": "Marigold Parcel",
+        "current_date": "2027-03-23",
+        "previous_date": "2027-01-23",
+        "deadline": "2026-06-23",
+        "completion_date": "2026-06-21",
+        "previous_completion_date": "2026-06-26"
+      },
+      "rule": "For Marigold Parcel, use the completion date in the latest dated final record. APPROVE if completion was on or before 2026-06-23; REJECT if completion was after that deadline.",
+      "source": [
+        "Final completion record dated 2027-01-23 for Marigold Parcel: completion date 2026-06-26.",
+        "The signed completion file for Marigold Parcel was registered on 2027-03-23.",
+        "Final completion record dated 2027-03-23 for Marigold Parcel: completion date 2026-06-21.",
+        "The administrative file for Marigold Parcel uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The signed completion file for Marigold Parcel was registered on 2027-03-23.",
+          "Final completion record dated 2027-03-23 for Marigold Parcel: completion date 2026-06-21."
+        ],
+        "absent": [
+          "The signed completion file for Marigold Parcel was registered on 2027-03-23."
+        ],
+        "stale": [
+          "The signed completion file for Marigold Parcel was registered on 2027-03-23.",
+          "Final completion record dated 2027-01-23 for Marigold Parcel: completion date 2026-06-26."
+        ]
+      },
+      "correct": "APPROVE",
+      "decisive_fact": "Final completion record dated 2027-03-23 for Marigold Parcel: completion date 2026-06-21.",
+      "irrelevant_fact": "The administrative file for Marigold Parcel uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "authoring_notes": "Agent-authored fresh all-test reader-policy validation case. Normative packet labels follow explicit rules; no observed reader output was used. Dates are synthetic record/event dates, not claims about real events."
+    },
+    {
+      "id": "cv_deadline_04",
+      "family": "deadline",
+      "transfer_group": "fresh_policy_validation",
+      "split": "test",
+      "world": {
+        "entity": "Poppy Submission",
+        "current_date": "2027-03-24",
+        "previous_date": "2027-01-24",
+        "deadline": "2026-06-24",
+        "completion_date": "2026-06-26",
+        "previous_completion_date": "2026-06-21"
+      },
+      "rule": "For Poppy Submission, use the completion date in the latest dated final record. APPROVE if completion was on or before 2026-06-24; REJECT if completion was after that deadline.",
+      "source": [
+        "Final completion record dated 2027-01-24 for Poppy Submission: completion date 2026-06-21.",
+        "The signed completion file for Poppy Submission was registered on 2027-03-24.",
+        "Final completion record dated 2027-03-24 for Poppy Submission: completion date 2026-06-26.",
+        "The administrative file for Poppy Submission uses the standard blue cover for page layout."
+      ],
+      "reader_packets": {
+        "informed": [
+          "The signed completion file for Poppy Submission was registered on 2027-03-24.",
+          "Final completion record dated 2027-03-24 for Poppy Submission: completion date 2026-06-26."
+        ],
+        "absent": [
+          "The signed completion file for Poppy Submission was registered on 2027-03-24."
+        ],
+        "stale": [
+          "The signed completion file for Poppy Submission was registered on 2027-03-24.",
+          "Final completion record dated 2027-01-24 for Poppy Submission: completion date 2026-06-21."
+        ]
+      },
+      "correct": "REJECT",
+      "decisive_fact": "Final completion record dated 2027-03-24 for Poppy Submission: completion date 2026-06-26.",
+      "irrelevant_fact": "The administrative file for Poppy Submission uses the standard blue cover for page layout.",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "authoring_notes": "Agent-authored fresh all-test reader-policy validation case. Normative packet labels follow explicit rules; no observed reader output was used. Dates are synthetic record/event dates, not claims about real events."
+    }
+  ]
+}
