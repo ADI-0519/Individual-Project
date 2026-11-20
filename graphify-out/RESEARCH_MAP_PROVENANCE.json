@@ -1,6 +1,6 @@
 {
   "schema": "graphify_research_map_v3",
-  "updated_utc": "2026-11-20T16:39:07.249038+00:00",
+  "updated_utc": "2026-11-20T21:08:36.454402+00:00",
   "graphify_version": "0.9.100",
   "source_root": "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project",
   "source_files": {
@@ -37,7 +37,7 @@
       "lines": 183
     },
     "docs/COMMUNICATION_TRANSFER_RESULTS.md": {
-      "sha256": "0971736c9f3e77def23def8ebcd8220ecf720219658265bb900b9c6073a23078",
+      "sha256": "6fd1eb9af7d3713150f38d2123ac87636bdb09d706460da2edc40677e17fd246",
       "lines": 143
     },
     "docs/CREATE_COMPUTE_REQUEST.md": {
@@ -77,8 +77,8 @@
       "lines": 184
     },
     "docs/MAIN_STUDY_GATES.md": {
-      "sha256": "97b295ee971e2a2f1974ed5bbf44c9e7843aa6b96d04ccad9e6b401b61a23067",
-      "lines": 174
+      "sha256": "879f244b709412f3c4e0f689596a4f334f4b345e63976c9d1031715473a5c541",
+      "lines": 182
     },
     "docs/MASK_SOURCE_AUDIT.md": {
       "sha256": "035cbe77d1f415d949f3ea533ad9256fcdcce296e135dadd493f9bb2b87409f9",
@@ -300,5 +300,38 @@
   "plugin_use": [
     "Installed Graphify 0.9.100 isolated uv runtime"
   ],
-  "other_app_plugins_used": []
+  "other_app_plugins_used": [],
+  "documentation_refresh": {
+    "sources": [
+      "docs/COMMUNICATION_TRANSFER_RESULTS.md",
+      "docs/MAIN_STUDY_GATES.md"
+    ],
+    "fully_read_line_counts": {
+      "docs/COMMUNICATION_TRANSFER_RESULTS.md": 143,
+      "docs/MAIN_STUDY_GATES.md": 182
+    },
+    "changed_semantic_nodes_reviewed": 23,
+    "existing_edges_reviewed": 57,
+    "node_content_updates": [
+      "docs_communication_transfer_results_document",
+      "docs_communication_transfer_results_fresh_gate_failure",
+      "docs_communication_transfer_results_reader_validity_gate",
+      "docs_communication_transfer_results_restoration_limit",
+      "docs_main_study_gates_communication_completed",
+      "docs_main_study_gates_document",
+      "docs_main_study_gates_human_review"
+    ],
+    "inferred_edge_reclassifications": 2,
+    "other_source_hashes_verified_unchanged": 62,
+    "other_graph_contributions_verified_unchanged": true,
+    "new_nodes": 0,
+    "new_edges": 0,
+    "corpus_detection": false,
+    "ast_extraction": false,
+    "new_external_papers_read": false,
+    "new_pilot_modules_indexed": false,
+    "community_assignments_reused": "Topology and weights unchanged; source content and confidence metadata were refreshed.",
+    "host_agent_token_cost": "unmeasured",
+    "schema_validation_errors": []
+  }
 }

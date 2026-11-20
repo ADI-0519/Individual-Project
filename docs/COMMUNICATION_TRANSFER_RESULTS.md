@@ -83,7 +83,7 @@ The prespecified stale-minus-informed difference in wrong-decision reduction is 
 
 The complete-valid sensitivity keeps the 22 cases whose original and restored decisions are valid in both relevant contexts. Its interaction is **1/22 = .0455**. This post-hoc sensitivity does not replace the frozen all-case result, but it explains why +.125 is not strong evidence that restoration works preferentially for stale readers. Irrelevant additions also change some decisions. Correct, wrong, DEFER and INVALID transitions must accompany any scalar effect.
 
-[Recipient replay figure](./figures/2026-11-20/recipient_replay.png).
+[Recipient replay figure](./figures/2026-11-20/communication_recipient_replay.png).
 
 ## Completed terminal controls
 

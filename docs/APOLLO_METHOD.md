@@ -1,6 +1,11 @@
 # Apollo instruction-pair probe: source audit and 8B adaptation
 
-This document specifies the baseline being adapted. It does not report a trained model, GPU run, measured deception-detection performance, or an exact reproduction of the 70B study.
+This document audits the published recipe and the project's 8B adaptation.
+Sections 1–8 specify the method; section 9 summarises the completed 8B fit,
+independent numerical checks and GPU replay validation. Those checks establish
+instruction-condition discrimination and validate the recorded feature path.
+They do not establish natural deception-detection performance or reproduce the
+full 70B study.
 
 The primary paper is Goldowsky-Dill, Chughtai, Heimersheim and Hobbhahn, **Detecting Strategic Deception with Linear Probes**, ICML 2025 ([proceedings](https://proceedings.mlr.press/v267/goldowsky-dill25a.html), [preprint](https://arxiv.org/abs/2502.03407)). The public implementation was inspected at commit **`f8ec4010e74927394709dffa22b97bdf8cd5a62f`**. Repository defaults, the paper description and the saved configuration are distinguishable sources of evidence; they do not always agree.
 

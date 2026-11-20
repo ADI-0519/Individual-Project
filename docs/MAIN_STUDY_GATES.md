@@ -95,7 +95,15 @@ The independent neutral task is a **necessary design gate for the intended stron
 
 ## Gate 2: validate cases and labels with human review
 
-Audit a new development version before creating final holdouts. The current full-evidence control passes 23/24 cases; retain the failed case and the earlier profit-restoration failures. Do not edit old traces or regenerate awkward messages until an expected decision appears.
+Audit a new development version before creating final holdouts. The 19 November
+natural development pilot's full-evidence control passed 23/24 cases. In the
+20 November fresh communication batch, the original direct Llama reader passed
+20/24 informed/no-report controls on a different case bank. The later nine-shot
+Qwen qualification passed 24/24 informed controls but failed its missing-evidence
+requirement at 17/24. These separate panels and policies do not form a paired
+improvement estimate or establish a qualified recipient. Retain every failed
+case and the earlier profit-restoration failures. Do not edit old traces or
+regenerate awkward messages until an expected decision appears.
 
 The review rubric must keep separate:
 

@@ -1,0 +1,456 @@
+{
+  "schema": "independent_saved_checkpoint_audit_v1",
+  "created_utc": "2026-11-20T20:58:16.3823307Z",
+  "git_commit_at_audit": "1d12b56f91f0567249403b9d2ee5384f1c9fbe01",
+  "status": "passed_recomputed_counts_and_artifact_bindings",
+  "execution_scope": {
+    "analyzer": "PowerShell with .NET JavaScriptSerializer, SHA256 and independent counting/parsing logic",
+    "analyzer_executed": true,
+    "new_model_inference": false,
+    "project_analysis_helpers_imported": false,
+    "human_semantic_validation": false,
+    "source_code_modified": false,
+    "graphify": "Queried existing727-node graph for navigation; no rebuild and graph output was not counted as experimental evidence.",
+    "agent_instructions": "No AGENTS.md found in the repository or checked workspace/ancestor locations; Graphify skill and Python fact-grounded coding guidance consulted."
+  },
+  "primary": {
+    "manifest_status": "complete",
+    "natural_reports": 144,
+    "cases": 24,
+    "goals": [
+      {
+        "goal": "neutral",
+        "rows": 72,
+        "valid_targets": 72,
+        "class_counts": {
+          "APPROVE": 63,
+          "REJECT": 9,
+          "DEFER": 0,
+          "INVALID": 0
+        },
+        "activation_correct": 62,
+        "always_approve_correct": 63,
+        "activation_reject_true_positives": 0,
+        "activation_reject_denominator": 9
+      },
+      {
+        "goal": "favorable",
+        "rows": 72,
+        "valid_targets": 71,
+        "class_counts": {
+          "APPROVE": 66,
+          "REJECT": 5,
+          "DEFER": 0,
+          "INVALID": 1
+        },
+        "activation_correct": 66,
+        "always_approve_correct": 66,
+        "activation_reject_true_positives": 0,
+        "activation_reject_denominator": 5
+      }
+    ],
+    "verified_report_feature_hashes": 144,
+    "verified_reader_decision_and_prompt_bindings": 144,
+    "verified_prediction_probability_argmax_and_sum": 720,
+    "actual_reader_files": 383,
+    "manifest_reader_calls": 383
+  },
+  "draft_annotations": {
+    "rows": 144,
+    "clean_supported_agent_draft": 101,
+    "clean_current_fact_omissions": 4,
+    "omission_ids": [
+      "cf_232852f8e68c29281060456a",
+      "cf_f9578a34bc7d897533c77072",
+      "cf_46cfd5ad432c90997eeab663",
+      "cf_7bb6c47e0557b8527d343956"
+    ],
+    "verified_raw_text_bindings": 144,
+    "all_need_human_review": true,
+    "all_unaudited": true
+  },
+  "primary_artifacts": {
+    "manifest_sha256": "1a88bdae11781d402aec837256ff1deaf65d55b8a29cd7402baa4ec34d4721c8",
+    "protocol_sha256": "78fea6597a0af4f153d182b1656b4b24e609be818c270efdae0ced22a03a4b13",
+    "summary_sha256": "b87bd58832001be77aa18a07050a3cb87f309853c87a18530f4f55f45cb9cc45",
+    "recorded_protocol_matches": true,
+    "recorded_summary_matches": true,
+    "draft_csv_sha256": "30651048a4e1016a0e8d03b6b204ab7195f1a4d3a4f520531c3d39f0cc5b8bde"
+  },
+  "frozen_and_secondary_checks": {
+    "frozen_artifacts": [
+      {
+        "artifact_group": "frozen_readout_hashes",
+        "checked": 10,
+        "mismatches": []
+      },
+      {
+        "artifact_group": "frozen_apollo_hashes",
+        "checked": 2,
+        "mismatches": []
+      }
+    ],
+    "executed_sources_verified": 5,
+    "executed_source_mismatches": [],
+    "annotation_freeze": {
+      "frozen_source_files_verified": 11,
+      "source_mismatches": [],
+      "final_labels_hash_matches": true,
+      "recorded_frozen_utc": "2026-11-20T14:01:37.608620+00:00",
+      "human_review_required": true,
+      "audited": false
+    },
+    "exact_output_diagnostic": {
+      "pairs": 13,
+      "cases": 6,
+      "all_margin_changes_positive": true,
+      "equal_case_mean_margin_change": 0.5571931631710563,
+      "all_reuse_same_reader_cache_key": true,
+      "all_same_source_packet_user_payload": true
+    },
+    "restoration": {
+      "cases": 24,
+      "raw_interaction_mean": 0.125,
+      "complete_valid_cases": 22,
+      "complete_valid_interaction_mean": 0.045454545454545456,
+      "stale_wrong_to_correct": 1,
+      "informed_invalid_to_wrong": 2
+    },
+    "limitations": [
+      "Numerical 4096-D linear fitting and floating-point canonical record digests not rerun.",
+      "Bootstrap confidence intervals and human semantic labels not revalidated.",
+      "Freeze hashes and recorded timestamps cannot prove annotators did not access scores outside the recorded workflow."
+    ]
+  },
+  "fresh_nine_shot_gate": {
+    "method": "Independent PowerShell/.NET reconstruction from all72 fresh raw controls, fixed panel and protocol.",
+    "manifest_status": "fresh_reader_controls_failed",
+    "rows": 72,
+    "groups": [
+      {
+        "context": "informed",
+        "n": 24,
+        "correct": 24,
+        "invalid": 0
+      },
+      {
+        "context": "absent",
+        "n": 24,
+        "correct": 17,
+        "invalid": 0
+      },
+      {
+        "context": "stale",
+        "n": 24,
+        "correct": 24,
+        "invalid": 0
+      }
+    ],
+    "calculated_pass": false,
+    "recorded_pass": false,
+    "verified_payload_decision_target_bindings": 72,
+    "verified_nine_shot_prefix_hashes": 72,
+    "policy_sha256": "6dda261f5d5c7667ea29885bddd1c47410f34d59e1807819a317008da570c779",
+    "recorded_protocol_hash_matches": true,
+    "recorded_summary_hash_matches": true,
+    "sources_verified": 12,
+    "source_mismatches": [],
+    "untouched_ct_bindings": [
+      {
+        "path": "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/communication/fresh_recipient_test_v1.json",
+        "recorded_sha256": "a2dbab0ef29c22e6e1c9d50d583499853ce6fb2d2f13daef7f4e1695bb83136a",
+        "current_sha256": "a2dbab0ef29c22e6e1c9d50d583499853ce6fb2d2f13daef7f4e1695bb83136a",
+        "matches": true
+      }
+    ],
+    "old_case_secondary_file_exists": false,
+    "failures": []
+  },
+  "evidence_role_replay": {
+    "method": "Independent PowerShell/.NET reconstruction of192 raw model records, all preflight token IDs, condition labels and paired switches; no project summarizer imported.",
+    "models": [
+      {
+        "run": "evidence_role_diagnostic_v1",
+        "manifest_status": "complete",
+        "rows": 96,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+        "groups": [
+          {
+            "family": "date",
+            "condition": "decisive",
+            "n": 16,
+            "correct": 16,
+            "approve": 8,
+            "reject": 8,
+            "defer": 0,
+            "invalid": 0
+          },
+          {
+            "family": "date",
+            "condition": "metadata",
+            "n": 16,
+            "correct": 0,
+            "approve": 8,
+            "reject": 8,
+            "defer": 0,
+            "invalid": 0
+          },
+          {
+            "family": "date",
+            "condition": "explicit_missing",
+            "n": 16,
+            "correct": 0,
+            "approve": 8,
+            "reject": 8,
+            "defer": 0,
+            "invalid": 0
+          },
+          {
+            "family": "score",
+            "condition": "decisive",
+            "n": 16,
+            "correct": 16,
+            "approve": 8,
+            "reject": 8,
+            "defer": 0,
+            "invalid": 0
+          },
+          {
+            "family": "score",
+            "condition": "metadata",
+            "n": 16,
+            "correct": 0,
+            "approve": 6,
+            "reject": 10,
+            "defer": 0,
+            "invalid": 0
+          },
+          {
+            "family": "score",
+            "condition": "explicit_missing",
+            "n": 16,
+            "correct": 8,
+            "approve": 0,
+            "reject": 8,
+            "defer": 8,
+            "invalid": 0
+          }
+        ],
+        "metadata_pairs": [
+          {
+            "family": "date",
+            "case_pairs": 8,
+            "metadata_value_following_pairs": 8
+          },
+          {
+            "family": "score",
+            "case_pairs": 8,
+            "metadata_value_following_pairs": 6
+          }
+        ],
+        "verified_decision_and_preflight_tokens": 96,
+        "verified_expected_labels": 96,
+        "verified_nine_shot_prefixes": 96,
+        "verified_individual_record_identity": 96,
+        "messages_identical_to_qwen": null,
+        "protocol_hash_matches": true,
+        "rows_hash_matches": true,
+        "summary_hash_matches": true,
+        "sources_verified": 9,
+        "source_mismatches": [],
+        "failures": []
+      },
+      {
+        "run": "evidence_role_llama_replication_v1",
+        "manifest_status": "complete",
+        "rows": 96,
+        "model": "meta-llama/Llama-3.1-8B-Instruct",
+        "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+        "groups": [
+          {
+            "family": "date",
+            "condition": "decisive",
+            "n": 16,
+            "correct": 11,
+            "approve": 13,
+            "reject": 3,
+            "defer": 0,
+            "invalid": 0
+          },
+          {
+            "family": "date",
+            "condition": "metadata",
+            "n": 16,
+            "correct": 0,
+            "approve": 15,
+            "reject": 1,
+            "defer": 0,
+            "invalid": 0
+          },
+          {
+            "family": "date",
+            "condition": "explicit_missing",
+            "n": 16,
+            "correct": 16,
+            "approve": 0,
+            "reject": 0,
+            "defer": 16,
+            "invalid": 0
+          },
+          {
+            "family": "score",
+            "condition": "decisive",
+            "n": 16,
+            "correct": 8,
+            "approve": 16,
+            "reject": 0,
+            "defer": 0,
+            "invalid": 0
+          },
+          {
+            "family": "score",
+            "condition": "metadata",
+            "n": 16,
+            "correct": 16,
+            "approve": 0,
+            "reject": 0,
+            "defer": 16,
+            "invalid": 0
+          },
+          {
+            "family": "score",
+            "condition": "explicit_missing",
+            "n": 16,
+            "correct": 16,
+            "approve": 0,
+            "reject": 0,
+            "defer": 16,
+            "invalid": 0
+          }
+        ],
+        "metadata_pairs": [
+          {
+            "family": "date",
+            "case_pairs": 8,
+            "metadata_value_following_pairs": 1
+          },
+          {
+            "family": "score",
+            "case_pairs": 8,
+            "metadata_value_following_pairs": 0
+          }
+        ],
+        "verified_decision_and_preflight_tokens": 96,
+        "verified_expected_labels": 96,
+        "verified_nine_shot_prefixes": 96,
+        "verified_individual_record_identity": 96,
+        "messages_identical_to_qwen": 96,
+        "protocol_hash_matches": true,
+        "rows_hash_matches": true,
+        "summary_hash_matches": true,
+        "sources_verified": 6,
+        "source_mismatches": [],
+        "failures": []
+      }
+    ]
+  },
+  "monitor_budget_recovery": {
+    "method": "Independent comparison of all144 original/recovered raw generation token-ID sequences and strict FINAL parsing.",
+    "manifest_status": "complete",
+    "rows": 144,
+    "identical_prompt_token_sequences": 144,
+    "originally_capped_selected": 66,
+    "entire_160_token_prefixes_identical": 66,
+    "cached_eos_sequences_identical": 78,
+    "remaining_caps": 0,
+    "invalid_forecasts": 0,
+    "results": [
+      {
+        "goal": "neutral",
+        "n_valid_targets": 72,
+        "correct": 43
+      },
+      {
+        "goal": "favorable",
+        "n_valid_targets": 71,
+        "correct": 42
+      }
+    ],
+    "all_source_tree_files_checked": 676,
+    "source_tree_mismatches": [],
+    "protocol_hash_matches": true,
+    "forecasts_hash_matches": true,
+    "summary_hash_matches": true,
+    "failures": [],
+    "verified_recorded_canonical_source_ids": 144,
+    "source_identity_semantics": "source_record_sha256 copies the original row record_sha256, which hashes canonical row content excluding that self-field; it is not the SHA256 of the formatted source file. The separate complete676-file source-tree comparison verifies source bytes.",
+    "not_reverified": [
+      "Canonical numeric source-row hashes were not recomputed from float-valued JSON in this audit; their recorded IDs and all original source bytes were independently checked."
+    ]
+  },
+  "untouched_transfer_bank": {
+    "file": "data/communication/fresh_recipient_test_v1.json",
+    "sha256": "a2dbab0ef29c22e6e1c9d50d583499853ce6fb2d2f13daef7f4e1695bb83136a",
+    "matches_preserved_fresh_qualification_protocol": true,
+    "saved_nonprotocol_json_ct_case_id_matches": [],
+    "search_exit_code": 1,
+    "scope_limit": "No saved ct case_id outcome matches found in this repository's nonprotocol run JSON inventory. This cannot prove absence of activity outside the preserved repository.",
+    "old_pipeline_status": "Fresh qualification remains failed; no secondary-old controls file or dependent recipient-transfer run directory was found."
+  },
+  "generation_accounting": {
+    "scope": "Communication checkpoint and its declared reader/monitor follow-ups, excluding older MASK and belief studies.",
+    "primary_report_monitor_and_unique_reader_calls": 671,
+    "reader_capability_followup": 150,
+    "monitor_extensions": 66,
+    "instruction_only_qwen_qualification": 72,
+    "fresh_nine_shot_qualification": 72,
+    "qwen_role_assay": 96,
+    "llama_role_replication": 96,
+    "total": 1223,
+    "caution": "Cached condition rows and repeated same-report answers are not independent generations."
+  },
+  "documentation_findings_at_audit": [
+    {
+      "file": "docs/COMMUNICATION_TRANSFER_RESULTS.md",
+      "line": 86,
+      "status": "reported_to_root_not_edited_by_auditor",
+      "finding": "Recipient replay figure link points to missing recipient_replay.png; generated file is communication_recipient_replay.png."
+    },
+    {
+      "file": "docs/MAIN_STUDY_GATES.md",
+      "line": 98,
+      "status": "reported_to_root_not_edited_by_auditor",
+      "finding": "Historical23/24 full-evidence control is called current despite newer20/24 informed-control findings elsewhere. Name the historical batch explicitly."
+    },
+    {
+      "file": "docs/APOLLO_METHOD.md",
+      "line": 3,
+      "status": "reported_to_root_not_edited_by_auditor",
+      "finding": "Opening says no trained model or GPU run is reported, while section9 summarizes the completed fit and GPU audit. Distinguish original recipe from later measured audit."
+    }
+  ],
+  "prior_independent_numeric_audit": {
+    "file": "docs/validation/2026-11-20-communication-transfer-audit.json",
+    "sha256": "ad49ff6bafa9a037e778ade12efc5ad7be63f3a1f310ec704ad9e67909dc4e8e",
+    "recorded_status": "passed",
+    "prior_report_binds_current_primary_protocol_summary_and_manifest": true,
+    "prior_report_numeric_claim": "720 prediction vectors,2160 probability components; maximum probability error1.3877787807814457e-15; Apollo margins exact.",
+    "reexecution_status": "Not rerun in this new audit; original artifact bindings remain exact."
+  },
+  "reproducible_basic_commands": [
+    "(Get-ChildItem runs/communication_transfer_v1/reports -File).Count",
+    "$labels=Import-Csv data/annotations/communication_transfer_v1_agent_draft.csv; @($labels | Where-Object clean_supported_agent_draft -eq 'true').Count",
+    "$labels=Import-Csv data/annotations/communication_transfer_v1_agent_draft.csv; @($labels | Where-Object { $_.clean_supported_agent_draft -eq 'true' -and $_.current_decisive_evidence -eq 'absent' }).Count",
+    "Get-FileHash -Algorithm SHA256 runs/communication_transfer_v1/protocol.json,runs/communication_transfer_v1/summary.json,runs/communication_transfer_v1/manifest.json",
+    "rg -l --no-ignore '\"case_id\"\\s*:\\s*\"ct_' runs --glob '*.json' --glob '!**/protocol.json'"
+  ],
+  "not_reverified": [
+    "No new model forward pass, quantization verification, native-versus-Windows mirror comparison or BF16 reference.",
+    "The frozen linear fits,4096-D numeric projections, AUROCs and confidence-interval bootstrap distributions were not recomputed here; the prior numerical audit remains separately identified.",
+    "Report support/omission semantics and controlled-task assumptions have not received independent human adjudication.",
+    "Freeze hashes and timestamps verify preserved artifacts, not annotators' private access history or cognitive blinding.",
+    "Other belief/MASK studies, the complete unit suite, CI, package builds and admissions/publication novelty were outside this narrow audit."
+  ],
+  "conclusion": "No recomputed numerical or provenance discrepancy was found in the audited saved checkpoints. The scientific limitations remain: majority-class collapse, scarce draft clean omissions, failed reader qualification and model-specific role failures. These results do not establish a novel latent-monitor advantage, intentional deception or spontaneous second-order beliefs."
+}

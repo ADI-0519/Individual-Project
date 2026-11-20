@@ -1,0 +1,76 @@
+{
+  "schema": "checkpoint_documentation_corrections_v1",
+  "created_utc": "2026-11-20T21:02:19.9171912Z",
+  "git_commit_before_corrections": "1d12b56f91f0567249403b9d2ee5384f1c9fbe01",
+  "status": "editorial_corrections_and_bounded_graph_refresh_complete",
+  "files": [
+    {
+      "path": "docs/COMMUNICATION_TRANSFER_RESULTS.md",
+      "before_sha256": "0971736c9f3e77def23def8ebcd8220ecf720219658265bb900b9c6073a23078",
+      "after_sha256": "6fd1eb9af7d3713150f38d2123ac87636bdb09d706460da2edc40677e17fd246",
+      "correction": "Correct missing replay-image link to the generated communication_recipient_replay.png."
+    },
+    {
+      "path": "docs/MAIN_STUDY_GATES.md",
+      "before_sha256": "97b295ee971e2a2f1974ed5bbf44c9e7843aa6b96d04ccad9e6b401b61a23067",
+      "after_sha256": "879f244b709412f3c4e0f689596a4f334f4b345e63976c9d1031715473a5c541",
+      "correction": "Identify23/24 as the19November development control; distinguish20November direct Llama20/24 informed controls and later failed nine-shot Qwen qualification without treating different panels as a paired improvement."
+    },
+    {
+      "path": "docs/APOLLO_METHOD.md",
+      "before_sha256": "66a200660598e47610ed045c58b826a6d5f1b49ec9abc6e990aad5b7db2729b2",
+      "after_sha256": "088fd9f7a3607d4b963d31822f7481c97befa9f64fd23a27524a83ddd0eb8f0f",
+      "correction": "Distinguish the source recipe from the completed8B fit and numerical/GPU checks summarized in section9; retain limits on natural deception detection and70B reproduction."
+    }
+  ],
+  "scientific_result_values_changed": false,
+  "model_inference_or_probe_fitting": false,
+  "old_run_files_modified": false,
+  "corrected_replay_figure_exists": true,
+  "prior_audit": {
+    "file": "docs/validation/2026-11-20-independent-checkpoint-audit.json",
+    "sha256": "08c4d365b66259e9aea4e39bee4cd66d075de543ea2bd620d0d8551747379dae",
+    "scope_note": "The676 original source-tree file checks were performed in the pre-correction checkout. They cover the preserved runs/communication_transfer_v1 files, not every historical document in the repository. These three documentation files now have the after hashes above. No claim is made that all historical documentation bytes remain unchanged after this correction.",
+    "findings_status": "The three documentation findings recorded by that audit are corrected by this separate record; its saved-record numerical and provenance results are not replaced."
+  },
+  "graphify": {
+    "status": "complete_bounded_two_source_semantic_refresh",
+    "indexed_changed_sources": [
+      "docs/COMMUNICATION_TRANSFER_RESULTS.md",
+      "docs/MAIN_STUDY_GATES.md"
+    ],
+    "corrected_unindexed_source": "docs/APOLLO_METHOD.md",
+    "source_count": 64,
+    "other_source_hashes_verified_unchanged": 62,
+    "all_indexed_source_hashes_match": true,
+    "reviewed_semantic_nodes": 23,
+    "reviewed_existing_edges": 57,
+    "node_content_updates": 7,
+    "inferred_edge_reclassifications": 2,
+    "new_nodes": 0,
+    "new_edges": 0,
+    "graph": {
+      "nodes": 727,
+      "edges": 2081,
+      "communities": 27
+    },
+    "schema_errors": [],
+    "semantic_cache_misses": [],
+    "merged_dangling_endpoint_edges": 0,
+    "merged_missing_endpoint_edges": 0,
+    "other_graph_contributions_preserved": true,
+    "html_regenerated": true,
+    "query_validation": "Installed Graphify explain resolves the updated human-review node and its INFERRED0.75 cross-document rationale.",
+    "extraction_method": "Delegated agent fully reread both corrected Markdown sources; installed Graphify0.9.100 cache/build_merge APIs replaced only their semantic contributions. No detector, AST extraction, external LLM API or unbounded rebuild was run.",
+    "graph_json_sha256": "eba49dfa9ff31a829b1e231fc8cac06676cad2872b088beed01b7034cbb4444e",
+    "graph_provenance_sha256": "6a2f2ff5538a28426843199b32a491c5adcf5a6fcfc3762b0b101c9178c26964",
+    "scope": "Keep the existing64-source allowlist. New natural-selection pilot modules/protocols and Apollo method document remain unindexed. Previous graph-health warnings and unindexed dependency placeholders are preserved.",
+    "token_cost": "Host-agent token usage unmeasured, not zero."
+  },
+  "checks": [
+    "Corrected figure target exists.",
+    "git diff --check passed for the three corrected Markdown files.",
+    "Bounded Graphify schema, cache, full64-source hashes, unchanged-source contributions, endpoint integrity and updated-node lookup passed."
+  ],
+  "limits": "Editorial corrections only; no new scientific measurement, human annotation validation, qualification pass or novelty claim."
+}

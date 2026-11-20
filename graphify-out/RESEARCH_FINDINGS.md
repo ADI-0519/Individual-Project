@@ -70,3 +70,8 @@ The historical initial raw extraction had 242 edges to unindexed targets and fiv
 All 64 source hashes were verified after root documentation and test updates. Every public graph artifact uses UTF-8 without BOM, LF endings and one final newline. JSON is compacted to keep the full graph below the repository's one-megabyte limit. Provenance records source hashes only, avoiding self-referential output hashes. All 27 raw community cohesion scores appear in the native report.
 
 Plugin use for this mapping: **installed Graphify only**. No Obsidian, Playwright, other app plugin or model/GPU experiment was used by the graph update.
+
+
+## Editorial refresh, 20 November 2026
+
+The two indexed communication-results and main-gates documents were fully reread after documentation corrections. Their node content now separates the 19 November 23/24 development control from 20 November 20/24 direct Llama informed controls and the later failed Qwen qualification. The generated replay figure link is corrected. All 64 indexed sources retain verified hashes; the new natural-selection pilot files and APOLLO_METHOD.md remain outside this bounded map. No scientific result or research-completion status changes.
