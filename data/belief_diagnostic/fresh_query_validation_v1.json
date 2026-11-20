@@ -1,0 +1,1494 @@
+{
+  "schema": 1,
+  "panel_id": "belief_query_fresh_validation_v1",
+  "assumptions": [
+    "Author-assisted draft; annotation_origin=agent_assisted_draft; needs_human_review=true. This material has not been independently human validated.",
+    "Thirty-two fresh prior cases exhaust eight world/actual-attendance/recorded-attendance combinations in each of four new wording groups.",
+    "This is the same logical family with new wording, names, and places; it is not independent story-family OOD evidence.",
+    "Both people observe the initial placement together, and the sender observes the entire later transfer through a view that cannot reveal reader attendance.",
+    "The reader retains the last observed location unless they see the transfer or receive a trusted current-location report.",
+    "An absent reader sees none of the transfer, receives no update, and does not learn that a transfer occurred.",
+    "The sender accepts the particular attendance record as accurate and has no other reader-attendance information; the actual private attendance is hidden.",
+    "The attendance record explicitly says the reader watched the entire transfer or did not watch any of it, and records no later update.",
+    "Actual attendance and the attendance record vary independently in authoring; the record's possible error is not disclosed to the sender.",
+    "Initial and final locations differ in each authored case. This is an authoring invariant, not a rule known to the reader.",
+    "Labels mean the fixed place_b proposition under world, reader-belief, or sender-attributed-reader-belief perspective, not belief accuracy.",
+    "The base messages contain the scene and a candidate proposition but no perspective question, generated answer, gold bit, planned message, or unknown-future target.",
+    "All cases have split fresh and phase prior; the before/after comparison refers to adding a question, not to any change in the characters' evidence.",
+    "Authoring rules and review metadata are not model-visible scene instructions."
+  ],
+  "cases": [
+    {
+      "id": "bq_t01_w0_a0_b0",
+      "template_id": "bq_t01",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 0,
+      "reader_observed": 0,
+      "sender_recorded": 0,
+      "reader_name": "Pavel",
+      "sender_name": "Zara",
+      "place_a": "ivory cupboard",
+      "place_b": "indigo cupboard",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 0,
+        "reader": 1,
+        "nested": 1
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "During the 09:00 inventory, Pavel stands beside Zara while the token is set inside the indigo cupboard. Both look directly at its placement.\n\nPrivate attendance account, known to Pavel and the narrator but not available to Zara: Pavel is in the waiting area from 09:10 until 09:20 and watches none of the 09:15 transfer. No report reaches Pavel, and Pavel does not learn that a transfer occurred.\n\nRecord supplied to Zara: The witness log states that Pavel did not watch any of the 09:15 transfer. It also states that Pavel received no token-location messages after the initial placement. Zara accepts this record as accurate and has no other information about Pavel's attendance.\n\nAt 09:15 an attendant transfers the token out of the indigo cupboard and into the ivory cupboard. Zara follows the complete transfer on an overhead object camera. Its image is cropped to the containers and the attendant's hands, so Zara cannot see Pavel or determine whether Pavel watches. The token is not handled again before 09:20.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the indigo cupboard.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "During the 09:00 inventory, Pavel stands beside Zara while the token is set inside the indigo cupboard. Both look directly at its placement.\n\nRecord supplied to Zara: The witness log states that Pavel did not watch any of the 09:15 transfer. It also states that Pavel received no token-location messages after the initial placement. Zara accepts this record as accurate and has no other information about Pavel's attendance.\n\nAt 09:15 an attendant transfers the token out of the indigo cupboard and into the ivory cupboard. Zara follows the complete transfer on an overhead object camera. Its image is cropped to the containers and the attendant's hands, so Zara cannot see Pavel or determine whether Pavel watches. The token is not handled again before 09:20.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the indigo cupboard.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the indigo cupboard? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Pavel believe that the token is in the indigo cupboard? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Zara think that Pavel believes that the token is in the indigo cupboard? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t01_w0_a0_b1",
+      "template_id": "bq_t01",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 0,
+      "reader_observed": 0,
+      "sender_recorded": 1,
+      "reader_name": "Pavel",
+      "sender_name": "Zara",
+      "place_a": "ivory cupboard",
+      "place_b": "indigo cupboard",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 0,
+        "reader": 1,
+        "nested": 0
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "During the 09:00 inventory, Pavel stands beside Zara while the token is set inside the indigo cupboard. Both look directly at its placement.\n\nPrivate attendance account, known to Pavel and the narrator but not available to Zara: Pavel is in the waiting area from 09:10 until 09:20 and watches none of the 09:15 transfer. No report reaches Pavel, and Pavel does not learn that a transfer occurred.\n\nRecord supplied to Zara: The witness log states that Pavel watched the complete 09:15 transfer. It also states that Pavel received no token-location messages after the initial placement. Zara accepts this record as accurate and has no other information about Pavel's attendance.\n\nAt 09:15 an attendant transfers the token out of the indigo cupboard and into the ivory cupboard. Zara follows the complete transfer on an overhead object camera. Its image is cropped to the containers and the attendant's hands, so Zara cannot see Pavel or determine whether Pavel watches. The token is not handled again before 09:20.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the indigo cupboard.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "During the 09:00 inventory, Pavel stands beside Zara while the token is set inside the indigo cupboard. Both look directly at its placement.\n\nRecord supplied to Zara: The witness log states that Pavel watched the complete 09:15 transfer. It also states that Pavel received no token-location messages after the initial placement. Zara accepts this record as accurate and has no other information about Pavel's attendance.\n\nAt 09:15 an attendant transfers the token out of the indigo cupboard and into the ivory cupboard. Zara follows the complete transfer on an overhead object camera. Its image is cropped to the containers and the attendant's hands, so Zara cannot see Pavel or determine whether Pavel watches. The token is not handled again before 09:20.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the indigo cupboard.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the indigo cupboard? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Pavel believe that the token is in the indigo cupboard? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Zara think that Pavel believes that the token is in the indigo cupboard? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t01_w0_a1_b0",
+      "template_id": "bq_t01",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 0,
+      "reader_observed": 1,
+      "sender_recorded": 0,
+      "reader_name": "Pavel",
+      "sender_name": "Zara",
+      "place_a": "ivory cupboard",
+      "place_b": "indigo cupboard",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 0,
+        "reader": 0,
+        "nested": 1
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "During the 09:00 inventory, Pavel stands beside Zara while the token is set inside the indigo cupboard. Both look directly at its placement.\n\nPrivate attendance account, known to Pavel and the narrator but not available to Zara: Pavel watches the 09:15 transfer directly, including its destination.\n\nRecord supplied to Zara: The witness log states that Pavel did not watch any of the 09:15 transfer. It also states that Pavel received no token-location messages after the initial placement. Zara accepts this record as accurate and has no other information about Pavel's attendance.\n\nAt 09:15 an attendant transfers the token out of the indigo cupboard and into the ivory cupboard. Zara follows the complete transfer on an overhead object camera. Its image is cropped to the containers and the attendant's hands, so Zara cannot see Pavel or determine whether Pavel watches. The token is not handled again before 09:20.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the indigo cupboard.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "During the 09:00 inventory, Pavel stands beside Zara while the token is set inside the indigo cupboard. Both look directly at its placement.\n\nRecord supplied to Zara: The witness log states that Pavel did not watch any of the 09:15 transfer. It also states that Pavel received no token-location messages after the initial placement. Zara accepts this record as accurate and has no other information about Pavel's attendance.\n\nAt 09:15 an attendant transfers the token out of the indigo cupboard and into the ivory cupboard. Zara follows the complete transfer on an overhead object camera. Its image is cropped to the containers and the attendant's hands, so Zara cannot see Pavel or determine whether Pavel watches. The token is not handled again before 09:20.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the indigo cupboard.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the indigo cupboard? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Pavel believe that the token is in the indigo cupboard? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Zara think that Pavel believes that the token is in the indigo cupboard? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t01_w0_a1_b1",
+      "template_id": "bq_t01",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 0,
+      "reader_observed": 1,
+      "sender_recorded": 1,
+      "reader_name": "Pavel",
+      "sender_name": "Zara",
+      "place_a": "ivory cupboard",
+      "place_b": "indigo cupboard",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 0,
+        "reader": 0,
+        "nested": 0
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "During the 09:00 inventory, Pavel stands beside Zara while the token is set inside the indigo cupboard. Both look directly at its placement.\n\nPrivate attendance account, known to Pavel and the narrator but not available to Zara: Pavel watches the 09:15 transfer directly, including its destination.\n\nRecord supplied to Zara: The witness log states that Pavel watched the complete 09:15 transfer. It also states that Pavel received no token-location messages after the initial placement. Zara accepts this record as accurate and has no other information about Pavel's attendance.\n\nAt 09:15 an attendant transfers the token out of the indigo cupboard and into the ivory cupboard. Zara follows the complete transfer on an overhead object camera. Its image is cropped to the containers and the attendant's hands, so Zara cannot see Pavel or determine whether Pavel watches. The token is not handled again before 09:20.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the indigo cupboard.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "During the 09:00 inventory, Pavel stands beside Zara while the token is set inside the indigo cupboard. Both look directly at its placement.\n\nRecord supplied to Zara: The witness log states that Pavel watched the complete 09:15 transfer. It also states that Pavel received no token-location messages after the initial placement. Zara accepts this record as accurate and has no other information about Pavel's attendance.\n\nAt 09:15 an attendant transfers the token out of the indigo cupboard and into the ivory cupboard. Zara follows the complete transfer on an overhead object camera. Its image is cropped to the containers and the attendant's hands, so Zara cannot see Pavel or determine whether Pavel watches. The token is not handled again before 09:20.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the indigo cupboard.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the indigo cupboard? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Pavel believe that the token is in the indigo cupboard? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Zara think that Pavel believes that the token is in the indigo cupboard? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t01_w1_a0_b0",
+      "template_id": "bq_t01",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 1,
+      "reader_observed": 0,
+      "sender_recorded": 0,
+      "reader_name": "Pavel",
+      "sender_name": "Zara",
+      "place_a": "ivory cupboard",
+      "place_b": "indigo cupboard",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 1,
+        "reader": 0,
+        "nested": 0
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "During the 09:00 inventory, Pavel stands beside Zara while the token is set inside the ivory cupboard. Both look directly at its placement.\n\nPrivate attendance account, known to Pavel and the narrator but not available to Zara: Pavel is in the waiting area from 09:10 until 09:20 and watches none of the 09:15 transfer. No report reaches Pavel, and Pavel does not learn that a transfer occurred.\n\nRecord supplied to Zara: The witness log states that Pavel did not watch any of the 09:15 transfer. It also states that Pavel received no token-location messages after the initial placement. Zara accepts this record as accurate and has no other information about Pavel's attendance.\n\nAt 09:15 an attendant transfers the token out of the ivory cupboard and into the indigo cupboard. Zara follows the complete transfer on an overhead object camera. Its image is cropped to the containers and the attendant's hands, so Zara cannot see Pavel or determine whether Pavel watches. The token is not handled again before 09:20.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the indigo cupboard.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "During the 09:00 inventory, Pavel stands beside Zara while the token is set inside the ivory cupboard. Both look directly at its placement.\n\nRecord supplied to Zara: The witness log states that Pavel did not watch any of the 09:15 transfer. It also states that Pavel received no token-location messages after the initial placement. Zara accepts this record as accurate and has no other information about Pavel's attendance.\n\nAt 09:15 an attendant transfers the token out of the ivory cupboard and into the indigo cupboard. Zara follows the complete transfer on an overhead object camera. Its image is cropped to the containers and the attendant's hands, so Zara cannot see Pavel or determine whether Pavel watches. The token is not handled again before 09:20.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the indigo cupboard.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the indigo cupboard? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Pavel believe that the token is in the indigo cupboard? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Zara think that Pavel believes that the token is in the indigo cupboard? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t01_w1_a0_b1",
+      "template_id": "bq_t01",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 1,
+      "reader_observed": 0,
+      "sender_recorded": 1,
+      "reader_name": "Pavel",
+      "sender_name": "Zara",
+      "place_a": "ivory cupboard",
+      "place_b": "indigo cupboard",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 1,
+        "reader": 0,
+        "nested": 1
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "During the 09:00 inventory, Pavel stands beside Zara while the token is set inside the ivory cupboard. Both look directly at its placement.\n\nPrivate attendance account, known to Pavel and the narrator but not available to Zara: Pavel is in the waiting area from 09:10 until 09:20 and watches none of the 09:15 transfer. No report reaches Pavel, and Pavel does not learn that a transfer occurred.\n\nRecord supplied to Zara: The witness log states that Pavel watched the complete 09:15 transfer. It also states that Pavel received no token-location messages after the initial placement. Zara accepts this record as accurate and has no other information about Pavel's attendance.\n\nAt 09:15 an attendant transfers the token out of the ivory cupboard and into the indigo cupboard. Zara follows the complete transfer on an overhead object camera. Its image is cropped to the containers and the attendant's hands, so Zara cannot see Pavel or determine whether Pavel watches. The token is not handled again before 09:20.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the indigo cupboard.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "During the 09:00 inventory, Pavel stands beside Zara while the token is set inside the ivory cupboard. Both look directly at its placement.\n\nRecord supplied to Zara: The witness log states that Pavel watched the complete 09:15 transfer. It also states that Pavel received no token-location messages after the initial placement. Zara accepts this record as accurate and has no other information about Pavel's attendance.\n\nAt 09:15 an attendant transfers the token out of the ivory cupboard and into the indigo cupboard. Zara follows the complete transfer on an overhead object camera. Its image is cropped to the containers and the attendant's hands, so Zara cannot see Pavel or determine whether Pavel watches. The token is not handled again before 09:20.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the indigo cupboard.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the indigo cupboard? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Pavel believe that the token is in the indigo cupboard? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Zara think that Pavel believes that the token is in the indigo cupboard? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t01_w1_a1_b0",
+      "template_id": "bq_t01",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 1,
+      "reader_observed": 1,
+      "sender_recorded": 0,
+      "reader_name": "Pavel",
+      "sender_name": "Zara",
+      "place_a": "ivory cupboard",
+      "place_b": "indigo cupboard",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 1,
+        "reader": 1,
+        "nested": 0
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "During the 09:00 inventory, Pavel stands beside Zara while the token is set inside the ivory cupboard. Both look directly at its placement.\n\nPrivate attendance account, known to Pavel and the narrator but not available to Zara: Pavel watches the 09:15 transfer directly, including its destination.\n\nRecord supplied to Zara: The witness log states that Pavel did not watch any of the 09:15 transfer. It also states that Pavel received no token-location messages after the initial placement. Zara accepts this record as accurate and has no other information about Pavel's attendance.\n\nAt 09:15 an attendant transfers the token out of the ivory cupboard and into the indigo cupboard. Zara follows the complete transfer on an overhead object camera. Its image is cropped to the containers and the attendant's hands, so Zara cannot see Pavel or determine whether Pavel watches. The token is not handled again before 09:20.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the indigo cupboard.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "During the 09:00 inventory, Pavel stands beside Zara while the token is set inside the ivory cupboard. Both look directly at its placement.\n\nRecord supplied to Zara: The witness log states that Pavel did not watch any of the 09:15 transfer. It also states that Pavel received no token-location messages after the initial placement. Zara accepts this record as accurate and has no other information about Pavel's attendance.\n\nAt 09:15 an attendant transfers the token out of the ivory cupboard and into the indigo cupboard. Zara follows the complete transfer on an overhead object camera. Its image is cropped to the containers and the attendant's hands, so Zara cannot see Pavel or determine whether Pavel watches. The token is not handled again before 09:20.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the indigo cupboard.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the indigo cupboard? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Pavel believe that the token is in the indigo cupboard? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Zara think that Pavel believes that the token is in the indigo cupboard? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t01_w1_a1_b1",
+      "template_id": "bq_t01",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 1,
+      "reader_observed": 1,
+      "sender_recorded": 1,
+      "reader_name": "Pavel",
+      "sender_name": "Zara",
+      "place_a": "ivory cupboard",
+      "place_b": "indigo cupboard",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 1,
+        "reader": 1,
+        "nested": 1
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "During the 09:00 inventory, Pavel stands beside Zara while the token is set inside the ivory cupboard. Both look directly at its placement.\n\nPrivate attendance account, known to Pavel and the narrator but not available to Zara: Pavel watches the 09:15 transfer directly, including its destination.\n\nRecord supplied to Zara: The witness log states that Pavel watched the complete 09:15 transfer. It also states that Pavel received no token-location messages after the initial placement. Zara accepts this record as accurate and has no other information about Pavel's attendance.\n\nAt 09:15 an attendant transfers the token out of the ivory cupboard and into the indigo cupboard. Zara follows the complete transfer on an overhead object camera. Its image is cropped to the containers and the attendant's hands, so Zara cannot see Pavel or determine whether Pavel watches. The token is not handled again before 09:20.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the indigo cupboard.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "During the 09:00 inventory, Pavel stands beside Zara while the token is set inside the ivory cupboard. Both look directly at its placement.\n\nRecord supplied to Zara: The witness log states that Pavel watched the complete 09:15 transfer. It also states that Pavel received no token-location messages after the initial placement. Zara accepts this record as accurate and has no other information about Pavel's attendance.\n\nAt 09:15 an attendant transfers the token out of the ivory cupboard and into the indigo cupboard. Zara follows the complete transfer on an overhead object camera. Its image is cropped to the containers and the attendant's hands, so Zara cannot see Pavel or determine whether Pavel watches. The token is not handled again before 09:20.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the indigo cupboard.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the indigo cupboard? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Pavel believe that the token is in the indigo cupboard? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Zara think that Pavel believes that the token is in the indigo cupboard? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t02_w0_a0_b0",
+      "template_id": "bq_t02",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 0,
+      "reader_observed": 0,
+      "sender_recorded": 0,
+      "reader_name": "Uma",
+      "sender_name": "Vera",
+      "place_a": "linen trunk",
+      "place_b": "wicker trunk",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 0,
+        "reader": 1,
+        "nested": 1
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "At 09:00, the token is deposited in the wicker trunk under the joint inspection of Vera and Uma; each can see that the other is inspecting it.\n\nRecord supplied to Vera: The inspection note says Uma did not watch any of the 09:15 handling. It also states that Uma received no token-location messages after the initial placement. Vera accepts this record as accurate and has no other information about Uma's attendance.\n\nThe 09:15 handling takes the token from the wicker trunk to the linen trunk. Vera sees the entire handling through a close-up link showing only the containers and moving hands. The link gives Vera no view of Uma and no information about whether Uma observes the handling. The token is not handled again before 09:20.\n\nPrivate attendance account, known to Uma and the narrator but not available to Vera: Uma is away from the containers for the entire 09:15 handling and does not watch any of it. No report reaches Uma, and Uma does not learn that a transfer occurred.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the wicker trunk.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "At 09:00, the token is deposited in the wicker trunk under the joint inspection of Vera and Uma; each can see that the other is inspecting it.\n\nRecord supplied to Vera: The inspection note says Uma did not watch any of the 09:15 handling. It also states that Uma received no token-location messages after the initial placement. Vera accepts this record as accurate and has no other information about Uma's attendance.\n\nThe 09:15 handling takes the token from the wicker trunk to the linen trunk. Vera sees the entire handling through a close-up link showing only the containers and moving hands. The link gives Vera no view of Uma and no information about whether Uma observes the handling. The token is not handled again before 09:20.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the wicker trunk.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the wicker trunk? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Uma believe that the token is in the wicker trunk? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Vera think that Uma believes that the token is in the wicker trunk? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t02_w0_a0_b1",
+      "template_id": "bq_t02",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 0,
+      "reader_observed": 0,
+      "sender_recorded": 1,
+      "reader_name": "Uma",
+      "sender_name": "Vera",
+      "place_a": "linen trunk",
+      "place_b": "wicker trunk",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 0,
+        "reader": 1,
+        "nested": 0
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "At 09:00, the token is deposited in the wicker trunk under the joint inspection of Vera and Uma; each can see that the other is inspecting it.\n\nRecord supplied to Vera: The inspection note says Uma watched all of the 09:15 handling. It also states that Uma received no token-location messages after the initial placement. Vera accepts this record as accurate and has no other information about Uma's attendance.\n\nThe 09:15 handling takes the token from the wicker trunk to the linen trunk. Vera sees the entire handling through a close-up link showing only the containers and moving hands. The link gives Vera no view of Uma and no information about whether Uma observes the handling. The token is not handled again before 09:20.\n\nPrivate attendance account, known to Uma and the narrator but not available to Vera: Uma is away from the containers for the entire 09:15 handling and does not watch any of it. No report reaches Uma, and Uma does not learn that a transfer occurred.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the wicker trunk.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "At 09:00, the token is deposited in the wicker trunk under the joint inspection of Vera and Uma; each can see that the other is inspecting it.\n\nRecord supplied to Vera: The inspection note says Uma watched all of the 09:15 handling. It also states that Uma received no token-location messages after the initial placement. Vera accepts this record as accurate and has no other information about Uma's attendance.\n\nThe 09:15 handling takes the token from the wicker trunk to the linen trunk. Vera sees the entire handling through a close-up link showing only the containers and moving hands. The link gives Vera no view of Uma and no information about whether Uma observes the handling. The token is not handled again before 09:20.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the wicker trunk.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the wicker trunk? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Uma believe that the token is in the wicker trunk? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Vera think that Uma believes that the token is in the wicker trunk? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t02_w0_a1_b0",
+      "template_id": "bq_t02",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 0,
+      "reader_observed": 1,
+      "sender_recorded": 0,
+      "reader_name": "Uma",
+      "sender_name": "Vera",
+      "place_a": "linen trunk",
+      "place_b": "wicker trunk",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 0,
+        "reader": 0,
+        "nested": 1
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "At 09:00, the token is deposited in the wicker trunk under the joint inspection of Vera and Uma; each can see that the other is inspecting it.\n\nRecord supplied to Vera: The inspection note says Uma did not watch any of the 09:15 handling. It also states that Uma received no token-location messages after the initial placement. Vera accepts this record as accurate and has no other information about Uma's attendance.\n\nThe 09:15 handling takes the token from the wicker trunk to the linen trunk. Vera sees the entire handling through a close-up link showing only the containers and moving hands. The link gives Vera no view of Uma and no information about whether Uma observes the handling. The token is not handled again before 09:20.\n\nPrivate attendance account, known to Uma and the narrator but not available to Vera: Uma has an uninterrupted view of the token for the whole 09:15 handling.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the wicker trunk.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "At 09:00, the token is deposited in the wicker trunk under the joint inspection of Vera and Uma; each can see that the other is inspecting it.\n\nRecord supplied to Vera: The inspection note says Uma did not watch any of the 09:15 handling. It also states that Uma received no token-location messages after the initial placement. Vera accepts this record as accurate and has no other information about Uma's attendance.\n\nThe 09:15 handling takes the token from the wicker trunk to the linen trunk. Vera sees the entire handling through a close-up link showing only the containers and moving hands. The link gives Vera no view of Uma and no information about whether Uma observes the handling. The token is not handled again before 09:20.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the wicker trunk.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the wicker trunk? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Uma believe that the token is in the wicker trunk? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Vera think that Uma believes that the token is in the wicker trunk? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t02_w0_a1_b1",
+      "template_id": "bq_t02",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 0,
+      "reader_observed": 1,
+      "sender_recorded": 1,
+      "reader_name": "Uma",
+      "sender_name": "Vera",
+      "place_a": "linen trunk",
+      "place_b": "wicker trunk",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 0,
+        "reader": 0,
+        "nested": 0
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "At 09:00, the token is deposited in the wicker trunk under the joint inspection of Vera and Uma; each can see that the other is inspecting it.\n\nRecord supplied to Vera: The inspection note says Uma watched all of the 09:15 handling. It also states that Uma received no token-location messages after the initial placement. Vera accepts this record as accurate and has no other information about Uma's attendance.\n\nThe 09:15 handling takes the token from the wicker trunk to the linen trunk. Vera sees the entire handling through a close-up link showing only the containers and moving hands. The link gives Vera no view of Uma and no information about whether Uma observes the handling. The token is not handled again before 09:20.\n\nPrivate attendance account, known to Uma and the narrator but not available to Vera: Uma has an uninterrupted view of the token for the whole 09:15 handling.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the wicker trunk.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "At 09:00, the token is deposited in the wicker trunk under the joint inspection of Vera and Uma; each can see that the other is inspecting it.\n\nRecord supplied to Vera: The inspection note says Uma watched all of the 09:15 handling. It also states that Uma received no token-location messages after the initial placement. Vera accepts this record as accurate and has no other information about Uma's attendance.\n\nThe 09:15 handling takes the token from the wicker trunk to the linen trunk. Vera sees the entire handling through a close-up link showing only the containers and moving hands. The link gives Vera no view of Uma and no information about whether Uma observes the handling. The token is not handled again before 09:20.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the wicker trunk.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the wicker trunk? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Uma believe that the token is in the wicker trunk? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Vera think that Uma believes that the token is in the wicker trunk? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t02_w1_a0_b0",
+      "template_id": "bq_t02",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 1,
+      "reader_observed": 0,
+      "sender_recorded": 0,
+      "reader_name": "Uma",
+      "sender_name": "Vera",
+      "place_a": "linen trunk",
+      "place_b": "wicker trunk",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 1,
+        "reader": 0,
+        "nested": 0
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "At 09:00, the token is deposited in the linen trunk under the joint inspection of Vera and Uma; each can see that the other is inspecting it.\n\nRecord supplied to Vera: The inspection note says Uma did not watch any of the 09:15 handling. It also states that Uma received no token-location messages after the initial placement. Vera accepts this record as accurate and has no other information about Uma's attendance.\n\nThe 09:15 handling takes the token from the linen trunk to the wicker trunk. Vera sees the entire handling through a close-up link showing only the containers and moving hands. The link gives Vera no view of Uma and no information about whether Uma observes the handling. The token is not handled again before 09:20.\n\nPrivate attendance account, known to Uma and the narrator but not available to Vera: Uma is away from the containers for the entire 09:15 handling and does not watch any of it. No report reaches Uma, and Uma does not learn that a transfer occurred.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the wicker trunk.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "At 09:00, the token is deposited in the linen trunk under the joint inspection of Vera and Uma; each can see that the other is inspecting it.\n\nRecord supplied to Vera: The inspection note says Uma did not watch any of the 09:15 handling. It also states that Uma received no token-location messages after the initial placement. Vera accepts this record as accurate and has no other information about Uma's attendance.\n\nThe 09:15 handling takes the token from the linen trunk to the wicker trunk. Vera sees the entire handling through a close-up link showing only the containers and moving hands. The link gives Vera no view of Uma and no information about whether Uma observes the handling. The token is not handled again before 09:20.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the wicker trunk.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the wicker trunk? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Uma believe that the token is in the wicker trunk? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Vera think that Uma believes that the token is in the wicker trunk? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t02_w1_a0_b1",
+      "template_id": "bq_t02",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 1,
+      "reader_observed": 0,
+      "sender_recorded": 1,
+      "reader_name": "Uma",
+      "sender_name": "Vera",
+      "place_a": "linen trunk",
+      "place_b": "wicker trunk",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 1,
+        "reader": 0,
+        "nested": 1
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "At 09:00, the token is deposited in the linen trunk under the joint inspection of Vera and Uma; each can see that the other is inspecting it.\n\nRecord supplied to Vera: The inspection note says Uma watched all of the 09:15 handling. It also states that Uma received no token-location messages after the initial placement. Vera accepts this record as accurate and has no other information about Uma's attendance.\n\nThe 09:15 handling takes the token from the linen trunk to the wicker trunk. Vera sees the entire handling through a close-up link showing only the containers and moving hands. The link gives Vera no view of Uma and no information about whether Uma observes the handling. The token is not handled again before 09:20.\n\nPrivate attendance account, known to Uma and the narrator but not available to Vera: Uma is away from the containers for the entire 09:15 handling and does not watch any of it. No report reaches Uma, and Uma does not learn that a transfer occurred.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the wicker trunk.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "At 09:00, the token is deposited in the linen trunk under the joint inspection of Vera and Uma; each can see that the other is inspecting it.\n\nRecord supplied to Vera: The inspection note says Uma watched all of the 09:15 handling. It also states that Uma received no token-location messages after the initial placement. Vera accepts this record as accurate and has no other information about Uma's attendance.\n\nThe 09:15 handling takes the token from the linen trunk to the wicker trunk. Vera sees the entire handling through a close-up link showing only the containers and moving hands. The link gives Vera no view of Uma and no information about whether Uma observes the handling. The token is not handled again before 09:20.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the wicker trunk.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the wicker trunk? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Uma believe that the token is in the wicker trunk? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Vera think that Uma believes that the token is in the wicker trunk? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t02_w1_a1_b0",
+      "template_id": "bq_t02",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 1,
+      "reader_observed": 1,
+      "sender_recorded": 0,
+      "reader_name": "Uma",
+      "sender_name": "Vera",
+      "place_a": "linen trunk",
+      "place_b": "wicker trunk",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 1,
+        "reader": 1,
+        "nested": 0
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "At 09:00, the token is deposited in the linen trunk under the joint inspection of Vera and Uma; each can see that the other is inspecting it.\n\nRecord supplied to Vera: The inspection note says Uma did not watch any of the 09:15 handling. It also states that Uma received no token-location messages after the initial placement. Vera accepts this record as accurate and has no other information about Uma's attendance.\n\nThe 09:15 handling takes the token from the linen trunk to the wicker trunk. Vera sees the entire handling through a close-up link showing only the containers and moving hands. The link gives Vera no view of Uma and no information about whether Uma observes the handling. The token is not handled again before 09:20.\n\nPrivate attendance account, known to Uma and the narrator but not available to Vera: Uma has an uninterrupted view of the token for the whole 09:15 handling.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the wicker trunk.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "At 09:00, the token is deposited in the linen trunk under the joint inspection of Vera and Uma; each can see that the other is inspecting it.\n\nRecord supplied to Vera: The inspection note says Uma did not watch any of the 09:15 handling. It also states that Uma received no token-location messages after the initial placement. Vera accepts this record as accurate and has no other information about Uma's attendance.\n\nThe 09:15 handling takes the token from the linen trunk to the wicker trunk. Vera sees the entire handling through a close-up link showing only the containers and moving hands. The link gives Vera no view of Uma and no information about whether Uma observes the handling. The token is not handled again before 09:20.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the wicker trunk.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the wicker trunk? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Uma believe that the token is in the wicker trunk? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Vera think that Uma believes that the token is in the wicker trunk? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t02_w1_a1_b1",
+      "template_id": "bq_t02",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 1,
+      "reader_observed": 1,
+      "sender_recorded": 1,
+      "reader_name": "Uma",
+      "sender_name": "Vera",
+      "place_a": "linen trunk",
+      "place_b": "wicker trunk",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 1,
+        "reader": 1,
+        "nested": 1
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "At 09:00, the token is deposited in the linen trunk under the joint inspection of Vera and Uma; each can see that the other is inspecting it.\n\nRecord supplied to Vera: The inspection note says Uma watched all of the 09:15 handling. It also states that Uma received no token-location messages after the initial placement. Vera accepts this record as accurate and has no other information about Uma's attendance.\n\nThe 09:15 handling takes the token from the linen trunk to the wicker trunk. Vera sees the entire handling through a close-up link showing only the containers and moving hands. The link gives Vera no view of Uma and no information about whether Uma observes the handling. The token is not handled again before 09:20.\n\nPrivate attendance account, known to Uma and the narrator but not available to Vera: Uma has an uninterrupted view of the token for the whole 09:15 handling.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the wicker trunk.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "At 09:00, the token is deposited in the linen trunk under the joint inspection of Vera and Uma; each can see that the other is inspecting it.\n\nRecord supplied to Vera: The inspection note says Uma watched all of the 09:15 handling. It also states that Uma received no token-location messages after the initial placement. Vera accepts this record as accurate and has no other information about Uma's attendance.\n\nThe 09:15 handling takes the token from the linen trunk to the wicker trunk. Vera sees the entire handling through a close-up link showing only the containers and moving hands. The link gives Vera no view of Uma and no information about whether Uma observes the handling. The token is not handled again before 09:20.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the wicker trunk.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the wicker trunk? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Uma believe that the token is in the wicker trunk? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Vera think that Uma believes that the token is in the wicker trunk? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t03_w0_a0_b0",
+      "template_id": "bq_t03",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 0,
+      "reader_observed": 0,
+      "sender_recorded": 0,
+      "reader_name": "Silas",
+      "sender_name": "Wren",
+      "place_a": "granite alcove",
+      "place_b": "marble alcove",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 0,
+        "reader": 1,
+        "nested": 1
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "The 09:00 check opens with Silas and Wren examining the token as it is put into the marble alcove. They observe this together.\n\nAt 09:15, an attendant lifts the token from the marble alcove before setting it in the granite alcove. Wren's live object view shows every step but excludes Silas. The camera provides no way for Wren to check Silas's attendance. The token is not handled again before 09:20.\n\nPrivate attendance account, known to Silas and the narrator but not available to Wren: Silas spends 09:10 to 09:20 elsewhere and sees neither the removal nor the new placement. No report reaches Silas, and Silas does not learn that a transfer occurred.\n\nRecord supplied to Wren: The attendance screen reports that Silas did not watch the 09:15 transfer. It also states that Silas received no token-location messages after the initial placement. Wren accepts this record as accurate and has no other information about Silas's attendance.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the marble alcove.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "The 09:00 check opens with Silas and Wren examining the token as it is put into the marble alcove. They observe this together.\n\nAt 09:15, an attendant lifts the token from the marble alcove before setting it in the granite alcove. Wren's live object view shows every step but excludes Silas. The camera provides no way for Wren to check Silas's attendance. The token is not handled again before 09:20.\n\nRecord supplied to Wren: The attendance screen reports that Silas did not watch the 09:15 transfer. It also states that Silas received no token-location messages after the initial placement. Wren accepts this record as accurate and has no other information about Silas's attendance.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the marble alcove.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the marble alcove? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Silas believe that the token is in the marble alcove? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Wren think that Silas believes that the token is in the marble alcove? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t03_w0_a0_b1",
+      "template_id": "bq_t03",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 0,
+      "reader_observed": 0,
+      "sender_recorded": 1,
+      "reader_name": "Silas",
+      "sender_name": "Wren",
+      "place_a": "granite alcove",
+      "place_b": "marble alcove",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 0,
+        "reader": 1,
+        "nested": 0
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "The 09:00 check opens with Silas and Wren examining the token as it is put into the marble alcove. They observe this together.\n\nAt 09:15, an attendant lifts the token from the marble alcove before setting it in the granite alcove. Wren's live object view shows every step but excludes Silas. The camera provides no way for Wren to check Silas's attendance. The token is not handled again before 09:20.\n\nPrivate attendance account, known to Silas and the narrator but not available to Wren: Silas spends 09:10 to 09:20 elsewhere and sees neither the removal nor the new placement. No report reaches Silas, and Silas does not learn that a transfer occurred.\n\nRecord supplied to Wren: The attendance screen reports that Silas watched the entire 09:15 transfer. It also states that Silas received no token-location messages after the initial placement. Wren accepts this record as accurate and has no other information about Silas's attendance.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the marble alcove.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "The 09:00 check opens with Silas and Wren examining the token as it is put into the marble alcove. They observe this together.\n\nAt 09:15, an attendant lifts the token from the marble alcove before setting it in the granite alcove. Wren's live object view shows every step but excludes Silas. The camera provides no way for Wren to check Silas's attendance. The token is not handled again before 09:20.\n\nRecord supplied to Wren: The attendance screen reports that Silas watched the entire 09:15 transfer. It also states that Silas received no token-location messages after the initial placement. Wren accepts this record as accurate and has no other information about Silas's attendance.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the marble alcove.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the marble alcove? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Silas believe that the token is in the marble alcove? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Wren think that Silas believes that the token is in the marble alcove? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t03_w0_a1_b0",
+      "template_id": "bq_t03",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 0,
+      "reader_observed": 1,
+      "sender_recorded": 0,
+      "reader_name": "Silas",
+      "sender_name": "Wren",
+      "place_a": "granite alcove",
+      "place_b": "marble alcove",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 0,
+        "reader": 0,
+        "nested": 1
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "The 09:00 check opens with Silas and Wren examining the token as it is put into the marble alcove. They observe this together.\n\nAt 09:15, an attendant lifts the token from the marble alcove before setting it in the granite alcove. Wren's live object view shows every step but excludes Silas. The camera provides no way for Wren to check Silas's attendance. The token is not handled again before 09:20.\n\nPrivate attendance account, known to Silas and the narrator but not available to Wren: Silas sees both the removal and the new placement at 09:15.\n\nRecord supplied to Wren: The attendance screen reports that Silas did not watch the 09:15 transfer. It also states that Silas received no token-location messages after the initial placement. Wren accepts this record as accurate and has no other information about Silas's attendance.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the marble alcove.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "The 09:00 check opens with Silas and Wren examining the token as it is put into the marble alcove. They observe this together.\n\nAt 09:15, an attendant lifts the token from the marble alcove before setting it in the granite alcove. Wren's live object view shows every step but excludes Silas. The camera provides no way for Wren to check Silas's attendance. The token is not handled again before 09:20.\n\nRecord supplied to Wren: The attendance screen reports that Silas did not watch the 09:15 transfer. It also states that Silas received no token-location messages after the initial placement. Wren accepts this record as accurate and has no other information about Silas's attendance.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the marble alcove.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the marble alcove? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Silas believe that the token is in the marble alcove? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Wren think that Silas believes that the token is in the marble alcove? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t03_w0_a1_b1",
+      "template_id": "bq_t03",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 0,
+      "reader_observed": 1,
+      "sender_recorded": 1,
+      "reader_name": "Silas",
+      "sender_name": "Wren",
+      "place_a": "granite alcove",
+      "place_b": "marble alcove",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 0,
+        "reader": 0,
+        "nested": 0
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "The 09:00 check opens with Silas and Wren examining the token as it is put into the marble alcove. They observe this together.\n\nAt 09:15, an attendant lifts the token from the marble alcove before setting it in the granite alcove. Wren's live object view shows every step but excludes Silas. The camera provides no way for Wren to check Silas's attendance. The token is not handled again before 09:20.\n\nPrivate attendance account, known to Silas and the narrator but not available to Wren: Silas sees both the removal and the new placement at 09:15.\n\nRecord supplied to Wren: The attendance screen reports that Silas watched the entire 09:15 transfer. It also states that Silas received no token-location messages after the initial placement. Wren accepts this record as accurate and has no other information about Silas's attendance.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the marble alcove.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "The 09:00 check opens with Silas and Wren examining the token as it is put into the marble alcove. They observe this together.\n\nAt 09:15, an attendant lifts the token from the marble alcove before setting it in the granite alcove. Wren's live object view shows every step but excludes Silas. The camera provides no way for Wren to check Silas's attendance. The token is not handled again before 09:20.\n\nRecord supplied to Wren: The attendance screen reports that Silas watched the entire 09:15 transfer. It also states that Silas received no token-location messages after the initial placement. Wren accepts this record as accurate and has no other information about Silas's attendance.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the marble alcove.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the marble alcove? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Silas believe that the token is in the marble alcove? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Wren think that Silas believes that the token is in the marble alcove? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t03_w1_a0_b0",
+      "template_id": "bq_t03",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 1,
+      "reader_observed": 0,
+      "sender_recorded": 0,
+      "reader_name": "Silas",
+      "sender_name": "Wren",
+      "place_a": "granite alcove",
+      "place_b": "marble alcove",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 1,
+        "reader": 0,
+        "nested": 0
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "The 09:00 check opens with Silas and Wren examining the token as it is put into the granite alcove. They observe this together.\n\nAt 09:15, an attendant lifts the token from the granite alcove before setting it in the marble alcove. Wren's live object view shows every step but excludes Silas. The camera provides no way for Wren to check Silas's attendance. The token is not handled again before 09:20.\n\nPrivate attendance account, known to Silas and the narrator but not available to Wren: Silas spends 09:10 to 09:20 elsewhere and sees neither the removal nor the new placement. No report reaches Silas, and Silas does not learn that a transfer occurred.\n\nRecord supplied to Wren: The attendance screen reports that Silas did not watch the 09:15 transfer. It also states that Silas received no token-location messages after the initial placement. Wren accepts this record as accurate and has no other information about Silas's attendance.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the marble alcove.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "The 09:00 check opens with Silas and Wren examining the token as it is put into the granite alcove. They observe this together.\n\nAt 09:15, an attendant lifts the token from the granite alcove before setting it in the marble alcove. Wren's live object view shows every step but excludes Silas. The camera provides no way for Wren to check Silas's attendance. The token is not handled again before 09:20.\n\nRecord supplied to Wren: The attendance screen reports that Silas did not watch the 09:15 transfer. It also states that Silas received no token-location messages after the initial placement. Wren accepts this record as accurate and has no other information about Silas's attendance.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the marble alcove.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the marble alcove? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Silas believe that the token is in the marble alcove? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Wren think that Silas believes that the token is in the marble alcove? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t03_w1_a0_b1",
+      "template_id": "bq_t03",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 1,
+      "reader_observed": 0,
+      "sender_recorded": 1,
+      "reader_name": "Silas",
+      "sender_name": "Wren",
+      "place_a": "granite alcove",
+      "place_b": "marble alcove",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 1,
+        "reader": 0,
+        "nested": 1
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "The 09:00 check opens with Silas and Wren examining the token as it is put into the granite alcove. They observe this together.\n\nAt 09:15, an attendant lifts the token from the granite alcove before setting it in the marble alcove. Wren's live object view shows every step but excludes Silas. The camera provides no way for Wren to check Silas's attendance. The token is not handled again before 09:20.\n\nPrivate attendance account, known to Silas and the narrator but not available to Wren: Silas spends 09:10 to 09:20 elsewhere and sees neither the removal nor the new placement. No report reaches Silas, and Silas does not learn that a transfer occurred.\n\nRecord supplied to Wren: The attendance screen reports that Silas watched the entire 09:15 transfer. It also states that Silas received no token-location messages after the initial placement. Wren accepts this record as accurate and has no other information about Silas's attendance.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the marble alcove.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "The 09:00 check opens with Silas and Wren examining the token as it is put into the granite alcove. They observe this together.\n\nAt 09:15, an attendant lifts the token from the granite alcove before setting it in the marble alcove. Wren's live object view shows every step but excludes Silas. The camera provides no way for Wren to check Silas's attendance. The token is not handled again before 09:20.\n\nRecord supplied to Wren: The attendance screen reports that Silas watched the entire 09:15 transfer. It also states that Silas received no token-location messages after the initial placement. Wren accepts this record as accurate and has no other information about Silas's attendance.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the marble alcove.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the marble alcove? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Silas believe that the token is in the marble alcove? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Wren think that Silas believes that the token is in the marble alcove? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t03_w1_a1_b0",
+      "template_id": "bq_t03",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 1,
+      "reader_observed": 1,
+      "sender_recorded": 0,
+      "reader_name": "Silas",
+      "sender_name": "Wren",
+      "place_a": "granite alcove",
+      "place_b": "marble alcove",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 1,
+        "reader": 1,
+        "nested": 0
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "The 09:00 check opens with Silas and Wren examining the token as it is put into the granite alcove. They observe this together.\n\nAt 09:15, an attendant lifts the token from the granite alcove before setting it in the marble alcove. Wren's live object view shows every step but excludes Silas. The camera provides no way for Wren to check Silas's attendance. The token is not handled again before 09:20.\n\nPrivate attendance account, known to Silas and the narrator but not available to Wren: Silas sees both the removal and the new placement at 09:15.\n\nRecord supplied to Wren: The attendance screen reports that Silas did not watch the 09:15 transfer. It also states that Silas received no token-location messages after the initial placement. Wren accepts this record as accurate and has no other information about Silas's attendance.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the marble alcove.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "The 09:00 check opens with Silas and Wren examining the token as it is put into the granite alcove. They observe this together.\n\nAt 09:15, an attendant lifts the token from the granite alcove before setting it in the marble alcove. Wren's live object view shows every step but excludes Silas. The camera provides no way for Wren to check Silas's attendance. The token is not handled again before 09:20.\n\nRecord supplied to Wren: The attendance screen reports that Silas did not watch the 09:15 transfer. It also states that Silas received no token-location messages after the initial placement. Wren accepts this record as accurate and has no other information about Silas's attendance.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the marble alcove.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the marble alcove? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Silas believe that the token is in the marble alcove? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Wren think that Silas believes that the token is in the marble alcove? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t03_w1_a1_b1",
+      "template_id": "bq_t03",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 1,
+      "reader_observed": 1,
+      "sender_recorded": 1,
+      "reader_name": "Silas",
+      "sender_name": "Wren",
+      "place_a": "granite alcove",
+      "place_b": "marble alcove",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 1,
+        "reader": 1,
+        "nested": 1
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "The 09:00 check opens with Silas and Wren examining the token as it is put into the granite alcove. They observe this together.\n\nAt 09:15, an attendant lifts the token from the granite alcove before setting it in the marble alcove. Wren's live object view shows every step but excludes Silas. The camera provides no way for Wren to check Silas's attendance. The token is not handled again before 09:20.\n\nPrivate attendance account, known to Silas and the narrator but not available to Wren: Silas sees both the removal and the new placement at 09:15.\n\nRecord supplied to Wren: The attendance screen reports that Silas watched the entire 09:15 transfer. It also states that Silas received no token-location messages after the initial placement. Wren accepts this record as accurate and has no other information about Silas's attendance.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the marble alcove.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "The 09:00 check opens with Silas and Wren examining the token as it is put into the granite alcove. They observe this together.\n\nAt 09:15, an attendant lifts the token from the granite alcove before setting it in the marble alcove. Wren's live object view shows every step but excludes Silas. The camera provides no way for Wren to check Silas's attendance. The token is not handled again before 09:20.\n\nRecord supplied to Wren: The attendance screen reports that Silas watched the entire 09:15 transfer. It also states that Silas received no token-location messages after the initial placement. Wren accepts this record as accurate and has no other information about Silas's attendance.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the marble alcove.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the marble alcove? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Silas believe that the token is in the marble alcove? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Wren think that Silas believes that the token is in the marble alcove? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t04_w0_a0_b0",
+      "template_id": "bq_t04",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 0,
+      "reader_observed": 0,
+      "sender_recorded": 0,
+      "reader_name": "Yuna",
+      "sender_name": "Ezra",
+      "place_a": "east vault",
+      "place_b": "west vault",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 0,
+        "reader": 1,
+        "nested": 1
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "Ezra and Yuna are side by side for the 09:00 placement of a token in the west vault, with both watching it go inside.\n\nThe token is relocated at 09:15: it leaves the west vault and is put in the east vault. Ezra monitors that relocation from a close-up image which covers the token and containers but cannot show Yuna or whether Yuna is watching. The token is not handled again before 09:20.\n\nRecord supplied to Ezra: The observation entry records that Yuna did not watch any of the 09:15 relocation. It also states that Yuna received no token-location messages after the initial placement. Ezra accepts this record as accurate and has no other information about Yuna's attendance.\n\nPrivate attendance account, known to Yuna and the narrator but not available to Ezra: Yuna is absent throughout the 09:15 relocation and cannot watch it. No report reaches Yuna, and Yuna does not learn that a transfer occurred.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the west vault.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "Ezra and Yuna are side by side for the 09:00 placement of a token in the west vault, with both watching it go inside.\n\nThe token is relocated at 09:15: it leaves the west vault and is put in the east vault. Ezra monitors that relocation from a close-up image which covers the token and containers but cannot show Yuna or whether Yuna is watching. The token is not handled again before 09:20.\n\nRecord supplied to Ezra: The observation entry records that Yuna did not watch any of the 09:15 relocation. It also states that Yuna received no token-location messages after the initial placement. Ezra accepts this record as accurate and has no other information about Yuna's attendance.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the west vault.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the west vault? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Yuna believe that the token is in the west vault? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Ezra think that Yuna believes that the token is in the west vault? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t04_w0_a0_b1",
+      "template_id": "bq_t04",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 0,
+      "reader_observed": 0,
+      "sender_recorded": 1,
+      "reader_name": "Yuna",
+      "sender_name": "Ezra",
+      "place_a": "east vault",
+      "place_b": "west vault",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 0,
+        "reader": 1,
+        "nested": 0
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "Ezra and Yuna are side by side for the 09:00 placement of a token in the west vault, with both watching it go inside.\n\nThe token is relocated at 09:15: it leaves the west vault and is put in the east vault. Ezra monitors that relocation from a close-up image which covers the token and containers but cannot show Yuna or whether Yuna is watching. The token is not handled again before 09:20.\n\nRecord supplied to Ezra: The observation entry records Yuna as having watched the whole 09:15 relocation. It also states that Yuna received no token-location messages after the initial placement. Ezra accepts this record as accurate and has no other information about Yuna's attendance.\n\nPrivate attendance account, known to Yuna and the narrator but not available to Ezra: Yuna is absent throughout the 09:15 relocation and cannot watch it. No report reaches Yuna, and Yuna does not learn that a transfer occurred.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the west vault.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "Ezra and Yuna are side by side for the 09:00 placement of a token in the west vault, with both watching it go inside.\n\nThe token is relocated at 09:15: it leaves the west vault and is put in the east vault. Ezra monitors that relocation from a close-up image which covers the token and containers but cannot show Yuna or whether Yuna is watching. The token is not handled again before 09:20.\n\nRecord supplied to Ezra: The observation entry records Yuna as having watched the whole 09:15 relocation. It also states that Yuna received no token-location messages after the initial placement. Ezra accepts this record as accurate and has no other information about Yuna's attendance.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the west vault.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the west vault? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Yuna believe that the token is in the west vault? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Ezra think that Yuna believes that the token is in the west vault? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t04_w0_a1_b0",
+      "template_id": "bq_t04",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 0,
+      "reader_observed": 1,
+      "sender_recorded": 0,
+      "reader_name": "Yuna",
+      "sender_name": "Ezra",
+      "place_a": "east vault",
+      "place_b": "west vault",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 0,
+        "reader": 0,
+        "nested": 1
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "Ezra and Yuna are side by side for the 09:00 placement of a token in the west vault, with both watching it go inside.\n\nThe token is relocated at 09:15: it leaves the west vault and is put in the east vault. Ezra monitors that relocation from a close-up image which covers the token and containers but cannot show Yuna or whether Yuna is watching. The token is not handled again before 09:20.\n\nRecord supplied to Ezra: The observation entry records that Yuna did not watch any of the 09:15 relocation. It also states that Yuna received no token-location messages after the initial placement. Ezra accepts this record as accurate and has no other information about Yuna's attendance.\n\nPrivate attendance account, known to Yuna and the narrator but not available to Ezra: Yuna attends the complete 09:15 relocation and watches it finish.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the west vault.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "Ezra and Yuna are side by side for the 09:00 placement of a token in the west vault, with both watching it go inside.\n\nThe token is relocated at 09:15: it leaves the west vault and is put in the east vault. Ezra monitors that relocation from a close-up image which covers the token and containers but cannot show Yuna or whether Yuna is watching. The token is not handled again before 09:20.\n\nRecord supplied to Ezra: The observation entry records that Yuna did not watch any of the 09:15 relocation. It also states that Yuna received no token-location messages after the initial placement. Ezra accepts this record as accurate and has no other information about Yuna's attendance.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the west vault.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the west vault? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Yuna believe that the token is in the west vault? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Ezra think that Yuna believes that the token is in the west vault? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t04_w0_a1_b1",
+      "template_id": "bq_t04",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 0,
+      "reader_observed": 1,
+      "sender_recorded": 1,
+      "reader_name": "Yuna",
+      "sender_name": "Ezra",
+      "place_a": "east vault",
+      "place_b": "west vault",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 0,
+        "reader": 0,
+        "nested": 0
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "Ezra and Yuna are side by side for the 09:00 placement of a token in the west vault, with both watching it go inside.\n\nThe token is relocated at 09:15: it leaves the west vault and is put in the east vault. Ezra monitors that relocation from a close-up image which covers the token and containers but cannot show Yuna or whether Yuna is watching. The token is not handled again before 09:20.\n\nRecord supplied to Ezra: The observation entry records Yuna as having watched the whole 09:15 relocation. It also states that Yuna received no token-location messages after the initial placement. Ezra accepts this record as accurate and has no other information about Yuna's attendance.\n\nPrivate attendance account, known to Yuna and the narrator but not available to Ezra: Yuna attends the complete 09:15 relocation and watches it finish.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the west vault.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "Ezra and Yuna are side by side for the 09:00 placement of a token in the west vault, with both watching it go inside.\n\nThe token is relocated at 09:15: it leaves the west vault and is put in the east vault. Ezra monitors that relocation from a close-up image which covers the token and containers but cannot show Yuna or whether Yuna is watching. The token is not handled again before 09:20.\n\nRecord supplied to Ezra: The observation entry records Yuna as having watched the whole 09:15 relocation. It also states that Yuna received no token-location messages after the initial placement. Ezra accepts this record as accurate and has no other information about Yuna's attendance.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the west vault.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the west vault? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Yuna believe that the token is in the west vault? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Ezra think that Yuna believes that the token is in the west vault? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t04_w1_a0_b0",
+      "template_id": "bq_t04",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 1,
+      "reader_observed": 0,
+      "sender_recorded": 0,
+      "reader_name": "Yuna",
+      "sender_name": "Ezra",
+      "place_a": "east vault",
+      "place_b": "west vault",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 1,
+        "reader": 0,
+        "nested": 0
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "Ezra and Yuna are side by side for the 09:00 placement of a token in the east vault, with both watching it go inside.\n\nThe token is relocated at 09:15: it leaves the east vault and is put in the west vault. Ezra monitors that relocation from a close-up image which covers the token and containers but cannot show Yuna or whether Yuna is watching. The token is not handled again before 09:20.\n\nRecord supplied to Ezra: The observation entry records that Yuna did not watch any of the 09:15 relocation. It also states that Yuna received no token-location messages after the initial placement. Ezra accepts this record as accurate and has no other information about Yuna's attendance.\n\nPrivate attendance account, known to Yuna and the narrator but not available to Ezra: Yuna is absent throughout the 09:15 relocation and cannot watch it. No report reaches Yuna, and Yuna does not learn that a transfer occurred.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the west vault.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "Ezra and Yuna are side by side for the 09:00 placement of a token in the east vault, with both watching it go inside.\n\nThe token is relocated at 09:15: it leaves the east vault and is put in the west vault. Ezra monitors that relocation from a close-up image which covers the token and containers but cannot show Yuna or whether Yuna is watching. The token is not handled again before 09:20.\n\nRecord supplied to Ezra: The observation entry records that Yuna did not watch any of the 09:15 relocation. It also states that Yuna received no token-location messages after the initial placement. Ezra accepts this record as accurate and has no other information about Yuna's attendance.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the west vault.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the west vault? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Yuna believe that the token is in the west vault? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Ezra think that Yuna believes that the token is in the west vault? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t04_w1_a0_b1",
+      "template_id": "bq_t04",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 1,
+      "reader_observed": 0,
+      "sender_recorded": 1,
+      "reader_name": "Yuna",
+      "sender_name": "Ezra",
+      "place_a": "east vault",
+      "place_b": "west vault",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 1,
+        "reader": 0,
+        "nested": 1
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "Ezra and Yuna are side by side for the 09:00 placement of a token in the east vault, with both watching it go inside.\n\nThe token is relocated at 09:15: it leaves the east vault and is put in the west vault. Ezra monitors that relocation from a close-up image which covers the token and containers but cannot show Yuna or whether Yuna is watching. The token is not handled again before 09:20.\n\nRecord supplied to Ezra: The observation entry records Yuna as having watched the whole 09:15 relocation. It also states that Yuna received no token-location messages after the initial placement. Ezra accepts this record as accurate and has no other information about Yuna's attendance.\n\nPrivate attendance account, known to Yuna and the narrator but not available to Ezra: Yuna is absent throughout the 09:15 relocation and cannot watch it. No report reaches Yuna, and Yuna does not learn that a transfer occurred.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the west vault.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "Ezra and Yuna are side by side for the 09:00 placement of a token in the east vault, with both watching it go inside.\n\nThe token is relocated at 09:15: it leaves the east vault and is put in the west vault. Ezra monitors that relocation from a close-up image which covers the token and containers but cannot show Yuna or whether Yuna is watching. The token is not handled again before 09:20.\n\nRecord supplied to Ezra: The observation entry records Yuna as having watched the whole 09:15 relocation. It also states that Yuna received no token-location messages after the initial placement. Ezra accepts this record as accurate and has no other information about Yuna's attendance.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the west vault.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the west vault? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Yuna believe that the token is in the west vault? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Ezra think that Yuna believes that the token is in the west vault? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t04_w1_a1_b0",
+      "template_id": "bq_t04",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 1,
+      "reader_observed": 1,
+      "sender_recorded": 0,
+      "reader_name": "Yuna",
+      "sender_name": "Ezra",
+      "place_a": "east vault",
+      "place_b": "west vault",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 1,
+        "reader": 1,
+        "nested": 0
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "Ezra and Yuna are side by side for the 09:00 placement of a token in the east vault, with both watching it go inside.\n\nThe token is relocated at 09:15: it leaves the east vault and is put in the west vault. Ezra monitors that relocation from a close-up image which covers the token and containers but cannot show Yuna or whether Yuna is watching. The token is not handled again before 09:20.\n\nRecord supplied to Ezra: The observation entry records that Yuna did not watch any of the 09:15 relocation. It also states that Yuna received no token-location messages after the initial placement. Ezra accepts this record as accurate and has no other information about Yuna's attendance.\n\nPrivate attendance account, known to Yuna and the narrator but not available to Ezra: Yuna attends the complete 09:15 relocation and watches it finish.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the west vault.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "Ezra and Yuna are side by side for the 09:00 placement of a token in the east vault, with both watching it go inside.\n\nThe token is relocated at 09:15: it leaves the east vault and is put in the west vault. Ezra monitors that relocation from a close-up image which covers the token and containers but cannot show Yuna or whether Yuna is watching. The token is not handled again before 09:20.\n\nRecord supplied to Ezra: The observation entry records that Yuna did not watch any of the 09:15 relocation. It also states that Yuna received no token-location messages after the initial placement. Ezra accepts this record as accurate and has no other information about Yuna's attendance.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the west vault.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the west vault? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Yuna believe that the token is in the west vault? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Ezra think that Yuna believes that the token is in the west vault? Answer only YES or NO."
+      }
+    },
+    {
+      "id": "bq_t04_w1_a1_b1",
+      "template_id": "bq_t04",
+      "split": "fresh",
+      "phase": "prior",
+      "world_bit": 1,
+      "reader_observed": 1,
+      "sender_recorded": 1,
+      "reader_name": "Yuna",
+      "sender_name": "Ezra",
+      "place_a": "east vault",
+      "place_b": "west vault",
+      "claim_place_bit": 1,
+      "labels": {
+        "world": 1,
+        "reader": 1,
+        "nested": 1
+      },
+      "messages": {
+        "omniscient": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "Ezra and Yuna are side by side for the 09:00 placement of a token in the east vault, with both watching it go inside.\n\nThe token is relocated at 09:15: it leaves the east vault and is put in the west vault. Ezra monitors that relocation from a close-up image which covers the token and containers but cannot show Yuna or whether Yuna is watching. The token is not handled again before 09:20.\n\nRecord supplied to Ezra: The observation entry records Yuna as having watched the whole 09:15 relocation. It also states that Yuna received no token-location messages after the initial placement. Ezra accepts this record as accurate and has no other information about Yuna's attendance.\n\nPrivate attendance account, known to Yuna and the narrator but not available to Ezra: Yuna attends the complete 09:15 relocation and watches it finish.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the west vault.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ],
+        "sender": [
+          {
+            "role": "system",
+            "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+          },
+          {
+            "role": "user",
+            "content": "Ezra and Yuna are side by side for the 09:00 placement of a token in the east vault, with both watching it go inside.\n\nThe token is relocated at 09:15: it leaves the east vault and is put in the west vault. Ezra monitors that relocation from a close-up image which covers the token and containers but cannot show Yuna or whether Yuna is watching. The token is not handled again before 09:20.\n\nRecord supplied to Ezra: The observation entry records Yuna as having watched the whole 09:15 relocation. It also states that Yuna received no token-location messages after the initial placement. Ezra accepts this record as accurate and has no other information about Yuna's attendance.\n\nNo token-location messages are exchanged in this account. No additional observation or event occurs before the account ends at 09:20.\n\nCandidate proposition: \"The token is in the west vault.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow."
+          }
+        ]
+      },
+      "questions": {
+        "world": "At the end of the scene, is the token actually in the west vault? Answer only YES or NO.",
+        "reader": "At the end of the scene, does Yuna believe that the token is in the west vault? Answer only YES or NO.",
+        "nested": "At the end of the scene, does Ezra think that Yuna believes that the token is in the west vault? Answer only YES or NO."
+      }
+    }
+  ]
+}
