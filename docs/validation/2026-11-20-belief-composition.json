@@ -1,0 +1,3685 @@
+{
+  "schema": "belief_composition_diagnostic_v2",
+  "created_at": "2026-11-20T01:11:30.587332+00:00",
+  "analysis_status": "posthoc_exploratory_same_known_cases",
+  "layer": "layer_16",
+  "is_test_fixture": false,
+  "source_input_sha256": {
+    "behavior/bd_t01_w0_a0_b0__omniscient__nested.json": "3670f58a83451fbdee112f08ad8f31e30f2dc6105df2579d9877dd1d5dd34643",
+    "behavior/bd_t01_w0_a0_b0__omniscient__reader.json": "1863d1b9ef0f140a3e0c65c31b503516b735718f24c1820c746c28d867dc1bee",
+    "behavior/bd_t01_w0_a0_b0__omniscient__world.json": "3f630febc96a2470506db8615ecccd043ea63a6edcc42fb62f63d7f5522a87c1",
+    "behavior/bd_t01_w0_a0_b0__sender__nested.json": "1c304d508eac86ff9f428251746c155546912ba7b7aab1f95d33ae31d17ed60a",
+    "behavior/bd_t01_w0_a0_b0__sender__world.json": "1555382ad58d40173bb34ff845ad0dafec75a09823a7490138172adecac79b40",
+    "behavior/bd_t01_w0_a0_b0_delivered_current__omniscient__nested.json": "35967d935b997d583522cedc007133018b23c97782ae1a0156dc5d9f8ef6c028",
+    "behavior/bd_t01_w0_a0_b0_delivered_current__omniscient__reader.json": "0b8b26c686a772d810ffcaaf9ea60ce09e3b009d45ac645f5d11dad1195f1073",
+    "behavior/bd_t01_w0_a0_b0_delivered_current__omniscient__world.json": "8448e1538bfb8ae25abfdbd07d6a87c5f30d625a78363fb422bc08b9a2313326",
+    "behavior/bd_t01_w0_a0_b0_delivered_current__sender__nested.json": "7902c658efcea8c0b3f9ebabb22e79909e973962ea964d5921c4874d89786447",
+    "behavior/bd_t01_w0_a0_b0_delivered_current__sender__world.json": "1f31b3782121e1e96147c1ffd633216f8f013eaa6f476ea136da482e263726bf",
+    "behavior/bd_t01_w0_a0_b1__omniscient__nested.json": "117b62be13ee2fc40aee43a67ab548ce44059f895d055e6df20c8740c06f6bb1",
+    "behavior/bd_t01_w0_a0_b1__omniscient__reader.json": "97fc00a9118b2bd7f48b28c241315e4ec4d8240db0e3e3cf8cf0574d2c24f5cc",
+    "behavior/bd_t01_w0_a0_b1__omniscient__world.json": "73b0509154cab4d84164b78b83e2b3e1803ac3ac7b2b209a6aed52dcfa09ea7c",
+    "behavior/bd_t01_w0_a0_b1__sender__nested.json": "1335ecb795486d8613d5389332da7f96c80edc5e8d084afb340a62d18f47f730",
+    "behavior/bd_t01_w0_a0_b1__sender__world.json": "47607ace8dbcd3a713b7f056956049819154d14827a9fbda9cd2b6d9c13bc65e",
+    "behavior/bd_t01_w0_a0_b1_delivered_current__omniscient__nested.json": "701463a92267f3ab956a17cd4bc6039d66a60805f8c1c94bc9ec3a94b6337eab",
+    "behavior/bd_t01_w0_a0_b1_delivered_current__omniscient__reader.json": "df6db7095cdbd0bd8a8f3342d8ee90355b73dec9f4b70ef03011ee5051e8a7a0",
+    "behavior/bd_t01_w0_a0_b1_delivered_current__omniscient__world.json": "6b5d4b56e1c08ff9239c8c964296e850f39e1f3076db4ad1af1f3fac7d55a9f6",
+    "behavior/bd_t01_w0_a0_b1_delivered_current__sender__nested.json": "1a11f05200ab1c804d95459c6948d0f313210ac59ad4eb13941bd2ace24be8ff",
+    "behavior/bd_t01_w0_a0_b1_delivered_current__sender__world.json": "df503ece02b61217b679f455f738bcc43cde728bf294bac608d20cecc9eaa51b",
+    "behavior/bd_t01_w0_a1_b0__omniscient__nested.json": "9417090771083263919a66705524fa0935521b124cf8a47ac38fa95c4b56ea03",
+    "behavior/bd_t01_w0_a1_b0__omniscient__reader.json": "e4e139048c23c0188d53813cddc9af9875856a1c96ab4a303b5fe0e08bb1d424",
+    "behavior/bd_t01_w0_a1_b0__omniscient__world.json": "9da12b49ff392d43834ff37012bdae17829e48b324686da5cdd6840a631707a6",
+    "behavior/bd_t01_w0_a1_b0__sender__nested.json": "b8966673ba505de138e80c807b2e0ed2f7f9ab1b83186d851ec92c4d07a701e3",
+    "behavior/bd_t01_w0_a1_b0__sender__world.json": "69d57e5db6b2f18482255cfd6263071d960e6c6fa8ad672114755dded2114028",
+    "behavior/bd_t01_w0_a1_b0_delivered_current__omniscient__nested.json": "6739edbe0086f51f9280283e5daa3e5e6ccd7bc3c78de826f1dcdb936b6c6a4e",
+    "behavior/bd_t01_w0_a1_b0_delivered_current__omniscient__reader.json": "7ba3c1fcc87e62e3e1022e67728c1f4fe0cc99622c591cd02e294475ef0d8128",
+    "behavior/bd_t01_w0_a1_b0_delivered_current__omniscient__world.json": "8db6fac9a87db034972db3160620f18d163e860fe5765d62ae60938430740fc4",
+    "behavior/bd_t01_w0_a1_b0_delivered_current__sender__nested.json": "87c2a282828dde4e3df62317c3ecd097a8b59aa3a2ba550eedf398dd9c937967",
+    "behavior/bd_t01_w0_a1_b0_delivered_current__sender__world.json": "4ee007a0b8f4ade90045b697294997967146cf66c4f57da5a155549796b36251",
+    "behavior/bd_t01_w0_a1_b1__omniscient__nested.json": "03a70f1ba4f892b6dce24e2a9e4b121db857bb894320177b417ee44e90a9f738",
+    "behavior/bd_t01_w0_a1_b1__omniscient__reader.json": "ea4b02d252d63893ade4a1044c551004eb6011fd1b662e6013d4a87ac370602b",
+    "behavior/bd_t01_w0_a1_b1__omniscient__world.json": "0f118ca463869b98c5d9e449933cadcbc682c83969e6bbfdc754107386edd072",
+    "behavior/bd_t01_w0_a1_b1__sender__nested.json": "b6822fe0f376552501a63e0d71a434d79bf5f920f536a0cb757179c1a90e8838",
+    "behavior/bd_t01_w0_a1_b1__sender__world.json": "954291cba5cfbc42a8986f1cd5d558fabecb37d00898471949d007f442911204",
+    "behavior/bd_t01_w0_a1_b1_delivered_current__omniscient__nested.json": "816e46b5a68808e441d6349eb13bc512bd3e35e5f7dc03392c06d389addadd86",
+    "behavior/bd_t01_w0_a1_b1_delivered_current__omniscient__reader.json": "93811c581b33b95b90c7313f8c5e221c798ed7c2aa7316d3d57e2233132fda47",
+    "behavior/bd_t01_w0_a1_b1_delivered_current__omniscient__world.json": "9eb5cb3d190ca168bdb5a1caf6d131f80310ccdc001aae902bebcc5e2e8648df",
+    "behavior/bd_t01_w0_a1_b1_delivered_current__sender__nested.json": "e3fe5d3f6bb397e1ce5b18aba5c985ea9e3b6bf96ba7cb1ebda1b798d20ba6c5",
+    "behavior/bd_t01_w0_a1_b1_delivered_current__sender__world.json": "d1a4329310fe04427c206ab1b22c41135ac671cf5d204ab01c6f6c3c024fe931",
+    "behavior/bd_t01_w1_a0_b0__omniscient__nested.json": "20d88120843f11998f4cb06552ebe3cfec123d7bde0b98a6605102e29b0eba51",
+    "behavior/bd_t01_w1_a0_b0__omniscient__reader.json": "5384b31ef102922f562f1092d3c9c8e8a112cb0f581594b012c6ae7727916255",
+    "behavior/bd_t01_w1_a0_b0__omniscient__world.json": "c97229b2d5db448c5640a671c5d934c1b699f0bd643c75f3c34ec4d1c6725a24",
+    "behavior/bd_t01_w1_a0_b0__sender__nested.json": "6004a626966222780498b22bc5c7ecb75b2d95efb2fb20bc70e7d4f80950b94a",
+    "behavior/bd_t01_w1_a0_b0__sender__world.json": "5066237090a6b89264c83a67c26379c672d4a35656e0fead9b9b75e30b5cdb4a",
+    "behavior/bd_t01_w1_a0_b0_delivered_current__omniscient__nested.json": "ee1de5ff54827272f7d5803808fcdbb2522898460cd4eb7d32559f2b488cb502",
+    "behavior/bd_t01_w1_a0_b0_delivered_current__omniscient__reader.json": "facd0aa7d96cf9666aba21cb47492b98961feffa3e5b9be8d2253a0c6bea49f7",
+    "behavior/bd_t01_w1_a0_b0_delivered_current__omniscient__world.json": "2d74a814e8dc436e3f871404b26bc4540c3913a6c581674cd30aa401bfd63cf6",
+    "behavior/bd_t01_w1_a0_b0_delivered_current__sender__nested.json": "bdce9517b89159c0e819c81e0a6522c501c7b45d3c76cd0362b849ffbae3ef38",
+    "behavior/bd_t01_w1_a0_b0_delivered_current__sender__world.json": "973efdb832c6b7dbc772a59e19b005a1a14fe9bc3dfbee75cbb4a41c59a23c7c",
+    "behavior/bd_t01_w1_a0_b1__omniscient__nested.json": "8aa45645e953d6b29007741dc1e3d2a31b290f807fcb4912282985106ed7b994",
+    "behavior/bd_t01_w1_a0_b1__omniscient__reader.json": "a4cfe4a9b6bc37c18bc4591425e9af5085b4300947b7a9422d4ce40f0ba6784b",
+    "behavior/bd_t01_w1_a0_b1__omniscient__world.json": "f43161b41d2af44baa4ee9df0d63bbefbf3a779b4c5ac0738914a566932a47aa",
+    "behavior/bd_t01_w1_a0_b1__sender__nested.json": "b21256f30fc5437f8715fb99d746bf81cc45046d62a9895340138951c9061481",
+    "behavior/bd_t01_w1_a0_b1__sender__world.json": "ca0fe2da4ea0f4419fd270451750b64b13ee80730fe8dfc209c3eb5f083e6029",
+    "behavior/bd_t01_w1_a0_b1_delivered_current__omniscient__nested.json": "ca19dce8d4dd4c606a8ae9b71704872cf2a3f1c1518f8e09723030ef1f42b349",
+    "behavior/bd_t01_w1_a0_b1_delivered_current__omniscient__reader.json": "301a2b62d27c3bb5808df1efe948723effb73c4a18180597b58ffe1d9202de6f",
+    "behavior/bd_t01_w1_a0_b1_delivered_current__omniscient__world.json": "edb2190225c39171e21ef71810af87b0f15947c02d757453b677776d685f01d5",
+    "behavior/bd_t01_w1_a0_b1_delivered_current__sender__nested.json": "b80a6de45c9205fc5c8048c4a23f74434aa3bb0d61f6fa5acd830d8ac96f2f94",
+    "behavior/bd_t01_w1_a0_b1_delivered_current__sender__world.json": "9c86b10b096ebdc999a81ff7031d2292f46c0c330546ca7843312d2d81807a6a",
+    "behavior/bd_t01_w1_a1_b0__omniscient__nested.json": "a2283aac36c0ddf2fc7e8e65cc04b91cd37a34f6ad4e1a330d3f50fc731b1792",
+    "behavior/bd_t01_w1_a1_b0__omniscient__reader.json": "fe942aa1e43dde41ce96312a0adce6b3781dfea1a9456f80dcfa21e76e21084a",
+    "behavior/bd_t01_w1_a1_b0__omniscient__world.json": "c34c00c6400e1691d4c27a15504f29cd7f798d636e34b577736dcec2b66ba499",
+    "behavior/bd_t01_w1_a1_b0__sender__nested.json": "7414834be4ea763da0eb82bd1049e492f032e42050a90924a5dee3880e0a57eb",
+    "behavior/bd_t01_w1_a1_b0__sender__world.json": "a609b7d1e9ac930a227ab82399c7ea9e673894800b65daf48affea1ec2aac846",
+    "behavior/bd_t01_w1_a1_b0_delivered_current__omniscient__nested.json": "d6d6c9e2989f2929ef068529ad77ed3a8c3627453ec576417965b8d4eb768d5a",
+    "behavior/bd_t01_w1_a1_b0_delivered_current__omniscient__reader.json": "838c25958408d805cf1e42db6daef5c21d9015670ab1d2cabb57b7d412eb1ec5",
+    "behavior/bd_t01_w1_a1_b0_delivered_current__omniscient__world.json": "56a80b613345d6db882fff9afe9fa23379b874f644996892ea423fc2c95be04e",
+    "behavior/bd_t01_w1_a1_b0_delivered_current__sender__nested.json": "bb09bb081cfe24fab7cccf111ba9e5b1f7501f26f39ba2aa143e4a784a218593",
+    "behavior/bd_t01_w1_a1_b0_delivered_current__sender__world.json": "4bd3d134c8df552f863a35d745128e43049eebbc64214e655ea56c8746ec4e37",
+    "behavior/bd_t01_w1_a1_b1__omniscient__nested.json": "a2ecf9074a0407c14508c55765d7041e4678987116f6dfb44da0db7de14011e4",
+    "behavior/bd_t01_w1_a1_b1__omniscient__reader.json": "7f80947461d17be619b11948bba77f8909ad5a18a0bab644e52d5e1f8f0f2f21",
+    "behavior/bd_t01_w1_a1_b1__omniscient__world.json": "76bac7c2a14351d73d144cbf0be2d18d66d924e77bbcf24ff01148fd5a9093e7",
+    "behavior/bd_t01_w1_a1_b1__sender__nested.json": "b20a2df4a4c2d30fa648d2d75eef0531cb5fd8f2b53e05b0d8677836e50c2de6",
+    "behavior/bd_t01_w1_a1_b1__sender__world.json": "0026898d17630ead2a92ab61162f506bde4a894b47d078139f3dc93835f895b3",
+    "behavior/bd_t01_w1_a1_b1_delivered_current__omniscient__nested.json": "e54c5e34d8ceafce16a2d0760c0f117ce67fe8d6a130d0aee7508112ce7b2f01",
+    "behavior/bd_t01_w1_a1_b1_delivered_current__omniscient__reader.json": "fa8bfd3f6dd2b8b66b9c53376838a5bc5208c2fbb5bda2396b7e3559be617e5d",
+    "behavior/bd_t01_w1_a1_b1_delivered_current__omniscient__world.json": "e7fae3068603f427e2f9b00f7d61548520df6d4eca29be1503bf26206ced5e0d",
+    "behavior/bd_t01_w1_a1_b1_delivered_current__sender__nested.json": "34c03758e897fde15279924b079f8f1e14b2ea0c9839ee530cc680c41a42fd89",
+    "behavior/bd_t01_w1_a1_b1_delivered_current__sender__world.json": "faaf5a9c9282d77e8ca2ad5d26a3e336bc85eac6117698d33ce72507e3299245",
+    "behavior/bd_t02_w0_a0_b0__omniscient__nested.json": "6385b1f3cb52c6368881568a30464ed3aff0aea2b8408beec1e4fd5fd09eb395",
+    "behavior/bd_t02_w0_a0_b0__omniscient__reader.json": "bd9027c0eddb2da4d77058c7d3d5dd7124db19574dca6b3413505b0bf7aaee0f",
+    "behavior/bd_t02_w0_a0_b0__omniscient__world.json": "2fde61f094b25d3b9c40480a9410741442710740492e8b9d2523091135f5dcd0",
+    "behavior/bd_t02_w0_a0_b0__sender__nested.json": "a5c9af7680a49e98c9e5a7ce75cd0edfa8f91d8a89ee9e89719fb4021a880a32",
+    "behavior/bd_t02_w0_a0_b0__sender__world.json": "9245272a7b4c9c6101318ab377d27bf1d830b2c02a7eb1d22e7731856413df4a",
+    "behavior/bd_t02_w0_a0_b1__omniscient__nested.json": "d3ea505970520342624945dc100a6061c5c5f9c1c6af0829af0a9ea8f5fad2d0",
+    "behavior/bd_t02_w0_a0_b1__omniscient__reader.json": "f900b5cc5b532e058ded5a1172bb334199b5f056e4c16b24545579e67840f7a2",
+    "behavior/bd_t02_w0_a0_b1__omniscient__world.json": "2323c62423da7fef3ddc824cbc38a7b16d2e3ab809e073645c98b7076e53d777",
+    "behavior/bd_t02_w0_a0_b1__sender__nested.json": "8df6430b1f58819e271bded00c792602c1be7688d0baf0f2f8e31283b569b91d",
+    "behavior/bd_t02_w0_a0_b1__sender__world.json": "c0ff1da44b1f3d32ad009b48b425237bb38fd833999cb92e2c7f5bee053efb3b",
+    "behavior/bd_t02_w0_a1_b0__omniscient__nested.json": "b743a663d74f87d8239643c9890ffb1d58463d3ff5c79b0714caea6eb9859be9",
+    "behavior/bd_t02_w0_a1_b0__omniscient__reader.json": "d2e3af5267c3f5d4b5e1b7998368e40f048c41fc830f58c5a668e8e568afc2a7",
+    "behavior/bd_t02_w0_a1_b0__omniscient__world.json": "275345ef199e107266595394596b5e152328983f1c5d7e6756834f030d24be18",
+    "behavior/bd_t02_w0_a1_b0__sender__nested.json": "b542351f797ddda539bfb4d5e0925e66cf8afa3a9651a0912ee48a855bd94a71",
+    "behavior/bd_t02_w0_a1_b0__sender__world.json": "35afa12d6092baa4f477a7791b26b43fc855de654e91ada185a763a1703ff628",
+    "behavior/bd_t02_w0_a1_b1__omniscient__nested.json": "615e4dd00a5bd5fe3b6fef60b958af2bb5545b0cc59faaee923816119cef9881",
+    "behavior/bd_t02_w0_a1_b1__omniscient__reader.json": "782164dca02f9ff0af62536b8ce61baf9b8301159e66b6bc80023d0e3878bfd3",
+    "behavior/bd_t02_w0_a1_b1__omniscient__world.json": "9998c643ae05228b744e2c4386f2ba94518c2e003016f7459b3595163e13527a",
+    "behavior/bd_t02_w0_a1_b1__sender__nested.json": "2d1020c59373376a8b843ee557e9e1227e23ba6765fa726a08f05e1e002e46be",
+    "behavior/bd_t02_w0_a1_b1__sender__world.json": "73791c12b99f45b455800558cbffdb7029eaaed3e4039420fa87a1353acca1c1",
+    "behavior/bd_t02_w1_a0_b0__omniscient__nested.json": "994c961eb8da2a68c85881e02518c0d554db8c8f5b629313c99bbc5a0f75e263",
+    "behavior/bd_t02_w1_a0_b0__omniscient__reader.json": "c85a420e5fa8bb76137c259525047ea3a290bbae4d267d203a81aa6bf0b713c2",
+    "behavior/bd_t02_w1_a0_b0__omniscient__world.json": "8ef7f455b1e13010ab3fb14bec0ebb6f0ec66dce5d9311ff01ebcd4dc3f09340",
+    "behavior/bd_t02_w1_a0_b0__sender__nested.json": "b83a078f5a3632279591b3e59320c60f4e6346144cf9b5fd130e9a0532958baa",
+    "behavior/bd_t02_w1_a0_b0__sender__world.json": "5baaa4b70e529d66dac37b23f5334afa8526e8657fa850f3453aac59545f5a9a",
+    "behavior/bd_t02_w1_a0_b1__omniscient__nested.json": "b6b0799c213fcf8a6f91b6ad9c27fe68d89f04a2084b32482d14c3dcdfcb7b7c",
+    "behavior/bd_t02_w1_a0_b1__omniscient__reader.json": "b2e59b7bc45ad39e9bffabdcaa43111496248c0614c529b0afeea08be1ef5476",
+    "behavior/bd_t02_w1_a0_b1__omniscient__world.json": "6b1dbd8a6e142a9b76c4b769ad23fb0550f50a75ebef1339a94e6985e85c9a4e",
+    "behavior/bd_t02_w1_a0_b1__sender__nested.json": "8bfeca32f08ea9712acb6ae1cb0bcfd7fe71ded24e8b6aaa522471e58b733632",
+    "behavior/bd_t02_w1_a0_b1__sender__world.json": "fa73377b8c9a7ce76369dae46fed67c4cc85cbd6840db835f50c88453bb6e21f",
+    "behavior/bd_t02_w1_a1_b0__omniscient__nested.json": "2e34eb76312b63d354d6309cc9998a4fb72570f46b63aa2330d4aca97d9d1dd4",
+    "behavior/bd_t02_w1_a1_b0__omniscient__reader.json": "f92a96a1c9ef7f974c0b8ff5f447f5ccb92e7cfe3ec50237a467dfc9d33bc44d",
+    "behavior/bd_t02_w1_a1_b0__omniscient__world.json": "c102dfc2da6619352a6a948766046832d4c8def7e23d91f542911245dd5f1949",
+    "behavior/bd_t02_w1_a1_b0__sender__nested.json": "68bd8e03c33f6c06199dd27671446732d27b4b6ae27a2709c46385b75775fe6e",
+    "behavior/bd_t02_w1_a1_b0__sender__world.json": "d596c6a3190229f2d35db1fdc7f2860f6135d354facae22ea637f3a8643b47c0",
+    "behavior/bd_t02_w1_a1_b1__omniscient__nested.json": "a7f9e09f3a4cddfa03689c19583a6c1d9e924635b3bf8568a61169491ca95f28",
+    "behavior/bd_t02_w1_a1_b1__omniscient__reader.json": "015d49a6dbe6f5ac2c614102d996e9cfd33c6b5e8ef1f1112b6d7b5f1ed94779",
+    "behavior/bd_t02_w1_a1_b1__omniscient__world.json": "6e3a1b32348e82d5cf6149771b52a89ec0914236a20ae782fe9b7406b18736b2",
+    "behavior/bd_t02_w1_a1_b1__sender__nested.json": "97c399deb19f813d3b88ca3c02124fbcf028d2d9b6ccbc518483ab54584839df",
+    "behavior/bd_t02_w1_a1_b1__sender__world.json": "f4b5a91b210b536940317cde872f99f6c82cb4b63ebcdbd3fa5faf7bcfa81995",
+    "behavior/bd_t03_w0_a0_b0__omniscient__nested.json": "1167e38944925dd574835fbf0fc74b9e2faa35c756d70fcee0cb3700496ff378",
+    "behavior/bd_t03_w0_a0_b0__omniscient__reader.json": "9188df9ef5a529b6c8602d2e6f4408a705a3a5b7443f9eca9c8f20aab8c55be8",
+    "behavior/bd_t03_w0_a0_b0__omniscient__world.json": "56c6e030e59712d15df02b6c8d6f92f7b03e6ed8c3564a8e36ffeb4e7e323ba3",
+    "behavior/bd_t03_w0_a0_b0__sender__nested.json": "3459991fb333d0537c3341a12330400902295abee41c7d0e79057a17dadb5962",
+    "behavior/bd_t03_w0_a0_b0__sender__world.json": "b834620d6adfe8b50811156ff60145b6871dbba6675125149bf625b9a0ab5911",
+    "behavior/bd_t03_w0_a0_b1__omniscient__nested.json": "6424deefac4dc6ed1676b7e7e419e9325fde13669721f575f0facd92b378fd30",
+    "behavior/bd_t03_w0_a0_b1__omniscient__reader.json": "386bd87d51474ea69c2d53cf47071c3654fca02e5ac1d566bd3888bfa2027659",
+    "behavior/bd_t03_w0_a0_b1__omniscient__world.json": "cd73f6c38ccc5b4bcaade6bd144d3d71b9bc6a86525fa461bebfe42102694e8d",
+    "behavior/bd_t03_w0_a0_b1__sender__nested.json": "e2689a58763df45347908186cb09dc164fc50c561d0c93bcdd4f0d1640016330",
+    "behavior/bd_t03_w0_a0_b1__sender__world.json": "aba8426ae31619c5881f279ba9f222c226369937d705b1158c663d19f8e558fa",
+    "behavior/bd_t03_w0_a1_b0__omniscient__nested.json": "4ce7c4edd3200b0be905d180b3c28240c61b000ffe06705c53d1ea345ddb8326",
+    "behavior/bd_t03_w0_a1_b0__omniscient__reader.json": "ade13ece41fe56c62dea20b0fb5b74b66cd761ed811ca07251d317f6d8bdcc55",
+    "behavior/bd_t03_w0_a1_b0__omniscient__world.json": "f1ada2eab0c9c5942b92446e50432aba6bd44ca11d085a447a413d4183221699",
+    "behavior/bd_t03_w0_a1_b0__sender__nested.json": "cc813b2d93c7a5a3b4ed9e9e7cdd6db49c8816f2229694045ee2f51abe720ea6",
+    "behavior/bd_t03_w0_a1_b0__sender__world.json": "c47531ae8a4979bf05fa6b8c13cedee928413c4ba70cb05d6218aecdb587b2b4",
+    "behavior/bd_t03_w0_a1_b1__omniscient__nested.json": "f347f8bc3837f66a7944cc310eaf1f4bee703204cd7a364ce8cb812945a3bed7",
+    "behavior/bd_t03_w0_a1_b1__omniscient__reader.json": "d7d6ae0057500f7dbfe8f3e133640ff028834ae9cc76863b5094eddfa7568479",
+    "behavior/bd_t03_w0_a1_b1__omniscient__world.json": "8e7bd5b8b56b3a6754e1149c37b237788caf74caaf31c04a44ab7dae7a570e1e",
+    "behavior/bd_t03_w0_a1_b1__sender__nested.json": "8e6f72f9ef24915644eab6e042dbb5665b75f5290b35f9e2df504742c8133ebc",
+    "behavior/bd_t03_w0_a1_b1__sender__world.json": "cf18ea55ab704db0e1a1a5e19025528b8056dce2d2605b1b85aca274879699b8",
+    "behavior/bd_t03_w1_a0_b0__omniscient__nested.json": "edd1a9d41691f3e4b860c09a51dba917e242d048b8b22081b7501a74a953532b",
+    "behavior/bd_t03_w1_a0_b0__omniscient__reader.json": "076bb4b150d85756a83895c301087d1d6caf685c51940d2e4b29736871be42c1",
+    "behavior/bd_t03_w1_a0_b0__omniscient__world.json": "ef14173c983d39fcda54ff8aae0fb1a6a66d5f2fac9092ebc09e73dd59ac4ecc",
+    "behavior/bd_t03_w1_a0_b0__sender__nested.json": "1c6fb40d5e98531c5e66954aefc98db18ae1b55ae1e381e7ef7d673569838e38",
+    "behavior/bd_t03_w1_a0_b0__sender__world.json": "8b72c15641f8b2c44cfd5cd01f3209027bdf32d2512b766b06c3fdf3abef8488",
+    "behavior/bd_t03_w1_a0_b1__omniscient__nested.json": "46bda4925587312912b57f1ce1e212b397c5813ab7dc8e7146be0d24b8a67c45",
+    "behavior/bd_t03_w1_a0_b1__omniscient__reader.json": "9fecdb81d7acd5cde4e4863cd328785f7399ed00250aad4381c21e894931ce5c",
+    "behavior/bd_t03_w1_a0_b1__omniscient__world.json": "cfddc8d3dc656a940daaa787d4026cd2ebcf36653f6094b925e5cfbb508122ef",
+    "behavior/bd_t03_w1_a0_b1__sender__nested.json": "b6b6ee374a35fd8b479f63166c8548119c1343d87cda2e854d53a07695afd3e9",
+    "behavior/bd_t03_w1_a0_b1__sender__world.json": "8f7a54bffcde447f7d1c24c34247efbe6771ac21ac78fa04abfd44c817d39af6",
+    "behavior/bd_t03_w1_a1_b0__omniscient__nested.json": "a3d153a432d2f288568c4261143dee9907ca8bdae34d087aa13074d3f5a3e02b",
+    "behavior/bd_t03_w1_a1_b0__omniscient__reader.json": "12ae8c51442d57f64245c2332d1d426a289e64c06f05618e923dd9d99af1e3ab",
+    "behavior/bd_t03_w1_a1_b0__omniscient__world.json": "2089d6612c62e50b68963161888856d51026a384a9afe9d3acf6a756b6604d41",
+    "behavior/bd_t03_w1_a1_b0__sender__nested.json": "e5102db7b5e7a8513db6232081165a2a2988fdea4170d56334b1796daa3cef4c",
+    "behavior/bd_t03_w1_a1_b0__sender__world.json": "bad86f23fd77c2ee907c40d1f410ba8529e4455b3874259a3c2200ac9ae85237",
+    "behavior/bd_t03_w1_a1_b1__omniscient__nested.json": "9148402a671fdadd04ffc39a19696798f51451a24be278b58b50f689e69cc37f",
+    "behavior/bd_t03_w1_a1_b1__omniscient__reader.json": "ebd3665b0defd6d7117f9580040c5c87e2884f680a16f68ccddbd5d776ca2d5f",
+    "behavior/bd_t03_w1_a1_b1__omniscient__world.json": "64ed4979ee8e36ec2404b46ca107f76fa4196ca00b32da6602428ba4bd5814af",
+    "behavior/bd_t03_w1_a1_b1__sender__nested.json": "86685d04585592e836d9536230aff1beef0b63ef57b449fa730e98291dd003f8",
+    "behavior/bd_t03_w1_a1_b1__sender__world.json": "ea270df02fca5d66e398f6b865149baa47f67769651bc66994f3ff67a7582530",
+    "behavior/bd_t04_w0_a0_b0__omniscient__nested.json": "922bd9d3e19271a09201e821a8e1a9cb1a8f97296672f739a3e108cc245f955d",
+    "behavior/bd_t04_w0_a0_b0__omniscient__reader.json": "22076211160f4f05280890cbc920674b20923b262c3b619caf6834cfeeb413c9",
+    "behavior/bd_t04_w0_a0_b0__omniscient__world.json": "0d31ebcc6bd1955bc48c74a51688b34f8c2ec6289e49df26cda585f0fc755055",
+    "behavior/bd_t04_w0_a0_b0__sender__nested.json": "a62967a3e4036c012cd82b6804b9303b177fc832b19143b52540578ebe430c4d",
+    "behavior/bd_t04_w0_a0_b0__sender__world.json": "58c44f1357fbbd2627192b7f861903152c055a3091818ff394296e231da81070",
+    "behavior/bd_t04_w0_a0_b1__omniscient__nested.json": "9450207d13f2afc108523911195bc997fcf6b41c66b20f6df2e0d6493f1d2640",
+    "behavior/bd_t04_w0_a0_b1__omniscient__reader.json": "e4e0e57e12224dcc0a935ed5e279fbfa6745cc99315e35c9d5f1fe72ea795169",
+    "behavior/bd_t04_w0_a0_b1__omniscient__world.json": "f2d48c82639f7bd8d84064acd2f9cc8e63ee48531488039e64ff3198c0f549cf",
+    "behavior/bd_t04_w0_a0_b1__sender__nested.json": "bbd74effc84cb54a10ecbefbb98fe5ab9f502ffafcd5178101a7557f40737e38",
+    "behavior/bd_t04_w0_a0_b1__sender__world.json": "cea0ed833d259fff1daf11cce7c96700dfcdac48eaaeab8f25a21ba61cca93c3",
+    "behavior/bd_t04_w0_a1_b0__omniscient__nested.json": "1b7b85d0139b2d1d0aa804d075e7a17c9f2e05a03c03fc5977b04e3e2d83b90c",
+    "behavior/bd_t04_w0_a1_b0__omniscient__reader.json": "d08e6596e799641beefd4b776ab414fb5aa6873386b2b010ef96961712728d31",
+    "behavior/bd_t04_w0_a1_b0__omniscient__world.json": "c8a5b9e6acd2da075f1f90145ec126921a582bce544d59016ee186d98f04037d",
+    "behavior/bd_t04_w0_a1_b0__sender__nested.json": "e8a71825996d79cc12dd44d991656163816019d5de3a2470826862ca7e8cd5cc",
+    "behavior/bd_t04_w0_a1_b0__sender__world.json": "988a078bc4034e64b761a0e725575319dd9864442153623cb6706a50c2418883",
+    "behavior/bd_t04_w0_a1_b1__omniscient__nested.json": "b111ce8e1c6a57d86663fb4b3240ce4212d0cb9ee0e16ad403c4182e559d9a70",
+    "behavior/bd_t04_w0_a1_b1__omniscient__reader.json": "263a39fb075c9c6a578efa3a4755e5d9b0b43b3b0cc4d26f00990c4fcb295abf",
+    "behavior/bd_t04_w0_a1_b1__omniscient__world.json": "0c5381456858c91cd6f64d9158dbd8fcd17f552b1ef22be092060980fcecf9e8",
+    "behavior/bd_t04_w0_a1_b1__sender__nested.json": "a6fb605061017250c428ccf6b1d9252e326b997bdbb8d2bb30399aca3d18b46c",
+    "behavior/bd_t04_w0_a1_b1__sender__world.json": "87881c510e30960381aa4972f8b2bacc0132712adc299c41012ed682bb6fffd6",
+    "behavior/bd_t04_w1_a0_b0__omniscient__nested.json": "d78dc8757483d9ddda8ee2e9aeaf9cdd00e9482a6d8fa9d5eba30089439e914e",
+    "behavior/bd_t04_w1_a0_b0__omniscient__reader.json": "bdb1e520fee33eaf2470f699a2b3006d4c1634e07adb1ec027c30609fd4348c3",
+    "behavior/bd_t04_w1_a0_b0__omniscient__world.json": "8975cd9b36c837e96d912b5ebbaf3a8e3d3bdc86b37e4576a29f44b5a858de33",
+    "behavior/bd_t04_w1_a0_b0__sender__nested.json": "8331e4f3a8d40c440c89d1a2d1c797476347c98571abf3e788922f5b5eb4a093",
+    "behavior/bd_t04_w1_a0_b0__sender__world.json": "295c12a78bd030951557f6948c02dbc36cbe6e1e188f7dd719b0e5408e1c2beb",
+    "behavior/bd_t04_w1_a0_b1__omniscient__nested.json": "96d709a3e554ea702f7b21b9cd652ff519aa17119da2df634b5ce0a1c5ee615b",
+    "behavior/bd_t04_w1_a0_b1__omniscient__reader.json": "15eccb90f8c4eeb9d2a2eeb5a0ead04a76ccdaa427260a9a97c757f227331f1c",
+    "behavior/bd_t04_w1_a0_b1__omniscient__world.json": "cc32b8513c6e4c6916217aff162e30ec7b01f3f7fb8d06366ec7073014233083",
+    "behavior/bd_t04_w1_a0_b1__sender__nested.json": "c1d43635eb64d696c26ab91b4dac5bbad4d3940555afc7e02138a8a6d6182899",
+    "behavior/bd_t04_w1_a0_b1__sender__world.json": "bdc6fe4798d7ba4aefe42ac9a65ff1ac91640e954667b27983c6949573ca8c13",
+    "behavior/bd_t04_w1_a1_b0__omniscient__nested.json": "556ec477ea6aacaaa80cbf23dda8233a70a79f5212570555f9154c54bf7676e6",
+    "behavior/bd_t04_w1_a1_b0__omniscient__reader.json": "87f54be8efe295f4fe71a212e2721c439ff8bc489bf347b8e240a666ea4f71ee",
+    "behavior/bd_t04_w1_a1_b0__omniscient__world.json": "34e6b4a9a0532615ac8da220ada23809d1fbde5becbf1e0a218bec329ec10d80",
+    "behavior/bd_t04_w1_a1_b0__sender__nested.json": "8832d8034abfe464e70d9cb6a270db3a2ea8df8c4b87abb266f8bad172563fa7",
+    "behavior/bd_t04_w1_a1_b0__sender__world.json": "e3dea3d4c2d9863c48a9696e6a79135978ec19cbadecdefcd01c8def82c50a95",
+    "behavior/bd_t04_w1_a1_b1__omniscient__nested.json": "52acd57b44d2906ad5e2ef26ff23a691c809740735ef2266c6bd561a15c81e17",
+    "behavior/bd_t04_w1_a1_b1__omniscient__reader.json": "042858a14309042199e8a8b8155fc4adaf4dd29ea04ef545c3270ebdff2432c7",
+    "behavior/bd_t04_w1_a1_b1__omniscient__world.json": "d0f13a19078f87a40ac730ad743a1c8541aa14c8ea9e7b5ac080d5f9f0e32181",
+    "behavior/bd_t04_w1_a1_b1__sender__nested.json": "c19a5fdfd8a91ba15fd7a9f12df6bba0b4deb959240b714731419a7ad6eed9c8",
+    "behavior/bd_t04_w1_a1_b1__sender__world.json": "c83fab7ba9ad209efcc8949699fa12b4af92865fb25c0a9788663c95e1629689",
+    "behavior/bd_t05_w0_a0_b0__omniscient__nested.json": "2198143dd522f5debb993afae4ea3686972b0631b28d4e6014cd1a1ac1955c0f",
+    "behavior/bd_t05_w0_a0_b0__omniscient__reader.json": "e9d1609e599b4665157be734448f8a3bc2d386b10fd652bebe2b1984a9044b57",
+    "behavior/bd_t05_w0_a0_b0__omniscient__world.json": "cb715750ede7285ecf2ed3d10860c1649fbe80bc5925c2aa219d2b61028a8305",
+    "behavior/bd_t05_w0_a0_b0__sender__nested.json": "ced8de655999128b762829e8fbb59a8b203dfa12d80f1eb9ea24eeead24118a7",
+    "behavior/bd_t05_w0_a0_b0__sender__world.json": "5d593b3271a25868d10774832e209c1b61f0a117e69c0a9762560951749333d3",
+    "behavior/bd_t05_w0_a0_b1__omniscient__nested.json": "2566f2c042373e8eec88da6186a78ee2248b1b33560043d8df3bdace8e3535cd",
+    "behavior/bd_t05_w0_a0_b1__omniscient__reader.json": "6aa8cebd8af1f9f30b1bc6e0d4e8822e134e79b3cda5550e61c7eb831de36cb1",
+    "behavior/bd_t05_w0_a0_b1__omniscient__world.json": "8ce18270801897420978e3946c0be53a282412b54feb9f2bd722706d48e1d128",
+    "behavior/bd_t05_w0_a0_b1__sender__nested.json": "5b182009459a749ba087e8e2cc29bbb7fc366e480730792f29010a4cd051654b",
+    "behavior/bd_t05_w0_a0_b1__sender__world.json": "18d61706b3a34646fcc1679a3e19d956e23e1a3e06ae81a47c28362b718f3fa6",
+    "behavior/bd_t05_w0_a1_b0__omniscient__nested.json": "edbad506b258b8513e7395509501ec1bc5c2d68f9382730547ac3b3c702fb3ec",
+    "behavior/bd_t05_w0_a1_b0__omniscient__reader.json": "dd1a20f1b20f8a7ae8f8e914e506311e23c19449ff2e4a6682d5cb447954d5fd",
+    "behavior/bd_t05_w0_a1_b0__omniscient__world.json": "9c224e81c7018c08226fc602e1066f617eb3767e27cf5a2010b96d3f0546b540",
+    "behavior/bd_t05_w0_a1_b0__sender__nested.json": "12e895f93f8f6333edb2f7b4978994398087da77eef5386b8d45ba8afea13a8d",
+    "behavior/bd_t05_w0_a1_b0__sender__world.json": "c0c86528a1dd698710560bf53cb5cf54059ee54dc1c8bdebc316dd9f518ca2b6",
+    "behavior/bd_t05_w0_a1_b1__omniscient__nested.json": "153ff2d75b3f0c6faad700de042293e3f37550253cd63064a74f6eae4ee3e55b",
+    "behavior/bd_t05_w0_a1_b1__omniscient__reader.json": "7c6a8832780822ea5b561f6f67b629dc8da3f24f02ce8c97baddbb113221f09d",
+    "behavior/bd_t05_w0_a1_b1__omniscient__world.json": "7411f0ba92d2b094a59192d8e361defa33607f226558b987a1a60414c9ffcd16",
+    "behavior/bd_t05_w0_a1_b1__sender__nested.json": "8071ce62be181f6d86898422f2748bc6ed097b6900d401490938a6f71ec3e232",
+    "behavior/bd_t05_w0_a1_b1__sender__world.json": "50312282bc670d60e4aa678620627030e2710b88549d071a2d0d75ea3f5e52f3",
+    "behavior/bd_t05_w1_a0_b0__omniscient__nested.json": "e350070c8f9de4c4f8ae835f271279447b9bd37e58a03b6bfd48ff48ffe7b60f",
+    "behavior/bd_t05_w1_a0_b0__omniscient__reader.json": "e6c976ebee4459251c52749de9efb4fb9c76f56fb607c319acb8c87eebd3336e",
+    "behavior/bd_t05_w1_a0_b0__omniscient__world.json": "f9ac1392e0c464494ad5a797eb4f9099d2aea2114dd05c8b46cc319698c4c81e",
+    "behavior/bd_t05_w1_a0_b0__sender__nested.json": "abf81286b8f56f324bb082e85633d3e5acb3c648dbb25f45133b892ec0a576ba",
+    "behavior/bd_t05_w1_a0_b0__sender__world.json": "fd14d48ac610d5b75d7b1b1d0dc5994a312a25ada41d9882275b429911282318",
+    "behavior/bd_t05_w1_a0_b1__omniscient__nested.json": "5c29fdfc1da866bae4bee28c91706c19b16fec930083e1178b1157aa100ca7b9",
+    "behavior/bd_t05_w1_a0_b1__omniscient__reader.json": "7520af693e3a333630c9511c7fe606305e393c8f38504b6aeb6590ca02e8cbaa",
+    "behavior/bd_t05_w1_a0_b1__omniscient__world.json": "dc16de0d7775d1d9923399be68f1769c3f458fc264abac4d9564657771ccac99",
+    "behavior/bd_t05_w1_a0_b1__sender__nested.json": "4bf4621cc2a993a616b204dfac18526a80ee5eb9923b1d449da7463ec81571cc",
+    "behavior/bd_t05_w1_a0_b1__sender__world.json": "d2ad5de48e4cdc7a2c1463613fbe21db74dd13dfa05a34d69775b14762d9a26e",
+    "behavior/bd_t05_w1_a1_b0__omniscient__nested.json": "4f0178e38c39bb18e0c163523fb6b546bfd860a1431955a86b9146c3405ab652",
+    "behavior/bd_t05_w1_a1_b0__omniscient__reader.json": "5eff1519623434cf3523bb35b031da9048a546502e992745fcaeb103ec4e31b0",
+    "behavior/bd_t05_w1_a1_b0__omniscient__world.json": "0031533eef93643a20cabb196d6f9cad668b39677d20f20f7b82a1d4bc6f7061",
+    "behavior/bd_t05_w1_a1_b0__sender__nested.json": "937be04a4d5b8bf06b84ae1f1d7346bd458838b78891eac98e1bf0bd21a5240e",
+    "behavior/bd_t05_w1_a1_b0__sender__world.json": "170fbba4e2fd065ac8e67f15d57114de96be32908fad61ac98525cf8ccc420b1",
+    "behavior/bd_t05_w1_a1_b1__omniscient__nested.json": "f0bb10e6c5e6cafd665de9268d8e294c0384aa451166ec2f1c9b295b13909318",
+    "behavior/bd_t05_w1_a1_b1__omniscient__reader.json": "990095a5c2f9519c8096d9e53aabe64d0b9e7f9bf27c86ce31ef272506a6ebf9",
+    "behavior/bd_t05_w1_a1_b1__omniscient__world.json": "3598b28dcb78505de655f3cf72140a678724176815c7de855f5ac89de2d4ed89",
+    "behavior/bd_t05_w1_a1_b1__sender__nested.json": "ca3cc83dc5fdf74ae6a6c709d1962147b0724ad81526d50831460f3db3f5680a",
+    "behavior/bd_t05_w1_a1_b1__sender__world.json": "adedfd22e41917e759f23f34700b563131b7a397e23c1df88024b94d0149d78c",
+    "behavior/bd_t06_w0_a0_b0__omniscient__nested.json": "71e6c923e37921352c7c949ec3f0d0bc4d6d331bacfebefdb6f6ec67cddf9b63",
+    "behavior/bd_t06_w0_a0_b0__omniscient__reader.json": "2ac54bb98b0dafec5843c70761e9a0aad3b25666a136ee5668702cace4bb5da6",
+    "behavior/bd_t06_w0_a0_b0__omniscient__world.json": "d10b10ecde62935e44a2b5655aa6c6739c70ede2bea4cca7fc0ed35c76e9b13f",
+    "behavior/bd_t06_w0_a0_b0__sender__nested.json": "b82c14fa95a652918684ec9472e9441ce6fa37d582837943788b961c791a4b58",
+    "behavior/bd_t06_w0_a0_b0__sender__world.json": "8a7244f0050bd6ce71d3e6e507bb9f43932a271390ce5cf12a84915c81ab305a",
+    "behavior/bd_t06_w0_a0_b1__omniscient__nested.json": "6f675242b8d44b23635de0881c16347896b9098b2d90dcd438be9e08a5272999",
+    "behavior/bd_t06_w0_a0_b1__omniscient__reader.json": "e74db1f39ef2836dded194ab85f467fffbda690eee4332ad100a6c809741abfb",
+    "behavior/bd_t06_w0_a0_b1__omniscient__world.json": "a51d945d1bac991d9c579eb7333dd8155132a9be143c256ff4fadfb4e05887a9",
+    "behavior/bd_t06_w0_a0_b1__sender__nested.json": "166fad3b5cfb05427f34cecf3a619abfbe0a81d830f6c64f40e1ecdf4eadb192",
+    "behavior/bd_t06_w0_a0_b1__sender__world.json": "ae4d63264706f41e6a0e23cdb3bd2f7e23a59dee745cbd4bdfb0a069decc32a8",
+    "behavior/bd_t06_w0_a1_b0__omniscient__nested.json": "298848d93ffa971b7d89c1d4e1e90d4a47a56075254cfb0ea3e1030d23baf462",
+    "behavior/bd_t06_w0_a1_b0__omniscient__reader.json": "e53f7f55ade5fd6d6881fa1b91882557e2bf3c69f4939e490b416679859c8640",
+    "behavior/bd_t06_w0_a1_b0__omniscient__world.json": "1a220aa226084bf8e8440b100d60026a1fc4bff273a719fddf0bd7ee90422810",
+    "behavior/bd_t06_w0_a1_b0__sender__nested.json": "5e68278f407a43439a4acfe378f118cc3416228e5aaa349e35917c4cf2acfcad",
+    "behavior/bd_t06_w0_a1_b0__sender__world.json": "728b4e259a614829d3b57c5c63500a21213e40fb05c4cecd874bed0fe0aac4af",
+    "behavior/bd_t06_w0_a1_b1__omniscient__nested.json": "5e5be21c2f25324da836d19ba2fbc5b9969bb1ea99a89c3a718c4fe7f2ac90ad",
+    "behavior/bd_t06_w0_a1_b1__omniscient__reader.json": "de9cab2c9eecc4be63c3724a036e288ae48823fe2424099d46cb3b372adfbfc0",
+    "behavior/bd_t06_w0_a1_b1__omniscient__world.json": "47eb6c63b1f88398464a1e7cc1709fa1d7e0c59a875703d68a3349fbabe5bb87",
+    "behavior/bd_t06_w0_a1_b1__sender__nested.json": "c048e096a5eab673f85f5103931ec1ed827be24f0b3c9f3d3ee0ad5800d5301c",
+    "behavior/bd_t06_w0_a1_b1__sender__world.json": "984fb2f912a44b45172590e7821491fc4ab96fea4950e4c6b6bbfac6c787a646",
+    "behavior/bd_t06_w1_a0_b0__omniscient__nested.json": "548477fe673bfcbbcdcde9da1efc78e7dd5d7390cb2b5293271c267f744b5c43",
+    "behavior/bd_t06_w1_a0_b0__omniscient__reader.json": "f2a1a1b7f401bc5e44716d7e32e309b72c77bfb8bd6cae008e7fce93e071d4e8",
+    "behavior/bd_t06_w1_a0_b0__omniscient__world.json": "ee20f561a415a67dd0ed1aa05f13c84d9be935acdb3183e6cc89ffc5f6d287ab",
+    "behavior/bd_t06_w1_a0_b0__sender__nested.json": "af55b6712b33974078c666d2a690e5d81464b54644cb78cdc4739b94d0204f7a",
+    "behavior/bd_t06_w1_a0_b0__sender__world.json": "0315c42a359ac1570cd1eeb13972f49c237233fcfe6a0fcfbc63ed2c1275b16d",
+    "behavior/bd_t06_w1_a0_b1__omniscient__nested.json": "5f95e4a56f9c72841ac7f94388ab63bfa128b3f8fa4e19bbec9c457949ab5cfc",
+    "behavior/bd_t06_w1_a0_b1__omniscient__reader.json": "e1590b56817afbcc35fe49f7ae7fb3ebf6f3b422521a6dec6b7d5b306c9f4193",
+    "behavior/bd_t06_w1_a0_b1__omniscient__world.json": "6af8a9b38eeb628011c5b82e8b66985048127db84193f2e53a120bb138a6a177",
+    "behavior/bd_t06_w1_a0_b1__sender__nested.json": "9f954e225ebc88ee80d1720cd48a497f274cb52ab0c60b0ab8bdd43acb4b3d3d",
+    "behavior/bd_t06_w1_a0_b1__sender__world.json": "c358e3e8c6ae052876fcf1acf5a2fabe501d4cf11ac5171b1af87443cb818682",
+    "behavior/bd_t06_w1_a1_b0__omniscient__nested.json": "6b6c695e7d8af4042ebf9012239d58332fdaa0fcf967efac85723459153c37f2",
+    "behavior/bd_t06_w1_a1_b0__omniscient__reader.json": "4b3b58d3c1cc81460c368042a86e06e99e697f6149ffc84b9ad8f9365b6ea273",
+    "behavior/bd_t06_w1_a1_b0__omniscient__world.json": "3a1dc8fbe2e0f720030bd76d9dd70e6b4d44397f831618d6fa9400e20d68e9d0",
+    "behavior/bd_t06_w1_a1_b0__sender__nested.json": "abe33cd1fd91577548c70e26b4cd3851281a06345b3734885b9366602ae32adc",
+    "behavior/bd_t06_w1_a1_b0__sender__world.json": "4b744d3f2f4af12cad584100b1d827571b34c941ba67219091740f7766cb6cd7",
+    "behavior/bd_t06_w1_a1_b1__omniscient__nested.json": "cc373a17f3f14b9411101c847acf36733b9d5265735882ab8ee02d1dcb42a5ac",
+    "behavior/bd_t06_w1_a1_b1__omniscient__reader.json": "28e1318994f038e99547a63e783dbaa86213d06d0935f738e3c79194b5dfd789",
+    "behavior/bd_t06_w1_a1_b1__omniscient__world.json": "d92f372d26e5028fb3924e80a4085d2c54ed616c429981884c430fa38e332a42",
+    "behavior/bd_t06_w1_a1_b1__sender__nested.json": "3b5a2bfe854493569806e21589cd4efffcb385fe95277cf7ac4031ff894907b4",
+    "behavior/bd_t06_w1_a1_b1__sender__world.json": "5752f2a637570a5f617297f970cd9f428789fbfd8874f23d599e139bb02fc82a",
+    "behavior/bd_t07_w0_a0_b0__omniscient__nested.json": "061ba78ea922d710545447fe1565e655b767daa2aff65b9d3e054d15f51db7a8",
+    "behavior/bd_t07_w0_a0_b0__omniscient__reader.json": "e55587703218ac516180aca4fc13ea05dcf608307cb748130fbd6469553a3337",
+    "behavior/bd_t07_w0_a0_b0__omniscient__world.json": "04514ec0d23f510ff5e49b3d0a9657f76ce9b90d223a0446de83747c434393a0",
+    "behavior/bd_t07_w0_a0_b0__sender__nested.json": "b73b390012b8c7b31c22d7ba7b15ae5b00d91e2881f484116204d0cbd60bad08",
+    "behavior/bd_t07_w0_a0_b0__sender__world.json": "487963962b4c21dbca524381c976d94635b70390f3a23f19e80f6d9327c03b4a",
+    "behavior/bd_t07_w0_a0_b1__omniscient__nested.json": "1b67063ef8bc8014222d1c275d147e101b49d99f8a48df01520dd1f81b786e0e",
+    "behavior/bd_t07_w0_a0_b1__omniscient__reader.json": "1eac0e80819bc93971c6a00814efefdf817e95696b17ef5476b641609fda1543",
+    "behavior/bd_t07_w0_a0_b1__omniscient__world.json": "e039ebc8cd4ba986b2f8890fcb09380430f43b41c060fba9ddfd1b41df1b3eae",
+    "behavior/bd_t07_w0_a0_b1__sender__nested.json": "a930f580257455f7f051931593ab7dfd460e9e040a0f8446505dbce3b6753c8c",
+    "behavior/bd_t07_w0_a0_b1__sender__world.json": "b8a15cedcb0110ebda78e6bebee6acb8ecfa6cbbdf2a0688cdec1764766a1114",
+    "behavior/bd_t07_w0_a1_b0__omniscient__nested.json": "7fe5b06ce9b46ebc7340484fb098e49e632d08cc7734907a295de04aec901f66",
+    "behavior/bd_t07_w0_a1_b0__omniscient__reader.json": "129e8cf7a99e07bf7e0b4e38c1c550809e19b2fe6b117cd813d12a056a997161",
+    "behavior/bd_t07_w0_a1_b0__omniscient__world.json": "24a40d2e0782860fc723b8f3b6eae0e35eacceb5e140b2cccd724d52bb5e46f9",
+    "behavior/bd_t07_w0_a1_b0__sender__nested.json": "42787879328d4c8af5374f12b8a9319e9b071f2c4ead940e092aed495607136c",
+    "behavior/bd_t07_w0_a1_b0__sender__world.json": "f5cbb9ce418bf5fdaae28aef486b8cfaab2a27efc401dedeaf2b7e0818ce942b",
+    "behavior/bd_t07_w0_a1_b1__omniscient__nested.json": "14074390893db236080a85d4c015f05a3fe9d1b56b5d997648c2ef7231e03666",
+    "behavior/bd_t07_w0_a1_b1__omniscient__reader.json": "c40528cb65fa78de79d195882b5ab0008a93565fa56dfd52558911ad04a0e9fa",
+    "behavior/bd_t07_w0_a1_b1__omniscient__world.json": "6e575a03c7b8e11ae22ed9cd032a7f26c85679140642a58b2a8766d52e51dc63",
+    "behavior/bd_t07_w0_a1_b1__sender__nested.json": "dc9ea61783421e3cb57b0b420ccdf1d245aeba47245ec1e677204243edcf9435",
+    "behavior/bd_t07_w0_a1_b1__sender__world.json": "6beae215a2241fadad3ec91fce9b8c1ee18cd03537c5965fa4cc7f10e4e6fdc2",
+    "behavior/bd_t07_w1_a0_b0__omniscient__nested.json": "e1f5cc5d03796d3d9cd4112e119df227a6aed72e3109a1c5f69fb137d2eebcb4",
+    "behavior/bd_t07_w1_a0_b0__omniscient__reader.json": "f024224adb6d49de6fdb0d08edb156146047f454dc667ea620f8d3380718d1cd",
+    "behavior/bd_t07_w1_a0_b0__omniscient__world.json": "8f752b82502d0d763c742cfba84ec9f435574ea694774d1e54d21b65b0e85857",
+    "behavior/bd_t07_w1_a0_b0__sender__nested.json": "14fe902fa7c9189ac780dea652a8624cfeef57de98cfa9d0fbc5897c42897eed",
+    "behavior/bd_t07_w1_a0_b0__sender__world.json": "65eab184c51a69be44a172d735a2874a6c87993c46c3ab05e5551c44f601653d",
+    "behavior/bd_t07_w1_a0_b1__omniscient__nested.json": "4d0527001f4adf4f7cd73bdb9b689a0c3d205517c6cd3715c6237efba437b801",
+    "behavior/bd_t07_w1_a0_b1__omniscient__reader.json": "d3e978d1086397056330496cb01809528ae4b76c4b8c2fa187ce1a5285ebee00",
+    "behavior/bd_t07_w1_a0_b1__omniscient__world.json": "79467999921696fb44ad7a6e497e6f3e32fbda90764695245ffa0653b6a1e59e",
+    "behavior/bd_t07_w1_a0_b1__sender__nested.json": "f7cbd0603204002ec227f9c671d85af981e48a5d20fd9ec5265ffc782734b505",
+    "behavior/bd_t07_w1_a0_b1__sender__world.json": "452cedaed683b082361facde3ac527c7b150e3784bfbac9f1591bafa447c2a6a",
+    "behavior/bd_t07_w1_a1_b0__omniscient__nested.json": "074a362ca408ec926f93be1566dcd3c57c9b5e66cc0c3ee05acd5b0f1971d08b",
+    "behavior/bd_t07_w1_a1_b0__omniscient__reader.json": "2ad0dc6bd357675253ce92060dd3a4b5ea04dfa6444167ce0d58f65ef61a8164",
+    "behavior/bd_t07_w1_a1_b0__omniscient__world.json": "761d8af756c8ad6139c04e7f0008bc01ee23e58e21928403f3573fa4e88c4a8e",
+    "behavior/bd_t07_w1_a1_b0__sender__nested.json": "fc73509daecd67089fd487508e1fd8ce5cc804d7035518050305e23e3050a293",
+    "behavior/bd_t07_w1_a1_b0__sender__world.json": "d5ed7971bfc3e50b58f6c1d388f4cb51dfbab590fd7fd7ac96409daf96f047f3",
+    "behavior/bd_t07_w1_a1_b1__omniscient__nested.json": "10f487b7ce443d9e61fb01fe5c04b04a69b9dc884d0dcc278e857afb91285750",
+    "behavior/bd_t07_w1_a1_b1__omniscient__reader.json": "66e9f5e93d08a880562bbc0ab9123513bd0d557007e58368021347b04f96ecfb",
+    "behavior/bd_t07_w1_a1_b1__omniscient__world.json": "41ccd3122384b641f29dcbd9a4bf93c71d547307f5196e6f6bd64554badc9b8a",
+    "behavior/bd_t07_w1_a1_b1__sender__nested.json": "a4b69888e4572bc8c11fe2e4d39cde6226d9ed4067996ed99feb4cb9961f407c",
+    "behavior/bd_t07_w1_a1_b1__sender__world.json": "659f3c7a237fa003b5a728b239caf3aee89bbda63635b65014cb93b908f6dc69",
+    "behavior/bd_t08_w0_a0_b0__omniscient__nested.json": "c457b1b105f86aa27c6984185a7bd968968a179aa9c59ca69c086bf720b25d32",
+    "behavior/bd_t08_w0_a0_b0__omniscient__reader.json": "416b3ac59a12e55d7b61403bda9e51d07563d02b25baa0d91593683a22d3246c",
+    "behavior/bd_t08_w0_a0_b0__omniscient__world.json": "095cca858064f5b61c93eaa3557edcd15fdbc80d867439bf9b08a2d273f8658b",
+    "behavior/bd_t08_w0_a0_b0__sender__nested.json": "1fed0c2d015aa1d47347050e144b5af855848e0e026ffa6c4dd78d6eb547ba1b",
+    "behavior/bd_t08_w0_a0_b0__sender__world.json": "2288ed011a616867ad34a7463fe0ea3f9a7a78a851e030b61de227dcd2a55cff",
+    "behavior/bd_t08_w0_a0_b0_delivered_current__omniscient__nested.json": "56f92f2e6742fa661a4f5485b00a1bfeb931185220721a888ad652e9339651b4",
+    "behavior/bd_t08_w0_a0_b0_delivered_current__omniscient__reader.json": "c0ce8f7298b45037076a75816d5eb6f6b25753b3da87a16f9961613ff4210b5d",
+    "behavior/bd_t08_w0_a0_b0_delivered_current__omniscient__world.json": "39c45f491344d2d8eb9d1ba5c1105a55dedc8b83a6f5d6c263d44d03cb1a68bb",
+    "behavior/bd_t08_w0_a0_b0_delivered_current__sender__nested.json": "730a6c3ac7b289d620020fd746c0ee2de6bda4729ee36ebb8995327c29ef020d",
+    "behavior/bd_t08_w0_a0_b0_delivered_current__sender__world.json": "654b17a949ade7774eca531fd58a78ea6b04605ee35c454aa7574672ba88d138",
+    "behavior/bd_t08_w0_a0_b1__omniscient__nested.json": "8a71f8f4f4ab436c581c84556df464f0361a9ff4fa5533648116a2ac1c67990a",
+    "behavior/bd_t08_w0_a0_b1__omniscient__reader.json": "3a7459d043bed2121f2245782b969ef9a33642daf413f0fe818c171ea5d74c96",
+    "behavior/bd_t08_w0_a0_b1__omniscient__world.json": "5531bd529fae8b97e6a6b32e525495ca551c7cc277238eb90b9a3adfcb82526a",
+    "behavior/bd_t08_w0_a0_b1__sender__nested.json": "c0a65f1c2fb0edc87e851576f0a5e4c3dae22e5fe27865db74dff9fe63bea223",
+    "behavior/bd_t08_w0_a0_b1__sender__world.json": "3e8c7effaeba773d327fb92e768c34e9b59659780a6fe10dbda7eb8623bbed42",
+    "behavior/bd_t08_w0_a0_b1_delivered_current__omniscient__nested.json": "343f8cb5e2826841fbed7217a2d628030c7e729caffb17093566f0bdc1b1c22c",
+    "behavior/bd_t08_w0_a0_b1_delivered_current__omniscient__reader.json": "efebd2314b8de39fa1abcac1a7d15121ebaa4c7b095c631ba4ed82ef3c3d5d4b",
+    "behavior/bd_t08_w0_a0_b1_delivered_current__omniscient__world.json": "0e43e03349c81ef12a9b43238a73d62b0a36cabe2f6d95b11b6c8274900fddf9",
+    "behavior/bd_t08_w0_a0_b1_delivered_current__sender__nested.json": "24489c0bc612f7b0c57dbc06cd85d9ef3fcbf0a74a46bf907c06861fe0e5e33a",
+    "behavior/bd_t08_w0_a0_b1_delivered_current__sender__world.json": "5d9061ca7bca71587de18ab0c715b8dd99c342d000d94aa9d032787a6c829394",
+    "behavior/bd_t08_w0_a1_b0__omniscient__nested.json": "64684f77e1a52137032f16c2b3792a85154a98d4afdfaab4c4d9ec830066cf7f",
+    "behavior/bd_t08_w0_a1_b0__omniscient__reader.json": "1760658859b158933bb44892ffdb539fe30b562ad65b615afca8afacb0e28e0c",
+    "behavior/bd_t08_w0_a1_b0__omniscient__world.json": "4eb17f9fd07918b064934c6227f2f957040bba47e47d2c3a6efbd01add4a6b1e",
+    "behavior/bd_t08_w0_a1_b0__sender__nested.json": "c6d2316bfbb468256be104fbfdb24fe08fc3ec8b2ac1cf383a45c49e0520dee8",
+    "behavior/bd_t08_w0_a1_b0__sender__world.json": "45ad717d9f36e0045ec734938a595345aa912225f3224593944e394fa5d3d93a",
+    "behavior/bd_t08_w0_a1_b0_delivered_current__omniscient__nested.json": "d7cc423ec5920418961e26bd9c4bc991ce28b90fe7905590adae2ba321c2ac2f",
+    "behavior/bd_t08_w0_a1_b0_delivered_current__omniscient__reader.json": "3cf32ea22b6098658972fec94bd80d0b9c3b8465254c817642249924886224cf",
+    "behavior/bd_t08_w0_a1_b0_delivered_current__omniscient__world.json": "01950c4430165462b1444e82aca3574e7542301653e0ff575e7c59e2de29094f",
+    "behavior/bd_t08_w0_a1_b0_delivered_current__sender__nested.json": "9217de18d7dec55d42aac64bff59274a81d0565c6092bb6e332770f4ca42aa71",
+    "behavior/bd_t08_w0_a1_b0_delivered_current__sender__world.json": "2363ae9194b99d78687a38a887e2fd809f59bbb75cee3f69d61934a6007e2f52",
+    "behavior/bd_t08_w0_a1_b1__omniscient__nested.json": "16d2de5e2dda63e1522045a4eeac3af14c7bc6596d1676f24acdd7a135ea0265",
+    "behavior/bd_t08_w0_a1_b1__omniscient__reader.json": "bb3fbd0a630d3a4331f9d6a49f9a5b524811e0c489b4684861fa1e1edc18dd97",
+    "behavior/bd_t08_w0_a1_b1__omniscient__world.json": "70323766ae34e9c0f473d633afbcc8e54e8aa14a1e90f74003ce03b247c1e3b6",
+    "behavior/bd_t08_w0_a1_b1__sender__nested.json": "a89916eff2c6a0f3d2def8b306366f71063a629468599408264e3a575e46e712",
+    "behavior/bd_t08_w0_a1_b1__sender__world.json": "e772803468b45662fd26f4cd6b5d1ec99600ec6e924ea4fb21fe2c383f320f26",
+    "behavior/bd_t08_w0_a1_b1_delivered_current__omniscient__nested.json": "67be032524d7b520c91e171ffa56f082b5c238036fef81a3fb2fbb8a39cb59d2",
+    "behavior/bd_t08_w0_a1_b1_delivered_current__omniscient__reader.json": "fa75da9caa5a12aaed4db16885e13f54d9cfb0b3529160faff42a9d3ef7c9b32",
+    "behavior/bd_t08_w0_a1_b1_delivered_current__omniscient__world.json": "d810ad6ebef9a9c016da2f05e340b1630a51afa142b419191a64a46ff6eb03f2",
+    "behavior/bd_t08_w0_a1_b1_delivered_current__sender__nested.json": "2e2a2a83598f5433541345cbbb10649986893d6f3614041106e5352963942f9c",
+    "behavior/bd_t08_w0_a1_b1_delivered_current__sender__world.json": "b5a4a93262762f8f18ce52c21aff4e614169304555f2ef943a8d755e37a4c1d5",
+    "behavior/bd_t08_w1_a0_b0__omniscient__nested.json": "f13b872ed1c91c40dd45e54b720d6bfdec55faa0f52f4d83d8352206922d63c5",
+    "behavior/bd_t08_w1_a0_b0__omniscient__reader.json": "efcb905f62b9d784e651f9f831a75132086036bf9c1a088e400c580666b6f443",
+    "behavior/bd_t08_w1_a0_b0__omniscient__world.json": "38168531dceb7e44ddd99da198905e5d1350465d53e1742188d52da6ef9dbdbe",
+    "behavior/bd_t08_w1_a0_b0__sender__nested.json": "3ae2d53848c495b5d5673978f47011b2cad74f1098ba04368e9a890170026ed7",
+    "behavior/bd_t08_w1_a0_b0__sender__world.json": "896285e5e3e689edd6f8880dc991291571e75ba6c651438e755f97b9496cf5e3",
+    "behavior/bd_t08_w1_a0_b0_delivered_current__omniscient__nested.json": "da7c4166849d0bd20a28c752298f1b111471ad25b6796d641dcd879d64351c81",
+    "behavior/bd_t08_w1_a0_b0_delivered_current__omniscient__reader.json": "b4773f734efb15e873910988748310148589f2f9aa91c22d0353d1603a6bf9da",
+    "behavior/bd_t08_w1_a0_b0_delivered_current__omniscient__world.json": "f688f17534ff13a084e6559f0e25d2c335fd937ce126cff2a1291595b3e1b7cf",
+    "behavior/bd_t08_w1_a0_b0_delivered_current__sender__nested.json": "2fbc5c242349a82bb20c493ba9f3f74540c9a20bb28e65bd37ef50ec4cc9d1c0",
+    "behavior/bd_t08_w1_a0_b0_delivered_current__sender__world.json": "f8a1380ea0ba2eabd839ca421dfb3f8c8357ccb44efdc30e8928adde75b5a08f",
+    "behavior/bd_t08_w1_a0_b1__omniscient__nested.json": "5268a6b07e055ddf4b94f4e2b930da98a3f116d611c1da9d6de6e9b6a181ae1a",
+    "behavior/bd_t08_w1_a0_b1__omniscient__reader.json": "76f44124c412af45c08c24ba8dca569e0272f2b2472ce9c8c0ecc432a667fe6d",
+    "behavior/bd_t08_w1_a0_b1__omniscient__world.json": "e8bd57a107b1b5042c8c457625bac58eb5841fb214aa41ea876f338925d18ed3",
+    "behavior/bd_t08_w1_a0_b1__sender__nested.json": "78ff84d4258afdc01ca82da6b3f95f019faed1462361fbb7254b88337b26093d",
+    "behavior/bd_t08_w1_a0_b1__sender__world.json": "1964af1f53d80ebd78094691a24f68ceeeb730acaa7ae40743e59bedeb945a52",
+    "behavior/bd_t08_w1_a0_b1_delivered_current__omniscient__nested.json": "94dd162e099cd725e32b2aafbc967700a5d1384aea51185735e5b6f86e4e6cf6",
+    "behavior/bd_t08_w1_a0_b1_delivered_current__omniscient__reader.json": "8a3fc4e8f5571b509dbb12ade3d4bb6b24d18c892dba6fd8e8db968a403da912",
+    "behavior/bd_t08_w1_a0_b1_delivered_current__omniscient__world.json": "292c7e75ddf11fce238e7bb8d03c30f12316f176864afb820c01ad194775209a",
+    "behavior/bd_t08_w1_a0_b1_delivered_current__sender__nested.json": "4d38014815f0c0279e7cc30c6824c67c5b9767cd33ccf6af3068a7c7399a3f8d",
+    "behavior/bd_t08_w1_a0_b1_delivered_current__sender__world.json": "44da4ce553c1d55597a40a9c4508e99f92d52afd2ca6a503221b946b74fc61d0",
+    "behavior/bd_t08_w1_a1_b0__omniscient__nested.json": "9397ab42cc3ca9d2e2474b70d6ab2465ce41fce0d0d1fbbccfdbaf5e9b719aee",
+    "behavior/bd_t08_w1_a1_b0__omniscient__reader.json": "554071ea631cd9b010ea56e9ddcd189c04fc66f91a08b7fb11afa18119bca05e",
+    "behavior/bd_t08_w1_a1_b0__omniscient__world.json": "f47488e8007dff47bb186f9e45ef7553db81baea52481a7615ab1c2a60f0e855",
+    "behavior/bd_t08_w1_a1_b0__sender__nested.json": "6e28459bd9660b58b31ac1c60f8265851e6d60544f93a80c60f75db2df8bc07a",
+    "behavior/bd_t08_w1_a1_b0__sender__world.json": "0b1523bc79ac622f4700a8cfff9700be164ecaa7741e3aa5619ca4168233b9a9",
+    "behavior/bd_t08_w1_a1_b0_delivered_current__omniscient__nested.json": "1fd47bad0afe26085eb410bf1fd5eb6e18f511adbafdebbae97b9fa937491895",
+    "behavior/bd_t08_w1_a1_b0_delivered_current__omniscient__reader.json": "7c44e638f895a3f79fee6e8d389fbd590d467e43c097aa2d291ebe62d07facfb",
+    "behavior/bd_t08_w1_a1_b0_delivered_current__omniscient__world.json": "d5524f46046dc9da8de0ec7726a07404a23aed3b8b1cd0e7daeadb161714c118",
+    "behavior/bd_t08_w1_a1_b0_delivered_current__sender__nested.json": "56e7f7b9c4ccc65d2d600baa14dd4c8ef9ba4a6dedeab48cac275e5ecc844af3",
+    "behavior/bd_t08_w1_a1_b0_delivered_current__sender__world.json": "07b19b64654a037cdf4017c8abcfc02b4822f547b0e027135194d07d37132b62",
+    "behavior/bd_t08_w1_a1_b1__omniscient__nested.json": "a0aaa370b3ef7f9e14ae217bcb192085b9b78055e8ec1fae38516cf849692d0e",
+    "behavior/bd_t08_w1_a1_b1__omniscient__reader.json": "2678bb0f911f3af627a916283f8bf2efd59d95e10ec49275632a12eb5a84967b",
+    "behavior/bd_t08_w1_a1_b1__omniscient__world.json": "3afd8b34e132569f5cc826c535eb9951fae4760dd6e8c40f4eafe2252301a38f",
+    "behavior/bd_t08_w1_a1_b1__sender__nested.json": "0d83bedccd315ca5091a93d6391bf1827b3b5fcc5e194f9a4bd8a48dc39d95fb",
+    "behavior/bd_t08_w1_a1_b1__sender__world.json": "eabb07ac4323f0721a4d037e56896b8b0f618fcc0ab102bf19d4d4a10451a5db",
+    "behavior/bd_t08_w1_a1_b1_delivered_current__omniscient__nested.json": "7c339b1cdd2c1f11aefce0b3324e4a91d6b20560b143e3638287ed7dd287d131",
+    "behavior/bd_t08_w1_a1_b1_delivered_current__omniscient__reader.json": "606ef5fbe6414eb9740970b46b10d0cfe82fb2fdd49f8c4208bb28982fdb4525",
+    "behavior/bd_t08_w1_a1_b1_delivered_current__omniscient__world.json": "8785940ba537e265d15355366a68ff9376defb5d1ebc0ce1f940e29bd7c30434",
+    "behavior/bd_t08_w1_a1_b1_delivered_current__sender__nested.json": "f1b7726ce07cdd0717c8aa21751e6ca9c0cf5c475d2f7b4236ba2b981f15ba62",
+    "behavior/bd_t08_w1_a1_b1_delivered_current__sender__world.json": "9f737d419158f65580d33bd4bbdba1ed2d280acb17b48aba6a202ca6707b891d",
+    "behavior_summary.json": "9c8df6eadb19a2ee7eac563072f45e41a7babb7e249c589ee8345acdb56a7e1e",
+    "captures.json": "f3555db5afdb9e650fe4c6d46b8bc6ecf678a8870edcfb0812994b6f9c9d0c06",
+    "features.npz": "a70ad0d0cb60ffd69bfd7a41c41c9e5ac2508bee392a32d02b86742e1ac7f5c2",
+    "manifest.json": "a88cdc43261502c06c59f62ac924adc7199c859b5ed3be39de507186cff963e8",
+    "prefix_features/00eb185990284b7658b30d9b8590e9f3f936df4c4f4cefd140923ef0017d5cf9.npz": "3a032878d2af80d0c70622fb3e1e1bc9f9eec6a56b5466cbb067c092cbfdf54c",
+    "prefix_features/011a0e8765846cbe5e3dabfdb52aa60c00b8155d8036a67fbe8a5605703af6f1.npz": "8db308a402c9e8e5966b607ad02816875be537de8e2dee88da889e04a4eb2ab1",
+    "prefix_features/01b1b7af64cbf8ecef1141cef694c75f9e808dd50484b3a7207ecd36927d89bf.npz": "0bf1f5a0d70cd8b77374624ed34c09d11e2bed0284707b0ade732948a140878a",
+    "prefix_features/02cc1de37761ee70188215781b6d774491b919a7cf96e8554692f39679ffcf79.npz": "4528ab965bb0edf98395d4940e56e2d304032264e6e8ca87e4906bb2071345f6",
+    "prefix_features/040d100bf3a89362bbddbc7110e3c4826856e68e426db300eb8f3814e7a02848.npz": "b01bce3adf1f67faa27587f6e9a6112d1c27ae53154089967a5de3032f9865cb",
+    "prefix_features/0464f78330b05d794ba809623d4f01ef397d32bef83ea8e4a6ecd4006c57a43c.npz": "3c6e9fbdcf6d39e9128458f7ff739d6a99f23e1697e8e0497a2ec4b0b6e017f3",
+    "prefix_features/04a304b01c56eb24c8f30ec4871b883e4cfad956f5c1e1af21d6f78ac540a294.npz": "f3f2e87701b28b25db28e1cfba62c53b2bda8a24bd2c0b641df5b8083d1fe09d",
+    "prefix_features/0613292d838ee50302bcff836576c7f848af0b86d8b25ea7573543444cdf0415.npz": "38108adb8c1ff5a947e364a81e62c882990c4f984c869559b2475bb4aab67565",
+    "prefix_features/0893571a44e674838ce0af574bfd405c077b693c6210c80aba098b0a9b543418.npz": "4150efec388dab864c1180f7bc54b47d10a6df743690c5966313dfa109a3b7c0",
+    "prefix_features/0ea1d6c2060ce9c22800587bdd48e56b66f19cc051f55f3b56750464b2c3978a.npz": "b54c84c3968f76c7f5b8df752342f15b62b7283f811aaee08585deb0c0f51eb9",
+    "prefix_features/0ef6abf688891f78ced88b1d65ad070cbd00180400014921deeae61f63bc3521.npz": "3dd5e5f7b9e47205cfafc8a36dff937ab503cf473070df024e4052c90ab446b3",
+    "prefix_features/11d5b98b27bb14116bc8f3dda9e931ef844948ef1b5b9ad199fdfaf8d3942004.npz": "12948fbcfe7b2c4b3ddba92f1dd1ac1c06835366bb6412a64b8cab121fb992b9",
+    "prefix_features/125c7da6a247a437b10b1790d6d49ee56289f7895709468e0a52573a62d1ef4d.npz": "ec4a6ed155ac9e112ced6ff42d31dff698ab7b10fba7a0273737d2f0b4d2a599",
+    "prefix_features/146ac1bff2ab1c76c98bdef91bd5f78ff52b1c4a1eba5db0a741637c9db77a17.npz": "78c815e3cafeb4e698f036936ec2fa9e6b242313c38692e907a8a4b2b52564d1",
+    "prefix_features/1a53b95b2637a299cb40b032eedb298b80334301a660a45e03045379adce9668.npz": "b31a5b4eab8f371e64a4a19cfdf0fa5bfec243697cd5d2e027e24b5bec5b4091",
+    "prefix_features/1ec575cb5bc32d473eb11355c90519393e85e6c44cd9d12793ac1794aa980f3b.npz": "0cb9fc61521938551d44be49875d64e2ee7fcff4d83ac7b9626a755a83e10224",
+    "prefix_features/1f8ed780b9c84e1d429960c95b4eab3af0ab0f6b9608d247b620f117cef63b16.npz": "ced233c9f4399c817060a39dbab26018c992890040bf8afed95c1c9fd38aa505",
+    "prefix_features/23c1e94a6e7d4f10a9d042f1f612c625750726e0c138011e67510d6cf40b0bc1.npz": "d5856eb88423447f81cc943b3c806b6425616d160f0f1db543f2ed4b11a3b734",
+    "prefix_features/2aa4cc013aceaa18e7f248f8652ed9e4167ab4166a23aaba1493fe407e02f893.npz": "4bfeea174a369a8312a76afc48d6bf4fdfe19e2d9a9e68011114c4c694b61f21",
+    "prefix_features/2b7ed491da06cccfcd440867e17b5657c1b94e4f37107f7db7ed79caeba8d643.npz": "1195f122765aff407e353f3d687c2d67ca4b3ce2adf3e0eccccab2553439a509",
+    "prefix_features/2f8a7de3980c7c3d471d898213377f389cea4f6dfdf07b905a30d623ebe40c9c.npz": "19b22ae10fbc17c97df9a8c2af8d2f2f9a24e2c77ae15712c138fcbc6f85bb01",
+    "prefix_features/3046b7f118b50670b121687384f9fb45f9ba5c434152384877ab8791e0ee7140.npz": "e4895be75b8038fe3134f2c6a0ec0f470964eae810903348673957d1d37a9c2f",
+    "prefix_features/3063c6283fb7031bf6ff6cf1bdb8935dcde05a1ab223ce4cdf65571f37cd9e60.npz": "719f18f83801078f36c7e4189bb4bb61ccb7cf0b5f7afa5a3d326ea838050317",
+    "prefix_features/333255ba5d58f8d6bdfdf7a4b19b987341a1e4abf11cc590623dbfa53a14586b.npz": "a4be7d7fb3a9d87d3b39bf5d7623de028259c1d34aa77a4eeff5e92e68aa2787",
+    "prefix_features/33713c5eb34270639040bdb5b969f0e2b8c58c5ce532913425008b0a0dae150c.npz": "a0f795deda6add2c428645d37d4e19bbbe8554c793c6f4c89f26957fb09fcf3e",
+    "prefix_features/35b8d5c683bd3b5bd5ce96b2400a3a3215f7bd0de6c1feff3f40937fa4e8aff8.npz": "65cd04735f9eb9a62ddb1f38253bc4a77d39738164ab66567f8dbf4d9c0866d2",
+    "prefix_features/365986eab58a1d1e32e96f6f3202fa6a6f95d39414aa46fb450838cec295839e.npz": "da388f7cb1c611c086733abe2afcb3703602d026280ee09d6447ebb8ff730f49",
+    "prefix_features/374b744a249203a9c2d5a3ff2dbc8be047731cf070f9294b4ce4be291ec90e3b.npz": "2f88527c6b01c9ee984830519d2c27947aeeb28f68c3e1ceccd472edcd70b57d",
+    "prefix_features/3acc68f1f7086904a3c5202a3249bcfa6b0041eaf13b4cd1fbc4dc3631fd1699.npz": "42a80b01aefd3162a6573bd9f920d158521e7ce220a3fa1ff8ec770f2737216e",
+    "prefix_features/3ef66bbb74b6e4a6e2ef7a93df4e36065f31b548fb9a0242c0cdc775ad0f1549.npz": "b48e08b11adfe1ab176ea80e8d08e2d3fe997e3d4e8575bd615fc6d9d08046a9",
+    "prefix_features/40fce610670fb5f35da76f9a0ad2e1d9abe512b867cb083082a430a5da952c45.npz": "aeedee8d4ec180c655cb9846c395a0d28610bd92c8efc86d22d4387ce13358e7",
+    "prefix_features/413172d6edd289cc54e7ab6ecddc3d29251d6987a167fed3419df5e0ed5c28ab.npz": "451b2268cae61727e4bd8eb4d5bede6b217bafe41b28f9573bf0a18e37ddc461",
+    "prefix_features/41660ea2f34e60be3c35a3f4913cabe91621d2d7d3013b1da4dfafb59175905e.npz": "e0359e3862644aa4a2e8aab18c2ab79249cbb6fd97fe9088f918781137950e5f",
+    "prefix_features/4dc2b0f2d3c488d28bd83e05131c844930cb5a332ca2b9fd7211dfe73a0dfb61.npz": "fac6cf29ff01f734465798ed8e08efe7e0060d17b48e8d8928382548a7c3549f",
+    "prefix_features/4f5f2280edc0142031aa4f417beb407ad1afe4aaa903a8c205112bea5513e5d4.npz": "8a2a0035644c701c334602b42b527a645663e93eed22311f4289cbd744cadb89",
+    "prefix_features/501aa25cd28f4eccf862ec7af9e22a816f4b304280e7eea0805724c9c8a3be94.npz": "85c111f1047bbd351ec0cd180f529811f3987c017b3fb5b883420db35537142f",
+    "prefix_features/52a8ceb936f6b09951856602ef4c5665058b700bffcda25544418e7d9edd8479.npz": "ac8cb072b72074e54d4adff20d545cfe66ce85707868c0660b143e58621802c8",
+    "prefix_features/5689550b7d5b55d60c60a52bd872828d0d05ae8978d4476e030409da5cd6f600.npz": "d3a990e927a587531fbd16317e30c7433b33e24cd41c05699d1c10b8a1b7ce6c",
+    "prefix_features/57bc632336610a7530950f14980debe47dad408201ee1e0df0975cdf401705c7.npz": "b6dd053bd73908d8d1cb938d854dfadad445ed447cb5340f64f4c6ab418f7b65",
+    "prefix_features/5bd23a27e3b759aedb381b14ca4c000e9fea574c31b84343072f4a2cf977933b.npz": "b65c1f9edbf4473cd969c4e7b63b1754d976d4fbb9727b48c2258ccdc4321d9a",
+    "prefix_features/5e0c418df090befb3492c66ac1b4323132b96974fd4e35e37e9539f46206ad39.npz": "215e2457d5f15c25bc97e888bc4c49476cf3a0eeaee00afa3c1622831ba52607",
+    "prefix_features/612957a88dbed0dce4a6daae995f37ae051a62c5fc611143b3af744190b63941.npz": "1da760de6974e33ae74de786d76f51ab1eb95202a2db07c18800a19aef770d03",
+    "prefix_features/6224e6c8e06b8a886383d0c928cf2d63ece7273b20513c518888aada118de019.npz": "7da11a5284802d6722b3b57784b651482f6d965f3eebb864ac5b08753566a257",
+    "prefix_features/685dd63ddec9547f313e632f64e7fdff88fba62747e70299154c55935dbb1c81.npz": "49939202bee8f4bbf9a448f6369f72216575a196f9fc648873397f35bc8f3a85",
+    "prefix_features/6ff1c0023f979e5c529144d58cc0946e5ac443e22bdc463c18839c793300c07f.npz": "f1010283d2c67ad81b2e5c63707cebc7987efc92bba8e11d7211861bbfaeba58",
+    "prefix_features/71dc562a9396cc0293bbfc6ab18b6aa10ef07c00be1675c2140c053b335c3a90.npz": "c284eab0301e7d2fd10b58481e424021f346b5fc25e44014da12635b51efadc3",
+    "prefix_features/72036efcad0033d5c6cbaa2da0789fd3f6089b1cba8d20a3c8b7d3fcb385c35c.npz": "a0674ea22048603c0778fc65b6d9af7271baeae085bf895cbe7c7e97ab541c3d",
+    "prefix_features/735c5f3532047121deed21930069b9a55d8782ffc96498f166c8eff37e96a377.npz": "2990eb9835b2cecaf21154fc1b8eea53669aa6e559a072df5ac26fbe77589dcc",
+    "prefix_features/74b8089423596efb884160de26416cbbd97317590832298a4a8139899706d877.npz": "5bafb8765588cb0b630ea8d95e8c9b65410ad57bfaf8e406c026ce9c364250c0",
+    "prefix_features/75d736f589cd3abb828600eb665d9b768877cb5d6ebe289d9baa7259615f4b8a.npz": "f03644c93a392c4dbb061579023c60e5046b8a5b5bb4797d652a1b355d04bb56",
+    "prefix_features/7c0c949ae528c7c3101a789e4f258a198e153e572366111cfa7b61b5ec66de74.npz": "3fbf84dafab83339a2217b36f5e4fd82e6ce5c45c5f0d31feb2aef587eaaf573",
+    "prefix_features/7e4133dd45fb36d0aa77d5b24af44d740d6803e70272d738abaf5285b789f926.npz": "e4d222e172b6b30061fffb0b00002bc2f15941286b28629bce4bdf36dc073d17",
+    "prefix_features/828794006dabe3175d8e668d27984c1a79996ad7db42e35c9265da54a9e62208.npz": "3f985630c25873ee363a7b7cb2bece22646492baa5fe751f60883cf1784f1466",
+    "prefix_features/8291cf2339ade6f0fd086d6d8dc7279b0550d42641d84c83993b46d19dc76d48.npz": "d132e02b99171e89e1678390206d437d49ba29dd21eeb38ae4e7a3a08fbda9dc",
+    "prefix_features/847c4e1120646833851b1a9b904c6ae5fb126b6cb8d1f51f961430dcc8d1a7d3.npz": "7b96c8d0f2c4ad19a06ec82843dfb65afecfbf91119f0c4351ad5faa12bf44df",
+    "prefix_features/8488f483b29f65a2f8b7e626e50e79224d4acd813c9597cf55e61224c98e5035.npz": "cfb7be2774a8e1f7bf11aca95b4edf8c9141c1ffb42cb81da7fa0733a6f35859",
+    "prefix_features/87fc3643cfef4750033aeeda1148e41f501a48f6aa060df2065907ac21ef3547.npz": "2429249e3ed0321d4d427eb3e9f0c6aa1118cbc296fc69d488b11e1b55a3e84a",
+    "prefix_features/8a5b57315a7b0e4a880f247efefb21e71360cf71618bbd46f7af8deb33ab2463.npz": "ebb86389547c3d8fb7e6a922e44f87e1d534c1de8a5e46b4d36b9703fafcf87d",
+    "prefix_features/8b6f8ab29badd7113bbed5419f15b9eda9c33c3bc3c62ab763e024740f656dbd.npz": "e174d2c856fe5d5a26ccb3c40f6762601b0c6b8d7881799ab57a65140ee5efcd",
+    "prefix_features/8c2023232a3a430fa3cc37eb2d5efe0fb0dacdf1a30db99ed577f7c2234fb811.npz": "c7d360bdadf6b9823f863217e5378f8a55b79a2def25546e49efbf983274dab5",
+    "prefix_features/8ca04be71d5d434d8a6f83edc93feac4b75ba70dc4da14d4c485542fd9ddd124.npz": "f3e3b2423906a9f7f375f700e4719fb3bba7c87c5e1d4a2de9b874b7947438cb",
+    "prefix_features/9090d53baeb7ed232b04cc90479fd39e6d23dba3807a974d7368ca864feabc90.npz": "999e29d07c5d8fbdd92def5a6e1229d1a2a48851ba185a1e6671988a4764a859",
+    "prefix_features/90e827512e753adcf88a1f16f9855cba9b6ae3704e4a201e000ce418f8ac92bb.npz": "68b76b470e26959b283e121f1a0d1089f10d3bf97e005fc0049bb285f271fa90",
+    "prefix_features/920aaf82eaa41e69619a1417973b842a2403d558149bc2426b601d537d31f4e0.npz": "cf984ddcbd88f66bca9191a55837a6b9fd0ba60916a34e9d1634c231ad8e2361",
+    "prefix_features/930cdc4e4055125b5535de78299980ada24fb2c6b8f9088d9cac80415b58f4d3.npz": "7b2b7e2aaf239d6a1d0adb90bf15b71f05f56d3cee646c2f4fc21621a7c5d069",
+    "prefix_features/938040991eae7adc03318d9fbbe779b955066401a24eb98b0472c16c07aea366.npz": "5bdde0b9d53f8fd44e56717bfd924f672e2604d2eddee339ffea26279b75a9d3",
+    "prefix_features/93e3a3dbe715f1f99df135cab342506f122820849f21ee07a217583ebc3a1fe8.npz": "b8af8143f61df632100fbcd70c0382dc30ec5b6e834c5be04f5b6a9516d7828a",
+    "prefix_features/982d42b5bc5b1a3e9b5ded657cb0df414f9a6d805aa7af6a1007afde9da3183e.npz": "2bf1e0c10b8da537f9b4e79f18100b7109db20d3f0704f0c7eac20cca1cf670c",
+    "prefix_features/98870a0c9c3f612507490d859828e8c179561816f4d485a8efdcd3a57d3f0d14.npz": "02b3d9a1df7dc5b464987c031014ec1733862ca3595669ce2c8c2e295e97ce34",
+    "prefix_features/9a69401f66601192551e662e65a6cd26c9dde6d3a284e95301a6457e350ecf58.npz": "8309a5a0ef588477319e6b5128c9b60e09919f71feea5b04f3a6cb539a8073e0",
+    "prefix_features/9d877974140faab531d165e668037d6fa3036dbb51d50fcdf39f95219cfa71a9.npz": "aab7266203a2ee91124d76f13c1e6d26e48bea8d041244704add2e57dc8e52f7",
+    "prefix_features/a174f91bca2e8dbf774fbc2d7c16954f66d3a72f50814fdcad7328c15529d7b3.npz": "122d86c1eb3d669a02eaef7c68ba37b50792b2c4d44c76f49c58da69b988535b",
+    "prefix_features/a3061c555dce84710d63f515a9a785edc59a46cf698499f906880ba40064a72c.npz": "c8606a081e7b028d043730f0972e655981d1785c6ec28b380fe19aadb28c7a8a",
+    "prefix_features/aa3f9cada517a3cd90033312adad950d4ee7509b7ac02ae889f857c7b27d7e51.npz": "822b3b8be5accb6539954a91f15b53f1a2b7b50738715f757a1f7c060c9a81e0",
+    "prefix_features/abcefa590eb40b393ae792b7ccc5b11018089baf7a5d267d548b45e9206f36bb.npz": "1e161fdce2e047f076fc05dfe6873968d62f929e789e78ed60d53f18e5378b28",
+    "prefix_features/b23698004d9bf4cb65c0210a5c5c2d601db5f540ee90263a42fe648634306c26.npz": "4e327ce8604c20ca652562ab011ca74f3ddaa10cf91ea3afafea153af35cb3a5",
+    "prefix_features/b42f180705cc61988efc69d4381f602fe974065cac3a903c42a211572540e2c9.npz": "f83b54c3ca372471f642913fe0212763a269c8cc85b28a256bbf4ac42fe8080b",
+    "prefix_features/b612f4a6ac3141565561c5a81249517bf562d126bf6e3d30c1a1ebd55899a4d8.npz": "bb9e5ee1bd7e89c8165b301fe64050bad287de41aa7e05d39ab89ead04f4fb61",
+    "prefix_features/b777431e2b00f8a97e1e9f14ef830ab7db590c4895882e9cb02526e0b4206a05.npz": "113dafb6673ca11282c10d9cb8ece8450f24964f6ee69b7d145651a9ab483b8a",
+    "prefix_features/b8bae99a5b60ee680f352c5e9d55b0f2902d95972905ef2c6d4f69f549debac2.npz": "d2cae8bc9fdd58f74344640e34b3b09e843caeecb6af8084679e25e903490199",
+    "prefix_features/b9e29d11f326055fe9bca0088d08127a3ee0ea339025fbdfc1550506e05a7103.npz": "9b54d9aa88a83db3e8534c3a7bedb48c4ced246020f1ada393aee3f5e3cf8bc3",
+    "prefix_features/ba927cd3cce2d9cd6e7305b96afe7b043d8e25b5ce313fac45d51d5f9cd12005.npz": "31fa6b442760c9d9662a9ed00202a9531c2ecc47a831c7976ece5b501d5d4482",
+    "prefix_features/bba7ab7af4ef5b723bafe044a1e56faf4ce7a6ec5bbcdf90bcf757ba506cf888.npz": "65d3099f030c94cfab141ee9a4267ace3889fefa49ca217ee351c3de0b890ccc",
+    "prefix_features/bc6b938b17d45ba69c9de3003ad1be89600229b5ac34c31ea82202578aec2396.npz": "b53d4596a0f9bd497f9d0b3730bd0b97d8e42566fa9c66b3352a31d8a5fb47bd",
+    "prefix_features/be8d59799bfa8d2e3dd848960af59fa9f84f816b3697236987d05c9e1ef72b86.npz": "5d321a6d12cc5e490b37de6e104acd20583d0fa0cd0a035ca94a5cae54847df6",
+    "prefix_features/bf100fea483fc644bd519bcb4933cb4633fea479ae79566eae0fd63b66ae8c7c.npz": "af653b97fbd6d6ad14748403b61eb9791b6f8ca47ca9f627d86bfd3a47c9325c",
+    "prefix_features/c44162bb3c6e5eb44587f456734d017cc9e09bad529ddc4fb3f4adf89e616987.npz": "862c390ba3df04996b883b5006628e96e94329ecb432d9c64d8cab6cc108b3e6",
+    "prefix_features/c4708484db87ce1a0e62696a236f036d8e6f0f1ef6f1469997e88cd5bb29503a.npz": "9e1ed20ccf8850b33e188c5424fd530c9e37e9f0b10c6398f93fa4d4ba073e09",
+    "prefix_features/c8011a224bbd36e4d423bf3411c6e51166d9f32d18167870bac3cff4903b435e.npz": "5699b45298ec9c8fa15d76c849c1f6a0de0b524236c963047b53312e578e823d",
+    "prefix_features/c885cf7b6036bb26895a50d131fd97d28f99e72f310ac06d7250a3030128869b.npz": "09a9864979b6e76bbef0e33adfd0a6bbf52cfc6f7081ce204ef67ce6e4285e41",
+    "prefix_features/c88cfdb08bbe6c6ce5a50e4b17d5c07c4de1bda4ffc0c07e1de227fc703b4714.npz": "b19a9c9446e48bf58711f0e8d86292736e95f9eb03ed916138f56555fe2e29c8",
+    "prefix_features/c89280655d8d7d7430882e18484e69f246e2a4f2fc5ee0b27010513bb7ea2ea8.npz": "952efc947e947d45952a40523ccd7f49709a66240881351edb443509928f1bca",
+    "prefix_features/cb2aabd9045b96d7a1db8a2cccd27f32c0e098f8b65009d7db6334eabe5592b8.npz": "c60eeee10c13a1e229ce3c052eef880728b161b4155f4c16faf6a34936823117",
+    "prefix_features/cd201822700b91af4716368b1fc46a380c56d4bb80d77a29e00373846c09561b.npz": "03f4cf27c16d5a7814c84964b935769445e114f63d117d8d822be1f957298543",
+    "prefix_features/ce6f420463f51228dad380575e1fcd50024d6a76b2f4afa9c27ed935e3d0f758.npz": "83afd4891f6e941cf4ccd6772943baa98e72de8294bf15d02fa6874a17c994c9",
+    "prefix_features/cf18d67cc559281454824dc8483a278113186627d5965d621320b81cca16e379.npz": "14ef8851228f557aab448f3f75229c3e5a87fcf4fdd8c1e008d85ea6283343ba",
+    "prefix_features/cf5eb6e40b2f3a1941abaab5a3a3a8059f6bfd883e2055264e9d7c1a7745ceec.npz": "09f2e275bfb5db7e3d3b68182aaea5dbceca301a28e6db490d97dc1b83825373",
+    "prefix_features/d546481f2def5bbc6f1f5451db55b33e79e8889f66e10553bd2d4dbfbc36749d.npz": "fb2b441fd97a08a5584e6cd1edecdd065e7f1dc4b6349f71a84e63782cc1b230",
+    "prefix_features/d712fee89f8d1bd9c96681a4a1cb248a99ba912c605b18a69568ac435849d876.npz": "bac52dbe5574ba57bd22cdf7b2a5fe1a65f90eb3391ed393285f82c66ed1a260",
+    "prefix_features/dbea2d4dc5dac90c72066bfe174def230419b7efd8b969dac62effe1b6d87321.npz": "dd7abb58dc2590f0b37fb6111b98f92f7ba8fb9ca3401bc0cf8de0aeba3abebc",
+    "prefix_features/dbf3aa53bf235b07f65f58a85faa6869930da84697cff5fab1cea6bb73a392f7.npz": "5a02cfec879bc4cb1edaf94163ac2079b2f38bfd4e875915be9415fc7a33fb90",
+    "prefix_features/dcc5d34eb9da5376a1de61f4dc10548af1cb17d5dbed031c33749d04ebe7cfaa.npz": "7a2ecf041e169dc8cc466e2ef7d2697ddaa184e9256fc5d499a4e36d70c70023",
+    "prefix_features/e185f3010584581816aab36db315f8a4dec2915c2e00ed3ceb7dd6a881ce5eff.npz": "8cf461146f00d5dc7961195e7dcc832184a4f2b36c59426c2d91758f2701f20d",
+    "prefix_features/e438a78736d3f2a2ffb500b9043bcc7435880649a978d619f662db7b03fe128d.npz": "110973009956ccf4f25d97b7bf6f41fa79965b32e69a04384f21653f2d290e81",
+    "prefix_features/e5bc6ad6b4106b64cf0ee047d986f47990846075ed0224e165a8dcfbe6be6e61.npz": "ef5e2c7b87fa91af6e149ffb989bd974289719f6f18f8eb4841425fb7fd6e170",
+    "prefix_features/e6240b3669eb7c2433e7e856811720eee9a186c3141942f7e6839a0399c79a60.npz": "dc5b8aadc4d18cb32aac86f2fb0a42b20faaa8efbbc4eabd0dc852818cf27db3",
+    "prefix_features/e90ae0d96dd6a4658f68f99ab27ae7658ab4c7a08725a9e4539d743a121467fb.npz": "34bfd4ef203df0cdd8af686383d7badcab89f9264848c1787a5fbd49fdad09ec",
+    "prefix_features/e9ad93f56531a8449ffee7459e738a49ce53b2601e998e872159625178506b07.npz": "0897ab77f447cc0e31b037542712c1df20584dd9f6e3f109b07fa708438760d7",
+    "prefix_features/eb2418be09b3fa7add467245825335d0aa144a569a4e43f9088e790d325e0cba.npz": "e23f83848765910fa91f8e2d68b5aa3cf6f3b58202ac01bac3cd9f43b22dac88",
+    "prefix_features/ec78e9fbc494d61ac06b8b351f5398c8c18542e50da73da6ab4a1da51fb2b07d.npz": "a11c805f9c7aab52eff8732f06caf0acae4d291cdac488d2efbc01277ba05c7e",
+    "prefix_features/ed6dfbdda3d785508a70147160981964efdc53506b11c51c54f9f69d62f3ae40.npz": "55d85215d15f7d50bdad467abc19477f394e300c95085894d90f56c1b70431c6",
+    "prefix_features/f3611bb412fbf1d9e1f05b7fb49ca85d9321ba0a2dfda44bc6373aab2151dfa4.npz": "8ed47cd77038b9205e0eb92889455ccf42edc6c214dca48e98ea44014ac412c8",
+    "prefix_features/f3c903c37b7fd12da95ee6fe17ab9a77a3c8f2299ffc71a9a0f4a631229adfdd.npz": "bad8d2950518ffa92faefaf2d14d0f5f6550b8b8ab67830724d61c1a6021da5a",
+    "prefix_features/f4453c43a56e669965f97b2efbd244b5b4988a159b0ceec1f0848f36295b7e9f.npz": "1505b53c48814a5fee19eb5a8fb65de0f5b3bbc843f579d7575b9023851c46d8",
+    "prefix_features/f5b0cf75bc85b4fa376f78ef16726f7c7aac305f0e617d3e7a1ab517d41b1554.npz": "0581e33bfe9c6fc75c6f18b816f2009ccbf4c34c7ffa03e177cb694d8e29c2f1",
+    "prefix_features/f7423ae6a6a278c8954bb6f225cbabb147905c996d13cb38854283bdf23c4d5e.npz": "411569d64dbbd07accde7942e1925bb7774295ab77356cc2a14db21a560d2000",
+    "prefix_features/f9d32a62ed65e41d3d45708fd62de9601232c53579c69846676c34fb772bb0cc.npz": "dd61da9eece9b504deb2493de55e753acae4f7e06530275e1f344bb4aa7d3095",
+    "prefix_features/fa613f750de3749437067ef97f200bf3514fb4e682f645db78b7a3519b65543b.npz": "c5af4746d0a227b70a45bc4dd63ced7677719d70c30cc69bc96871032004d644",
+    "prefix_features/fc3559ae8a95abba572ee0f4adc89f33aec52130b1f088b4d01ffe5ad4f1aa51.npz": "498c193596f9d9077f48b6f4d1f45822005a38db85a0c76333c6faa7e94b676f",
+    "prefix_features/fdc687dd5f5a2b8f247ae71c44192a4d97fc9e233736e4fdbf8fafa00d499b31.npz": "bba3ae9af180cbe79ea30ba5b9b1d916ff86ac50e779214bd37537f038e52fab",
+    "protocol.json": "1c0443d191e79ffd85b2a53cc428c4f7be20b6f53c3109897763ac8dacc92ee8",
+    "readouts.json": "4cecf0f7af963444303d7aace290412480cd6d73b5a6f7040ce841b74360ecc1",
+    "repeat_checks.json": "b902fbd37e01db1e8455601b2d343efd3295c6f9018e8086b259b92a53a2f89b",
+    "rows.json": "13b2d2945f743adc97f1165b5ef1d5173d484ee0abeab6edce3987b77aaffc5c"
+  },
+  "script_sha256": "663ac2a05367a4eb5886c99cef400c2a2126be9d834653db2582af579ae42cf9",
+  "verification_helper_sha256": "a64bcf83ac1c7df7c3e8bf6483aab4e9ed55d26fd34e3a2f07f3cee835079092",
+  "environment": {
+    "python": "3.11.17",
+    "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "packages": {
+      "numpy": "2.4.6",
+      "scikit-learn": "1.9.1",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "tokenizers": "0.22.2",
+      "huggingface-hub": "0.36.2",
+      "accelerate": "1.16.0",
+      "bitsandbytes": "0.50.2",
+      "safetensors": "0.8.0"
+    },
+    "git_commit": "f7579f0b3b9e1a584181b418a224a1e652a28a1a",
+    "code_sha256": "017676ef1c949fd83d0c54c4746dee0c5f0149932e390beea45ea39fe5d7c3df"
+  },
+  "C_grid": [
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "rule": "nested = world if sender_recorded == 1 else 1-world; hard XNOR of decoded facts",
+  "gold_rule_agreement_on_prior_rows": 1.0,
+  "composed_probabilities": "not defined; no calibration or conditional-independence assumption",
+  "views": {
+    "omniscient": {
+      "recorded_world_C": 1.0,
+      "recorded_direct_nested_C": 0.01,
+      "recorded_heads_and_metrics_exactly_reproduced": true,
+      "factual_record_selection": {
+        "selected_C": 10.0,
+        "selection": "minimum prior validation binary log loss; smaller C breaks ties",
+        "candidates": [
+          {
+            "C": 0.001,
+            "validation_binary_log_loss": 0.6930821607272206
+          },
+          {
+            "C": 0.01,
+            "validation_binary_log_loss": 0.6924998328056171
+          },
+          {
+            "C": 0.1,
+            "validation_binary_log_loss": 0.6869480155293347
+          },
+          {
+            "C": 1.0,
+            "validation_binary_log_loss": 0.6503595239552911
+          },
+          {
+            "C": 10.0,
+            "validation_binary_log_loss": 0.5949806641990107
+          }
+        ]
+      },
+      "factual_record_coefficients_sha256": "ea32d537949d2e3ef8b3ceca656ba5df966fa0873bb9cf83d96b68a9ae21e652",
+      "factual_record_intercept_sha256": "526eb3c9e35cf35047c39f36f1c3628022140275112a1f8250879b96333a6d10",
+      "groups": {
+        "train": {
+          "n_templates": 4,
+          "world": {
+            "n_rows": 32,
+            "correct": 32,
+            "accuracy": 1.0,
+            "macro_f1": 1.0,
+            "class_recall": {
+              "0": 1.0,
+              "1": 1.0
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                16,
+                0
+              ],
+              [
+                0,
+                16
+              ]
+            ]
+          },
+          "sender_recorded": {
+            "n_rows": 32,
+            "correct": 32,
+            "accuracy": 1.0,
+            "macro_f1": 1.0,
+            "class_recall": {
+              "0": 1.0,
+              "1": 1.0
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                16,
+                0
+              ],
+              [
+                0,
+                16
+              ]
+            ]
+          },
+          "original_direct_nested": {
+            "n_rows": 32,
+            "correct": 19,
+            "accuracy": 0.59375,
+            "macro_f1": 0.5933528836754643,
+            "class_recall": {
+              "0": 0.5625,
+              "1": 0.625
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                9,
+                7
+              ],
+              [
+                6,
+                10
+              ]
+            ]
+          },
+          "composed_nested": {
+            "n_rows": 32,
+            "correct": 32,
+            "accuracy": 1.0,
+            "macro_f1": 1.0,
+            "class_recall": {
+              "0": 1.0,
+              "1": 1.0
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                16,
+                0
+              ],
+              [
+                0,
+                16
+              ]
+            ]
+          },
+          "joint_fact_errors": {
+            "both_facts_correct": 32,
+            "both_facts_wrong_error_cancellation": 0,
+            "exactly_one_fact_wrong": 0
+          }
+        },
+        "validation": {
+          "n_templates": 2,
+          "world": {
+            "n_rows": 16,
+            "correct": 12,
+            "accuracy": 0.75,
+            "macro_f1": 0.7333333333333334,
+            "class_recall": {
+              "0": 0.5,
+              "1": 1.0
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                4,
+                4
+              ],
+              [
+                0,
+                8
+              ]
+            ]
+          },
+          "sender_recorded": {
+            "n_rows": 16,
+            "correct": 10,
+            "accuracy": 0.625,
+            "macro_f1": 0.6190476190476191,
+            "class_recall": {
+              "0": 0.5,
+              "1": 0.75
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                4,
+                4
+              ],
+              [
+                2,
+                6
+              ]
+            ]
+          },
+          "original_direct_nested": {
+            "n_rows": 16,
+            "correct": 7,
+            "accuracy": 0.4375,
+            "macro_f1": 0.41700404858299595,
+            "class_recall": {
+              "0": 0.625,
+              "1": 0.25
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                5,
+                3
+              ],
+              [
+                6,
+                2
+              ]
+            ]
+          },
+          "composed_nested": {
+            "n_rows": 16,
+            "correct": 10,
+            "accuracy": 0.625,
+            "macro_f1": 0.6,
+            "class_recall": {
+              "0": 0.375,
+              "1": 0.875
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                3,
+                5
+              ],
+              [
+                1,
+                7
+              ]
+            ]
+          },
+          "joint_fact_errors": {
+            "both_facts_correct": 8,
+            "both_facts_wrong_error_cancellation": 2,
+            "exactly_one_fact_wrong": 6
+          }
+        },
+        "test": {
+          "n_templates": 2,
+          "world": {
+            "n_rows": 16,
+            "correct": 12,
+            "accuracy": 0.75,
+            "macro_f1": 0.7333333333333334,
+            "class_recall": {
+              "0": 0.5,
+              "1": 1.0
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                4,
+                4
+              ],
+              [
+                0,
+                8
+              ]
+            ]
+          },
+          "sender_recorded": {
+            "n_rows": 16,
+            "correct": 12,
+            "accuracy": 0.75,
+            "macro_f1": 0.7333333333333334,
+            "class_recall": {
+              "0": 0.5,
+              "1": 1.0
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                4,
+                4
+              ],
+              [
+                0,
+                8
+              ]
+            ]
+          },
+          "original_direct_nested": {
+            "n_rows": 16,
+            "correct": 9,
+            "accuracy": 0.5625,
+            "macro_f1": 0.5465587044534412,
+            "class_recall": {
+              "0": 0.75,
+              "1": 0.375
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                6,
+                2
+              ],
+              [
+                5,
+                3
+              ]
+            ]
+          },
+          "composed_nested": {
+            "n_rows": 16,
+            "correct": 12,
+            "accuracy": 0.75,
+            "macro_f1": 0.7333333333333334,
+            "class_recall": {
+              "0": 0.5,
+              "1": 1.0
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                4,
+                4
+              ],
+              [
+                0,
+                8
+              ]
+            ]
+          },
+          "joint_fact_errors": {
+            "both_facts_correct": 10,
+            "both_facts_wrong_error_cancellation": 2,
+            "exactly_one_fact_wrong": 4
+          }
+        },
+        "control": {
+          "n_templates": 2,
+          "world": {
+            "n_rows": 16,
+            "correct": 8,
+            "accuracy": 0.5,
+            "macro_f1": 0.3333333333333333,
+            "class_recall": {
+              "0": 0.0,
+              "1": 1.0
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                0,
+                8
+              ],
+              [
+                0,
+                8
+              ]
+            ]
+          },
+          "sender_recorded": {
+            "n_rows": 16,
+            "correct": 8,
+            "accuracy": 0.5,
+            "macro_f1": 0.3333333333333333,
+            "class_recall": {
+              "0": 0.0,
+              "1": 1.0
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                0,
+                8
+              ],
+              [
+                0,
+                8
+              ]
+            ]
+          },
+          "original_direct_nested": {
+            "n_rows": 16,
+            "correct": 8,
+            "accuracy": 0.5,
+            "macro_f1": 0.3333333333333333,
+            "class_recall": {
+              "0": 1.0,
+              "1": 0.0
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                8,
+                0
+              ],
+              [
+                8,
+                0
+              ]
+            ]
+          },
+          "composed_nested": {
+            "status": "out_of_scope_delivered_message_overrides_prior_rule"
+          }
+        }
+      }
+    },
+    "sender": {
+      "recorded_world_C": 10.0,
+      "recorded_direct_nested_C": 1.0,
+      "recorded_heads_and_metrics_exactly_reproduced": true,
+      "factual_record_selection": {
+        "selected_C": 10.0,
+        "selection": "minimum prior validation binary log loss; smaller C breaks ties",
+        "candidates": [
+          {
+            "C": 0.001,
+            "validation_binary_log_loss": 0.6930640974321441
+          },
+          {
+            "C": 0.01,
+            "validation_binary_log_loss": 0.6923201316843813
+          },
+          {
+            "C": 0.1,
+            "validation_binary_log_loss": 0.6852438114255224
+          },
+          {
+            "C": 1.0,
+            "validation_binary_log_loss": 0.6374542027195534
+          },
+          {
+            "C": 10.0,
+            "validation_binary_log_loss": 0.5339194424187292
+          }
+        ]
+      },
+      "factual_record_coefficients_sha256": "114f9383cd4e5707de358495ffa7910ee69e026e2790c00877741d270d989aed",
+      "factual_record_intercept_sha256": "40e7a729c4bc391c888e3081c7e24e5b201d68901b629283655e31d9c2bbabc9",
+      "groups": {
+        "train": {
+          "n_templates": 4,
+          "world": {
+            "n_rows": 32,
+            "correct": 32,
+            "accuracy": 1.0,
+            "macro_f1": 1.0,
+            "class_recall": {
+              "0": 1.0,
+              "1": 1.0
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                16,
+                0
+              ],
+              [
+                0,
+                16
+              ]
+            ]
+          },
+          "sender_recorded": {
+            "n_rows": 32,
+            "correct": 32,
+            "accuracy": 1.0,
+            "macro_f1": 1.0,
+            "class_recall": {
+              "0": 1.0,
+              "1": 1.0
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                16,
+                0
+              ],
+              [
+                0,
+                16
+              ]
+            ]
+          },
+          "original_direct_nested": {
+            "n_rows": 32,
+            "correct": 22,
+            "accuracy": 0.6875,
+            "macro_f1": 0.6862745098039216,
+            "class_recall": {
+              "0": 0.75,
+              "1": 0.625
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                12,
+                4
+              ],
+              [
+                6,
+                10
+              ]
+            ]
+          },
+          "composed_nested": {
+            "n_rows": 32,
+            "correct": 32,
+            "accuracy": 1.0,
+            "macro_f1": 1.0,
+            "class_recall": {
+              "0": 1.0,
+              "1": 1.0
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                16,
+                0
+              ],
+              [
+                0,
+                16
+              ]
+            ]
+          },
+          "joint_fact_errors": {
+            "both_facts_correct": 32,
+            "both_facts_wrong_error_cancellation": 0,
+            "exactly_one_fact_wrong": 0
+          }
+        },
+        "validation": {
+          "n_templates": 2,
+          "world": {
+            "n_rows": 16,
+            "correct": 12,
+            "accuracy": 0.75,
+            "macro_f1": 0.7333333333333334,
+            "class_recall": {
+              "0": 0.5,
+              "1": 1.0
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                4,
+                4
+              ],
+              [
+                0,
+                8
+              ]
+            ]
+          },
+          "sender_recorded": {
+            "n_rows": 16,
+            "correct": 10,
+            "accuracy": 0.625,
+            "macro_f1": 0.6190476190476191,
+            "class_recall": {
+              "0": 0.75,
+              "1": 0.5
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                6,
+                2
+              ],
+              [
+                4,
+                4
+              ]
+            ]
+          },
+          "original_direct_nested": {
+            "n_rows": 16,
+            "correct": 8,
+            "accuracy": 0.5,
+            "macro_f1": 0.3333333333333333,
+            "class_recall": {
+              "0": 1.0,
+              "1": 0.0
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                8,
+                0
+              ],
+              [
+                8,
+                0
+              ]
+            ]
+          },
+          "composed_nested": {
+            "n_rows": 16,
+            "correct": 6,
+            "accuracy": 0.375,
+            "macro_f1": 0.36507936507936506,
+            "class_recall": {
+              "0": 0.25,
+              "1": 0.5
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                2,
+                6
+              ],
+              [
+                4,
+                4
+              ]
+            ]
+          },
+          "joint_fact_errors": {
+            "both_facts_correct": 6,
+            "both_facts_wrong_error_cancellation": 0,
+            "exactly_one_fact_wrong": 10
+          }
+        },
+        "test": {
+          "n_templates": 2,
+          "world": {
+            "n_rows": 16,
+            "correct": 14,
+            "accuracy": 0.875,
+            "macro_f1": 0.873015873015873,
+            "class_recall": {
+              "0": 0.75,
+              "1": 1.0
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                6,
+                2
+              ],
+              [
+                0,
+                8
+              ]
+            ]
+          },
+          "sender_recorded": {
+            "n_rows": 16,
+            "correct": 16,
+            "accuracy": 1.0,
+            "macro_f1": 1.0,
+            "class_recall": {
+              "0": 1.0,
+              "1": 1.0
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                8,
+                0
+              ],
+              [
+                0,
+                8
+              ]
+            ]
+          },
+          "original_direct_nested": {
+            "n_rows": 16,
+            "correct": 8,
+            "accuracy": 0.5,
+            "macro_f1": 0.5,
+            "class_recall": {
+              "0": 0.5,
+              "1": 0.5
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                4,
+                4
+              ],
+              [
+                4,
+                4
+              ]
+            ]
+          },
+          "composed_nested": {
+            "n_rows": 16,
+            "correct": 14,
+            "accuracy": 0.875,
+            "macro_f1": 0.873015873015873,
+            "class_recall": {
+              "0": 0.75,
+              "1": 1.0
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                6,
+                2
+              ],
+              [
+                0,
+                8
+              ]
+            ]
+          },
+          "joint_fact_errors": {
+            "both_facts_correct": 14,
+            "both_facts_wrong_error_cancellation": 0,
+            "exactly_one_fact_wrong": 2
+          }
+        },
+        "control": {
+          "n_templates": 2,
+          "world": {
+            "n_rows": 16,
+            "correct": 10,
+            "accuracy": 0.625,
+            "macro_f1": 0.5636363636363637,
+            "class_recall": {
+              "0": 0.25,
+              "1": 1.0
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                2,
+                6
+              ],
+              [
+                0,
+                8
+              ]
+            ]
+          },
+          "sender_recorded": {
+            "n_rows": 16,
+            "correct": 8,
+            "accuracy": 0.5,
+            "macro_f1": 0.3333333333333333,
+            "class_recall": {
+              "0": 0.0,
+              "1": 1.0
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                0,
+                8
+              ],
+              [
+                0,
+                8
+              ]
+            ]
+          },
+          "original_direct_nested": {
+            "n_rows": 16,
+            "correct": 8,
+            "accuracy": 0.5,
+            "macro_f1": 0.3333333333333333,
+            "class_recall": {
+              "0": 1.0,
+              "1": 0.0
+            },
+            "confusion_matrix_true_rows_predicted_columns": [
+              [
+                8,
+                0
+              ],
+              [
+                8,
+                0
+              ]
+            ]
+          },
+          "composed_nested": {
+            "status": "out_of_scope_delivered_message_overrides_prior_rule"
+          }
+        }
+      }
+    }
+  },
+  "prior_predictions": [
+    {
+      "example_id": "bd_t01_w0_a0_b0__omniscient",
+      "template_id": "bd_t01",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t01_w0_a0_b1__omniscient",
+      "template_id": "bd_t01",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t01_w0_a1_b0__omniscient",
+      "template_id": "bd_t01",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t01_w0_a1_b1__omniscient",
+      "template_id": "bd_t01",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 1,
+        "direct_nested": 1,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t01_w1_a0_b0__omniscient",
+      "template_id": "bd_t01",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t01_w1_a0_b1__omniscient",
+      "template_id": "bd_t01",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t01_w1_a1_b0__omniscient",
+      "template_id": "bd_t01",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t01_w1_a1_b1__omniscient",
+      "template_id": "bd_t01",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t02_w0_a0_b0__omniscient",
+      "template_id": "bd_t02",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t02_w0_a0_b1__omniscient",
+      "template_id": "bd_t02",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 1,
+        "direct_nested": 1,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t02_w0_a1_b0__omniscient",
+      "template_id": "bd_t02",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t02_w0_a1_b1__omniscient",
+      "template_id": "bd_t02",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 1,
+        "direct_nested": 1,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t02_w1_a0_b0__omniscient",
+      "template_id": "bd_t02",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t02_w1_a0_b1__omniscient",
+      "template_id": "bd_t02",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t02_w1_a1_b0__omniscient",
+      "template_id": "bd_t02",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 1,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t02_w1_a1_b1__omniscient",
+      "template_id": "bd_t02",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t03_w0_a0_b0__omniscient",
+      "template_id": "bd_t03",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t03_w0_a0_b1__omniscient",
+      "template_id": "bd_t03",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 1,
+        "direct_nested": 1,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t03_w0_a1_b0__omniscient",
+      "template_id": "bd_t03",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t03_w0_a1_b1__omniscient",
+      "template_id": "bd_t03",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 1,
+        "direct_nested": 1,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t03_w1_a0_b0__omniscient",
+      "template_id": "bd_t03",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t03_w1_a0_b1__omniscient",
+      "template_id": "bd_t03",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t03_w1_a1_b0__omniscient",
+      "template_id": "bd_t03",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 1,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t03_w1_a1_b1__omniscient",
+      "template_id": "bd_t03",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t04_w0_a0_b0__omniscient",
+      "template_id": "bd_t04",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t04_w0_a0_b1__omniscient",
+      "template_id": "bd_t04",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t04_w0_a1_b0__omniscient",
+      "template_id": "bd_t04",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t04_w0_a1_b1__omniscient",
+      "template_id": "bd_t04",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t04_w1_a0_b0__omniscient",
+      "template_id": "bd_t04",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t04_w1_a0_b1__omniscient",
+      "template_id": "bd_t04",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t04_w1_a1_b0__omniscient",
+      "template_id": "bd_t04",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t04_w1_a1_b1__omniscient",
+      "template_id": "bd_t04",
+      "split": "train",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t05_w0_a0_b0__omniscient",
+      "template_id": "bd_t05",
+      "split": "validation",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t05_w0_a0_b1__omniscient",
+      "template_id": "bd_t05",
+      "split": "validation",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 1,
+        "direct_nested": 1,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t05_w0_a1_b0__omniscient",
+      "template_id": "bd_t05",
+      "split": "validation",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t05_w0_a1_b1__omniscient",
+      "template_id": "bd_t05",
+      "split": "validation",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t05_w1_a0_b0__omniscient",
+      "template_id": "bd_t05",
+      "split": "validation",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 1,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t05_w1_a0_b1__omniscient",
+      "template_id": "bd_t05",
+      "split": "validation",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t05_w1_a1_b0__omniscient",
+      "template_id": "bd_t05",
+      "split": "validation",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t05_w1_a1_b1__omniscient",
+      "template_id": "bd_t05",
+      "split": "validation",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t06_w0_a0_b0__omniscient",
+      "template_id": "bd_t06",
+      "split": "validation",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t06_w0_a0_b1__omniscient",
+      "template_id": "bd_t06",
+      "split": "validation",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t06_w0_a1_b0__omniscient",
+      "template_id": "bd_t06",
+      "split": "validation",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t06_w0_a1_b1__omniscient",
+      "template_id": "bd_t06",
+      "split": "validation",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t06_w1_a0_b0__omniscient",
+      "template_id": "bd_t06",
+      "split": "validation",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t06_w1_a0_b1__omniscient",
+      "template_id": "bd_t06",
+      "split": "validation",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t06_w1_a1_b0__omniscient",
+      "template_id": "bd_t06",
+      "split": "validation",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t06_w1_a1_b1__omniscient",
+      "template_id": "bd_t06",
+      "split": "validation",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t07_w0_a0_b0__omniscient",
+      "template_id": "bd_t07",
+      "split": "test",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t07_w0_a0_b1__omniscient",
+      "template_id": "bd_t07",
+      "split": "test",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t07_w0_a1_b0__omniscient",
+      "template_id": "bd_t07",
+      "split": "test",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t07_w0_a1_b1__omniscient",
+      "template_id": "bd_t07",
+      "split": "test",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t07_w1_a0_b0__omniscient",
+      "template_id": "bd_t07",
+      "split": "test",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t07_w1_a0_b1__omniscient",
+      "template_id": "bd_t07",
+      "split": "test",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t07_w1_a1_b0__omniscient",
+      "template_id": "bd_t07",
+      "split": "test",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t07_w1_a1_b1__omniscient",
+      "template_id": "bd_t07",
+      "split": "test",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t08_w0_a0_b0__omniscient",
+      "template_id": "bd_t08",
+      "split": "test",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t08_w0_a0_b1__omniscient",
+      "template_id": "bd_t08",
+      "split": "test",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 1,
+        "direct_nested": 1,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t08_w0_a1_b0__omniscient",
+      "template_id": "bd_t08",
+      "split": "test",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t08_w0_a1_b1__omniscient",
+      "template_id": "bd_t08",
+      "split": "test",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 1,
+        "direct_nested": 1,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t08_w1_a0_b0__omniscient",
+      "template_id": "bd_t08",
+      "split": "test",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t08_w1_a0_b1__omniscient",
+      "template_id": "bd_t08",
+      "split": "test",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t08_w1_a1_b0__omniscient",
+      "template_id": "bd_t08",
+      "split": "test",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t08_w1_a1_b1__omniscient",
+      "template_id": "bd_t08",
+      "split": "test",
+      "view": "omniscient",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t01_w0_a0_b0__sender",
+      "template_id": "bd_t01",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t01_w0_a0_b1__sender",
+      "template_id": "bd_t01",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t01_w0_a1_b0__sender",
+      "template_id": "bd_t01",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t01_w0_a1_b1__sender",
+      "template_id": "bd_t01",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t01_w1_a0_b0__sender",
+      "template_id": "bd_t01",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t01_w1_a0_b1__sender",
+      "template_id": "bd_t01",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t01_w1_a1_b0__sender",
+      "template_id": "bd_t01",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t01_w1_a1_b1__sender",
+      "template_id": "bd_t01",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t02_w0_a0_b0__sender",
+      "template_id": "bd_t02",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t02_w0_a0_b1__sender",
+      "template_id": "bd_t02",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 1,
+        "direct_nested": 1,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t02_w0_a1_b0__sender",
+      "template_id": "bd_t02",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t02_w0_a1_b1__sender",
+      "template_id": "bd_t02",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 1,
+        "direct_nested": 1,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t02_w1_a0_b0__sender",
+      "template_id": "bd_t02",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 1,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t02_w1_a0_b1__sender",
+      "template_id": "bd_t02",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t02_w1_a1_b0__sender",
+      "template_id": "bd_t02",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 1,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t02_w1_a1_b1__sender",
+      "template_id": "bd_t02",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t03_w0_a0_b0__sender",
+      "template_id": "bd_t03",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t03_w0_a0_b1__sender",
+      "template_id": "bd_t03",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t03_w0_a1_b0__sender",
+      "template_id": "bd_t03",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t03_w0_a1_b1__sender",
+      "template_id": "bd_t03",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t03_w1_a0_b0__sender",
+      "template_id": "bd_t03",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t03_w1_a0_b1__sender",
+      "template_id": "bd_t03",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t03_w1_a1_b0__sender",
+      "template_id": "bd_t03",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t03_w1_a1_b1__sender",
+      "template_id": "bd_t03",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t04_w0_a0_b0__sender",
+      "template_id": "bd_t04",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t04_w0_a0_b1__sender",
+      "template_id": "bd_t04",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t04_w0_a1_b0__sender",
+      "template_id": "bd_t04",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t04_w0_a1_b1__sender",
+      "template_id": "bd_t04",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t04_w1_a0_b0__sender",
+      "template_id": "bd_t04",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t04_w1_a0_b1__sender",
+      "template_id": "bd_t04",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t04_w1_a1_b0__sender",
+      "template_id": "bd_t04",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t04_w1_a1_b1__sender",
+      "template_id": "bd_t04",
+      "split": "train",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t05_w0_a0_b0__sender",
+      "template_id": "bd_t05",
+      "split": "validation",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t05_w0_a0_b1__sender",
+      "template_id": "bd_t05",
+      "split": "validation",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t05_w0_a1_b0__sender",
+      "template_id": "bd_t05",
+      "split": "validation",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t05_w0_a1_b1__sender",
+      "template_id": "bd_t05",
+      "split": "validation",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t05_w1_a0_b0__sender",
+      "template_id": "bd_t05",
+      "split": "validation",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t05_w1_a0_b1__sender",
+      "template_id": "bd_t05",
+      "split": "validation",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t05_w1_a1_b0__sender",
+      "template_id": "bd_t05",
+      "split": "validation",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t05_w1_a1_b1__sender",
+      "template_id": "bd_t05",
+      "split": "validation",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t06_w0_a0_b0__sender",
+      "template_id": "bd_t06",
+      "split": "validation",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t06_w0_a0_b1__sender",
+      "template_id": "bd_t06",
+      "split": "validation",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t06_w0_a1_b0__sender",
+      "template_id": "bd_t06",
+      "split": "validation",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t06_w0_a1_b1__sender",
+      "template_id": "bd_t06",
+      "split": "validation",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t06_w1_a0_b0__sender",
+      "template_id": "bd_t06",
+      "split": "validation",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t06_w1_a0_b1__sender",
+      "template_id": "bd_t06",
+      "split": "validation",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t06_w1_a1_b0__sender",
+      "template_id": "bd_t06",
+      "split": "validation",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t06_w1_a1_b1__sender",
+      "template_id": "bd_t06",
+      "split": "validation",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t07_w0_a0_b0__sender",
+      "template_id": "bd_t07",
+      "split": "test",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t07_w0_a0_b1__sender",
+      "template_id": "bd_t07",
+      "split": "test",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t07_w0_a1_b0__sender",
+      "template_id": "bd_t07",
+      "split": "test",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t07_w0_a1_b1__sender",
+      "template_id": "bd_t07",
+      "split": "test",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t07_w1_a0_b0__sender",
+      "template_id": "bd_t07",
+      "split": "test",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t07_w1_a0_b1__sender",
+      "template_id": "bd_t07",
+      "split": "test",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t07_w1_a1_b0__sender",
+      "template_id": "bd_t07",
+      "split": "test",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 0,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t07_w1_a1_b1__sender",
+      "template_id": "bd_t07",
+      "split": "test",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 0,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t08_w0_a0_b0__sender",
+      "template_id": "bd_t08",
+      "split": "test",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t08_w0_a0_b1__sender",
+      "template_id": "bd_t08",
+      "split": "test",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 1,
+        "direct_nested": 1,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t08_w0_a1_b0__sender",
+      "template_id": "bd_t08",
+      "split": "test",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 0,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 0,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t08_w0_a1_b1__sender",
+      "template_id": "bd_t08",
+      "split": "test",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 0,
+        "sender_recorded": 1,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 0,
+        "sender_recorded": 1,
+        "direct_nested": 1,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t08_w1_a0_b0__sender",
+      "template_id": "bd_t08",
+      "split": "test",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 1,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t08_w1_a0_b1__sender",
+      "template_id": "bd_t08",
+      "split": "test",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    },
+    {
+      "example_id": "bd_t08_w1_a1_b0__sender",
+      "template_id": "bd_t08",
+      "split": "test",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 0,
+        "nested": 0
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 0,
+        "direct_nested": 1,
+        "composed_nested": 0
+      }
+    },
+    {
+      "example_id": "bd_t08_w1_a1_b1__sender",
+      "template_id": "bd_t08",
+      "split": "test",
+      "view": "sender",
+      "phase": "prior",
+      "gold": {
+        "world": 1,
+        "sender_recorded": 1,
+        "nested": 1
+      },
+      "predictions": {
+        "world": 1,
+        "sender_recorded": 1,
+        "direct_nested": 1,
+        "composed_nested": 1
+      }
+    }
+  ],
+  "limitations": [
+    "Post-hoc diagnostic on already known cases; no fresh confirmation or layer selection.",
+    "The composed classifier decodes two narrated facts and applies an external rule; it does not establish spontaneous nested representation, intention or causal use.",
+    "Sender-recorded attendance is an explicit display fact, not a label added to the language-model input.",
+    "Both factual heads fit prior training rows only; only factual-record C is newly selected, using prior validation labels.",
+    "Delivered-current messages override the prior nested rule; controls are excluded from composition metrics and all fitting/selection.",
+    "Repeated factorial cells share wording templates; row accuracies are descriptive and do not yield population confidence claims."
+  ],
+  "source_artifacts_unchanged": true,
+  "parameter_sidecar": {
+    "filename": "belief_composition_diagnostic_v2.npz",
+    "sha256": "e201ca4363e53592f73f04ff19b8ff8a4f5a9e69e5029a67546230643696c454",
+    "arrays": {
+      "omniscient_mean": [
+        4096
+      ],
+      "omniscient_scale": [
+        4096
+      ],
+      "omniscient_world_coef": [
+        1,
+        4096
+      ],
+      "omniscient_world_intercept": [
+        1
+      ],
+      "omniscient_receipt_coef": [
+        1,
+        4096
+      ],
+      "omniscient_receipt_intercept": [
+        1
+      ],
+      "omniscient_direct_nested_coef": [
+        1,
+        4096
+      ],
+      "omniscient_direct_nested_intercept": [
+        1
+      ],
+      "omniscient_classes": [
+        2
+      ],
+      "sender_mean": [
+        4096
+      ],
+      "sender_scale": [
+        4096
+      ],
+      "sender_world_coef": [
+        1,
+        4096
+      ],
+      "sender_world_intercept": [
+        1
+      ],
+      "sender_receipt_coef": [
+        1,
+        4096
+      ],
+      "sender_receipt_intercept": [
+        1
+      ],
+      "sender_direct_nested_coef": [
+        1,
+        4096
+      ],
+      "sender_direct_nested_intercept": [
+        1
+      ],
+      "sender_classes": [
+        2
+      ]
+    },
+    "feature_layer": "layer_16",
+    "transform": "saved train-only mean/scale, then per-row L2; near-zero row norm replaced by one",
+    "world_and_direct_nested_decision": "sigmoid, then argmax over [1-p,p]; ties choose class 0",
+    "receipt_decision": "decision logit > 0; zero ties choose class 0",
+    "composition": "hard XNOR of world and receipt predictions",
+    "contains_pickle": false
+  }
+}

@@ -1,0 +1,5096 @@
+{
+  "schema": "belief_construct_development_curated_v1",
+  "date": "2026-11-20",
+  "status": "completed_development_diagnostics_neutral_nested_gate_not_passed",
+  "diagnostic_source_commit": "3185e3c",
+  "export_and_choice_source_commit": "b61a2b1",
+  "model": {
+    "model_id": "meta-llama/Llama-3.1-8B-Instruct",
+    "resolved_revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+    "dtype": "bfloat16",
+    "quantization": "4bit",
+    "chat_template_sha256": "ca5b86f15c19b53c24ff18228849e06ffb677b952d85171c66d9b720d924f9bb",
+    "attention_implementation": "sdpa"
+  },
+  "target_status": "Stipulated fictional perspectives, not measured LM hidden beliefs; no spontaneous or causal nested-belief claim.",
+  "design": {
+    "n_prior_factorial_cases": 64,
+    "n_prior_view_rows": 128,
+    "n_control_view_rows": 32,
+    "template_partitions": {
+      "train": [
+        "bd_t01",
+        "bd_t02",
+        "bd_t03",
+        "bd_t04"
+      ],
+      "validation": [
+        "bd_t05",
+        "bd_t06"
+      ],
+      "test": [
+        "bd_t07",
+        "bd_t08"
+      ]
+    },
+    "independence_unit": "template; repeated factorial cells and views are not independent templates"
+  },
+  "target_definition": {
+    "world": "truth of fixed candidate place_b under complete story",
+    "reader": "reader fictional belief given actual attendance",
+    "nested": "sender-attributed reader belief given attendance record trusted by sender"
+  },
+  "layers": [
+    "layer_8",
+    "layer_16",
+    "layer_24"
+  ],
+  "primary_layer": "layer_16",
+  "capture_time": "story-plus-candidate prompt, before any perspective question or answer",
+  "n_capture_rows": 160,
+  "n_unique_captures": 120,
+  "n_behavior_rows": 400,
+  "n_unique_generations": 320,
+  "layer_index_check": {
+    "status": "passed",
+    "n_prompts": 1,
+    "checks": {
+      "8": {
+        "hf_hidden_state_index": 9,
+        "exact": true
+      },
+      "16": {
+        "hf_hidden_state_index": 17,
+        "exact": true
+      },
+      "24": {
+        "hf_hidden_state_index": 25,
+        "exact": true
+      }
+    }
+  },
+  "repeat_checks": [
+    {
+      "case_id": "bd_t01_w0_a0_b0",
+      "view": "omniscient",
+      "phase": "prior",
+      "prompt_ids_exact": true,
+      "layers_exact": {
+        "layer_8": true,
+        "layer_16": true,
+        "layer_24": true
+      }
+    },
+    {
+      "case_id": "bd_t01_w0_a0_b0",
+      "view": "sender",
+      "phase": "prior",
+      "prompt_ids_exact": true,
+      "layers_exact": {
+        "layer_8": true,
+        "layer_16": true,
+        "layer_24": true
+      }
+    },
+    {
+      "case_id": "bd_t01_w0_a0_b0_delivered_current",
+      "view": "omniscient",
+      "phase": "delivered_current",
+      "prompt_ids_exact": true,
+      "layers_exact": {
+        "layer_8": true,
+        "layer_16": true,
+        "layer_24": true
+      }
+    },
+    {
+      "case_id": "bd_t01_w0_a0_b0_delivered_current",
+      "view": "sender",
+      "phase": "delivered_current",
+      "prompt_ids_exact": true,
+      "layers_exact": {
+        "layer_8": true,
+        "layer_16": true,
+        "layer_24": true
+      }
+    }
+  ],
+  "readout_settings": {
+    "C_grid": [
+      0.001,
+      0.01,
+      0.1,
+      1.0,
+      10.0
+    ],
+    "selection": "minimum prior-validation binary log loss among converged candidates; smaller C breaks ties",
+    "solver": "lbfgs",
+    "max_iter": 2000,
+    "fit_intercept": true,
+    "class_weight": null,
+    "seed": 20261120,
+    "activation_transform": "train-only StandardScaler, then per-row L2 normalization",
+    "text_transform": "TF-IDF unigrams/bigrams fitted on prior training messages_text only",
+    "text_predictor_fields": [
+      "messages_text"
+    ],
+    "controls_used_for_fitting_or_selection": false,
+    "layer_selection_from_test": false,
+    "secondary_layers": [
+      "layer_8",
+      "layer_24"
+    ]
+  },
+  "readouts": {
+    "omniscient": {
+      "world": {
+        "layers": {
+          "layer_8": {
+            "selected_C": 10.0,
+            "validation_selection_loss": 0.5658919352895488,
+            "fit_fingerprint": {
+              "coefficients_sha256": "701c79b5dc9fc82aa7697d5999c581f0aebf98fa4a92ab619d51adce9accb446",
+              "intercept_sha256": "4ecc8c6a33bde0e52368268d2a7f9f0a2af882739f66210d7a203af26641ff48"
+            },
+            "metrics": {
+              "train": {
+                "n_rows": 32,
+                "class_counts": {
+                  "0": 16,
+                  "1": 16
+                },
+                "accuracy": 1.0,
+                "binary_log_loss": 0.30842541476276497,
+                "macro_f1": 1.0,
+                "balanced_accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "class_f1": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    16,
+                    0
+                  ],
+                  [
+                    0,
+                    16
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "validation": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.75,
+                "binary_log_loss": 0.5658919352895488,
+                "macro_f1": 0.7333333333333334,
+                "balanced_accuracy": 0.75,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.5
+                },
+                "class_f1": {
+                  "0": 0.8,
+                  "1": 0.6666666666666666
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    8,
+                    0
+                  ],
+                  [
+                    4,
+                    4
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "test": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.75,
+                "binary_log_loss": 0.48590814838640317,
+                "macro_f1": 0.7333333333333334,
+                "balanced_accuracy": 0.75,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.5
+                },
+                "class_f1": {
+                  "0": 0.8,
+                  "1": 0.6666666666666666
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    8,
+                    0
+                  ],
+                  [
+                    4,
+                    4
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "control": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.625,
+                "binary_log_loss": 0.6453385396572537,
+                "macro_f1": 0.6190476190476191,
+                "balanced_accuracy": 0.625,
+                "class_recall": {
+                  "0": 0.5,
+                  "1": 0.75
+                },
+                "class_f1": {
+                  "0": 0.5714285714285714,
+                  "1": 0.6666666666666666
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    4,
+                    4
+                  ],
+                  [
+                    2,
+                    6
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              }
+            }
+          },
+          "layer_16": {
+            "selected_C": 1.0,
+            "validation_selection_loss": 0.5871386929102735,
+            "fit_fingerprint": {
+              "coefficients_sha256": "97de54dbbcbfa8506e2730ef7a55c44914f6d45f1f0ff660ee0f80f20b100c8d",
+              "intercept_sha256": "1b6fd30e6e5517fb8d95fd130c0bcc62dc129d8473a224899b4dff929175e008"
+            },
+            "metrics": {
+              "train": {
+                "n_rows": 32,
+                "class_counts": {
+                  "0": 16,
+                  "1": 16
+                },
+                "accuracy": 1.0,
+                "binary_log_loss": 0.4472941964945683,
+                "macro_f1": 1.0,
+                "balanced_accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "class_f1": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    16,
+                    0
+                  ],
+                  [
+                    0,
+                    16
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "validation": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.75,
+                "binary_log_loss": 0.5871386929102735,
+                "macro_f1": 0.7333333333333334,
+                "balanced_accuracy": 0.75,
+                "class_recall": {
+                  "0": 0.5,
+                  "1": 1.0
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.8
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    4,
+                    4
+                  ],
+                  [
+                    0,
+                    8
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "test": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.75,
+                "binary_log_loss": 0.5541390051377741,
+                "macro_f1": 0.7333333333333334,
+                "balanced_accuracy": 0.75,
+                "class_recall": {
+                  "0": 0.5,
+                  "1": 1.0
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.8
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    4,
+                    4
+                  ],
+                  [
+                    0,
+                    8
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "control": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.6559437754108515,
+                "macro_f1": 0.3333333333333333,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 0.0,
+                  "1": 1.0
+                },
+                "class_f1": {
+                  "0": 0.0,
+                  "1": 0.6666666666666666
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    0,
+                    8
+                  ],
+                  [
+                    0,
+                    8
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              }
+            }
+          },
+          "layer_24": {
+            "selected_C": 1.0,
+            "validation_selection_loss": 0.6184990999879592,
+            "fit_fingerprint": {
+              "coefficients_sha256": "ba9adc826b603ada79761631b88ec26c5218e61fa9b1cdb7fce76bd5a0f96b7b",
+              "intercept_sha256": "70f8210d55c30d07e7de9a31d29309d866cc5a38de90b593c088910cbfd05ba8"
+            },
+            "metrics": {
+              "train": {
+                "n_rows": 32,
+                "class_counts": {
+                  "0": 16,
+                  "1": 16
+                },
+                "accuracy": 1.0,
+                "binary_log_loss": 0.5150675458583285,
+                "macro_f1": 1.0,
+                "balanced_accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "class_f1": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    16,
+                    0
+                  ],
+                  [
+                    0,
+                    16
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "validation": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.75,
+                "binary_log_loss": 0.6184990999879592,
+                "macro_f1": 0.7333333333333334,
+                "balanced_accuracy": 0.75,
+                "class_recall": {
+                  "0": 0.5,
+                  "1": 1.0
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.8
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    4,
+                    4
+                  ],
+                  [
+                    0,
+                    8
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "test": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.75,
+                "binary_log_loss": 0.586262148305524,
+                "macro_f1": 0.7333333333333334,
+                "balanced_accuracy": 0.75,
+                "class_recall": {
+                  "0": 0.5,
+                  "1": 1.0
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.8
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    4,
+                    4
+                  ],
+                  [
+                    0,
+                    8
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "control": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5625,
+                "binary_log_loss": 0.6452396985083568,
+                "macro_f1": 0.45893719806763283,
+                "balanced_accuracy": 0.5625,
+                "class_recall": {
+                  "0": 0.125,
+                  "1": 1.0
+                },
+                "class_f1": {
+                  "0": 0.2222222222222222,
+                  "1": 0.6956521739130435
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    1,
+                    7
+                  ],
+                  [
+                    0,
+                    8
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              }
+            }
+          }
+        },
+        "text": {
+          "selected_C": 0.001,
+          "validation_selection_loss": 0.6931471805789855,
+          "metrics": {
+            "train": {
+              "n_rows": 32,
+              "class_counts": {
+                "0": 16,
+                "1": 16
+              },
+              "accuracy": 1.0,
+              "binary_log_loss": 0.6931419914024165,
+              "macro_f1": 1.0,
+              "balanced_accuracy": 1.0,
+              "class_recall": {
+                "0": 1.0,
+                "1": 1.0
+              },
+              "class_f1": {
+                "0": 1.0,
+                "1": 1.0
+              },
+              "confusion_matrix_true_rows_predicted_columns": [
+                [
+                  16,
+                  0
+                ],
+                [
+                  0,
+                  16
+                ]
+              ],
+              "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+              "probability_clip": 1e-15
+            },
+            "validation": {
+              "n_rows": 16,
+              "class_counts": {
+                "0": 8,
+                "1": 8
+              },
+              "accuracy": 0.5,
+              "binary_log_loss": 0.6931471805789855,
+              "macro_f1": 0.3333333333333333,
+              "balanced_accuracy": 0.5,
+              "class_recall": {
+                "0": 1.0,
+                "1": 0.0
+              },
+              "class_f1": {
+                "0": 0.6666666666666666,
+                "1": 0.0
+              },
+              "confusion_matrix_true_rows_predicted_columns": [
+                [
+                  8,
+                  0
+                ],
+                [
+                  8,
+                  0
+                ]
+              ],
+              "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+              "probability_clip": 1e-15
+            },
+            "test": {
+              "n_rows": 16,
+              "class_counts": {
+                "0": 8,
+                "1": 8
+              },
+              "accuracy": 0.5,
+              "binary_log_loss": 0.6931471805796543,
+              "macro_f1": 0.3333333333333333,
+              "balanced_accuracy": 0.5,
+              "class_recall": {
+                "0": 1.0,
+                "1": 0.0
+              },
+              "class_f1": {
+                "0": 0.6666666666666666,
+                "1": 0.0
+              },
+              "confusion_matrix_true_rows_predicted_columns": [
+                [
+                  8,
+                  0
+                ],
+                [
+                  8,
+                  0
+                ]
+              ],
+              "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+              "probability_clip": 1e-15
+            },
+            "control": {
+              "n_rows": 16,
+              "class_counts": {
+                "0": 8,
+                "1": 8
+              },
+              "accuracy": 0.5,
+              "binary_log_loss": 0.693147180568943,
+              "macro_f1": 0.3333333333333333,
+              "balanced_accuracy": 0.5,
+              "class_recall": {
+                "0": 1.0,
+                "1": 0.0
+              },
+              "class_f1": {
+                "0": 0.6666666666666666,
+                "1": 0.0
+              },
+              "confusion_matrix_true_rows_predicted_columns": [
+                [
+                  8,
+                  0
+                ],
+                [
+                  8,
+                  0
+                ]
+              ],
+              "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+              "probability_clip": 1e-15
+            }
+          }
+        }
+      },
+      "reader": {
+        "layers": {
+          "layer_8": {
+            "selected_C": 0.001,
+            "validation_selection_loss": 0.693147289854182,
+            "fit_fingerprint": {
+              "coefficients_sha256": "d6f812cd030eb96429ee0dcc4b9dd05ec21c3e4302ca8a58dd4a42bbc8a0bec5",
+              "intercept_sha256": "17b503116e058191e198201315b33346e73e080724629b2d605a92ac7322888e"
+            },
+            "metrics": {
+              "train": {
+                "n_rows": 32,
+                "class_counts": {
+                  "0": 16,
+                  "1": 16
+                },
+                "accuracy": 0.59375,
+                "binary_log_loss": 0.6931408362875561,
+                "macro_f1": 0.5835835835835836,
+                "balanced_accuracy": 0.59375,
+                "class_recall": {
+                  "0": 0.75,
+                  "1": 0.4375
+                },
+                "class_f1": {
+                  "0": 0.6486486486486487,
+                  "1": 0.5185185185185185
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    12,
+                    4
+                  ],
+                  [
+                    9,
+                    7
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "validation": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.693147289854182,
+                "macro_f1": 0.3333333333333333,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.0
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.0
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    8,
+                    0
+                  ],
+                  [
+                    8,
+                    0
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "test": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5625,
+                "binary_log_loss": 0.6931469627987096,
+                "macro_f1": 0.45893719806763283,
+                "balanced_accuracy": 0.5625,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.125
+                },
+                "class_f1": {
+                  "0": 0.6956521739130435,
+                  "1": 0.2222222222222222
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    8,
+                    0
+                  ],
+                  [
+                    7,
+                    1
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "control": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.625,
+                "binary_log_loss": 0.6931450984007395,
+                "macro_f1": 0.5636363636363637,
+                "balanced_accuracy": 0.625,
+                "class_recall": {
+                  "0": 0.25,
+                  "1": 1.0
+                },
+                "class_f1": {
+                  "0": 0.4,
+                  "1": 0.7272727272727273
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    2,
+                    6
+                  ],
+                  [
+                    0,
+                    8
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              }
+            }
+          },
+          "layer_16": {
+            "selected_C": 10.0,
+            "validation_selection_loss": 0.6779755002690273,
+            "fit_fingerprint": {
+              "coefficients_sha256": "466f8a6aa1dfd4d9af5ccb246bd0487b30f2423fbff36ee24efd7f89f8459b1c",
+              "intercept_sha256": "c59f2634383d85dab2733b46bfb6824c31007180cfe62afef09e03d71c177be5"
+            },
+            "metrics": {
+              "train": {
+                "n_rows": 32,
+                "class_counts": {
+                  "0": 16,
+                  "1": 16
+                },
+                "accuracy": 0.90625,
+                "binary_log_loss": 0.5728607885543606,
+                "macro_f1": 0.906158357771261,
+                "balanced_accuracy": 0.90625,
+                "class_recall": {
+                  "0": 0.9375,
+                  "1": 0.875
+                },
+                "class_f1": {
+                  "0": 0.9090909090909091,
+                  "1": 0.9032258064516129
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    15,
+                    1
+                  ],
+                  [
+                    2,
+                    14
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "validation": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.625,
+                "binary_log_loss": 0.6779755002690273,
+                "macro_f1": 0.5636363636363637,
+                "balanced_accuracy": 0.625,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.25
+                },
+                "class_f1": {
+                  "0": 0.7272727272727273,
+                  "1": 0.4
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    8,
+                    0
+                  ],
+                  [
+                    6,
+                    2
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "test": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.75,
+                "binary_log_loss": 0.6382159559286341,
+                "macro_f1": 0.7333333333333334,
+                "balanced_accuracy": 0.75,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.5
+                },
+                "class_f1": {
+                  "0": 0.8,
+                  "1": 0.6666666666666666
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    8,
+                    0
+                  ],
+                  [
+                    4,
+                    4
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "control": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.7291920961127212,
+                "macro_f1": 0.3333333333333333,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 0.0,
+                  "1": 1.0
+                },
+                "class_f1": {
+                  "0": 0.0,
+                  "1": 0.6666666666666666
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    0,
+                    8
+                  ],
+                  [
+                    0,
+                    8
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              }
+            }
+          },
+          "layer_24": {
+            "selected_C": 10.0,
+            "validation_selection_loss": 0.6898372834208248,
+            "fit_fingerprint": {
+              "coefficients_sha256": "9f6bff4d944af8bf443fc28fbefcc9fb60b624f2554442086f429d69e505d528",
+              "intercept_sha256": "1ea9d2a2a340ea665bd0176f6a1b81da45b6782e43aa9101eb63fb2e09023843"
+            },
+            "metrics": {
+              "train": {
+                "n_rows": 32,
+                "class_counts": {
+                  "0": 16,
+                  "1": 16
+                },
+                "accuracy": 0.9375,
+                "binary_log_loss": 0.5972025046671801,
+                "macro_f1": 0.9375,
+                "balanced_accuracy": 0.9375,
+                "class_recall": {
+                  "0": 0.9375,
+                  "1": 0.9375
+                },
+                "class_f1": {
+                  "0": 0.9375,
+                  "1": 0.9375
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    15,
+                    1
+                  ],
+                  [
+                    1,
+                    15
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "validation": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.6898372834208248,
+                "macro_f1": 0.3333333333333333,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.0
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.0
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    8,
+                    0
+                  ],
+                  [
+                    8,
+                    0
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "test": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5625,
+                "binary_log_loss": 0.6699750508783666,
+                "macro_f1": 0.5465587044534412,
+                "balanced_accuracy": 0.5625,
+                "class_recall": {
+                  "0": 0.375,
+                  "1": 0.75
+                },
+                "class_f1": {
+                  "0": 0.46153846153846156,
+                  "1": 0.631578947368421
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    3,
+                    5
+                  ],
+                  [
+                    2,
+                    6
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "control": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.4375,
+                "binary_log_loss": 0.7045068030995465,
+                "macro_f1": 0.43529411764705883,
+                "balanced_accuracy": 0.4375,
+                "class_recall": {
+                  "0": 0.5,
+                  "1": 0.375
+                },
+                "class_f1": {
+                  "0": 0.47058823529411764,
+                  "1": 0.4
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    4,
+                    4
+                  ],
+                  [
+                    5,
+                    3
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              }
+            }
+          }
+        },
+        "text": {
+          "selected_C": 0.001,
+          "validation_selection_loss": 0.6931471805599453,
+          "metrics": {
+            "train": {
+              "n_rows": 32,
+              "class_counts": {
+                "0": 16,
+                "1": 16
+              },
+              "accuracy": 0.5,
+              "binary_log_loss": 0.6931471805599453,
+              "macro_f1": 0.3333333333333333,
+              "balanced_accuracy": 0.5,
+              "class_recall": {
+                "0": 1.0,
+                "1": 0.0
+              },
+              "class_f1": {
+                "0": 0.6666666666666666,
+                "1": 0.0
+              },
+              "confusion_matrix_true_rows_predicted_columns": [
+                [
+                  16,
+                  0
+                ],
+                [
+                  16,
+                  0
+                ]
+              ],
+              "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+              "probability_clip": 1e-15
+            },
+            "validation": {
+              "n_rows": 16,
+              "class_counts": {
+                "0": 8,
+                "1": 8
+              },
+              "accuracy": 0.5,
+              "binary_log_loss": 0.6931471805599453,
+              "macro_f1": 0.3333333333333333,
+              "balanced_accuracy": 0.5,
+              "class_recall": {
+                "0": 1.0,
+                "1": 0.0
+              },
+              "class_f1": {
+                "0": 0.6666666666666666,
+                "1": 0.0
+              },
+              "confusion_matrix_true_rows_predicted_columns": [
+                [
+                  8,
+                  0
+                ],
+                [
+                  8,
+                  0
+                ]
+              ],
+              "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+              "probability_clip": 1e-15
+            },
+            "test": {
+              "n_rows": 16,
+              "class_counts": {
+                "0": 8,
+                "1": 8
+              },
+              "accuracy": 0.5,
+              "binary_log_loss": 0.6931471805599453,
+              "macro_f1": 0.3333333333333333,
+              "balanced_accuracy": 0.5,
+              "class_recall": {
+                "0": 1.0,
+                "1": 0.0
+              },
+              "class_f1": {
+                "0": 0.6666666666666666,
+                "1": 0.0
+              },
+              "confusion_matrix_true_rows_predicted_columns": [
+                [
+                  8,
+                  0
+                ],
+                [
+                  8,
+                  0
+                ]
+              ],
+              "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+              "probability_clip": 1e-15
+            },
+            "control": {
+              "n_rows": 16,
+              "class_counts": {
+                "0": 8,
+                "1": 8
+              },
+              "accuracy": 0.5,
+              "binary_log_loss": 0.6931471805599453,
+              "macro_f1": 0.3333333333333333,
+              "balanced_accuracy": 0.5,
+              "class_recall": {
+                "0": 1.0,
+                "1": 0.0
+              },
+              "class_f1": {
+                "0": 0.6666666666666666,
+                "1": 0.0
+              },
+              "confusion_matrix_true_rows_predicted_columns": [
+                [
+                  8,
+                  0
+                ],
+                [
+                  8,
+                  0
+                ]
+              ],
+              "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+              "probability_clip": 1e-15
+            }
+          }
+        }
+      },
+      "nested": {
+        "layers": {
+          "layer_8": {
+            "selected_C": 1.0,
+            "validation_selection_loss": 0.6927324908002712,
+            "fit_fingerprint": {
+              "coefficients_sha256": "87f6a64a3e9b4590d53bcd31297cb825fb5e89ff27674a37ea36554cfaf23528",
+              "intercept_sha256": "17b503116e058191e198201315b33346e73e080724629b2d605a92ac7322888e"
+            },
+            "metrics": {
+              "train": {
+                "n_rows": 32,
+                "class_counts": {
+                  "0": 16,
+                  "1": 16
+                },
+                "accuracy": 0.6875,
+                "binary_log_loss": 0.6863803074069095,
+                "macro_f1": 0.6875,
+                "balanced_accuracy": 0.6875,
+                "class_recall": {
+                  "0": 0.6875,
+                  "1": 0.6875
+                },
+                "class_f1": {
+                  "0": 0.6875,
+                  "1": 0.6875
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    11,
+                    5
+                  ],
+                  [
+                    5,
+                    11
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "validation": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.6927324908002712,
+                "macro_f1": 0.3333333333333333,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 0.0,
+                  "1": 1.0
+                },
+                "class_f1": {
+                  "0": 0.0,
+                  "1": 0.6666666666666666
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    0,
+                    8
+                  ],
+                  [
+                    0,
+                    8
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "test": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.6938908604445397,
+                "macro_f1": 0.4920634920634921,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 0.625,
+                  "1": 0.375
+                },
+                "class_f1": {
+                  "0": 0.5555555555555556,
+                  "1": 0.42857142857142855
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    5,
+                    3
+                  ],
+                  [
+                    5,
+                    3
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "control": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.6940496570534227,
+                "macro_f1": 0.4666666666666667,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 0.75,
+                  "1": 0.25
+                },
+                "class_f1": {
+                  "0": 0.6,
+                  "1": 0.3333333333333333
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    6,
+                    2
+                  ],
+                  [
+                    6,
+                    2
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              }
+            }
+          },
+          "layer_16": {
+            "selected_C": 0.01,
+            "validation_selection_loss": 0.6931464524778812,
+            "fit_fingerprint": {
+              "coefficients_sha256": "c8b3577249afd67504a9a6856b541d3a74cb367b2a23341ccd5d7b360bfefbe2",
+              "intercept_sha256": "17b503116e058191e198201315b33346e73e080724629b2d605a92ac7322888e"
+            },
+            "metrics": {
+              "train": {
+                "n_rows": 32,
+                "class_counts": {
+                  "0": 16,
+                  "1": 16
+                },
+                "accuracy": 0.59375,
+                "binary_log_loss": 0.6930647325227466,
+                "macro_f1": 0.5933528836754643,
+                "balanced_accuracy": 0.59375,
+                "class_recall": {
+                  "0": 0.5625,
+                  "1": 0.625
+                },
+                "class_f1": {
+                  "0": 0.5806451612903226,
+                  "1": 0.6060606060606061
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    9,
+                    7
+                  ],
+                  [
+                    6,
+                    10
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "validation": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.4375,
+                "binary_log_loss": 0.6931464524778812,
+                "macro_f1": 0.41700404858299595,
+                "balanced_accuracy": 0.4375,
+                "class_recall": {
+                  "0": 0.625,
+                  "1": 0.25
+                },
+                "class_f1": {
+                  "0": 0.5263157894736842,
+                  "1": 0.3076923076923077
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    5,
+                    3
+                  ],
+                  [
+                    6,
+                    2
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "test": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5625,
+                "binary_log_loss": 0.6931045559221769,
+                "macro_f1": 0.5465587044534412,
+                "balanced_accuracy": 0.5625,
+                "class_recall": {
+                  "0": 0.75,
+                  "1": 0.375
+                },
+                "class_f1": {
+                  "0": 0.631578947368421,
+                  "1": 0.46153846153846156
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    6,
+                    2
+                  ],
+                  [
+                    5,
+                    3
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "control": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.6932628513487678,
+                "macro_f1": 0.3333333333333333,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.0
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.0
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    8,
+                    0
+                  ],
+                  [
+                    8,
+                    0
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              }
+            }
+          },
+          "layer_24": {
+            "selected_C": 1.0,
+            "validation_selection_loss": 0.6919686528974751,
+            "fit_fingerprint": {
+              "coefficients_sha256": "a626b7a9fd9a2c804d229236be0e8364cee879afe2d2fadd72bd2362a82c8479",
+              "intercept_sha256": "ecc1df75e6e0786185c4b04dae32881bb79b4c85332e0237aefcb40c8cb9a07f"
+            },
+            "metrics": {
+              "train": {
+                "n_rows": 32,
+                "class_counts": {
+                  "0": 16,
+                  "1": 16
+                },
+                "accuracy": 0.65625,
+                "binary_log_loss": 0.6859113694862735,
+                "macro_f1": 0.6559139784946236,
+                "balanced_accuracy": 0.65625,
+                "class_recall": {
+                  "0": 0.6875,
+                  "1": 0.625
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.6451612903225806
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    11,
+                    5
+                  ],
+                  [
+                    6,
+                    10
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "validation": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5625,
+                "binary_log_loss": 0.6919686528974751,
+                "macro_f1": 0.5151515151515151,
+                "balanced_accuracy": 0.5625,
+                "class_recall": {
+                  "0": 0.875,
+                  "1": 0.25
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.36363636363636365
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    7,
+                    1
+                  ],
+                  [
+                    6,
+                    2
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "test": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.6927365401556544,
+                "macro_f1": 0.4920634920634921,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 0.625,
+                  "1": 0.375
+                },
+                "class_f1": {
+                  "0": 0.5555555555555556,
+                  "1": 0.42857142857142855
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    5,
+                    3
+                  ],
+                  [
+                    5,
+                    3
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "control": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.375,
+                "binary_log_loss": 0.7012217251756352,
+                "macro_f1": 0.2727272727272727,
+                "balanced_accuracy": 0.375,
+                "class_recall": {
+                  "0": 0.0,
+                  "1": 0.75
+                },
+                "class_f1": {
+                  "0": 0.0,
+                  "1": 0.5454545454545454
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    0,
+                    8
+                  ],
+                  [
+                    2,
+                    6
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              }
+            }
+          }
+        },
+        "text": {
+          "selected_C": 0.001,
+          "validation_selection_loss": 0.6931471805599453,
+          "metrics": {
+            "train": {
+              "n_rows": 32,
+              "class_counts": {
+                "0": 16,
+                "1": 16
+              },
+              "accuracy": 0.5,
+              "binary_log_loss": 0.6931471805599453,
+              "macro_f1": 0.3333333333333333,
+              "balanced_accuracy": 0.5,
+              "class_recall": {
+                "0": 1.0,
+                "1": 0.0
+              },
+              "class_f1": {
+                "0": 0.6666666666666666,
+                "1": 0.0
+              },
+              "confusion_matrix_true_rows_predicted_columns": [
+                [
+                  16,
+                  0
+                ],
+                [
+                  16,
+                  0
+                ]
+              ],
+              "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+              "probability_clip": 1e-15
+            },
+            "validation": {
+              "n_rows": 16,
+              "class_counts": {
+                "0": 8,
+                "1": 8
+              },
+              "accuracy": 0.5,
+              "binary_log_loss": 0.6931471805599453,
+              "macro_f1": 0.3333333333333333,
+              "balanced_accuracy": 0.5,
+              "class_recall": {
+                "0": 1.0,
+                "1": 0.0
+              },
+              "class_f1": {
+                "0": 0.6666666666666666,
+                "1": 0.0
+              },
+              "confusion_matrix_true_rows_predicted_columns": [
+                [
+                  8,
+                  0
+                ],
+                [
+                  8,
+                  0
+                ]
+              ],
+              "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+              "probability_clip": 1e-15
+            },
+            "test": {
+              "n_rows": 16,
+              "class_counts": {
+                "0": 8,
+                "1": 8
+              },
+              "accuracy": 0.5,
+              "binary_log_loss": 0.6931471805599453,
+              "macro_f1": 0.3333333333333333,
+              "balanced_accuracy": 0.5,
+              "class_recall": {
+                "0": 1.0,
+                "1": 0.0
+              },
+              "class_f1": {
+                "0": 0.6666666666666666,
+                "1": 0.0
+              },
+              "confusion_matrix_true_rows_predicted_columns": [
+                [
+                  8,
+                  0
+                ],
+                [
+                  8,
+                  0
+                ]
+              ],
+              "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+              "probability_clip": 1e-15
+            },
+            "control": {
+              "n_rows": 16,
+              "class_counts": {
+                "0": 8,
+                "1": 8
+              },
+              "accuracy": 0.5,
+              "binary_log_loss": 0.6931471805599453,
+              "macro_f1": 0.3333333333333333,
+              "balanced_accuracy": 0.5,
+              "class_recall": {
+                "0": 1.0,
+                "1": 0.0
+              },
+              "class_f1": {
+                "0": 0.6666666666666666,
+                "1": 0.0
+              },
+              "confusion_matrix_true_rows_predicted_columns": [
+                [
+                  8,
+                  0
+                ],
+                [
+                  8,
+                  0
+                ]
+              ],
+              "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+              "probability_clip": 1e-15
+            }
+          }
+        }
+      }
+    },
+    "sender": {
+      "world": {
+        "layers": {
+          "layer_8": {
+            "selected_C": 10.0,
+            "validation_selection_loss": 0.5029167189682175,
+            "fit_fingerprint": {
+              "coefficients_sha256": "b50e601cd8aa925f91ea4a11bf74012c0389f7ba846a8b169a42112e6c14d8a9",
+              "intercept_sha256": "974676626d768dfc7a6677c315f4496d6f1ceddeea7259e3243935c0538565cd"
+            },
+            "metrics": {
+              "train": {
+                "n_rows": 32,
+                "class_counts": {
+                  "0": 16,
+                  "1": 16
+                },
+                "accuracy": 1.0,
+                "binary_log_loss": 0.20223103523642277,
+                "macro_f1": 1.0,
+                "balanced_accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "class_f1": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    16,
+                    0
+                  ],
+                  [
+                    0,
+                    16
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "validation": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.5029167189682175,
+                "macro_f1": 0.5,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 0.5,
+                  "1": 0.5
+                },
+                "class_f1": {
+                  "0": 0.5,
+                  "1": 0.5
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    4,
+                    4
+                  ],
+                  [
+                    4,
+                    4
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "test": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.75,
+                "binary_log_loss": 0.42749312232768294,
+                "macro_f1": 0.7333333333333334,
+                "balanced_accuracy": 0.75,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.5
+                },
+                "class_f1": {
+                  "0": 0.8,
+                  "1": 0.6666666666666666
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    8,
+                    0
+                  ],
+                  [
+                    4,
+                    4
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "control": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.6269799514360896,
+                "macro_f1": 0.5,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 0.5,
+                  "1": 0.5
+                },
+                "class_f1": {
+                  "0": 0.5,
+                  "1": 0.5
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    4,
+                    4
+                  ],
+                  [
+                    4,
+                    4
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              }
+            }
+          },
+          "layer_16": {
+            "selected_C": 10.0,
+            "validation_selection_loss": 0.3693846439782746,
+            "fit_fingerprint": {
+              "coefficients_sha256": "07d27cdd21a9ef59c9162e034fbdcb59fe0bf8c661683a2d72adf3736b976b64",
+              "intercept_sha256": "7fe5993aad216ae9f0793314e6230fe68f14a2839072c208206c599f87993cda"
+            },
+            "metrics": {
+              "train": {
+                "n_rows": 32,
+                "class_counts": {
+                  "0": 16,
+                  "1": 16
+                },
+                "accuracy": 1.0,
+                "binary_log_loss": 0.09489463352697401,
+                "macro_f1": 1.0,
+                "balanced_accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "class_f1": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    16,
+                    0
+                  ],
+                  [
+                    0,
+                    16
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "validation": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.75,
+                "binary_log_loss": 0.3693846439782746,
+                "macro_f1": 0.7333333333333334,
+                "balanced_accuracy": 0.75,
+                "class_recall": {
+                  "0": 0.5,
+                  "1": 1.0
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.8
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    4,
+                    4
+                  ],
+                  [
+                    0,
+                    8
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "test": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.875,
+                "binary_log_loss": 0.2852841394602836,
+                "macro_f1": 0.873015873015873,
+                "balanced_accuracy": 0.875,
+                "class_recall": {
+                  "0": 0.75,
+                  "1": 1.0
+                },
+                "class_f1": {
+                  "0": 0.8571428571428571,
+                  "1": 0.8888888888888888
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    6,
+                    2
+                  ],
+                  [
+                    0,
+                    8
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "control": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.625,
+                "binary_log_loss": 0.4975845794352499,
+                "macro_f1": 0.5636363636363637,
+                "balanced_accuracy": 0.625,
+                "class_recall": {
+                  "0": 0.25,
+                  "1": 1.0
+                },
+                "class_f1": {
+                  "0": 0.4,
+                  "1": 0.7272727272727273
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    2,
+                    6
+                  ],
+                  [
+                    0,
+                    8
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              }
+            }
+          },
+          "layer_24": {
+            "selected_C": 10.0,
+            "validation_selection_loss": 0.3966587261271187,
+            "fit_fingerprint": {
+              "coefficients_sha256": "fded3e1af751e6ad39d723257b927e4b7223493a565db8e68dd0e98a0cdd4f7f",
+              "intercept_sha256": "41791de2cbdd8841ba1248616d585a784f6831698f61cfe9c869f2ce6caca77b"
+            },
+            "metrics": {
+              "train": {
+                "n_rows": 32,
+                "class_counts": {
+                  "0": 16,
+                  "1": 16
+                },
+                "accuracy": 1.0,
+                "binary_log_loss": 0.12453289121978217,
+                "macro_f1": 1.0,
+                "balanced_accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "class_f1": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    16,
+                    0
+                  ],
+                  [
+                    0,
+                    16
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "validation": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.875,
+                "binary_log_loss": 0.3966587261271187,
+                "macro_f1": 0.873015873015873,
+                "balanced_accuracy": 0.875,
+                "class_recall": {
+                  "0": 0.75,
+                  "1": 1.0
+                },
+                "class_f1": {
+                  "0": 0.8571428571428571,
+                  "1": 0.8888888888888888
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    6,
+                    2
+                  ],
+                  [
+                    0,
+                    8
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "test": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.75,
+                "binary_log_loss": 0.36806991870774486,
+                "macro_f1": 0.7333333333333334,
+                "balanced_accuracy": 0.75,
+                "class_recall": {
+                  "0": 0.5,
+                  "1": 1.0
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.8
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    4,
+                    4
+                  ],
+                  [
+                    0,
+                    8
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "control": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 1.0,
+                "binary_log_loss": 0.42865441953709094,
+                "macro_f1": 1.0,
+                "balanced_accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "class_f1": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    8,
+                    0
+                  ],
+                  [
+                    0,
+                    8
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              }
+            }
+          }
+        },
+        "text": {
+          "selected_C": 0.001,
+          "validation_selection_loss": 0.6931471805923874,
+          "metrics": {
+            "train": {
+              "n_rows": 32,
+              "class_counts": {
+                "0": 16,
+                "1": 16
+              },
+              "accuracy": 1.0,
+              "binary_log_loss": 0.6931409269843526,
+              "macro_f1": 1.0,
+              "balanced_accuracy": 1.0,
+              "class_recall": {
+                "0": 1.0,
+                "1": 1.0
+              },
+              "class_f1": {
+                "0": 1.0,
+                "1": 1.0
+              },
+              "confusion_matrix_true_rows_predicted_columns": [
+                [
+                  16,
+                  0
+                ],
+                [
+                  0,
+                  16
+                ]
+              ],
+              "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+              "probability_clip": 1e-15
+            },
+            "validation": {
+              "n_rows": 16,
+              "class_counts": {
+                "0": 8,
+                "1": 8
+              },
+              "accuracy": 0.5,
+              "binary_log_loss": 0.6931471805923874,
+              "macro_f1": 0.3333333333333333,
+              "balanced_accuracy": 0.5,
+              "class_recall": {
+                "0": 1.0,
+                "1": 0.0
+              },
+              "class_f1": {
+                "0": 0.6666666666666666,
+                "1": 0.0
+              },
+              "confusion_matrix_true_rows_predicted_columns": [
+                [
+                  8,
+                  0
+                ],
+                [
+                  8,
+                  0
+                ]
+              ],
+              "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+              "probability_clip": 1e-15
+            },
+            "test": {
+              "n_rows": 16,
+              "class_counts": {
+                "0": 8,
+                "1": 8
+              },
+              "accuracy": 0.5,
+              "binary_log_loss": 0.6931471805930067,
+              "macro_f1": 0.3333333333333333,
+              "balanced_accuracy": 0.5,
+              "class_recall": {
+                "0": 1.0,
+                "1": 0.0
+              },
+              "class_f1": {
+                "0": 0.6666666666666666,
+                "1": 0.0
+              },
+              "confusion_matrix_true_rows_predicted_columns": [
+                [
+                  8,
+                  0
+                ],
+                [
+                  8,
+                  0
+                ]
+              ],
+              "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+              "probability_clip": 1e-15
+            },
+            "control": {
+              "n_rows": 16,
+              "class_counts": {
+                "0": 8,
+                "1": 8
+              },
+              "accuracy": 0.5,
+              "binary_log_loss": 0.6931471805759057,
+              "macro_f1": 0.3333333333333333,
+              "balanced_accuracy": 0.5,
+              "class_recall": {
+                "0": 1.0,
+                "1": 0.0
+              },
+              "class_f1": {
+                "0": 0.6666666666666666,
+                "1": 0.0
+              },
+              "confusion_matrix_true_rows_predicted_columns": [
+                [
+                  8,
+                  0
+                ],
+                [
+                  8,
+                  0
+                ]
+              ],
+              "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+              "probability_clip": 1e-15
+            }
+          }
+        }
+      },
+      "reader": {
+        "layers": {
+          "layer_8": {
+            "selected_C": 0.001,
+            "validation_selection_loss": 0.6931471805599453,
+            "fit_fingerprint": {
+              "coefficients_sha256": "30ae50bccb5658fa44677ab898fbbea248f88d96c5e7332cb2ac24086a51c6db",
+              "intercept_sha256": "17b503116e058191e198201315b33346e73e080724629b2d605a92ac7322888e"
+            },
+            "metrics": {
+              "train": {
+                "n_rows": 32,
+                "class_counts": {
+                  "0": 16,
+                  "1": 16
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.6931471805599453,
+                "macro_f1": 0.3333333333333333,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.0
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.0
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    16,
+                    0
+                  ],
+                  [
+                    16,
+                    0
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "validation": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.6931471805599453,
+                "macro_f1": 0.3333333333333333,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.0
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.0
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    8,
+                    0
+                  ],
+                  [
+                    8,
+                    0
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "test": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.6931471805599453,
+                "macro_f1": 0.3333333333333333,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.0
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.0
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    8,
+                    0
+                  ],
+                  [
+                    8,
+                    0
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "control": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.6931471805599453,
+                "macro_f1": 0.3333333333333333,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.0
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.0
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    8,
+                    0
+                  ],
+                  [
+                    8,
+                    0
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              }
+            }
+          },
+          "layer_16": {
+            "selected_C": 0.001,
+            "validation_selection_loss": 0.6931471805599453,
+            "fit_fingerprint": {
+              "coefficients_sha256": "30ae50bccb5658fa44677ab898fbbea248f88d96c5e7332cb2ac24086a51c6db",
+              "intercept_sha256": "17b503116e058191e198201315b33346e73e080724629b2d605a92ac7322888e"
+            },
+            "metrics": {
+              "train": {
+                "n_rows": 32,
+                "class_counts": {
+                  "0": 16,
+                  "1": 16
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.6931471805599453,
+                "macro_f1": 0.3333333333333333,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.0
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.0
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    16,
+                    0
+                  ],
+                  [
+                    16,
+                    0
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "validation": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.6931471805599453,
+                "macro_f1": 0.3333333333333333,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.0
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.0
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    8,
+                    0
+                  ],
+                  [
+                    8,
+                    0
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "test": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.6931471805599453,
+                "macro_f1": 0.3333333333333333,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.0
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.0
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    8,
+                    0
+                  ],
+                  [
+                    8,
+                    0
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "control": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.6931471805599453,
+                "macro_f1": 0.3333333333333333,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.0
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.0
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    8,
+                    0
+                  ],
+                  [
+                    8,
+                    0
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              }
+            }
+          },
+          "layer_24": {
+            "selected_C": 0.001,
+            "validation_selection_loss": 0.6931471805599453,
+            "fit_fingerprint": {
+              "coefficients_sha256": "30ae50bccb5658fa44677ab898fbbea248f88d96c5e7332cb2ac24086a51c6db",
+              "intercept_sha256": "17b503116e058191e198201315b33346e73e080724629b2d605a92ac7322888e"
+            },
+            "metrics": {
+              "train": {
+                "n_rows": 32,
+                "class_counts": {
+                  "0": 16,
+                  "1": 16
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.6931471805599453,
+                "macro_f1": 0.3333333333333333,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.0
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.0
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    16,
+                    0
+                  ],
+                  [
+                    16,
+                    0
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "validation": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.6931471805599453,
+                "macro_f1": 0.3333333333333333,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.0
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.0
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    8,
+                    0
+                  ],
+                  [
+                    8,
+                    0
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "test": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.6931471805599453,
+                "macro_f1": 0.3333333333333333,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.0
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.0
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    8,
+                    0
+                  ],
+                  [
+                    8,
+                    0
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "control": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.6931471805599453,
+                "macro_f1": 0.3333333333333333,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.0
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.0
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    8,
+                    0
+                  ],
+                  [
+                    8,
+                    0
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              }
+            }
+          }
+        },
+        "text": {
+          "selected_C": 0.001,
+          "validation_selection_loss": 0.6931471805599453,
+          "metrics": {
+            "train": {
+              "n_rows": 32,
+              "class_counts": {
+                "0": 16,
+                "1": 16
+              },
+              "accuracy": 0.5,
+              "binary_log_loss": 0.6931471805599453,
+              "macro_f1": 0.3333333333333333,
+              "balanced_accuracy": 0.5,
+              "class_recall": {
+                "0": 1.0,
+                "1": 0.0
+              },
+              "class_f1": {
+                "0": 0.6666666666666666,
+                "1": 0.0
+              },
+              "confusion_matrix_true_rows_predicted_columns": [
+                [
+                  16,
+                  0
+                ],
+                [
+                  16,
+                  0
+                ]
+              ],
+              "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+              "probability_clip": 1e-15
+            },
+            "validation": {
+              "n_rows": 16,
+              "class_counts": {
+                "0": 8,
+                "1": 8
+              },
+              "accuracy": 0.5,
+              "binary_log_loss": 0.6931471805599453,
+              "macro_f1": 0.3333333333333333,
+              "balanced_accuracy": 0.5,
+              "class_recall": {
+                "0": 1.0,
+                "1": 0.0
+              },
+              "class_f1": {
+                "0": 0.6666666666666666,
+                "1": 0.0
+              },
+              "confusion_matrix_true_rows_predicted_columns": [
+                [
+                  8,
+                  0
+                ],
+                [
+                  8,
+                  0
+                ]
+              ],
+              "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+              "probability_clip": 1e-15
+            },
+            "test": {
+              "n_rows": 16,
+              "class_counts": {
+                "0": 8,
+                "1": 8
+              },
+              "accuracy": 0.5,
+              "binary_log_loss": 0.6931471805599453,
+              "macro_f1": 0.3333333333333333,
+              "balanced_accuracy": 0.5,
+              "class_recall": {
+                "0": 1.0,
+                "1": 0.0
+              },
+              "class_f1": {
+                "0": 0.6666666666666666,
+                "1": 0.0
+              },
+              "confusion_matrix_true_rows_predicted_columns": [
+                [
+                  8,
+                  0
+                ],
+                [
+                  8,
+                  0
+                ]
+              ],
+              "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+              "probability_clip": 1e-15
+            },
+            "control": {
+              "n_rows": 16,
+              "class_counts": {
+                "0": 8,
+                "1": 8
+              },
+              "accuracy": 0.5,
+              "binary_log_loss": 0.6931471805599453,
+              "macro_f1": 0.3333333333333333,
+              "balanced_accuracy": 0.5,
+              "class_recall": {
+                "0": 1.0,
+                "1": 0.0
+              },
+              "class_f1": {
+                "0": 0.6666666666666666,
+                "1": 0.0
+              },
+              "confusion_matrix_true_rows_predicted_columns": [
+                [
+                  8,
+                  0
+                ],
+                [
+                  8,
+                  0
+                ]
+              ],
+              "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+              "probability_clip": 1e-15
+            }
+          }
+        }
+      },
+      "nested": {
+        "layers": {
+          "layer_8": {
+            "selected_C": 0.001,
+            "validation_selection_loss": 0.6931510235116585,
+            "fit_fingerprint": {
+              "coefficients_sha256": "e98e10acba89455608040fe076c7de4cb3aab7e2bc61722c7126392cfd081c20",
+              "intercept_sha256": "17b503116e058191e198201315b33346e73e080724629b2d605a92ac7322888e"
+            },
+            "metrics": {
+              "train": {
+                "n_rows": 32,
+                "class_counts": {
+                  "0": 16,
+                  "1": 16
+                },
+                "accuracy": 0.8125,
+                "binary_log_loss": 0.6931253952523189,
+                "macro_f1": 0.8117647058823529,
+                "balanced_accuracy": 0.8125,
+                "class_recall": {
+                  "0": 0.875,
+                  "1": 0.75
+                },
+                "class_f1": {
+                  "0": 0.8235294117647058,
+                  "1": 0.8
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    14,
+                    2
+                  ],
+                  [
+                    4,
+                    12
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "validation": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.25,
+                "binary_log_loss": 0.6931510235116585,
+                "macro_f1": 0.2,
+                "balanced_accuracy": 0.25,
+                "class_recall": {
+                  "0": 0.5,
+                  "1": 0.0
+                },
+                "class_f1": {
+                  "0": 0.4,
+                  "1": 0.0
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    4,
+                    4
+                  ],
+                  [
+                    8,
+                    0
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "test": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.6931474455810946,
+                "macro_f1": 0.5,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 0.5,
+                  "1": 0.5
+                },
+                "class_f1": {
+                  "0": 0.5,
+                  "1": 0.5
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    4,
+                    4
+                  ],
+                  [
+                    4,
+                    4
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "control": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.6931518115901651,
+                "macro_f1": 0.3333333333333333,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.0
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.0
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    8,
+                    0
+                  ],
+                  [
+                    8,
+                    0
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              }
+            }
+          },
+          "layer_16": {
+            "selected_C": 1.0,
+            "validation_selection_loss": 0.6918832573363947,
+            "fit_fingerprint": {
+              "coefficients_sha256": "6375b3d0a3a4f4243fa931476eb61bb5f8fce18963cc9429bb22c756cc36a27d",
+              "intercept_sha256": "eee5703df414c2e6b458303da8aa27f63e90f6a5189ae9076311e56ca4c847a2"
+            },
+            "metrics": {
+              "train": {
+                "n_rows": 32,
+                "class_counts": {
+                  "0": 16,
+                  "1": 16
+                },
+                "accuracy": 0.6875,
+                "binary_log_loss": 0.6786643086517912,
+                "macro_f1": 0.6862745098039216,
+                "balanced_accuracy": 0.6875,
+                "class_recall": {
+                  "0": 0.75,
+                  "1": 0.625
+                },
+                "class_f1": {
+                  "0": 0.7058823529411765,
+                  "1": 0.6666666666666666
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    12,
+                    4
+                  ],
+                  [
+                    6,
+                    10
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "validation": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.6918832573363947,
+                "macro_f1": 0.3333333333333333,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.0
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.0
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    8,
+                    0
+                  ],
+                  [
+                    8,
+                    0
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "test": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.6937441891076148,
+                "macro_f1": 0.5,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 0.5,
+                  "1": 0.5
+                },
+                "class_f1": {
+                  "0": 0.5,
+                  "1": 0.5
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    4,
+                    4
+                  ],
+                  [
+                    4,
+                    4
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "control": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.7015287760569904,
+                "macro_f1": 0.3333333333333333,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.0
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.0
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    8,
+                    0
+                  ],
+                  [
+                    8,
+                    0
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              }
+            }
+          },
+          "layer_24": {
+            "selected_C": 0.001,
+            "validation_selection_loss": 0.6931473531262382,
+            "fit_fingerprint": {
+              "coefficients_sha256": "3aad009c855479c1cbdd811ca2a8f43266f07f95b60514a45c8cfe309daa7eaa",
+              "intercept_sha256": "17b503116e058191e198201315b33346e73e080724629b2d605a92ac7322888e"
+            },
+            "metrics": {
+              "train": {
+                "n_rows": 32,
+                "class_counts": {
+                  "0": 16,
+                  "1": 16
+                },
+                "accuracy": 0.6875,
+                "binary_log_loss": 0.6931272104547509,
+                "macro_f1": 0.6862745098039216,
+                "balanced_accuracy": 0.6875,
+                "class_recall": {
+                  "0": 0.625,
+                  "1": 0.75
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.7058823529411765
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    10,
+                    6
+                  ],
+                  [
+                    4,
+                    12
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "validation": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.6931473531262382,
+                "macro_f1": 0.3333333333333333,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.0
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.0
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    8,
+                    0
+                  ],
+                  [
+                    8,
+                    0
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "test": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.6931457797176616,
+                "macro_f1": 0.5,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 0.5,
+                  "1": 0.5
+                },
+                "class_f1": {
+                  "0": 0.5,
+                  "1": 0.5
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    4,
+                    4
+                  ],
+                  [
+                    4,
+                    4
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              },
+              "control": {
+                "n_rows": 16,
+                "class_counts": {
+                  "0": 8,
+                  "1": 8
+                },
+                "accuracy": 0.5,
+                "binary_log_loss": 0.6931616551972588,
+                "macro_f1": 0.3333333333333333,
+                "balanced_accuracy": 0.5,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.0
+                },
+                "class_f1": {
+                  "0": 0.6666666666666666,
+                  "1": 0.0
+                },
+                "confusion_matrix_true_rows_predicted_columns": [
+                  [
+                    8,
+                    0
+                  ],
+                  [
+                    8,
+                    0
+                  ]
+                ],
+                "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+                "probability_clip": 1e-15
+              }
+            }
+          }
+        },
+        "text": {
+          "selected_C": 0.001,
+          "validation_selection_loss": 0.6931471805599453,
+          "metrics": {
+            "train": {
+              "n_rows": 32,
+              "class_counts": {
+                "0": 16,
+                "1": 16
+              },
+              "accuracy": 0.5,
+              "binary_log_loss": 0.6931471805599453,
+              "macro_f1": 0.3333333333333333,
+              "balanced_accuracy": 0.5,
+              "class_recall": {
+                "0": 1.0,
+                "1": 0.0
+              },
+              "class_f1": {
+                "0": 0.6666666666666666,
+                "1": 0.0
+              },
+              "confusion_matrix_true_rows_predicted_columns": [
+                [
+                  16,
+                  0
+                ],
+                [
+                  16,
+                  0
+                ]
+              ],
+              "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+              "probability_clip": 1e-15
+            },
+            "validation": {
+              "n_rows": 16,
+              "class_counts": {
+                "0": 8,
+                "1": 8
+              },
+              "accuracy": 0.5,
+              "binary_log_loss": 0.6931471805599453,
+              "macro_f1": 0.3333333333333333,
+              "balanced_accuracy": 0.5,
+              "class_recall": {
+                "0": 1.0,
+                "1": 0.0
+              },
+              "class_f1": {
+                "0": 0.6666666666666666,
+                "1": 0.0
+              },
+              "confusion_matrix_true_rows_predicted_columns": [
+                [
+                  8,
+                  0
+                ],
+                [
+                  8,
+                  0
+                ]
+              ],
+              "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+              "probability_clip": 1e-15
+            },
+            "test": {
+              "n_rows": 16,
+              "class_counts": {
+                "0": 8,
+                "1": 8
+              },
+              "accuracy": 0.5,
+              "binary_log_loss": 0.6931471805599453,
+              "macro_f1": 0.3333333333333333,
+              "balanced_accuracy": 0.5,
+              "class_recall": {
+                "0": 1.0,
+                "1": 0.0
+              },
+              "class_f1": {
+                "0": 0.6666666666666666,
+                "1": 0.0
+              },
+              "confusion_matrix_true_rows_predicted_columns": [
+                [
+                  8,
+                  0
+                ],
+                [
+                  8,
+                  0
+                ]
+              ],
+              "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+              "probability_clip": 1e-15
+            },
+            "control": {
+              "n_rows": 16,
+              "class_counts": {
+                "0": 8,
+                "1": 8
+              },
+              "accuracy": 0.5,
+              "binary_log_loss": 0.6931471805599453,
+              "macro_f1": 0.3333333333333333,
+              "balanced_accuracy": 0.5,
+              "class_recall": {
+                "0": 1.0,
+                "1": 0.0
+              },
+              "class_f1": {
+                "0": 0.6666666666666666,
+                "1": 0.0
+              },
+              "confusion_matrix_true_rows_predicted_columns": [
+                [
+                  8,
+                  0
+                ],
+                [
+                  8,
+                  0
+                ]
+              ],
+              "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+              "probability_clip": 1e-15
+            }
+          }
+        }
+      }
+    }
+  },
+  "source_world_copy_baselines": {
+    "omniscient": {
+      "world": {
+        "train": {
+          "n_rows": 32,
+          "class_counts": {
+            "0": 16,
+            "1": 16
+          },
+          "accuracy": 1.0,
+          "binary_log_loss": -0.0,
+          "macro_f1": 1.0,
+          "balanced_accuracy": 1.0,
+          "class_recall": {
+            "0": 1.0,
+            "1": 1.0
+          },
+          "class_f1": {
+            "0": 1.0,
+            "1": 1.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              16,
+              0
+            ],
+            [
+              0,
+              16
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "validation": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 1.0,
+          "binary_log_loss": -0.0,
+          "macro_f1": 1.0,
+          "balanced_accuracy": 1.0,
+          "class_recall": {
+            "0": 1.0,
+            "1": 1.0
+          },
+          "class_f1": {
+            "0": 1.0,
+            "1": 1.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0
+            ],
+            [
+              0,
+              8
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "test": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 1.0,
+          "binary_log_loss": -0.0,
+          "macro_f1": 1.0,
+          "balanced_accuracy": 1.0,
+          "class_recall": {
+            "0": 1.0,
+            "1": 1.0
+          },
+          "class_f1": {
+            "0": 1.0,
+            "1": 1.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0
+            ],
+            [
+              0,
+              8
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "control": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 1.0,
+          "binary_log_loss": -0.0,
+          "macro_f1": 1.0,
+          "balanced_accuracy": 1.0,
+          "class_recall": {
+            "0": 1.0,
+            "1": 1.0
+          },
+          "class_f1": {
+            "0": 1.0,
+            "1": 1.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0
+            ],
+            [
+              0,
+              8
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        }
+      },
+      "reader": {
+        "train": {
+          "n_rows": 32,
+          "class_counts": {
+            "0": 16,
+            "1": 16
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 17.269388197455342,
+          "macro_f1": 0.5,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 0.5,
+            "1": 0.5
+          },
+          "class_f1": {
+            "0": 0.5,
+            "1": 0.5
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              8
+            ],
+            [
+              8,
+              8
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "validation": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 17.269388197455342,
+          "macro_f1": 0.5,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 0.5,
+            "1": 0.5
+          },
+          "class_f1": {
+            "0": 0.5,
+            "1": 0.5
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              4,
+              4
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "test": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 17.269388197455342,
+          "macro_f1": 0.5,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 0.5,
+            "1": 0.5
+          },
+          "class_f1": {
+            "0": 0.5,
+            "1": 0.5
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              4,
+              4
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "control": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 1.0,
+          "binary_log_loss": -0.0,
+          "macro_f1": 1.0,
+          "balanced_accuracy": 1.0,
+          "class_recall": {
+            "0": 1.0,
+            "1": 1.0
+          },
+          "class_f1": {
+            "0": 1.0,
+            "1": 1.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0
+            ],
+            [
+              0,
+              8
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        }
+      },
+      "nested": {
+        "train": {
+          "n_rows": 32,
+          "class_counts": {
+            "0": 16,
+            "1": 16
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 17.269388197455342,
+          "macro_f1": 0.5,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 0.5,
+            "1": 0.5
+          },
+          "class_f1": {
+            "0": 0.5,
+            "1": 0.5
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              8
+            ],
+            [
+              8,
+              8
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "validation": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 17.269388197455342,
+          "macro_f1": 0.5,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 0.5,
+            "1": 0.5
+          },
+          "class_f1": {
+            "0": 0.5,
+            "1": 0.5
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              4,
+              4
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "test": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 17.269388197455342,
+          "macro_f1": 0.5,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 0.5,
+            "1": 0.5
+          },
+          "class_f1": {
+            "0": 0.5,
+            "1": 0.5
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              4,
+              4
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "control": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 1.0,
+          "binary_log_loss": -0.0,
+          "macro_f1": 1.0,
+          "balanced_accuracy": 1.0,
+          "class_recall": {
+            "0": 1.0,
+            "1": 1.0
+          },
+          "class_f1": {
+            "0": 1.0,
+            "1": 1.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0
+            ],
+            [
+              0,
+              8
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        }
+      }
+    },
+    "sender": {
+      "world": {
+        "train": {
+          "n_rows": 32,
+          "class_counts": {
+            "0": 16,
+            "1": 16
+          },
+          "accuracy": 1.0,
+          "binary_log_loss": -0.0,
+          "macro_f1": 1.0,
+          "balanced_accuracy": 1.0,
+          "class_recall": {
+            "0": 1.0,
+            "1": 1.0
+          },
+          "class_f1": {
+            "0": 1.0,
+            "1": 1.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              16,
+              0
+            ],
+            [
+              0,
+              16
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "validation": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 1.0,
+          "binary_log_loss": -0.0,
+          "macro_f1": 1.0,
+          "balanced_accuracy": 1.0,
+          "class_recall": {
+            "0": 1.0,
+            "1": 1.0
+          },
+          "class_f1": {
+            "0": 1.0,
+            "1": 1.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0
+            ],
+            [
+              0,
+              8
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "test": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 1.0,
+          "binary_log_loss": -0.0,
+          "macro_f1": 1.0,
+          "balanced_accuracy": 1.0,
+          "class_recall": {
+            "0": 1.0,
+            "1": 1.0
+          },
+          "class_f1": {
+            "0": 1.0,
+            "1": 1.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0
+            ],
+            [
+              0,
+              8
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "control": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 1.0,
+          "binary_log_loss": -0.0,
+          "macro_f1": 1.0,
+          "balanced_accuracy": 1.0,
+          "class_recall": {
+            "0": 1.0,
+            "1": 1.0
+          },
+          "class_f1": {
+            "0": 1.0,
+            "1": 1.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0
+            ],
+            [
+              0,
+              8
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        }
+      },
+      "reader": {
+        "train": {
+          "n_rows": 32,
+          "class_counts": {
+            "0": 16,
+            "1": 16
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 17.269388197455342,
+          "macro_f1": 0.5,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 0.5,
+            "1": 0.5
+          },
+          "class_f1": {
+            "0": 0.5,
+            "1": 0.5
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              8
+            ],
+            [
+              8,
+              8
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "validation": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 17.269388197455342,
+          "macro_f1": 0.5,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 0.5,
+            "1": 0.5
+          },
+          "class_f1": {
+            "0": 0.5,
+            "1": 0.5
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              4,
+              4
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "test": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 17.269388197455342,
+          "macro_f1": 0.5,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 0.5,
+            "1": 0.5
+          },
+          "class_f1": {
+            "0": 0.5,
+            "1": 0.5
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              4,
+              4
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "control": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 1.0,
+          "binary_log_loss": -0.0,
+          "macro_f1": 1.0,
+          "balanced_accuracy": 1.0,
+          "class_recall": {
+            "0": 1.0,
+            "1": 1.0
+          },
+          "class_f1": {
+            "0": 1.0,
+            "1": 1.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0
+            ],
+            [
+              0,
+              8
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        }
+      },
+      "nested": {
+        "train": {
+          "n_rows": 32,
+          "class_counts": {
+            "0": 16,
+            "1": 16
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 17.269388197455342,
+          "macro_f1": 0.5,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 0.5,
+            "1": 0.5
+          },
+          "class_f1": {
+            "0": 0.5,
+            "1": 0.5
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              8
+            ],
+            [
+              8,
+              8
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "validation": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 17.269388197455342,
+          "macro_f1": 0.5,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 0.5,
+            "1": 0.5
+          },
+          "class_f1": {
+            "0": 0.5,
+            "1": 0.5
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              4,
+              4
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "test": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 0.5,
+          "binary_log_loss": 17.269388197455342,
+          "macro_f1": 0.5,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 0.5,
+            "1": 0.5
+          },
+          "class_f1": {
+            "0": 0.5,
+            "1": 0.5
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              4,
+              4
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        },
+        "control": {
+          "n_rows": 16,
+          "class_counts": {
+            "0": 8,
+            "1": 8
+          },
+          "accuracy": 1.0,
+          "binary_log_loss": -0.0,
+          "macro_f1": 1.0,
+          "balanced_accuracy": 1.0,
+          "class_recall": {
+            "0": 1.0,
+            "1": 1.0
+          },
+          "class_f1": {
+            "0": 1.0,
+            "1": 1.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0
+            ],
+            [
+              0,
+              8
+            ]
+          ],
+          "absent_class_policy": "fixed binary universe; undefined recall/F1 equals zero",
+          "probability_clip": 1e-15
+        }
+      }
+    }
+  },
+  "sender_reader_impossibility_control": {
+    "paired_identical_messages_and_features_verified": true,
+    "n_opposite_reader_pairs": {
+      "train": 16,
+      "validation": 8,
+      "test": 8
+    },
+    "maximum_deterministic_prior_accuracy": 0.5,
+    "interpretation": "Each identical sender input occurs with both actual reader labels; a deterministic classifier cannot distinguish them.",
+    "observed_accuracy": {
+      "layer_8": {
+        "train": 0.5,
+        "validation": 0.5,
+        "test": 0.5
+      },
+      "layer_16": {
+        "train": 0.5,
+        "validation": 0.5,
+        "test": 0.5
+      },
+      "layer_24": {
+        "train": 0.5,
+        "validation": 0.5,
+        "test": 0.5
+      },
+      "text": {
+        "train": 0.5,
+        "validation": 0.5,
+        "test": 0.5
+      }
+    }
+  },
+  "yes_no_behavior": {
+    "perspectives": {
+      "omniscient/prior/world": {
+        "n_rows": 64,
+        "n_templates": 8,
+        "n_unique_prompts": 64,
+        "correct": 48,
+        "invalid": 0,
+        "accuracy_including_invalid": 0.75
+      },
+      "omniscient/prior/reader": {
+        "n_rows": 64,
+        "n_templates": 8,
+        "n_unique_prompts": 64,
+        "correct": 32,
+        "invalid": 0,
+        "accuracy_including_invalid": 0.5
+      },
+      "omniscient/prior/nested": {
+        "n_rows": 64,
+        "n_templates": 8,
+        "n_unique_prompts": 64,
+        "correct": 32,
+        "invalid": 3,
+        "accuracy_including_invalid": 0.5
+      },
+      "sender/prior/world": {
+        "n_rows": 64,
+        "n_templates": 8,
+        "n_unique_prompts": 32,
+        "correct": 46,
+        "invalid": 0,
+        "accuracy_including_invalid": 0.71875
+      },
+      "sender/prior/nested": {
+        "n_rows": 64,
+        "n_templates": 8,
+        "n_unique_prompts": 32,
+        "correct": 28,
+        "invalid": 8,
+        "accuracy_including_invalid": 0.4375
+      },
+      "omniscient/delivered_current/world": {
+        "n_rows": 16,
+        "n_templates": 2,
+        "n_unique_prompts": 16,
+        "correct": 11,
+        "invalid": 0,
+        "accuracy_including_invalid": 0.6875
+      },
+      "omniscient/delivered_current/reader": {
+        "n_rows": 16,
+        "n_templates": 2,
+        "n_unique_prompts": 16,
+        "correct": 16,
+        "invalid": 0,
+        "accuracy_including_invalid": 1.0
+      },
+      "omniscient/delivered_current/nested": {
+        "n_rows": 16,
+        "n_templates": 2,
+        "n_unique_prompts": 16,
+        "correct": 12,
+        "invalid": 4,
+        "accuracy_including_invalid": 0.75
+      },
+      "sender/delivered_current/world": {
+        "n_rows": 16,
+        "n_templates": 2,
+        "n_unique_prompts": 8,
+        "correct": 14,
+        "invalid": 0,
+        "accuracy_including_invalid": 0.875
+      },
+      "sender/delivered_current/nested": {
+        "n_rows": 16,
+        "n_templates": 2,
+        "n_unique_prompts": 8,
+        "correct": 14,
+        "invalid": 2,
+        "accuracy_including_invalid": 0.875
+      }
+    },
+    "joint_correct": {
+      "omniscient/prior": {
+        "n_cases": 64,
+        "correct": 14,
+        "accuracy": 0.21875
+      },
+      "sender/prior": {
+        "n_cases": 64,
+        "correct": 18,
+        "accuracy": 0.28125
+      },
+      "omniscient/delivered_current": {
+        "n_cases": 16,
+        "correct": 7,
+        "accuracy": 0.4375
+      },
+      "sender/delivered_current": {
+        "n_cases": 16,
+        "correct": 12,
+        "accuracy": 0.75
+      }
+    },
+    "interpretation": "Elicited answers against stipulated fictional-state gold; not measured hidden beliefs."
+  },
+  "primary_export_verification": {
+    "omniscient": {
+      "selected_C_from_source_validation": 0.01,
+      "n_training_rows": 32,
+      "n_training_templates": 4,
+      "scaler_and_classifier_fingerprints_exact": true,
+      "independent_probability_max_abs_error": 0.0,
+      "probability_verification_scope": "NumPy scorer versus fixed-C reconstruction; aggregate metrics versus source report, which has no saved per-row probabilities",
+      "independently_reproduced_metrics": {
+        "train": {
+          "n_rows": 32,
+          "accuracy": 0.59375,
+          "binary_log_loss": 0.6930647325227466,
+          "macro_f1": 0.5933528836754643,
+          "balanced_accuracy": 0.59375,
+          "class_recall": {
+            "0": 0.5625,
+            "1": 0.625
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              9,
+              7
+            ],
+            [
+              6,
+              10
+            ]
+          ]
+        },
+        "validation": {
+          "n_rows": 16,
+          "accuracy": 0.4375,
+          "binary_log_loss": 0.6931464524778812,
+          "macro_f1": 0.41700404858299595,
+          "balanced_accuracy": 0.4375,
+          "class_recall": {
+            "0": 0.625,
+            "1": 0.25
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              5,
+              3
+            ],
+            [
+              6,
+              2
+            ]
+          ]
+        },
+        "test": {
+          "n_rows": 16,
+          "accuracy": 0.5625,
+          "binary_log_loss": 0.6931045559221769,
+          "macro_f1": 0.5465587044534412,
+          "balanced_accuracy": 0.5625,
+          "class_recall": {
+            "0": 0.75,
+            "1": 0.375
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              6,
+              2
+            ],
+            [
+              5,
+              3
+            ]
+          ]
+        },
+        "control": {
+          "n_rows": 16,
+          "accuracy": 0.5,
+          "binary_log_loss": 0.6932628513487678,
+          "macro_f1": 0.3333333333333333,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 1.0,
+            "1": 0.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0
+            ],
+            [
+              8,
+              0
+            ]
+          ]
+        }
+      },
+      "test_predictions": [
+        {
+          "example_id": "bd_t07_w0_a0_b0__omniscient",
+          "label": 1,
+          "probability_one": 0.4996384369858325,
+          "prediction": 0
+        },
+        {
+          "example_id": "bd_t07_w0_a0_b1__omniscient",
+          "label": 0,
+          "probability_one": 0.4994964187125909,
+          "prediction": 0
+        },
+        {
+          "example_id": "bd_t07_w0_a1_b0__omniscient",
+          "label": 1,
+          "probability_one": 0.4996589507825992,
+          "prediction": 0
+        },
+        {
+          "example_id": "bd_t07_w0_a1_b1__omniscient",
+          "label": 0,
+          "probability_one": 0.49960481373454674,
+          "prediction": 0
+        },
+        {
+          "example_id": "bd_t07_w1_a0_b0__omniscient",
+          "label": 0,
+          "probability_one": 0.4996891370163435,
+          "prediction": 0
+        },
+        {
+          "example_id": "bd_t07_w1_a0_b1__omniscient",
+          "label": 1,
+          "probability_one": 0.4995911266584307,
+          "prediction": 0
+        },
+        {
+          "example_id": "bd_t07_w1_a1_b0__omniscient",
+          "label": 0,
+          "probability_one": 0.49964579418150123,
+          "prediction": 0
+        },
+        {
+          "example_id": "bd_t07_w1_a1_b1__omniscient",
+          "label": 1,
+          "probability_one": 0.49974076596626443,
+          "prediction": 0
+        },
+        {
+          "example_id": "bd_t08_w0_a0_b0__omniscient",
+          "label": 1,
+          "probability_one": 0.5001444400865295,
+          "prediction": 1
+        },
+        {
+          "example_id": "bd_t08_w0_a0_b1__omniscient",
+          "label": 0,
+          "probability_one": 0.5000210312767371,
+          "prediction": 1
+        },
+        {
+          "example_id": "bd_t08_w0_a1_b0__omniscient",
+          "label": 1,
+          "probability_one": 0.5001108367841278,
+          "prediction": 1
+        },
+        {
+          "example_id": "bd_t08_w0_a1_b1__omniscient",
+          "label": 0,
+          "probability_one": 0.5000890667948672,
+          "prediction": 1
+        },
+        {
+          "example_id": "bd_t08_w1_a0_b0__omniscient",
+          "label": 0,
+          "probability_one": 0.49997482085468015,
+          "prediction": 0
+        },
+        {
+          "example_id": "bd_t08_w1_a0_b1__omniscient",
+          "label": 1,
+          "probability_one": 0.49995472112255707,
+          "prediction": 0
+        },
+        {
+          "example_id": "bd_t08_w1_a1_b0__omniscient",
+          "label": 0,
+          "probability_one": 0.49999831812447887,
+          "prediction": 0
+        },
+        {
+          "example_id": "bd_t08_w1_a1_b1__omniscient",
+          "label": 1,
+          "probability_one": 0.500022277277668,
+          "prediction": 1
+        }
+      ],
+      "artifact": "omniscient_layer_16_nested.npz"
+    },
+    "sender": {
+      "selected_C_from_source_validation": 1.0,
+      "n_training_rows": 32,
+      "n_training_templates": 4,
+      "scaler_and_classifier_fingerprints_exact": true,
+      "independent_probability_max_abs_error": 0.0,
+      "probability_verification_scope": "NumPy scorer versus fixed-C reconstruction; aggregate metrics versus source report, which has no saved per-row probabilities",
+      "independently_reproduced_metrics": {
+        "train": {
+          "n_rows": 32,
+          "accuracy": 0.6875,
+          "binary_log_loss": 0.6786643086517912,
+          "macro_f1": 0.6862745098039216,
+          "balanced_accuracy": 0.6875,
+          "class_recall": {
+            "0": 0.75,
+            "1": 0.625
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              12,
+              4
+            ],
+            [
+              6,
+              10
+            ]
+          ]
+        },
+        "validation": {
+          "n_rows": 16,
+          "accuracy": 0.5,
+          "binary_log_loss": 0.6918832573363947,
+          "macro_f1": 0.3333333333333333,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 1.0,
+            "1": 0.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0
+            ],
+            [
+              8,
+              0
+            ]
+          ]
+        },
+        "test": {
+          "n_rows": 16,
+          "accuracy": 0.5,
+          "binary_log_loss": 0.6937441891076148,
+          "macro_f1": 0.5,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 0.5,
+            "1": 0.5
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              4,
+              4
+            ],
+            [
+              4,
+              4
+            ]
+          ]
+        },
+        "control": {
+          "n_rows": 16,
+          "accuracy": 0.5,
+          "binary_log_loss": 0.7015287760569904,
+          "macro_f1": 0.3333333333333333,
+          "balanced_accuracy": 0.5,
+          "class_recall": {
+            "0": 1.0,
+            "1": 0.0
+          },
+          "confusion_matrix_true_rows_predicted_columns": [
+            [
+              8,
+              0
+            ],
+            [
+              8,
+              0
+            ]
+          ]
+        }
+      },
+      "test_predictions": [
+        {
+          "example_id": "bd_t07_w0_a0_b0__sender",
+          "label": 1,
+          "probability_one": 0.4586034654051058,
+          "prediction": 0
+        },
+        {
+          "example_id": "bd_t07_w0_a0_b1__sender",
+          "label": 0,
+          "probability_one": 0.4644217526699842,
+          "prediction": 0
+        },
+        {
+          "example_id": "bd_t07_w0_a1_b0__sender",
+          "label": 1,
+          "probability_one": 0.4586034654051058,
+          "prediction": 0
+        },
+        {
+          "example_id": "bd_t07_w0_a1_b1__sender",
+          "label": 0,
+          "probability_one": 0.4644217526699842,
+          "prediction": 0
+        },
+        {
+          "example_id": "bd_t07_w1_a0_b0__sender",
+          "label": 0,
+          "probability_one": 0.466064999182375,
+          "prediction": 0
+        },
+        {
+          "example_id": "bd_t07_w1_a0_b1__sender",
+          "label": 1,
+          "probability_one": 0.4724727952039515,
+          "prediction": 0
+        },
+        {
+          "example_id": "bd_t07_w1_a1_b0__sender",
+          "label": 0,
+          "probability_one": 0.466064999182375,
+          "prediction": 0
+        },
+        {
+          "example_id": "bd_t07_w1_a1_b1__sender",
+          "label": 1,
+          "probability_one": 0.4724727952039515,
+          "prediction": 0
+        },
+        {
+          "example_id": "bd_t08_w0_a0_b0__sender",
+          "label": 1,
+          "probability_one": 0.501844557967145,
+          "prediction": 1
+        },
+        {
+          "example_id": "bd_t08_w0_a0_b1__sender",
+          "label": 0,
+          "probability_one": 0.504760935800467,
+          "prediction": 1
+        },
+        {
+          "example_id": "bd_t08_w0_a1_b0__sender",
+          "label": 1,
+          "probability_one": 0.501844557967145,
+          "prediction": 1
+        },
+        {
+          "example_id": "bd_t08_w0_a1_b1__sender",
+          "label": 0,
+          "probability_one": 0.504760935800467,
+          "prediction": 1
+        },
+        {
+          "example_id": "bd_t08_w1_a0_b0__sender",
+          "label": 0,
+          "probability_one": 0.5074801073199141,
+          "prediction": 1
+        },
+        {
+          "example_id": "bd_t08_w1_a0_b1__sender",
+          "label": 1,
+          "probability_one": 0.5125691518253338,
+          "prediction": 1
+        },
+        {
+          "example_id": "bd_t08_w1_a1_b0__sender",
+          "label": 0,
+          "probability_one": 0.5074801073199141,
+          "prediction": 1
+        },
+        {
+          "example_id": "bd_t08_w1_a1_b1__sender",
+          "label": 1,
+          "probability_one": 0.5125691518253338,
+          "prediction": 1
+        }
+      ],
+      "artifact": "sender_layer_16_nested.npz"
+    }
+  },
+  "choice_format": {
+    "status": "complete",
+    "source_unchanged": true,
+    "n_behavior_rows": 400,
+    "n_unique_generations": 320,
+    "strict": {
+      "perspectives": {
+        "omniscient/delivered_current/nested": {
+          "n_rows": 16,
+          "n_templates": 2,
+          "n_unique_prompts": 16,
+          "correct": 0,
+          "invalid": 13,
+          "accuracy_including_invalid": 0.0,
+          "predicted_choices": {
+            "INVALID": 13,
+            "A": 3
+          },
+          "by_gold_bit": {
+            "0": {
+              "n": 8,
+              "correct": 0
+            },
+            "1": {
+              "n": 8,
+              "correct": 0
+            }
+          }
+        },
+        "omniscient/delivered_current/reader": {
+          "n_rows": 16,
+          "n_templates": 2,
+          "n_unique_prompts": 16,
+          "correct": 1,
+          "invalid": 14,
+          "accuracy_including_invalid": 0.0625,
+          "predicted_choices": {
+            "INVALID": 14,
+            "A": 1,
+            "B": 1
+          },
+          "by_gold_bit": {
+            "0": {
+              "n": 8,
+              "correct": 1
+            },
+            "1": {
+              "n": 8,
+              "correct": 0
+            }
+          }
+        },
+        "omniscient/delivered_current/world": {
+          "n_rows": 16,
+          "n_templates": 2,
+          "n_unique_prompts": 16,
+          "correct": 16,
+          "invalid": 0,
+          "accuracy_including_invalid": 1.0,
+          "predicted_choices": {
+            "A": 8,
+            "B": 8
+          },
+          "by_gold_bit": {
+            "0": {
+              "n": 8,
+              "correct": 8
+            },
+            "1": {
+              "n": 8,
+              "correct": 8
+            }
+          }
+        },
+        "omniscient/prior/nested": {
+          "n_rows": 64,
+          "n_templates": 8,
+          "n_unique_prompts": 64,
+          "correct": 5,
+          "invalid": 56,
+          "accuracy_including_invalid": 0.078125,
+          "predicted_choices": {
+            "INVALID": 56,
+            "A": 8
+          },
+          "by_gold_bit": {
+            "0": {
+              "n": 32,
+              "correct": 0
+            },
+            "1": {
+              "n": 32,
+              "correct": 5
+            }
+          }
+        },
+        "omniscient/prior/reader": {
+          "n_rows": 64,
+          "n_templates": 8,
+          "n_unique_prompts": 64,
+          "correct": 11,
+          "invalid": 51,
+          "accuracy_including_invalid": 0.171875,
+          "predicted_choices": {
+            "B": 8,
+            "INVALID": 51,
+            "A": 5
+          },
+          "by_gold_bit": {
+            "0": {
+              "n": 32,
+              "correct": 4
+            },
+            "1": {
+              "n": 32,
+              "correct": 7
+            }
+          }
+        },
+        "omniscient/prior/world": {
+          "n_rows": 64,
+          "n_templates": 8,
+          "n_unique_prompts": 64,
+          "correct": 47,
+          "invalid": 17,
+          "accuracy_including_invalid": 0.734375,
+          "predicted_choices": {
+            "INVALID": 17,
+            "B": 32,
+            "A": 15
+          },
+          "by_gold_bit": {
+            "0": {
+              "n": 32,
+              "correct": 23
+            },
+            "1": {
+              "n": 32,
+              "correct": 24
+            }
+          }
+        },
+        "sender/delivered_current/nested": {
+          "n_rows": 16,
+          "n_templates": 2,
+          "n_unique_prompts": 8,
+          "correct": 0,
+          "invalid": 16,
+          "accuracy_including_invalid": 0.0,
+          "predicted_choices": {
+            "INVALID": 16
+          },
+          "by_gold_bit": {
+            "0": {
+              "n": 8,
+              "correct": 0
+            },
+            "1": {
+              "n": 8,
+              "correct": 0
+            }
+          }
+        },
+        "sender/delivered_current/world": {
+          "n_rows": 16,
+          "n_templates": 2,
+          "n_unique_prompts": 8,
+          "correct": 16,
+          "invalid": 0,
+          "accuracy_including_invalid": 1.0,
+          "predicted_choices": {
+            "A": 8,
+            "B": 8
+          },
+          "by_gold_bit": {
+            "0": {
+              "n": 8,
+              "correct": 8
+            },
+            "1": {
+              "n": 8,
+              "correct": 8
+            }
+          }
+        },
+        "sender/prior/nested": {
+          "n_rows": 64,
+          "n_templates": 8,
+          "n_unique_prompts": 32,
+          "correct": 10,
+          "invalid": 42,
+          "accuracy_including_invalid": 0.15625,
+          "predicted_choices": {
+            "INVALID": 42,
+            "A": 22
+          },
+          "by_gold_bit": {
+            "0": {
+              "n": 32,
+              "correct": 0
+            },
+            "1": {
+              "n": 32,
+              "correct": 10
+            }
+          }
+        },
+        "sender/prior/world": {
+          "n_rows": 64,
+          "n_templates": 8,
+          "n_unique_prompts": 32,
+          "correct": 52,
+          "invalid": 8,
+          "accuracy_including_invalid": 0.8125,
+          "predicted_choices": {
+            "A": 28,
+            "B": 28,
+            "INVALID": 8
+          },
+          "by_gold_bit": {
+            "0": {
+              "n": 32,
+              "correct": 30
+            },
+            "1": {
+              "n": 32,
+              "correct": 22
+            }
+          }
+        }
+      },
+      "interpretation": "Post hoc question-format diagnostic on previously inspected development cases. A/B recovery indicates format sensitivity; failure is bounded to tested formats. This is not new held-out confirmation or evidence of hidden belief validity."
+    },
+    "supplemental_leading_letter": {
+      "omniscient/prior/nested": {
+        "n_rows": 64,
+        "correct": 32,
+        "accuracy": 0.5,
+        "leading_choices": {
+          "A": 64
+        }
+      },
+      "omniscient/prior/reader": {
+        "n_rows": 64,
+        "correct": 40,
+        "accuracy": 0.625,
+        "leading_choices": {
+          "B": 8,
+          "A": 56
+        }
+      },
+      "omniscient/prior/world": {
+        "n_rows": 64,
+        "correct": 64,
+        "accuracy": 1.0,
+        "leading_choices": {
+          "A": 32,
+          "B": 32
+        }
+      },
+      "sender/prior/nested": {
+        "n_rows": 64,
+        "correct": 32,
+        "accuracy": 0.5,
+        "leading_choices": {
+          "A": 64
+        }
+      },
+      "sender/prior/world": {
+        "n_rows": 64,
+        "correct": 60,
+        "accuracy": 0.9375,
+        "leading_choices": {
+          "A": 36,
+          "B": 28
+        }
+      },
+      "omniscient/delivered_current/nested": {
+        "n_rows": 16,
+        "correct": 8,
+        "accuracy": 0.5,
+        "leading_choices": {
+          "A": 16
+        }
+      },
+      "omniscient/delivered_current/reader": {
+        "n_rows": 16,
+        "correct": 9,
+        "accuracy": 0.5625,
+        "leading_choices": {
+          "A": 15,
+          "B": 1
+        }
+      },
+      "omniscient/delivered_current/world": {
+        "n_rows": 16,
+        "correct": 16,
+        "accuracy": 1.0,
+        "leading_choices": {
+          "A": 8,
+          "B": 8
+        }
+      },
+      "sender/delivered_current/nested": {
+        "n_rows": 16,
+        "correct": 8,
+        "accuracy": 0.5,
+        "leading_choices": {
+          "A": 16
+        }
+      },
+      "sender/delivered_current/world": {
+        "n_rows": 16,
+        "correct": 16,
+        "accuracy": 1.0,
+        "leading_choices": {
+          "A": 8,
+          "B": 8
+        }
+      }
+    },
+    "supplement_status": "posthoc_descriptive_not_replacement_for_strict_primary",
+    "strict_invalid_count": 217,
+    "all_invalids_have_leading_A": true,
+    "invalid_finish_counts": {
+      "length": 135,
+      "eos": 82
+    },
+    "scope": "Same scenes and known development cases; wording and response format jointly change; no new holdout confirmation."
+  },
+  "independent_audit": {
+    "original_output_hashes_verified": 527,
+    "hidden_attendance_pairs_verified": 40,
+    "classification_metric_cells_recomputed": 168,
+    "validation_C_selections_checked": 24,
+    "primary_probability_metric_cells_recomputed": 8,
+    "max_primary_test_probability_discrepancy": 1.1102230246251565e-16,
+    "choice_rows_verified": 400,
+    "choice_new_run_files_verified": 403,
+    "original_source_files_unchanged": 528,
+    "limits": "Secondary learned-head probability NLLs were not independently reconstructed; classification cells were checked from their confusion matrices.",
+    "composition_v2": {
+      "prior_row_assignments_scored_from_numeric_arrays": 128,
+      "classification_metric_cells_recomputed": 30,
+      "numeric_arrays_verified": 18,
+      "parameter_and_scaler_fingerprints_verified": 16,
+      "all_row_predictions_and_XNOR_match": true,
+      "v1_v2_results_identical": true,
+      "no_refit_or_model_call_in_independent_audit": true
+    }
+  },
+  "limitations": [
+    "Only two held-out wording groups; repeated cells and cached views are not independent templates.",
+    "Same logical family, checkpoint and NF4/BF16 precision; not broad story-family/model/precision generalization.",
+    "Normative character-state labels still need independent human semantic review.",
+    "Nested query-free primary heads remain near chance; text controls are preliminary lexical methods.",
+    "Explicit question answers show default-response and format sensitivity; no demonstrated reliable neutral nested capability.",
+    "Factored factual control uses an external rule; test improvement does not establish spontaneous nested representation, especially with poor validation.",
+    "Prior perspective tracking, known-message updating and unknown-message outcome forecasting remain distinct."
+  ],
+  "artifact_sha256": {
+    "runs/belief_diagnostic_development_v1/manifest.json": "a88cdc43261502c06c59f62ac924adc7199c859b5ed3be39de507186cff963e8",
+    "runs/belief_diagnostic_development_v1/protocol.json": "1c0443d191e79ffd85b2a53cc428c4f7be20b6f53c3109897763ac8dacc92ee8",
+    "runs/belief_diagnostic_development_v1/features.npz": "a70ad0d0cb60ffd69bfd7a41c41c9e5ac2508bee392a32d02b86742e1ac7f5c2",
+    "runs/belief_diagnostic_development_v1/rows.json": "13b2d2945f743adc97f1165b5ef1d5173d484ee0abeab6edce3987b77aaffc5c",
+    "runs/belief_diagnostic_development_v1/captures.json": "f3555db5afdb9e650fe4c6d46b8bc6ecf678a8870edcfb0812994b6f9c9d0c06",
+    "runs/belief_diagnostic_development_v1/readouts.json": "4cecf0f7af963444303d7aace290412480cd6d73b5a6f7040ce841b74360ecc1",
+    "runs/belief_diagnostic_development_v1/behavior_summary.json": "9c8df6eadb19a2ee7eac563072f45e41a7babb7e249c589ee8345acdb56a7e1e",
+    "runs/belief_diagnostic_development_v1/repeat_checks.json": "b902fbd37e01db1e8455601b2d343efd3295c6f9018e8086b259b92a53a2f89b",
+    "runs/belief_diagnostic_neutral_heads_v1/manifest.json": "b5caf6aabbf8aa5fc826457f3ba6da17ed9f4f3836d25704f28f1dffa55afc9d",
+    "runs/belief_diagnostic_neutral_heads_v1/verification.json": "40564216e1936f1af246bd003141d16a5b3772493a0ec547a51ad649fc7d76ca",
+    "runs/belief_diagnostic_neutral_heads_v1/omniscient_layer_16_nested.npz": "d26888a6ad32be94e727ee7cd73bcc32edd6d8b7474b3031a12eaa5df9639ed7",
+    "runs/belief_diagnostic_neutral_heads_v1/sender_layer_16_nested.npz": "24bdfd6eaee28112082788b7aedd952d11cbe508f063d3f385739a88845b7408",
+    "runs/belief_choice_format_v1/manifest.json": "4148deb49f562dd366dd2573a063b483637d60e7955a4eab56886c1fa5066b97",
+    "runs/belief_choice_format_v1/plan.json": "671cb083df98cb3681559dfe8baaeb4cd66d010692faf26c35e4d460011bd3d9",
+    "runs/belief_choice_format_v1/summary.json": "bd0c9ebffbf0ca7a8755b45249cee23064a4899c2e648127078b9f4f992be223",
+    "data/belief_diagnostic/development_v1.json": "4d7c13b68578ecedf55349ccb4b75221c6334e98e4b5acc856a8c6eaf470f2ed",
+    "runs/belief_composition_diagnostic_v2.json": "52e3e9afae77e79abd52ab2c0356dc83aa5e3e6e6c5fd69533665c08d0453680",
+    "runs/belief_composition_diagnostic_v2.npz": "e201ca4363e53592f73f04ff19b8ff8a4f5a9e69e5029a67546230643696c454",
+    "docs/validation/2026-11-20-belief-composition.json": "52e3e9afae77e79abd52ab2c0356dc83aa5e3e6e6c5fd69533665c08d0453680",
+    "docs/validation/2026-11-20-prereport-shift-diagnostic.json": "3d5c0c061584fb99219bd676432fa606b1ef2ef400442925c4687f76c46a1795"
+  },
+  "composition": {
+    "analysis_status": "posthoc_exploratory_same_known_cases",
+    "layer": "layer_16",
+    "interpretation": "World and attendance are separately decoded, then an external hard XNOR computes normative prior nested labels; not spontaneous nested representation.",
+    "counts": {
+      "omniscient": {
+        "validation": {
+          "world": 12,
+          "receipt": 10,
+          "direct": 7,
+          "composed": 10,
+          "n": 16
+        },
+        "test": {
+          "world": 12,
+          "receipt": 12,
+          "direct": 9,
+          "composed": 12,
+          "n": 16
+        }
+      },
+      "sender": {
+        "validation": {
+          "world": 12,
+          "receipt": 10,
+          "direct": 8,
+          "composed": 6,
+          "n": 16
+        },
+        "test": {
+          "world": 14,
+          "receipt": 16,
+          "direct": 8,
+          "composed": 14,
+          "n": 16
+        }
+      }
+    },
+    "n_prior_prediction_rows": 128,
+    "controls_in_composition": false,
+    "known_case_reuse": true,
+    "v1_v2_aggregate_equivalence": "exact; v2 adds row predictions and parameter sidecar only",
+    "omniscient_test_both_facts_wrong_cancellations": 2,
+    "n_numeric_parameter_arrays": 18,
+    "limits": "Sender validation worsens; two held-out wording groups; no robust or spontaneous-belief advantage claim."
+  },
+  "software_validation": {
+    "tests_passed": 329,
+    "subtests_passed": 48,
+    "ruff_lint": "passed",
+    "ruff_format": "passed",
+    "editor_diagnostics": "no_errors",
+    "repository_hygiene": "passed",
+    "source_and_wheel_build": "passed",
+    "package_metadata": "passed",
+    "source_package_case_bank_bytes": "exact",
+    "all_curated_runtime_artifact_hashes": "verified",
+    "meaning": "Software checks are separate from construct validity and scientific generalization."
+  }
+}

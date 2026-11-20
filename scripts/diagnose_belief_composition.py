@@ -17,7 +17,7 @@ from sklearn.exceptions import ConvergenceWarning
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import StandardScaler, normalize
 
-from latent_probes.storage import atomic_json, environment_info, file_sha256, utc_now
+from latent_probes.storage import atomic_json, atomic_npz, environment_info, file_sha256, utc_now
 
 HELPER_PATH = Path(__file__).with_name("export_belief_readout.py")
 SPEC = importlib.util.spec_from_file_location("_composition_export_verification", HELPER_PATH)
@@ -124,9 +124,13 @@ def fit_receipt_head(X_train, y_train, X_validation, y_validation):
 
 def diagnose_composition(source_run, output_path):
     source, output = Path(source_run).resolve(), Path(output_path).resolve()
+    sidecar = output.with_suffix(".npz")
     _require(
-        not output.exists() and not output.is_relative_to(source),
-        "Use a fresh output outside the source run",
+        output.suffix == ".json"
+        and not output.exists()
+        and not sidecar.exists()
+        and not output.is_relative_to(source),
+        "Use fresh JSON and NPZ outputs outside the source run",
     )
     manifest, protocol, rows, report, X, hashes = HELPER._source(source)
     cases = {case["id"]: case for case in protocol["panel"]["cases"]}
@@ -143,7 +147,7 @@ def diagnose_composition(source_run, output_path):
         "Authored prior labels do not implement the specified Boolean rule",
     )
     output_report = {
-        "schema": "belief_composition_diagnostic_v1",
+        "schema": "belief_composition_diagnostic_v2",
         "created_at": utc_now(),
         "analysis_status": "posthoc_exploratory_same_known_cases",
         "layer": "layer_16",
@@ -157,6 +161,7 @@ def diagnose_composition(source_run, output_path):
         "gold_rule_agreement_on_prior_rows": 1.0,
         "composed_probabilities": "not defined; no calibration or conditional-independence assumption",
         "views": {},
+        "prior_predictions": [],
         "limitations": [
             "Post-hoc diagnostic on already known cases; no fresh confirmation or layer selection.",
             "The composed classifier decodes two narrated facts and applies an external rule; it does not establish spontaneous nested representation, intention or causal use.",
@@ -166,6 +171,7 @@ def diagnose_composition(source_run, output_path):
             "Repeated factorial cells share wording templates; row accuracies are descriptive and do not yield population confidence claims.",
         ],
     }
+    parameters = {}
     for view in ("omniscient", "sender"):
         masks = {
             split: np.asarray(
@@ -192,8 +198,8 @@ def diagnose_composition(source_run, output_path):
             )
         world_head = report["readouts"][view]["world"]["layers"]["layer_16"]
         nested_head = report["readouts"][view]["nested"]["layers"]["layer_16"]
-        _world_model, world_prediction = _recorded_head(values, world, masks, world_head)
-        _nested_model, nested_prediction = _recorded_head(values, nested, masks, nested_head)
+        world_model, world_prediction = _recorded_head(values, world, masks, world_head)
+        nested_model, nested_prediction = _recorded_head(values, nested, masks, nested_head)
         receipt_model, receipt_selection = fit_receipt_head(
             values[masks["train"]],
             b[masks["train"]],
@@ -202,6 +208,47 @@ def diagnose_composition(source_run, output_path):
         )
         receipt_prediction = receipt_model.predict(values)
         composed = hard_composition(world_prediction, receipt_prediction)
+        _require(
+            np.array_equal(world_model.classes_, [0, 1])
+            and np.array_equal(receipt_model.classes_, world_model.classes_)
+            and np.array_equal(nested_model.classes_, world_model.classes_),
+            "Factual and direct-head classes differ",
+        )
+        parameters.update(
+            {
+                view + "_mean": scaler.mean_.copy(),
+                view + "_scale": scaler.scale_.copy(),
+                view + "_world_coef": world_model.coef_.copy(),
+                view + "_world_intercept": world_model.intercept_.copy(),
+                view + "_receipt_coef": receipt_model.coef_.copy(),
+                view + "_receipt_intercept": receipt_model.intercept_.copy(),
+                view + "_direct_nested_coef": nested_model.coef_.copy(),
+                view + "_direct_nested_intercept": nested_model.intercept_.copy(),
+                view + "_classes": world_model.classes_.copy(),
+            }
+        )
+        for i in prior:
+            if rows[i]["view"] == view:
+                output_report["prior_predictions"].append(
+                    {
+                        "example_id": rows[i]["example_id"],
+                        "template_id": rows[i]["template_id"],
+                        "split": rows[i]["split"],
+                        "view": view,
+                        "phase": "prior",
+                        "gold": {
+                            "world": int(world[i]),
+                            "sender_recorded": int(b[i]),
+                            "nested": int(nested[i]),
+                        },
+                        "predictions": {
+                            "world": int(world_prediction[i]),
+                            "sender_recorded": int(receipt_prediction[i]),
+                            "direct_nested": int(nested_prediction[i]),
+                            "composed_nested": int(composed[i]),
+                        },
+                    }
+                )
         groups = {}
         for split, indices in masks.items():
             if not len(indices):
@@ -252,7 +299,27 @@ def diagnose_composition(source_run, output_path):
         HELPER._snapshot(source) == hashes, "Original source changed during composition diagnosis"
     )
     output_report["source_artifacts_unchanged"] = True
+    _require(
+        len(output_report["prior_predictions"]) == len(prior)
+        and len({r["example_id"] for r in output_report["prior_predictions"]}) == len(prior),
+        "Prior prediction ledger is incomplete",
+    )
+    _require(
+        not output.exists() and not sidecar.exists(), "JSON or NPZ output appeared during diagnosis"
+    )
     output.parent.mkdir(parents=True, exist_ok=True)
+    atomic_npz(sidecar, **parameters)
+    output_report["parameter_sidecar"] = {
+        "filename": sidecar.name,
+        "sha256": file_sha256(sidecar),
+        "arrays": {key: list(value.shape) for key, value in parameters.items()},
+        "feature_layer": "layer_16",
+        "transform": "saved train-only mean/scale, then per-row L2; near-zero row norm replaced by one",
+        "world_and_direct_nested_decision": "sigmoid, then argmax over [1-p,p]; ties choose class 0",
+        "receipt_decision": "decision logit > 0; zero ties choose class 0",
+        "composition": "hard XNOR of world and receipt predictions",
+        "contains_pickle": False,
+    }
     atomic_json(output, output_report)
     return output_report
 

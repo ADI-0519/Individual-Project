@@ -4,6 +4,8 @@
 
 The current natural-report study and its failures remain preserved in [NEUTRAL_FORECAST_RESULTS.md](./NEUTRAL_FORECAST_RESULTS.md) and [RESEARCH_CHECKS_RESULTS.md](./RESEARCH_CHECKS_RESULTS.md). The broader remaining work is in [MAIN_STUDY_GATES.md](./MAIN_STUDY_GATES.md).
 
+The diagnostic proposed below has since run. Its [measured follow-up](./BELIEF_DIAGNOSTIC_RESULTS.md) records near-chance direct nested readouts, question-format dependence and a factual-composition control. This methods note preserves the reading scope and design rationale; it does not turn those development results into a successful belief-mechanism claim.
+
 ## Primary sources and reading scope
 
 ### Zhu, Zhang and Wang: Language Models Represent Beliefs of Self and Others

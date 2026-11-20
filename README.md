@@ -42,6 +42,13 @@ ablation changes reports and reader decisions on eight training cases. The
 [24-report ablation audit](docs/SENDER_POLICY_AUDIT_DRAFT.md) need human review.
 These are exploratory diagnostics, with retained failures, not a finished study.
 
+The [20 November belief diagnostic](docs/BELIEF_DIAGNOSTIC_RESULTS.md) directly
+separates world truth, actual reader perspective and nested sender-attributed
+perspective. The earlier outcome-forecast failure is not an absence test for
+second-order beliefs. The new query-free nested heads remain near chance;
+the [primary-methods audit](docs/BELIEF_TARGET_AUDIT.md) and capability controls
+explain the next validity checks before communication transfer.
+
 The Apollo path trains on selected token rows and scores mean raw projections.
 It is separate from the original last-token baseline documented below.
 Dependency locks, offline CI on Linux/Windows, packaging artifacts and a manual

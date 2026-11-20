@@ -9,6 +9,7 @@ from pathlib import Path
 
 import numpy as np
 import pytest
+from scipy.special import expit
 
 from latent_probes import belief_readout
 from latent_probes.belief_panel import build_panel
@@ -124,6 +125,65 @@ def test_hard_rule_and_both_wrong_error_cancellation():
     assert MODULE.classification_metrics(nested, nested)["accuracy"] == 1
     with pytest.raises(ValueError, match="binary"):
         MODULE.hard_composition([2], [0])
+
+
+def test_numeric_sidecar_reproduces_all_prior_row_assignments(saved_run, tmp_path):
+    output = tmp_path / "diagnostic.json"
+    report = MODULE.diagnose_composition(saved_run, output)
+    sidecar = output.with_suffix(".npz")
+    assert report["parameter_sidecar"]["filename"] == sidecar.name
+    assert report["parameter_sidecar"]["sha256"] == file_sha256(sidecar)
+    source_rows = read_json(saved_run / "rows.json")
+    indices = {row["example_id"]: i for i, row in enumerate(source_rows)}
+    with np.load(saved_run / "features.npz", allow_pickle=False) as archive:
+        X = archive["layer_16"].astype(np.float64)
+    with np.load(sidecar, allow_pickle=False) as parameters:
+        assert all(parameters[key].dtype.kind in "fiu" for key in parameters.files)
+        predictions = {}
+        for view in ("omniscient", "sender"):
+            values = (X - parameters[view + "_mean"]) / parameters[view + "_scale"]
+            norms = np.sqrt(np.einsum("ij,ij->i", values, values))
+            norms[norms < 10 * np.finfo(np.float64).eps] = 1
+            values /= norms[:, None]
+            heads = {}
+            for target in ("world", "receipt", "direct_nested"):
+                logits = (
+                    values @ parameters[view + "_" + target + "_coef"].T
+                    + parameters[view + "_" + target + "_intercept"]
+                )[:, 0]
+                if target == "receipt":
+                    heads[target] = (logits > 0).astype(int)
+                else:
+                    probability = expit(logits)
+                    heads[target] = np.column_stack([1 - probability, probability]).argmax(axis=1)
+            heads["composed_nested"] = (heads["world"] == heads["receipt"]).astype(int)
+            predictions[view] = heads
+    assert len(report["prior_predictions"]) == 128
+    for row in report["prior_predictions"]:
+        index, view = indices[row["example_id"]], row["view"]
+        assert row["phase"] == "prior" and row["split"] != "control"
+        for target, head in (
+            ("world", "world"),
+            ("sender_recorded", "receipt"),
+            ("direct_nested", "direct_nested"),
+            ("composed_nested", "composed_nested"),
+        ):
+            assert row["predictions"][target] == int(predictions[view][head][index])
+
+
+def test_existing_sidecar_is_preserved_before_any_fit(saved_run, tmp_path, monkeypatch):
+    output = tmp_path / "diagnostic.json"
+    sidecar = output.with_suffix(".npz")
+    sidecar.write_bytes(b"preserve existing sidecar")
+
+    def no_fit(*args, **kwargs):
+        raise AssertionError("A sidecar collision must fail before fitting")
+
+    monkeypatch.setattr(MODULE.LogisticRegression, "fit", no_fit)
+    with pytest.raises(ValueError, match="fresh JSON and NPZ"):
+        MODULE.diagnose_composition(saved_run, output)
+    assert sidecar.read_bytes() == b"preserve existing sidecar"
+    assert not output.exists()
 
 
 def test_receipt_selection_api_omits_test_and_controls():

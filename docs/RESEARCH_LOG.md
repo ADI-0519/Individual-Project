@@ -1,5 +1,55 @@
 # Research and implementation log
 
+## 20 November 2026 — Direct nested target, elicitation controls and composition
+
+Corrected an overly broad timing interpretation: an after-report state still
+precedes the reader's answer and can forecast it. It does not demonstrate
+anticipation before composition or added reader-perspective information beyond
+the text shortcut. The original outcome readout was not directly trained on a
+nested belief label, so its failure cannot establish belief absence.
+
+A primary-methods review covers Zhu, Bortoletto, Lookbacks, ToMi and Kim, with
+versioned links and exact reading limits in the
+[target audit](./BELIEF_TARGET_AUDIT.md). The new construct diagnostic contains
+64 prior vignettes, eight independent truth/perspective combinations per wording
+group, plus16 trusted-message controls. Four groups train, two validate, two test.
+Two information views enforce a hidden-attendance impossibility control.
+
+The genuine pinned8B run produces160 feature rows from120 unique prefixes and
+400 behavior rows from320 calls. Captures precede every perspective question
+and answer. Primary block16 nested heads score9/16 omniscient and8/16 sender;
+their losses are near chance. All prior nested answers begin NO. Layer hooks,
+prefix repeats, output hashes, C selections and primary exported probabilities
+pass independent checks. The numeric heads are frozen as baselines, not promoted
+to validated belief decoders.
+
+One frozen A/B question-format diagnostic adds400 rows/320 calls, retaining
+the exact scenes. All217 strict-invalid answers already contain a leading A;
+supplemental extraction yields64/64 world judgments in the omniscient view,
+but both prior nested conditions remain constant-A and32/64. Original strict
+scores and format violations remain separately visible.
+
+A post-hoc CPU factual-composition control obtains14/16 on the sender test
+versus8/16 for the direct nested head, using independently decoded world and
+attendance facts plus an external rule. It falls to6/16 on validation, so
+neither robust composition nor spontaneous nested representation is claimed.
+The original before-report collapse is also sensitive to scaling: a
+neutral-validation-selected alternative gets8/12 under pressure, merely the
+majority baseline. All source experiments remain unchanged.
+
+See [full measured interpretation](./BELIEF_DIAGNOSTIC_RESULTS.md),
+[fitting diagnosis](./validation/2026-11-20-prereport-shift-diagnostic.json),
+and [composition record](./validation/2026-11-20-belief-composition.json).
+The next gate is representation timing and reliable elicitation, then fresh
+neutral-task validation before communication transfer. Three agents contributed;
+no connected-app plugin or new model download was used.
+
+Final local checks pass329 tests and48 subtests, lint/format, editor diagnostics,
+repository hygiene, source/wheel builds and package metadata. The source
+distribution preserves the frozen case bank exactly and excludes raw runs,
+caches and environments. Independent sidecar scoring reproduces all128
+composition rows and30 aggregate metric cells without fitting or model calls.
+
 ## 19 November 2026 — Before-report replay and sender-policy intervention
 
 Completed two real cached-8B diagnostics while preserving all 377 original

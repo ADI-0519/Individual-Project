@@ -1,5 +1,15 @@
 # Development scenarios
 
+The newer [belief diagnostic](./belief_diagnostic/development_v1.json) contains
+64 prior-state vignettes and 16 trusted-current-message controls. Its targets
+are separately authored world truth, reader perspective and nested
+sender-attributed reader perspective. Eight wording groups split 4/2/2;
+this is development/template holdout, not new story-family evaluation.
+The sender view deliberately hides actual reader attendance, making matched
+private-attendance inputs identical. Labels are normative fictional states,
+not measured beliefs of a reader model. See the
+[target and primary-methods audit](../docs/BELIEF_TARGET_AUDIT.md).
+
 `pilot_scenarios.jsonl` contains **24 synthetic draft scenarios** in six families
 and three invented settings. Twelve have a full-information answer of `yes` and
 twelve have a full-information answer of `no`. The first four records span four
