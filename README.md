@@ -6,10 +6,12 @@ Research software for KCL Variant 2, by Aditya Ranjan. Start with an auditable
 adaptation of Apollo's instruction-pair deception probe, then evaluate transfer
 under reporting pressure and recipient-knowledge shifts.
 
-The main research question is whether a latent reader-outcome readout trained
-under neutral communication transfers to pressured natural reports and improves
-on text/source controls. Apollo and fixed-report replays are comparators and
-diagnostics. See [research direction](docs/RESEARCH_DIRECTION.md).
+The longer-term communication question is whether a latent reader-outcome
+readout transfers from neutral to pressured reports and improves on text/source
+controls. That pipeline is stopped pending valid reader measurements. A separate
+controlled study tests a frozen readout of sender-attributed current belief;
+this target is distinct from Apollo deception detection. See the
+[current research decision](docs/CURRENT_RESEARCH_STATE.md).
 
 **Project status: early research development.** The engineering baseline and
 small pilot are complete; the main study and dissertation are not. Validated
@@ -17,7 +19,17 @@ targets, human-reviewed data, competitive frozen controls, independent family
 holdouts, a second reader and the final analysis/write-up remain ahead. The
 [main-study gates](docs/MAIN_STUDY_GATES.md) define what counts as completion.
 
-**Latest measured milestone (21 November):** the [fresh twelve-case validation](docs/RECIPIENT_RISK_V2_RESULTS.md)
+**Latest measured milestone (21 November):** [fresh neutral belief controls](docs/FUTURE_GOAL_CONTENT_CONTROLS_RESULTS.md)
+give the unchanged readout **25/32**, versus **16/32** direct answers because
+the model emits NO throughout. The readout passes its floors; the answer measure
+fails, so none of the 192 goal/archive conditions runs. A separate posthoc
+same-prefix output-score diagnostic gives AUROC .748 versus .793 for the probe.
+The message subset is .813 versus .922, while the output score is slightly better
+on observation cases. These are 16 paired scenes with human review pending,
+not an established general latent advantage. Read the
+[results and figure](docs/FUTURE_GOAL_CONTENT_CONTROLS_RESULTS.md).
+
+**Earlier reader qualification:** the [fresh twelve-case validation](docs/RECIPIENT_RISK_V2_RESULTS.md)
 completed its 72 real comprehension controls and stopped under its frozen gate.
 The reader scores 19/36 with full disclosure and defers on 2/12 missing-evidence
 packets. All twelve informed no-report answers are correct, falling to seven

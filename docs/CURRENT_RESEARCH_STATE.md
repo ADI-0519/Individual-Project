@@ -2,7 +2,41 @@
 
 Read this file and the linked protocols before changing the project. It records
 the current evidence boundary so continuation does not depend on chat memory.
-The experiment ran on 20 November; analysis and curation continued overnight.
+Earlier experiments ran on 20 November; continuation and fresh validation
+also ran on 21 November. Read the dated sections for each attempt.
+
+## 21 November: real future-goal neutral qualification
+
+The [new neutral transfer result](FUTURE_GOAL_CONTENT_CONTROLS_RESULTS.md) is real:
+frozen belief readout **25/32**, versus **16/32** direct answers because all 32
+were NO. There are 16 scene units and two mappings, not 32 independent scenes.
+The readout passes all prospective floors; the answer measure fails. Exactly
+32 neutral answers were collected and **zero of the 192 goal/archive conditions**.
+No new probe was fitted.
+Keep this gate failed and the goal-effect hypothesis unanswered.
+
+Execution was frozen at `ac7e17d`; actual native run is
+`/home/adirj/kcl-latent-probes-runs/future_goal_content_controls_v1_20261121`.
+The Windows mirror under `runs/` is byte-identical: 70 files, 3,915,852 bytes.
+[V2 CPU verification](validation/2026-11-21-future-goal-content-controls-v2.json)
+rechecks all bindings and tokenizer outputs. It corrects only an invalid EOS
+metadata subset assumption in a separate analyzer; the executed V1 file remains
+unchanged. The [independent raw audit](validation/2026-11-21-future-goal-content-independent.json)
+gives overall AUROC .792969, observation .6875 and message .921875, and recomputes
+all 32 margins with maximum error 8.33e-17. Human review remains incomplete.
+
+A separate [posthoc output-score diagnostic](FUTURE_GOAL_ANSWER_LOGITS_PROTOCOL_V1.md),
+frozen at `20d4101`, checks YES/NO next-token discrimination on the same 32 prefixes
+with zero new answers. It is not a rescue of this failed gate. Its native output
+is `/home/adirj/kcl-latent-probes-runs/future_goal_answer_logits_v1_20261121`.
+It completed 32 full-model forwards, zero new generated answers, with every
+block16 vector exactly matching the old neutral vector. Output YES−NO AUROC is
+.748047 overall, .703125 observation and .8125 message; the frozen probe gives
+.792969, .6875 and .921875. All argmax IDs still match NO and conditional YES
+probabilities are below .5. The [verified record](validation/2026-11-21-future-goal-answer-logits.json)
+and [result/figure](FUTURE_GOAL_CONTENT_CONTROLS_RESULTS.md) distinguish this
+posthoc ranking evidence from the failed original gate. The new mirror has
+35 files, 4,121,429 bytes. Human semantic review remains pending.
 
 ## 21 November continuation
 
@@ -152,6 +186,14 @@ be described as indexed. A fresh source-level graph audit is separate from
 scientific validation or model inference.
 
 ## Next concrete research decision
+
+**After the new measurements:** the old 192 goal/archive conditions remain
+uncollected. The next larger study needs fresh fully crossed materials and a
+qualified behavioral/likelihood measure with calibration separated from held-out
+validation. Do not retune these 32 development rows or declare the failed gate
+passed. The message-transfer readout is promising development evidence; a novel
+goal-specific failure or natural-communication advantage remains unestablished.
+The earlier design decisions below document how the completed assay was chosen.
 
 **21 November scientific reassessment:** the [new research decision](RESEARCH_DECISION_2026-11-21.md)
 recommends one bounded fresh test of the existing belief readout under future
