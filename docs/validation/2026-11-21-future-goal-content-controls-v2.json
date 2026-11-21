@@ -1,0 +1,1143 @@
+{
+  "schema": "future_goal_content_controls_analysis_v1",
+  "bank_sha256": "8c1b64638d12a93585e1bef8260388437ca2404feff6809a214f18a598e78a79",
+  "qualification": {
+    "overall": {
+      "n": 32,
+      "probe_correct": 25,
+      "answer_correct": 16,
+      "invalid": 0
+    },
+    "per_mapping": {
+      "0": {
+        "n": 16,
+        "probe_correct": 12,
+        "answer_correct": 8,
+        "invalid": 0
+      },
+      "1": {
+        "n": 16,
+        "probe_correct": 13,
+        "answer_correct": 8,
+        "invalid": 0
+      }
+    },
+    "per_channel": {
+      "observation": {
+        "n": 16,
+        "probe_correct": 11,
+        "answer_correct": 8,
+        "invalid": 0
+      },
+      "message": {
+        "n": 16,
+        "probe_correct": 14,
+        "answer_correct": 8,
+        "invalid": 0
+      }
+    },
+    "crossed": {
+      "observation/map0": {
+        "n": 8,
+        "probe_correct": 5,
+        "answer_correct": 4,
+        "invalid": 0
+      },
+      "observation/map1": {
+        "n": 8,
+        "probe_correct": 6,
+        "answer_correct": 4,
+        "invalid": 0
+      },
+      "message/map0": {
+        "n": 8,
+        "probe_correct": 7,
+        "answer_correct": 4,
+        "invalid": 0
+      },
+      "message/map1": {
+        "n": 8,
+        "probe_correct": 7,
+        "answer_correct": 4,
+        "invalid": 0
+      }
+    },
+    "per_label": {
+      "0": {
+        "n": 16,
+        "probe_correct": 13,
+        "answer_correct": 16,
+        "invalid": 0
+      },
+      "1": {
+        "n": 16,
+        "probe_correct": 12,
+        "answer_correct": 0,
+        "invalid": 0
+      }
+    },
+    "per_label_mapping_channel": {
+      "observation/map0/label0": {
+        "n": 4,
+        "probe_correct": 2,
+        "answer_correct": 4,
+        "invalid": 0
+      },
+      "observation/map0/label1": {
+        "n": 4,
+        "probe_correct": 3,
+        "answer_correct": 0,
+        "invalid": 0
+      },
+      "observation/map1/label0": {
+        "n": 4,
+        "probe_correct": 3,
+        "answer_correct": 4,
+        "invalid": 0
+      },
+      "observation/map1/label1": {
+        "n": 4,
+        "probe_correct": 3,
+        "answer_correct": 0,
+        "invalid": 0
+      },
+      "message/map0/label0": {
+        "n": 4,
+        "probe_correct": 4,
+        "answer_correct": 4,
+        "invalid": 0
+      },
+      "message/map0/label1": {
+        "n": 4,
+        "probe_correct": 3,
+        "answer_correct": 0,
+        "invalid": 0
+      },
+      "message/map1/label0": {
+        "n": 4,
+        "probe_correct": 4,
+        "answer_correct": 4,
+        "invalid": 0
+      },
+      "message/map1/label1": {
+        "n": 4,
+        "probe_correct": 3,
+        "answer_correct": 0,
+        "invalid": 0
+      }
+    },
+    "floors": {
+      "overall": 24,
+      "per_mapping": 12,
+      "per_channel": 10
+    },
+    "failed_checks": [
+      "overall/answer_correct<24",
+      "mapping/0/answer_correct<12",
+      "mapping/1/answer_correct<12",
+      "channel/observation/answer_correct<10",
+      "channel/message/answer_correct<10"
+    ],
+    "passed": false
+  },
+  "n_saved_conditions": 32,
+  "neutral_metrics": {
+    "overall_descriptive_conditions": {
+      "n": 32,
+      "probe_correct": 25,
+      "answer_correct": 16,
+      "invalid": 0,
+      "probe_accuracy": 0.78125,
+      "answer_accuracy": 0.5,
+      "invalid_ids": [],
+      "score_auroc": 0.79296875,
+      "fixed_threshold_class_recall": {
+        "0": {
+          "n": 16,
+          "probe": 0.8125,
+          "answer": 1.0
+        },
+        "1": {
+          "n": 16,
+          "probe": 0.75,
+          "answer": 0.0
+        }
+      }
+    },
+    "per_condition": {
+      "neutral": {
+        "n": 32,
+        "probe_correct": 25,
+        "answer_correct": 16,
+        "invalid": 0,
+        "probe_accuracy": 0.78125,
+        "answer_accuracy": 0.5,
+        "invalid_ids": [],
+        "score_auroc": 0.79296875,
+        "fixed_threshold_class_recall": {
+          "0": {
+            "n": 16,
+            "probe": 0.8125,
+            "answer": 1.0
+          },
+          "1": {
+            "n": 16,
+            "probe": 0.75,
+            "answer": 0.0
+          }
+        }
+      }
+    },
+    "per_channel": {
+      "observation": {
+        "n": 16,
+        "probe_correct": 11,
+        "answer_correct": 8,
+        "invalid": 0,
+        "probe_accuracy": 0.6875,
+        "answer_accuracy": 0.5,
+        "invalid_ids": [],
+        "score_auroc": 0.6875,
+        "fixed_threshold_class_recall": {
+          "0": {
+            "n": 8,
+            "probe": 0.625,
+            "answer": 1.0
+          },
+          "1": {
+            "n": 8,
+            "probe": 0.75,
+            "answer": 0.0
+          }
+        }
+      },
+      "message": {
+        "n": 16,
+        "probe_correct": 14,
+        "answer_correct": 8,
+        "invalid": 0,
+        "probe_accuracy": 0.875,
+        "answer_accuracy": 0.5,
+        "invalid_ids": [],
+        "score_auroc": 0.921875,
+        "fixed_threshold_class_recall": {
+          "0": {
+            "n": 8,
+            "probe": 1.0,
+            "answer": 1.0
+          },
+          "1": {
+            "n": 8,
+            "probe": 0.75,
+            "answer": 0.0
+          }
+        }
+      }
+    },
+    "per_mapping": {
+      "0": {
+        "n": 16,
+        "probe_correct": 12,
+        "answer_correct": 8,
+        "invalid": 0,
+        "probe_accuracy": 0.75,
+        "answer_accuracy": 0.5,
+        "invalid_ids": [],
+        "score_auroc": 0.796875,
+        "fixed_threshold_class_recall": {
+          "0": {
+            "n": 8,
+            "probe": 0.75,
+            "answer": 1.0
+          },
+          "1": {
+            "n": 8,
+            "probe": 0.75,
+            "answer": 0.0
+          }
+        }
+      },
+      "1": {
+        "n": 16,
+        "probe_correct": 13,
+        "answer_correct": 8,
+        "invalid": 0,
+        "probe_accuracy": 0.8125,
+        "answer_accuracy": 0.5,
+        "invalid_ids": [],
+        "score_auroc": 0.78125,
+        "fixed_threshold_class_recall": {
+          "0": {
+            "n": 8,
+            "probe": 0.875,
+            "answer": 1.0
+          },
+          "1": {
+            "n": 8,
+            "probe": 0.75,
+            "answer": 0.0
+          }
+        }
+      }
+    },
+    "per_condition_channel_mapping": {
+      "neutral/observation/map0": {
+        "n": 8,
+        "probe_correct": 5,
+        "answer_correct": 4,
+        "invalid": 0,
+        "probe_accuracy": 0.625,
+        "answer_accuracy": 0.5,
+        "invalid_ids": [],
+        "score_auroc": 0.6875,
+        "fixed_threshold_class_recall": {
+          "0": {
+            "n": 4,
+            "probe": 0.5,
+            "answer": 1.0
+          },
+          "1": {
+            "n": 4,
+            "probe": 0.75,
+            "answer": 0.0
+          }
+        }
+      },
+      "neutral/observation/map1": {
+        "n": 8,
+        "probe_correct": 6,
+        "answer_correct": 4,
+        "invalid": 0,
+        "probe_accuracy": 0.75,
+        "answer_accuracy": 0.5,
+        "invalid_ids": [],
+        "score_auroc": 0.6875,
+        "fixed_threshold_class_recall": {
+          "0": {
+            "n": 4,
+            "probe": 0.75,
+            "answer": 1.0
+          },
+          "1": {
+            "n": 4,
+            "probe": 0.75,
+            "answer": 0.0
+          }
+        }
+      },
+      "neutral/message/map0": {
+        "n": 8,
+        "probe_correct": 7,
+        "answer_correct": 4,
+        "invalid": 0,
+        "probe_accuracy": 0.875,
+        "answer_accuracy": 0.5,
+        "invalid_ids": [],
+        "score_auroc": 0.9375,
+        "fixed_threshold_class_recall": {
+          "0": {
+            "n": 4,
+            "probe": 1.0,
+            "answer": 1.0
+          },
+          "1": {
+            "n": 4,
+            "probe": 0.75,
+            "answer": 0.0
+          }
+        }
+      },
+      "neutral/message/map1": {
+        "n": 8,
+        "probe_correct": 7,
+        "answer_correct": 4,
+        "invalid": 0,
+        "probe_accuracy": 0.875,
+        "answer_accuracy": 0.5,
+        "invalid_ids": [],
+        "score_auroc": 0.875,
+        "fixed_threshold_class_recall": {
+          "0": {
+            "n": 4,
+            "probe": 1.0,
+            "answer": 1.0
+          },
+          "1": {
+            "n": 4,
+            "probe": 0.75,
+            "answer": 0.0
+          }
+        }
+      }
+    }
+  },
+  "neutral_raw_scores": [
+    {
+      "id": "fgv1_01_map0_neutral",
+      "scene_id": "fgv1_01",
+      "channel": "observation",
+      "wording_group": "observation_1",
+      "mapping_id": 0,
+      "condition": "neutral",
+      "gold": 1,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": 0.015918228952277888,
+        "probability": 0.503979473208527,
+        "prediction": 1
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": false
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_01_map1_neutral",
+      "scene_id": "fgv1_01",
+      "channel": "observation",
+      "wording_group": "observation_1",
+      "mapping_id": 1,
+      "condition": "neutral",
+      "gold": 1,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": 0.008048374467538554,
+        "probability": 0.502012082755618,
+        "prediction": 1
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": false
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_02_map0_neutral",
+      "scene_id": "fgv1_02",
+      "channel": "observation",
+      "wording_group": "observation_2",
+      "mapping_id": 0,
+      "condition": "neutral",
+      "gold": 0,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": -0.01585315791243879,
+        "probability": 0.49603679352516084,
+        "prediction": 0
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": true
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_02_map1_neutral",
+      "scene_id": "fgv1_02",
+      "channel": "observation",
+      "wording_group": "observation_2",
+      "mapping_id": 1,
+      "condition": "neutral",
+      "gold": 0,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": -0.01887521385024164,
+        "probability": 0.4952813366312451,
+        "prediction": 0
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": true
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_03_map0_neutral",
+      "scene_id": "fgv1_03",
+      "channel": "observation",
+      "wording_group": "observation_3",
+      "mapping_id": 0,
+      "condition": "neutral",
+      "gold": 1,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": -0.038395312136662654,
+        "probability": 0.4904023510080394,
+        "prediction": 0
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": false
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_03_map1_neutral",
+      "scene_id": "fgv1_03",
+      "channel": "observation",
+      "wording_group": "observation_3",
+      "mapping_id": 1,
+      "condition": "neutral",
+      "gold": 1,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": -0.02821960268181635,
+        "probability": 0.4929455674707454,
+        "prediction": 0
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": false
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_04_map0_neutral",
+      "scene_id": "fgv1_04",
+      "channel": "observation",
+      "wording_group": "observation_4",
+      "mapping_id": 0,
+      "condition": "neutral",
+      "gold": 0,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": -0.012686372927866707,
+        "probability": 0.4968284493047726,
+        "prediction": 0
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": true
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_04_map1_neutral",
+      "scene_id": "fgv1_04",
+      "channel": "observation",
+      "wording_group": "observation_4",
+      "mapping_id": 1,
+      "condition": "neutral",
+      "gold": 0,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": -0.013386882886320116,
+        "probability": 0.4966533292576282,
+        "prediction": 0
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": true
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_05_map0_neutral",
+      "scene_id": "fgv1_05",
+      "channel": "observation",
+      "wording_group": "observation_1",
+      "mapping_id": 0,
+      "condition": "neutral",
+      "gold": 0,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": 0.036935315074192926,
+        "probability": 0.5092327791658371,
+        "prediction": 1
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": true
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_05_map1_neutral",
+      "scene_id": "fgv1_05",
+      "channel": "observation",
+      "wording_group": "observation_1",
+      "mapping_id": 1,
+      "condition": "neutral",
+      "gold": 0,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": 0.0431467932281452,
+        "probability": 0.5107850252009061,
+        "prediction": 1
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": true
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_06_map0_neutral",
+      "scene_id": "fgv1_06",
+      "channel": "observation",
+      "wording_group": "observation_2",
+      "mapping_id": 0,
+      "condition": "neutral",
+      "gold": 1,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": 0.11442267600239983,
+        "probability": 0.5285744997154296,
+        "prediction": 1
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": false
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_06_map1_neutral",
+      "scene_id": "fgv1_06",
+      "channel": "observation",
+      "wording_group": "observation_2",
+      "mapping_id": 1,
+      "condition": "neutral",
+      "gold": 1,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": 0.08953058036301706,
+        "probability": 0.5223677059717772,
+        "prediction": 1
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": false
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_07_map0_neutral",
+      "scene_id": "fgv1_07",
+      "channel": "observation",
+      "wording_group": "observation_3",
+      "mapping_id": 0,
+      "condition": "neutral",
+      "gold": 0,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": 0.001863915613001546,
+        "probability": 0.5004659787683425,
+        "prediction": 1
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": true
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_07_map1_neutral",
+      "scene_id": "fgv1_07",
+      "channel": "observation",
+      "wording_group": "observation_3",
+      "mapping_id": 1,
+      "condition": "neutral",
+      "gold": 0,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": -0.01425643123745154,
+        "probability": 0.49643595255524814,
+        "prediction": 0
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": true
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_08_map0_neutral",
+      "scene_id": "fgv1_08",
+      "channel": "observation",
+      "wording_group": "observation_4",
+      "mapping_id": 0,
+      "condition": "neutral",
+      "gold": 1,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": 0.10207828573862873,
+        "probability": 0.5254974350560437,
+        "prediction": 1
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": false
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_08_map1_neutral",
+      "scene_id": "fgv1_08",
+      "channel": "observation",
+      "wording_group": "observation_4",
+      "mapping_id": 1,
+      "condition": "neutral",
+      "gold": 1,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": 0.1107642041545347,
+        "probability": 0.5276627746092437,
+        "prediction": 1
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": false
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_09_map0_neutral",
+      "scene_id": "fgv1_09",
+      "channel": "message",
+      "wording_group": "message_1",
+      "mapping_id": 0,
+      "condition": "neutral",
+      "gold": 1,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": -0.02903053671695803,
+        "probability": 0.4927428754887507,
+        "prediction": 0
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": false
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_09_map1_neutral",
+      "scene_id": "fgv1_09",
+      "channel": "message",
+      "wording_group": "message_1",
+      "mapping_id": 1,
+      "condition": "neutral",
+      "gold": 1,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": -0.03561817337225371,
+        "probability": 0.49109639793643545,
+        "prediction": 0
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": false
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_10_map0_neutral",
+      "scene_id": "fgv1_10",
+      "channel": "message",
+      "wording_group": "message_2",
+      "mapping_id": 0,
+      "condition": "neutral",
+      "gold": 0,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": -0.048660709746453853,
+        "probability": 0.4878372224529512,
+        "prediction": 0
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": true
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_10_map1_neutral",
+      "scene_id": "fgv1_10",
+      "channel": "message",
+      "wording_group": "message_2",
+      "mapping_id": 1,
+      "condition": "neutral",
+      "gold": 0,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": -0.05460370700703057,
+        "probability": 0.4863524639975178,
+        "prediction": 0
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": true
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_11_map0_neutral",
+      "scene_id": "fgv1_11",
+      "channel": "message",
+      "wording_group": "message_1",
+      "mapping_id": 0,
+      "condition": "neutral",
+      "gold": 0,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": -0.059041715450767224,
+        "probability": 0.48524385745443965,
+        "prediction": 0
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": true
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_11_map1_neutral",
+      "scene_id": "fgv1_11",
+      "channel": "message",
+      "wording_group": "message_1",
+      "mapping_id": 1,
+      "condition": "neutral",
+      "gold": 0,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": -0.06747680860485353,
+        "probability": 0.4831371955605668,
+        "prediction": 0
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": true
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_12_map0_neutral",
+      "scene_id": "fgv1_12",
+      "channel": "message",
+      "wording_group": "message_2",
+      "mapping_id": 0,
+      "condition": "neutral",
+      "gold": 1,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": 0.012214135862831606,
+        "probability": 0.5030534960044563,
+        "prediction": 1
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": false
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_12_map1_neutral",
+      "scene_id": "fgv1_12",
+      "channel": "message",
+      "wording_group": "message_2",
+      "mapping_id": 1,
+      "condition": "neutral",
+      "gold": 1,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": 0.013037036816246128,
+        "probability": 0.5032592130416959,
+        "prediction": 1
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": false
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_13_map0_neutral",
+      "scene_id": "fgv1_13",
+      "channel": "message",
+      "wording_group": "message_3",
+      "mapping_id": 0,
+      "condition": "neutral",
+      "gold": 1,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": 0.04322830123237059,
+        "probability": 0.5108053927032992,
+        "prediction": 1
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": false
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_13_map1_neutral",
+      "scene_id": "fgv1_13",
+      "channel": "message",
+      "wording_group": "message_3",
+      "mapping_id": 1,
+      "condition": "neutral",
+      "gold": 1,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": 0.03675005541452633,
+        "probability": 0.5091864799641734,
+        "prediction": 1
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": false
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_14_map0_neutral",
+      "scene_id": "fgv1_14",
+      "channel": "message",
+      "wording_group": "message_4",
+      "mapping_id": 0,
+      "condition": "neutral",
+      "gold": 0,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": -0.0010461576850585123,
+        "probability": 0.4997384606025888,
+        "prediction": 0
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": true
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_14_map1_neutral",
+      "scene_id": "fgv1_14",
+      "channel": "message",
+      "wording_group": "message_4",
+      "mapping_id": 1,
+      "condition": "neutral",
+      "gold": 0,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": -0.0008506110272170492,
+        "probability": 0.4997873472560176,
+        "prediction": 0
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": true
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_15_map0_neutral",
+      "scene_id": "fgv1_15",
+      "channel": "message",
+      "wording_group": "message_3",
+      "mapping_id": 0,
+      "condition": "neutral",
+      "gold": 0,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": -0.03770573711939454,
+        "probability": 0.49057468237595775,
+        "prediction": 0
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": true
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_15_map1_neutral",
+      "scene_id": "fgv1_15",
+      "channel": "message",
+      "wording_group": "message_3",
+      "mapping_id": 1,
+      "condition": "neutral",
+      "gold": 0,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": -0.03328185051947661,
+        "probability": 0.49168030532032836,
+        "prediction": 0
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": true
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_16_map0_neutral",
+      "scene_id": "fgv1_16",
+      "channel": "message",
+      "wording_group": "message_4",
+      "mapping_id": 0,
+      "condition": "neutral",
+      "gold": 1,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": 0.08007126302200937,
+        "probability": 0.5200071274109078,
+        "prediction": 1
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": false
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    },
+    {
+      "id": "fgv1_16_map1_neutral",
+      "scene_id": "fgv1_16",
+      "channel": "message",
+      "wording_group": "message_4",
+      "mapping_id": 1,
+      "condition": "neutral",
+      "gold": 1,
+      "probe": {
+        "head_id": "nested_question__sender__nested__layer_16",
+        "margin": 0.06875139047551013,
+        "probability": 0.5171810805906175,
+        "prediction": 1
+      },
+      "answer": {
+        "prediction": 0,
+        "invalid": false,
+        "length_capped": false,
+        "correct": false
+      },
+      "answer_text": "NO",
+      "finish_reason": "eos"
+    }
+  ],
+  "limits": [
+    "Authored scene units, not 224 independent examples; no population significance claim.",
+    "Probe probabilities are not validated confidence estimates.",
+    "Archive control tests this operative framing; it does not establish an internal mechanism."
+  ],
+  "status": "qualification_failed",
+  "nonneutral_conditions_present_after_failed_gate": 0,
+  "evidence_verification": {
+    "run_directory": "/home/adirj/kcl-latent-probes-runs/future_goal_content_controls_v1_20261121",
+    "protocol_sha256": "e506e9433f6f39b60af299436c6d259c64fc387afc42b82c96ff04dccfbf13e2",
+    "manifest_status": "neutral_failed_stopped",
+    "source_artifact_hashes_verified": true,
+    "saved_feature_margins_recomputed": true,
+    "all_224_planned_prefixes_bound": true,
+    "pinned_tokenization_and_decoding_repeated": true,
+    "human_review_complete": false,
+    "model_calls": 0,
+    "fits": 0
+  },
+  "analysis_correction": {
+    "schema": "future_goal_controls_analysis_correction_v2",
+    "frozen_original_file": "src/latent_probes/future_goal_controls_analysis.py",
+    "frozen_original_sha256": "c6e16294942620135f76be679cbd4e899864d791a5db33ec51ecb4c17cef477c",
+    "corrected_module_sha256": "cdfd7f95bc3067521de80602862cf8b37bbb2271e968e116c46d780e28bbe8e4",
+    "corrected_cli_sha256": "b4aa646c61233d0d75cddd2bf8d880332fd68568e899a2bc0c9dfbd9d68b4c75",
+    "removed_assumption": "Frozen model-generation EOS IDs are a subset of tokenizer.all_special_ids",
+    "reason": "Model-generation EOS configuration and tokenizer special registration are separate metadata.",
+    "preserved": "Frozen EOS/source equality, tokenizer identity, output decoding, special-token disposition, prefix/features, source hashes, scores, gate and all estimands.",
+    "new_model_calls": 0,
+    "new_fits": 0
+  }
+}

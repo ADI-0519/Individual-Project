@@ -1,0 +1,502 @@
+{
+  "schema": "future_goal_neutral_independent_audit_v1",
+  "status": "passed_raw_neutral_audit",
+  "bank_sha256": "8c1b64638d12a93585e1bef8260388437ca2404feff6809a214f18a598e78a79",
+  "source_protocol_sha256": "e506e9433f6f39b60af299436c6d259c64fc387afc42b82c96ff04dccfbf13e2",
+  "source_manifest_sha256": "3a2bd3372ae2fc38d8e4b7d47c04966e6d84c9dacd61209600a75f2070b343bd",
+  "source_execution_commit": "ac7e17d",
+  "scope": "Posthoc descriptive neutral audit; no goal estimates or gate rescue. Human review pending.",
+  "overall": {
+    "n": 32,
+    "probe_correct": 25,
+    "answer_correct": 16,
+    "confusion": [
+      [
+        13,
+        3
+      ],
+      [
+        4,
+        12
+      ]
+    ],
+    "probe_auroc": 0.79296875,
+    "world_only_correct": 16,
+    "record_only_correct": 16
+  },
+  "per_channel": {
+    "observation": {
+      "n": 16,
+      "probe_correct": 11,
+      "answer_correct": 8,
+      "confusion": [
+        [
+          5,
+          3
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "probe_auroc": 0.6875,
+      "world_only_correct": 8,
+      "record_only_correct": 8
+    },
+    "message": {
+      "n": 16,
+      "probe_correct": 14,
+      "answer_correct": 8,
+      "confusion": [
+        [
+          8,
+          0
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "probe_auroc": 0.921875,
+      "world_only_correct": 8,
+      "record_only_correct": 8
+    }
+  },
+  "max_recomputed_margin_difference": 8.326672684688674e-17,
+  "constant_no_answers": 32,
+  "invalid_answers": 0,
+  "mapping_prediction_agreement_scenes": 15,
+  "scene_units": 16,
+  "mirror": {
+    "files": 70,
+    "bytes": 3915852,
+    "all_native_mirror_bytes_equal": true
+  },
+  "checks": [
+    "authored gold rederived from source bits",
+    "frozen score rederived without project scoring helpers",
+    "exact saved generation IDs/text/stop",
+    "captured and generated prefixes agree",
+    "native/mirror full file sets and hashes agree"
+  ],
+  "records": [
+    {
+      "id": "fgv1_01_map0_neutral",
+      "scene_id": "fgv1_01",
+      "channel": "observation",
+      "mapping_id": 0,
+      "gold": 1,
+      "margin": 0.015918228952277923,
+      "probability": 0.5039794732085271,
+      "prediction": 1,
+      "world_slot": 0,
+      "receipt_reports_update": 0,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_01_map1_neutral",
+      "scene_id": "fgv1_01",
+      "channel": "observation",
+      "mapping_id": 1,
+      "gold": 1,
+      "margin": 0.00804837446753855,
+      "probability": 0.502012082755618,
+      "prediction": 1,
+      "world_slot": 0,
+      "receipt_reports_update": 0,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_02_map0_neutral",
+      "scene_id": "fgv1_02",
+      "channel": "observation",
+      "mapping_id": 0,
+      "gold": 0,
+      "margin": -0.01585315791243877,
+      "probability": 0.49603679352516084,
+      "prediction": 0,
+      "world_slot": 0,
+      "receipt_reports_update": 1,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_02_map1_neutral",
+      "scene_id": "fgv1_02",
+      "channel": "observation",
+      "mapping_id": 1,
+      "gold": 0,
+      "margin": -0.018875213850241664,
+      "probability": 0.4952813366312451,
+      "prediction": 0,
+      "world_slot": 0,
+      "receipt_reports_update": 1,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_03_map0_neutral",
+      "scene_id": "fgv1_03",
+      "channel": "observation",
+      "mapping_id": 0,
+      "gold": 1,
+      "margin": -0.03839531213666264,
+      "probability": 0.4904023510080394,
+      "prediction": 0,
+      "world_slot": 0,
+      "receipt_reports_update": 0,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_03_map1_neutral",
+      "scene_id": "fgv1_03",
+      "channel": "observation",
+      "mapping_id": 1,
+      "gold": 1,
+      "margin": -0.028219602681816364,
+      "probability": 0.4929455674707454,
+      "prediction": 0,
+      "world_slot": 0,
+      "receipt_reports_update": 0,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_04_map0_neutral",
+      "scene_id": "fgv1_04",
+      "channel": "observation",
+      "mapping_id": 0,
+      "gold": 0,
+      "margin": -0.012686372927866686,
+      "probability": 0.4968284493047726,
+      "prediction": 0,
+      "world_slot": 0,
+      "receipt_reports_update": 1,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_04_map1_neutral",
+      "scene_id": "fgv1_04",
+      "channel": "observation",
+      "mapping_id": 1,
+      "gold": 0,
+      "margin": -0.0133868828863201,
+      "probability": 0.4966533292576282,
+      "prediction": 0,
+      "world_slot": 0,
+      "receipt_reports_update": 1,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_05_map0_neutral",
+      "scene_id": "fgv1_05",
+      "channel": "observation",
+      "mapping_id": 0,
+      "gold": 0,
+      "margin": 0.03693531507419294,
+      "probability": 0.5092327791658371,
+      "prediction": 1,
+      "world_slot": 1,
+      "receipt_reports_update": 0,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_05_map1_neutral",
+      "scene_id": "fgv1_05",
+      "channel": "observation",
+      "mapping_id": 1,
+      "gold": 0,
+      "margin": 0.04314679322814517,
+      "probability": 0.5107850252009061,
+      "prediction": 1,
+      "world_slot": 1,
+      "receipt_reports_update": 0,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_06_map0_neutral",
+      "scene_id": "fgv1_06",
+      "channel": "observation",
+      "mapping_id": 0,
+      "gold": 1,
+      "margin": 0.11442267600239989,
+      "probability": 0.5285744997154297,
+      "prediction": 1,
+      "world_slot": 1,
+      "receipt_reports_update": 1,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_06_map1_neutral",
+      "scene_id": "fgv1_06",
+      "channel": "observation",
+      "mapping_id": 1,
+      "gold": 1,
+      "margin": 0.08953058036301703,
+      "probability": 0.5223677059717772,
+      "prediction": 1,
+      "world_slot": 1,
+      "receipt_reports_update": 1,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_07_map0_neutral",
+      "scene_id": "fgv1_07",
+      "channel": "observation",
+      "mapping_id": 0,
+      "gold": 0,
+      "margin": 0.001863915613001553,
+      "probability": 0.5004659787683425,
+      "prediction": 1,
+      "world_slot": 1,
+      "receipt_reports_update": 0,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_07_map1_neutral",
+      "scene_id": "fgv1_07",
+      "channel": "observation",
+      "mapping_id": 1,
+      "gold": 0,
+      "margin": -0.01425643123745154,
+      "probability": 0.49643595255524814,
+      "prediction": 0,
+      "world_slot": 1,
+      "receipt_reports_update": 0,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_08_map0_neutral",
+      "scene_id": "fgv1_08",
+      "channel": "observation",
+      "mapping_id": 0,
+      "gold": 1,
+      "margin": 0.10207828573862873,
+      "probability": 0.5254974350560437,
+      "prediction": 1,
+      "world_slot": 1,
+      "receipt_reports_update": 1,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_08_map1_neutral",
+      "scene_id": "fgv1_08",
+      "channel": "observation",
+      "mapping_id": 1,
+      "gold": 1,
+      "margin": 0.11076420415453461,
+      "probability": 0.5276627746092437,
+      "prediction": 1,
+      "world_slot": 1,
+      "receipt_reports_update": 1,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_09_map0_neutral",
+      "scene_id": "fgv1_09",
+      "channel": "message",
+      "mapping_id": 0,
+      "gold": 1,
+      "margin": -0.029030536716958027,
+      "probability": 0.4927428754887507,
+      "prediction": 0,
+      "world_slot": 0,
+      "receipt_reports_update": 0,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_09_map1_neutral",
+      "scene_id": "fgv1_09",
+      "channel": "message",
+      "mapping_id": 1,
+      "gold": 1,
+      "margin": -0.03561817337225368,
+      "probability": 0.49109639793643545,
+      "prediction": 0,
+      "world_slot": 0,
+      "receipt_reports_update": 0,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_10_map0_neutral",
+      "scene_id": "fgv1_10",
+      "channel": "message",
+      "mapping_id": 0,
+      "gold": 0,
+      "margin": -0.048660709746453874,
+      "probability": 0.4878372224529512,
+      "prediction": 0,
+      "world_slot": 0,
+      "receipt_reports_update": 1,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_10_map1_neutral",
+      "scene_id": "fgv1_10",
+      "channel": "message",
+      "mapping_id": 1,
+      "gold": 0,
+      "margin": -0.05460370700703057,
+      "probability": 0.4863524639975178,
+      "prediction": 0,
+      "world_slot": 0,
+      "receipt_reports_update": 1,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_11_map0_neutral",
+      "scene_id": "fgv1_11",
+      "channel": "message",
+      "mapping_id": 0,
+      "gold": 0,
+      "margin": -0.059041715450767224,
+      "probability": 0.48524385745443965,
+      "prediction": 0,
+      "world_slot": 0,
+      "receipt_reports_update": 0,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_11_map1_neutral",
+      "scene_id": "fgv1_11",
+      "channel": "message",
+      "mapping_id": 1,
+      "gold": 0,
+      "margin": -0.06747680860485357,
+      "probability": 0.4831371955605668,
+      "prediction": 0,
+      "world_slot": 0,
+      "receipt_reports_update": 0,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_12_map0_neutral",
+      "scene_id": "fgv1_12",
+      "channel": "message",
+      "mapping_id": 0,
+      "gold": 1,
+      "margin": 0.012214135862831606,
+      "probability": 0.5030534960044563,
+      "prediction": 1,
+      "world_slot": 0,
+      "receipt_reports_update": 1,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_12_map1_neutral",
+      "scene_id": "fgv1_12",
+      "channel": "message",
+      "mapping_id": 1,
+      "gold": 1,
+      "margin": 0.013037036816246128,
+      "probability": 0.5032592130416959,
+      "prediction": 1,
+      "world_slot": 0,
+      "receipt_reports_update": 1,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_13_map0_neutral",
+      "scene_id": "fgv1_13",
+      "channel": "message",
+      "mapping_id": 0,
+      "gold": 1,
+      "margin": 0.04322830123237063,
+      "probability": 0.5108053927032992,
+      "prediction": 1,
+      "world_slot": 1,
+      "receipt_reports_update": 0,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_13_map1_neutral",
+      "scene_id": "fgv1_13",
+      "channel": "message",
+      "mapping_id": 1,
+      "gold": 1,
+      "margin": 0.03675005541452633,
+      "probability": 0.5091864799641734,
+      "prediction": 1,
+      "world_slot": 1,
+      "receipt_reports_update": 0,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_14_map0_neutral",
+      "scene_id": "fgv1_14",
+      "channel": "message",
+      "mapping_id": 0,
+      "gold": 0,
+      "margin": -0.0010461576850585193,
+      "probability": 0.4997384606025888,
+      "prediction": 0,
+      "world_slot": 1,
+      "receipt_reports_update": 1,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_14_map1_neutral",
+      "scene_id": "fgv1_14",
+      "channel": "message",
+      "mapping_id": 1,
+      "gold": 0,
+      "margin": -0.0008506110272170353,
+      "probability": 0.4997873472560176,
+      "prediction": 0,
+      "world_slot": 1,
+      "receipt_reports_update": 1,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_15_map0_neutral",
+      "scene_id": "fgv1_15",
+      "channel": "message",
+      "mapping_id": 0,
+      "gold": 0,
+      "margin": -0.03770573711939454,
+      "probability": 0.49057468237595775,
+      "prediction": 0,
+      "world_slot": 1,
+      "receipt_reports_update": 0,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_15_map1_neutral",
+      "scene_id": "fgv1_15",
+      "channel": "message",
+      "mapping_id": 1,
+      "gold": 0,
+      "margin": -0.033281850519476616,
+      "probability": 0.49168030532032836,
+      "prediction": 0,
+      "world_slot": 1,
+      "receipt_reports_update": 0,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_16_map0_neutral",
+      "scene_id": "fgv1_16",
+      "channel": "message",
+      "mapping_id": 0,
+      "gold": 1,
+      "margin": 0.08007126302200937,
+      "probability": 0.5200071274109078,
+      "prediction": 1,
+      "world_slot": 1,
+      "receipt_reports_update": 1,
+      "answer": "NO"
+    },
+    {
+      "id": "fgv1_16_map1_neutral",
+      "scene_id": "fgv1_16",
+      "channel": "message",
+      "mapping_id": 1,
+      "gold": 1,
+      "margin": 0.06875139047551014,
+      "probability": 0.5171810805906175,
+      "prediction": 1,
+      "world_slot": 1,
+      "receipt_reports_update": 1,
+      "answer": "NO"
+    }
+  ],
+  "new_model_calls": 0,
+  "new_fits": 0
+}
