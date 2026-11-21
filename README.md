@@ -19,7 +19,21 @@ targets, human-reviewed data, competitive frozen controls, independent family
 holdouts, a second reader and the final analysis/write-up remain ahead. The
 [main-study gates](docs/MAIN_STUDY_GATES.md) define what counts as completion.
 
-**Latest measured milestone (21 November):** [fresh neutral belief controls](docs/FUTURE_GOAL_CONTENT_CONTROLS_RESULTS.md)
+**Latest measured milestone (21 November):** [fully crossed belief validation](docs/CROSSED_BELIEF_VALIDATION_RESULTS.md)
+completed 256 real prefix measurements and 128 answers, without refitting. The
+queried readout passes the primary subset at **48/64**, including correctly
+oriented scores in **29/32 informative receipt pairs**, but fails independent
+initial-belief controls at **43/64**. It changes verdict in **13/32 receipt pairs
+whose target stays fixed**. The pre-question head predicts class 1 throughout.
+Primary output AUROC is .770 versus probe .782; output is stronger on controls.
+This is a controlled robustness failure, not a qualified anticipation monitor.
+All 517 raw files and scores were audited; human semantic review is pending.
+The [frozen protocol](docs/CROSSED_BELIEF_VALIDATION_PROTOCOL_V1.md),
+[figure](docs/figures/2026-11-21/crossed_belief_validation.pdf) and
+[new primary-paper review](docs/CROSSED_BELIEF_LITERATURE_ADDENDUM_2026-11-21.md)
+record the evidence and next decision. No goal conditions or new fits followed.
+
+**Earlier neutral milestone:** [fresh neutral belief controls](docs/FUTURE_GOAL_CONTENT_CONTROLS_RESULTS.md)
 give the unchanged readout **25/32**, versus **16/32** direct answers because
 the model emits NO throughout. The readout passes its floors; the answer measure
 fails, so none of the 192 goal/archive conditions runs. A separate posthoc

@@ -1,0 +1,123 @@
+{
+  "record_sha256": "11310d4b14a3d58c8f4dac75e8e4679b51a64de151e5be352e19a9d03c25466f",
+  "execution_commit": "f576a5a8e79c65464fd510f78d7e2b18c40dc213",
+  "primary": {
+    "n": 64,
+    "mapping_paired_cells": 32,
+    "class_counts": {
+      "0": 32,
+      "1": 32
+    },
+    "probe_correct": 48,
+    "probe_confusion": [
+      [
+        30,
+        2
+      ],
+      [
+        14,
+        18
+      ]
+    ],
+    "probe_auroc": 0.7822265625,
+    "probe_brier": 0.23490823548384696,
+    "shortcut_correct": {
+      "initial_slot": 32,
+      "message_slot": 32,
+      "receipt_reports_read": 32,
+      "world_slot": 32
+    },
+    "constant_zero_correct": 32,
+    "symbolic_rule_correct": 64,
+    "output_score_auroc": 0.76953125,
+    "output_fixed_correct": 33,
+    "answer_correct": 26,
+    "answer_invalid": 15,
+    "answer_confusion": [
+      [
+        25,
+        0
+      ],
+      [
+        23,
+        1
+      ]
+    ],
+    "answer_text_counts": {
+      "NO": 6,
+      "NO.": 42,
+      "NO. \n\nAlistair knows that Soraya read the": 1,
+      "NO. \n\nBastian knows that Mireya did": 1,
+      "NO. \n\nBastian knows that Mireya read": 4,
+      "NO. \n\nCorin knows that Nadia did not receive": 3,
+      "NO. \n\nCorin knows that Nadia read the message": 6,
+      "YES.": 1
+    }
+  },
+  "invariant": {
+    "n": 64,
+    "mapping_paired_cells": 32,
+    "class_counts": {
+      "0": 32,
+      "1": 32
+    },
+    "probe_correct": 43,
+    "probe_confusion": [
+      [
+        26,
+        6
+      ],
+      [
+        15,
+        17
+      ]
+    ],
+    "probe_auroc": 0.759765625,
+    "probe_brier": 0.23598928834337185,
+    "shortcut_correct": {
+      "initial_slot": 64,
+      "message_slot": 64,
+      "receipt_reports_read": 32,
+      "world_slot": 32
+    },
+    "constant_zero_correct": 32,
+    "symbolic_rule_correct": 64,
+    "output_score_auroc": 0.82568359375,
+    "output_fixed_correct": 33,
+    "answer_correct": 31,
+    "answer_invalid": 22,
+    "answer_confusion": [
+      [
+        31,
+        0
+      ],
+      [
+        11,
+        0
+      ]
+    ],
+    "answer_text_counts": {
+      "NO": 7,
+      "NO.": 35,
+      "NO. \n\nAlistair knows that Soraya did not": 1,
+      "NO. \n\nAlistair knows that Soraya read the": 3,
+      "NO. \n\nAlistair knows that the message \"The": 1,
+      "NO. \n\nAlistair knows that the message sent to": 1,
+      "NO. \n\nBastian knows that Mireya did": 2,
+      "NO. \n\nBastian knows that Mireya read": 5,
+      "NO. \n\nBastian knows that Mireya received": 2,
+      "NO. \n\nCorin knows that Nadia initially believed the": 3,
+      "NO. \n\nCorin knows that Nadia read the": 1,
+      "NO. \n\nCorin knows that Nadia read the message": 2,
+      "YES. \n\nCorin knows that Nadia read the": 1
+    }
+  },
+  "probe_qualification": {
+    "passed": false,
+    "failed_checks": [
+      "invariant/probe_correct<48/64",
+      "invariant/mapping/0/probe_correct<24/32",
+      "invariant/mapping/1/probe_correct<24/32"
+    ]
+  }
+}

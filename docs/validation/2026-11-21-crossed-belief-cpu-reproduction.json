@@ -1,0 +1,16 @@
+{
+  "schema": "crossed_belief_windows_wsl_cpu_reproduction_v1",
+  "passed": true,
+  "record_sha256": "11310d4b14a3d58c8f4dac75e8e4679b51a64de151e5be352e19a9d03c25466f",
+  "windows_reanalysis_sha256": "b9da111d35a854e85873420758c9b9e6ec31a325930e802b384cf5e699a26280",
+  "same_scientific_records_and_metrics": true,
+  "all_517_native_mirror_bytes_equal": true,
+  "tokenizer_verified_in_wsl_only": true,
+  "windows_maximum_reconstruction_errors": {
+    "probe_margin": 3.3306690738754696e-16,
+    "probe_probability": 1.1102230246251565e-16,
+    "output_scalar": 8.93152218850446e-12
+  },
+  "model_calls": 0,
+  "human_review_complete": false
+}

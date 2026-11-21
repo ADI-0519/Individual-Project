@@ -5,7 +5,53 @@ the current evidence boundary so continuation does not depend on chat memory.
 Earlier experiments ran on 20 November; continuation and fresh validation
 also ran on 21 November. Read the dated sections for each attempt.
 
-## 21 November: real future-goal neutral qualification
+## Latest: 21 November fully crossed neutral validation
+
+Read the [complete new results](CROSSED_BELIEF_VALIDATION_RESULTS.md) first.
+The fresh bank varies initial reader belief I independently of message M,
+trusted receipt B and world W in every template. It ran once at frozen commit
+`f576a5a8e79c65464fd510f78d7e2b18c40dc213`: 128 unique sender inputs, 256 prefix
+measurements and 128 queried answers. No new head was fitted.
+
+The queried head passes every primary I!=M floor: **48/64**, 24/32 per mapping,
+and **29/32 positive gold-oriented receipt contrasts**. It fails full
+qualification on I=M controls: **43/64**, mapping scores 21/32 and 22/32 below
+the required 24/32. Receipt changes flip **13/32 control verdicts** despite
+unchanged gold; world changes flip 15/64 and names 7/64. Overall probe 91/128 is
+below the I-only/M-only shortcuts 96/128. Do not call it a qualified belief monitor
+or characterize it as a proven pure legacy-XNOR shortcut.
+
+Primary output-ranking qualification passes: AUROC .769531 versus probe .782227;
+on controls output .825684 exceeds probe .759766. No latent advantage is
+established. Greedy behavior fails at 57/128 with 37 capped invalids; fixed output
+decisions 66/128 show that length caps alone do not explain the weakness. The
+pre-question frozen head predicts class 1 everywhere (64/128), though its ranking
+AUROC is not flat (.591797 primary/.666016 controls). No spontaneous anticipation
+or absence of all pre-question information is established.
+
+Native run: `/home/adirj/kcl-latent-probes-runs/crossed_belief_validation_v1_20261121`.
+The ignored Windows mirror is identical: **517 files, 68,462,262 bytes**. The
+[verified CPU record](validation/2026-11-21-crossed-belief-validation.json)
+and [independent no-project-import audit](validation/2026-11-21-crossed-belief-independent.json)
+reconstruct all scores, 257 arrays including reference, 256 pinned prefixes and
+128 answers. The independent audit predates copying and correctly retains its
+mirror flag false; the main record separately verifies complete mirror identity.
+The [protocol](CROSSED_BELIEF_VALIDATION_PROTOCOL_V1.md) and
+[prospective independent review](CROSSED_BELIEF_DESIGN_REVIEW_2026-11-21.md)
+are executed frozen files: do not edit. Bank SHA256 is
+`3fc31d095b75ac948cd04bb5eb2bafdad62a2bf2a872243657e4367effa8cc6c`.
+
+All 911 local tests and 48 subtests, and five CI jobs at the execution commit, passed.
+The [64-account review packet](review/crossed_belief_validation_v1_human/review.md)
+has blank human annotations; agent checks do not complete semantic validation.
+The [new literature update](CROSSED_BELIEF_LITERATURE_ADDENDUM_2026-11-21.md)
+narrows the gap against three additional primary papers. No goal conditions,
+replacement probe fits or additional checkpoints were run. Earlier failed gates
+stay failed. The next stage is a separately fixed neutral reference/model
+qualification, followed only if justified by fresh training and an untouched
+update-rule family. Do not fit on this new validation bank or launch the old 192.
+
+## Earlier 21 November: real future-goal neutral qualification
 
 The [new neutral transfer result](FUTURE_GOAL_CONTENT_CONTROLS_RESULTS.md) is real:
 frozen belief readout **25/32**, versus **16/32** direct answers because all 32
@@ -187,13 +233,15 @@ scientific validation or model inference.
 
 ## Next concrete research decision
 
-**After the new measurements:** the old 192 goal/archive conditions remain
-uncollected. The next larger study needs fresh fully crossed materials and a
-qualified behavioral/likelihood measure with calibration separated from held-out
-validation. Do not retune these 32 development rows or declare the failed gate
-passed. The message-transfer readout is promising development evidence; a novel
-goal-specific failure or natural-communication advantage remains unestablished.
-The earlier design decisions below document how the completed assay was chosen.
+**After the fully crossed validation:** the new study above has run and failed
+full probe and behavioral qualification. Its primary signal survives, but the
+independent-initial-belief controls expose readout sensitivity without a target
+change. The next bounded decision is a separately fixed neutral reference/model
+qualification; any replacement head requires fresh fully crossed training data
+and an untouched update-rule family. The old 192 goal/archive conditions remain
+uncollected. Do not retune either completed bank or declare an old gate passed.
+A novel goal-specific effect or natural-communication advantage remains
+unestablished. The earlier decisions below are historical.
 
 **21 November scientific reassessment:** the [new research decision](RESEARCH_DECISION_2026-11-21.md)
 recommends one bounded fresh test of the existing belief readout under future

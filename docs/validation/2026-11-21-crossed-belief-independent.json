@@ -1,0 +1,85 @@
+{
+  "schema": "crossed_belief_independent_raw_audit_v1",
+  "passed": true,
+  "audit_script_sha256": "02d4394ba7408ac0c8ce914e975a66a70a5d550d488255842dbfef3a35d137fc",
+  "protocol_sha256": "71f2ac9dc316bb1976551ba74fe0de8967b883378c424a03038dfa8814c48b36",
+  "bank_sha256": "3fc31d095b75ac948cd04bb5eb2bafdad62a2bf2a872243657e4367effa8cc6c",
+  "execution_commit": "f576a5a8e79c65464fd510f78d7e2b18c40dc213",
+  "raw_files": 517,
+  "source_file_counts": {
+    "source_run": 70,
+    "known_run": 489,
+    "fit_dir": 7
+  },
+  "policy_files_verified": 18,
+  "all_256_prefixes_verified_with_pinned_tokenizer": true,
+  "all_128_generations_token_text_boundary_verified": true,
+  "same_forward_arrays_independently_reconstructed": 257,
+  "complete_original_source_vector_exact": true,
+  "mirror_byte_identity_verified": false,
+  "maximum_errors": {
+    "margin": 3.3306690738754696e-16,
+    "probability": 1.6653345369377348e-16,
+    "output_scalar": 8.93152218850446e-12
+  },
+  "descriptive_checks": {
+    "story": {
+      "receipt_sensitive": {
+        "n": 64,
+        "probe_correct": 32,
+        "probe_auroc": 0.591796875
+      },
+      "receipt_invariant": {
+        "n": 64,
+        "probe_correct": 32,
+        "probe_auroc": 0.666015625
+      }
+    },
+    "nested_question": {
+      "receipt_sensitive": {
+        "n": 64,
+        "probe_correct": 48,
+        "probe_auroc": 0.7822265625,
+        "answer_correct": 26,
+        "answer_invalid": 15,
+        "output_auroc": 0.76953125,
+        "answer_text_counts": {
+          "NO.": 42,
+          "YES.": 1,
+          "NO. \n\nBastian knows that Mireya did": 1,
+          "NO. \n\nBastian knows that Mireya read": 4,
+          "NO. \n\nCorin knows that Nadia did not receive": 3,
+          "NO": 6,
+          "NO. \n\nCorin knows that Nadia read the message": 6,
+          "NO. \n\nAlistair knows that Soraya read the": 1
+        }
+      },
+      "receipt_invariant": {
+        "n": 64,
+        "probe_correct": 43,
+        "probe_auroc": 0.759765625,
+        "answer_correct": 31,
+        "answer_invalid": 22,
+        "output_auroc": 0.82568359375,
+        "answer_text_counts": {
+          "NO.": 35,
+          "NO. \n\nBastian knows that Mireya read": 5,
+          "NO. \n\nBastian knows that Mireya received": 2,
+          "NO. \n\nBastian knows that Mireya did": 2,
+          "NO": 7,
+          "NO. \n\nCorin knows that Nadia initially believed the": 3,
+          "NO. \n\nCorin knows that Nadia read the message": 2,
+          "NO. \n\nCorin knows that Nadia read the": 1,
+          "YES. \n\nCorin knows that Nadia read the": 1,
+          "NO. \n\nAlistair knows that the message \"The": 1,
+          "NO. \n\nAlistair knows that Soraya did not": 1,
+          "NO. \n\nAlistair knows that the message sent to": 1,
+          "NO. \n\nAlistair knows that Soraya read the": 3
+        }
+      }
+    }
+  },
+  "no_project_code_imports": true,
+  "model_weights_loaded": false,
+  "human_review_complete": false
+}
