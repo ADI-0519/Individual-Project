@@ -21,7 +21,7 @@ RAW_REPORT = "  First factual line.\nSecond factual line.  "
 class FakeTokenizer:
     """Exact prompt chunks have stable IDs; generated characters decode exactly."""
 
-    chat_template = "explicit-fixture-role-template-v1"
+    chat_template = "explicit-fixture-role-template-128-v2"
     all_special_ids = [1, 2]
     eos_token_id = 2
 
@@ -34,11 +34,12 @@ class FakeTokenizer:
     def apply_chat_template(self, messages, *, tokenize, add_generation_prompt):
         assert tokenize is True and add_generation_prompt is True
         text = json.dumps(messages, ensure_ascii=False, separators=(",", ":")) + "<assistant>"
-        # Eight-character chunks remain below the real input limit while retaining
-        # every byte of whitespace and every role/message boundary in the identity.
+        # These 128-character hashes are explicit fixture coordinates, not model
+        # tokens. Every whitespace byte and role/message boundary remains in the
+        # identity without bloating every repeatedly saved JSON prompt-ID array.
         return [
-            1000000 + int(hashlib.sha256(text[i : i + 8].encode()).hexdigest()[:12], 16)
-            for i in range(0, len(text), 8)
+            1000000 + int(hashlib.sha256(text[i : i + 128].encode()).hexdigest()[:12], 16)
+            for i in range(0, len(text), 128)
         ]
 
     def decode(self, ids, *, skip_special_tokens, clean_up_tokenization_spaces=False):

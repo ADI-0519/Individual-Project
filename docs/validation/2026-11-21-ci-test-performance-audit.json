@@ -1,0 +1,187 @@
+{
+  "schema": "ci_fixture_performance_audit_v1",
+  "date": "2026-11-21",
+  "status": "independent_integrity_review_passed_local_benchmarks_passed_ci_rerun_pending",
+  "baseline_commit": "68806410d996bfd6b41c9866179efa74b52fedd8",
+  "scope": "Two test-fixture files only; unchanged production source, inputs, model settings, results and workflow timeout.",
+  "previous_ci": {
+    "run_url": "https://github.com/ADI-0519/Individual-Project/actions/runs/44903601756",
+    "windows_python311": {
+      "job_id": 136844429959,
+      "passed": 809,
+      "skipped": 1,
+      "elapsed_seconds": 1107.94,
+      "conclusion": "success"
+    },
+    "ubuntu_python311": {
+      "job_id": 136844430042,
+      "passed": 809,
+      "skipped": 1,
+      "elapsed_seconds": 692.37,
+      "conclusion": "success"
+    },
+    "ubuntu_python312": {
+      "job_id": 136844429943,
+      "conclusion": "cancelled_at_configured_20_minute_job_limit",
+      "analysis_cases_completed_before_cancel": 22,
+      "natural_runner_seconds_from_adjacent_module_completion_timestamps": 322.962584,
+      "analysis_seconds_from_adjacent_module_completion_timestamps": 682.396502,
+      "test_failure_assertion_reported": false
+    },
+    "verification": "Auditor read job metadata and individual job logs with gh run view; passing totals and cancellation independently confirmed."
+  },
+  "fixture_changes": {
+    "tests/test_natural_selection_runner.py": "Only explicit synthetic chat-template identity and prompt hash chunks change from8 to128 characters. Generation characters, whitespace/role/message bytes, fixture metadata, model settings and all test bodies remain intact.",
+    "tests/test_recipient_risk_analysis.py": "Prepare failed-control, passed-control and complete explicit CPU baselines once per module. Every test receives regular copies in its private tmp directory. Relocate only the synthetic source sentinel; reseal only that copied protocol/manifest. Reject full=True unless pass_controls=True. Hash cached baseline trees at teardown."
+  },
+  "test_ast": {
+    "tests/test_natural_selection_runner.py": {
+      "test_function_count": 10,
+      "identical_complete_test_bodies_and_decorators": true,
+      "all_original_assertions_retained": true,
+      "old_assertions": 68,
+      "new_assertions": 68,
+      "before_sha256": "c6cc7f5978a394264830cdf0d527cc5a24439796cce224fd47a262f34c91cebc",
+      "after_sha256": "b3300fa3bbf9a8015f439f462b9d02111754a76c235ce9d6b5c180061827c828"
+    },
+    "tests/test_recipient_risk_analysis.py": {
+      "test_function_count": 19,
+      "identical_complete_test_bodies_and_decorators": true,
+      "all_original_assertions_retained": true,
+      "old_assertions": 60,
+      "new_assertions": 68,
+      "before_sha256": "3e4ff716e2a8475a6c9d9fe5c4b657365c9e8350cc2ff76a2aa3485ae2e106ab",
+      "after_sha256": "881a80e4f1018dae150471982f011472244ddd258bc4fe74859064a511374b16"
+    }
+  },
+  "parametrized_cases": {
+    "natural_runner": 13,
+    "recipient_risk_analysis": 22,
+    "separate_recipient_risk_runner_unchanged": 28
+  },
+  "local_benchmarks": {
+    "runtime": "Existing explicit native Windows Python3.11 project environment; no environment or dependency change.",
+    "recipient_risk_analysis_before_no_coverage_seconds": 116.49,
+    "recipient_risk_analysis_after_no_coverage": {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_recipient_risk_analysis.py -q --durations=10",
+      "passed": 22,
+      "seconds": 28.13,
+      "one_time_baseline_setup_seconds": 25.1,
+      "slowest_call_seconds": 0.9,
+      "elapsed_reduction_fraction": 0.7585200446390248,
+      "measurement_source": "Fresh-bank agent benchmark; previous baseline measured by root."
+    },
+    "recipient_risk_analysis_after_with_coverage": {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_recipient_risk_analysis.py -q --durations=10 --cov=latent_probes --cov-report=term:skip-covered --cov-report=json:.cache/recipient-risk-analysis-test-coverage.json",
+      "passed": 22,
+      "seconds": 66.77,
+      "one_time_baseline_setup_seconds": 61.51,
+      "measurement_source": "Fresh-bank agent benchmark. Package coverage only; not full-suite coverage."
+    },
+    "both_runner_modules_after_no_coverage": {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_natural_selection_runner.py tests/test_recipient_risk_runner.py -q --durations=10",
+      "passed": 41,
+      "seconds": 68.39,
+      "measurement_source": "Design-review agent benchmark reported by root."
+    },
+    "limit": "Local timings are not the new GitHub full-suite duration; the actual CI rerun remains necessary. No timeout increase or test removal is justified by these numbers."
+  },
+  "isolation_review": {
+    "all_existing_test_bodies_and_decorators_identical": true,
+    "all_original_assertions_retained": true,
+    "baseline_directories_owned_by_pytest_tmp_path_factory": true,
+    "copytree_uses_regular_file_copies_without_links": true,
+    "every_clone_requires_protocol_and_manifest_fixture_true": true,
+    "source_set_required_to_equal_read_only_panel_and_synthetic_sentinel": true,
+    "new_sentinel_path_required_to_differ_from_baseline_source": true,
+    "only_clone_protocol_and_manifest_resealed": true,
+    "baseline_byte_hashes_checked_at_module_teardown": true,
+    "full_fixture_guard_precedes_filesystem_access": true,
+    "real_attempt_not_passed_to_test_helpers": true
+  },
+  "frozen_evidence": {
+    "fifteen_execution_sources_match_captured_hashes_and_git": {
+      "scripts/run_natural_selection_pilot.py": "d675dd394203d8f89aa9413416e4a7972cbdccc6818cfdb1ccf46e434016e990",
+      "data/communication/natural_selection_pilot_draft_v1.json": "d7fa9e42ecc10affbcbd417e3329a9fea5fa7ed6e64a8150ad482a23950e9c07",
+      "src/latent_probes/natural_selection_panel.py": "59a1cfcc53d987e2ee8d1b7d6c92bc1aa1d52f8a2f5f273d48f6fefd934ff675",
+      "src/latent_probes/backends.py": "692d9778e4bf69081ab1afea702dfd573119f2b6cc454e51072bb3d2233402a2",
+      "src/latent_probes/calibrated_reader.py": "359f5f4a868b5e590708cb49800716d4d587b160d3c4565611b7d27f6204df77",
+      "src/latent_probes/forecast_panel.py": "1ba166414f9a2aec1f1a48e19e1155051768854dfa0eb137e61756b3fe51e82f",
+      "src/latent_probes/reader_panel.py": "8fd4fd0ebb912f3cd7b20fc9c6739af3a6f1323b3ea600f0b7730cf97c50686d",
+      "src/latent_probes/config.py": "0fc63546c88a826bc1e87efeebb51b6a23488272e0d76de8018fdd99543bb608",
+      "src/latent_probes/storage.py": "1de87a24cc3bd701c0384d648d405ddb6066280beae3e21bf1b173c203ee0e84",
+      "docs/NEXT_MAIN_STUDY_PROTOCOL.md": "51645edd7940c654ba46d96c089ce999b9040077adb245f1136cf3d092dcd24b",
+      "docs/NATURAL_SELECTION_RUN_PROTOCOL.md": "7e4f68408856f43db95d8cfbbe2b610919ccdc8739a81f2c0f328519d04100b1",
+      "scripts/run_recipient_risk_validation.py": "064def228dfeb6686d17ddc7ee4480fc7aa55c7e22a4228c213155ad2d9111ce",
+      "data/communication/recipient_risk_validation_v2_draft.json": "1b7f84638af9ba074f5e41d2b3d9a047452b43a06bc22dada9438e2c65b92bbb",
+      "src/latent_probes/recipient_risk_panel.py": "21e3d264ca4374c6ec580f79c291eedc7715bfdd6726e67e4a6cf6ccf17d76c5",
+      "docs/RECIPIENT_RISK_VALIDATION_V2_PROTOCOL.md": "0221f8d5818516a1d0ef15939621698e8d23c45e3910135422aeaf9d1dd6c0a5"
+    },
+    "bound_analyzer_sha256": "6c0ac92ee9ba4bdb99714136b482780b576f798c6898cb57ae209a168fc2c17d",
+    "seven_native_and_mirror_files_unchanged": {
+      "preflight.json": {
+        "bytes": 1773555,
+        "sha256": "306d464ff4b874e980f2214db03ecde726e83835f31a956026abb42a0e2e8efc"
+      },
+      "manifest.json": {
+        "bytes": 5820,
+        "sha256": "234376d8fe2167942e48ff10a20ad18e6f70b18154378af4bc998a99547025c1"
+      },
+      "control_plan.json": {
+        "bytes": 2148917,
+        "sha256": "20c8ff4703a5342a4127b4e7e5a83ab55b16601496374012a8b735d2be51af5b"
+      },
+      "reader_cache.json": {
+        "bytes": 1781698,
+        "sha256": "bcce8a132b8b672702cbd6b36ddac48131d037f6a54736a390d9ce32518cac53"
+      },
+      "control_rows.json": {
+        "bytes": 3915510,
+        "sha256": "c4f270eb1da3b1a344f8d0bd44766de9921e4533e32d638eb2f6c041a6ad9692"
+      },
+      "protocol.json": {
+        "bytes": 863639,
+        "sha256": "bf376a74681106444be0987284f4481f0d854dac97f8196c08e79ad801661155"
+      },
+      "qualification.json": {
+        "bytes": 509,
+        "sha256": "89bda4fcbe2f4a7fef9e4346d1424d5d6b1ad7ef8bd89e9f956875eb77780322"
+      }
+    },
+    "raw_run_bytes": 10489648,
+    "model_and_generation_settings_bound_by_unchanged_protocol_sha256": "bf376a74681106444be0987284f4481f0d854dac97f8196c08e79ad801661155",
+    "supporting_evidence_files_match_git": {
+      "docs/validation/2026-11-21-recipient-risk-v2.json": "7fc0ea1eb05cc54008586830a37e453b6277a2a4f97a8ad0328fb858988781ce",
+      "docs/validation/2026-11-21-recipient-risk-v2-mirror.json": "1a33a0cb5bd299986d4af0aa2af6023b0eda966e978ae6a70dd41b6bae16efc6",
+      "docs/validation/2026-11-21-independent-recipient-risk-qualification-audit.json": "3136b44821f4995ce7c8093d339768598c4d4532cebecab7f164ca9e1463c683",
+      "docs/RECIPIENT_RISK_V2_RESULTS.md": "e390c81c08a5ddb4c604f196051664a5e21ad84099f553b5f01328fefc073c21",
+      "docs/NATURAL_SELECTION_PILOT_RESULTS.md": "b0dd1ed856ad32af84b5ddede9909dd74a186ff0cc544fc288139ba9f71df9ef",
+      "docs/validation/2026-11-20-natural-selection-pilot.json": "68554fc76f2f4d6fbacfa71ac0326c020a23fbc602abf9e55af6055835d88d09",
+      "docs/validation/2026-11-20-natural-selection-apollo.json": "bf1e68d4e07e25f4a1361e132dec4bdb093e47876d89424f7bd2b3e6ac7c43ea",
+      "docs/review/natural_selection_v1_human/manifest.json": "d5414e1c6000f3e75a663905c05f5fd7b8aa6839fc530751f25d65684f5c6154",
+      "docs/review/natural_selection_v1_human/review.md": "f013ab674e16d3ee3f247437fff91f4e3d8b47c6cea7c403e688a439b8b2e3e0",
+      "docs/review/natural_selection_v1_human/review.csv": "de6765743038c993704d38b4ac1ea74fec4072fb7fc61796659f1897898062be",
+      "docs/review/natural_selection_v1_human/packet.json": "45bb5e4e4c2164623a3c5c1822bcf09e90330e0ca8a63d78a91cd13131008dd1"
+    },
+    "portable_archive_sha256": "00d69661b7c5881d4509f55cdd60b84d9bb5d52b73478dd0781d64e9562f3a14",
+    "all31_archived_committed_source_snapshots_match_git_and_working_bytes": true,
+    "archived_source_count": 31
+  },
+  "graphify": {
+    "source_allowlist": 64,
+    "both_test_files_outside_allowlist": true,
+    "all64_source_hashes_still_match": true,
+    "refresh_required": false
+  },
+  "no_workflow_timeout_change": true,
+  "continuation_note_update": {
+    "file": "docs/CURRENT_RESEARCH_STATE.md",
+    "before_sha256": "98f301832f0aa98f7f2e3fe07f9751fefcf5e12783ee7deb2255137071a1139f",
+    "after_sha256": "4d627ccce0dab2df39231aeb06deaa7aa7fb1946b8cf710e510e9c6786a0c2cf",
+    "reason": "Root subsequently documented the CI timeout and test-only correction; this mutable handoff note is excluded from the unchanged scientific evidence list."
+  },
+  "no_production_analyzer_or_real_input_edit": true,
+  "new_model_calls": 0,
+  "new_probe_fits": 0,
+  "git_actions_by_auditor": false
+}

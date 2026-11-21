@@ -42,6 +42,13 @@ scientific observation. The source bank and executed protocol must stay frozen;
 their draft/unexecuted metadata describe the input snapshot, while the attempt
 manifest records the completed control failure.
 
+A later full CI run reached 809 passing tests on Windows and Ubuntu Python
+3.11; Python 3.12 completed its analysis cases but hit the existing twenty-minute
+job limit. The [test-fixture performance audit](validation/2026-11-21-ci-test-performance-audit.json)
+records the test-only correction: compact fake token coordinates and reusable
+synthetic baselines with isolated per-test copies. All test bodies and assertions,
+the workflow limit, production code and measured research evidence stay intact.
+
 The separate engineering preflight made zero model calls; its source
 binding predates the tested Windows-write fix and must not be used for inference.
 

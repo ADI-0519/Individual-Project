@@ -1,7 +1,10 @@
 """Bound CPU analysis tests: fixtures exercise auditing, never empirical claims."""
 
 import importlib.util
+import shutil
+from collections import Counter
 from pathlib import Path
+from types import SimpleNamespace
 
 import numpy as np
 import pytest
@@ -22,9 +25,74 @@ def module_at(name, path):
 shared = module_at("risk_analysis_runner_fixtures", ROOT / "tests/test_recipient_risk_runner.py")
 
 
+def _generate_attempt(runner, parent, *, pass_controls=False):
+    """Construct explicit CPU evidence once; direct stage tests live elsewhere."""
+    output = shared.prepare(runner, parent)
+    factory = shared.RiskFactory(output, controls_pass=pass_controls, empty_first=True)
+    runner.execute(output, stage="controls", backend_factory=factory)
+    return output, factory
+
+
+def _tree_hashes(directory):
+    return {
+        path.relative_to(directory).as_posix(): file_sha256(path)
+        for path in sorted(directory.rglob("*"))
+        if path.is_file()
+    }
+
+
+@pytest.fixture(scope="module")
+def baseline_attempts(tmp_path_factory):
+    """Cache three synthetic baselines; every fault test receives ordinary copies.
+
+    The qualified-control copy is captured before collecting reports. The full
+    fixture continues that same working attempt, reusing its exact controls.
+    No cached baseline is passed to a test or used as a writable attempt.
+    """
+    directory = tmp_path_factory.mktemp("recipient_risk_analysis_baselines")
+    cached = {}
+
+    def snapshot(name, output, factory, fixture_source):
+        destination = directory / name
+        shutil.copytree(output, destination)
+        protocol = read_json(destination / "protocol.json")
+        manifest = read_json(destination / "manifest.json")
+        assert protocol["is_test_fixture"] is manifest["is_test_fixture"] is True
+        cached[name] = {
+            "directory": destination,
+            "fixture_source": str(fixture_source.resolve()),
+            "calls": Counter(factory.calls),
+            "hashes": _tree_hashes(destination),
+        }
+
+    with pytest.MonkeyPatch.context() as patcher:
+        failed_parent = directory / "working_failed"
+        failed_parent.mkdir()
+        failed_runner = shared.runner.__wrapped__(patcher, failed_parent)
+        output, factory = _generate_attempt(failed_runner, failed_parent)
+        snapshot("failed", output, factory, failed_runner.fixture_source)
+
+        passed_parent = directory / "working_passed"
+        passed_parent.mkdir()
+        passed_runner = shared.runner.__wrapped__(patcher, passed_parent)
+        output, factory = _generate_attempt(passed_runner, passed_parent, pass_controls=True)
+        snapshot("passed", output, factory, passed_runner.fixture_source)
+        passed_runner.execute(output, stage="reports", backend_factory=factory)
+        passed_runner.execute(output, stage="readers", backend_factory=factory)
+        snapshot("full", output, factory, passed_runner.fixture_source)
+
+    yield cached
+    # Hash all files, including manifests, plans and feature bytes, after every
+    # mutation test has finished. Source drift must affect only the test's copy.
+    for baseline in cached.values():
+        assert _tree_hashes(baseline["directory"]) == baseline["hashes"]
+
+
 @pytest.fixture
-def runner(monkeypatch, tmp_path):
-    return shared.runner.__wrapped__(monkeypatch, tmp_path)
+def runner(monkeypatch, tmp_path, baseline_attempts):
+    module = shared.runner.__wrapped__(monkeypatch, tmp_path)
+    module.analysis_baselines = baseline_attempts
+    return module
 
 
 @pytest.fixture
@@ -37,13 +105,32 @@ def analysis(monkeypatch, runner):
 
 
 def attempt(runner, tmp_path, *, full=False, pass_controls=False):
-    output = shared.prepare(runner, tmp_path)
-    factory = shared.RiskFactory(output, controls_pass=pass_controls, empty_first=full)
-    runner.execute(output, stage="controls", backend_factory=factory)
-    if full:
-        runner.execute(output, stage="reports", backend_factory=factory)
-        runner.execute(output, stage="readers", backend_factory=factory)
-    return output, factory
+    assert not full or pass_controls, "A full fixture requires passing controls"
+    baseline = runner.analysis_baselines[
+        "full" if full else "passed" if pass_controls else "failed"
+    ]
+    output = tmp_path / "attempt"
+    # copytree uses independent regular files, not hard links or symbolic links.
+    shutil.copytree(baseline["directory"], output)
+    protocol = read_json(output / "protocol.json")
+    manifest = read_json(output / "manifest.json")
+    assert protocol["is_test_fixture"] is manifest["is_test_fixture"] is True
+    assert Path(protocol["panel_path"]).resolve() == runner.DEFAULT_PANEL.resolve()
+    old_source = baseline["fixture_source"]
+    new_source = str(runner.fixture_source.resolve())
+    assert old_source != new_source
+    assert set(protocol["source_sha256"]) == {
+        str(runner.DEFAULT_PANEL.resolve()),
+        old_source,
+    }
+    assert protocol["source_sha256"][old_source] == file_sha256(runner.fixture_source)
+    # Relocate only the synthetic sentinel. Real panel paths and every saved
+    # message, token sequence, output, cache identity and feature stay intact.
+    protocol["source_sha256"][new_source] = protocol["source_sha256"].pop(old_source)
+    atomic_json(output / "protocol.json", protocol)
+    manifest["protocol_sha256"] = file_sha256(output / "protocol.json")
+    atomic_json(output / "manifest.json", manifest)
+    return output, SimpleNamespace(calls=Counter(baseline["calls"]))
 
 
 def reseal(output, name, value):
