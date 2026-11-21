@@ -96,6 +96,12 @@ def main():
         ("svg", {"Date": None}),
     ]:
         fig.savefig(args.output.with_suffix("." + suffix), dpi=220, metadata=metadata)
+    svg = args.output.with_suffix(".svg")
+    svg.write_text(
+        "\n".join(line.rstrip() for line in svg.read_text(encoding="utf-8").splitlines()) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
     plt.close(fig)
     args.output.with_suffix(".json").write_text(
         json.dumps(

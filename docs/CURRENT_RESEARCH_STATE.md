@@ -200,10 +200,11 @@ recommends one bounded fresh test of the existing belief readout under future
 communication goals, before further recipient-risk expansion. The strongest
 candidate signal is the already-measured goal stress, not a demonstrated natural
 omission detection advantage. The [later content-control refinement](FUTURE_GOAL_CONTENT_CONTROLS_DESIGN.md)
-has an exact 224-condition draft bank, preserving the original slot-b target and
-comparing an active objective against identical quoted content. It supersedes the
-unexecuted 160-condition proposal. The new assay is proposed, not executed or frozen;
-its first 32 neutral conditions must qualify before the remaining 192. Existing
+had an exact 224-condition draft bank, preserving the original slot-b target and
+comparing an active objective against identical quoted content. It superseded the
+unexecuted 160-condition proposal. The assay subsequently ran at `ac7e17d`,
+collected 32 neutral conditions and stopped before the remaining 192, as recorded
+above. Do not treat this historical design decision as a pending new run. Existing
 failed gates remain failed. CREATE is not a prerequisite. This proposed emphasis
 change must be described explicitly to the supervisor; a belief readout is not an
 Apollo deception probe. The earlier recipient-monitoring proposal follows for
