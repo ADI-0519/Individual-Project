@@ -77,6 +77,11 @@ Its dependent source-excerpt training and untouched transfer pipeline remain
 stopped. The reserved `ct` bank was not used. Existing fitted artifacts remain
 frozen, and the original Apollo adaptation is not a full 70B reproduction.
 
+The final checkout audit caught LF normalization of the new byte-bound JSON
+snapshots. Exact original bytes are now protected by explicit Git attributes
+and four checkout-hash regression cases. No model input, annotation content or
+result was regenerated. See the [byte-preservation audit](validation/2026-11-21-natural-selection-checkout-bytes.json).
+
 Three editorial mistakes were corrected with before/after hashes. The Graphify
 map uses an explicit 64-source allowlist; new pilot files outside it must not
 be described as indexed. A fresh source-level graph audit is separate from

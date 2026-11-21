@@ -173,6 +173,9 @@ The [local mirror](../runs/natural_selection_pilot_v1_20261120/) contains 42
 byte-identical files, verified by the [mirror audit](validation/2026-11-20-natural-selection-mirror.json).
 Raw activations/runs remain ignored by Git; the bound analysis and source bank
 are committed. A release for external reproduction would also need the raw bundle.
+Byte-bound source/review JSON snapshots have explicit Git newline-preservation
+rules and checkout-hash regression tests; the [checkout audit](validation/2026-11-21-natural-selection-checkout-bytes.json)
+records the correction without changing their captured content.
 
 The separate [checkpoint audit](validation/2026-11-20-independent-checkpoint-audit.json)
 rechecks the earlier reports, controls and frozen artifacts; its exclusions are

@@ -1,0 +1,50 @@
+{
+  "schema": "natural_selection_checkout_bytes_audit_v1",
+  "checked_utc": "2026-11-21T00:38:56.842750+00:00",
+  "previous_commit": "1b8a1d0f43817d4dfd2535bbef6b0b7b25e453c8",
+  "issue": "Git LF normalization changed raw hashes of four original CRLF JSON snapshots.",
+  "resolution": "Explicit -text attributes preserve original bytes in Git and checkout.",
+  "files": [
+    {
+      "path": "data/communication/natural_selection_pilot_draft_v1.json",
+      "executed_working_sha256": "d7fa9e42ecc10affbcbd417e3329a9fea5fa7ed6e64a8150ad482a23950e9c07",
+      "previous_git_sha256": "09f39bba822d9802ecf03804beb0bf04515f363f63add698f4ae10266d1ecbaa",
+      "corrected_index_sha256": "d7fa9e42ecc10affbcbd417e3329a9fea5fa7ed6e64a8150ad482a23950e9c07",
+      "exported_checkout_sha256": "d7fa9e42ecc10affbcbd417e3329a9fea5fa7ed6e64a8150ad482a23950e9c07",
+      "same_json_object": true,
+      "original_bytes_preserved": true
+    },
+    {
+      "path": "data/annotations/natural_selection_pilot_v1_reviewer_a_agent_draft.json",
+      "executed_working_sha256": "0bc88ecb92ab3169bc3e2032c92fe51e08f0b23814fe28745488222d9d27bfb5",
+      "previous_git_sha256": "2cf046e9d6aeff414cf348ff4f53600d4e06529e4acdf6b6048e18daaaf842fe",
+      "corrected_index_sha256": "0bc88ecb92ab3169bc3e2032c92fe51e08f0b23814fe28745488222d9d27bfb5",
+      "exported_checkout_sha256": "0bc88ecb92ab3169bc3e2032c92fe51e08f0b23814fe28745488222d9d27bfb5",
+      "same_json_object": true,
+      "original_bytes_preserved": true
+    },
+    {
+      "path": "data/annotations/natural_selection_pilot_v1_reviewer_b_agent_draft.json",
+      "executed_working_sha256": "d18a8a08a179f1fdb36c1430dd7d6ffa9672d0c0c2f93072ecd478fa19f12bf2",
+      "previous_git_sha256": "05f73dbd2760f768e4ab10d8185b59e6087ca88e2c5e51d3031f552ec81bdaae",
+      "corrected_index_sha256": "d18a8a08a179f1fdb36c1430dd7d6ffa9672d0c0c2f93072ecd478fa19f12bf2",
+      "exported_checkout_sha256": "d18a8a08a179f1fdb36c1430dd7d6ffa9672d0c0c2f93072ecd478fa19f12bf2",
+      "same_json_object": true,
+      "original_bytes_preserved": true
+    },
+    {
+      "path": "data/annotations/natural_selection_review_protocol_v1.json",
+      "executed_working_sha256": "dcca1d96963b6b6244367ab3006c0a3ccb0cebbeb4082da3f5114ea2284fcd56",
+      "previous_git_sha256": "d3e051c68246d8ecd0b21dbd3dcbba62e3f5ca21fcd26d9267e8215a9acccb23",
+      "corrected_index_sha256": "dcca1d96963b6b6244367ab3006c0a3ccb0cebbeb4082da3f5114ea2284fcd56",
+      "exported_checkout_sha256": "dcca1d96963b6b6244367ab3006c0a3ccb0cebbeb4082da3f5114ea2284fcd56",
+      "same_json_object": true,
+      "original_bytes_preserved": true
+    }
+  ],
+  "all_corrected_index_and_checkout_bytes_match_executed_files": true,
+  "scientific_json_values_changed": false,
+  "model_calls": 0,
+  "raw_run_files_changed": false,
+  "regression_tests": "Four original-checkpoint byte hashes in tests/test_natural_selection_snapshot_bytes.py"
+}
