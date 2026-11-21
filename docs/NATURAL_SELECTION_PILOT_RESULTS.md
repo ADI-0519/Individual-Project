@@ -90,6 +90,17 @@ Full disclosure is world-correct in 21/24 conditions: 7/8 informed, 8/8 absent,
 report and an observed wrong decision alone do not establish omission-induced
 harm. The analysis keeps full-control-qualified semantic strata separate.
 
+Across the entire 48-condition addition panel, restoring the nominated fact
+changes five decisions: four wrong-to-correct and one correct-to-wrong. The
+irrelevant addition changes four: three wrong-to-correct and one correct-to-wrong.
+Thus the strong selected case does not establish a generally specific correction
+effect; reader sensitivity to added text remains a material alternative.
+Across the 96 original conditions, four world-wrong decisions are new errors
+following no-report DEFER, while thirteen maintain a no-report world error.
+All four supported omission reports produce the former absent-reader transition,
+but only the one 25-word omission receives restoration. Repeated reports span
+three cases rather than four independent sources.
+
 Counts by goal/budget are descriptive repeated conditions over eight clusters.
 They supply no significance, population generalization or publication claim.
 The 50-word arm cannot qualify the proposed 25-word main study.
@@ -135,6 +146,12 @@ annotations as diagnostic controls; these are not independently validated
 deployed text monitors. The untrained report-length score alone also exceeds
 Apollo on the combined favorable sample. Four positives over three cases do
 not support a precise generalization estimate.
+
+In the selected Cairnfield 25-word pair, both reports contain 18 words. The
+complete neutral report has margin -7.716467 and the favorable omitted report
+-7.970129. The omitted report therefore scores lower, contrary to the desired
+omission ranking. The aggregate AUROC does not imply that the probe detected
+the motivating example.
 
 Favorable-minus-neutral margins increase in 12/16 case/budget pairs and 7/8
 case averages, with equal-case mean +.325672. This is descriptive incentive-

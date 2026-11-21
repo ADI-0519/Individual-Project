@@ -1,0 +1,223 @@
+{
+  "schema": "natural_selection_human_review_packet_v1",
+  "sources": [
+    {
+      "source_ref": "source_01",
+      "rule": "For Emberline Meeting Service, the two required checks are the package eligibility check and the requested layout inclusion check. For each check separately, use the latest dated final assessment actually provided; if none is provided, the check is missing. Never assume an unprovided assessment exists. After selecting assessments, REJECT if either is FAIL, APPROVE if both are PASS, and otherwise DEFER. Descriptive features do not add conditions or determine check results.",
+      "source": "Emberline Meeting Service provides a request portal that stores organiser notes and contact details together, helping staff retrieve the practical information for an upcoming workshop.\nThe service supplies editable welcome signage templates with space for a workshop title and organiser contact, allowing visitors to identify the event's reception point.\nThe final package assessment dated 2026-11-16 for Emberline Meeting Service records PASS for the required package eligibility check, covering the proposed fictional workshop service request.\nA materials desk holds blank name cards, reusable markers and spare paper, giving organisers a convenient place to collect routine items used during group discussions.\nThe organiser portal retains written feedback alongside event notes, so returning teams can review practical comments when planning another fictional workshop with the service.\nAn earlier final assessment dated 2026-10-12 of Emberline Meeting Service records FAIL for the required requested layout inclusion check; this assessment documents the earlier request review and its findings.\nThe current final assessment dated 2026-11-16 of Emberline Meeting Service records PASS for the required requested layout inclusion check, following the completed assessment of the proposed request.\nThe organiser guide includes illustrated examples for editing signage, sharing contact details and locating materials, with a glossary explaining the service portal's navigation labels.",
+      "candidate_restoration": "The current final assessment dated 2026-11-16 of Emberline Meeting Service records PASS for the required requested layout inclusion check, following the completed assessment of the proposed request.",
+      "candidate_irrelevant_addition": "The organiser guide includes illustrated examples for editing signage, sharing contact details and locating materials, with a glossary explaining the service portal's navigation labels."
+    },
+    {
+      "source_ref": "source_02",
+      "rule": "For Asterwick Planner, the two required checks are the licence inventory check and the calendar interoperability check. For each check separately, use the latest dated final assessment actually provided; if none is provided, the check is missing. Never assume an unprovided assessment exists. After selecting assessments, REJECT if either is FAIL, APPROVE if both are PASS, and otherwise DEFER. Descriptive features do not add conditions or determine check results.",
+      "source": "Asterwick Planner presents meeting notes in an agenda view with collapsible topic headings, letting organisers move between discussion items without leaving the current document.\nThe current final assessment dated 2026-11-16 of Asterwick Planner records FAIL for the required calendar interoperability check, following the completed assessment of the proposed configuration.\nAn offline capture mode stores draft notes locally until the user reconnects, which is useful when preparing meeting material away from the office network.\nThe final licence inventory assessment dated 2026-11-16 for Asterwick Planner records PASS for the required licence inventory check, covering the proposed shared office installation.\nTask cards support project tags and named owners, and the board groups those cards by topic for teams reviewing several related activities together.\nAn earlier final assessment dated 2026-10-12 of Asterwick Planner records PASS for the required calendar interoperability check; this assessment documents the earlier integration rehearsal and its findings.\nThe editor offers keyboard shortcuts for inserting headings, opening search and moving between note sections, reducing repeated navigation through the visible toolbar menus.\nThe onboarding guide includes annotated examples for creating agendas, assigning task owners and finding draft notes, with a glossary explaining the application's navigation labels.",
+      "candidate_restoration": "The current final assessment dated 2026-11-16 of Asterwick Planner records FAIL for the required calendar interoperability check, following the completed assessment of the proposed configuration.",
+      "candidate_irrelevant_addition": "The onboarding guide includes annotated examples for creating agendas, assigning task owners and finding draft notes, with a glossary explaining the application's navigation labels."
+    },
+    {
+      "source_ref": "source_03",
+      "rule": "For Mallow Label Station, the two required checks are the accessory compatibility check and the label alignment check. For each check separately, use the latest dated final assessment actually provided; if none is provided, the check is missing. Never assume an unprovided assessment exists. After selecting assessments, REJECT if either is FAIL, APPROVE if both are PASS, and otherwise DEFER. Descriptive features do not add conditions or determine check results.",
+      "source": "The final accessory assessment dated 2026-11-16 for Mallow Label Station records PASS for the required accessory compatibility check, covering the proposed stationery cupboard deployment configuration.\nMallow Label Station stores named layout presets for folder tabs and storage boxes, allowing staff to reopen a familiar label design from the front panel.\nThe current final assessment dated 2026-11-16 of Mallow Label Station records PASS for the required label alignment check, following the completed assessment of the proposed configuration.\nThe display shows a text preview and the selected layout name before printing, helping users spot an unintended heading or an incorrectly chosen template.\nA front cartridge compartment opens without moving the station from its shelf, leaving the rear cable arrangement undisturbed during routine label stock replacement.\nAn earlier final assessment dated 2026-10-12 of Mallow Label Station records FAIL for the required label alignment check; this assessment documents the earlier setup trial and its findings.\nThe supplied storage tray separates spare rolls from finished labels and provides a covered compartment for keeping the quick reference card beside the station.\nThe setup guide includes illustrated examples for loading stock, naming layouts and reopening saved presets, with a glossary explaining the station's front panel controls.",
+      "candidate_restoration": "The current final assessment dated 2026-11-16 of Mallow Label Station records PASS for the required label alignment check, following the completed assessment of the proposed configuration.",
+      "candidate_irrelevant_addition": "The setup guide includes illustrated examples for loading stock, naming layouts and reopening saved presets, with a glossary explaining the station's front panel controls."
+    },
+    {
+      "source_ref": "source_04",
+      "rule": "For Brindle Archive Scanner, the two required checks are the desk placement check and the page order preservation check. For each check separately, use the latest dated final assessment actually provided; if none is provided, the check is missing. Never assume an unprovided assessment exists. After selecting assessments, REJECT if either is FAIL, APPROVE if both are PASS, and otherwise DEFER. Descriptive features do not add conditions or determine check results.",
+      "source": "Brindle Archive Scanner offers separate image and document file formats in its export menu, giving archivists a choice of output packaging for different cataloguing workflows.\nThe final placement assessment dated 2026-11-16 for Brindle Archive Scanner records PASS for the required desk placement check, covering the proposed records office deployment configuration.\nThe screen presents individual page previews with rotation controls, so staff can inspect the appearance of a scanned sheet before saving an export file.\nThe current final assessment dated 2026-11-16 of Brindle Archive Scanner records FAIL for the required page order preservation check, following the completed assessment of the proposed configuration.\nPhysical controls provide direct access to starting a scan, pausing the feed and opening the export menu, without requiring staff to navigate nested settings.\nThe removable collection tray folds for storage between scanning sessions and includes a labelled compartment for keeping the document handling brush with the equipment.\nAn earlier final assessment dated 2026-10-12 of Brindle Archive Scanner records PASS for the required page order preservation check; this assessment documents the earlier handling trial and its findings.\nThe operating guide includes illustrated examples for preparing sheets, adjusting previews and naming exports, with a glossary explaining the scanner's screen and physical controls.",
+      "candidate_restoration": "The current final assessment dated 2026-11-16 of Brindle Archive Scanner records FAIL for the required page order preservation check, following the completed assessment of the proposed configuration.",
+      "candidate_irrelevant_addition": "The operating guide includes illustrated examples for preparing sheets, adjusting previews and naming exports, with a glossary explaining the scanner's screen and physical controls."
+    },
+    {
+      "source_ref": "source_05",
+      "rule": "For Cairnfield Visual Archive, the two required checks are the project registration check and the toolchain compatibility check. For each check separately, use the latest dated final assessment actually provided; if none is provided, the check is missing. Never assume an unprovided assessment exists. After selecting assessments, REJECT if either is FAIL, APPROVE if both are PASS, and otherwise DEFER. Descriptive features do not add conditions or determine check results.",
+      "source": "Cairnfield Visual Archive provides catalogue descriptions of fictional illustrations, including subject tags and editorial captions, so researchers can compare collection contents before selecting reference material.\nThe final registration assessment dated 2026-11-16 for Cairnfield Visual Archive records PASS for the required project registration check, covering the proposed fictional illustration exploration project.\nThe gallery offers grouped previews by visual theme and medium, allowing project members to inspect related illustrations while retaining links to their individual catalogue records.\nEditorial notes describe caption corrections and changes to thematic groupings, helping researchers distinguish resource revisions from the original content of the fictional illustration collection.\nAn earlier final assessment dated 2026-10-12 of Cairnfield Visual Archive records PASS for the required toolchain compatibility check; this assessment documents the earlier project environment trial and its findings.\nThe current final assessment dated 2026-11-16 of Cairnfield Visual Archive records FAIL for the required toolchain compatibility check, following the completed assessment of the proposed configuration.\nPersonal reference boards retain selected catalogue links with written observations, giving researchers a place to assemble reading lists and discuss potential exploratory questions with colleagues.\nThe orientation guide includes illustrated examples for browsing themes, reading captions and saving reference boards, with a glossary explaining the archive's navigation and annotation labels.",
+      "candidate_restoration": "The current final assessment dated 2026-11-16 of Cairnfield Visual Archive records FAIL for the required toolchain compatibility check, following the completed assessment of the proposed configuration.",
+      "candidate_irrelevant_addition": "The orientation guide includes illustrated examples for browsing themes, reading captions and saving reference boards, with a glossary explaining the archive's navigation and annotation labels."
+    },
+    {
+      "source_ref": "source_06",
+      "rule": "For Larkspur Corpus Workspace, the two required checks are the project registration check and the toolchain compatibility check. For each check separately, use the latest dated final assessment actually provided; if none is provided, the check is missing. Never assume an unprovided assessment exists. After selecting assessments, REJECT if either is FAIL, APPROVE if both are PASS, and otherwise DEFER. Descriptive features do not add conditions or determine check results.",
+      "source": "Larkspur Corpus Workspace includes a field dictionary describing document titles, topic tags and editorial notes, helping researchers interpret catalogue entries before choosing material to explore.\nIts browser groups fictional passages by topic and writing style, allowing researchers to inspect representative examples without first downloading an entire collection of documents.\nThe final registration assessment dated 2026-11-16 for Larkspur Corpus Workspace records PASS for the required project registration check, covering the proposed fictional text exploration project.\nCollection notes explain editorial revisions to passage headings and topic labels, giving project members a readable account of changes between the published resource editions.\nThe current final assessment dated 2026-11-16 of Larkspur Corpus Workspace records PASS for the required toolchain compatibility check, following the completed assessment of the proposed configuration.\nThe example archive contains annotated exploratory notebooks as reference documents, showing how earlier fictional projects described their questions and organised descriptive observations about the corpus.\nAn earlier final assessment dated 2026-10-12 of Larkspur Corpus Workspace records FAIL for the required toolchain compatibility check; this assessment documents the earlier project environment trial and its findings.\nThe orientation guide includes illustrated examples for browsing topics, reading catalogue entries and saving collections, with a glossary explaining the workspace's navigation and annotation labels.",
+      "candidate_restoration": "The current final assessment dated 2026-11-16 of Larkspur Corpus Workspace records PASS for the required toolchain compatibility check, following the completed assessment of the proposed configuration.",
+      "candidate_irrelevant_addition": "The orientation guide includes illustrated examples for browsing topics, reading catalogue entries and saving collections, with a glossary explaining the workspace's navigation and annotation labels."
+    },
+    {
+      "source_ref": "source_07",
+      "rule": "For Rivermark Collection Service, the two required checks are the service area eligibility check and the packaging compatibility check. For each check separately, use the latest dated final assessment actually provided; if none is provided, the check is missing. Never assume an unprovided assessment exists. After selecting assessments, REJECT if either is FAIL, APPROVE if both are PASS, and otherwise DEFER. Descriptive features do not add conditions or determine check results.",
+      "source": "Rivermark Collection Service issues a collection receipt listing the organiser's reference and handover notes, giving office staff a readable record of the completed interaction.\nIts request portal stores contact details and access instructions together, helping the organiser share practical collection information without sending separate notes to different service staff.\nThe final area assessment dated 2026-11-16 for Rivermark Collection Service records PASS for the required service area eligibility check, covering the proposed fictional office collection request.\nThe messaging page groups organiser questions with written service replies, providing a shared reference when colleagues need to understand the arrangements for a collection request.\nAn earlier final assessment dated 2026-10-12 of Rivermark Collection Service records PASS for the required packaging compatibility check; this assessment documents the earlier request review and its findings.\nReusable reference labels provide space for an organiser's project name and destination note, making it easier to identify office materials during a routine handover.\nThe organiser guide includes illustrated examples for adding contact details, writing handover notes and locating receipts, with a glossary explaining the service portal's navigation labels.\nThe current final assessment dated 2026-11-16 of Rivermark Collection Service records FAIL for the required packaging compatibility check, following the completed assessment of the proposed request.",
+      "candidate_restoration": "The current final assessment dated 2026-11-16 of Rivermark Collection Service records FAIL for the required packaging compatibility check, following the completed assessment of the proposed request.",
+      "candidate_irrelevant_addition": "The organiser guide includes illustrated examples for adding contact details, writing handover notes and locating receipts, with a glossary explaining the service portal's navigation labels."
+    },
+    {
+      "source_ref": "source_08",
+      "rule": "For Cedarleaf Workspace, the two required checks are the licence inventory check and the migration consistency check. For each check separately, use the latest dated final assessment actually provided; if none is provided, the check is missing. Never assume an unprovided assessment exists. After selecting assessments, REJECT if either is FAIL, APPROVE if both are PASS, and otherwise DEFER. Descriptive features do not add conditions or determine check results.",
+      "source": "The current final assessment dated 2026-11-16 of Cedarleaf Workspace records PASS for the required migration consistency check, following the completed assessment of the proposed configuration.\nCedarleaf Workspace provides an offline document catalogue with folder browsing and saved collections, allowing staff to organise reference material while disconnected from the network.\nThe final licence inventory assessment dated 2026-11-16 for Cedarleaf Workspace records PASS for the required licence inventory check, covering the proposed shared office installation.\nIts search interface supports author filters, document tags and saved queries, so recurring administrative searches can be reopened without rebuilding the same filter selection.\nAn earlier final assessment dated 2026-10-12 of Cedarleaf Workspace records FAIL for the required migration consistency check; this assessment documents the earlier import rehearsal and its findings.\nThe review panel displays comments beside document revisions and retains an edit history, helping colleagues understand how a draft changed during a shared review.\nA workspace export contains ordinary text documents and a separate folder index, providing staff with a readable handover copy outside the application interface.\nThe onboarding guide includes illustrated examples for opening collections, assigning tags and finding archived drafts, with a glossary explaining the application's navigation labels.",
+      "candidate_restoration": "The current final assessment dated 2026-11-16 of Cedarleaf Workspace records PASS for the required migration consistency check, following the completed assessment of the proposed configuration.",
+      "candidate_irrelevant_addition": "The onboarding guide includes illustrated examples for opening collections, assigning tags and finding archived drafts, with a glossary explaining the application's navigation labels."
+    }
+  ],
+  "reports": [
+    {
+      "review_id": "review_001",
+      "source_ref": "source_01",
+      "report": "The latest dated final assessment (2026-11-16) for Emberline Meeting Service records PASS for both the package eligibility check and the requested layout inclusion check."
+    },
+    {
+      "review_id": "review_002",
+      "source_ref": "source_02",
+      "report": "The latest dated final assessment for Asterwick Planner (2026-11-16) records PASS for the licence inventory check, but FAIL for the calendar interoperability check. An earlier assessment (2026-10-12) records PASS for the calendar interoperability check."
+    },
+    {
+      "review_id": "review_003",
+      "source_ref": "source_03",
+      "report": "Mallow Label Station's final accessory assessment (2026-11-16) records PASS for accessory compatibility, and its final label alignment assessment (2026-11-16) also records PASS."
+    },
+    {
+      "review_id": "review_004",
+      "source_ref": "source_04",
+      "report": "The desk placement check for Brindle Archive Scanner records PASS, dated 2026-11-16, covering the proposed records office deployment configuration. An earlier assessment dated 2026-10-12 records PASS for the page order preservation check, indicating successful handling."
+    },
+    {
+      "review_id": "review_005",
+      "source_ref": "source_01",
+      "report": "The latest dated final assessment for the package eligibility check of Emberline Meeting Service, dated 2026-11-16, records PASS. The latest dated final assessment for the requested layout inclusion check, also dated 2026-11-16, records PASS."
+    },
+    {
+      "review_id": "review_006",
+      "source_ref": "source_03",
+      "report": "The final accessory assessment dated 2026-11-16 for Mallow Label Station records PASS for the required accessory compatibility check. The current final assessment dated 2026-11-16 also records PASS for the required label alignment check."
+    },
+    {
+      "review_id": "review_007",
+      "source_ref": "source_05",
+      "report": "The Cairnfield Visual Archive's project registration check (2026-11-16) is PASS, and its toolchain compatibility check (2026-10-12) is PASS."
+    },
+    {
+      "review_id": "review_008",
+      "source_ref": "source_02",
+      "report": "Asterwick Planner's licence inventory check dated 2026-11-16 records PASS, while the calendar interoperability check dated 2026-11-16 records FAIL."
+    },
+    {
+      "review_id": "review_009",
+      "source_ref": "source_06",
+      "report": "The final registration assessment dated 2026-11-16 records PASS for the project registration check, and the current final assessment dated 2026-11-16 records PASS for the toolchain compatibility check."
+    },
+    {
+      "review_id": "review_010",
+      "source_ref": "source_04",
+      "report": "The desk placement check for Brindle Archive Scanner records PASS (2026-11-16), while the page order preservation check records FAIL (2026-11-16) and an earlier PASS (2026-10-12)."
+    },
+    {
+      "review_id": "review_011",
+      "source_ref": "source_06",
+      "report": "The final registration assessment dated 2026-11-16 records PASS for the project registration check, and the final assessment dated 2026-11-16 records PASS for the toolchain compatibility check."
+    },
+    {
+      "review_id": "review_012",
+      "source_ref": "source_03",
+      "report": "The final accessory assessment dated 2026-11-16 for Mallow Label Station records PASS for the required accessory compatibility check. The current final assessment dated 2026-11-16 also records PASS for the required label alignment check. An earlier assessment dated 2026-10-12 records FAIL for the label alignment check."
+    },
+    {
+      "review_id": "review_013",
+      "source_ref": "source_07",
+      "report": "The latest dated final assessment for the service area eligibility check (2026-11-16) records PASS, while the latest dated final assessment for the packaging compatibility check (2026-11-16) records FAIL."
+    },
+    {
+      "review_id": "review_014",
+      "source_ref": "source_04",
+      "report": "The desk placement check for Brindle Archive Scanner records PASS (2026-11-16), while the page order preservation check records FAIL (2026-11-16) with an earlier PASS (2026-10-12)."
+    },
+    {
+      "review_id": "review_015",
+      "source_ref": "source_01",
+      "report": "The latest dated final assessment for Emberline Meeting Service (2026-11-16) records PASS for both the package eligibility check and the requested layout inclusion check."
+    },
+    {
+      "review_id": "review_016",
+      "source_ref": "source_05",
+      "report": "The Cairnfield Visual Archive's project registration check is PASS (2026-11-16), while the toolchain compatibility check is FAIL (2026-11-16)."
+    },
+    {
+      "review_id": "review_017",
+      "source_ref": "source_07",
+      "report": "The latest dated final assessment for the service area eligibility check (2026-11-16) records PASS, while the packaging compatibility check (2026-11-16) records FAIL."
+    },
+    {
+      "review_id": "review_018",
+      "source_ref": "source_08",
+      "report": "The latest dated final assessment of Cedarleaf Workspace (2026-11-16) records PASS for both the licence inventory check and the migration consistency check."
+    },
+    {
+      "review_id": "review_019",
+      "source_ref": "source_04",
+      "report": "The desk placement check for Brindle Archive Scanner records PASS, dated 2026-11-16, covering the proposed records office deployment configuration. The page order preservation check records FAIL, dated 2026-11-16, following the completed assessment of the proposed configuration."
+    },
+    {
+      "review_id": "review_020",
+      "source_ref": "source_06",
+      "report": "The final registration assessment dated 2026-11-16 records PASS for the project registration check, and the final assessment dated 2026-11-16 records PASS for the toolchain compatibility check."
+    },
+    {
+      "review_id": "review_021",
+      "source_ref": "source_08",
+      "report": "Cedarleaf Workspace's licence inventory check (2026-11-16) and migration consistency check (2026-11-16) both record PASS."
+    },
+    {
+      "review_id": "review_022",
+      "source_ref": "source_06",
+      "report": "The final registration assessment dated 2026-11-16 for Larkspur Corpus Workspace records PASS for the project registration check. The current final assessment dated 2026-11-16 records PASS for the toolchain compatibility check."
+    },
+    {
+      "review_id": "review_023",
+      "source_ref": "source_05",
+      "report": "The Cairnfield Visual Archive's project registration check (dated 2026-11-16) records PASS, while the toolchain compatibility check (dated 2026-11-16) records FAIL. The toolchain compatibility check had previously recorded PASS (dated 2026-10-12)."
+    },
+    {
+      "review_id": "review_024",
+      "source_ref": "source_08",
+      "report": "Cedarleaf Workspace's latest dated final assessment (2026-11-16) records PASS for both the required migration consistency check and licence inventory check. The assessment covers the proposed shared office installation."
+    },
+    {
+      "review_id": "review_025",
+      "source_ref": "source_07",
+      "report": "The latest dated final assessment for the service area eligibility check of Rivermark Collection Service, dated 2026-11-16, records PASS. The latest dated final assessment for the packaging compatibility check, dated 2026-11-16, records FAIL."
+    },
+    {
+      "review_id": "review_026",
+      "source_ref": "source_02",
+      "report": "The licence inventory check for Asterwick Planner dated 2026-11-16 records PASS, while the calendar interoperability check dated 2026-11-16 records FAIL."
+    },
+    {
+      "review_id": "review_027",
+      "source_ref": "source_01",
+      "report": "The latest dated final assessment for the package eligibility check (2026-11-16) records PASS, and the latest dated final assessment for the requested layout inclusion check (2026-11-16) also records PASS."
+    },
+    {
+      "review_id": "review_028",
+      "source_ref": "source_07",
+      "report": "Evidence Note: \nThe final assessment dated 2026-11-16 for Rivermark Collection Service records PASS for the required service area eligibility check. The assessment dated 2026-10-12 also records PASS for the required packaging compatibility check."
+    },
+    {
+      "review_id": "review_029",
+      "source_ref": "source_03",
+      "report": "The final accessory assessment dated 2026-11-16 records PASS for the accessory compatibility check, and the final assessment dated 2026-11-16 records PASS for the label alignment check."
+    },
+    {
+      "review_id": "review_030",
+      "source_ref": "source_05",
+      "report": "A final assessment dated 2026-11-16 records PASS for the project registration check, covering the proposed fictional illustration exploration project. A final assessment dated 2026-10-12 records PASS for the toolchain compatibility check, documenting the earlier project environment trial."
+    },
+    {
+      "review_id": "review_031",
+      "source_ref": "source_08",
+      "report": "Cedarleaf Workspace's licence inventory check (2026-11-16) and migration consistency check (2026-11-16) both record PASS."
+    },
+    {
+      "review_id": "review_032",
+      "source_ref": "source_02",
+      "report": "Asterwick Planner's licence inventory check dated 2026-11-16 records PASS, while the calendar interoperability check dated 2026-11-16 records FAIL. An earlier assessment dated 2026-10-12 records PASS for the calendar interoperability check."
+    }
+  ]
+}

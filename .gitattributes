@@ -1,4 +1,5 @@
 * text=auto eol=lf
+docs/review/natural_selection_v1_human/review.md whitespace=-blank-at-eol
 
 # Byte-hashed annotation snapshots retain their evidence and original newlines.
 data/annotations/*_agent_draft.csv -text whitespace=-blank-at-eol,-blank-at-eof

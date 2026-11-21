@@ -23,8 +23,8 @@ repos:
       - id: trailing-whitespace
         entry: python -m pre_commit_hooks.trailing_whitespace_fixer
         args: [--markdown-linebreak-ext=md]
-        # Preserve the exact quoted evidence in byte-hashed annotation drafts.
-        exclude: ^data/annotations/.*_agent_draft\.csv$
+        # Preserve exact captured evidence, including internal line-end spaces.
+        exclude: ^(data/annotations/.*_agent_draft\.csv|docs/review/natural_selection_v1_human/review\.md)$
   - repo: local
     hooks:
       - id: ruff-check

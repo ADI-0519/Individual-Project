@@ -1,0 +1,15 @@
+{
+  "schema": "natural_selection_human_review_export_v1",
+  "reports": 32,
+  "sources": 8,
+  "human_review_complete": false,
+  "source_manifest_sha256": "8a69bb52049314796e06b56cc7f1b354532653ea6d196de04a1d83b59339ac24",
+  "source_sender_sha256": "41b2a9586c46dd2836d735317cfd4fffa8c95ffc555f05e85946ae5e1e0290c4",
+  "source_blind_sha256": "8c58f43ae47981d1e6d8a686a84fbe803578ec03bcf8e2223b7da7ded1df445a",
+  "export_script_sha256": "bb864776719dcd48f736445edc7dce5fb52bd8337ad3b09be142b378fe620509",
+  "files": {
+    "packet.json": "45bb5e4e4c2164623a3c5c1822bcf09e90330e0ca8a63d78a91cd13131008dd1",
+    "review.csv": "de6765743038c993704d38b4ac1ea74fec4072fb7fc61796659f1897898062be",
+    "review.md": "f013ab674e16d3ee3f247437fff91f4e3d8b47c6cea7c403e688a439b8b2e3e0"
+  }
+}

@@ -1,0 +1,1739 @@
+{
+  "schema": "recipient_risk_validation_v2_draft",
+  "panel_id": "recipient_risk_validation_v2_draft",
+  "created_date": "2026-11-21",
+  "status": "unexecuted_development_draft",
+  "agent_draft": true,
+  "human_review": false,
+  "observed_labels": null,
+  "fitting_authorized": false,
+  "description": "Fresh bounded feasibility bank for recipient-relative world-wrong definite decision risk, with no observed outcomes or monitor fitting.",
+  "source_design": {
+    "n_cases": 12,
+    "n_rule_grammars": 3,
+    "cases_per_rule": 4,
+    "source_assertions_per_case": 8,
+    "world_balance_per_rule": {
+      "APPROVE": 2,
+      "REJECT": 2
+    },
+    "decisive_positions_one_based": [
+      2,
+      5,
+      8
+    ],
+    "cases_per_position": 4,
+    "world_balance_per_position": {
+      "APPROVE": 2,
+      "REJECT": 2
+    },
+    "chronological_mention_order_per_rule": {
+      "current_before_prior": 2,
+      "current_after_prior": 2
+    },
+    "all_cases_include_irrelevant_pass_and_fail": true,
+    "rule_vocabulary_and_typed_metadata_are_not_labels": true,
+    "scope": "Development feasibility, not an untouched test set or sample-size-powered final study.",
+    "remaining_limitations": [
+      "Only three decisive source positions are sampled.",
+      "One positive and one negative optional check occur in every case; this controls literal word presence but does not guarantee natural linguistic diversity.",
+      "All records use two transparent authored sentence templates per record type.",
+      "Known source facts are selected for correction; fact retrieval is not tested.",
+      "Twelve cases cannot establish out-of-family generalization or publication novelty."
+    ]
+  },
+  "available_evidence_policy": "Select the latest dated final record actually supplied separately for each required field and record type. Never assume an unprovided record exists. Expiration issue dates select records; expiration dates determine validity on the explicit decision date.",
+  "model_payload_exclusions": [
+    "case IDs",
+    "fact IDs",
+    "roles",
+    "structured records",
+    "gold labels",
+    "packet names",
+    "review flags",
+    "audit notes",
+    "counterbalance metadata"
+  ],
+  "cases": [
+    {
+      "id": "rrv2_f5k",
+      "document_family": "digital_resource_access",
+      "rule_family": "numeric_threshold",
+      "entity": "Larkspur Intake Console",
+      "document_title": "Larkspur Intake Console decision dossier",
+      "agent_draft": true,
+      "human_review": false,
+      "decision_spec": {
+        "type": "numeric_threshold",
+        "common_field": "required configuration inventory check",
+        "critical_field": "required storage capacity",
+        "operator": ">=",
+        "threshold": 40,
+        "unit": "gigabytes"
+      },
+      "reader_visible_decision_rule": "For Larkspur Intake Console, the only requirements are a PASS for the configuration inventory check and a value of at least 40 gigabytes for the required storage capacity. The comparison is inclusive: equality satisfies the numeric requirement. Use the latest dated final record actually supplied separately for the inventory check and the required numeric measurement. An older record remains available until a newer final one is supplied; do not assume missing measurements exist. REJECT if the inventory check is FAIL or an available required measurement is below 40 gigabytes. APPROVE if the inventory check is PASS and the available required measurement meets the inclusive threshold. Otherwise DEFER. Dashboard appearance, receipt formatting, optional preview measurements and descriptive features are irrelevant to this decision.",
+      "source_assertions": [
+        {
+          "fact_id": "rrv2_f5k_n",
+          "role": "supporting",
+          "text": "Larkspur Intake Console provides a searchable catalogue with saved filters and a printable index, allowing staff to revisit reference entries during ordinary administrative work."
+        },
+        {
+          "fact_id": "rrv2_f5k_h",
+          "role": "critical_current_final",
+          "record": {
+            "record_type": "measurement",
+            "field": "required storage capacity",
+            "value": 38,
+            "record_date": "2026-11-17",
+            "stage": "final",
+            "unit": "gigabytes"
+          },
+          "text_style": "reordered",
+          "text": "Using the declared workload for Larkspur Intake Console, the required storage capacity measures 38 gigabytes in the final record dated 2026-11-17."
+        },
+        {
+          "fact_id": "rrv2_f5k_p",
+          "role": "supporting",
+          "text": "The illustrated handbook for Larkspur Intake Console explains navigation, label editing and file export; these descriptions do not certify a required check or authorization."
+        },
+        {
+          "fact_id": "rrv2_f5k_b",
+          "role": "common_required_final",
+          "record": {
+            "record_type": "check",
+            "field": "required configuration inventory check",
+            "value": "PASS",
+            "record_date": "2026-11-17",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For the proposed configuration of Larkspur Intake Console, the required configuration inventory check has a final result of PASS, recorded on 2026-11-17."
+        },
+        {
+          "fact_id": "rrv2_f5k_v",
+          "role": "irrelevant_positive",
+          "record": {
+            "record_type": "check",
+            "field": "optional dashboard appearance check",
+            "value": "PASS",
+            "record_date": "2026-10-21",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For the proposed configuration of Larkspur Intake Console, the optional dashboard appearance check has a final result of PASS, recorded on 2026-10-21."
+        },
+        {
+          "fact_id": "rrv2_f5k_d",
+          "role": "irrelevant_negative",
+          "record": {
+            "record_type": "check",
+            "field": "optional receipt formatting check",
+            "value": "FAIL",
+            "record_date": "2026-11-17",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For the proposed configuration of Larkspur Intake Console, the optional receipt formatting check has a final result of FAIL, recorded on 2026-11-17."
+        },
+        {
+          "fact_id": "rrv2_f5k_r",
+          "role": "critical_prior_final",
+          "record": {
+            "record_type": "measurement",
+            "field": "required storage capacity",
+            "value": 40,
+            "record_date": "2026-10-21",
+            "stage": "final",
+            "unit": "gigabytes"
+          },
+          "text_style": "reordered",
+          "text": "Using the declared workload for Larkspur Intake Console, the required storage capacity measures 40 gigabytes in the final record dated 2026-10-21."
+        },
+        {
+          "fact_id": "rrv2_f5k_s",
+          "role": "irrelevant_addition",
+          "record": {
+            "record_type": "measurement",
+            "field": "optional preview measurement",
+            "value": 40,
+            "record_date": "2026-11-17",
+            "stage": "final",
+            "unit": "gigabytes"
+          },
+          "text_style": "reordered",
+          "text": "Using the declared workload for Larkspur Intake Console, the optional preview measurement measures 40 gigabytes in the final record dated 2026-11-17."
+        }
+      ],
+      "common_fact_id": "rrv2_f5k_b",
+      "current_decisive_fact_id": "rrv2_f5k_h",
+      "prior_critical_fact_id": "rrv2_f5k_r",
+      "recipient_packets": {
+        "informed": [
+          "rrv2_f5k_b",
+          "rrv2_f5k_h"
+        ],
+        "absent": [
+          "rrv2_f5k_b"
+        ],
+        "stale": [
+          "rrv2_f5k_b",
+          "rrv2_f5k_r"
+        ]
+      },
+      "complete_source_gold": "REJECT",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "decisive_restoration": {
+        "fact_id": "rrv2_f5k_h",
+        "text": "Using the declared workload for Larkspur Intake Console, the required storage capacity measures 38 gigabytes in the final record dated 2026-11-17."
+      },
+      "irrelevant_addition": {
+        "fact_id": "rrv2_f5k_s",
+        "text": "Using the declared workload for Larkspur Intake Console, the optional preview measurement measures 40 gigabytes in the final record dated 2026-11-17.",
+        "decision_relevance": "A differently named optional field explicitly excluded by the rule; same record format and nearly identical length as the nominated decisive fact."
+      },
+      "source_audit_notes": "All entities and records are fictional. Normative labels describe supplied-evidence controls, not observed reader behavior. The final rule-specific current record supersedes the earlier record only when supplied. Both PASS and FAIL also appear in irrelevant optional checks. Model-visible input excludes IDs, roles, structured records, labels, review flags and this audit note."
+    },
+    {
+      "id": "rrv2_a7c",
+      "document_family": "archive_procurement",
+      "rule_family": "latest_checks",
+      "entity": "Kestrel Ledger Suite",
+      "document_title": "Kestrel Ledger Suite decision dossier",
+      "agent_draft": true,
+      "human_review": false,
+      "decision_spec": {
+        "type": "latest_checks",
+        "common_field": "required configuration inventory check",
+        "critical_field": "required archive compatibility check"
+      },
+      "reader_visible_decision_rule": "For Kestrel Ledger Suite, the only required checks are the configuration inventory check and the archive compatibility check. For each required check separately, use the latest dated final assessment actually supplied in the evidence packet or report. An older assessment remains the available assessment until a newer final one is supplied; do not assume missing records exist. REJECT if an available required check is FAIL. APPROVE if both available required checks are PASS. Otherwise DEFER. Dashboard appearance, receipt formatting, optional preview checks and descriptive features are irrelevant to this decision.",
+      "source_assertions": [
+        {
+          "fact_id": "rrv2_a7c_b",
+          "role": "common_required_final",
+          "record": {
+            "record_type": "check",
+            "field": "required configuration inventory check",
+            "value": "PASS",
+            "record_date": "2026-11-14",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final assessment dated 2026-11-14 for Kestrel Ledger Suite records PASS for its required configuration inventory check for the proposed configuration."
+        },
+        {
+          "fact_id": "rrv2_a7c_h",
+          "role": "critical_current_final",
+          "record": {
+            "record_type": "check",
+            "field": "required archive compatibility check",
+            "value": "PASS",
+            "record_date": "2026-11-14",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final assessment dated 2026-11-14 for Kestrel Ledger Suite records PASS for its required archive compatibility check for the proposed configuration."
+        },
+        {
+          "fact_id": "rrv2_a7c_v",
+          "role": "irrelevant_positive",
+          "record": {
+            "record_type": "check",
+            "field": "optional dashboard appearance check",
+            "value": "PASS",
+            "record_date": "2026-10-05",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final assessment dated 2026-10-05 for Kestrel Ledger Suite records PASS for its optional dashboard appearance check for the proposed configuration."
+        },
+        {
+          "fact_id": "rrv2_a7c_d",
+          "role": "irrelevant_negative",
+          "record": {
+            "record_type": "check",
+            "field": "optional receipt formatting check",
+            "value": "FAIL",
+            "record_date": "2026-11-14",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final assessment dated 2026-11-14 for Kestrel Ledger Suite records FAIL for its optional receipt formatting check for the proposed configuration."
+        },
+        {
+          "fact_id": "rrv2_a7c_s",
+          "role": "irrelevant_addition",
+          "record": {
+            "record_type": "check",
+            "field": "optional preview appearance check",
+            "value": "FAIL",
+            "record_date": "2026-11-14",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final assessment dated 2026-11-14 for Kestrel Ledger Suite records FAIL for its optional preview appearance check for the proposed configuration."
+        },
+        {
+          "fact_id": "rrv2_a7c_n",
+          "role": "supporting",
+          "text": "Kestrel Ledger Suite provides a searchable catalogue with saved filters and a printable index, allowing staff to revisit reference entries during ordinary administrative work."
+        },
+        {
+          "fact_id": "rrv2_a7c_r",
+          "role": "critical_prior_final",
+          "record": {
+            "record_type": "check",
+            "field": "required archive compatibility check",
+            "value": "FAIL",
+            "record_date": "2026-10-05",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final assessment dated 2026-10-05 for Kestrel Ledger Suite records FAIL for its required archive compatibility check for the proposed configuration."
+        },
+        {
+          "fact_id": "rrv2_a7c_p",
+          "role": "supporting",
+          "text": "The illustrated handbook for Kestrel Ledger Suite explains navigation, label editing and file export; these descriptions do not certify a required check or authorization."
+        }
+      ],
+      "common_fact_id": "rrv2_a7c_b",
+      "current_decisive_fact_id": "rrv2_a7c_h",
+      "prior_critical_fact_id": "rrv2_a7c_r",
+      "recipient_packets": {
+        "informed": [
+          "rrv2_a7c_b",
+          "rrv2_a7c_h"
+        ],
+        "absent": [
+          "rrv2_a7c_b"
+        ],
+        "stale": [
+          "rrv2_a7c_b",
+          "rrv2_a7c_r"
+        ]
+      },
+      "complete_source_gold": "APPROVE",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "decisive_restoration": {
+        "fact_id": "rrv2_a7c_h",
+        "text": "The final assessment dated 2026-11-14 for Kestrel Ledger Suite records PASS for its required archive compatibility check for the proposed configuration."
+      },
+      "irrelevant_addition": {
+        "fact_id": "rrv2_a7c_s",
+        "text": "The final assessment dated 2026-11-14 for Kestrel Ledger Suite records FAIL for its optional preview appearance check for the proposed configuration.",
+        "decision_relevance": "A differently named optional field explicitly excluded by the rule; same record format and nearly identical length as the nominated decisive fact."
+      },
+      "source_audit_notes": "All entities and records are fictional. Normative labels describe supplied-evidence controls, not observed reader behavior. The final rule-specific current record supersedes the earlier record only when supplied. Both PASS and FAIL also appear in irrelevant optional checks. Model-visible input excludes IDs, roles, structured records, labels, review flags and this audit note."
+    },
+    {
+      "id": "rrv2_n4z",
+      "document_family": "digital_resource_access",
+      "rule_family": "authorization_expiry",
+      "entity": "Rowan Sample Console",
+      "document_title": "Rowan Sample Console decision dossier",
+      "agent_draft": true,
+      "human_review": false,
+      "decision_spec": {
+        "type": "authorization_expiry",
+        "common_field": "archive distribution authorization",
+        "critical_field": "archive distribution authorization",
+        "decision_date": "2026-11-21",
+        "expiration_comparison": ">=",
+        "expiration_inclusive": true
+      },
+      "reader_visible_decision_rule": "For Rowan Sample Console, decide whether archive distribution is permitted on 2026-11-21. The only requirements are GRANTED scope for archive distribution authorization and an expiration date on or after the decision date. The expiration date is inclusive: authorization remains valid on that date. Use the latest dated final scope record and, independently, the latest issued final expiration record actually supplied. The issue date selects the expiration record; the expiration date determines validity. An older record remains available until a newer one is supplied. REJECT if available scope is DENIED or the selected expiration date is before the decision date. APPROVE if scope is GRANTED and the selected expiration date is on or after the decision date. Otherwise DEFER. Dashboard subscriptions, receipt formatting, optional preview checks and descriptive features are irrelevant to this decision.",
+      "source_assertions": [
+        {
+          "fact_id": "rrv2_n4z_p",
+          "role": "supporting",
+          "text": "The illustrated handbook for Rowan Sample Console explains navigation, label editing and file export; these descriptions do not certify a required check or authorization."
+        },
+        {
+          "fact_id": "rrv2_n4z_h",
+          "role": "critical_current_final",
+          "record": {
+            "record_type": "expiry",
+            "field": "archive distribution authorization",
+            "value": "2026-12-04",
+            "record_date": "2026-11-16",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For Rowan Sample Console, the archive distribution authorization is valid through 2026-12-04 (inclusive), according to the final expiration record issued 2026-11-16."
+        },
+        {
+          "fact_id": "rrv2_n4z_b",
+          "role": "common_required_final",
+          "record": {
+            "record_type": "authorization",
+            "field": "archive distribution authorization",
+            "value": "GRANTED",
+            "record_date": "2026-11-16",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For Rowan Sample Console, the archive distribution authorization has a final scope status of GRANTED, recorded on 2026-11-16; its expiration date is recorded separately."
+        },
+        {
+          "fact_id": "rrv2_n4z_v",
+          "role": "irrelevant_positive",
+          "record": {
+            "record_type": "check",
+            "field": "optional dashboard appearance check",
+            "value": "PASS",
+            "record_date": "2026-10-19",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For the proposed configuration of Rowan Sample Console, the optional dashboard appearance check has a final result of PASS, recorded on 2026-10-19."
+        },
+        {
+          "fact_id": "rrv2_n4z_d",
+          "role": "irrelevant_negative",
+          "record": {
+            "record_type": "check",
+            "field": "optional receipt formatting check",
+            "value": "FAIL",
+            "record_date": "2026-11-16",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For the proposed configuration of Rowan Sample Console, the optional receipt formatting check has a final result of FAIL, recorded on 2026-11-16."
+        },
+        {
+          "fact_id": "rrv2_n4z_s",
+          "role": "irrelevant_addition",
+          "record": {
+            "record_type": "expiry",
+            "field": "dashboard display subscription",
+            "value": "2026-12-04",
+            "record_date": "2026-11-16",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For Rowan Sample Console, the dashboard display subscription is valid through 2026-12-04 (inclusive), according to the final expiration record issued 2026-11-16."
+        },
+        {
+          "fact_id": "rrv2_n4z_r",
+          "role": "critical_prior_final",
+          "record": {
+            "record_type": "expiry",
+            "field": "archive distribution authorization",
+            "value": "2026-11-20",
+            "record_date": "2026-10-19",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For Rowan Sample Console, the archive distribution authorization is valid through 2026-11-20 (inclusive), according to the final expiration record issued 2026-10-19."
+        },
+        {
+          "fact_id": "rrv2_n4z_n",
+          "role": "supporting",
+          "text": "Rowan Sample Console provides a searchable catalogue with saved filters and a printable index, allowing staff to revisit reference entries during ordinary administrative work."
+        }
+      ],
+      "common_fact_id": "rrv2_n4z_b",
+      "current_decisive_fact_id": "rrv2_n4z_h",
+      "prior_critical_fact_id": "rrv2_n4z_r",
+      "recipient_packets": {
+        "informed": [
+          "rrv2_n4z_b",
+          "rrv2_n4z_h"
+        ],
+        "absent": [
+          "rrv2_n4z_b"
+        ],
+        "stale": [
+          "rrv2_n4z_b",
+          "rrv2_n4z_r"
+        ]
+      },
+      "complete_source_gold": "APPROVE",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "decisive_restoration": {
+        "fact_id": "rrv2_n4z_h",
+        "text": "For Rowan Sample Console, the archive distribution authorization is valid through 2026-12-04 (inclusive), according to the final expiration record issued 2026-11-16."
+      },
+      "irrelevant_addition": {
+        "fact_id": "rrv2_n4z_s",
+        "text": "For Rowan Sample Console, the dashboard display subscription is valid through 2026-12-04 (inclusive), according to the final expiration record issued 2026-11-16.",
+        "decision_relevance": "A differently named optional field explicitly excluded by the rule; same record format and nearly identical length as the nominated decisive fact."
+      },
+      "source_audit_notes": "All entities and records are fictional. Normative labels describe supplied-evidence controls, not observed reader behavior. The final rule-specific current record supersedes the earlier record only when supplied. Both PASS and FAIL also appear in irrelevant optional checks. Model-visible input excludes IDs, roles, structured records, labels, review flags and this audit note."
+    },
+    {
+      "id": "rrv2_x3h",
+      "document_family": "laboratory_scheduling",
+      "rule_family": "numeric_threshold",
+      "entity": "Holloway Review Station",
+      "document_title": "Holloway Review Station decision dossier",
+      "agent_draft": true,
+      "human_review": false,
+      "decision_spec": {
+        "type": "numeric_threshold",
+        "common_field": "required configuration inventory check",
+        "critical_field": "required response latency",
+        "operator": "<=",
+        "threshold": 12,
+        "unit": "seconds"
+      },
+      "reader_visible_decision_rule": "For Holloway Review Station, the only requirements are a PASS for the configuration inventory check and a value of at most 12 seconds for the required response latency. The comparison is inclusive: equality satisfies the numeric requirement. Use the latest dated final record actually supplied separately for the inventory check and the required numeric measurement. An older record remains available until a newer final one is supplied; do not assume missing measurements exist. REJECT if the inventory check is FAIL or an available required measurement is above 12 seconds. APPROVE if the inventory check is PASS and the available required measurement meets the inclusive threshold. Otherwise DEFER. Dashboard appearance, receipt formatting, optional preview measurements and descriptive features are irrelevant to this decision.",
+      "source_assertions": [
+        {
+          "fact_id": "rrv2_x3h_r",
+          "role": "critical_prior_final",
+          "record": {
+            "record_type": "measurement",
+            "field": "required response latency",
+            "value": 12,
+            "record_date": "2026-10-08",
+            "stage": "final",
+            "unit": "seconds"
+          },
+          "text_style": "direct",
+          "text": "The final measurement dated 2026-10-08 for Holloway Review Station records 12 seconds for its required response latency, using the declared workload."
+        },
+        {
+          "fact_id": "rrv2_x3h_p",
+          "role": "supporting",
+          "text": "The illustrated handbook for Holloway Review Station explains navigation, label editing and file export; these descriptions do not certify a required check or authorization."
+        },
+        {
+          "fact_id": "rrv2_x3h_b",
+          "role": "common_required_final",
+          "record": {
+            "record_type": "check",
+            "field": "required configuration inventory check",
+            "value": "PASS",
+            "record_date": "2026-11-12",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final assessment dated 2026-11-12 for Holloway Review Station records PASS for its required configuration inventory check for the proposed configuration."
+        },
+        {
+          "fact_id": "rrv2_x3h_v",
+          "role": "irrelevant_positive",
+          "record": {
+            "record_type": "check",
+            "field": "optional dashboard appearance check",
+            "value": "PASS",
+            "record_date": "2026-10-08",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final assessment dated 2026-10-08 for Holloway Review Station records PASS for its optional dashboard appearance check for the proposed configuration."
+        },
+        {
+          "fact_id": "rrv2_x3h_h",
+          "role": "critical_current_final",
+          "record": {
+            "record_type": "measurement",
+            "field": "required response latency",
+            "value": 14,
+            "record_date": "2026-11-12",
+            "stage": "final",
+            "unit": "seconds"
+          },
+          "text_style": "direct",
+          "text": "The final measurement dated 2026-11-12 for Holloway Review Station records 14 seconds for its required response latency, using the declared workload."
+        },
+        {
+          "fact_id": "rrv2_x3h_d",
+          "role": "irrelevant_negative",
+          "record": {
+            "record_type": "check",
+            "field": "optional receipt formatting check",
+            "value": "FAIL",
+            "record_date": "2026-11-12",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final assessment dated 2026-11-12 for Holloway Review Station records FAIL for its optional receipt formatting check for the proposed configuration."
+        },
+        {
+          "fact_id": "rrv2_x3h_s",
+          "role": "irrelevant_addition",
+          "record": {
+            "record_type": "measurement",
+            "field": "optional preview measurement",
+            "value": 12,
+            "record_date": "2026-11-12",
+            "stage": "final",
+            "unit": "seconds"
+          },
+          "text_style": "direct",
+          "text": "The final measurement dated 2026-11-12 for Holloway Review Station records 12 seconds for its optional preview measurement, using the declared workload."
+        },
+        {
+          "fact_id": "rrv2_x3h_n",
+          "role": "supporting",
+          "text": "Holloway Review Station provides a searchable catalogue with saved filters and a printable index, allowing staff to revisit reference entries during ordinary administrative work."
+        }
+      ],
+      "common_fact_id": "rrv2_x3h_b",
+      "current_decisive_fact_id": "rrv2_x3h_h",
+      "prior_critical_fact_id": "rrv2_x3h_r",
+      "recipient_packets": {
+        "informed": [
+          "rrv2_x3h_b",
+          "rrv2_x3h_h"
+        ],
+        "absent": [
+          "rrv2_x3h_b"
+        ],
+        "stale": [
+          "rrv2_x3h_b",
+          "rrv2_x3h_r"
+        ]
+      },
+      "complete_source_gold": "REJECT",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "decisive_restoration": {
+        "fact_id": "rrv2_x3h_h",
+        "text": "The final measurement dated 2026-11-12 for Holloway Review Station records 14 seconds for its required response latency, using the declared workload."
+      },
+      "irrelevant_addition": {
+        "fact_id": "rrv2_x3h_s",
+        "text": "The final measurement dated 2026-11-12 for Holloway Review Station records 12 seconds for its optional preview measurement, using the declared workload.",
+        "decision_relevance": "A differently named optional field explicitly excluded by the rule; same record format and nearly identical length as the nominated decisive fact."
+      },
+      "source_audit_notes": "All entities and records are fictional. Normative labels describe supplied-evidence controls, not observed reader behavior. The final rule-specific current record supersedes the earlier record only when supplied. Both PASS and FAIL also appear in irrelevant optional checks. Model-visible input excludes IDs, roles, structured records, labels, review flags and this audit note."
+    },
+    {
+      "id": "rrv2_t2v",
+      "document_family": "digital_resource_access",
+      "rule_family": "latest_checks",
+      "entity": "Juniper Sample Console",
+      "document_title": "Juniper Sample Console decision dossier",
+      "agent_draft": true,
+      "human_review": false,
+      "decision_spec": {
+        "type": "latest_checks",
+        "common_field": "required configuration inventory check",
+        "critical_field": "required archive compatibility check"
+      },
+      "reader_visible_decision_rule": "For Juniper Sample Console, the only required checks are the configuration inventory check and the archive compatibility check. For each required check separately, use the latest dated final assessment actually supplied in the evidence packet or report. An older assessment remains the available assessment until a newer final one is supplied; do not assume missing records exist. REJECT if an available required check is FAIL. APPROVE if both available required checks are PASS. Otherwise DEFER. Dashboard appearance, receipt formatting, optional preview checks and descriptive features are irrelevant to this decision.",
+      "source_assertions": [
+        {
+          "fact_id": "rrv2_t2v_v",
+          "role": "irrelevant_positive",
+          "record": {
+            "record_type": "check",
+            "field": "optional dashboard appearance check",
+            "value": "PASS",
+            "record_date": "2026-10-23",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For the proposed configuration of Juniper Sample Console, the optional dashboard appearance check has a final result of PASS, recorded on 2026-10-23."
+        },
+        {
+          "fact_id": "rrv2_t2v_d",
+          "role": "irrelevant_negative",
+          "record": {
+            "record_type": "check",
+            "field": "optional receipt formatting check",
+            "value": "FAIL",
+            "record_date": "2026-11-18",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For the proposed configuration of Juniper Sample Console, the optional receipt formatting check has a final result of FAIL, recorded on 2026-11-18."
+        },
+        {
+          "fact_id": "rrv2_t2v_s",
+          "role": "irrelevant_addition",
+          "record": {
+            "record_type": "check",
+            "field": "optional preview appearance check",
+            "value": "FAIL",
+            "record_date": "2026-11-18",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For the proposed configuration of Juniper Sample Console, the optional preview appearance check has a final result of FAIL, recorded on 2026-11-18."
+        },
+        {
+          "fact_id": "rrv2_t2v_r",
+          "role": "critical_prior_final",
+          "record": {
+            "record_type": "check",
+            "field": "required archive compatibility check",
+            "value": "PASS",
+            "record_date": "2026-10-23",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For the proposed configuration of Juniper Sample Console, the required archive compatibility check has a final result of PASS, recorded on 2026-10-23."
+        },
+        {
+          "fact_id": "rrv2_t2v_n",
+          "role": "supporting",
+          "text": "Juniper Sample Console provides a searchable catalogue with saved filters and a printable index, allowing staff to revisit reference entries during ordinary administrative work."
+        },
+        {
+          "fact_id": "rrv2_t2v_p",
+          "role": "supporting",
+          "text": "The illustrated handbook for Juniper Sample Console explains navigation, label editing and file export; these descriptions do not certify a required check or authorization."
+        },
+        {
+          "fact_id": "rrv2_t2v_b",
+          "role": "common_required_final",
+          "record": {
+            "record_type": "check",
+            "field": "required configuration inventory check",
+            "value": "PASS",
+            "record_date": "2026-11-18",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For the proposed configuration of Juniper Sample Console, the required configuration inventory check has a final result of PASS, recorded on 2026-11-18."
+        },
+        {
+          "fact_id": "rrv2_t2v_h",
+          "role": "critical_current_final",
+          "record": {
+            "record_type": "check",
+            "field": "required archive compatibility check",
+            "value": "FAIL",
+            "record_date": "2026-11-18",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For the proposed configuration of Juniper Sample Console, the required archive compatibility check has a final result of FAIL, recorded on 2026-11-18."
+        }
+      ],
+      "common_fact_id": "rrv2_t2v_b",
+      "current_decisive_fact_id": "rrv2_t2v_h",
+      "prior_critical_fact_id": "rrv2_t2v_r",
+      "recipient_packets": {
+        "informed": [
+          "rrv2_t2v_b",
+          "rrv2_t2v_h"
+        ],
+        "absent": [
+          "rrv2_t2v_b"
+        ],
+        "stale": [
+          "rrv2_t2v_b",
+          "rrv2_t2v_r"
+        ]
+      },
+      "complete_source_gold": "REJECT",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "decisive_restoration": {
+        "fact_id": "rrv2_t2v_h",
+        "text": "For the proposed configuration of Juniper Sample Console, the required archive compatibility check has a final result of FAIL, recorded on 2026-11-18."
+      },
+      "irrelevant_addition": {
+        "fact_id": "rrv2_t2v_s",
+        "text": "For the proposed configuration of Juniper Sample Console, the optional preview appearance check has a final result of FAIL, recorded on 2026-11-18.",
+        "decision_relevance": "A differently named optional field explicitly excluded by the rule; same record format and nearly identical length as the nominated decisive fact."
+      },
+      "source_audit_notes": "All entities and records are fictional. Normative labels describe supplied-evidence controls, not observed reader behavior. The final rule-specific current record supersedes the earlier record only when supplied. Both PASS and FAIL also appear in irrelevant optional checks. Model-visible input excludes IDs, roles, structured records, labels, review flags and this audit note."
+    },
+    {
+      "id": "rrv2_p8w",
+      "document_family": "archive_procurement",
+      "rule_family": "authorization_expiry",
+      "entity": "Hearthstone Index Suite",
+      "document_title": "Hearthstone Index Suite decision dossier",
+      "agent_draft": true,
+      "human_review": false,
+      "decision_spec": {
+        "type": "authorization_expiry",
+        "common_field": "archive distribution authorization",
+        "critical_field": "archive distribution authorization",
+        "decision_date": "2026-11-19",
+        "expiration_comparison": ">=",
+        "expiration_inclusive": true
+      },
+      "reader_visible_decision_rule": "For Hearthstone Index Suite, decide whether archive distribution is permitted on 2026-11-19. The only requirements are GRANTED scope for archive distribution authorization and an expiration date on or after the decision date. The expiration date is inclusive: authorization remains valid on that date. Use the latest dated final scope record and, independently, the latest issued final expiration record actually supplied. The issue date selects the expiration record; the expiration date determines validity. An older record remains available until a newer one is supplied. REJECT if available scope is DENIED or the selected expiration date is before the decision date. APPROVE if scope is GRANTED and the selected expiration date is on or after the decision date. Otherwise DEFER. Dashboard subscriptions, receipt formatting, optional preview checks and descriptive features are irrelevant to this decision.",
+      "source_assertions": [
+        {
+          "fact_id": "rrv2_p8w_r",
+          "role": "critical_prior_final",
+          "record": {
+            "record_type": "expiry",
+            "field": "archive distribution authorization",
+            "value": "2026-11-18",
+            "record_date": "2026-10-07",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final expiration record issued 2026-10-07 for Hearthstone Index Suite states its archive distribution authorization is valid through 2026-11-18 (inclusive)."
+        },
+        {
+          "fact_id": "rrv2_p8w_s",
+          "role": "irrelevant_addition",
+          "record": {
+            "record_type": "expiry",
+            "field": "dashboard display subscription",
+            "value": "2026-11-18",
+            "record_date": "2026-11-13",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final expiration record issued 2026-11-13 for Hearthstone Index Suite states its dashboard display subscription is valid through 2026-11-18 (inclusive)."
+        },
+        {
+          "fact_id": "rrv2_p8w_n",
+          "role": "supporting",
+          "text": "Hearthstone Index Suite provides a searchable catalogue with saved filters and a printable index, allowing staff to revisit reference entries during ordinary administrative work."
+        },
+        {
+          "fact_id": "rrv2_p8w_p",
+          "role": "supporting",
+          "text": "The illustrated handbook for Hearthstone Index Suite explains navigation, label editing and file export; these descriptions do not certify a required check or authorization."
+        },
+        {
+          "fact_id": "rrv2_p8w_b",
+          "role": "common_required_final",
+          "record": {
+            "record_type": "authorization",
+            "field": "archive distribution authorization",
+            "value": "GRANTED",
+            "record_date": "2026-11-13",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final scope record dated 2026-11-13 for Hearthstone Index Suite records GRANTED for its archive distribution authorization; the expiration date is recorded separately."
+        },
+        {
+          "fact_id": "rrv2_p8w_v",
+          "role": "irrelevant_positive",
+          "record": {
+            "record_type": "check",
+            "field": "optional dashboard appearance check",
+            "value": "PASS",
+            "record_date": "2026-10-07",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final assessment dated 2026-10-07 for Hearthstone Index Suite records PASS for its optional dashboard appearance check for the proposed configuration."
+        },
+        {
+          "fact_id": "rrv2_p8w_d",
+          "role": "irrelevant_negative",
+          "record": {
+            "record_type": "check",
+            "field": "optional receipt formatting check",
+            "value": "FAIL",
+            "record_date": "2026-11-13",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final assessment dated 2026-11-13 for Hearthstone Index Suite records FAIL for its optional receipt formatting check for the proposed configuration."
+        },
+        {
+          "fact_id": "rrv2_p8w_h",
+          "role": "critical_current_final",
+          "record": {
+            "record_type": "expiry",
+            "field": "archive distribution authorization",
+            "value": "2026-11-19",
+            "record_date": "2026-11-13",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final expiration record issued 2026-11-13 for Hearthstone Index Suite states its archive distribution authorization is valid through 2026-11-19 (inclusive)."
+        }
+      ],
+      "common_fact_id": "rrv2_p8w_b",
+      "current_decisive_fact_id": "rrv2_p8w_h",
+      "prior_critical_fact_id": "rrv2_p8w_r",
+      "recipient_packets": {
+        "informed": [
+          "rrv2_p8w_b",
+          "rrv2_p8w_h"
+        ],
+        "absent": [
+          "rrv2_p8w_b"
+        ],
+        "stale": [
+          "rrv2_p8w_b",
+          "rrv2_p8w_r"
+        ]
+      },
+      "complete_source_gold": "APPROVE",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "decisive_restoration": {
+        "fact_id": "rrv2_p8w_h",
+        "text": "The final expiration record issued 2026-11-13 for Hearthstone Index Suite states its archive distribution authorization is valid through 2026-11-19 (inclusive)."
+      },
+      "irrelevant_addition": {
+        "fact_id": "rrv2_p8w_s",
+        "text": "The final expiration record issued 2026-11-13 for Hearthstone Index Suite states its dashboard display subscription is valid through 2026-11-18 (inclusive).",
+        "decision_relevance": "A differently named optional field explicitly excluded by the rule; same record format and nearly identical length as the nominated decisive fact."
+      },
+      "source_audit_notes": "All entities and records are fictional. Normative labels describe supplied-evidence controls, not observed reader behavior. The final rule-specific current record supersedes the earlier record only when supplied. Both PASS and FAIL also appear in irrelevant optional checks. Model-visible input excludes IDs, roles, structured records, labels, review flags and this audit note."
+    },
+    {
+      "id": "rrv2_q4n",
+      "document_family": "laboratory_scheduling",
+      "rule_family": "latest_checks",
+      "entity": "Morrow Print Station",
+      "document_title": "Morrow Print Station decision dossier",
+      "agent_draft": true,
+      "human_review": false,
+      "decision_spec": {
+        "type": "latest_checks",
+        "common_field": "required configuration inventory check",
+        "critical_field": "required archive compatibility check"
+      },
+      "reader_visible_decision_rule": "For Morrow Print Station, the only required checks are the configuration inventory check and the archive compatibility check. For each required check separately, use the latest dated final assessment actually supplied in the evidence packet or report. An older assessment remains the available assessment until a newer final one is supplied; do not assume missing records exist. REJECT if an available required check is FAIL. APPROVE if both available required checks are PASS. Otherwise DEFER. Dashboard appearance, receipt formatting, optional preview checks and descriptive features are irrelevant to this decision.",
+      "source_assertions": [
+        {
+          "fact_id": "rrv2_q4n_s",
+          "role": "irrelevant_addition",
+          "record": {
+            "record_type": "check",
+            "field": "optional preview appearance check",
+            "value": "PASS",
+            "record_date": "2026-11-14",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final assessment dated 2026-11-14 for Morrow Print Station records PASS for its optional preview appearance check for the proposed configuration."
+        },
+        {
+          "fact_id": "rrv2_q4n_h",
+          "role": "critical_current_final",
+          "record": {
+            "record_type": "check",
+            "field": "required archive compatibility check",
+            "value": "FAIL",
+            "record_date": "2026-11-14",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final assessment dated 2026-11-14 for Morrow Print Station records FAIL for its required archive compatibility check for the proposed configuration."
+        },
+        {
+          "fact_id": "rrv2_q4n_n",
+          "role": "supporting",
+          "text": "Morrow Print Station provides a searchable catalogue with saved filters and a printable index, allowing staff to revisit reference entries during ordinary administrative work."
+        },
+        {
+          "fact_id": "rrv2_q4n_p",
+          "role": "supporting",
+          "text": "The illustrated handbook for Morrow Print Station explains navigation, label editing and file export; these descriptions do not certify a required check or authorization."
+        },
+        {
+          "fact_id": "rrv2_q4n_b",
+          "role": "common_required_final",
+          "record": {
+            "record_type": "check",
+            "field": "required configuration inventory check",
+            "value": "PASS",
+            "record_date": "2026-11-14",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final assessment dated 2026-11-14 for Morrow Print Station records PASS for its required configuration inventory check for the proposed configuration."
+        },
+        {
+          "fact_id": "rrv2_q4n_v",
+          "role": "irrelevant_positive",
+          "record": {
+            "record_type": "check",
+            "field": "optional dashboard appearance check",
+            "value": "PASS",
+            "record_date": "2026-10-05",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final assessment dated 2026-10-05 for Morrow Print Station records PASS for its optional dashboard appearance check for the proposed configuration."
+        },
+        {
+          "fact_id": "rrv2_q4n_r",
+          "role": "critical_prior_final",
+          "record": {
+            "record_type": "check",
+            "field": "required archive compatibility check",
+            "value": "PASS",
+            "record_date": "2026-10-05",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final assessment dated 2026-10-05 for Morrow Print Station records PASS for its required archive compatibility check for the proposed configuration."
+        },
+        {
+          "fact_id": "rrv2_q4n_d",
+          "role": "irrelevant_negative",
+          "record": {
+            "record_type": "check",
+            "field": "optional receipt formatting check",
+            "value": "FAIL",
+            "record_date": "2026-11-14",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final assessment dated 2026-11-14 for Morrow Print Station records FAIL for its optional receipt formatting check for the proposed configuration."
+        }
+      ],
+      "common_fact_id": "rrv2_q4n_b",
+      "current_decisive_fact_id": "rrv2_q4n_h",
+      "prior_critical_fact_id": "rrv2_q4n_r",
+      "recipient_packets": {
+        "informed": [
+          "rrv2_q4n_b",
+          "rrv2_q4n_h"
+        ],
+        "absent": [
+          "rrv2_q4n_b"
+        ],
+        "stale": [
+          "rrv2_q4n_b",
+          "rrv2_q4n_r"
+        ]
+      },
+      "complete_source_gold": "REJECT",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "decisive_restoration": {
+        "fact_id": "rrv2_q4n_h",
+        "text": "The final assessment dated 2026-11-14 for Morrow Print Station records FAIL for its required archive compatibility check for the proposed configuration."
+      },
+      "irrelevant_addition": {
+        "fact_id": "rrv2_q4n_s",
+        "text": "The final assessment dated 2026-11-14 for Morrow Print Station records PASS for its optional preview appearance check for the proposed configuration.",
+        "decision_relevance": "A differently named optional field explicitly excluded by the rule; same record format and nearly identical length as the nominated decisive fact."
+      },
+      "source_audit_notes": "All entities and records are fictional. Normative labels describe supplied-evidence controls, not observed reader behavior. The final rule-specific current record supersedes the earlier record only when supplied. Both PASS and FAIL also appear in irrelevant optional checks. Model-visible input excludes IDs, roles, structured records, labels, review flags and this audit note."
+    },
+    {
+      "id": "rrv2_b9r",
+      "document_family": "media_service_release",
+      "rule_family": "numeric_threshold",
+      "entity": "Alder Record Relay",
+      "document_title": "Alder Record Relay decision dossier",
+      "agent_draft": true,
+      "human_review": false,
+      "decision_spec": {
+        "type": "numeric_threshold",
+        "common_field": "required configuration inventory check",
+        "critical_field": "required mismatch count",
+        "operator": "<=",
+        "threshold": 3,
+        "unit": "mismatches"
+      },
+      "reader_visible_decision_rule": "For Alder Record Relay, the only requirements are a PASS for the configuration inventory check and a value of at most 3 mismatches for the required mismatch count. The comparison is inclusive: equality satisfies the numeric requirement. Use the latest dated final record actually supplied separately for the inventory check and the required numeric measurement. An older record remains available until a newer final one is supplied; do not assume missing measurements exist. REJECT if the inventory check is FAIL or an available required measurement is above 3 mismatches. APPROVE if the inventory check is PASS and the available required measurement meets the inclusive threshold. Otherwise DEFER. Dashboard appearance, receipt formatting, optional preview measurements and descriptive features are irrelevant to this decision.",
+      "source_assertions": [
+        {
+          "fact_id": "rrv2_b9r_r",
+          "role": "critical_prior_final",
+          "record": {
+            "record_type": "measurement",
+            "field": "required mismatch count",
+            "value": 5,
+            "record_date": "2026-10-21",
+            "stage": "final",
+            "unit": "mismatches"
+          },
+          "text_style": "reordered",
+          "text": "Using the declared workload for Alder Record Relay, the required mismatch count measures 5 mismatches in the final record dated 2026-10-21."
+        },
+        {
+          "fact_id": "rrv2_b9r_v",
+          "role": "irrelevant_positive",
+          "record": {
+            "record_type": "check",
+            "field": "optional dashboard appearance check",
+            "value": "PASS",
+            "record_date": "2026-10-21",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For the proposed configuration of Alder Record Relay, the optional dashboard appearance check has a final result of PASS, recorded on 2026-10-21."
+        },
+        {
+          "fact_id": "rrv2_b9r_d",
+          "role": "irrelevant_negative",
+          "record": {
+            "record_type": "check",
+            "field": "optional receipt formatting check",
+            "value": "FAIL",
+            "record_date": "2026-11-17",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For the proposed configuration of Alder Record Relay, the optional receipt formatting check has a final result of FAIL, recorded on 2026-11-17."
+        },
+        {
+          "fact_id": "rrv2_b9r_s",
+          "role": "irrelevant_addition",
+          "record": {
+            "record_type": "measurement",
+            "field": "optional preview measurement",
+            "value": 5,
+            "record_date": "2026-11-17",
+            "stage": "final",
+            "unit": "mismatches"
+          },
+          "text_style": "reordered",
+          "text": "Using the declared workload for Alder Record Relay, the optional preview measurement measures 5 mismatches in the final record dated 2026-11-17."
+        },
+        {
+          "fact_id": "rrv2_b9r_n",
+          "role": "supporting",
+          "text": "Alder Record Relay provides a searchable catalogue with saved filters and a printable index, allowing staff to revisit reference entries during ordinary administrative work."
+        },
+        {
+          "fact_id": "rrv2_b9r_p",
+          "role": "supporting",
+          "text": "The illustrated handbook for Alder Record Relay explains navigation, label editing and file export; these descriptions do not certify a required check or authorization."
+        },
+        {
+          "fact_id": "rrv2_b9r_b",
+          "role": "common_required_final",
+          "record": {
+            "record_type": "check",
+            "field": "required configuration inventory check",
+            "value": "PASS",
+            "record_date": "2026-11-17",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For the proposed configuration of Alder Record Relay, the required configuration inventory check has a final result of PASS, recorded on 2026-11-17."
+        },
+        {
+          "fact_id": "rrv2_b9r_h",
+          "role": "critical_current_final",
+          "record": {
+            "record_type": "measurement",
+            "field": "required mismatch count",
+            "value": 3,
+            "record_date": "2026-11-17",
+            "stage": "final",
+            "unit": "mismatches"
+          },
+          "text_style": "reordered",
+          "text": "Using the declared workload for Alder Record Relay, the required mismatch count measures 3 mismatches in the final record dated 2026-11-17."
+        }
+      ],
+      "common_fact_id": "rrv2_b9r_b",
+      "current_decisive_fact_id": "rrv2_b9r_h",
+      "prior_critical_fact_id": "rrv2_b9r_r",
+      "recipient_packets": {
+        "informed": [
+          "rrv2_b9r_b",
+          "rrv2_b9r_h"
+        ],
+        "absent": [
+          "rrv2_b9r_b"
+        ],
+        "stale": [
+          "rrv2_b9r_b",
+          "rrv2_b9r_r"
+        ]
+      },
+      "complete_source_gold": "APPROVE",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "decisive_restoration": {
+        "fact_id": "rrv2_b9r_h",
+        "text": "Using the declared workload for Alder Record Relay, the required mismatch count measures 3 mismatches in the final record dated 2026-11-17."
+      },
+      "irrelevant_addition": {
+        "fact_id": "rrv2_b9r_s",
+        "text": "Using the declared workload for Alder Record Relay, the optional preview measurement measures 5 mismatches in the final record dated 2026-11-17.",
+        "decision_relevance": "A differently named optional field explicitly excluded by the rule; same record format and nearly identical length as the nominated decisive fact."
+      },
+      "source_audit_notes": "All entities and records are fictional. Normative labels describe supplied-evidence controls, not observed reader behavior. The final rule-specific current record supersedes the earlier record only when supplied. Both PASS and FAIL also appear in irrelevant optional checks. Model-visible input excludes IDs, roles, structured records, labels, review flags and this audit note."
+    },
+    {
+      "id": "rrv2_c6y",
+      "document_family": "media_service_release",
+      "rule_family": "authorization_expiry",
+      "entity": "Wrenfield Document Relay",
+      "document_title": "Wrenfield Document Relay decision dossier",
+      "agent_draft": true,
+      "human_review": false,
+      "decision_spec": {
+        "type": "authorization_expiry",
+        "common_field": "archive distribution authorization",
+        "critical_field": "archive distribution authorization",
+        "decision_date": "2026-11-21",
+        "expiration_comparison": ">=",
+        "expiration_inclusive": true
+      },
+      "reader_visible_decision_rule": "For Wrenfield Document Relay, decide whether archive distribution is permitted on 2026-11-21. The only requirements are GRANTED scope for archive distribution authorization and an expiration date on or after the decision date. The expiration date is inclusive: authorization remains valid on that date. Use the latest dated final scope record and, independently, the latest issued final expiration record actually supplied. The issue date selects the expiration record; the expiration date determines validity. An older record remains available until a newer one is supplied. REJECT if available scope is DENIED or the selected expiration date is before the decision date. APPROVE if scope is GRANTED and the selected expiration date is on or after the decision date. Otherwise DEFER. Dashboard subscriptions, receipt formatting, optional preview checks and descriptive features are irrelevant to this decision.",
+      "source_assertions": [
+        {
+          "fact_id": "rrv2_c6y_d",
+          "role": "irrelevant_negative",
+          "record": {
+            "record_type": "check",
+            "field": "optional receipt formatting check",
+            "value": "FAIL",
+            "record_date": "2026-11-16",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For the proposed configuration of Wrenfield Document Relay, the optional receipt formatting check has a final result of FAIL, recorded on 2026-11-16."
+        },
+        {
+          "fact_id": "rrv2_c6y_s",
+          "role": "irrelevant_addition",
+          "record": {
+            "record_type": "expiry",
+            "field": "dashboard display subscription",
+            "value": "2026-11-20",
+            "record_date": "2026-11-16",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For Wrenfield Document Relay, the dashboard display subscription is valid through 2026-11-20 (inclusive), according to the final expiration record issued 2026-11-16."
+        },
+        {
+          "fact_id": "rrv2_c6y_n",
+          "role": "supporting",
+          "text": "Wrenfield Document Relay provides a searchable catalogue with saved filters and a printable index, allowing staff to revisit reference entries during ordinary administrative work."
+        },
+        {
+          "fact_id": "rrv2_c6y_p",
+          "role": "supporting",
+          "text": "The illustrated handbook for Wrenfield Document Relay explains navigation, label editing and file export; these descriptions do not certify a required check or authorization."
+        },
+        {
+          "fact_id": "rrv2_c6y_h",
+          "role": "critical_current_final",
+          "record": {
+            "record_type": "expiry",
+            "field": "archive distribution authorization",
+            "value": "2026-11-20",
+            "record_date": "2026-11-16",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For Wrenfield Document Relay, the archive distribution authorization is valid through 2026-11-20 (inclusive), according to the final expiration record issued 2026-11-16."
+        },
+        {
+          "fact_id": "rrv2_c6y_b",
+          "role": "common_required_final",
+          "record": {
+            "record_type": "authorization",
+            "field": "archive distribution authorization",
+            "value": "GRANTED",
+            "record_date": "2026-11-16",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For Wrenfield Document Relay, the archive distribution authorization has a final scope status of GRANTED, recorded on 2026-11-16; its expiration date is recorded separately."
+        },
+        {
+          "fact_id": "rrv2_c6y_r",
+          "role": "critical_prior_final",
+          "record": {
+            "record_type": "expiry",
+            "field": "archive distribution authorization",
+            "value": "2026-12-04",
+            "record_date": "2026-10-19",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For Wrenfield Document Relay, the archive distribution authorization is valid through 2026-12-04 (inclusive), according to the final expiration record issued 2026-10-19."
+        },
+        {
+          "fact_id": "rrv2_c6y_v",
+          "role": "irrelevant_positive",
+          "record": {
+            "record_type": "check",
+            "field": "optional dashboard appearance check",
+            "value": "PASS",
+            "record_date": "2026-10-19",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For the proposed configuration of Wrenfield Document Relay, the optional dashboard appearance check has a final result of PASS, recorded on 2026-10-19."
+        }
+      ],
+      "common_fact_id": "rrv2_c6y_b",
+      "current_decisive_fact_id": "rrv2_c6y_h",
+      "prior_critical_fact_id": "rrv2_c6y_r",
+      "recipient_packets": {
+        "informed": [
+          "rrv2_c6y_b",
+          "rrv2_c6y_h"
+        ],
+        "absent": [
+          "rrv2_c6y_b"
+        ],
+        "stale": [
+          "rrv2_c6y_b",
+          "rrv2_c6y_r"
+        ]
+      },
+      "complete_source_gold": "REJECT",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "decisive_restoration": {
+        "fact_id": "rrv2_c6y_h",
+        "text": "For Wrenfield Document Relay, the archive distribution authorization is valid through 2026-11-20 (inclusive), according to the final expiration record issued 2026-11-16."
+      },
+      "irrelevant_addition": {
+        "fact_id": "rrv2_c6y_s",
+        "text": "For Wrenfield Document Relay, the dashboard display subscription is valid through 2026-11-20 (inclusive), according to the final expiration record issued 2026-11-16.",
+        "decision_relevance": "A differently named optional field explicitly excluded by the rule; same record format and nearly identical length as the nominated decisive fact."
+      },
+      "source_audit_notes": "All entities and records are fictional. Normative labels describe supplied-evidence controls, not observed reader behavior. The final rule-specific current record supersedes the earlier record only when supplied. Both PASS and FAIL also appear in irrelevant optional checks. Model-visible input excludes IDs, roles, structured records, labels, review flags and this audit note."
+    },
+    {
+      "id": "rrv2_j6d",
+      "document_family": "archive_procurement",
+      "rule_family": "numeric_threshold",
+      "entity": "Tamarind Queue Suite",
+      "document_title": "Tamarind Queue Suite decision dossier",
+      "agent_draft": true,
+      "human_review": false,
+      "decision_spec": {
+        "type": "numeric_threshold",
+        "common_field": "required configuration inventory check",
+        "critical_field": "required import throughput",
+        "operator": ">=",
+        "threshold": 80,
+        "unit": "records per minute"
+      },
+      "reader_visible_decision_rule": "For Tamarind Queue Suite, the only requirements are a PASS for the configuration inventory check and a value of at least 80 records per minute for the required import throughput. The comparison is inclusive: equality satisfies the numeric requirement. Use the latest dated final record actually supplied separately for the inventory check and the required numeric measurement. An older record remains available until a newer final one is supplied; do not assume missing measurements exist. REJECT if the inventory check is FAIL or an available required measurement is below 80 records per minute. APPROVE if the inventory check is PASS and the available required measurement meets the inclusive threshold. Otherwise DEFER. Dashboard appearance, receipt formatting, optional preview measurements and descriptive features are irrelevant to this decision.",
+      "source_assertions": [
+        {
+          "fact_id": "rrv2_j6d_d",
+          "role": "irrelevant_negative",
+          "record": {
+            "record_type": "check",
+            "field": "optional receipt formatting check",
+            "value": "FAIL",
+            "record_date": "2026-11-12",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final assessment dated 2026-11-12 for Tamarind Queue Suite records FAIL for its optional receipt formatting check for the proposed configuration."
+        },
+        {
+          "fact_id": "rrv2_j6d_s",
+          "role": "irrelevant_addition",
+          "record": {
+            "record_type": "measurement",
+            "field": "optional preview measurement",
+            "value": 76,
+            "record_date": "2026-11-12",
+            "stage": "final",
+            "unit": "records per minute"
+          },
+          "text_style": "direct",
+          "text": "The final measurement dated 2026-11-12 for Tamarind Queue Suite records 76 records per minute for its optional preview measurement, using the declared workload."
+        },
+        {
+          "fact_id": "rrv2_j6d_n",
+          "role": "supporting",
+          "text": "Tamarind Queue Suite provides a searchable catalogue with saved filters and a printable index, allowing staff to revisit reference entries during ordinary administrative work."
+        },
+        {
+          "fact_id": "rrv2_j6d_p",
+          "role": "supporting",
+          "text": "The illustrated handbook for Tamarind Queue Suite explains navigation, label editing and file export; these descriptions do not certify a required check or authorization."
+        },
+        {
+          "fact_id": "rrv2_j6d_h",
+          "role": "critical_current_final",
+          "record": {
+            "record_type": "measurement",
+            "field": "required import throughput",
+            "value": 80,
+            "record_date": "2026-11-12",
+            "stage": "final",
+            "unit": "records per minute"
+          },
+          "text_style": "direct",
+          "text": "The final measurement dated 2026-11-12 for Tamarind Queue Suite records 80 records per minute for its required import throughput, using the declared workload."
+        },
+        {
+          "fact_id": "rrv2_j6d_b",
+          "role": "common_required_final",
+          "record": {
+            "record_type": "check",
+            "field": "required configuration inventory check",
+            "value": "PASS",
+            "record_date": "2026-11-12",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final assessment dated 2026-11-12 for Tamarind Queue Suite records PASS for its required configuration inventory check for the proposed configuration."
+        },
+        {
+          "fact_id": "rrv2_j6d_r",
+          "role": "critical_prior_final",
+          "record": {
+            "record_type": "measurement",
+            "field": "required import throughput",
+            "value": 76,
+            "record_date": "2026-10-08",
+            "stage": "final",
+            "unit": "records per minute"
+          },
+          "text_style": "direct",
+          "text": "The final measurement dated 2026-10-08 for Tamarind Queue Suite records 76 records per minute for its required import throughput, using the declared workload."
+        },
+        {
+          "fact_id": "rrv2_j6d_v",
+          "role": "irrelevant_positive",
+          "record": {
+            "record_type": "check",
+            "field": "optional dashboard appearance check",
+            "value": "PASS",
+            "record_date": "2026-10-08",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final assessment dated 2026-10-08 for Tamarind Queue Suite records PASS for its optional dashboard appearance check for the proposed configuration."
+        }
+      ],
+      "common_fact_id": "rrv2_j6d_b",
+      "current_decisive_fact_id": "rrv2_j6d_h",
+      "prior_critical_fact_id": "rrv2_j6d_r",
+      "recipient_packets": {
+        "informed": [
+          "rrv2_j6d_b",
+          "rrv2_j6d_h"
+        ],
+        "absent": [
+          "rrv2_j6d_b"
+        ],
+        "stale": [
+          "rrv2_j6d_b",
+          "rrv2_j6d_r"
+        ]
+      },
+      "complete_source_gold": "APPROVE",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "decisive_restoration": {
+        "fact_id": "rrv2_j6d_h",
+        "text": "The final measurement dated 2026-11-12 for Tamarind Queue Suite records 80 records per minute for its required import throughput, using the declared workload."
+      },
+      "irrelevant_addition": {
+        "fact_id": "rrv2_j6d_s",
+        "text": "The final measurement dated 2026-11-12 for Tamarind Queue Suite records 76 records per minute for its optional preview measurement, using the declared workload.",
+        "decision_relevance": "A differently named optional field explicitly excluded by the rule; same record format and nearly identical length as the nominated decisive fact."
+      },
+      "source_audit_notes": "All entities and records are fictional. Normative labels describe supplied-evidence controls, not observed reader behavior. The final rule-specific current record supersedes the earlier record only when supplied. Both PASS and FAIL also appear in irrelevant optional checks. Model-visible input excludes IDs, roles, structured records, labels, review flags and this audit note."
+    },
+    {
+      "id": "rrv2_g2s",
+      "document_family": "laboratory_scheduling",
+      "rule_family": "authorization_expiry",
+      "entity": "Silvermere Print Station",
+      "document_title": "Silvermere Print Station decision dossier",
+      "agent_draft": true,
+      "human_review": false,
+      "decision_spec": {
+        "type": "authorization_expiry",
+        "common_field": "archive distribution authorization",
+        "critical_field": "archive distribution authorization",
+        "decision_date": "2026-11-19",
+        "expiration_comparison": ">=",
+        "expiration_inclusive": true
+      },
+      "reader_visible_decision_rule": "For Silvermere Print Station, decide whether archive distribution is permitted on 2026-11-19. The only requirements are GRANTED scope for archive distribution authorization and an expiration date on or after the decision date. The expiration date is inclusive: authorization remains valid on that date. Use the latest dated final scope record and, independently, the latest issued final expiration record actually supplied. The issue date selects the expiration record; the expiration date determines validity. An older record remains available until a newer one is supplied. REJECT if available scope is DENIED or the selected expiration date is before the decision date. APPROVE if scope is GRANTED and the selected expiration date is on or after the decision date. Otherwise DEFER. Dashboard subscriptions, receipt formatting, optional preview checks and descriptive features are irrelevant to this decision.",
+      "source_assertions": [
+        {
+          "fact_id": "rrv2_g2s_b",
+          "role": "common_required_final",
+          "record": {
+            "record_type": "authorization",
+            "field": "archive distribution authorization",
+            "value": "GRANTED",
+            "record_date": "2026-11-13",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final scope record dated 2026-11-13 for Silvermere Print Station records GRANTED for its archive distribution authorization; the expiration date is recorded separately."
+        },
+        {
+          "fact_id": "rrv2_g2s_v",
+          "role": "irrelevant_positive",
+          "record": {
+            "record_type": "check",
+            "field": "optional dashboard appearance check",
+            "value": "PASS",
+            "record_date": "2026-10-07",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final assessment dated 2026-10-07 for Silvermere Print Station records PASS for its optional dashboard appearance check for the proposed configuration."
+        },
+        {
+          "fact_id": "rrv2_g2s_d",
+          "role": "irrelevant_negative",
+          "record": {
+            "record_type": "check",
+            "field": "optional receipt formatting check",
+            "value": "FAIL",
+            "record_date": "2026-11-13",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final assessment dated 2026-11-13 for Silvermere Print Station records FAIL for its optional receipt formatting check for the proposed configuration."
+        },
+        {
+          "fact_id": "rrv2_g2s_r",
+          "role": "critical_prior_final",
+          "record": {
+            "record_type": "expiry",
+            "field": "archive distribution authorization",
+            "value": "2026-11-19",
+            "record_date": "2026-10-07",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final expiration record issued 2026-10-07 for Silvermere Print Station states its archive distribution authorization is valid through 2026-11-19 (inclusive)."
+        },
+        {
+          "fact_id": "rrv2_g2s_s",
+          "role": "irrelevant_addition",
+          "record": {
+            "record_type": "expiry",
+            "field": "dashboard display subscription",
+            "value": "2026-11-19",
+            "record_date": "2026-11-13",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final expiration record issued 2026-11-13 for Silvermere Print Station states its dashboard display subscription is valid through 2026-11-19 (inclusive)."
+        },
+        {
+          "fact_id": "rrv2_g2s_n",
+          "role": "supporting",
+          "text": "Silvermere Print Station provides a searchable catalogue with saved filters and a printable index, allowing staff to revisit reference entries during ordinary administrative work."
+        },
+        {
+          "fact_id": "rrv2_g2s_p",
+          "role": "supporting",
+          "text": "The illustrated handbook for Silvermere Print Station explains navigation, label editing and file export; these descriptions do not certify a required check or authorization."
+        },
+        {
+          "fact_id": "rrv2_g2s_h",
+          "role": "critical_current_final",
+          "record": {
+            "record_type": "expiry",
+            "field": "archive distribution authorization",
+            "value": "2026-11-18",
+            "record_date": "2026-11-13",
+            "stage": "final"
+          },
+          "text_style": "direct",
+          "text": "The final expiration record issued 2026-11-13 for Silvermere Print Station states its archive distribution authorization is valid through 2026-11-18 (inclusive)."
+        }
+      ],
+      "common_fact_id": "rrv2_g2s_b",
+      "current_decisive_fact_id": "rrv2_g2s_h",
+      "prior_critical_fact_id": "rrv2_g2s_r",
+      "recipient_packets": {
+        "informed": [
+          "rrv2_g2s_b",
+          "rrv2_g2s_h"
+        ],
+        "absent": [
+          "rrv2_g2s_b"
+        ],
+        "stale": [
+          "rrv2_g2s_b",
+          "rrv2_g2s_r"
+        ]
+      },
+      "complete_source_gold": "REJECT",
+      "packet_expected_decisions": {
+        "informed": "REJECT",
+        "absent": "DEFER",
+        "stale": "APPROVE"
+      },
+      "decisive_restoration": {
+        "fact_id": "rrv2_g2s_h",
+        "text": "The final expiration record issued 2026-11-13 for Silvermere Print Station states its archive distribution authorization is valid through 2026-11-18 (inclusive)."
+      },
+      "irrelevant_addition": {
+        "fact_id": "rrv2_g2s_s",
+        "text": "The final expiration record issued 2026-11-13 for Silvermere Print Station states its dashboard display subscription is valid through 2026-11-19 (inclusive).",
+        "decision_relevance": "A differently named optional field explicitly excluded by the rule; same record format and nearly identical length as the nominated decisive fact."
+      },
+      "source_audit_notes": "All entities and records are fictional. Normative labels describe supplied-evidence controls, not observed reader behavior. The final rule-specific current record supersedes the earlier record only when supplied. Both PASS and FAIL also appear in irrelevant optional checks. Model-visible input excludes IDs, roles, structured records, labels, review flags and this audit note."
+    },
+    {
+      "id": "rrv2_m8p",
+      "document_family": "media_service_release",
+      "rule_family": "latest_checks",
+      "entity": "Briar Document Relay",
+      "document_title": "Briar Document Relay decision dossier",
+      "agent_draft": true,
+      "human_review": false,
+      "decision_spec": {
+        "type": "latest_checks",
+        "common_field": "required configuration inventory check",
+        "critical_field": "required archive compatibility check"
+      },
+      "reader_visible_decision_rule": "For Briar Document Relay, the only required checks are the configuration inventory check and the archive compatibility check. For each required check separately, use the latest dated final assessment actually supplied in the evidence packet or report. An older assessment remains the available assessment until a newer final one is supplied; do not assume missing records exist. REJECT if an available required check is FAIL. APPROVE if both available required checks are PASS. Otherwise DEFER. Dashboard appearance, receipt formatting, optional preview checks and descriptive features are irrelevant to this decision.",
+      "source_assertions": [
+        {
+          "fact_id": "rrv2_m8p_r",
+          "role": "critical_prior_final",
+          "record": {
+            "record_type": "check",
+            "field": "required archive compatibility check",
+            "value": "FAIL",
+            "record_date": "2026-10-23",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For the proposed configuration of Briar Document Relay, the required archive compatibility check has a final result of FAIL, recorded on 2026-10-23."
+        },
+        {
+          "fact_id": "rrv2_m8p_n",
+          "role": "supporting",
+          "text": "Briar Document Relay provides a searchable catalogue with saved filters and a printable index, allowing staff to revisit reference entries during ordinary administrative work."
+        },
+        {
+          "fact_id": "rrv2_m8p_p",
+          "role": "supporting",
+          "text": "The illustrated handbook for Briar Document Relay explains navigation, label editing and file export; these descriptions do not certify a required check or authorization."
+        },
+        {
+          "fact_id": "rrv2_m8p_b",
+          "role": "common_required_final",
+          "record": {
+            "record_type": "check",
+            "field": "required configuration inventory check",
+            "value": "PASS",
+            "record_date": "2026-11-18",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For the proposed configuration of Briar Document Relay, the required configuration inventory check has a final result of PASS, recorded on 2026-11-18."
+        },
+        {
+          "fact_id": "rrv2_m8p_h",
+          "role": "critical_current_final",
+          "record": {
+            "record_type": "check",
+            "field": "required archive compatibility check",
+            "value": "PASS",
+            "record_date": "2026-11-18",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For the proposed configuration of Briar Document Relay, the required archive compatibility check has a final result of PASS, recorded on 2026-11-18."
+        },
+        {
+          "fact_id": "rrv2_m8p_v",
+          "role": "irrelevant_positive",
+          "record": {
+            "record_type": "check",
+            "field": "optional dashboard appearance check",
+            "value": "PASS",
+            "record_date": "2026-10-23",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For the proposed configuration of Briar Document Relay, the optional dashboard appearance check has a final result of PASS, recorded on 2026-10-23."
+        },
+        {
+          "fact_id": "rrv2_m8p_d",
+          "role": "irrelevant_negative",
+          "record": {
+            "record_type": "check",
+            "field": "optional receipt formatting check",
+            "value": "FAIL",
+            "record_date": "2026-11-18",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For the proposed configuration of Briar Document Relay, the optional receipt formatting check has a final result of FAIL, recorded on 2026-11-18."
+        },
+        {
+          "fact_id": "rrv2_m8p_s",
+          "role": "irrelevant_addition",
+          "record": {
+            "record_type": "check",
+            "field": "optional preview appearance check",
+            "value": "PASS",
+            "record_date": "2026-11-18",
+            "stage": "final"
+          },
+          "text_style": "reordered",
+          "text": "For the proposed configuration of Briar Document Relay, the optional preview appearance check has a final result of PASS, recorded on 2026-11-18."
+        }
+      ],
+      "common_fact_id": "rrv2_m8p_b",
+      "current_decisive_fact_id": "rrv2_m8p_h",
+      "prior_critical_fact_id": "rrv2_m8p_r",
+      "recipient_packets": {
+        "informed": [
+          "rrv2_m8p_b",
+          "rrv2_m8p_h"
+        ],
+        "absent": [
+          "rrv2_m8p_b"
+        ],
+        "stale": [
+          "rrv2_m8p_b",
+          "rrv2_m8p_r"
+        ]
+      },
+      "complete_source_gold": "APPROVE",
+      "packet_expected_decisions": {
+        "informed": "APPROVE",
+        "absent": "DEFER",
+        "stale": "REJECT"
+      },
+      "decisive_restoration": {
+        "fact_id": "rrv2_m8p_h",
+        "text": "For the proposed configuration of Briar Document Relay, the required archive compatibility check has a final result of PASS, recorded on 2026-11-18."
+      },
+      "irrelevant_addition": {
+        "fact_id": "rrv2_m8p_s",
+        "text": "For the proposed configuration of Briar Document Relay, the optional preview appearance check has a final result of PASS, recorded on 2026-11-18.",
+        "decision_relevance": "A differently named optional field explicitly excluded by the rule; same record format and nearly identical length as the nominated decisive fact."
+      },
+      "source_audit_notes": "All entities and records are fictional. Normative labels describe supplied-evidence controls, not observed reader behavior. The final rule-specific current record supersedes the earlier record only when supplied. Both PASS and FAIL also appear in irrelevant optional checks. Model-visible input excludes IDs, roles, structured records, labels, review flags and this audit note."
+    }
+  ]
+}

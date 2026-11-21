@@ -1,0 +1,93 @@
+{
+  "schema": "natural_selection_portable_reproduction_audit_v1",
+  "date": "2026-11-21",
+  "status": "both_relocated_cpu_replays_passed",
+  "archive_relative_path": "results/reproduction/natural_selection_pilot_v1_cpu_v2.zip",
+  "archive_sha256": "00d69661b7c5881d4509f55cdd60b84d9bb5d52b73478dd0781d64e9562f3a14",
+  "archive_bytes": 12395308,
+  "canonical_inventory_sha256": "8a9af1106f8166c4cfd19f52564a2e526ecebed177383a29115d6e54e9731d11",
+  "payload_files": 76,
+  "zip_members_including_inventory": 77,
+  "payload_bytes": 30934438,
+  "original_path_mappings": 59,
+  "raw_run_files": 42,
+  "saved_feature_matrices": 32,
+  "original_frozen_source_bindings": 11,
+  "included_package_modules": 13,
+  "two_consecutive_exports_byte_identical": true,
+  "extraction_outside_repository": "C:\\Users\\adirj\\AppData\\Local\\Temp\\kcl-portable-pilot-20261121-v3",
+  "native_record_replay": {
+    "command": ".venv/Scripts/python.exe -I C:/Users/adirj/AppData/Local/Temp/kcl-portable-pilot-20261121-v3/reproduce.py reproduce --bundle C:/Users/adirj/AppData/Local/Temp/kcl-portable-pilot-20261121-v3 --output .cache/portable_relocated_final_v3_record.json",
+    "python": "3.11.9",
+    "numpy": "2.4.6",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.17.1",
+    "transformers_installed": false,
+    "output_sha256": "7dc2e6836af1a782e045e84d651ea85a082a090a6cb3acd2bb2e08ea7dbc7d2a",
+    "tokenizer_verification": "not_retokenized_or_independently_decoded_saved_record_bindings_only"
+  },
+  "wsl_independent_tokenizer_replay": {
+    "command": "wsl -d Ubuntu --cd /tmp -- env HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 HF_HUB_DISABLE_TELEMETRY=1 OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 '/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/.venv-wsl/bin/python' -I '/mnt/c/Users/adirj/AppData/Local/Temp/kcl-portable-pilot-20261121-v3/reproduce.py' reproduce --bundle '/mnt/c/Users/adirj/AppData/Local/Temp/kcl-portable-pilot-20261121-v3' --output '/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/.cache/portable_relocated_final_v3_tokenized.json' --actor-tokenizer /home/adirj/kcl-hf-cache/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659 --reader-tokenizer /home/adirj/kcl-hf-cache/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+    "working_directory": "/tmp",
+    "output_sha256": "8bd1ee2a9bb64701497e853a421054dd7fb12dee378310f14571e38d8012dc8c",
+    "tokenizer_verification": "independently_verified_with_pinned_local_tokenizer_identities",
+    "local_files_only": true,
+    "trust_remote_code": false,
+    "tokenizer_assets_included_in_archive": false
+  },
+  "pilot_scientific_fields_reproduced": [
+    "behavior",
+    "behavioral_summary",
+    "counts",
+    "feasibility",
+    "human_review",
+    "is_test_fixture",
+    "limits",
+    "new_probe_fits",
+    "new_probe_scores",
+    "report_audits",
+    "report_groups",
+    "schema"
+  ],
+  "apollo_fields_reproduced": [
+    "case_mean_goal_deltas",
+    "equal_case_mean_goal_delta",
+    "favorable_cross_budget_coverage_differences",
+    "paired_goal_deltas",
+    "profiles",
+    "reader_packet_replication",
+    "report_units",
+    "rows",
+    "source_case_clusters"
+  ],
+  "cross_runtime_maximum_absolute_numeric_difference": 0.0,
+  "numeric_tolerance": {
+    "absolute": 1e-12,
+    "relative": 1e-12
+  },
+  "new_model_calls": 0,
+  "new_probe_fits": 0,
+  "model_inference_repeated": false,
+  "human_review": false,
+  "tests": {
+    "command": ".venv/Scripts/python.exe -m pytest tests/test_portable_natural_selection.py -q",
+    "passed": 25
+  },
+  "ruff": {
+    "command": ".venv/Scripts/ruff.exe check scripts/portable_natural_selection.py tests/test_portable_natural_selection.py",
+    "passed": true
+  },
+  "source_sha256": {
+    "scripts/portable_natural_selection.py": "f42fb8accb2cadf05e52df43b4577dd7e8074444bd7ae580c236b85c7f799d1e",
+    "tests/test_portable_natural_selection.py": "4a4c12d8f4cb2219f07d8ba48f21e01519a157a20d22cc4855b5fd5fc0732782",
+    "docs/PORTABLE_PILOT_REPRODUCTION.md": "0e6f7a54bc604ab939744cc88298c37d3ff063472b43ecb9b7098cbcdd9f4ec6"
+  },
+  "limitations": [
+    "Default mode validates captured token/wire bindings but does not independently tokenize or decode.",
+    "Optional tokenizer mode requires separately acquired pinned local tokenizer assets; archive contains no tokenizer assets or weights.",
+    "No repeat model inference, human semantic validation, new fit, calibrated FPR, held-out estimate or original Apollo reproduction.",
+    "Local archive is ignored by Git and is not published as a GitHub release.",
+    "Hashes protect against accidental mutation, not an unknown publisher; code must be trusted before execution.",
+    "Source snapshot supports replay; it is not a complete installable repository checkout."
+  ]
+}
