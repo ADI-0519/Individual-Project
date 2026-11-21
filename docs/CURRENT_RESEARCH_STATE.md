@@ -153,7 +153,21 @@ scientific validation or model inference.
 
 ## Next concrete research decision
 
-Keep recipient-relative monitoring as the research question. Before another
+**21 November scientific reassessment:** the [new research decision](RESEARCH_DECISION_2026-11-21.md)
+recommends one bounded fresh test of the existing belief readout under future
+communication goals, before further recipient-risk expansion. The strongest
+candidate signal is the already-measured goal stress, not a demonstrated natural
+omission detection advantage. The [later content-control refinement](FUTURE_GOAL_CONTENT_CONTROLS_DESIGN.md)
+has an exact 224-condition draft bank, preserving the original slot-b target and
+comparing an active objective against identical quoted content. It supersedes the
+unexecuted 160-condition proposal. The new assay is proposed, not executed or frozen;
+its first 32 neutral conditions must qualify before the remaining 192. Existing
+failed gates remain failed. CREATE is not a prerequisite. This proposed emphasis
+change must be described explicitly to the supervisor; a belief readout is not an
+Apollo deception probe. The earlier recipient-monitoring proposal follows for
+context and remains an extension pending valid labels/readers.
+
+The earlier proposal was to keep recipient-relative monitoring as the research question. Before another
 fit, independently review the four omissions and define a fresh validation
 study for the target. A binary **world-wrong definite recipient decision** target
 would retain correct/DEFER/INVALID distinctions and avoid silently turning the
