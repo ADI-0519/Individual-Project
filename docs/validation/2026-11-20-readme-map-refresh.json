@@ -1,0 +1,51 @@
+{
+  "schema": "bounded_readme_graph_refresh_v1",
+  "status": "complete",
+  "created_utc": "2026-11-20T23:03:56.103868+00:00",
+  "source": "README.md",
+  "fully_read_lines": 352,
+  "before_source_sha256": "29a0c343894ed52c3b444f551891aa9f0b5637028e870bebb0fc4c1bfcab3340",
+  "after_source_sha256": "19c5851b56b03765d869e3506dd9205b5dc03d92fadfeaea7114e125e7f3a82c",
+  "semantic_nodes_reviewed": 3,
+  "existing_edges_reviewed": 5,
+  "other_source_hashes_verified_unchanged": 63,
+  "other_graph_contributions_preserved": true,
+  "new_nodes": 0,
+  "new_edges": 0,
+  "unindexed_new_result_links_only": true,
+  "schema_errors": [],
+  "no_model_or_external_api": true,
+  "host_agent_token_cost": "unmeasured",
+  "graph": {
+    "nodes": 727,
+    "edges": 2081,
+    "communities": 27
+  },
+  "source_count": 64,
+  "all64_source_hashes_match": true,
+  "semantic_cache_misses": [],
+  "merged_dangling_edges": 0,
+  "merged_missing_endpoint_edges": 0,
+  "before_output_sha256": {
+    "graph.json": "eba49dfa9ff31a829b1e231fc8cac06676cad2872b088beed01b7034cbb4444e",
+    "graph.html": "9a1a4846fff28a6df0a3d575d335d0d38a86b705dd564013af43ca6860251dda",
+    "GRAPH_REPORT.md": "02aa48adfa5b6f033d144a70d7aa52dbef00b8c86f26481dde39fac2cd53248a",
+    "GRAPH_HEALTH.json": "563d930d03f2e79b8980d2f3a4ed7cb60fc65855e5b61421d2f405054ad645a9",
+    "RESEARCH_MAP_PROVENANCE.json": "6a2f2ff5538a28426843199b32a491c5adcf5a6fcfc3762b0b101c9178c26964",
+    "RESEARCH_FINDINGS.md": "9f02441952ff9ba0a2c5de9f23b77b181afcf33f021e162d28adc6d9ccc87971"
+  },
+  "runtime": "3.14.9 (main, Oct 21 2026, 17:48:58) [MSC v.1944 64 bit (AMD64)]",
+  "scientific_results_changed": false,
+  "scope_limit": "Latest pilot statements are extracted from README only; linked new result/protocol/code sources are not indexed or independently validated by this map refresh.",
+  "html_exported": true,
+  "html_lf_and_final_newline_verified": true,
+  "after_output_sha256": {
+    "graph.json": "a4d2f5be7eef4383e795b1b4c378d29fd16302fdb8e89bb3484850a9b0249d84",
+    "graph.html": "e3151501bb3c40729cc4a46f2ab9c26cd87954e53b1b4b8b630d4c46b2a6f3bf",
+    "GRAPH_REPORT.md": "4b86bd55c8895d820feb5680b2291e92f7cae28e3397a18918ca40f9a9b9a3b1",
+    "GRAPH_HEALTH.json": "721c43a1747ed745fda94bd19e1f59e700eb5b91fed8936443492bcdf9a21749",
+    "RESEARCH_MAP_PROVENANCE.json": "b1e258d1a68b083ca502b1f8581f453c498d73e77cf2f33319ed15a5422cdf1e",
+    "RESEARCH_FINDINGS.md": "fbdf8d1d46fde10e43779cf6ac8ffd4da973245a70a8b7fabd90aa551c577303"
+  },
+  "all64_source_hashes_match_after_export": true
+}

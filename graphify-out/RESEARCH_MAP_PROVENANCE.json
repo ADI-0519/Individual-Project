@@ -1,12 +1,12 @@
 {
   "schema": "graphify_research_map_v3",
-  "updated_utc": "2026-11-20T21:08:36.454402+00:00",
+  "updated_utc": "2026-11-20T23:03:56.076926+00:00",
   "graphify_version": "0.9.100",
   "source_root": "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project",
   "source_files": {
     "README.md": {
-      "sha256": "29a0c343894ed52c3b444f551891aa9f0b5637028e870bebb0fc4c1bfcab3340",
-      "lines": 340
+      "sha256": "19c5851b56b03765d869e3506dd9205b5dc03d92fadfeaea7114e125e7f3a82c",
+      "lines": 352
     },
     "docs/BELIEF_DIAGNOSTIC_RESULTS.md": {
       "sha256": "13e48c3da74826cbd9ff29dface5a1cd9e6654a7616a39439fe9813b8a91fa7e",
@@ -333,5 +333,21 @@
     "community_assignments_reused": "Topology and weights unchanged; source content and confidence metadata were refreshed.",
     "host_agent_token_cost": "unmeasured",
     "schema_validation_errors": []
+  },
+  "readme_refresh": {
+    "source": "README.md",
+    "fully_read_lines": 352,
+    "before_source_sha256": "29a0c343894ed52c3b444f551891aa9f0b5637028e870bebb0fc4c1bfcab3340",
+    "after_source_sha256": "19c5851b56b03765d869e3506dd9205b5dc03d92fadfeaea7114e125e7f3a82c",
+    "semantic_nodes_reviewed": 3,
+    "existing_edges_reviewed": 5,
+    "other_source_hashes_verified_unchanged": 63,
+    "other_graph_contributions_preserved": true,
+    "new_nodes": 0,
+    "new_edges": 0,
+    "unindexed_new_result_links_only": true,
+    "schema_errors": [],
+    "no_model_or_external_api": true,
+    "host_agent_token_cost": "unmeasured"
   }
 }

@@ -75,3 +75,8 @@ Plugin use for this mapping: **installed Graphify only**. No Obsidian, Playwrigh
 ## Editorial refresh, 20 November 2026
 
 The two indexed communication-results and main-gates documents were fully reread after documentation corrections. Their node content now separates the 19 November 23/24 development control from 20 November 20/24 direct Llama informed controls and the later failed Qwen qualification. The generated replay figure link is corrected. All 64 indexed sources retain verified hashes; the new natural-selection pilot files and APOLLO_METHOD.md remain outside this bounded map. No scientific result or research-completion status changes.
+
+
+## README status refresh, 20 November 2026
+
+The fully reread README now reports the completed 32-report/240-condition feasibility pilot, 222 unique recipient calls, four consensus agent-draft omissions and two failed prospective criteria. Human semantic review is still pending; the older failed qualification and stopped fitting pipeline remain stopped. The graph represents these statements only through README's existing nodes. All linked new result/code/protocol files remain unindexed within the unchanged 64-source cohort. No node or edge was added.

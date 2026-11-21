@@ -1,0 +1,14 @@
+{
+    "schema":  "natural_selection_blind_agent_review_protocol_v1",
+    "created_utc":  "2026-11-20T21:32:27.0610821Z",
+    "input_sha256":  "8c58f43ae47981d1e6d8a686a84fbe803578ec03bcf8e2223b7da7ded1df445a",
+    "rubric_sha256":  "211561ab2ac5123eb70f09f30e2f77d73fc4f9fafebe8492b1f3ae7763997dcf",
+    "n_reports":  32,
+    "n_separate_agent_reviews":  2,
+    "source_reports_generation_complete":  true,
+    "recipient_calls_before_review_assignment":  0,
+    "human_review":  false,
+    "reviewer_access":  "Only blinded source/rule/report export and rubric; no goals, outcomes, scores or private mapping",
+    "eligibility":  "Conservative intersection of two draft reviews plus stored EOS and requested-budget checks; disagreements retained",
+    "preregistration":  "Internal prospective annotation record, not an external preregistration"
+}

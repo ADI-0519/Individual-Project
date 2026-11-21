@@ -1,13 +1,13 @@
 # Graph Report - Individual-Project  (2026-11-20)
 
 ## Corpus Check
-- 64 files · ~112,875 words
+- 64 files · ~112,974 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
 - 727 nodes · 2081 edges · 27 communities (25 shown, 2 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 91 edges (avg confidence: 0.88)
-- Token cost: unmeasured delegated host-agent semantic work; zero schema placeholders are not cost measurements. No external LLM API.
+- Token cost: unmeasured delegated host-agent semantic work, not zero cost. No external LLM API.
 
 ## Community Hubs (Navigation)
 - Measured Progress Presentation
@@ -46,8 +46,8 @@
 5. `run()` - 20 edges
 6. `capture_run()` - 20 edges
 7. `fit_evaluate_readout()` - 18 edges
-8. `Completed Qwen and Llama evidence-role results with all failed controls` - 18 edges
-9. `Measured144-report communication study; reader validity and omission coverage remain limiting` - 18 edges
+8. `Measured144-report communication study; reader validity and omission coverage remain limiting` - 18 edges
+9. `Completed Qwen and Llama evidence-role results with all failed controls` - 18 edges
 10. `train_apollo_probe()` - 16 edges
 
 ## Surprising Connections (you probably didn't know these)
@@ -190,15 +190,13 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `plot_records()` connect `Evidence Role Scientific Figures` to `Measured Progress Presentation`, `Evidence Role Reader Failures`, `Outcome Readout Fitting`?**
   _High betweenness centrality (0.055) - this node is a cross-community bridge._
 
-## Bounded documentation refresh
+## Bounded README refresh
 
-Only docs/COMMUNICATION_TRANSFER_RESULTS.md and docs/MAIN_STUDY_GATES.md were reread completely and semantically refreshed. The 64-source allowlist is unchanged: 30 Markdown documents and 34 Python AST modules. All 62 other source hashes and graph contributions were preserved. No AST extraction, corpus detection, model inference, extra node/edge creation or external API occurred.
+Only README.md was reread completely and semantically refreshed. Its three existing nodes and five existing edges now distinguish the completed 32-report/240-condition feasibility pilot from the earlier 144-report study. The latest pilot still fails two prospective criteria, human review remains pending, and no new probe was fitted. This is README-reported status, not a new extraction of the linked result files.
 
-The corrected reader-control chronology and replay figure link are represented in updated node content. Two cross-document applications of general gate requirements are now labelled INFERRED at 0.75. Existing endpoint topology and community assignments are unchanged; cohesion and report rankings were recomputed.
+The 64-source allowlist remains unchanged: 30 Markdown files and 34 Python AST modules. All 63 other source hashes and graph contributions were preserved. New natural-selection modules, protocols, result documents, figures, raw runs and curated JSON remain UNINDEXED. Their paths in README node metadata are links only. APOLLO_METHOD.md also remains outside the map.
 
-APOLLO_METHOD.md and all new natural-selection pilot modules/protocols remain unindexed. The graph cannot be cited as having read or evaluated those additions. Source-explicit claims organize repository evidence and do not establish novel experimental results.
-
-Prior extraction-stage warnings remain in GRAPH_HEALTH.json. The undirected graph retains its previous limitations and unindexed dependency placeholders. Host-agent token cost remains unmeasured, not zero.
+No corpus detection, AST extraction, model call, new node/edge creation or external API occurred. Graph topology and weights are unchanged, so existing communities were retained; cohesion and report rankings were recomputed. Previous raw extraction warnings and unindexed dependency placeholders remain recorded in GRAPH_HEALTH.json. Host-agent token cost is unmeasured.
 
 Raw community cohesion scores:
 

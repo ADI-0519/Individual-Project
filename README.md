@@ -17,7 +17,19 @@ targets, human-reviewed data, competitive frozen controls, independent family
 holdouts, a second reader and the final analysis/write-up remain ahead. The
 [main-study gates](docs/MAIN_STUDY_GATES.md) define what counts as completion.
 
-**Latest communication milestone:** [144 naturally generated reports on 24 fresh
+**Latest measured milestone:** the [new natural-communication feasibility pilot](docs/NATURAL_SELECTION_PILOT_RESULTS.md)
+has completed 32 reports and 240 recipient conditions using 222 unique reader
+calls. Two blinded agent reviews agree on four supported omissions under the
+favorable objective. One saved report gives informed/missing/stale readers
+REJECT/APPROVE/APPROVE; restoring the current fact gives REJECT in all three,
+while an irrelevant addition changes none. Human semantic review remains pending.
+The pilot fails two of its five prospective criteria: only one eligible omission
+in the 25-word arm and no DEFER outcomes after original reports. No new probe
+was fitted. See the [figure](docs/figures/2026-11-20/natural_selection_pilot.png),
+[bound analysis](docs/validation/2026-11-20-natural-selection-pilot.json) and
+[independent checkpoint audit](docs/validation/2026-11-20-independent-checkpoint-audit.json).
+
+**Earlier communication milestone:** [144 naturally generated reports on 24 fresh
 decision cases](docs/COMMUNICATION_TRANSFER_RESULTS.md), with actual readers,
 frozen neutral-trained outcome readouts and score-blind draft content review.
 The activation readout gets 62/72 neutral and 66/71 pressured outcomes correct;
