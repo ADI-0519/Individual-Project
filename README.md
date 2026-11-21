@@ -19,6 +19,18 @@ targets, human-reviewed data, competitive frozen controls, independent family
 holdouts, a second reader and the final analysis/write-up remain ahead. The
 [main-study gates](docs/MAIN_STUDY_GATES.md) define what counts as completion.
 
+**Latest implementation (21 November):** the matched-coverage study now has a
+[154-group draft bank](data/belief_main/main_v1/main_bank_v1.json), 5,888 unique
+inputs per model, group-preserving split manifests and 15 paired fitting
+allocations. The prose-only monitor, matched fitting and held-out analysis are
+implemented. Both pinned Llama/Qwen checkpoints passed a separate real hardware
+capture check; those two engineering forwards are not main-study results.
+Human semantic review remains incomplete. Open the
+[offline review worksheet](docs/review/main_study_v1/review.html) locally; it starts
+with blank answers and exports human records without fabricating approval.
+The [execution runbook](docs/MAIN_STUDY_RUNBOOK_V1.md) records the exact next
+commands, source bindings and interpretation limits.
+
 **Latest measured milestone (21 November):** [fully crossed belief validation](docs/CROSSED_BELIEF_VALIDATION_RESULTS.md)
 completed 256 real prefix measurements and 128 answers, without refitting. The
 queried readout passes the primary subset at **48/64**, including correctly

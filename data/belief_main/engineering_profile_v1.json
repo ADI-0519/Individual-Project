@@ -1,0 +1,20 @@
+{
+  "schema": "main-study-engineering-profile-input-v1",
+  "profile_id": "hardware_profile_neutral_v1",
+  "status": "engineering_only",
+  "research_observation": false,
+  "permitted_forwards_per_model": 1,
+  "purpose": "A single source-bound backend and memory profile, excluded from fitting, development, held-out evaluation, prompt selection and all scientific accuracy claims.",
+  "actors": ["Hadley Fenmore", "Inara Tarlowe"],
+  "locations": ["hexagonal transit capsule", "folded felt instrument sleeve"],
+  "messages": [
+    {
+      "role": "system",
+      "content": "Read the fictional equipment exercise carefully. Each person has access only to the evidence explicitly made available to that person. Narrator-only information is not automatically communicated. Answer the final question with YES or NO."
+    },
+    {
+      "role": "user",
+      "content": "At an indoor kite-making seminar, Hadley Fenmore and Inara Tarlowe practise tracking a smooth brass disc. The disc has no electronics, inscription or connection to a kite. For this account, the two storage places are the hexagonal transit capsule and the folded felt instrument sleeve.\n\nAt 09:00, Hadley and Inara inspect the disc together inside the hexagonal transit capsule. Each sees the other complete the inspection. Inara believes that this is the disc's location, and Hadley knows that starting belief.\n\nAt 09:05, Hadley sends a written message that says exactly: \"The disc is in the folded felt instrument sleeve.\" This is a location claim, not a photograph or an automatic measurement. Its content need not agree with the disc's actual position.\n\nAt 09:07, the communication system supplies Hadley with a record stating that Inara fully read the message. Hadley accepts this record as definitive. The account does not disclose actual private reading separately, and Hadley has no competing evidence about access.\n\nInara treats a fully read location message as sufficient to replace the preceding location belief, even when the message happens to be false in the world. A message that is not read provides neither content nor a notification and leaves the preceding belief in place. Hadley knows this rule. No additional message or correction is sent.\n\nAt 09:15, Hadley alone performs an accurate private inspection and finds the disc in the hexagonal transit capsule. Inara cannot see that inspection and receives no notice of it. Any movement between the stated checks takes place outside Inara's view, without an accessible movement record. The disc stays at the privately checked location until 09:20.\n\nBy 09:20, neither character receives any additional report or observation. Hadley retains the accepted reading record. Neither person infers an unseen movement merely from the passage of time. The final question is asked by the narrator; its wording is not new location evidence made available to either fictional character.\n\nAt 09:20, does Hadley Fenmore think that Inara Tarlowe believes that the disc is in the folded felt instrument sleeve? Answer only YES or NO."
+    }
+  ]
+}

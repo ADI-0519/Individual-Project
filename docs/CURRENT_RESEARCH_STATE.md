@@ -5,6 +5,168 @@ the current evidence boundary so continuation does not depend on chat memory.
 Earlier experiments ran on 20 November; continuation and fresh validation
 also ran on 21 November. Read the dated sections for each attempt.
 
+## Latest implementation: full draft material and two real engineering forwards
+
+The resumed main-study build now has **154 authored draft contextual groups**:
+48 training, 16 development and 90 test groups. The
+[case bank](../data/belief_main/main_v1/main_bank_v1.json),
+[split manifest](../data/belief_main/main_v1/split_manifest_v1.json) and
+[15 matched allocations](../data/belief_main/main_v1/matched_allocations_v1.json)
+bind **5,888 unique inputs per model**. Both authors cross-reviewed the other's
+prose. Before assembly, nine cross-split actor overlaps and four excluded
+design-name reuses were corrected; no model outcomes informed those edits.
+Canonical bank hash is
+`e038025571a38a7f2c489e5f8c3bf3b0a3c11a05f9b8c7e89d26292a4e7bfb1d`.
+
+The [prose-only monitor](../src/latent_probes/main_study_monitor.py) is implemented
+with a fixed Qwen extraction prompt, strict parsing and an explicit update fold.
+Its [analysis](../src/latent_probes/main_study_monitor_analysis.py) retains invalid
+outputs as incorrect and reparses hash-bound generation journals. Its optional
+integration in the main analysis explicitly records when this baseline is
+missing. CPU oracle-constructed extraction fixtures are not Qwen predictions.
+
+The [offline human worksheet](review/main_study_v1/review.html) has 154 groups
+and 736 representative prompts. Human answers, decisions and annotations remain
+blank. The [review readiness check](validation/2026-11-21-main-study-review-readiness.json)
+correctly reports zero human records and 154 missing student acceptances.
+Review-fragment merging preserves disagreements; the execution gate now rejects
+accepted questionnaire answers that disagree with the formal rule. Software
+cannot authenticate humanity or substitute for semantic review.
+
+One dedicated, permanently separate engineering input was profiled once on each
+model: Llama block16 yielded 4,096 features and 128,256 vocabulary logits; Qwen
+block14 yielded 3,584 features and 152,064 logits. Both passed exact hook/HF
+alignment, full raw-tensor readback, source-snapshot and bank-hash checks. Native
+outputs are `/home/adirj/kcl-latent-probes-runs/main_backend_profile_20261121_llama`
+and the corresponding `_qwen` directory. These are **two engineering forwards,
+zero main-study forwards, zero fitted main heads and zero measured monitor
+generations**. The later review-gate change does not rewrite their frozen source
+snapshots; final execution preparations must bind the updated gate sources.
+
+Initial tokenizer-only preflights succeeded on all 5,888 inputs for both models
+and 4,352 development/test monitor inputs (no training monitor generations).
+An initial Qwen cache miss was resolved by the existing native cache at
+`/home/adirj/kcl-hf-cache`, without downloading or changing model revisions.
+The following older sections record earlier states; their authoring pause and
+missing-baseline statements are superseded by this section.
+
+The final [material/prefix audit](validation/2026-11-21-main-study-materials-and-prefixes.json)
+reconstructs both authored fragments and both manifests, checks all updated
+capture-source hashes and token bindings for Llama/Qwen/monitor preparations,
+and finds no oversized/truncated prefix. These preparations use the
+`_review_gate_v2` native directories described in the
+[execution runbook](MAIN_STUDY_RUNBOOK_V1.md). The
+[independent hardware audit](validation/2026-11-21-main-study-hardware-independent.json)
+imports no project modules and verifies both saved-array/raw-tensor comparisons,
+26 frozen source snapshots, prompt/token hashes and full-vocabulary dimensions.
+Raw logits retain batch/token axes `(1,1,V)`; exported final-token logits are
+their `[0,0]` view, with exactly equal values.
+
+The complete local suite passes **1,168 tests and 48 subtests**. The source
+archive and wheel build and pass metadata checks. A separate
+[relocated-source audit](validation/2026-11-21-main-study-relocated-source.json)
+imports the extracted source under isolated Python and reconstructs all 5,888
+inputs and 15 allocations without loading the original project modules.
+Git text filters preserve byte-bound case/review inputs. CI now includes the
+actual material-manifest validator; no new remote CI result is claimed here.
+The [current checkpoint](validation/2026-11-21-main-study-materials-checkpoint.json)
+records all local checks. All pre-commit hooks pass using the installed Windows
+environment without resync. A uv resync attempt had removed the editable project
+registration before hitting a readonly OneDrive directory; only that project
+package was reinstalled offline with no dependency changes. Its import, console
+entry point and RECORD are restored. WSL and saved research data were unaffected.
+
+## Supervisor-recommended DeceptionBench: source audit, not a new result
+
+The supervisor recommended Huang et al.'s NeurIPS 2025 **DeceptionBench**, arXiv
+2510.15501. Read the [pinned release audit](DECEPTIONBENCH_SOURCE_AUDIT.md) before
+using it. This is the Aries-iai / skyai798 release, not the separate
+PKU-Alignment benchmark with the same short name. The actual public files contain
+150 scenarios and 900 static prompts across five domains. They do not contain
+generated responses, behavior labels or cached activations. `groundtruth` is a
+reference honest answer/action, not a binary label for our model's output. L1
+already contains deceptive objectives in some cases and is not an honest class.
+
+Use this as an external evaluation anchor for the **deception-probe** portion of
+Variant 2. Keep its behavior target separate from the controlled belief target.
+The previously authorized matched coverage/composition study remains a proposed
+belief-readout experiment; mass authoring of its 154 groups was paused before
+any full corpus was written while the external recommendation was assessed.
+Generic fit/capture machinery is engineering scaffolding, not empirical progress.
+
+Apollo-style probing on this exact benchmark already has public precedent:
+Huang et al., [Why Static Probes Fail](https://arxiv.org/html/2610.27577v1),
+Sections 4-5, includes THU-DeceptionBench L2 and labeled few-shot adaptation;
+the [Yilin1010 reproduction repository](https://github.com/Yilin1010/deception-probe)
+also directly applies an Apollo-style instructed-pairs recipe. Benchmark transfer,
+domain fragility or elevated honest false positives alone are therefore not a
+new contribution. A specific new result would need stronger controls and fresh
+evaluation, and novelty remains unestablished. No DeceptionBench generation,
+judging, model loading or paid API requests were made for this assessment.
+
+The [source-only importer](../src/latent_probes/deceptionbench_data.py) and
+[pinned manifest](../research/deceptionbench/source_manifest_v1.json) now validate
+the actual published bytes and produce 900 uniquely identified prompt records
+with unknown behavior labels. Parent execution independently reproduced the
+import. The proposed main-study [capture runner](../src/latent_probes/main_study_run.py),
+[fitting engine](../src/latent_probes/main_study_fit.py) and
+[analysis engine](../src/latent_probes/main_study_analysis.py) have CPU fixture
+coverage, including cross-component capture loading. Independent review caught
+and corrected canonical-bank hash and numeric-precision inconsistencies before
+any real fitting. The full local suite passes **1,019 tests and 48 subtests**;
+repository-wide Ruff lint and formatting pass. See the
+[engineering validation record](validation/2026-11-21-main-study-infrastructure.json).
+These checks do not complete data authorship, human review or a scientific run.
+No new changes have been pushed and no new GitHub CI result is claimed.
+
+## Strategic correction after training-support and closest-paper audit
+
+The [main-study decision brief](MAIN_STUDY_DECISION_2026-11-21.md) supersedes the
+earlier proposal to make a larger evaluation of the legacy head the sole main
+study. The transferred head used **16 distinct training sender inputs** (32
+duplicated rows, four wordings), eight distinct validation inputs and one
+change-only observation rule. Its crossed failures are valid pipeline-transfer
+findings, not evidence against generally well-trained belief probes.
+
+The recommended next study compares **new restricted/full-coverage probes at
+matched training budgets and scenario coverage**, then evaluates untouched
+composed updates. Keep the legacy head unchanged as historical reference. The
+training intervention, allocation, labels, review and held-out composition are
+not yet frozen or executed. Exact sample counts in external planning prose are
+not an approved bank. No new model calls or fits were made for this audit.
+
+Generic second-order decoding, selective sensitivity, training-correlation
+repair and question-time retrieval already have close primary precedents.
+Novelty must come from a substantive coverage/composition result and replication,
+not from renaming the old failure. Robustness evaluation with externally reviewed
+gold does not require correct verbal answers; the stronger future-goal or causal
+interpretations still need additional evidence. Do not make another broad model-
+qualification loop a prerequisite for the core comparison. Explain this explicit
+belief-readout emphasis to the supervisor separately from Apollo deception work.
+
+## Main-study implementation has begun; no new model results
+
+The [concrete specification](MAIN_STUDY_SPECIFICATION_V1.md) now defines state
+rules, valid correction quartets, matched N128/256/512 fitting allocations and
+five predeclared data-allocation seeds. The new pure
+[state/allocation module](../src/latent_probes/main_study_design.py) passes 32
+focused tests. Independent design review replaced a fixed nuisance-parity mask
+with randomized, complementary paired-story masks and verified all 15 planned
+allocations mathematically; boundary ID hashes match the Python implementation.
+
+The [CPU design audit](validation/2026-11-21-main-study-design.json) and
+[independent review](MAIN_STUDY_DESIGN_REVIEW_V1.md) distinguish reserved group
+IDs from authored data. The [24-prompt review packet](review/main_study_design_v1/review.md)
+contains six permanently excluded design-example groups. Their labels agree
+with independently rederived state rules, but human annotations remain blank.
+These are specification materials, not another pilot or completed main corpus.
+
+The proposed full bank would contain 5,888 unique prefixes per model if all
+48 training, 16 development and 90 test groups are independently authored as
+specified. No activations, fitted main heads or held-out outputs have been
+collected. Actual narratives, human review, exact baseline policies and final
+execution bindings must still be completed. The specification is not frozen.
+
 ## Latest: 21 November fully crossed neutral validation
 
 Read the [complete new results](CROSSED_BELIEF_VALIDATION_RESULTS.md) first.
@@ -47,9 +209,10 @@ has blank human annotations; agent checks do not complete semantic validation.
 The [new literature update](CROSSED_BELIEF_LITERATURE_ADDENDUM_2026-11-21.md)
 narrows the gap against three additional primary papers. No goal conditions,
 replacement probe fits or additional checkpoints were run. Earlier failed gates
-stay failed. The next stage is a separately fixed neutral reference/model
-qualification, followed only if justified by fresh training and an untouched
-update-rule family. Do not fit on this new validation bank or launch the old 192.
+stay failed. The later strategic brief above recommends fresh matched training
+and untouched composition evaluation as the core; neutral reference qualification
+is relevant to the stronger extension, rather than a prerequisite for reporting
+robustness. Do not fit on this new validation bank or launch the old 192.
 
 ## Earlier 21 November: real future-goal neutral qualification
 
@@ -236,9 +399,11 @@ scientific validation or model inference.
 **After the fully crossed validation:** the new study above has run and failed
 full probe and behavioral qualification. Its primary signal survives, but the
 independent-initial-belief controls expose readout sensitivity without a target
-change. The next bounded decision is a separately fixed neutral reference/model
-qualification; any replacement head requires fresh fully crossed training data
-and an untouched update-rule family. The old 192 goal/archive conditions remain
+change. The later training-support audit shows that the legacy head had only 16
+distinct fitting inputs. The recommended core is now a fresh matched restricted/
+full-coverage comparison and untouched composition, as specified in the brief
+above. Reference/model qualification is an extension-specific decision, not a
+universal prerequisite for robustness evaluation. The old 192 goal/archive conditions remain
 uncollected. Do not retune either completed bank or declare an old gate passed.
 A novel goal-specific effect or natural-communication advantage remains
 unestablished. The earlier decisions below are historical.

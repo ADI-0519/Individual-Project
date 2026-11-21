@@ -1,0 +1,49 @@
+{
+    "schema":  "main-study-infrastructure-audit-v1",
+    "audited_on":  "2026-11-21",
+    "status":  "local_engineering_checks_no_new_model_results",
+    "tests":  {
+                  "command":  ".venv/Scripts/python.exe -m pytest tests -m \"not model\" -q",
+                  "exit_code":  0,
+                  "passed":  1019,
+                  "subtests_passed":  48,
+                  "elapsed_seconds":  240.95
+              },
+    "lint":  "ruff check . passed",
+    "format":  "ruff format --check . passed; 270 files",
+    "new_github_ci_run":  false,
+    "pushed":  false,
+    "real_model_calls":  0,
+    "real_main_study_fits":  0,
+    "full_main_bank_authored":  false,
+    "human_semantic_review_complete":  false,
+    "deformation_of_existing_results":  false,
+    "deceptionbench":  {
+                           "actual_published_files_validated_by_parent":  5,
+                           "scenarios":  150,
+                           "source_prompts":  900,
+                           "distinct_prompt_record_ids":  900,
+                           "response_labels":  0,
+                           "source_manifest_sha256":  "3192394b146b2fc6a5181382b9f2e9bb4e5d7df41b82a261add9d829b1b9247c",
+                           "generated_inputs_are_source_only":  true,
+                           "full_upstream_generation_reproduction":  false
+                       },
+    "source_sha256":  {
+                          "src/latent_probes/main_study_design.py":  "0973d047d2e98736c1b9144d2187079a60d87f2280eeca691330ff91135506b9",
+                          "src/latent_probes/main_study_bank.py":  "0b51cd992de5c7fc1da04b850165a08dd268b7294796a8010e21c12a63ec9543",
+                          "src/latent_probes/main_study_fit.py":  "8c9f2422fb8834fdcfcb749f5a9a8487cd3d1fa5b4efab63f7b872fb94cb5fc2",
+                          "src/latent_probes/main_study_analysis.py":  "6c3c36fca4aa696e64c266e48eefe710f9100991e4c18391e92229b16955cebc",
+                          "src/latent_probes/main_study_run.py":  "f37d7fdc5e946dfb864000b2dce54386420e9f5cfa8b2d8163b450a397039c90",
+                          "src/latent_probes/deceptionbench_data.py":  "b5d864e50c0321202127807abed3f55a3eeb502df624010ce2781f0b25274797",
+                          "scripts/validate_main_study_design.py":  "84bfa4a1f6b519afd8247d38020fd4f48d02a45f233c5cc7dfd373901eac9bef",
+                          "scripts/run_main_study.py":  "e1b86f3fbdf46b605438d94907f3c35c0b7c2b9f832aba1d8b1b1a604bd2147f",
+                          "scripts/fit_main_study.py":  "3c7569cf7505ba676cef61b39958cb32fc8aff85cc5d3443ebaa43dd3dc921ec",
+                          "scripts/analyse_main_study.py":  "9c072152921bb6d731093e4dff0f738d58ec7412d2d08c90cdc8a2ac57b3ad5a",
+                          "scripts/validate_deceptionbench_source.py":  "c90f350b1b905bd9b0453f55eb135472172c0afb3514bea086eeaa49535e5cfe",
+                          "tests/test_main_study_design.py":  "d6e2d1a930cf582289ff713e9afdfee0d790ece2d4ea8c9d1f4247de567de0e6",
+                          "tests/test_main_study_bank.py":  "461a1730e94b7dd6fda49e4c1e8a0b77ff6892e7ae803d526e8d0af4ea8be6ae",
+                          "tests/test_main_study_fit.py":  "a5d663e7f01055a5ef4e8e36953aebb9c7a527824769fd062028da03f7591e52",
+                          "tests/test_main_study_run.py":  "d2dc63994033159579396f09916d246ff98d586bcfe87d53ded34ba35fca486e",
+                          "tests/test_deceptionbench_data.py":  "0aa24d7b9fbff5efba001b8c2c2dd40450dc636e6f7f0a4f5f839a77206ff3e0"
+                      }
+}

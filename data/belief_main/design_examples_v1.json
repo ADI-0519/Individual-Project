@@ -1,0 +1,1165 @@
+{
+  "schema": "belief_main_design_examples_v1",
+  "created": "2026-11-21",
+  "status": "unexecuted_design_examples_awaiting_human_review",
+  "purpose": "Representative prose and four-case blocks for semantic design review only. These exact scenes, names, places and wording groups are excluded from every future training, development and test partition.",
+  "exclusion": {
+    "excluded_from": [
+      "training",
+      "development",
+      "test",
+      "model_selection",
+      "pilot"
+    ],
+    "model_calls": 0,
+    "fit_calls": 0,
+    "human_review_complete": false
+  },
+  "system": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it.",
+  "semantics": {
+    "target": "Whether the sender thinks at09:20 that the reader believes the token is at slot_b. This is fictional attributed content, not belief accuracy, private actual-reader state, deceptive intent or spontaneous model anticipation.",
+    "one_step": "T = U if B else I. Observation U is the09:05 observed location, not necessarily09:15 world W. Message U is the exact accepted claim, independent of W.",
+    "correction": "M2=1-M1, I=M2; T=M2 if B2 else M1 if B1 else I. B1=0 supplies redundant-final-update pair; B1=1 supplies informative-final-update pair.",
+    "receipt": "All receipts are trusted by the sender. Private actual delivery is not included or inferable; no possible receipt error is disclosed to the sender.",
+    "mapping": "Map0 uses canonical order; map1 globally exchanges the physical names assigned to slots0and1. Only one map per representative group is shown; this packet is not factorial coverage.",
+    "independence": "Six authored narrative groups, two per mechanism, containing24paired variants. They are not24 independent scenarios or six independent reasoning mechanisms. No statistical outcomes exist."
+  },
+  "groups": [
+    {
+      "group_id": "design_observation_museum",
+      "mechanism": "observation",
+      "context": "Museum conservation bench",
+      "wording_id": "design_obs_01",
+      "case_ids": [
+        "design_001",
+        "design_002",
+        "design_003",
+        "design_004"
+      ],
+      "human_review_complete": false
+    },
+    {
+      "group_id": "design_observation_field_station",
+      "mechanism": "observation",
+      "context": "Coastal field station",
+      "wording_id": "design_obs_02",
+      "case_ids": [
+        "design_005",
+        "design_006",
+        "design_007",
+        "design_008"
+      ],
+      "human_review_complete": false
+    },
+    {
+      "group_id": "design_message_catalogue",
+      "mechanism": "message",
+      "context": "Library catalogue room",
+      "wording_id": "design_msg_01",
+      "case_ids": [
+        "design_009",
+        "design_010",
+        "design_011",
+        "design_012"
+      ],
+      "human_review_complete": false
+    },
+    {
+      "group_id": "design_message_theatre",
+      "mechanism": "message",
+      "context": "Theatre prop store",
+      "wording_id": "design_msg_02",
+      "case_ids": [
+        "design_013",
+        "design_014",
+        "design_015",
+        "design_016"
+      ],
+      "human_review_complete": false
+    },
+    {
+      "group_id": "design_correction_airport",
+      "mechanism": "correction",
+      "context": "Airport instrument depot",
+      "wording_id": "design_corr_01",
+      "case_ids": [
+        "design_017",
+        "design_018",
+        "design_019",
+        "design_020"
+      ],
+      "human_review_complete": false
+    },
+    {
+      "group_id": "design_correction_seed_bank",
+      "mechanism": "correction",
+      "context": "Botanical seed bank",
+      "wording_id": "design_corr_02",
+      "case_ids": [
+        "design_021",
+        "design_022",
+        "design_023",
+        "design_024"
+      ],
+      "human_review_complete": false
+    }
+  ],
+  "cases": [
+    {
+      "id": "design_001",
+      "group_id": "design_observation_museum",
+      "mechanism": "observation",
+      "wording_id": "design_obs_01",
+      "sender": "Xiomara",
+      "reader": "Euan",
+      "canonical_places": [
+        "copper drawer",
+        "pearl drawer"
+      ],
+      "place_a": "copper drawer",
+      "place_b": "pearl drawer",
+      "state": {
+        "initial": 0,
+        "update": 1,
+        "receipt": 0,
+        "world": 0,
+        "name_map": 0,
+        "first_receipt": null
+      },
+      "gold": {
+        "attributed_belief": 0,
+        "prior_final_update": 0,
+        "final_update_location": 1,
+        "final_receipt_informative": true,
+        "answer": "NO"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+        },
+        {
+          "role": "user",
+          "content": "At the museum conservation bench, Xiomara and Euan jointly inspect the token at 09:00. It is inside the copper drawer. They watch each other make this inspection. Euan believes the token is in the copper drawer, and Xiomara knows that initial belief.\n\nAt 09:05, an inspection port displays the token in the pearl drawer. Xiomara sees an accurate photograph from that session showing this location. The photograph excludes the viewing area, so it gives Xiomara no information about whether Euan looked through the port.\n\nAt 09:07, a session record supplied to Xiomara states: \"Euan saw no part of the 09:05 inspection and received no notification that it occurred.\" Xiomara accepts this record as definitive and has no other evidence about Euan's participation.\n\nEuan replaces the initial location belief only if the 09:05 inspection is directly observed. In that event, the observed location becomes the new belief. Otherwise the initial belief is retained. After this session, Euan gets no further sight of the token, message, movement notice or other location evidence. Xiomara knows these rules.\n\nAt 09:15, Xiomara alone makes an accurate live camera check: the token is now in the copper drawer. Euan cannot access that view and receives no notice of it. Any relocation between the timed checks takes place outside Euan's view, with no movement notice available to Euan. The token stays in the camera-confirmed location through 09:20.\n\nThe question concerns the situation at 09:20. No additional communication or observation occurs before then. Xiomara retains the accepted records described above; Euan does not infer an unobserved move.\n\nCandidate proposition: \"The token is in the pearl drawer.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow.\n\nAt the end of the scene, does Xiomara think that Euan believes that the token is in the pearl drawer? Answer only YES or NO."
+        }
+      ],
+      "review": {
+        "human_review_complete": false,
+        "annotation_origin": "agent_assisted_design_example",
+        "exclude_all_future_partitions": true
+      }
+    },
+    {
+      "id": "design_002",
+      "group_id": "design_observation_museum",
+      "mechanism": "observation",
+      "wording_id": "design_obs_01",
+      "sender": "Xiomara",
+      "reader": "Euan",
+      "canonical_places": [
+        "copper drawer",
+        "pearl drawer"
+      ],
+      "place_a": "copper drawer",
+      "place_b": "pearl drawer",
+      "state": {
+        "initial": 0,
+        "update": 1,
+        "receipt": 1,
+        "world": 0,
+        "name_map": 0,
+        "first_receipt": null
+      },
+      "gold": {
+        "attributed_belief": 1,
+        "prior_final_update": 0,
+        "final_update_location": 1,
+        "final_receipt_informative": true,
+        "answer": "YES"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+        },
+        {
+          "role": "user",
+          "content": "At the museum conservation bench, Xiomara and Euan jointly inspect the token at 09:00. It is inside the copper drawer. They watch each other make this inspection. Euan believes the token is in the copper drawer, and Xiomara knows that initial belief.\n\nAt 09:05, an inspection port displays the token in the pearl drawer. Xiomara sees an accurate photograph from that session showing this location. The photograph excludes the viewing area, so it gives Xiomara no information about whether Euan looked through the port.\n\nAt 09:07, a session record supplied to Xiomara states: \"Euan watched the complete 09:05 inspection through the port and saw the token in the pearl drawer.\" Xiomara accepts this record as definitive and has no other evidence about Euan's participation.\n\nEuan replaces the initial location belief only if the 09:05 inspection is directly observed. In that event, the observed location becomes the new belief. Otherwise the initial belief is retained. After this session, Euan gets no further sight of the token, message, movement notice or other location evidence. Xiomara knows these rules.\n\nAt 09:15, Xiomara alone makes an accurate live camera check: the token is now in the copper drawer. Euan cannot access that view and receives no notice of it. Any relocation between the timed checks takes place outside Euan's view, with no movement notice available to Euan. The token stays in the camera-confirmed location through 09:20.\n\nThe question concerns the situation at 09:20. No additional communication or observation occurs before then. Xiomara retains the accepted records described above; Euan does not infer an unobserved move.\n\nCandidate proposition: \"The token is in the pearl drawer.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow.\n\nAt the end of the scene, does Xiomara think that Euan believes that the token is in the pearl drawer? Answer only YES or NO."
+        }
+      ],
+      "review": {
+        "human_review_complete": false,
+        "annotation_origin": "agent_assisted_design_example",
+        "exclude_all_future_partitions": true
+      }
+    },
+    {
+      "id": "design_003",
+      "group_id": "design_observation_museum",
+      "mechanism": "observation",
+      "wording_id": "design_obs_01",
+      "sender": "Xiomara",
+      "reader": "Euan",
+      "canonical_places": [
+        "copper drawer",
+        "pearl drawer"
+      ],
+      "place_a": "copper drawer",
+      "place_b": "pearl drawer",
+      "state": {
+        "initial": 1,
+        "update": 1,
+        "receipt": 0,
+        "world": 0,
+        "name_map": 0,
+        "first_receipt": null
+      },
+      "gold": {
+        "attributed_belief": 1,
+        "prior_final_update": 1,
+        "final_update_location": 1,
+        "final_receipt_informative": false,
+        "answer": "YES"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+        },
+        {
+          "role": "user",
+          "content": "At the museum conservation bench, Xiomara and Euan jointly inspect the token at 09:00. It is inside the pearl drawer. They watch each other make this inspection. Euan believes the token is in the pearl drawer, and Xiomara knows that initial belief.\n\nAt 09:05, an inspection port displays the token in the pearl drawer. Xiomara sees an accurate photograph from that session showing this location. The photograph excludes the viewing area, so it gives Xiomara no information about whether Euan looked through the port.\n\nAt 09:07, a session record supplied to Xiomara states: \"Euan saw no part of the 09:05 inspection and received no notification that it occurred.\" Xiomara accepts this record as definitive and has no other evidence about Euan's participation.\n\nEuan replaces the initial location belief only if the 09:05 inspection is directly observed. In that event, the observed location becomes the new belief. Otherwise the initial belief is retained. After this session, Euan gets no further sight of the token, message, movement notice or other location evidence. Xiomara knows these rules.\n\nAt 09:15, Xiomara alone makes an accurate live camera check: the token is now in the copper drawer. Euan cannot access that view and receives no notice of it. Any relocation between the timed checks takes place outside Euan's view, with no movement notice available to Euan. The token stays in the camera-confirmed location through 09:20.\n\nThe question concerns the situation at 09:20. No additional communication or observation occurs before then. Xiomara retains the accepted records described above; Euan does not infer an unobserved move.\n\nCandidate proposition: \"The token is in the pearl drawer.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow.\n\nAt the end of the scene, does Xiomara think that Euan believes that the token is in the pearl drawer? Answer only YES or NO."
+        }
+      ],
+      "review": {
+        "human_review_complete": false,
+        "annotation_origin": "agent_assisted_design_example",
+        "exclude_all_future_partitions": true
+      }
+    },
+    {
+      "id": "design_004",
+      "group_id": "design_observation_museum",
+      "mechanism": "observation",
+      "wording_id": "design_obs_01",
+      "sender": "Xiomara",
+      "reader": "Euan",
+      "canonical_places": [
+        "copper drawer",
+        "pearl drawer"
+      ],
+      "place_a": "copper drawer",
+      "place_b": "pearl drawer",
+      "state": {
+        "initial": 1,
+        "update": 1,
+        "receipt": 1,
+        "world": 0,
+        "name_map": 0,
+        "first_receipt": null
+      },
+      "gold": {
+        "attributed_belief": 1,
+        "prior_final_update": 1,
+        "final_update_location": 1,
+        "final_receipt_informative": false,
+        "answer": "YES"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+        },
+        {
+          "role": "user",
+          "content": "At the museum conservation bench, Xiomara and Euan jointly inspect the token at 09:00. It is inside the pearl drawer. They watch each other make this inspection. Euan believes the token is in the pearl drawer, and Xiomara knows that initial belief.\n\nAt 09:05, an inspection port displays the token in the pearl drawer. Xiomara sees an accurate photograph from that session showing this location. The photograph excludes the viewing area, so it gives Xiomara no information about whether Euan looked through the port.\n\nAt 09:07, a session record supplied to Xiomara states: \"Euan watched the complete 09:05 inspection through the port and saw the token in the pearl drawer.\" Xiomara accepts this record as definitive and has no other evidence about Euan's participation.\n\nEuan replaces the initial location belief only if the 09:05 inspection is directly observed. In that event, the observed location becomes the new belief. Otherwise the initial belief is retained. After this session, Euan gets no further sight of the token, message, movement notice or other location evidence. Xiomara knows these rules.\n\nAt 09:15, Xiomara alone makes an accurate live camera check: the token is now in the copper drawer. Euan cannot access that view and receives no notice of it. Any relocation between the timed checks takes place outside Euan's view, with no movement notice available to Euan. The token stays in the camera-confirmed location through 09:20.\n\nThe question concerns the situation at 09:20. No additional communication or observation occurs before then. Xiomara retains the accepted records described above; Euan does not infer an unobserved move.\n\nCandidate proposition: \"The token is in the pearl drawer.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow.\n\nAt the end of the scene, does Xiomara think that Euan believes that the token is in the pearl drawer? Answer only YES or NO."
+        }
+      ],
+      "review": {
+        "human_review_complete": false,
+        "annotation_origin": "agent_assisted_design_example",
+        "exclude_all_future_partitions": true
+      }
+    },
+    {
+      "id": "design_005",
+      "group_id": "design_observation_field_station",
+      "mechanism": "observation",
+      "wording_id": "design_obs_02",
+      "sender": "Keiko",
+      "reader": "Thabo",
+      "canonical_places": [
+        "basalt locker",
+        "quartz locker"
+      ],
+      "place_a": "quartz locker",
+      "place_b": "basalt locker",
+      "state": {
+        "initial": 1,
+        "update": 0,
+        "receipt": 0,
+        "world": 1,
+        "name_map": 1,
+        "first_receipt": null
+      },
+      "gold": {
+        "attributed_belief": 1,
+        "prior_final_update": 1,
+        "final_update_location": 0,
+        "final_receipt_informative": true,
+        "answer": "YES"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+        },
+        {
+          "role": "user",
+          "content": "At the coastal field station's 09:00 inventory, Thabo opens the basalt locker while Keiko watches. Both see the token there, and each sees the other looking. Keiko knows that Thabo's initial location belief is the basalt locker.\n\nA visual inventory takes place at 09:05. Its accurate image shows the token inside the quartz locker. Keiko knows the image's contents from a separate copy, but that copy never shows the observers and cannot reveal whether Thabo attended.\n\nThe attendance entry that reaches Keiko at 09:07 reads: \"Thabo did not view any of the 09:05 inventory and learned nothing about its occurrence.\" Keiko treats the entry as conclusive; no independent attendance evidence is available to Keiko.\n\nThabo replaces the initial location belief only if the 09:05 inspection is directly observed. In that event, the observed location becomes the new belief. Otherwise the initial belief is retained. After this session, Thabo gets no further sight of the token, message, movement notice or other location evidence. Keiko knows these rules.\n\nAt 09:15, Keiko alone makes an accurate live camera check: the token is now in the basalt locker. Thabo cannot access that view and receives no notice of it. Any relocation between the timed checks takes place outside Thabo's view, with no movement notice available to Thabo. The token stays in the camera-confirmed location through 09:20.\n\nThe question concerns the situation at 09:20. No additional communication or observation occurs before then. Keiko retains the accepted records described above; Thabo does not infer an unobserved move.\n\nCandidate proposition: \"The token is in the basalt locker.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow.\n\nAt the end of the scene, does Keiko think that Thabo believes that the token is in the basalt locker? Answer only YES or NO."
+        }
+      ],
+      "review": {
+        "human_review_complete": false,
+        "annotation_origin": "agent_assisted_design_example",
+        "exclude_all_future_partitions": true
+      }
+    },
+    {
+      "id": "design_006",
+      "group_id": "design_observation_field_station",
+      "mechanism": "observation",
+      "wording_id": "design_obs_02",
+      "sender": "Keiko",
+      "reader": "Thabo",
+      "canonical_places": [
+        "basalt locker",
+        "quartz locker"
+      ],
+      "place_a": "quartz locker",
+      "place_b": "basalt locker",
+      "state": {
+        "initial": 1,
+        "update": 0,
+        "receipt": 1,
+        "world": 1,
+        "name_map": 1,
+        "first_receipt": null
+      },
+      "gold": {
+        "attributed_belief": 0,
+        "prior_final_update": 1,
+        "final_update_location": 0,
+        "final_receipt_informative": true,
+        "answer": "NO"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+        },
+        {
+          "role": "user",
+          "content": "At the coastal field station's 09:00 inventory, Thabo opens the basalt locker while Keiko watches. Both see the token there, and each sees the other looking. Keiko knows that Thabo's initial location belief is the basalt locker.\n\nA visual inventory takes place at 09:05. Its accurate image shows the token inside the quartz locker. Keiko knows the image's contents from a separate copy, but that copy never shows the observers and cannot reveal whether Thabo attended.\n\nThe attendance entry that reaches Keiko at 09:07 reads: \"Thabo viewed the entire 09:05 visual inventory and directly saw the token in the quartz locker.\" Keiko treats the entry as conclusive; no independent attendance evidence is available to Keiko.\n\nThabo replaces the initial location belief only if the 09:05 inspection is directly observed. In that event, the observed location becomes the new belief. Otherwise the initial belief is retained. After this session, Thabo gets no further sight of the token, message, movement notice or other location evidence. Keiko knows these rules.\n\nAt 09:15, Keiko alone makes an accurate live camera check: the token is now in the basalt locker. Thabo cannot access that view and receives no notice of it. Any relocation between the timed checks takes place outside Thabo's view, with no movement notice available to Thabo. The token stays in the camera-confirmed location through 09:20.\n\nThe question concerns the situation at 09:20. No additional communication or observation occurs before then. Keiko retains the accepted records described above; Thabo does not infer an unobserved move.\n\nCandidate proposition: \"The token is in the basalt locker.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow.\n\nAt the end of the scene, does Keiko think that Thabo believes that the token is in the basalt locker? Answer only YES or NO."
+        }
+      ],
+      "review": {
+        "human_review_complete": false,
+        "annotation_origin": "agent_assisted_design_example",
+        "exclude_all_future_partitions": true
+      }
+    },
+    {
+      "id": "design_007",
+      "group_id": "design_observation_field_station",
+      "mechanism": "observation",
+      "wording_id": "design_obs_02",
+      "sender": "Keiko",
+      "reader": "Thabo",
+      "canonical_places": [
+        "basalt locker",
+        "quartz locker"
+      ],
+      "place_a": "quartz locker",
+      "place_b": "basalt locker",
+      "state": {
+        "initial": 0,
+        "update": 0,
+        "receipt": 0,
+        "world": 1,
+        "name_map": 1,
+        "first_receipt": null
+      },
+      "gold": {
+        "attributed_belief": 0,
+        "prior_final_update": 0,
+        "final_update_location": 0,
+        "final_receipt_informative": false,
+        "answer": "NO"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+        },
+        {
+          "role": "user",
+          "content": "At the coastal field station's 09:00 inventory, Thabo opens the quartz locker while Keiko watches. Both see the token there, and each sees the other looking. Keiko knows that Thabo's initial location belief is the quartz locker.\n\nA visual inventory takes place at 09:05. Its accurate image shows the token inside the quartz locker. Keiko knows the image's contents from a separate copy, but that copy never shows the observers and cannot reveal whether Thabo attended.\n\nThe attendance entry that reaches Keiko at 09:07 reads: \"Thabo did not view any of the 09:05 inventory and learned nothing about its occurrence.\" Keiko treats the entry as conclusive; no independent attendance evidence is available to Keiko.\n\nThabo replaces the initial location belief only if the 09:05 inspection is directly observed. In that event, the observed location becomes the new belief. Otherwise the initial belief is retained. After this session, Thabo gets no further sight of the token, message, movement notice or other location evidence. Keiko knows these rules.\n\nAt 09:15, Keiko alone makes an accurate live camera check: the token is now in the basalt locker. Thabo cannot access that view and receives no notice of it. Any relocation between the timed checks takes place outside Thabo's view, with no movement notice available to Thabo. The token stays in the camera-confirmed location through 09:20.\n\nThe question concerns the situation at 09:20. No additional communication or observation occurs before then. Keiko retains the accepted records described above; Thabo does not infer an unobserved move.\n\nCandidate proposition: \"The token is in the basalt locker.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow.\n\nAt the end of the scene, does Keiko think that Thabo believes that the token is in the basalt locker? Answer only YES or NO."
+        }
+      ],
+      "review": {
+        "human_review_complete": false,
+        "annotation_origin": "agent_assisted_design_example",
+        "exclude_all_future_partitions": true
+      }
+    },
+    {
+      "id": "design_008",
+      "group_id": "design_observation_field_station",
+      "mechanism": "observation",
+      "wording_id": "design_obs_02",
+      "sender": "Keiko",
+      "reader": "Thabo",
+      "canonical_places": [
+        "basalt locker",
+        "quartz locker"
+      ],
+      "place_a": "quartz locker",
+      "place_b": "basalt locker",
+      "state": {
+        "initial": 0,
+        "update": 0,
+        "receipt": 1,
+        "world": 1,
+        "name_map": 1,
+        "first_receipt": null
+      },
+      "gold": {
+        "attributed_belief": 0,
+        "prior_final_update": 0,
+        "final_update_location": 0,
+        "final_receipt_informative": false,
+        "answer": "NO"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+        },
+        {
+          "role": "user",
+          "content": "At the coastal field station's 09:00 inventory, Thabo opens the quartz locker while Keiko watches. Both see the token there, and each sees the other looking. Keiko knows that Thabo's initial location belief is the quartz locker.\n\nA visual inventory takes place at 09:05. Its accurate image shows the token inside the quartz locker. Keiko knows the image's contents from a separate copy, but that copy never shows the observers and cannot reveal whether Thabo attended.\n\nThe attendance entry that reaches Keiko at 09:07 reads: \"Thabo viewed the entire 09:05 visual inventory and directly saw the token in the quartz locker.\" Keiko treats the entry as conclusive; no independent attendance evidence is available to Keiko.\n\nThabo replaces the initial location belief only if the 09:05 inspection is directly observed. In that event, the observed location becomes the new belief. Otherwise the initial belief is retained. After this session, Thabo gets no further sight of the token, message, movement notice or other location evidence. Keiko knows these rules.\n\nAt 09:15, Keiko alone makes an accurate live camera check: the token is now in the basalt locker. Thabo cannot access that view and receives no notice of it. Any relocation between the timed checks takes place outside Thabo's view, with no movement notice available to Thabo. The token stays in the camera-confirmed location through 09:20.\n\nThe question concerns the situation at 09:20. No additional communication or observation occurs before then. Keiko retains the accepted records described above; Thabo does not infer an unobserved move.\n\nCandidate proposition: \"The token is in the basalt locker.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow.\n\nAt the end of the scene, does Keiko think that Thabo believes that the token is in the basalt locker? Answer only YES or NO."
+        }
+      ],
+      "review": {
+        "human_review_complete": false,
+        "annotation_origin": "agent_assisted_design_example",
+        "exclude_all_future_partitions": true
+      }
+    },
+    {
+      "id": "design_009",
+      "group_id": "design_message_catalogue",
+      "mechanism": "message",
+      "wording_id": "design_msg_01",
+      "sender": "Nerea",
+      "reader": "Akio",
+      "canonical_places": [
+        "atlas cabinet",
+        "folio cabinet"
+      ],
+      "place_a": "atlas cabinet",
+      "place_b": "folio cabinet",
+      "state": {
+        "initial": 1,
+        "update": 0,
+        "receipt": 0,
+        "world": 1,
+        "name_map": 0,
+        "first_receipt": null
+      },
+      "gold": {
+        "attributed_belief": 1,
+        "prior_final_update": 1,
+        "final_update_location": 0,
+        "final_receipt_informative": true,
+        "answer": "YES"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+        },
+        {
+          "role": "user",
+          "content": "At 09:00 in the catalogue room, Nerea and Akio check the token together in the folio cabinet. Each observes the other's inspection. The resulting initial belief of Akio, known to Nerea, is that the token is in the folio cabinet.\n\nAt 09:05, the catalogue service attempts to send Akio this exact message: \"The token is now in the atlas cabinet.\" Nerea can inspect the outgoing text but cannot see the recipient or delivery process.\n\nAt 09:07, a delivery receipt shown to Nerea states: \"Neither the 09:05 message nor any notification of it reached Akio.\" Nerea accepts the receipt as definitive, with no other delivery evidence.\n\nAkio accepts the stated location of a fully read service message and replaces the initial belief with that location, even if the message is inaccurate. If neither the message nor a notification arrives, Akio retains the initial belief. No other message or observation reaches Akio after 09:00. Nerea knows these rules.\n\nAt 09:15, Nerea alone makes an accurate live camera check: the token is now in the folio cabinet. Akio cannot access that view and receives no notice of it. Any relocation between the timed checks takes place outside Akio's view, with no movement notice available to Akio. The token stays in the camera-confirmed location through 09:20.\n\nThe question concerns the situation at 09:20. No additional communication or observation occurs before then. Nerea retains the accepted records described above; Akio does not infer an unobserved move.\n\nCandidate proposition: \"The token is in the folio cabinet.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow.\n\nAt the end of the scene, does Nerea think that Akio believes that the token is in the folio cabinet? Answer only YES or NO."
+        }
+      ],
+      "review": {
+        "human_review_complete": false,
+        "annotation_origin": "agent_assisted_design_example",
+        "exclude_all_future_partitions": true
+      }
+    },
+    {
+      "id": "design_010",
+      "group_id": "design_message_catalogue",
+      "mechanism": "message",
+      "wording_id": "design_msg_01",
+      "sender": "Nerea",
+      "reader": "Akio",
+      "canonical_places": [
+        "atlas cabinet",
+        "folio cabinet"
+      ],
+      "place_a": "atlas cabinet",
+      "place_b": "folio cabinet",
+      "state": {
+        "initial": 1,
+        "update": 0,
+        "receipt": 1,
+        "world": 1,
+        "name_map": 0,
+        "first_receipt": null
+      },
+      "gold": {
+        "attributed_belief": 0,
+        "prior_final_update": 1,
+        "final_update_location": 0,
+        "final_receipt_informative": true,
+        "answer": "NO"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+        },
+        {
+          "role": "user",
+          "content": "At 09:00 in the catalogue room, Nerea and Akio check the token together in the folio cabinet. Each observes the other's inspection. The resulting initial belief of Akio, known to Nerea, is that the token is in the folio cabinet.\n\nAt 09:05, the catalogue service attempts to send Akio this exact message: \"The token is now in the atlas cabinet.\" Nerea can inspect the outgoing text but cannot see the recipient or delivery process.\n\nAt 09:07, a delivery receipt shown to Nerea states: \"Akio received the entire 09:05 message and read it in full at 09:06.\" Nerea accepts the receipt as definitive, with no other delivery evidence.\n\nAkio accepts the stated location of a fully read service message and replaces the initial belief with that location, even if the message is inaccurate. If neither the message nor a notification arrives, Akio retains the initial belief. No other message or observation reaches Akio after 09:00. Nerea knows these rules.\n\nAt 09:15, Nerea alone makes an accurate live camera check: the token is now in the folio cabinet. Akio cannot access that view and receives no notice of it. Any relocation between the timed checks takes place outside Akio's view, with no movement notice available to Akio. The token stays in the camera-confirmed location through 09:20.\n\nThe question concerns the situation at 09:20. No additional communication or observation occurs before then. Nerea retains the accepted records described above; Akio does not infer an unobserved move.\n\nCandidate proposition: \"The token is in the folio cabinet.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow.\n\nAt the end of the scene, does Nerea think that Akio believes that the token is in the folio cabinet? Answer only YES or NO."
+        }
+      ],
+      "review": {
+        "human_review_complete": false,
+        "annotation_origin": "agent_assisted_design_example",
+        "exclude_all_future_partitions": true
+      }
+    },
+    {
+      "id": "design_011",
+      "group_id": "design_message_catalogue",
+      "mechanism": "message",
+      "wording_id": "design_msg_01",
+      "sender": "Nerea",
+      "reader": "Akio",
+      "canonical_places": [
+        "atlas cabinet",
+        "folio cabinet"
+      ],
+      "place_a": "atlas cabinet",
+      "place_b": "folio cabinet",
+      "state": {
+        "initial": 0,
+        "update": 0,
+        "receipt": 0,
+        "world": 1,
+        "name_map": 0,
+        "first_receipt": null
+      },
+      "gold": {
+        "attributed_belief": 0,
+        "prior_final_update": 0,
+        "final_update_location": 0,
+        "final_receipt_informative": false,
+        "answer": "NO"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+        },
+        {
+          "role": "user",
+          "content": "At 09:00 in the catalogue room, Nerea and Akio check the token together in the atlas cabinet. Each observes the other's inspection. The resulting initial belief of Akio, known to Nerea, is that the token is in the atlas cabinet.\n\nAt 09:05, the catalogue service attempts to send Akio this exact message: \"The token is now in the atlas cabinet.\" Nerea can inspect the outgoing text but cannot see the recipient or delivery process.\n\nAt 09:07, a delivery receipt shown to Nerea states: \"Neither the 09:05 message nor any notification of it reached Akio.\" Nerea accepts the receipt as definitive, with no other delivery evidence.\n\nAkio accepts the stated location of a fully read service message and replaces the initial belief with that location, even if the message is inaccurate. If neither the message nor a notification arrives, Akio retains the initial belief. No other message or observation reaches Akio after 09:00. Nerea knows these rules.\n\nAt 09:15, Nerea alone makes an accurate live camera check: the token is now in the folio cabinet. Akio cannot access that view and receives no notice of it. Any relocation between the timed checks takes place outside Akio's view, with no movement notice available to Akio. The token stays in the camera-confirmed location through 09:20.\n\nThe question concerns the situation at 09:20. No additional communication or observation occurs before then. Nerea retains the accepted records described above; Akio does not infer an unobserved move.\n\nCandidate proposition: \"The token is in the folio cabinet.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow.\n\nAt the end of the scene, does Nerea think that Akio believes that the token is in the folio cabinet? Answer only YES or NO."
+        }
+      ],
+      "review": {
+        "human_review_complete": false,
+        "annotation_origin": "agent_assisted_design_example",
+        "exclude_all_future_partitions": true
+      }
+    },
+    {
+      "id": "design_012",
+      "group_id": "design_message_catalogue",
+      "mechanism": "message",
+      "wording_id": "design_msg_01",
+      "sender": "Nerea",
+      "reader": "Akio",
+      "canonical_places": [
+        "atlas cabinet",
+        "folio cabinet"
+      ],
+      "place_a": "atlas cabinet",
+      "place_b": "folio cabinet",
+      "state": {
+        "initial": 0,
+        "update": 0,
+        "receipt": 1,
+        "world": 1,
+        "name_map": 0,
+        "first_receipt": null
+      },
+      "gold": {
+        "attributed_belief": 0,
+        "prior_final_update": 0,
+        "final_update_location": 0,
+        "final_receipt_informative": false,
+        "answer": "NO"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+        },
+        {
+          "role": "user",
+          "content": "At 09:00 in the catalogue room, Nerea and Akio check the token together in the atlas cabinet. Each observes the other's inspection. The resulting initial belief of Akio, known to Nerea, is that the token is in the atlas cabinet.\n\nAt 09:05, the catalogue service attempts to send Akio this exact message: \"The token is now in the atlas cabinet.\" Nerea can inspect the outgoing text but cannot see the recipient or delivery process.\n\nAt 09:07, a delivery receipt shown to Nerea states: \"Akio received the entire 09:05 message and read it in full at 09:06.\" Nerea accepts the receipt as definitive, with no other delivery evidence.\n\nAkio accepts the stated location of a fully read service message and replaces the initial belief with that location, even if the message is inaccurate. If neither the message nor a notification arrives, Akio retains the initial belief. No other message or observation reaches Akio after 09:00. Nerea knows these rules.\n\nAt 09:15, Nerea alone makes an accurate live camera check: the token is now in the folio cabinet. Akio cannot access that view and receives no notice of it. Any relocation between the timed checks takes place outside Akio's view, with no movement notice available to Akio. The token stays in the camera-confirmed location through 09:20.\n\nThe question concerns the situation at 09:20. No additional communication or observation occurs before then. Nerea retains the accepted records described above; Akio does not infer an unobserved move.\n\nCandidate proposition: \"The token is in the folio cabinet.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow.\n\nAt the end of the scene, does Nerea think that Akio believes that the token is in the folio cabinet? Answer only YES or NO."
+        }
+      ],
+      "review": {
+        "human_review_complete": false,
+        "annotation_origin": "agent_assisted_design_example",
+        "exclude_all_future_partitions": true
+      }
+    },
+    {
+      "id": "design_013",
+      "group_id": "design_message_theatre",
+      "mechanism": "message",
+      "wording_id": "design_msg_02",
+      "sender": "Siobhan",
+      "reader": "Arjun",
+      "canonical_places": [
+        "velvet chest",
+        "canvas chest"
+      ],
+      "place_a": "canvas chest",
+      "place_b": "velvet chest",
+      "state": {
+        "initial": 0,
+        "update": 1,
+        "receipt": 0,
+        "world": 0,
+        "name_map": 1,
+        "first_receipt": null
+      },
+      "gold": {
+        "attributed_belief": 0,
+        "prior_final_update": 0,
+        "final_update_location": 1,
+        "final_receipt_informative": true,
+        "answer": "NO"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+        },
+        {
+          "role": "user",
+          "content": "Before the theatre's morning rehearsal, Arjun and Siobhan inspect the canvas chest together at 09:00 and find the token. Both witness the other's check. Siobhan knows that Arjun initially believes the token is in the canvas chest.\n\nThe theatre's location service queues a message for Arjun at 09:05. Its complete text is: \"The token is now in the velvet chest.\" Siobhan reads the outgoing copy without seeing whether the message is delivered or opened.\n\nA status entry supplied to Siobhan at 09:07 says: \"Arjun received no part of the 09:05 text and no notification of its existence.\" Siobhan trusts this entry completely and has no independent view of reading or delivery.\n\nArjun accepts the stated location of a fully read service message and replaces the initial belief with that location, even if the message is inaccurate. If neither the message nor a notification arrives, Arjun retains the initial belief. No other message or observation reaches Arjun after 09:00. Siobhan knows these rules.\n\nAt 09:15, Siobhan alone makes an accurate live camera check: the token is now in the canvas chest. Arjun cannot access that view and receives no notice of it. Any relocation between the timed checks takes place outside Arjun's view, with no movement notice available to Arjun. The token stays in the camera-confirmed location through 09:20.\n\nThe question concerns the situation at 09:20. No additional communication or observation occurs before then. Siobhan retains the accepted records described above; Arjun does not infer an unobserved move.\n\nCandidate proposition: \"The token is in the velvet chest.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow.\n\nAt the end of the scene, does Siobhan think that Arjun believes that the token is in the velvet chest? Answer only YES or NO."
+        }
+      ],
+      "review": {
+        "human_review_complete": false,
+        "annotation_origin": "agent_assisted_design_example",
+        "exclude_all_future_partitions": true
+      }
+    },
+    {
+      "id": "design_014",
+      "group_id": "design_message_theatre",
+      "mechanism": "message",
+      "wording_id": "design_msg_02",
+      "sender": "Siobhan",
+      "reader": "Arjun",
+      "canonical_places": [
+        "velvet chest",
+        "canvas chest"
+      ],
+      "place_a": "canvas chest",
+      "place_b": "velvet chest",
+      "state": {
+        "initial": 0,
+        "update": 1,
+        "receipt": 1,
+        "world": 0,
+        "name_map": 1,
+        "first_receipt": null
+      },
+      "gold": {
+        "attributed_belief": 1,
+        "prior_final_update": 0,
+        "final_update_location": 1,
+        "final_receipt_informative": true,
+        "answer": "YES"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+        },
+        {
+          "role": "user",
+          "content": "Before the theatre's morning rehearsal, Arjun and Siobhan inspect the canvas chest together at 09:00 and find the token. Both witness the other's check. Siobhan knows that Arjun initially believes the token is in the canvas chest.\n\nThe theatre's location service queues a message for Arjun at 09:05. Its complete text is: \"The token is now in the velvet chest.\" Siobhan reads the outgoing copy without seeing whether the message is delivered or opened.\n\nA status entry supplied to Siobhan at 09:07 says: \"At 09:06, Arjun completely read the delivered 09:05 text.\" Siobhan trusts this entry completely and has no independent view of reading or delivery.\n\nArjun accepts the stated location of a fully read service message and replaces the initial belief with that location, even if the message is inaccurate. If neither the message nor a notification arrives, Arjun retains the initial belief. No other message or observation reaches Arjun after 09:00. Siobhan knows these rules.\n\nAt 09:15, Siobhan alone makes an accurate live camera check: the token is now in the canvas chest. Arjun cannot access that view and receives no notice of it. Any relocation between the timed checks takes place outside Arjun's view, with no movement notice available to Arjun. The token stays in the camera-confirmed location through 09:20.\n\nThe question concerns the situation at 09:20. No additional communication or observation occurs before then. Siobhan retains the accepted records described above; Arjun does not infer an unobserved move.\n\nCandidate proposition: \"The token is in the velvet chest.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow.\n\nAt the end of the scene, does Siobhan think that Arjun believes that the token is in the velvet chest? Answer only YES or NO."
+        }
+      ],
+      "review": {
+        "human_review_complete": false,
+        "annotation_origin": "agent_assisted_design_example",
+        "exclude_all_future_partitions": true
+      }
+    },
+    {
+      "id": "design_015",
+      "group_id": "design_message_theatre",
+      "mechanism": "message",
+      "wording_id": "design_msg_02",
+      "sender": "Siobhan",
+      "reader": "Arjun",
+      "canonical_places": [
+        "velvet chest",
+        "canvas chest"
+      ],
+      "place_a": "canvas chest",
+      "place_b": "velvet chest",
+      "state": {
+        "initial": 1,
+        "update": 1,
+        "receipt": 0,
+        "world": 0,
+        "name_map": 1,
+        "first_receipt": null
+      },
+      "gold": {
+        "attributed_belief": 1,
+        "prior_final_update": 1,
+        "final_update_location": 1,
+        "final_receipt_informative": false,
+        "answer": "YES"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+        },
+        {
+          "role": "user",
+          "content": "Before the theatre's morning rehearsal, Arjun and Siobhan inspect the velvet chest together at 09:00 and find the token. Both witness the other's check. Siobhan knows that Arjun initially believes the token is in the velvet chest.\n\nThe theatre's location service queues a message for Arjun at 09:05. Its complete text is: \"The token is now in the velvet chest.\" Siobhan reads the outgoing copy without seeing whether the message is delivered or opened.\n\nA status entry supplied to Siobhan at 09:07 says: \"Arjun received no part of the 09:05 text and no notification of its existence.\" Siobhan trusts this entry completely and has no independent view of reading or delivery.\n\nArjun accepts the stated location of a fully read service message and replaces the initial belief with that location, even if the message is inaccurate. If neither the message nor a notification arrives, Arjun retains the initial belief. No other message or observation reaches Arjun after 09:00. Siobhan knows these rules.\n\nAt 09:15, Siobhan alone makes an accurate live camera check: the token is now in the canvas chest. Arjun cannot access that view and receives no notice of it. Any relocation between the timed checks takes place outside Arjun's view, with no movement notice available to Arjun. The token stays in the camera-confirmed location through 09:20.\n\nThe question concerns the situation at 09:20. No additional communication or observation occurs before then. Siobhan retains the accepted records described above; Arjun does not infer an unobserved move.\n\nCandidate proposition: \"The token is in the velvet chest.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow.\n\nAt the end of the scene, does Siobhan think that Arjun believes that the token is in the velvet chest? Answer only YES or NO."
+        }
+      ],
+      "review": {
+        "human_review_complete": false,
+        "annotation_origin": "agent_assisted_design_example",
+        "exclude_all_future_partitions": true
+      }
+    },
+    {
+      "id": "design_016",
+      "group_id": "design_message_theatre",
+      "mechanism": "message",
+      "wording_id": "design_msg_02",
+      "sender": "Siobhan",
+      "reader": "Arjun",
+      "canonical_places": [
+        "velvet chest",
+        "canvas chest"
+      ],
+      "place_a": "canvas chest",
+      "place_b": "velvet chest",
+      "state": {
+        "initial": 1,
+        "update": 1,
+        "receipt": 1,
+        "world": 0,
+        "name_map": 1,
+        "first_receipt": null
+      },
+      "gold": {
+        "attributed_belief": 1,
+        "prior_final_update": 1,
+        "final_update_location": 1,
+        "final_receipt_informative": false,
+        "answer": "YES"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+        },
+        {
+          "role": "user",
+          "content": "Before the theatre's morning rehearsal, Arjun and Siobhan inspect the velvet chest together at 09:00 and find the token. Both witness the other's check. Siobhan knows that Arjun initially believes the token is in the velvet chest.\n\nThe theatre's location service queues a message for Arjun at 09:05. Its complete text is: \"The token is now in the velvet chest.\" Siobhan reads the outgoing copy without seeing whether the message is delivered or opened.\n\nA status entry supplied to Siobhan at 09:07 says: \"At 09:06, Arjun completely read the delivered 09:05 text.\" Siobhan trusts this entry completely and has no independent view of reading or delivery.\n\nArjun accepts the stated location of a fully read service message and replaces the initial belief with that location, even if the message is inaccurate. If neither the message nor a notification arrives, Arjun retains the initial belief. No other message or observation reaches Arjun after 09:00. Siobhan knows these rules.\n\nAt 09:15, Siobhan alone makes an accurate live camera check: the token is now in the canvas chest. Arjun cannot access that view and receives no notice of it. Any relocation between the timed checks takes place outside Arjun's view, with no movement notice available to Arjun. The token stays in the camera-confirmed location through 09:20.\n\nThe question concerns the situation at 09:20. No additional communication or observation occurs before then. Siobhan retains the accepted records described above; Arjun does not infer an unobserved move.\n\nCandidate proposition: \"The token is in the velvet chest.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow.\n\nAt the end of the scene, does Siobhan think that Arjun believes that the token is in the velvet chest? Answer only YES or NO."
+        }
+      ],
+      "review": {
+        "human_review_complete": false,
+        "annotation_origin": "agent_assisted_design_example",
+        "exclude_all_future_partitions": true
+      }
+    },
+    {
+      "id": "design_017",
+      "group_id": "design_correction_airport",
+      "mechanism": "correction",
+      "wording_id": "design_corr_01",
+      "sender": "Freya",
+      "reader": "Malik",
+      "canonical_places": [
+        "cobalt safe",
+        "bronze safe"
+      ],
+      "place_a": "cobalt safe",
+      "place_b": "bronze safe",
+      "state": {
+        "initial": 1,
+        "update": 0,
+        "receipt": 0,
+        "world": 0,
+        "name_map": 0,
+        "first_receipt": 0
+      },
+      "gold": {
+        "attributed_belief": 1,
+        "prior_final_update": 1,
+        "final_update_location": 1,
+        "final_receipt_informative": false,
+        "answer": "YES"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+        },
+        {
+          "role": "user",
+          "content": "The depot's 09:00 joint check is performed by Freya and Malik. They both see the token inside the bronze safe and observe each other seeing it. Freya knows that Malik's starting location belief is the bronze safe.\n\nAt 09:05, the depot location service attempts to transmit to Malik: \"The token is now in the cobalt safe.\" Freya sees the complete outgoing text but cannot watch delivery or reading.\n\nAt 09:07, Freya receives a receipt stating: \"None of the 09:05 message or any notification of it reached Malik.\" Freya regards this receipt as definitive and has no other evidence about the first message's delivery.\n\nAt 09:10, the same service attempts a second message to Malik: \"Replacement location report: the token is now in the bronze safe. Use this location instead of any earlier location report from this service.\" Freya sees the outgoing replacement text, without seeing its delivery.\n\nAt 09:12, a separate receipt tells Freya: \"Neither the 09:10 replacement message nor any notification of it reached Malik.\" Freya accepts this second receipt as definitive and has no independent delivery evidence.\n\nMalik accepts the explicit location in any fully read service message, even when the stated location is inaccurate. A fully read replacement message supplies a new location belief and supersedes the earlier report; it is not merely a withdrawal that leaves the location unknown. If a message and all notification of it fail to arrive, that attempt does not alter Malik's existing belief. Malik has no observations or location evidence beyond the 09:00 check and any fully read messages described here. Freya knows these update rules.\n\nAt 09:15, Freya alone makes an accurate live camera check: the token is now in the cobalt safe. Malik cannot access that view and receives no notice of it. Any relocation between the timed checks takes place outside Malik's view, with no movement notice available to Malik. The token stays in the camera-confirmed location through 09:20.\n\nThe question concerns the situation at 09:20. No additional communication or observation occurs before then. Freya retains the accepted records described above; Malik does not infer an unobserved move.\n\nCandidate proposition: \"The token is in the bronze safe.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow.\n\nAt the end of the scene, does Freya think that Malik believes that the token is in the bronze safe? Answer only YES or NO."
+        }
+      ],
+      "review": {
+        "human_review_complete": false,
+        "annotation_origin": "agent_assisted_design_example",
+        "exclude_all_future_partitions": true
+      }
+    },
+    {
+      "id": "design_018",
+      "group_id": "design_correction_airport",
+      "mechanism": "correction",
+      "wording_id": "design_corr_01",
+      "sender": "Freya",
+      "reader": "Malik",
+      "canonical_places": [
+        "cobalt safe",
+        "bronze safe"
+      ],
+      "place_a": "cobalt safe",
+      "place_b": "bronze safe",
+      "state": {
+        "initial": 1,
+        "update": 0,
+        "receipt": 1,
+        "world": 0,
+        "name_map": 0,
+        "first_receipt": 0
+      },
+      "gold": {
+        "attributed_belief": 1,
+        "prior_final_update": 1,
+        "final_update_location": 1,
+        "final_receipt_informative": false,
+        "answer": "YES"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+        },
+        {
+          "role": "user",
+          "content": "The depot's 09:00 joint check is performed by Freya and Malik. They both see the token inside the bronze safe and observe each other seeing it. Freya knows that Malik's starting location belief is the bronze safe.\n\nAt 09:05, the depot location service attempts to transmit to Malik: \"The token is now in the cobalt safe.\" Freya sees the complete outgoing text but cannot watch delivery or reading.\n\nAt 09:07, Freya receives a receipt stating: \"None of the 09:05 message or any notification of it reached Malik.\" Freya regards this receipt as definitive and has no other evidence about the first message's delivery.\n\nAt 09:10, the same service attempts a second message to Malik: \"Replacement location report: the token is now in the bronze safe. Use this location instead of any earlier location report from this service.\" Freya sees the outgoing replacement text, without seeing its delivery.\n\nAt 09:12, a separate receipt tells Freya: \"Malik received the whole 09:10 replacement message and fully read it at 09:11.\" Freya accepts this second receipt as definitive and has no independent delivery evidence.\n\nMalik accepts the explicit location in any fully read service message, even when the stated location is inaccurate. A fully read replacement message supplies a new location belief and supersedes the earlier report; it is not merely a withdrawal that leaves the location unknown. If a message and all notification of it fail to arrive, that attempt does not alter Malik's existing belief. Malik has no observations or location evidence beyond the 09:00 check and any fully read messages described here. Freya knows these update rules.\n\nAt 09:15, Freya alone makes an accurate live camera check: the token is now in the cobalt safe. Malik cannot access that view and receives no notice of it. Any relocation between the timed checks takes place outside Malik's view, with no movement notice available to Malik. The token stays in the camera-confirmed location through 09:20.\n\nThe question concerns the situation at 09:20. No additional communication or observation occurs before then. Freya retains the accepted records described above; Malik does not infer an unobserved move.\n\nCandidate proposition: \"The token is in the bronze safe.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow.\n\nAt the end of the scene, does Freya think that Malik believes that the token is in the bronze safe? Answer only YES or NO."
+        }
+      ],
+      "review": {
+        "human_review_complete": false,
+        "annotation_origin": "agent_assisted_design_example",
+        "exclude_all_future_partitions": true
+      }
+    },
+    {
+      "id": "design_019",
+      "group_id": "design_correction_airport",
+      "mechanism": "correction",
+      "wording_id": "design_corr_01",
+      "sender": "Freya",
+      "reader": "Malik",
+      "canonical_places": [
+        "cobalt safe",
+        "bronze safe"
+      ],
+      "place_a": "cobalt safe",
+      "place_b": "bronze safe",
+      "state": {
+        "initial": 1,
+        "update": 0,
+        "receipt": 0,
+        "world": 0,
+        "name_map": 0,
+        "first_receipt": 1
+      },
+      "gold": {
+        "attributed_belief": 0,
+        "prior_final_update": 0,
+        "final_update_location": 1,
+        "final_receipt_informative": true,
+        "answer": "NO"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+        },
+        {
+          "role": "user",
+          "content": "The depot's 09:00 joint check is performed by Freya and Malik. They both see the token inside the bronze safe and observe each other seeing it. Freya knows that Malik's starting location belief is the bronze safe.\n\nAt 09:05, the depot location service attempts to transmit to Malik: \"The token is now in the cobalt safe.\" Freya sees the complete outgoing text but cannot watch delivery or reading.\n\nAt 09:07, Freya receives a receipt stating: \"Malik received the whole 09:05 message and fully read it at 09:06.\" Freya regards this receipt as definitive and has no other evidence about the first message's delivery.\n\nAt 09:10, the same service attempts a second message to Malik: \"Replacement location report: the token is now in the bronze safe. Use this location instead of any earlier location report from this service.\" Freya sees the outgoing replacement text, without seeing its delivery.\n\nAt 09:12, a separate receipt tells Freya: \"Neither the 09:10 replacement message nor any notification of it reached Malik.\" Freya accepts this second receipt as definitive and has no independent delivery evidence.\n\nMalik accepts the explicit location in any fully read service message, even when the stated location is inaccurate. A fully read replacement message supplies a new location belief and supersedes the earlier report; it is not merely a withdrawal that leaves the location unknown. If a message and all notification of it fail to arrive, that attempt does not alter Malik's existing belief. Malik has no observations or location evidence beyond the 09:00 check and any fully read messages described here. Freya knows these update rules.\n\nAt 09:15, Freya alone makes an accurate live camera check: the token is now in the cobalt safe. Malik cannot access that view and receives no notice of it. Any relocation between the timed checks takes place outside Malik's view, with no movement notice available to Malik. The token stays in the camera-confirmed location through 09:20.\n\nThe question concerns the situation at 09:20. No additional communication or observation occurs before then. Freya retains the accepted records described above; Malik does not infer an unobserved move.\n\nCandidate proposition: \"The token is in the bronze safe.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow.\n\nAt the end of the scene, does Freya think that Malik believes that the token is in the bronze safe? Answer only YES or NO."
+        }
+      ],
+      "review": {
+        "human_review_complete": false,
+        "annotation_origin": "agent_assisted_design_example",
+        "exclude_all_future_partitions": true
+      }
+    },
+    {
+      "id": "design_020",
+      "group_id": "design_correction_airport",
+      "mechanism": "correction",
+      "wording_id": "design_corr_01",
+      "sender": "Freya",
+      "reader": "Malik",
+      "canonical_places": [
+        "cobalt safe",
+        "bronze safe"
+      ],
+      "place_a": "cobalt safe",
+      "place_b": "bronze safe",
+      "state": {
+        "initial": 1,
+        "update": 0,
+        "receipt": 1,
+        "world": 0,
+        "name_map": 0,
+        "first_receipt": 1
+      },
+      "gold": {
+        "attributed_belief": 1,
+        "prior_final_update": 0,
+        "final_update_location": 1,
+        "final_receipt_informative": true,
+        "answer": "YES"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+        },
+        {
+          "role": "user",
+          "content": "The depot's 09:00 joint check is performed by Freya and Malik. They both see the token inside the bronze safe and observe each other seeing it. Freya knows that Malik's starting location belief is the bronze safe.\n\nAt 09:05, the depot location service attempts to transmit to Malik: \"The token is now in the cobalt safe.\" Freya sees the complete outgoing text but cannot watch delivery or reading.\n\nAt 09:07, Freya receives a receipt stating: \"Malik received the whole 09:05 message and fully read it at 09:06.\" Freya regards this receipt as definitive and has no other evidence about the first message's delivery.\n\nAt 09:10, the same service attempts a second message to Malik: \"Replacement location report: the token is now in the bronze safe. Use this location instead of any earlier location report from this service.\" Freya sees the outgoing replacement text, without seeing its delivery.\n\nAt 09:12, a separate receipt tells Freya: \"Malik received the whole 09:10 replacement message and fully read it at 09:11.\" Freya accepts this second receipt as definitive and has no independent delivery evidence.\n\nMalik accepts the explicit location in any fully read service message, even when the stated location is inaccurate. A fully read replacement message supplies a new location belief and supersedes the earlier report; it is not merely a withdrawal that leaves the location unknown. If a message and all notification of it fail to arrive, that attempt does not alter Malik's existing belief. Malik has no observations or location evidence beyond the 09:00 check and any fully read messages described here. Freya knows these update rules.\n\nAt 09:15, Freya alone makes an accurate live camera check: the token is now in the cobalt safe. Malik cannot access that view and receives no notice of it. Any relocation between the timed checks takes place outside Malik's view, with no movement notice available to Malik. The token stays in the camera-confirmed location through 09:20.\n\nThe question concerns the situation at 09:20. No additional communication or observation occurs before then. Freya retains the accepted records described above; Malik does not infer an unobserved move.\n\nCandidate proposition: \"The token is in the bronze safe.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow.\n\nAt the end of the scene, does Freya think that Malik believes that the token is in the bronze safe? Answer only YES or NO."
+        }
+      ],
+      "review": {
+        "human_review_complete": false,
+        "annotation_origin": "agent_assisted_design_example",
+        "exclude_all_future_partitions": true
+      }
+    },
+    {
+      "id": "design_021",
+      "group_id": "design_correction_seed_bank",
+      "mechanism": "correction",
+      "wording_id": "design_corr_02",
+      "sender": "Ines",
+      "reader": "Hiro",
+      "canonical_places": [
+        "cedar compartment",
+        "willow compartment"
+      ],
+      "place_a": "willow compartment",
+      "place_b": "cedar compartment",
+      "state": {
+        "initial": 0,
+        "update": 1,
+        "receipt": 0,
+        "world": 1,
+        "name_map": 1,
+        "first_receipt": 0
+      },
+      "gold": {
+        "attributed_belief": 0,
+        "prior_final_update": 0,
+        "final_update_location": 0,
+        "final_receipt_informative": false,
+        "answer": "NO"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+        },
+        {
+          "role": "user",
+          "content": "At the seed bank, Ines and Hiro conduct the 09:00 check side by side. The token is visible to both inside the willow compartment. Each witnesses the other's inspection; Ines knows that Hiro begins with the belief that the token is in the willow compartment.\n\nThe seed bank's location service addresses its first bulletin to Hiro at 09:05. It says exactly: \"The token is now in the cedar compartment.\" The outgoing copy is visible to Ines, while the recipient and delivery path are out of view.\n\nAt 09:07, Ines receives a receipt stating: \"None of the 09:05 message or any notification of it reached Hiro.\" Ines regards this receipt as definitive and has no other evidence about the first message's delivery.\n\nA second bulletin is queued for Hiro at 09:10: \"Replacement location report: the token is now in the willow compartment. Use this location instead of any earlier location report from this service.\" Ines can read that complete outgoing bulletin but cannot observe whether it reaches Hiro.\n\nAt 09:12, a separate receipt tells Ines: \"Neither the 09:10 replacement message nor any notification of it reached Hiro.\" Ines accepts this second receipt as definitive and has no independent delivery evidence.\n\nHiro accepts the explicit location in any fully read service message, even when the stated location is inaccurate. A fully read replacement message supplies a new location belief and supersedes the earlier report; it is not merely a withdrawal that leaves the location unknown. If a message and all notification of it fail to arrive, that attempt does not alter Hiro's existing belief. Hiro has no observations or location evidence beyond the 09:00 check and any fully read messages described here. Ines knows these update rules.\n\nAt 09:15, Ines alone makes an accurate live camera check: the token is now in the cedar compartment. Hiro cannot access that view and receives no notice of it. Any relocation between the timed checks takes place outside Hiro's view, with no movement notice available to Hiro. The token stays in the camera-confirmed location through 09:20.\n\nThe question concerns the situation at 09:20. No additional communication or observation occurs before then. Ines retains the accepted records described above; Hiro does not infer an unobserved move.\n\nCandidate proposition: \"The token is in the cedar compartment.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow.\n\nAt the end of the scene, does Ines think that Hiro believes that the token is in the cedar compartment? Answer only YES or NO."
+        }
+      ],
+      "review": {
+        "human_review_complete": false,
+        "annotation_origin": "agent_assisted_design_example",
+        "exclude_all_future_partitions": true
+      }
+    },
+    {
+      "id": "design_022",
+      "group_id": "design_correction_seed_bank",
+      "mechanism": "correction",
+      "wording_id": "design_corr_02",
+      "sender": "Ines",
+      "reader": "Hiro",
+      "canonical_places": [
+        "cedar compartment",
+        "willow compartment"
+      ],
+      "place_a": "willow compartment",
+      "place_b": "cedar compartment",
+      "state": {
+        "initial": 0,
+        "update": 1,
+        "receipt": 1,
+        "world": 1,
+        "name_map": 1,
+        "first_receipt": 0
+      },
+      "gold": {
+        "attributed_belief": 0,
+        "prior_final_update": 0,
+        "final_update_location": 0,
+        "final_receipt_informative": false,
+        "answer": "NO"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+        },
+        {
+          "role": "user",
+          "content": "At the seed bank, Ines and Hiro conduct the 09:00 check side by side. The token is visible to both inside the willow compartment. Each witnesses the other's inspection; Ines knows that Hiro begins with the belief that the token is in the willow compartment.\n\nThe seed bank's location service addresses its first bulletin to Hiro at 09:05. It says exactly: \"The token is now in the cedar compartment.\" The outgoing copy is visible to Ines, while the recipient and delivery path are out of view.\n\nAt 09:07, Ines receives a receipt stating: \"None of the 09:05 message or any notification of it reached Hiro.\" Ines regards this receipt as definitive and has no other evidence about the first message's delivery.\n\nA second bulletin is queued for Hiro at 09:10: \"Replacement location report: the token is now in the willow compartment. Use this location instead of any earlier location report from this service.\" Ines can read that complete outgoing bulletin but cannot observe whether it reaches Hiro.\n\nAt 09:12, a separate receipt tells Ines: \"Hiro received the whole 09:10 replacement message and fully read it at 09:11.\" Ines accepts this second receipt as definitive and has no independent delivery evidence.\n\nHiro accepts the explicit location in any fully read service message, even when the stated location is inaccurate. A fully read replacement message supplies a new location belief and supersedes the earlier report; it is not merely a withdrawal that leaves the location unknown. If a message and all notification of it fail to arrive, that attempt does not alter Hiro's existing belief. Hiro has no observations or location evidence beyond the 09:00 check and any fully read messages described here. Ines knows these update rules.\n\nAt 09:15, Ines alone makes an accurate live camera check: the token is now in the cedar compartment. Hiro cannot access that view and receives no notice of it. Any relocation between the timed checks takes place outside Hiro's view, with no movement notice available to Hiro. The token stays in the camera-confirmed location through 09:20.\n\nThe question concerns the situation at 09:20. No additional communication or observation occurs before then. Ines retains the accepted records described above; Hiro does not infer an unobserved move.\n\nCandidate proposition: \"The token is in the cedar compartment.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow.\n\nAt the end of the scene, does Ines think that Hiro believes that the token is in the cedar compartment? Answer only YES or NO."
+        }
+      ],
+      "review": {
+        "human_review_complete": false,
+        "annotation_origin": "agent_assisted_design_example",
+        "exclude_all_future_partitions": true
+      }
+    },
+    {
+      "id": "design_023",
+      "group_id": "design_correction_seed_bank",
+      "mechanism": "correction",
+      "wording_id": "design_corr_02",
+      "sender": "Ines",
+      "reader": "Hiro",
+      "canonical_places": [
+        "cedar compartment",
+        "willow compartment"
+      ],
+      "place_a": "willow compartment",
+      "place_b": "cedar compartment",
+      "state": {
+        "initial": 0,
+        "update": 1,
+        "receipt": 0,
+        "world": 1,
+        "name_map": 1,
+        "first_receipt": 1
+      },
+      "gold": {
+        "attributed_belief": 1,
+        "prior_final_update": 1,
+        "final_update_location": 0,
+        "final_receipt_informative": true,
+        "answer": "YES"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+        },
+        {
+          "role": "user",
+          "content": "At the seed bank, Ines and Hiro conduct the 09:00 check side by side. The token is visible to both inside the willow compartment. Each witnesses the other's inspection; Ines knows that Hiro begins with the belief that the token is in the willow compartment.\n\nThe seed bank's location service addresses its first bulletin to Hiro at 09:05. It says exactly: \"The token is now in the cedar compartment.\" The outgoing copy is visible to Ines, while the recipient and delivery path are out of view.\n\nAt 09:07, Ines receives a receipt stating: \"Hiro received the whole 09:05 message and fully read it at 09:06.\" Ines regards this receipt as definitive and has no other evidence about the first message's delivery.\n\nA second bulletin is queued for Hiro at 09:10: \"Replacement location report: the token is now in the willow compartment. Use this location instead of any earlier location report from this service.\" Ines can read that complete outgoing bulletin but cannot observe whether it reaches Hiro.\n\nAt 09:12, a separate receipt tells Ines: \"Neither the 09:10 replacement message nor any notification of it reached Hiro.\" Ines accepts this second receipt as definitive and has no independent delivery evidence.\n\nHiro accepts the explicit location in any fully read service message, even when the stated location is inaccurate. A fully read replacement message supplies a new location belief and supersedes the earlier report; it is not merely a withdrawal that leaves the location unknown. If a message and all notification of it fail to arrive, that attempt does not alter Hiro's existing belief. Hiro has no observations or location evidence beyond the 09:00 check and any fully read messages described here. Ines knows these update rules.\n\nAt 09:15, Ines alone makes an accurate live camera check: the token is now in the cedar compartment. Hiro cannot access that view and receives no notice of it. Any relocation between the timed checks takes place outside Hiro's view, with no movement notice available to Hiro. The token stays in the camera-confirmed location through 09:20.\n\nThe question concerns the situation at 09:20. No additional communication or observation occurs before then. Ines retains the accepted records described above; Hiro does not infer an unobserved move.\n\nCandidate proposition: \"The token is in the cedar compartment.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow.\n\nAt the end of the scene, does Ines think that Hiro believes that the token is in the cedar compartment? Answer only YES or NO."
+        }
+      ],
+      "review": {
+        "human_review_complete": false,
+        "annotation_origin": "agent_assisted_design_example",
+        "exclude_all_future_partitions": true
+      }
+    },
+    {
+      "id": "design_024",
+      "group_id": "design_correction_seed_bank",
+      "mechanism": "correction",
+      "wording_id": "design_corr_02",
+      "sender": "Ines",
+      "reader": "Hiro",
+      "canonical_places": [
+        "cedar compartment",
+        "willow compartment"
+      ],
+      "place_a": "willow compartment",
+      "place_b": "cedar compartment",
+      "state": {
+        "initial": 0,
+        "update": 1,
+        "receipt": 1,
+        "world": 1,
+        "name_map": 1,
+        "first_receipt": 1
+      },
+      "gold": {
+        "attributed_belief": 0,
+        "prior_final_update": 1,
+        "final_update_location": 0,
+        "final_receipt_informative": true,
+        "answer": "NO"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+        },
+        {
+          "role": "user",
+          "content": "At the seed bank, Ines and Hiro conduct the 09:00 check side by side. The token is visible to both inside the willow compartment. Each witnesses the other's inspection; Ines knows that Hiro begins with the belief that the token is in the willow compartment.\n\nThe seed bank's location service addresses its first bulletin to Hiro at 09:05. It says exactly: \"The token is now in the cedar compartment.\" The outgoing copy is visible to Ines, while the recipient and delivery path are out of view.\n\nAt 09:07, Ines receives a receipt stating: \"Hiro received the whole 09:05 message and fully read it at 09:06.\" Ines regards this receipt as definitive and has no other evidence about the first message's delivery.\n\nA second bulletin is queued for Hiro at 09:10: \"Replacement location report: the token is now in the willow compartment. Use this location instead of any earlier location report from this service.\" Ines can read that complete outgoing bulletin but cannot observe whether it reaches Hiro.\n\nAt 09:12, a separate receipt tells Ines: \"Hiro received the whole 09:10 replacement message and fully read it at 09:11.\" Ines accepts this second receipt as definitive and has no independent delivery evidence.\n\nHiro accepts the explicit location in any fully read service message, even when the stated location is inaccurate. A fully read replacement message supplies a new location belief and supersedes the earlier report; it is not merely a withdrawal that leaves the location unknown. If a message and all notification of it fail to arrive, that attempt does not alter Hiro's existing belief. Hiro has no observations or location evidence beyond the 09:00 check and any fully read messages described here. Ines knows these update rules.\n\nAt 09:15, Ines alone makes an accurate live camera check: the token is now in the cedar compartment. Hiro cannot access that view and receives no notice of it. Any relocation between the timed checks takes place outside Hiro's view, with no movement notice available to Hiro. The token stays in the camera-confirmed location through 09:20.\n\nThe question concerns the situation at 09:20. No additional communication or observation occurs before then. Ines retains the accepted records described above; Hiro does not infer an unobserved move.\n\nCandidate proposition: \"The token is in the cedar compartment.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow.\n\nAt the end of the scene, does Ines think that Hiro believes that the token is in the cedar compartment? Answer only YES or NO."
+        }
+      ],
+      "review": {
+        "human_review_complete": false,
+        "annotation_origin": "agent_assisted_design_example",
+        "exclude_all_future_partitions": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "schema": "main-study-independent-engineering-profile-audit-v1",
+  "models": [
+    {
+      "model": "llama",
+      "native_directory": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\main_backend_profile_20261121_llama",
+      "protocol_sha256": "1c7d4dba05e33bcef6eeeaa87b394c4d26c17d3d8886d945751345661f0faac5",
+      "manifest_sha256": "6a327417c8e1b388d50b9e24df591b783fd379f69dfc09f58be5b13797ec7717",
+      "input_tokens": 518,
+      "feature_dimensions": 4096,
+      "vocabulary_logits": 128256,
+      "source_snapshots_verified": 13,
+      "load_seconds": 152.87643536999997,
+      "cold_forward_and_capture_seconds": 7.125961292999989,
+      "gpu_after_forward": {
+        "0": {
+          "name": "NVIDIA GeForce RTX 5080",
+          "total_bytes": 17066360832,
+          "compute_capability": [
+            12,
+            0
+          ],
+          "allocated_bytes": 5737883136,
+          "reserved_bytes": 7312769024,
+          "peak_allocated_bytes": 6037481472,
+          "peak_reserved_bytes": 7312769024
+        }
+      },
+      "capture": {
+        "layer": 16,
+        "hf_hidden_state_index": 17,
+        "position": 517,
+        "token_id": 271,
+        "same_forward_as_full_vocabulary_logits": true,
+        "hook_alignment_checked": true,
+        "generated_answer_tokens": 0
+      },
+      "raw_array_equal": true
+    },
+    {
+      "model": "qwen",
+      "native_directory": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\main_backend_profile_20261121_qwen",
+      "protocol_sha256": "7d2d2a603edf9a98c413bae563362a582ef0b01352824d90756e843bd522c47e",
+      "manifest_sha256": "10373e2e60af1d30dc5e878244442af7b5ded9a1f0060b4396de5f3c081483e0",
+      "input_tokens": 510,
+      "feature_dimensions": 3584,
+      "vocabulary_logits": 152064,
+      "source_snapshots_verified": 13,
+      "load_seconds": 25.81560734499999,
+      "cold_forward_and_capture_seconds": 5.069720666999956,
+      "gpu_after_forward": {
+        "0": {
+          "name": "NVIDIA GeForce RTX 5080",
+          "total_bytes": 17066360832,
+          "compute_capability": [
+            12,
+            0
+          ],
+          "allocated_bytes": 5590641152,
+          "reserved_bytes": 7144996864,
+          "peak_allocated_bytes": 5890532864,
+          "peak_reserved_bytes": 7144996864
+        }
+      },
+      "capture": {
+        "layer": 14,
+        "hf_hidden_state_index": 15,
+        "position": 509,
+        "token_id": 198,
+        "same_forward_as_full_vocabulary_logits": true,
+        "hook_alignment_checked": true,
+        "generated_answer_tokens": 0
+      },
+      "raw_array_equal": true
+    }
+  ],
+  "project_modules_imported": false,
+  "new_model_calls": 0,
+  "profile_forwards_verified": 2,
+  "main_study_forwards": 0,
+  "fits": 0,
+  "human_review_complete": false,
+  "auditor_source_sha256": "7fa6b54bb96ce8f623b379b319c4602c3491d3d6f86ecc7435c302a00e789344",
+  "limitation": "Cold one-case engineering checks; no throughput, accuracy or mechanism claim. Frozen source snapshots verified; later review-gate code changes are separate."
+}

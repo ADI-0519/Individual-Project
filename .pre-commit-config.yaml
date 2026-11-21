@@ -7,8 +7,9 @@ repos:
       - id: check-added-large-files
         entry: python -m pre_commit_hooks.check_added_large_files
         args: [--maxkb=1000]
-        # Reviewed 128-case source bank is 1.13 MiB; raw runs remain ignored.
-        exclude: ^(uv\.lock|data/belief_diagnostic/contrast_validation_v1\.json)$
+        # Versioned source/derived input packets; raw model runs remain ignored.
+        # The three main-study files reproduce from the compact authored bank.
+        exclude: ^(uv\.lock|data/belief_diagnostic/contrast_validation_v1\.json|data/belief_main/main_v1/split_manifest_v1\.json|docs/review/main_study_v1/(review_prompts\.jsonl|review\.html))$
       - id: check-merge-conflict
         entry: python -m pre_commit_hooks.check_merge_conflict
       - id: check-yaml
@@ -19,12 +20,13 @@ repos:
         entry: python -m pre_commit_hooks.detect_private_key
       - id: end-of-file-fixer
         entry: python -m pre_commit_hooks.end_of_file_fixer
-        exclude: ^data/annotations/.*_agent_draft\.csv$
+        # Byte-bound research inputs are checked by their manifest validator.
+        exclude: ^(data/annotations/.*_agent_draft\.csv|data/belief_main/.*\.json|docs/review/main_study_v1/.*|research/deceptionbench/.*\.json)$
       - id: trailing-whitespace
         entry: python -m pre_commit_hooks.trailing_whitespace_fixer
         args: [--markdown-linebreak-ext=md]
         # Preserve exact captured evidence, including internal line-end spaces.
-        exclude: ^(data/annotations/.*_agent_draft\.csv|docs/review/natural_selection_v1_human/review\.md)$
+        exclude: ^(data/annotations/.*_agent_draft\.csv|docs/review/natural_selection_v1_human/review\.md|data/belief_main/.*\.json|docs/review/main_study_v1/.*|research/deceptionbench/.*\.json)$
   - repo: local
     hooks:
       - id: ruff-check

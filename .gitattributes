@@ -12,6 +12,12 @@ data/annotations/natural_selection_review_protocol_v1.json -text whitespace=-bla
 data/belief_diagnostic/future_goal_content_controls_draft_v1.json -text
 data/belief_diagnostic/crossed_belief_validation_v1.json -text
 
+# Versioned main-study inputs and review packets carry raw-byte SHA256 bindings.
+data/belief_main/*.json -text whitespace=-blank-at-eol,-blank-at-eof
+data/belief_main/main_v1/*.json -text whitespace=-blank-at-eol,-blank-at-eof
+docs/review/main_study_v1/* -text whitespace=-blank-at-eol,-blank-at-eof
+research/deceptionbench/*.json -text whitespace=-blank-at-eol,-blank-at-eof
+
 *.bat text eol=crlf
 *.cmd text eol=crlf
 *.png binary

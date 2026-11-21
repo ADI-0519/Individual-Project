@@ -1,0 +1,98 @@
+{
+  "schema": "main-study-baseline-protocol-v1",
+  "status": "specified_unexecuted",
+  "target": "fictional sender-attributed reader belief content, not deception",
+  "numerical_seed": 20261121,
+  "training_sizes": [
+    128,
+    256,
+    512
+  ],
+  "allocation_seeds": [
+    11,
+    23,
+    37,
+    53,
+    71
+  ],
+  "fitting": {
+    "C_grid": [
+      0.001,
+      0.01,
+      0.1,
+      1.0,
+      10.0
+    ],
+    "solver": "lbfgs",
+    "max_iter": 2000,
+    "shared_C": "mean of equal-scenario development log losses; lower C breaks ties",
+    "nonconvergence": "exclude a C candidate for both arms if either arm fails",
+    "activation_pipeline": "float64; train-only StandardScaler then row L2 then logistic",
+    "fitting_support": "matched N and story groups; restricted versus full coverage",
+    "test_policy": "test and correction rows forbidden to fitting and selection"
+  },
+  "tfidf": {
+    "lowercase": true,
+    "analyzer": "word",
+    "token_pattern": "(?u)\\b\\w+\\b",
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 1,
+    "max_df": 1.0,
+    "max_features": 50000,
+    "sublinear_tf": true,
+    "norm": "l2",
+    "dtype": "float64"
+  },
+  "raw_threshold": 0.5,
+  "tie_class": 0,
+  "calibration": {
+    "loss": "equal-scenario development logistic",
+    "slope_min": 0,
+    "initial_slope_intercept": [
+      1.0,
+      0.0
+    ],
+    "method": "L-BFGS-B",
+    "maxiter": 2000,
+    "ftol": 1e-12,
+    "gtol": 1e-08,
+    "penalty": null,
+    "scope": "development only; practical comparisons, not primary raw decisions"
+  },
+  "output_scoring": {
+    "candidate_strings": [
+      "YES",
+      "NO"
+    ],
+    "preflight": "distinct bare single tokens; exact decode; neither special; no truncation",
+    "logit_difference": "logit(YES) - logit(NO)",
+    "probability": "sigmoid of logit difference",
+    "capture": "same forward as the last-prompt-token activation; no generated answer"
+  },
+  "rule_baselines": [
+    "constant_0",
+    "initial",
+    "final_update",
+    "world"
+  ],
+  "symbolic_oracle": "labelled separately; may use structured states and gold",
+  "text_monitor": {
+    "protocol_path": "data/belief_main/text_monitor_protocol_v1.json",
+    "protocol_sha256": "bcefd89009250413e7759991188e94f83169d7a7943345255c6a7b24c192d936",
+    "method": "prose evidence extractor then symbolic fold; no gold/state model input",
+    "invalid_policy": "null predictions/scores; incorrect in full-denominator metrics",
+    "output_directories": "separate fresh preparation for development and test"
+  },
+  "primary_analysis": {
+    "model": "llama",
+    "training_n": 512,
+    "unit": "correction scenario; paired allocations averaged within group",
+    "metric": "full minus restricted complete-quartet accuracy",
+    "bootstrap_draws": 10000,
+    "bootstrap_seed": 20261121,
+    "bootstrap_unit": "whole correction group, preserving all paired allocation scores"
+  }
+}

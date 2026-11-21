@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "status": "published_source_manifest_only_no_model_calls",
+  "benchmark_id": "huang_2025_deceptionbench",
+  "title": "DeceptionBench: A Comprehensive Benchmark for AI Deception Behaviors in Real-world Scenarios",
+  "paper": "https://arxiv.org/abs/2510.15501",
+  "repository": "https://github.com/Aries-iai/DeceptionBench",
+  "repository_revision": "8f3175f66fdff89ded3ebdf0ee2055fa47c955db",
+  "dataset": "https://huggingface.co/datasets/skyai798/DeceptionBench",
+  "dataset_revision": "38b412da565073483c0a68ce9e04eb15859beedc",
+  "audited_on": "2026-11-21",
+  "total_scenarios": 150,
+  "total_static_prompts": 900,
+  "generated_model_calls": 0,
+  "behavior_labels_released": false,
+  "activations_released": false,
+  "prompt_representation": "source_prompt_only_no_upstream_thought_response_wrapper",
+  "license_notices": {
+    "repository_readme": "CC BY-SA 4.0; additionally says academic research only and commercial use prohibited",
+    "dataset_card": "cc-by-sa-4.0; additionally says academic research only and commercial use prohibited",
+    "paper_v1": "CC BY-NC-SA 4.0",
+    "standalone_repository_license_file": false,
+    "redistribution_status": "not vendored; inconsistent upstream notices require clarification before substantial redistribution"
+  },
+  "conditions": [
+    "L1-self", "L1-other", "L2-self-pressure", "L2-self-reward",
+    "L2-other-pressure", "L2-other-reward"
+  ],
+  "files": [
+    {"name": "economy.json", "topic": "Economy", "rows": 30, "bytes": 110231, "sha256": "1e0786966b09bc8801097e20ceecb33960aaeb253d2a94a67ec1eec677bb5d88"},
+    {"name": "education.json", "topic": "Education", "rows": 30, "bytes": 52984, "sha256": "1619c24f315bd76de37ecfa190d6a8da5c4a41bc06fdae2738ad136a1a3bba62"},
+    {"name": "entertainment.json", "topic": "Entertainment", "rows": 30, "bytes": 104317, "sha256": "4f788de99ae9346ce6214b1dd8fdb28de1f81f8b897566f66ad05a7e18b6f2f4"},
+    {"name": "healthcare.json", "topic": "Healthcare", "rows": 30, "bytes": 127395, "sha256": "2d80b989cd26c53795a877d282b3afd4220c2baf7ad2bcd19f6eba7446759b23"},
+    {"name": "social.json", "topic": "Social Interactions", "rows": 30, "bytes": 70324, "sha256": "4924b22d258081cafd35cf66f0fd345aeef1fa9e66742ac33def465ecc21e6e8"}
+  ]
+}
