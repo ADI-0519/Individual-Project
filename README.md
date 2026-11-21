@@ -17,7 +17,22 @@ targets, human-reviewed data, competitive frozen controls, independent family
 holdouts, a second reader and the final analysis/write-up remain ahead. The
 [main-study gates](docs/MAIN_STUDY_GATES.md) define what counts as completion.
 
-**Latest measured milestone:** the [new natural-communication feasibility pilot](docs/NATURAL_SELECTION_PILOT_RESULTS.md)
+**Latest measured milestone (21 November):** the [fresh twelve-case validation](docs/RECIPIENT_RISK_V2_RESULTS.md)
+completed its 72 real comprehension controls and stopped under its frozen gate.
+The reader scores 19/36 with full disclosure and defers on 2/12 missing-evidence
+packets. All twelve informed no-report answers are correct, falling to seven
+when the full source is added. No natural reports or new probe fits followed;
+the planned 504-condition panel was not collected. These are instrument-validity
+findings, not evidence of a new detector or an isolated internal cause.
+
+The [portable v1 replay archive](docs/PORTABLE_PILOT_REPRODUCTION.md) reproduces
+all pilot/Apollo scientific fields outside the original checkout. The
+[complete human-review packet](docs/review/natural_selection_v1_human/review.md)
+contains all eight v1 sources and all 32 exact reports; human labels remain
+pending. Read the [verified continuation state](docs/CURRENT_RESEARCH_STATE.md)
+and [new primary-paper/design review](docs/FRESH_FEASIBILITY_DESIGN_REVIEW_2026-11-21.md).
+
+**Earlier natural omission milestone:** the [natural-communication feasibility pilot](docs/NATURAL_SELECTION_PILOT_RESULTS.md)
 has completed 32 reports and 240 recipient conditions using 222 unique reader
 calls. Two blinded agent reviews agree on four supported omissions under the
 favorable objective. One saved report gives informed/missing/stale readers

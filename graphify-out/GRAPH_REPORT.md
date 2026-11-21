@@ -1,7 +1,7 @@
-# Graph Report - Individual-Project  (2026-11-20)
+# Graph Report - Individual-Project  (2026-11-21)
 
 ## Corpus Check
-- 64 files · ~112,974 words
+- 64 files · ~113,095 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -133,7 +133,7 @@ Nodes (16): build_reader_messages(), _counts(), _identifier(), _job_id(), load_p
 
 ### Community 13 - "Measured Communication And Controls"
 Cohesion: 0.15
-Nodes (18): Stop extending toy stories and measure actual communication with strong comparators, Actual reader APPROVE REJECT DEFER answers are prediction targets, Exact deterministic reader simulation is an oracle ceiling, not a discovery, Original neutral block-8 outcome weights transfer unchanged after each report, Two explicit readout-held-out rules share components with training, 144 evidence-only natural reports across 24 all-test cases, 288 same-report evidence and restoration conditions before prompt caching, Known-message 56 of 64 belief result remains auxiliary and is not transferred here (+10 more)
+Nodes (18): README: fresh 72-control recipient qualification failed; earlier omission pilot remains development, Stop extending toy stories and measure actual communication with strong comparators, Actual reader APPROVE REJECT DEFER answers are prediction targets, Exact deterministic reader simulation is an oracle ceiling, not a discovery, Original neutral block-8 outcome weights transfer unchanged after each report, Two explicit readout-held-out rules share components with training, 144 evidence-only natural reports across 24 all-test cases, 288 same-report evidence and restoration conditions before prompt caching (+10 more)
 
 ### Community 17 - "Failed Gate And Conditional Study"
 Cohesion: 0.21
@@ -190,13 +190,13 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `plot_records()` connect `Evidence Role Scientific Figures` to `Measured Progress Presentation`, `Evidence Role Reader Failures`, `Outcome Readout Fitting`?**
   _High betweenness centrality (0.055) - this node is a cross-community bridge._
 
-## Bounded README refresh
+## Bounded README refresh, 21 November 2026
 
-Only README.md was reread completely and semantically refreshed. Its three existing nodes and five existing edges now distinguish the completed 32-report/240-condition feasibility pilot from the earlier 144-report study. The latest pilot still fails two prospective criteria, human review remains pending, and no new probe was fitted. This is README-reported status, not a new extraction of the linked result files.
+Only README.md was fully reread (367 lines). Its three existing nodes and five existing edges now distinguish the failed twelve-case, 72-control recipient qualification from the earlier 32-report/240-condition omission pilot. The fresh reader scores 19/36 with full disclosure and defers in 2/12 missing-evidence packets. Informed no-report correctness is 12/12, falling to 7/12 with the full source. No natural reports or new probe fits followed, and the planned 504-condition panel was not collected. These are README-reported instrument-validity findings, not independent result-file extraction.
 
-The 64-source allowlist remains unchanged: 30 Markdown files and 34 Python AST modules. All 63 other source hashes and graph contributions were preserved. New natural-selection modules, protocols, result documents, figures, raw runs and curated JSON remain UNINDEXED. Their paths in README node metadata are links only. APOLLO_METHOD.md also remains outside the map.
+The explicit 64-source allowlist remains unchanged: 30 Markdown sources and 34 Python AST modules. All 63 other source hashes and contributions were preserved. New v2 code, bank, protocol, results, figures and JSON; the portable archive and human-review packet; and other linked new sources remain UNINDEXED. Their paths in README metadata are links only. No corpus detection, AST extraction, model call, new node/edge or external API occurred. Topology and weights are unchanged; communities were retained while cohesion and report rankings were recomputed. Earlier raw-extraction warnings and dependency placeholders remain visible in GRAPH_HEALTH.json.
 
-No corpus detection, AST extraction, model call, new node/edge creation or external API occurred. Graph topology and weights are unchanged, so existing communities were retained; cohesion and report rankings were recomputed. Previous raw extraction warnings and unindexed dependency placeholders remain recorded in GRAPH_HEALTH.json. Host-agent token cost is unmeasured.
+Source locations were checked against actual current README section lines: latest 20-26, earlier natural 35-45, earlier communication 47-60 and controlled failure 62-73. Node/edge metadata also records explicit starting/ending lines and matching anchor text. Host-agent token usage is unmeasured.
 
 Raw community cohesion scores:
 

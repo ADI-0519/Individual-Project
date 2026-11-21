@@ -1,0 +1,812 @@
+{
+  "schema": "recipient_risk_validation_bound_analysis_v2",
+  "created_utc": "2026-11-21T12:13:57.833487+00:00",
+  "attempt_status": "qualification_failed",
+  "is_test_fixture": false,
+  "verification_scope": {
+    "record_bindings_verified": true,
+    "independent_tokenization_or_decoding_repeated": false,
+    "tokenization_claim": "Exact input tokenization and output decoding were checked by the frozen runner during execution; this analysis verifies saved identities, hashes and token coordinates.",
+    "model_inference_repeated": false,
+    "new_probe_fits": 0
+  },
+  "bindings": {
+    "run": "/home/adirj/kcl-latent-probes-runs/recipient_risk_validation_v2_20261121",
+    "analysis_script_sha256": "6c0ac92ee9ba4bdb99714136b482780b576f798c6898cb57ae209a168fc2c17d",
+    "file_sha256": {
+      "manifest": "234376d8fe2167942e48ff10a20ad18e6f70b18154378af4bc998a99547025c1",
+      "protocol": "bf376a74681106444be0987284f4481f0d854dac97f8196c08e79ad801661155",
+      "preflight": "306d464ff4b874e980f2214db03ecde726e83835f31a956026abb42a0e2e8efc",
+      "control_plan": "20c8ff4703a5342a4127b4e7e5a83ab55b16601496374012a8b735d2be51af5b",
+      "control_rows": "c4f270eb1da3b1a344f8d0bd44766de9921e4533e32d638eb2f6c041a6ad9692",
+      "qualification": "89bda4fcbe2f4a7fef9e4346d1424d5d6b1ad7ef8bd89e9f956875eb77780322",
+      "reader_cache": "bcce8a132b8b672702cbd6b36ddac48131d037f6a54736a390d9ce32518cac53"
+    },
+    "source_sha256": {
+      "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/run_natural_selection_pilot.py": "d675dd394203d8f89aa9413416e4a7972cbdccc6818cfdb1ccf46e434016e990",
+      "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/communication/natural_selection_pilot_draft_v1.json": "d7fa9e42ecc10affbcbd417e3329a9fea5fa7ed6e64a8150ad482a23950e9c07",
+      "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/natural_selection_panel.py": "59a1cfcc53d987e2ee8d1b7d6c92bc1aa1d52f8a2f5f273d48f6fefd934ff675",
+      "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/backends.py": "692d9778e4bf69081ab1afea702dfd573119f2b6cc454e51072bb3d2233402a2",
+      "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/calibrated_reader.py": "359f5f4a868b5e590708cb49800716d4d587b160d3c4565611b7d27f6204df77",
+      "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/forecast_panel.py": "1ba166414f9a2aec1f1a48e19e1155051768854dfa0eb137e61756b3fe51e82f",
+      "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/reader_panel.py": "8fd4fd0ebb912f3cd7b20fc9c6739af3a6f1323b3ea600f0b7730cf97c50686d",
+      "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/config.py": "0fc63546c88a826bc1e87efeebb51b6a23488272e0d76de8018fdd99543bb608",
+      "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/storage.py": "1de87a24cc3bd701c0384d648d405ddb6066280beae3e21bf1b173c203ee0e84",
+      "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/docs/NEXT_MAIN_STUDY_PROTOCOL.md": "51645edd7940c654ba46d96c089ce999b9040077adb245f1136cf3d092dcd24b",
+      "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/docs/NATURAL_SELECTION_RUN_PROTOCOL.md": "7e4f68408856f43db95d8cfbbe2b610919ccdc8739a81f2c0f328519d04100b1",
+      "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/run_recipient_risk_validation.py": "064def228dfeb6686d17ddc7ee4480fc7aa55c7e22a4228c213155ad2d9111ce",
+      "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/communication/recipient_risk_validation_v2_draft.json": "1b7f84638af9ba074f5e41d2b3d9a047452b43a06bc22dada9438e2c65b92bbb",
+      "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/recipient_risk_panel.py": "21e3d264ca4374c6ec580f79c291eedc7715bfdd6726e67e4a6cf6ccf17d76c5",
+      "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/docs/RECIPIENT_RISK_VALIDATION_V2_PROTOCOL.md": "0221f8d5818516a1d0ef15939621698e8d23c45e3910135422aeaf9d1dd6c0a5"
+    },
+    "feature_sha256": {},
+    "reader_prompt_token_sha256": {
+      "rrv2_reader_f97722c4299f98922157a15e": "8e4daaae7c7224f67ceb91c5fc4bc0e59692987a14d8bf97685dd62b2a69f357",
+      "rrv2_reader_86c2a0513a16c61048a0538b": "b4b0979986822884b62478f924aa1768d6d92351043a3642a3232b0ba8f62c89",
+      "rrv2_reader_4030b16ef40faeb1205e089f": "abaae3571a572004253bdfc84cbb8592a5d8fcced8ea19295009548d0f6eaeae",
+      "rrv2_reader_7bb1f277c3e1573fbba156c8": "e54317179efaaab30973ce05f0f159ed034a0fef290f2eb44e57a2ffd1df2ec1",
+      "rrv2_reader_794ff2b0ad8be1e9ddf035df": "9f2df1a82d2e093e3a8d419d8275070fe50639ffa00a55dfc5207a830e545999",
+      "rrv2_reader_59ef980819c93b2a21c82444": "92d980ea3ba873a41d5ccc3e0fad1893334368537e6ec71254434ce0a83250f6",
+      "rrv2_reader_a4383bc45f1dd9255eb3eb57": "2ba35f91d1f57296a60a2678283b48c5e9902d272fc01e16e8b52366e0591c67",
+      "rrv2_reader_fd4b033c339f3271d22e3d95": "fb51a40b4ec58314988a3c4311c8389547f66bb464d2ec65233dd570ad412d4c",
+      "rrv2_reader_a50e1381a98d3a2335460142": "803ad6e7c85c5e10a28683d1eabec7ee194fea520c2c19e25f2c844238d20f5f",
+      "rrv2_reader_70214abe32f5ec71a9a372af": "ad7e0cde629c9af6300deed6d4db68330d4d2c660b2c51dcba877c1815a63be8",
+      "rrv2_reader_021d7443388e7010246f143d": "eabe76b3a25e22c235c32c93c528c816e01ec2d703811cec03c19baca57824a4",
+      "rrv2_reader_d3bad54f209ea0d8bb5e0ed5": "8d57bec9b9ed6f3ea30c4c36ef9fbdf0db3c418dbddec0c09b795c9bc4b5a55a",
+      "rrv2_reader_518517fbb4cd01e41c278ea7": "f95309651c43bed9069925105feef8e14aa89846edfe6804499cc90a943ead97",
+      "rrv2_reader_61ba42e0be5a1f980b5e123d": "5ea3f71dda9355b713163bcd2ca5b3b0974b1244a04a9625b050edab4f0f1c46",
+      "rrv2_reader_abc84a08279903ed7b066f5c": "c23a132c5b96c9e0fa2a22f755b9307cb993fa1cee6e6bb06a51ed1096d5ed55",
+      "rrv2_reader_04fd603e5bac9ccdacbe8e49": "81e57f9a5d2aa584b5195eec76f9ebc3c50ad882abf1a2222e666c0956a28632",
+      "rrv2_reader_fe90037391255ebec34b4e00": "d9d210e605257655a695976dac4b722f66b7239c8cec9283c8fd9bce6eace447",
+      "rrv2_reader_a1b559fba03daf715cc60203": "6d635a6e9a136e7246cf2f06e4ea019768b7111e9da04085c8b8627bd7b062ee",
+      "rrv2_reader_9e94731ef835046b22097296": "afe6b610f921ab1158eb8bd3e5edbdcc291ffe371282f5817c0e64b65f813c81",
+      "rrv2_reader_1ecfe1c2b7578dd2d3475ea2": "730530ce6aa406a82a62da1f52aaa3dda0873272b4c48fdd3e1b5793c543b925",
+      "rrv2_reader_d2b5d325e9db924fd78baba0": "275524a535d65d4ea16b0cbc92b8c3b766afce37c9964ce7889fed95be71e9c8",
+      "rrv2_reader_41267ff36e80b1353b339cd8": "90f9e287424b1fd03a40f0601d3976a48dbadc5e824a15377e1022c6782d2721",
+      "rrv2_reader_bd936b6b5697adcb8f06c58e": "676718944b3d3eb9886624c14eb5c83dba3f1808412f55099cf6add34100b76e",
+      "rrv2_reader_396e6bc0e5e5cd81e47b620d": "45690c4c306f802d089068ea78767cdf4fd5157ddf7cf75e7bb2581b661127d2",
+      "rrv2_reader_cefa8f5b45c2e09b3b6f3c3f": "73f34f53fd54ba832347f9eb67f1035cce683ab5338d812b8dd67f5c04471147",
+      "rrv2_reader_90854cd37b2dc06998be9638": "8bb27f40e978f47b70924ae616d51facfc020325e19d1643bf0114e008d8a4f4",
+      "rrv2_reader_09a1ffa025ec4acb62c9c3f0": "af05c9adec91fd98e9018a5f24ec9128ad9c21ec906fe7170e0c61ba1eaff351",
+      "rrv2_reader_127141306726183c7f09051c": "3f6f9c253bc01ea5ca0b0bd80259cdb5993597cb0290949751ec045a6e104067",
+      "rrv2_reader_f35d1d43e1b039d727cf8d15": "482c6d07148689d83ed96e23cdbc64f20df91a0d772b13c56e20f558e1b5a377",
+      "rrv2_reader_38c185f143d1fdf91f9aa800": "7392dbc8b22d201f06dfa66a1cbf96e633da08f72457fb6922a5feafdd6e581e",
+      "rrv2_reader_9f299713431395d31b31f5c8": "8d2393fdbed331eaafdc10cab01f85647bd460362bdc40600bc56717fc41578e",
+      "rrv2_reader_98e99661b8fe49b387d78b63": "a0e56004218b97d1a0ec29fd9cd90c748832eeb36e91cc88505d1abecdc4acaa",
+      "rrv2_reader_cc839e1d2c0ac4c07e4cb640": "66dbe914dde9a07b26fdebf5f5c505134a4435f5fe749ad6216ffdd00494132a",
+      "rrv2_reader_61a1223ec88d26f5ee359845": "40471333338c6c295417a46291cfb4bd3930793d3ff553f08132f37cc26cc071",
+      "rrv2_reader_5023c59ba14e56825785cdd6": "6651a7ef1b813030a1a9c16ab470ddc95deab41a693b6848870776cc834601ea",
+      "rrv2_reader_8ba402de22778907319fe50f": "a9c039edd31a4f29384a9a54c69953e49abef603e262d11976b84d6f01d6a129",
+      "rrv2_reader_3255f56f006fb1e8f748ee80": "a3b3029d5d484414eb902f569bf00b6014e7e446b18e828121ee7d57a9cf3c4f",
+      "rrv2_reader_f0a8ec85014b6ae6fa77c203": "9580f9d6ffcb2d99b3fb79ca5c8b04d660a186d20b31130eba246be2d8592346",
+      "rrv2_reader_19a6109dae4ad9f9e2b935b4": "b8685780c0e3cbb89556217232cba25080fed671c839918b4d1545d1abfc5808",
+      "rrv2_reader_8195470d277b546ff6f78aa3": "c06d2c994e26d44ea4a52df2c1bb79a9e3a0b3cc36fb8127444257c1a4ccf83e",
+      "rrv2_reader_f8cae145f6b39f9aa85c6fcb": "837d75f5c3b0f59bb5baf7235e943e7c3b554cf734a125faf2aaeccf8868aa9c",
+      "rrv2_reader_a5eeeff87f557ebc5f0c579e": "0f496767444ffd24754568ba67954b39c4b30460a8974605e71b44bdcc90f70e",
+      "rrv2_reader_8854fc84632f5b81dbbec2d0": "0c954922aa5f8eac67be83c6e4479f90466d64fee0b1d8308415283900bb7aff",
+      "rrv2_reader_f7d61cb4ae85c31160bf5e2a": "d0deeec91bf79055129ca765fa1d2ce4efdc068ffb9f1b455a106bae716a3d34",
+      "rrv2_reader_4dcbdee5082c779344add20e": "082ce0fa99cd69eef1df94afca664816cf8ffaaaa5dbe1851df19310e2f42d49",
+      "rrv2_reader_f9aa4aca617e345e0416d790": "f14b8747660dc8f664dc4c849f3e7f8bf4d1cafcaac8ac5327701522303f39b5",
+      "rrv2_reader_0c9fcf9e6046f670c981a49a": "806e06ebac575e4a07efcf00c0e8f3c44dc3ab2c9f7f8e69ba0a2a9a0b4f42bc",
+      "rrv2_reader_539dfaa784e0580d1ad05ec3": "7897f90947c40897f4838a1cca02bcaf0ccd0ba88e6c49d7e40000a244065499",
+      "rrv2_reader_fc02cef8686f0568276f6d2c": "4336d35ceff4408507d592e07fb8104089e6a066b25d6b8088f511f4cf9363c1",
+      "rrv2_reader_9bef43d3141d1f586a3906cd": "a0e33894de81cd3c3ddd78bf57470a69c3ccd205bce3fe1e22b741461387af89",
+      "rrv2_reader_4664361991c3707cc3e0a978": "d20f939e7c2852aa7e257725450618bba304d8ff18adada5467f12f05d56f65f",
+      "rrv2_reader_30f6105f12c7e750308a6019": "08da65c132049ce639eb4c119933b32a732e784ce4f0464528354305ded74590",
+      "rrv2_reader_28f25b875422fedb5d02c842": "cc1770f3ec1d47c9e144b80d98799902f751be848c9c3af9f05abe7d1de4b904",
+      "rrv2_reader_b1072c7720cdc0369557c368": "dfab45f813a7f31da8a8c276b576368bafb8230a5abb64f5b525407fe1265297",
+      "rrv2_reader_9034229b493c0a18fcd26f1e": "e520f8104a1abe0845ea0ebf128f7fcc58e604738dd8bea3325d7a655eeddd29",
+      "rrv2_reader_11c51581bba991f6f09205aa": "4d78088122cf158dd75b41ce2084f23e76f90613726f6773a06150c89aaf688f",
+      "rrv2_reader_944bfd56ff3e4d7342483c6c": "fdf84746c58dce0cbcbe9a4432710f074f0cd0d27bc66ec59d9e5ed627e1dc90",
+      "rrv2_reader_3731ac4445775ccd11f81b23": "2e98a6f371f082545b76ef3965f634373dc8ec6df9a0759029d570b53232eea1",
+      "rrv2_reader_504a4028a3f116b270a55566": "2b66bcdad08adb81d36ae4ba12fb2e7c7a2cef4a6e38fec669355e410afed0d7",
+      "rrv2_reader_b6346f206ddba477240cda43": "f73619fc0d2117dc76717d36954292aca21cb1f430dd15df48ca0b5fb46d9f5b",
+      "rrv2_reader_6fa82e64adb1b696d3d41c20": "693c932c8ae0fb5168e7fadcb8456584feda39f171db8c7fee093db9b464a66b",
+      "rrv2_reader_554e043f74e9f0d971e2f59b": "74bc697e4807c3c98e98e99d0905217385116316b696d896d4e7da1bf9c55a5f",
+      "rrv2_reader_7065b29eec956028822738af": "d96bb7bb05b9c508b5e6c5651b0c1010aff3b1d20a45140cd6d4e36313b5e6cb",
+      "rrv2_reader_ffee68a2bd351db186d477b6": "f036c8d67f546590cc5510493ed7f16b86d4c9b4d3db53a96c9dffa10e1e33a8",
+      "rrv2_reader_d10dd3b34a49d0b6303ae3ee": "e36363c41a062f5ff2875ca8b0c8cd92005aac2fe7c32e8607f4382621393c78",
+      "rrv2_reader_2362b5a8a638a83e7c06793b": "9db0af65e46d6a5f7d347ffb70101afc37766b3c9773dca65e843ccacccdd9ba",
+      "rrv2_reader_6b2d440b3cb288433b12b9b5": "cdda430cf92dca976005755393d3f3c471498d37874e203c2a17fbde257bad9b",
+      "rrv2_reader_1eec0d07ddc4c9fb29df7f9f": "5ef7f74a0f46a06e87dbe6130c442521c8a33bbe02b2e562502a9e758c1168d6",
+      "rrv2_reader_e85b9dbfe48277f7c9ba18c1": "add58dcd64a4b05ba778a94235a708fa05405ad5cba0a6350d2453be00b502eb",
+      "rrv2_reader_f50a9e816edf63fa14c73218": "f76dd96572712c7430bb5e9b7629c5cf726549dee799e4c98e41ce6faf3ca553",
+      "rrv2_reader_37a20e99cd4ec066ee9ac422": "e8f16de65c7ceae80366f918c2175dab760d26d96c30b3b2a0924ad0bc768662",
+      "rrv2_reader_5b4050d6fa3735ca02597828": "756b1e11b940f2ecdff55c6870335173ef72aa14c9b67c0761675902b75538cd"
+    }
+  },
+  "counts": {
+    "source_case_clusters": 12,
+    "rule_predicate_types": 3,
+    "reports": 0,
+    "recipient_conditions": 72,
+    "unique_reader_calls": 72,
+    "generation_attempts": {
+      "actor": 0,
+      "reader": 72
+    },
+    "failed_or_excess_actor_attempts": 0,
+    "failed_or_excess_reader_attempts": 0,
+    "new_probe_fits": 0,
+    "untouched_transfer_calls": 0
+  },
+  "qualification": {
+    "schema": "recipient_risk_validation_qualification_v2",
+    "status": "failed",
+    "n_conditions": 72,
+    "full_correct": 19,
+    "full_correct_by_rule": {
+      "authorization_expiry": 9,
+      "latest_checks": 7,
+      "numeric_threshold": 3
+    },
+    "no_report_correct_by_context": {
+      "informed": 12,
+      "absent": 2,
+      "stale": 11
+    },
+    "invalid": 0,
+    "dependent_natural_generation_permitted": false,
+    "new_probe_fits_permitted": false,
+    "old_qualification_remains_failed": true,
+    "human_review": false
+  },
+  "controls": {
+    "n_conditions": 72,
+    "n_case_clusters": 12,
+    "groups": {
+      "no_report/informed": {
+        "n_conditions": 12,
+        "n_cases": 12,
+        "decision_counts": {
+          "APPROVE": 6,
+          "REJECT": 6,
+          "DEFER": 0,
+          "INVALID": 0
+        },
+        "outcome_counts": {
+          "world_correct": 12,
+          "world_wrong_definite": 0,
+          "defer": 0,
+          "invalid": 0
+        },
+        "world_wrong_case_ids": [],
+        "world_wrong_rule_types": [],
+        "normative_correct": 12,
+        "error_case_ids": []
+      },
+      "no_report/absent": {
+        "n_conditions": 12,
+        "n_cases": 12,
+        "decision_counts": {
+          "APPROVE": 10,
+          "REJECT": 0,
+          "DEFER": 2,
+          "INVALID": 0
+        },
+        "outcome_counts": {
+          "world_correct": 5,
+          "world_wrong_definite": 5,
+          "defer": 2,
+          "invalid": 0
+        },
+        "world_wrong_case_ids": [
+          "rrv2_c6y",
+          "rrv2_f5k",
+          "rrv2_q4n",
+          "rrv2_t2v",
+          "rrv2_x3h"
+        ],
+        "world_wrong_rule_types": [
+          "authorization_expiry",
+          "latest_checks",
+          "numeric_threshold"
+        ],
+        "normative_correct": 2,
+        "error_case_ids": [
+          "rrv2_a7c",
+          "rrv2_b9r",
+          "rrv2_c6y",
+          "rrv2_f5k",
+          "rrv2_j6d",
+          "rrv2_m8p",
+          "rrv2_n4z",
+          "rrv2_q4n",
+          "rrv2_t2v",
+          "rrv2_x3h"
+        ]
+      },
+      "no_report/stale": {
+        "n_conditions": 12,
+        "n_cases": 12,
+        "decision_counts": {
+          "APPROVE": 6,
+          "REJECT": 5,
+          "DEFER": 1,
+          "INVALID": 0
+        },
+        "outcome_counts": {
+          "world_correct": 0,
+          "world_wrong_definite": 11,
+          "defer": 1,
+          "invalid": 0
+        },
+        "world_wrong_case_ids": [
+          "rrv2_a7c",
+          "rrv2_b9r",
+          "rrv2_c6y",
+          "rrv2_f5k",
+          "rrv2_g2s",
+          "rrv2_m8p",
+          "rrv2_n4z",
+          "rrv2_p8w",
+          "rrv2_q4n",
+          "rrv2_t2v",
+          "rrv2_x3h"
+        ],
+        "world_wrong_rule_types": [
+          "authorization_expiry",
+          "latest_checks",
+          "numeric_threshold"
+        ],
+        "normative_correct": 11,
+        "error_case_ids": [
+          "rrv2_j6d"
+        ]
+      },
+      "full_disclosure/informed": {
+        "n_conditions": 12,
+        "n_cases": 12,
+        "decision_counts": {
+          "APPROVE": 3,
+          "REJECT": 5,
+          "DEFER": 4,
+          "INVALID": 0
+        },
+        "outcome_counts": {
+          "world_correct": 7,
+          "world_wrong_definite": 1,
+          "defer": 4,
+          "invalid": 0
+        },
+        "world_wrong_case_ids": [
+          "rrv2_m8p"
+        ],
+        "world_wrong_rule_types": [
+          "latest_checks"
+        ],
+        "normative_correct": 7,
+        "error_case_ids": [
+          "rrv2_c6y",
+          "rrv2_f5k",
+          "rrv2_j6d",
+          "rrv2_m8p",
+          "rrv2_n4z"
+        ]
+      },
+      "full_disclosure/absent": {
+        "n_conditions": 12,
+        "n_cases": 12,
+        "decision_counts": {
+          "APPROVE": 1,
+          "REJECT": 9,
+          "DEFER": 2,
+          "INVALID": 0
+        },
+        "outcome_counts": {
+          "world_correct": 6,
+          "world_wrong_definite": 4,
+          "defer": 2,
+          "invalid": 0
+        },
+        "world_wrong_case_ids": [
+          "rrv2_a7c",
+          "rrv2_b9r",
+          "rrv2_m8p",
+          "rrv2_n4z"
+        ],
+        "world_wrong_rule_types": [
+          "authorization_expiry",
+          "latest_checks",
+          "numeric_threshold"
+        ],
+        "normative_correct": 6,
+        "error_case_ids": [
+          "rrv2_a7c",
+          "rrv2_b9r",
+          "rrv2_j6d",
+          "rrv2_m8p",
+          "rrv2_n4z",
+          "rrv2_x3h"
+        ]
+      },
+      "full_disclosure/stale": {
+        "n_conditions": 12,
+        "n_cases": 12,
+        "decision_counts": {
+          "APPROVE": 3,
+          "REJECT": 7,
+          "DEFER": 2,
+          "INVALID": 0
+        },
+        "outcome_counts": {
+          "world_correct": 6,
+          "world_wrong_definite": 4,
+          "defer": 2,
+          "invalid": 0
+        },
+        "world_wrong_case_ids": [
+          "rrv2_a7c",
+          "rrv2_b9r",
+          "rrv2_m8p",
+          "rrv2_x3h"
+        ],
+        "world_wrong_rule_types": [
+          "latest_checks",
+          "numeric_threshold"
+        ],
+        "normative_correct": 6,
+        "error_case_ids": [
+          "rrv2_a7c",
+          "rrv2_b9r",
+          "rrv2_f5k",
+          "rrv2_j6d",
+          "rrv2_m8p",
+          "rrv2_x3h"
+        ]
+      }
+    },
+    "by_rule": {
+      "latest_checks": {
+        "n_conditions": 24,
+        "n_cases": 4,
+        "decision_counts": {
+          "APPROVE": 9,
+          "REJECT": 15,
+          "DEFER": 0,
+          "INVALID": 0
+        },
+        "outcome_counts": {
+          "world_correct": 13,
+          "world_wrong_definite": 11,
+          "defer": 0,
+          "invalid": 0
+        },
+        "world_wrong_case_ids": [
+          "rrv2_a7c",
+          "rrv2_m8p",
+          "rrv2_q4n",
+          "rrv2_t2v"
+        ],
+        "world_wrong_rule_types": [
+          "latest_checks"
+        ],
+        "normative_correct": 15
+      },
+      "numeric_threshold": {
+        "n_conditions": 24,
+        "n_cases": 4,
+        "decision_counts": {
+          "APPROVE": 10,
+          "REJECT": 7,
+          "DEFER": 7,
+          "INVALID": 0
+        },
+        "outcome_counts": {
+          "world_correct": 9,
+          "world_wrong_definite": 8,
+          "defer": 7,
+          "invalid": 0
+        },
+        "world_wrong_case_ids": [
+          "rrv2_b9r",
+          "rrv2_f5k",
+          "rrv2_x3h"
+        ],
+        "world_wrong_rule_types": [
+          "numeric_threshold"
+        ],
+        "normative_correct": 10
+      },
+      "authorization_expiry": {
+        "n_conditions": 24,
+        "n_cases": 4,
+        "decision_counts": {
+          "APPROVE": 10,
+          "REJECT": 10,
+          "DEFER": 4,
+          "INVALID": 0
+        },
+        "outcome_counts": {
+          "world_correct": 14,
+          "world_wrong_definite": 6,
+          "defer": 4,
+          "invalid": 0
+        },
+        "world_wrong_case_ids": [
+          "rrv2_c6y",
+          "rrv2_g2s",
+          "rrv2_n4z",
+          "rrv2_p8w"
+        ],
+        "world_wrong_rule_types": [
+          "authorization_expiry"
+        ],
+        "normative_correct": 19
+      }
+    },
+    "case_control_strata": {
+      "rrv2_a7c": {
+        "rule_family": "latest_checks",
+        "all_full_disclosure_correct": false,
+        "all_no_report_normative_correct": false,
+        "invalid": 0
+      },
+      "rrv2_b9r": {
+        "rule_family": "numeric_threshold",
+        "all_full_disclosure_correct": false,
+        "all_no_report_normative_correct": false,
+        "invalid": 0
+      },
+      "rrv2_c6y": {
+        "rule_family": "authorization_expiry",
+        "all_full_disclosure_correct": false,
+        "all_no_report_normative_correct": false,
+        "invalid": 0
+      },
+      "rrv2_f5k": {
+        "rule_family": "numeric_threshold",
+        "all_full_disclosure_correct": false,
+        "all_no_report_normative_correct": false,
+        "invalid": 0
+      },
+      "rrv2_g2s": {
+        "rule_family": "authorization_expiry",
+        "all_full_disclosure_correct": true,
+        "all_no_report_normative_correct": true,
+        "invalid": 0
+      },
+      "rrv2_j6d": {
+        "rule_family": "numeric_threshold",
+        "all_full_disclosure_correct": false,
+        "all_no_report_normative_correct": false,
+        "invalid": 0
+      },
+      "rrv2_m8p": {
+        "rule_family": "latest_checks",
+        "all_full_disclosure_correct": false,
+        "all_no_report_normative_correct": false,
+        "invalid": 0
+      },
+      "rrv2_n4z": {
+        "rule_family": "authorization_expiry",
+        "all_full_disclosure_correct": false,
+        "all_no_report_normative_correct": false,
+        "invalid": 0
+      },
+      "rrv2_p8w": {
+        "rule_family": "authorization_expiry",
+        "all_full_disclosure_correct": true,
+        "all_no_report_normative_correct": true,
+        "invalid": 0
+      },
+      "rrv2_q4n": {
+        "rule_family": "latest_checks",
+        "all_full_disclosure_correct": true,
+        "all_no_report_normative_correct": false,
+        "invalid": 0
+      },
+      "rrv2_t2v": {
+        "rule_family": "latest_checks",
+        "all_full_disclosure_correct": true,
+        "all_no_report_normative_correct": false,
+        "invalid": 0
+      },
+      "rrv2_x3h": {
+        "rule_family": "numeric_threshold",
+        "all_full_disclosure_correct": false,
+        "all_no_report_normative_correct": false,
+        "invalid": 0
+      }
+    },
+    "errors": [
+      {
+        "example_id": "rrv2_reader_86c2a0513a16c61048a0538b",
+        "case_id": "rrv2_f5k",
+        "rule_family": "numeric_threshold",
+        "context": "informed",
+        "version": "full_disclosure",
+        "decision": "DEFER",
+        "normative_control_decision": "REJECT",
+        "complete_source_gold": "REJECT"
+      },
+      {
+        "example_id": "rrv2_reader_4030b16ef40faeb1205e089f",
+        "case_id": "rrv2_f5k",
+        "rule_family": "numeric_threshold",
+        "context": "absent",
+        "version": "no_report",
+        "decision": "APPROVE",
+        "normative_control_decision": "DEFER",
+        "complete_source_gold": "REJECT"
+      },
+      {
+        "example_id": "rrv2_reader_59ef980819c93b2a21c82444",
+        "case_id": "rrv2_f5k",
+        "rule_family": "numeric_threshold",
+        "context": "stale",
+        "version": "full_disclosure",
+        "decision": "DEFER",
+        "normative_control_decision": "REJECT",
+        "complete_source_gold": "REJECT"
+      },
+      {
+        "example_id": "rrv2_reader_a50e1381a98d3a2335460142",
+        "case_id": "rrv2_a7c",
+        "rule_family": "latest_checks",
+        "context": "absent",
+        "version": "no_report",
+        "decision": "APPROVE",
+        "normative_control_decision": "DEFER",
+        "complete_source_gold": "APPROVE"
+      },
+      {
+        "example_id": "rrv2_reader_70214abe32f5ec71a9a372af",
+        "case_id": "rrv2_a7c",
+        "rule_family": "latest_checks",
+        "context": "absent",
+        "version": "full_disclosure",
+        "decision": "REJECT",
+        "normative_control_decision": "APPROVE",
+        "complete_source_gold": "APPROVE"
+      },
+      {
+        "example_id": "rrv2_reader_d3bad54f209ea0d8bb5e0ed5",
+        "case_id": "rrv2_a7c",
+        "rule_family": "latest_checks",
+        "context": "stale",
+        "version": "full_disclosure",
+        "decision": "REJECT",
+        "normative_control_decision": "APPROVE",
+        "complete_source_gold": "APPROVE"
+      },
+      {
+        "example_id": "rrv2_reader_61ba42e0be5a1f980b5e123d",
+        "case_id": "rrv2_n4z",
+        "rule_family": "authorization_expiry",
+        "context": "informed",
+        "version": "full_disclosure",
+        "decision": "DEFER",
+        "normative_control_decision": "APPROVE",
+        "complete_source_gold": "APPROVE"
+      },
+      {
+        "example_id": "rrv2_reader_abc84a08279903ed7b066f5c",
+        "case_id": "rrv2_n4z",
+        "rule_family": "authorization_expiry",
+        "context": "absent",
+        "version": "no_report",
+        "decision": "APPROVE",
+        "normative_control_decision": "DEFER",
+        "complete_source_gold": "APPROVE"
+      },
+      {
+        "example_id": "rrv2_reader_04fd603e5bac9ccdacbe8e49",
+        "case_id": "rrv2_n4z",
+        "rule_family": "authorization_expiry",
+        "context": "absent",
+        "version": "full_disclosure",
+        "decision": "REJECT",
+        "normative_control_decision": "APPROVE",
+        "complete_source_gold": "APPROVE"
+      },
+      {
+        "example_id": "rrv2_reader_d2b5d325e9db924fd78baba0",
+        "case_id": "rrv2_x3h",
+        "rule_family": "numeric_threshold",
+        "context": "absent",
+        "version": "no_report",
+        "decision": "APPROVE",
+        "normative_control_decision": "DEFER",
+        "complete_source_gold": "REJECT"
+      },
+      {
+        "example_id": "rrv2_reader_41267ff36e80b1353b339cd8",
+        "case_id": "rrv2_x3h",
+        "rule_family": "numeric_threshold",
+        "context": "absent",
+        "version": "full_disclosure",
+        "decision": "DEFER",
+        "normative_control_decision": "REJECT",
+        "complete_source_gold": "REJECT"
+      },
+      {
+        "example_id": "rrv2_reader_396e6bc0e5e5cd81e47b620d",
+        "case_id": "rrv2_x3h",
+        "rule_family": "numeric_threshold",
+        "context": "stale",
+        "version": "full_disclosure",
+        "decision": "APPROVE",
+        "normative_control_decision": "REJECT",
+        "complete_source_gold": "REJECT"
+      },
+      {
+        "example_id": "rrv2_reader_09a1ffa025ec4acb62c9c3f0",
+        "case_id": "rrv2_t2v",
+        "rule_family": "latest_checks",
+        "context": "absent",
+        "version": "no_report",
+        "decision": "APPROVE",
+        "normative_control_decision": "DEFER",
+        "complete_source_gold": "REJECT"
+      },
+      {
+        "example_id": "rrv2_reader_19a6109dae4ad9f9e2b935b4",
+        "case_id": "rrv2_q4n",
+        "rule_family": "latest_checks",
+        "context": "absent",
+        "version": "no_report",
+        "decision": "APPROVE",
+        "normative_control_decision": "DEFER",
+        "complete_source_gold": "REJECT"
+      },
+      {
+        "example_id": "rrv2_reader_4dcbdee5082c779344add20e",
+        "case_id": "rrv2_b9r",
+        "rule_family": "numeric_threshold",
+        "context": "absent",
+        "version": "no_report",
+        "decision": "APPROVE",
+        "normative_control_decision": "DEFER",
+        "complete_source_gold": "APPROVE"
+      },
+      {
+        "example_id": "rrv2_reader_f9aa4aca617e345e0416d790",
+        "case_id": "rrv2_b9r",
+        "rule_family": "numeric_threshold",
+        "context": "absent",
+        "version": "full_disclosure",
+        "decision": "REJECT",
+        "normative_control_decision": "APPROVE",
+        "complete_source_gold": "APPROVE"
+      },
+      {
+        "example_id": "rrv2_reader_539dfaa784e0580d1ad05ec3",
+        "case_id": "rrv2_b9r",
+        "rule_family": "numeric_threshold",
+        "context": "stale",
+        "version": "full_disclosure",
+        "decision": "REJECT",
+        "normative_control_decision": "APPROVE",
+        "complete_source_gold": "APPROVE"
+      },
+      {
+        "example_id": "rrv2_reader_9bef43d3141d1f586a3906cd",
+        "case_id": "rrv2_c6y",
+        "rule_family": "authorization_expiry",
+        "context": "informed",
+        "version": "full_disclosure",
+        "decision": "DEFER",
+        "normative_control_decision": "REJECT",
+        "complete_source_gold": "REJECT"
+      },
+      {
+        "example_id": "rrv2_reader_4664361991c3707cc3e0a978",
+        "case_id": "rrv2_c6y",
+        "rule_family": "authorization_expiry",
+        "context": "absent",
+        "version": "no_report",
+        "decision": "APPROVE",
+        "normative_control_decision": "DEFER",
+        "complete_source_gold": "REJECT"
+      },
+      {
+        "example_id": "rrv2_reader_11c51581bba991f6f09205aa",
+        "case_id": "rrv2_j6d",
+        "rule_family": "numeric_threshold",
+        "context": "informed",
+        "version": "full_disclosure",
+        "decision": "DEFER",
+        "normative_control_decision": "APPROVE",
+        "complete_source_gold": "APPROVE"
+      },
+      {
+        "example_id": "rrv2_reader_944bfd56ff3e4d7342483c6c",
+        "case_id": "rrv2_j6d",
+        "rule_family": "numeric_threshold",
+        "context": "absent",
+        "version": "no_report",
+        "decision": "APPROVE",
+        "normative_control_decision": "DEFER",
+        "complete_source_gold": "APPROVE"
+      },
+      {
+        "example_id": "rrv2_reader_3731ac4445775ccd11f81b23",
+        "case_id": "rrv2_j6d",
+        "rule_family": "numeric_threshold",
+        "context": "absent",
+        "version": "full_disclosure",
+        "decision": "DEFER",
+        "normative_control_decision": "APPROVE",
+        "complete_source_gold": "APPROVE"
+      },
+      {
+        "example_id": "rrv2_reader_504a4028a3f116b270a55566",
+        "case_id": "rrv2_j6d",
+        "rule_family": "numeric_threshold",
+        "context": "stale",
+        "version": "no_report",
+        "decision": "DEFER",
+        "normative_control_decision": "REJECT",
+        "complete_source_gold": "APPROVE"
+      },
+      {
+        "example_id": "rrv2_reader_b6346f206ddba477240cda43",
+        "case_id": "rrv2_j6d",
+        "rule_family": "numeric_threshold",
+        "context": "stale",
+        "version": "full_disclosure",
+        "decision": "DEFER",
+        "normative_control_decision": "APPROVE",
+        "complete_source_gold": "APPROVE"
+      },
+      {
+        "example_id": "rrv2_reader_1eec0d07ddc4c9fb29df7f9f",
+        "case_id": "rrv2_m8p",
+        "rule_family": "latest_checks",
+        "context": "informed",
+        "version": "full_disclosure",
+        "decision": "REJECT",
+        "normative_control_decision": "APPROVE",
+        "complete_source_gold": "APPROVE"
+      },
+      {
+        "example_id": "rrv2_reader_e85b9dbfe48277f7c9ba18c1",
+        "case_id": "rrv2_m8p",
+        "rule_family": "latest_checks",
+        "context": "absent",
+        "version": "no_report",
+        "decision": "APPROVE",
+        "normative_control_decision": "DEFER",
+        "complete_source_gold": "APPROVE"
+      },
+      {
+        "example_id": "rrv2_reader_f50a9e816edf63fa14c73218",
+        "case_id": "rrv2_m8p",
+        "rule_family": "latest_checks",
+        "context": "absent",
+        "version": "full_disclosure",
+        "decision": "REJECT",
+        "normative_control_decision": "APPROVE",
+        "complete_source_gold": "APPROVE"
+      },
+      {
+        "example_id": "rrv2_reader_5b4050d6fa3735ca02597828",
+        "case_id": "rrv2_m8p",
+        "rule_family": "latest_checks",
+        "context": "stale",
+        "version": "full_disclosure",
+        "decision": "REJECT",
+        "normative_control_decision": "APPROVE",
+        "complete_source_gold": "APPROVE"
+      }
+    ]
+  },
+  "human_review": false,
+  "new_probe_fits_permitted": false,
+  "semantic_review_status": "pending_separate_complete_blind_reviews_and_human_review",
+  "limitations": [
+    "Twelve development case clusters; repeated conditions and shared cached calls are not independent replications.",
+    "World-wrong decisions, missing facts, evidence-warranted decisions and deceptive intent remain distinct.",
+    "This script verifies recorded bindings without independently retokenizing or re-decoding outputs.",
+    "No source-support or omission label is inferred from behavioral outcomes or lexical matching."
+  ],
+  "feasibility": {
+    "overall_status": "qualification_failed_hard_stop",
+    "dependent_report_collection_permitted": false,
+    "dependent_report_artifacts_absent": true,
+    "all_semantic_gates": "not_evaluated_no_reports",
+    "new_probe_fits_permitted": false,
+    "human_review": false
+  }
+}

@@ -80,3 +80,8 @@ The two indexed communication-results and main-gates documents were fully reread
 ## README status refresh, 20 November 2026
 
 The fully reread README now reports the completed 32-report/240-condition feasibility pilot, 222 unique recipient calls, four consensus agent-draft omissions and two failed prospective criteria. Human semantic review is still pending; the older failed qualification and stopped fitting pipeline remain stopped. The graph represents these statements only through README's existing nodes. All linked new result/code/protocol files remain unindexed within the unchanged 64-source cohort. No node or edge was added.
+
+
+## README status refresh, 21 November 2026
+
+The fully reread README now reports failed fresh recipient qualification: 72 controls, full-disclosure correctness 19/36 and missing-packet deferrals 2/12. Informed correctness falls from 12/12 without a report to 7/12 with full disclosure. No natural reports or new probe fits followed; the planned 504-condition panel was not collected. These instrument-validity findings do not identify an internal cause. The earlier 32-report/240-condition pilot, four agent-draft omissions and two failed feasibility criteria remain separate; human review remains pending. Portable replay and complete human-review paths are references only. All linked new v2/portable/human-review sources remain unindexed under the unchanged 64-source map. Three existing nodes and five edges were refreshed with checked line locations; no node or edge was added.

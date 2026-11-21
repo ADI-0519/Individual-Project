@@ -1,0 +1,31 @@
+{
+  "schema": "recipient_risk_control_figure_v2",
+  "analysis_sha256": "7fc0ea1eb05cc54008586830a37e453b6277a2a4f97a8ad0328fb858988781ce",
+  "control_correct": [
+    12,
+    2,
+    11,
+    19
+  ],
+  "control_denominators": [
+    12,
+    12,
+    12,
+    36
+  ],
+  "informed_before": {
+    "world_correct": 12,
+    "world_wrong_definite": 0,
+    "defer": 0,
+    "invalid": 0
+  },
+  "informed_after": {
+    "world_correct": 7,
+    "world_wrong_definite": 1,
+    "defer": 4,
+    "invalid": 0
+  },
+  "human_review": false,
+  "new_model_calls": 0,
+  "new_probe_fits": 0
+}

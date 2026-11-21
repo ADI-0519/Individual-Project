@@ -1,0 +1,48 @@
+{
+    "schema":  "recipient_risk_v2_mirror_v1",
+    "date":  "2026-11-21",
+    "native_directory":  "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/recipient_risk_validation_v2_20261121",
+    "mirror_directory":  "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\runs\\recipient_risk_validation_v2_20261121",
+    "files":  [
+                  {
+                      "file":  "preflight.json",
+                      "bytes":  1773555,
+                      "sha256":  "306d464ff4b874e980f2214db03ecde726e83835f31a956026abb42a0e2e8efc"
+                  },
+                  {
+                      "file":  "manifest.json",
+                      "bytes":  5820,
+                      "sha256":  "234376d8fe2167942e48ff10a20ad18e6f70b18154378af4bc998a99547025c1"
+                  },
+                  {
+                      "file":  "control_plan.json",
+                      "bytes":  2148917,
+                      "sha256":  "20c8ff4703a5342a4127b4e7e5a83ab55b16601496374012a8b735d2be51af5b"
+                  },
+                  {
+                      "file":  "reader_cache.json",
+                      "bytes":  1781698,
+                      "sha256":  "bcce8a132b8b672702cbd6b36ddac48131d037f6a54736a390d9ce32518cac53"
+                  },
+                  {
+                      "file":  "control_rows.json",
+                      "bytes":  3915510,
+                      "sha256":  "c4f270eb1da3b1a344f8d0bd44766de9921e4533e32d638eb2f6c041a6ad9692"
+                  },
+                  {
+                      "file":  "protocol.json",
+                      "bytes":  863639,
+                      "sha256":  "bf376a74681106444be0987284f4481f0d854dac97f8196c08e79ad801661155"
+                  },
+                  {
+                      "file":  "qualification.json",
+                      "bytes":  509,
+                      "sha256":  "89bda4fcbe2f4a7fef9e4346d1424d5d6b1ad7ef8bd89e9f956875eb77780322"
+                  }
+              ],
+    "n_files":  7,
+    "bytes":  10489648,
+    "all_byte_identical":  true,
+    "new_model_calls":  0,
+    "new_probe_fits":  0
+}

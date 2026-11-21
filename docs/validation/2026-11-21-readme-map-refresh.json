@@ -1,0 +1,152 @@
+{
+  "schema": "bounded_readme_graph_refresh_v2",
+  "status": "complete",
+  "created_utc": "2026-11-21T12:19:38.653637+00:00",
+  "source": "README.md",
+  "fully_read_lines": 367,
+  "before_source_sha256": "19c5851b56b03765d869e3506dd9205b5dc03d92fadfeaea7114e125e7f3a82c",
+  "after_source_sha256": "6676f216e55e5d5aa3435b45cf38a55105bad861636acf81cd56108356f68b0f",
+  "semantic_nodes_reviewed": 3,
+  "existing_edges_reviewed": 5,
+  "other_source_hashes_verified_unchanged": 63,
+  "other_graph_contributions_preserved": true,
+  "new_nodes": 0,
+  "new_edges": 0,
+  "unindexed_new_result_links_only": true,
+  "source_location_anchors": {
+    "document": {
+      "start": 1,
+      "end": 367,
+      "anchor": "# Latent probes under reporting pressure",
+      "verified": true
+    },
+    "latest": {
+      "start": 20,
+      "end": 26,
+      "anchor": "**Latest measured milestone (21 November):**",
+      "verified": true
+    },
+    "main": {
+      "start": 20,
+      "end": 45,
+      "anchor": "**Latest measured milestone (21 November):**",
+      "verified": true
+    },
+    "v1": {
+      "start": 35,
+      "end": 45,
+      "anchor": "**Earlier natural omission milestone:**",
+      "verified": true
+    },
+    "older": {
+      "start": 47,
+      "end": 60,
+      "anchor": "**Earlier communication milestone:**",
+      "verified": true
+    },
+    "role": {
+      "start": 62,
+      "end": 73,
+      "anchor": "**Controlled failure finding:**",
+      "verified": true
+    }
+  },
+  "schema_errors": [],
+  "no_model_or_external_api": true,
+  "host_agent_token_cost": "unmeasured",
+  "graph": {
+    "nodes": 727,
+    "edges": 2081,
+    "communities": 27
+  },
+  "source_count": 64,
+  "all64_source_hashes_match": true,
+  "semantic_cache_misses": [],
+  "merged_dangling_edges": 0,
+  "merged_missing_endpoint_edges": 0,
+  "before_output_sha256": {
+    "graph.json": "a4d2f5be7eef4383e795b1b4c378d29fd16302fdb8e89bb3484850a9b0249d84",
+    "graph.html": "e3151501bb3c40729cc4a46f2ab9c26cd87954e53b1b4b8b630d4c46b2a6f3bf",
+    "GRAPH_REPORT.md": "4b86bd55c8895d820feb5680b2291e92f7cae28e3397a18918ca40f9a9b9a3b1",
+    "GRAPH_HEALTH.json": "721c43a1747ed745fda94bd19e1f59e700eb5b91fed8936443492bcdf9a21749",
+    "RESEARCH_MAP_PROVENANCE.json": "b1e258d1a68b083ca502b1f8581f453c498d73e77cf2f33319ed15a5422cdf1e",
+    "RESEARCH_FINDINGS.md": "fbdf8d1d46fde10e43779cf6ac8ffd4da973245a70a8b7fabd90aa551c577303"
+  },
+  "before_local_manifest_sha256": "697abf8f6205468d2b2dcad85c190d1d640c754d6f5e47083b06327e1dd943d3",
+  "before_local_cost_sha256": "d60e3b3eddd00d0d268b661bec826c5f63317a8211cbf2f5916110147b14ea4a",
+  "runtime": "3.14.9 (main, Oct 21 2026, 17:48:58) [MSC v.1944 64 bit (AMD64)]",
+  "scientific_results_changed": false,
+  "scope_limit": "Only README statements were semantically refreshed. Fresh result/code/protocol/bank, portable evidence and human packet are unindexed links, not independently extracted or validated by this map.",
+  "html_exported": true,
+  "html_lf_and_final_newline_verified": true,
+  "after_output_sha256": {
+    "graph.json": "3fdc311c1121b2cd213c79c3a35bc2083ba26c634041086045f6c072c5a8c1c8",
+    "graph.html": "ea1c01e2ceee94dde45df1e55cf520a5be733fdb0fcfb8213501dd82a3006f57",
+    "GRAPH_REPORT.md": "76c1f19771ec0d1aa39b1574f12a78e70488ed76edca24f957744bebf6020467",
+    "GRAPH_HEALTH.json": "d34c4e98dd04cbd8e3af0025f58b82e75e0130d7691953a5993f096c4337ec60",
+    "RESEARCH_MAP_PROVENANCE.json": "3e28d1548f9ffd838d5e071f92a644a2dd48f491ba59dcd7b0642cce671492c0",
+    "RESEARCH_FINDINGS.md": "1111dd7ee1df246e1d09bf4e86def6ce0a9895f4da9db6b91bd077d2707cec2d"
+  },
+  "all64_source_hashes_match_after_export": true,
+  "other63_manifest_rows_identical": true,
+  "all_other_graph_nodes_and_edges_exactly_equal": true,
+  "source_locations_checked": [
+    {
+      "id_or_edge": "readme_communication_main",
+      "start": 20,
+      "end": 45,
+      "anchor": "**Latest measured milestone (21 November):**",
+      "verified": true
+    },
+    {
+      "id_or_edge": "readme_role_failure",
+      "start": 62,
+      "end": 73,
+      "anchor": "**Controlled failure finding:**",
+      "verified": true
+    },
+    {
+      "id_or_edge": "readme_document",
+      "start": 1,
+      "end": 367,
+      "anchor": "# Latent probes under reporting pressure",
+      "verified": true
+    },
+    {
+      "id_or_edge": "readme_document -> readme_role_failure",
+      "start": 62,
+      "end": 73,
+      "anchor": "**Controlled failure finding:**",
+      "verified": true
+    },
+    {
+      "id_or_edge": "readme_communication_main -> docs_communication_transfer_results_belief_auxiliary",
+      "start": 47,
+      "end": 60,
+      "anchor": "**Earlier communication milestone:**",
+      "verified": true
+    },
+    {
+      "id_or_edge": "readme_communication_main -> docs_communication_transfer_results_document",
+      "start": 47,
+      "end": 60,
+      "anchor": "**Earlier communication milestone:**",
+      "verified": true
+    },
+    {
+      "id_or_edge": "readme_document -> readme_communication_main",
+      "start": 20,
+      "end": 26,
+      "anchor": "**Latest measured milestone (21 November):**",
+      "verified": true
+    },
+    {
+      "id_or_edge": "readme_role_failure -> docs_evidence_role_diagnostic_results_document",
+      "start": 62,
+      "end": 73,
+      "anchor": "**Controlled failure finding:**",
+      "verified": true
+    }
+  ],
+  "local_cost_accounts_host_usage_as_unmeasured": true
+}

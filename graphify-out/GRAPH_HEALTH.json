@@ -919,5 +919,164 @@
       },
       "examples": []
     }
+  },
+  "readme_refresh_20261121": {
+    "source": "README.md",
+    "fully_read_lines": 367,
+    "before_source_sha256": "19c5851b56b03765d869e3506dd9205b5dc03d92fadfeaea7114e125e7f3a82c",
+    "after_source_sha256": "6676f216e55e5d5aa3435b45cf38a55105bad861636acf81cd56108356f68b0f",
+    "semantic_nodes_reviewed": 3,
+    "existing_edges_reviewed": 5,
+    "other_source_hashes_verified_unchanged": 63,
+    "other_graph_contributions_preserved": true,
+    "new_nodes": 0,
+    "new_edges": 0,
+    "unindexed_new_result_links_only": true,
+    "source_location_anchors": {
+      "document": {
+        "start": 1,
+        "end": 367,
+        "anchor": "# Latent probes under reporting pressure",
+        "verified": true
+      },
+      "latest": {
+        "start": 20,
+        "end": 26,
+        "anchor": "**Latest measured milestone (21 November):**",
+        "verified": true
+      },
+      "main": {
+        "start": 20,
+        "end": 45,
+        "anchor": "**Latest measured milestone (21 November):**",
+        "verified": true
+      },
+      "v1": {
+        "start": 35,
+        "end": 45,
+        "anchor": "**Earlier natural omission milestone:**",
+        "verified": true
+      },
+      "older": {
+        "start": 47,
+        "end": 60,
+        "anchor": "**Earlier communication milestone:**",
+        "verified": true
+      },
+      "role": {
+        "start": 62,
+        "end": 73,
+        "anchor": "**Controlled failure finding:**",
+        "verified": true
+      }
+    },
+    "schema_errors": [],
+    "no_model_or_external_api": true,
+    "host_agent_token_cost": "unmeasured",
+    "merged_graph": {
+      "node_count": 727,
+      "unverified_node_count": 0,
+      "raw_edge_count": 2081,
+      "non_object_edges": 0,
+      "missing_endpoint_edges": 0,
+      "dangling_endpoint_edges": 0,
+      "external_reference_edges": 0,
+      "self_loop_edges": 0,
+      "valid_candidate_edges": 2081,
+      "exact_duplicate_edges": 0,
+      "directed_unique_endpoint_pairs": 2081,
+      "directed_same_endpoint_collapsed_edges": 0,
+      "undirected_unique_endpoint_pairs": 2081,
+      "undirected_same_endpoint_collapsed_edges": 0,
+      "same_endpoint_group_count": 0,
+      "relation_variant_groups": 0,
+      "source_file_variant_groups": 0,
+      "source_location_variant_groups": 0,
+      "context_variant_groups": 0,
+      "post_build_graph_type": "Graph",
+      "post_build_node_count": 727,
+      "post_build_edge_count": 2081,
+      "post_build_error": "",
+      "producer_suppression": {
+        "path": "C:\\Users\\adirj\\AppData\\Roaming\\uv\\tools\\graphifyy\\Lib\\site-packages\\graphify\\extract.py",
+        "total_sites": 12,
+        "sites": [
+          {
+            "line": 1830,
+            "name": "seen_ids",
+            "tuple_arity": 0,
+            "sample": "seen_ids = {n[\"id\"] for n in nodes}"
+          },
+          {
+            "line": 2393,
+            "name": "seen_ids",
+            "tuple_arity": 0,
+            "sample": "seen_ids = {n[\"id\"] for n in nodes}"
+          },
+          {
+            "line": 2395,
+            "name": "seen_doc_refs",
+            "tuple_arity": 0,
+            "sample": "seen_doc_refs: set[str] = set()"
+          },
+          {
+            "line": 3062,
+            "name": "seen_ids",
+            "tuple_arity": 0,
+            "sample": "seen_ids: set[str] = {n[\"id\"] for n in nodes}"
+          },
+          {
+            "line": 3209,
+            "name": "seen_ids",
+            "tuple_arity": 0,
+            "sample": "seen_ids = {n.get(\"id\") for n in nodes}"
+          },
+          {
+            "line": 4350,
+            "name": "seen_keys",
+            "tuple_arity": 0,
+            "sample": "seen_keys: set[tuple] = set()"
+          },
+          {
+            "line": 4536,
+            "name": "seen_keys",
+            "tuple_arity": 0,
+            "sample": "seen_keys: set[tuple] = set()"
+          },
+          {
+            "line": 8160,
+            "name": "seen_ids",
+            "tuple_arity": 0,
+            "sample": "seen_ids: set[str] = set()"
+          },
+          {
+            "line": 8268,
+            "name": "seen_ids",
+            "tuple_arity": 0,
+            "sample": "seen_ids: set[str] = set()"
+          },
+          {
+            "line": 8347,
+            "name": "seen_ids",
+            "tuple_arity": 0,
+            "sample": "seen_ids: set[str] = set()"
+          },
+          {
+            "line": 8872,
+            "name": "seen_ids",
+            "tuple_arity": 0,
+            "sample": "seen_ids: set[str] = set()"
+          },
+          {
+            "line": 8873,
+            "name": "seen_edges",
+            "tuple_arity": 4,
+            "sample": "seen_edges: set[tuple[str, str, str, str | None]] = set()"
+          }
+        ],
+        "error": ""
+      },
+      "examples": []
+    }
   }
 }

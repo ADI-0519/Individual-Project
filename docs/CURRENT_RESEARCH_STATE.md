@@ -4,6 +4,63 @@ Read this file and the linked protocols before changing the project. It records
 the current evidence boundary so continuation does not depend on chat memory.
 The experiment ran on 20 November; analysis and curation continued overnight.
 
+## 21 November continuation
+
+Execution code and the new [v2 protocol](RECIPIENT_RISK_VALIDATION_V2_PROTOCOL.md)
+were committed and pushed at `06328fa1894f76f533b2c2749b47364f9d2b607b` before
+the new model run. Twelve fresh cases span three predicate types, still sharing
+conjunction/latest-record logic. The primary arm is prospectively 50 words;
+25 words is secondary, and cannot rescue a primary failure. No fitting is
+authorized. Existing v1 gates remain failed.
+
+The real attempt is
+`/home/adirj/kcl-latent-probes-runs/recipient_risk_validation_v2_20261121`.
+Preparation and all 72 unique comprehension calls completed. **Qualification
+failed:** full disclosure 19/36 (checks 7/12, numeric 3/12, expiry 9/12), no-report
+informed 12/12, absent 2/12, stale 11/12, zero invalids. Zero actor reports and
+zero fits followed. The planned 504-condition panel was not collected. See the
+[new results](RECIPIENT_RISK_V2_RESULTS.md). The same informed packets decline
+from twelve correct answers without a report to seven with the full source;
+four become DEFER and one becomes world-wrong. Do not attribute this specifically
+to irrelevant facts or quantization without new evidence.
+
+The [bound analysis](validation/2026-11-21-recipient-risk-v2.json) verifies the
+actual control-only attempt; its analyzer SHA is
+`6c0ac92ee9ba4bdb99714136b482780b576f798c6898cb57ae209a168fc2c17d`.
+The [independent trace audit](validation/2026-11-21-independent-recipient-risk-qualification-audit.json)
+rechecks all 72 payloads and output/token bindings, fifteen source hashes and
+all normative controls without the project's decision helper. It finds no
+material input/label/prose discrepancy; this remains agent, not human, review.
+The seven-file, 10,489,648-byte native attempt and ignored Windows mirror are
+byte-identical. No natural report bank or activation files exist for v2.
+
+The execution checkpoint passed all five CI jobs, including 787 tests plus one
+expected licensed-source skip per configuration. Locally, the earlier suite
+passed 760 tests and 48 subtests, the new runner 28 tests, and its separately
+reviewed bound analyzer 22 tests. These are engineering checks, not a new
+scientific observation. The source bank and executed protocol must stay frozen;
+their draft/unexecuted metadata describe the input snapshot, while the attempt
+manifest records the completed control failure.
+
+The separate engineering preflight made zero model calls; its source
+binding predates the tested Windows-write fix and must not be used for inference.
+
+The [portable v1 archive](PORTABLE_PILOT_REPRODUCTION.md) now reproduces all
+scientific pilot/Apollo fields after extraction outside the workspace, on native
+Windows CPU and WSL CPU. The latter independently verifies pinned tokenizers;
+the default mode explicitly verifies saved record bindings only. No model
+inference was repeated. The [human review packet](review/natural_selection_v1_human/review.md)
+contains all eight sources and 32 exact reports with blank annotations. Human
+review remains incomplete. A scoped whitespace exception preserves one literal
+line-end space in captured report text; its JSON and Markdown hashes were also
+verified from Git archive bytes.
+
+The [new literature/design review](FRESH_FEASIBILITY_DESIGN_REVIEW_2026-11-21.md)
+includes COVERAGE-TRACE (19 November) and source-first enumeration baselines.
+The v1 result now prominently records all addition effects (five changed
+decisions versus four for irrelevant additions) and the motivating omission's
+lower Apollo score than its complete, equal-length counterpart.
+
 ## Current outcome
 
 The [natural-communication pilot](NATURAL_SELECTION_PILOT_RESULTS.md) is complete:

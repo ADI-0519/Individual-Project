@@ -1,12 +1,12 @@
 {
   "schema": "graphify_research_map_v3",
-  "updated_utc": "2026-11-20T23:03:56.076926+00:00",
+  "updated_utc": "2026-11-21T12:19:38.585885+00:00",
   "graphify_version": "0.9.100",
   "source_root": "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project",
   "source_files": {
     "README.md": {
-      "sha256": "19c5851b56b03765d869e3506dd9205b5dc03d92fadfeaea7114e125e7f3a82c",
-      "lines": 352
+      "sha256": "6676f216e55e5d5aa3435b45cf38a55105bad861636acf81cd56108356f68b0f",
+      "lines": 367
     },
     "docs/BELIEF_DIAGNOSTIC_RESULTS.md": {
       "sha256": "13e48c3da74826cbd9ff29dface5a1cd9e6654a7616a39439fe9813b8a91fa7e",
@@ -284,7 +284,7 @@
   },
   "extraction": "Installed Graphify detect_incremental + AST/cache + delegated host-agent semantic extraction + build_merge replace-on-source + clustering. Unchanged source extraction preserved.",
   "semantic_reading_limits": "All changed Markdown was read to final line; prior fully read sources reused. Paper nodes summarize repository primary-source audits; no new external PDFs read in this graph update. Source-explicit claims are not independent experimental verification.",
-  "research_status": "Natural communication completed; fresh reader qualification failed; Qwen evidence-role diagnostic and one post-discovery Llama replication completed. Full Qwen pattern is not cross-model replicated. Conditional recipient-readout pipeline remains unexecuted.",
+  "research_status": "README reports failed fresh 72-control recipient qualification; no natural actor reports or new probe fits, and the planned 504-condition panel was not collected. Earlier omission pilot and stopped fits remain development evidence; linked fresh source files are unindexed.",
   "excluded_feedback_files": [
     "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\graphify-out\\memory\\query_20261120_125213_9e802eb9_which_current_results_connect_apollo_probes_to_nat.md"
   ],
@@ -346,6 +346,60 @@
     "new_nodes": 0,
     "new_edges": 0,
     "unindexed_new_result_links_only": true,
+    "schema_errors": [],
+    "no_model_or_external_api": true,
+    "host_agent_token_cost": "unmeasured"
+  },
+  "readme_refresh_20261121": {
+    "source": "README.md",
+    "fully_read_lines": 367,
+    "before_source_sha256": "19c5851b56b03765d869e3506dd9205b5dc03d92fadfeaea7114e125e7f3a82c",
+    "after_source_sha256": "6676f216e55e5d5aa3435b45cf38a55105bad861636acf81cd56108356f68b0f",
+    "semantic_nodes_reviewed": 3,
+    "existing_edges_reviewed": 5,
+    "other_source_hashes_verified_unchanged": 63,
+    "other_graph_contributions_preserved": true,
+    "new_nodes": 0,
+    "new_edges": 0,
+    "unindexed_new_result_links_only": true,
+    "source_location_anchors": {
+      "document": {
+        "start": 1,
+        "end": 367,
+        "anchor": "# Latent probes under reporting pressure",
+        "verified": true
+      },
+      "latest": {
+        "start": 20,
+        "end": 26,
+        "anchor": "**Latest measured milestone (21 November):**",
+        "verified": true
+      },
+      "main": {
+        "start": 20,
+        "end": 45,
+        "anchor": "**Latest measured milestone (21 November):**",
+        "verified": true
+      },
+      "v1": {
+        "start": 35,
+        "end": 45,
+        "anchor": "**Earlier natural omission milestone:**",
+        "verified": true
+      },
+      "older": {
+        "start": 47,
+        "end": 60,
+        "anchor": "**Earlier communication milestone:**",
+        "verified": true
+      },
+      "role": {
+        "start": 62,
+        "end": 73,
+        "anchor": "**Controlled failure finding:**",
+        "verified": true
+      }
+    },
     "schema_errors": [],
     "no_model_or_external_api": true,
     "host_agent_token_cost": "unmeasured"
