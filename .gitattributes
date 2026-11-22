@@ -19,6 +19,9 @@ data/belief_main/main_v1/*.json -text whitespace=-blank-at-eol,-blank-at-eof
 docs/review/main_study_v1/* -text whitespace=-blank-at-eol,-blank-at-eof
 research/deceptionbench/*.json -text whitespace=-blank-at-eol,-blank-at-eof
 
+# Scientific exports retain the exact bytes recorded in their output manifests.
+docs/results/*/* -text whitespace=-blank-at-eol,-blank-at-eof
+
 *.bat text eol=crlf
 *.cmd text eol=crlf
 *.png binary

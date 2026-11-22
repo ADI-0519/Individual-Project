@@ -26,8 +26,8 @@ repos:
       - id: trailing-whitespace
         entry: python -m pre_commit_hooks.trailing_whitespace_fixer
         args: [--markdown-linebreak-ext=md]
-        # Preserve exact captured evidence, including internal line-end spaces.
-        exclude: ^(data/annotations/.*_agent_draft\.csv|data/annotations/main_study_v1_agent_semantic_20261122\.json|docs/review/natural_selection_v1_human/review\.md|data/belief_main/.*\.json|docs/review/main_study_v1/.*|research/deceptionbench/.*\.json)$
+        # Preserve captured evidence and byte-bound Matplotlib SVG exports.
+        exclude: ^(data/annotations/.*_agent_draft\.csv|data/annotations/main_study_v1_agent_semantic_20261122\.json|docs/review/natural_selection_v1_human/review\.md|data/belief_main/.*\.json|docs/review/main_study_v1/.*|research/deceptionbench/.*\.json|docs/results/[^/]+/[^/]+\.svg)$
   - repo: local
     hooks:
       - id: ruff-check

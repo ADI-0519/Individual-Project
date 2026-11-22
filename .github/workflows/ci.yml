@@ -89,6 +89,14 @@ jobs:
           --results presentations/progress2/Progress-2-measured-results.json
           --pptx .cache/progress2-check.pptx
           --pdf .cache/progress2-check.pdf
+      - name: Check main-study slide provenance and four-slide layout
+        run: uv run --locked --extra slides python -m pytest tests/test_main_study_progress2.py -q
+      - name: Rebuild the two-model empirical update from its bound report
+        run: >-
+          uv run --locked --extra slides python scripts/build_main_study_progress2.py
+          --summary docs/results/main-study-2026-11-22-interim/results_summary.json
+          --manifest docs/results/main-study-2026-11-22-interim/report_manifest.json
+          --output-directory .cache/main-study-progress2-check
       - name: Retain checked presentation
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
@@ -96,6 +104,7 @@ jobs:
           path: |
             .cache/progress2-check.pptx
             .cache/progress2-check.pdf
+            .cache/main-study-progress2-check/*
           if-no-files-found: error
           retention-days: 14
 

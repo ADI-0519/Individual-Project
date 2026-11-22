@@ -1,0 +1,27 @@
+{
+  "schema": "main-study-progress2-receipt-v1",
+  "created_at": "2026-11-22T16:38:55.828384+00:00",
+  "slides": 4,
+  "test_fixture": false,
+  "research_status": "agent_audited_exploratory",
+  "human_review_complete": false,
+  "confirmatory_result": false,
+  "inputs": {
+    "summary": {
+      "path": "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\docs\\results\\main-study-2026-11-22-interim\\results_summary.json",
+      "sha256": "f21fb53ee27766362e98ba4436d036bb3945efc89c5e334111409c037d0d436f"
+    },
+    "report_manifest": {
+      "path": "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\docs\\results\\main-study-2026-11-22-interim\\report_manifest.json",
+      "sha256": "79c7347eeecb958799f636616845a4b5249dcad2b54255171b95a6df64274801"
+    }
+  },
+  "template_sha256": "c63d6eb4be21cfb626ba0b99fd54fb43629d7e7bd89717da4284af42c80e4255",
+  "renderer_sha256": "4a1d5d60dd954a80caf7ff48394c7f3b40d074c2d3c68fa31e286c6f04082e78",
+  "builder_sha256": "c615390031774fb3ba77c7f384ebab7be292fd74655aa1e45b2e282b0a2c637d",
+  "outputs": {
+    "Progress-2-main-study.pdf": "4d0d80fdb33aee782c613d2412daa415ed3d859971d22e0d8cbbdfd3f84feafd",
+    "Progress-2-main-study.pptx": "0e672c52bee771d2b912a36043f501ee935b7c769f21b3ab6e10892bb6dee4c6",
+    "speaker-notes.md": "8aa86b55c1e1c4002228193a34fbc762ea110e72bda8378999dd6859187d8942"
+  }
+}

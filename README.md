@@ -13,20 +13,35 @@ controlled study tests a frozen readout of sender-attributed current belief;
 this target is distinct from Apollo deception detection. See the
 [current research decision](docs/CURRENT_RESEARCH_STATE.md).
 
-**22 November, 15:14 UTC recovery:** WSL stopped during Llama held-out capture.
-All 2,758 completed rows and both fitted model bundles passed an independent
-integrity audit. A [separate recovery](docs/MAIN_STUDY_INTERRUPTION_RECOVERY_2026-11-22.md)
-preserves the originals and resumes the remaining 1,082 fixed cases without
-refitting. Its new live state is recorded in the continuation document; the
-original campaign's `running` flag is stale. No final held-out finding exists yet.
+**22 November, 16:23 UTC empirical checkpoint:** both models have completed their
+held-out captures and saved analyses. At the same N=512 fitting budget, including
+belief-preserving examples did not improve complete correction-quartet accuracy:
+**Llama 3.75% restricted / 3.00% full; Qwen 1.83% / 1.00%**. The respective paired
+differences are -0.75 and -0.83 percentage points, with saved 95% group-bootstrap
+intervals [-1.92, +0.33] and [-2.00, +0.25]. These are joint four-case scores,
+not individual-answer accuracy. See the [actual two-model report and figures](docs/results/main-study-2026-11-22-interim/results.md).
+The [interpretation](docs/MAIN_STUDY_TWO_MODEL_INTERIM_INTERPRETATION_2026-11-22.md)
+explains why Qwen's weak one-step results limit a composition-specific claim.
+An [editable four-slide update](presentations/progress2-main-study-2026-11-22/reviewed/Progress-2-main-study.pptx)
+and [PDF](presentations/progress2-main-study-2026-11-22/reviewed/Progress-2-main-study.pdf)
+present the measured comparison, barriers and planned next steps.
+The fixed prose baseline is now running; this report explicitly marks it missing.
+Human semantic review is incomplete and the study is agent-audited exploratory.
+Readout failure does not establish absence of belief information. The
+[separate recovery](docs/MAIN_STUDY_INTERRUPTION_RECOVERY_2026-11-22.md) preserved
+all 2,758 earlier Llama measurements and disclosed one repeated unknown-outcome
+attempt; its originals remain untouched.
 
-**Project status: early research development.** The engineering baseline and
-small pilot are complete; the main study and dissertation are not. Validated
-targets, human-reviewed data, competitive frozen controls, independent family
-holdouts, a second reader and the final analysis/write-up remain ahead. The
-[main-study gates](docs/MAIN_STUDY_GATES.md) define what counts as completion.
+**Project status: empirical evaluation in progress.** The Apollo-style adaptation,
+earlier pilots and two-model controlled belief-readout captures are complete.
+The strong prose comparison, human semantic review, final interpretation and
+dissertation remain unfinished. This controlled target differs materially from
+the original natural deception/omission extension. The
+[current research state](docs/CURRENT_RESEARCH_STATE.md) takes precedence over the
+historical pilot checkpoints below and the earlier communication-study
+[gates](docs/MAIN_STUDY_GATES.md).
 
-**22 November update:** an independent agent's blinded semantic answers agree
+**Earlier 22 November checkpoint:** an independent agent's blinded semantic answers agree
 with all 736 representative labels across 154 groups. The
 [prospective exploratory amendment](docs/MAIN_STUDY_AGENT_EXECUTION_AMENDMENT_2026-11-22.md)
 allows continued model execution with explicit agent-only validation; human

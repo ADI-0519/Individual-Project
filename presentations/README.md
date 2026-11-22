@@ -1,5 +1,31 @@
 # Progress presentations
 
+The latest empirical update is the [22 November main-study PowerPoint](./progress2-main-study-2026-11-22/reviewed/Progress-2-main-study.pptx)
+and [PDF](./progress2-main-study-2026-11-22/reviewed/Progress-2-main-study.pdf), with
+[speaker notes](./progress2-main-study-2026-11-22/reviewed/speaker-notes.md). It has exactly
+four slides: title/name/description, current progress, barriers and next steps.
+It presents both completed model analyses, the lack of a measured fitting-coverage
+benefit, incomplete human validation, and the pending prose baseline. It does
+not claim spontaneous anticipation, deceptive intent, or a complete research
+project. This is a dated result snapshot, not an assertion of the meeting date.
+
+The [source receipt](./progress2-main-study-2026-11-22/reviewed/source-receipt.json) binds
+the unchanged template/renderer, builder, actual
+[two-model report summary](../docs/results/main-study-2026-11-22-interim/results_summary.json)
+and its manifest. Rebuild to a fresh output folder with the existing slides
+environment; this makes no model calls:
+
+```powershell
+python scripts/build_main_study_progress2.py `
+  --summary docs/results/main-study-2026-11-22-interim/results_summary.json `
+  --manifest docs/results/main-study-2026-11-22-interim/report_manifest.json `
+  --output-directory .cache/main-study-progress2-rebuild
+```
+
+CI checks source refusals and four-slide layout, rebuilds this empirical update,
+and retains it with its receipt. The earlier deck below is a historical pilot
+snapshot and has its own unchanged data and rebuild path.
+
 [Progress 2 PowerPoint](./progress2/Progress-2-measured-results.pptx) and
 [PDF](./progress2/Progress-2-measured-results.pdf) contain exactly four slides:
 title, current state, current barriers, and planned next steps. The main question

@@ -1,6 +1,82 @@
 # Verified continuation state: 22 November 2026
 
-## Latest: 15:14 UTC interruption recovery
+## Latest: 16:25 UTC, both held-out analyses independently verified
+
+Both pinned models completed **2,048 train/development and 3,840 held-out
+prefix captures each: 11,776 main-study measurements in total**. Each has
+30 matched activation/TF-IDF fit comparisons, with all selected arms retained.
+Both held-out raw-array audits passed all 3,840 rows. These measurements are
+factorial variants of 154 authored contextual groups, not 11,776 independent
+reasoning situations. The held-out set contains 90 groups per model, including
+30 correction groups. The same groups are reused across models.
+
+The unchanged reporter produced the [real two-model interim report](results/main-study-2026-11-22-interim/results.md),
+[source-bound summary](results/main-study-2026-11-22-interim/results_summary.json),
+[primary figure](results/main-study-2026-11-22-interim/primary.pdf) and
+[learning curves](results/main-study-2026-11-22-interim/learning_curves.pdf).
+The [manifest](results/main-study-2026-11-22-interim/report_manifest.json) hashes
+both full source analyses and every generated output. The committed report is
+a byte-for-byte verified copy of the native export. Large raw arrays and full
+analysis files remain in native storage, outside Git.
+
+| N512 raw correction complete-quartet score | Restricted | Full | Difference, percentage points | Saved 95% group interval, points |
+| --- | ---: | ---: | ---: | --- |
+| Llama | 3.75% | 3.00% | -0.75 | [-1.9167, +0.3333] |
+| Qwen | 1.8333% | 1.00% | -0.8333 | [-2.00, +0.25] |
+
+The proposed fitting-coverage benefit is unsupported in these configurations.
+Both intervals include zero; neither exact equivalence nor a harmful population
+effect is established. A quartet requires all four linked judgments correct,
+so these percentages must not be described as row accuracy. Llama generalizes
+much better to fresh one-step cases than to correction accounts; Qwen's
+one-step quartet scores are also weak. This is not a clean two-model isolation
+of abstract compositional reasoning, absence of belief information, spontaneous
+anticipation or deception detection.
+
+The independent [Llama saved-result audit](validation/2026-11-22-main-study-llama-heldout-independent-v2.json)
+and [Qwen audit](validation/2026-11-22-main-study-qwen-heldout-independent.json)
+each reconstructed all 60 heads with bit-exact margins and probabilities, all
+10,800 raw/calibrated group records and the exact primary bootstrap. This is
+independent saved-data reconstruction, not a second inference run. Llama's audit
+also verified retention of all original measurements and one unique final row
+per case; Qwen has 3,840 fresh unique rows. The final helper's 14 corruption tests
+pass. A dense arithmetic implementation initially perturbed near-tied TF-IDF
+ranks; sorted sparse accumulation resolved that audit discrepancy without any
+change to the frozen analyses. The first Llama audit remains preserved. The
+[Llama interpretation](MAIN_STUDY_LLAMA_INTERIM_INTERPRETATION_2026-11-22.md)
+distinguishes predeclared metrics from descriptive analyses requested after
+the primary result. The [two-model interpretation](MAIN_STUDY_TWO_MODEL_INTERIM_INTERPRETATION_2026-11-22.md)
+adds Qwen's weaker one-step performance and the predeclared same-format controls.
+
+The [editable four-slide update](../presentations/progress2-main-study-2026-11-22/reviewed/Progress-2-main-study.pptx),
+[PDF](../presentations/progress2-main-study-2026-11-22/reviewed/Progress-2-main-study.pdf)
+and [speaker notes](../presentations/progress2-main-study-2026-11-22/reviewed/speaker-notes.md)
+bind this actual interim report. The new focused checks pass **41 tests with
+two optional presentation skips** in the inner CPU environment; all **18 slide
+tests**, including those two rendering checks, pass in the existing outer
+presentation environment. These counts overlap and must not be added together.
+All repository hooks pass. Thirteen exported files, including both manifests,
+have identical working-tree and staged bytes. Scientific SVGs are exempt from
+whitespace rewriting; generated notes/receipt now emit LF with one final newline.
+Earlier slide drafts and their receipts are preserved in native recovery storage.
+The CI presentation job now checks provenance/layout and rebuilds the new update;
+the last already completed five-job CI run is [752bf62](https://github.com/ADI-0519/Individual-Project/actions/runs/45037480228).
+
+The fixed Qwen prose-only monitor began its 512-row development capture after
+the two held-out analyses completed. Its prompt, parser, 384-token cap and
+invalid-as-incorrect policy remain unchanged; its 3,840-row test capture and
+integrated final reporting follow in the existing recovery campaign. The
+interim report explicitly marks this comparator missing. Do not relabel that
+report as a completed baseline comparison or tune the running monitor using
+the exposed results.
+
+All results remain `agent_audited_exploratory`, `human_review_complete=false`
+and `confirmatory_result=false`. Later human review cannot retroactively turn
+these exposed results into confirmation. The recovery deviation below remains
+part of the evidence. The original study and failed pilots remain preserved;
+the older sections are historical checkpoints, superseded by this section.
+
+## Earlier: 15:14 UTC interruption recovery
 
 The original WSL instance powered off at 14:59:38 after **2,758/3,840** Llama
 test rows. Its exact shutdown cause is unknown. Its original `state.json` and
