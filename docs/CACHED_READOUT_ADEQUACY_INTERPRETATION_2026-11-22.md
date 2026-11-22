@@ -199,6 +199,27 @@ transforms and reports every group/fold/aggregate metric matching. It performs
 zero classifier refits and imports no pipeline. That verifies saved measurement
 integrity, not human semantics or causal faithfulness.
 
+The first reconstruction implementation was authored by the fitting-code
+author. It is separate arithmetic code with no pipeline import or refitting,
+not a claim of independent authorship or blinded human review. The export
+checks were reviewed by another agent with disclosed prior source/result
+exposure. Keep these forms of checking distinct when describing the evidence.
+
+A subsequently [fresh agent's independent reconstruction](validation/2026-11-22-cached-readout-adequacy-second-agent-v2.json)
+supplies the separate-authorship check. It did not read either implementation,
+prior auditor, renderer or interpretation. It saved independent predictions
+and metrics at 20:16:46 UTC before inspecting saved diagnostic outcomes, then
+compared them at 20:19:07 UTC. All 11,520 verdicts, 15,360 factor predictions
+and 44,318 scalar metric fields match. The record discloses schema inspection
+and incidental original-LM-logit exposure, and preserves the first-phase code.
+It verifies arithmetic conditional on the saved heads, not the optimization
+history, human semantics or another independent model evaluation.
+The [provenance disclosure](validation/2026-11-22-cached-readout-adequacy-second-agent-provenance.json)
+records that an intermediate comparison report was overwritten while compacting
+it and adding the unchanged-function check. Its original exact bytes were not
+retained. This is not represented as immutable evidence: the precomparison
+prediction freeze is unchanged, and final v2/checker bytes are separately saved.
+
 | Source | SHA256 |
 | --- | --- |
 | [Llama out-of-fold results](//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/readout_adequacy_cf_v1_20261122/llama/oof_results.json) | `4b597a0395e3f98b6037ebe9be767b91ddad9377553de1897e6dd6ea94fa2d88` |

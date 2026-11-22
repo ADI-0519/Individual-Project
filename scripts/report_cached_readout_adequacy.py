@@ -388,7 +388,8 @@ def markdown(summary):
         "or causal use of a belief representation.",
         "",
         "All saved margins, train-only transforms, selected-grid records, folds and verdict metrics were "
-        "reconstructed by a separate auditor without importing or refitting the pipeline. The output "
+        "reconstructed without importing or refitting the pipeline. That separate checking implementation "
+        "was authored by the fitting-code author; implementation separation is not independent authorship. The output "
         "manifest binds the source analyses, audit and renderer. No new language-model calls were made.",
         "",
     ]

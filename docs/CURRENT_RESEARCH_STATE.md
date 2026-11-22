@@ -1,6 +1,73 @@
 # Verified continuation state: 22 November 2026
 
-## Latest: campaign complete at 19:14:37 UTC
+## Latest: readout-adequacy diagnostic complete at 20:01:16 UTC
+
+The new sealed **posthoc exposed-bank group-crossfit** diagnostic is complete.
+On the same saved midpoint activations, correction-trained readouts achieve:
+
+| Complete primary correction quartets | Direct linear | RBF | Four learned factors + supplied rule |
+| --- | ---: | ---: | ---: |
+| Llama | 49/240 (20.42%) | 156/240 (65.00%) | 228/240 (95.00%) |
+| Qwen | 5/240 (2.08%) | 4/240 (1.67%) | 109/240 (45.42%) |
+
+Read the [new interpretation](CACHED_READOUT_ADEQUACY_INTERPRETATION_2026-11-22.md),
+[generated report](results/cached-readout-adequacy-2026-11-22/results.md) and
+[prospectively sealed fitting protocol](CACHED_READOUT_ADEQUACY_PROTOCOL_V1.md).
+Thirty whole narrative groups receive five-fold outer predictions, with separate
+inner selection. Each selected outer refit uses 1,536 rows, not N512. All 220
+candidate configurations and all selected refits completed. No new language-model
+inference was used. Factor readouts receive four labels per row and an external
+algorithm; RBF can use all training rows as support vectors.
+
+This establishes strong ingredient accessibility for Llama under this training
+scheme. It does not establish the model's own integrated belief computation,
+repair the original transfer result, supply fresh confirmation or demonstrate
+spontaneous anticipation. Qwen remains weaker and its factor fold increases
+name-map flips despite higher target accuracy. Shared groups, one renderer,
+NF4 precision and incomplete human semantic review remain limitations.
+
+The [saved-data reconstruction](validation/2026-11-22-cached-readout-adequacy-independent.json)
+checks all 11,520 out-of-fold method predictions and every group/fold metric
+without fitting. Its separate implementation was authored by the fitting-code
+author; separate-agent export review is additional evidence, not blinded review.
+Do not describe implementation separation as independent human validation.
+
+A [fresh-agent reconstruction](validation/2026-11-22-cached-readout-adequacy-second-agent-v2.json)
+then froze its own arrays/metrics before reading saved diagnostic outcomes.
+All 11,520 verdicts, 15,360 factor predictions and 44,318 scalar metric fields
+match. Its chronology, permitted schema exposure, original-logit exposure,
+source hashes and zero-fit scope are explicit. This supplies separate-agent
+numerical confirmation, not human semantic review or a second inference run.
+Its [working-report history](validation/2026-11-22-cached-readout-adequacy-second-agent-provenance.json)
+discloses an overwritten intermediate comparison report; the original independent
+prediction freeze and final v2 bytes are retained.
+
+The expanded [leakage forensics](MAIN_STUDY_LEAKAGE_FORENSICS_2026-11-22.md)
+found no direct leakage under its explicit checks: source membership, exact
+prompts, all training-only scalers/vocabularies, development selection, test
+freeze and recovery provenance match. This does not certify absence of every
+bias. The shared renderer supplies most prompt wording, so held-out narratives
+are not independent reasoning families.
+
+The [measurement audit](MAIN_STUDY_MEASUREMENT_FORENSICS_2026-11-22.md) found
+query-copy errors in the prose extractor. A [same-response posthoc control](MAIN_STUDY_QUERY_ANCHORING_POSTHOC_2026-11-22.md)
+anchors its existing inferred final location to the source-question text:
+correction rows improve from 1,396 to 1,545/1,920; quartets from 81 to 90/240.
+All 44 original invalid responses remain invalid across mechanisms. Original
+frozen analyses/parsers/results are unchanged. The [provenance refresh](MAIN_STUDY_AUDIT_PROVENANCE_REFRESH_2026-11-22.md)
+preserves exact historical audit sources and adds portable current bindings.
+
+The [eight-paper evidence map](MAIN_STUDY_RESEARCH_EVIDENCE_MAP_2026-11-22.md)
+and [deep methods review](MAIN_STUDY_NEXT_EXPERIMENT_REVIEW_2026-11-22.md)
+narrow the contribution against existing second-order, routing, capacity and
+nuisance-selectivity work. Next is the **draft** [fresh 12-site study](FRESH_READOUT_STUDY_SPECIFICATION_V2.md):
+four depths by three positions, source-development-only site selection, two
+fixed renderers and 24 paired test contexts. Its full inventory is 7,040
+prefixes/model, with 12 vectors captured from each prefill. The direct-linear
+adequacy condition fails on both models, so the cheaper midpoint-only branch
+is unsupported. No fresh bank or model campaign has been launched by this result.
+
+## Earlier: campaign complete at 19:14:37 UTC
 
 The frozen experiment has finished, including the entire 3,840-row prose test,
 both integrated model analyses and reporting. The native recovery campaign's
@@ -42,8 +109,9 @@ The latest [editable four-slide deck](../presentations/progress2-main-study-2026
 [PDF](../presentations/progress2-main-study-2026-11-22/completed/Progress-2-main-study.pdf)
 and [notes](../presentations/progress2-main-study-2026-11-22/completed/speaker-notes.md)
 include the completed baseline. The prior interim deck is a preserved snapshot.
-All five CI jobs passed at [19934bc](https://github.com/ADI-0519/Individual-Project/actions/runs/45047006439);
-the final export changes require their own subsequent CI run. Human semantics
+All five CI jobs passed for the completed-study export at
+[0c582b5](https://github.com/ADI-0519/Individual-Project/actions/runs/45060764647).
+Subsequent audit/readout additions require their own checks. Human semantics
 remain unreviewed. The agent-only amendment and disclosed interruption/recovery
 remain part of the evidence; completion does not mean confirmation, spontaneous
 anticipation, a finished dissertation or an accepted paper.

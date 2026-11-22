@@ -1,0 +1,42 @@
+{
+  "schema": "cached-readout-second-agent-history-v1",
+  "created_at": "2026-11-22T20:21:52.938964+00:00",
+  "promoted_report": {
+    "path": "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\docs\\validation\\2026-11-22-cached-readout-adequacy-second-agent-v2.json",
+    "sha256": "bca5f68509b070062dd9370cc6069d5cc5ae10f884f27c2caccd4277060ac010",
+    "byte_exact_copy_of_current_v1": true
+  },
+  "intermediate_report": {
+    "path": "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\docs\\validation\\2026-11-22-cached-readout-adequacy-second-agent.json",
+    "current_sha256": "bca5f68509b070062dd9370cc6069d5cc5ae10f884f27c2caccd4277060ac010",
+    "first_known_phase2_sha256": "4ecdd2d56fe00993343d43dd084058e415b794e3e7322d330729899d5b549767",
+    "first_known_phase2_report_preserved": false,
+    "first_known_phase2_checker_preserved": false,
+    "first_known_phase2_checker_sha256": null,
+    "first_known_phase2_checker_hash_prefix_observed_by_root": "3f588fcd"
+  },
+  "stable_checker": {
+    "path": "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\scripts\\audit_cached_readout_adequacy_second_agent.py",
+    "sha256": "4239a3680602d66b199e329c040001631c4096f7fd930ec4128d9667afe84ad4",
+    "native_snapshot": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\readout_adequacy_cf_v1_20261122_second_agent_independent\\phase2_checker_4239a3680602d66b199e329c040001631c4096f7fd930ec4128d9667afe84ad4.py"
+  },
+  "native_stable_report_snapshot": {
+    "path": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\readout_adequacy_cf_v1_20261122_second_agent_independent\\phase2_report_bca5f68509b070062dd9370cc6069d5cc5ae10f884f27c2caccd4277060ac010.json",
+    "sha256": "bca5f68509b070062dd9370cc6069d5cc5ae10f884f27c2caccd4277060ac010"
+  },
+  "phase1_freeze": {
+    "path": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\readout_adequacy_cf_v1_20261122_second_agent_independent\\phase1_freeze.json",
+    "sha256": "4dba3db692300a25804d768d9237d3923c63a4dd7730abb57417bfd04cc4efdb",
+    "unchanged": true,
+    "outputs_recomputed_after_exposure": false
+  },
+  "history": [
+    "Phase one independently reconstructed and froze all predictions, factors and derived metrics before saved diagnostic outcome values were inspected.",
+    "First phase-two comparison passed and wrote the v1 path. Its first known report SHA256 is retained above from the command transcript.",
+    "Comparison-only follow-up compacted the Git JSON and added an AST check proving that all phase-one reconstruction functions remained unchanged. The checker was still being edited when root checked its first report binding.",
+    "After Ruff format and lint, phase two was rerun against the unchanged frozen outputs and sources. This rerun overwrote the v1 report. That initial report and its exact checker bytes were not retained; no immutable copy or reconstruction of them is claimed.",
+    "The final stable checker and final current report were preserved as exact hash-named native snapshots.",
+    "The current report was then copied byte-for-byte to the fresh v2 path without rerunning the comparison or changing checker or numeric artifacts."
+  ],
+  "limits": "The stable v2 report validates saved-head arithmetic and associated metrics. It does not validate fitting history, semantic human acceptance, confirmatory performance or a causal mechanism."
+}

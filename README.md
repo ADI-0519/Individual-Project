@@ -13,6 +13,25 @@ controlled study tests a frozen readout of sender-attributed current belief;
 this target is distinct from Apollo deception detection. See the
 [current research decision](docs/CURRENT_RESEARCH_STATE.md).
 
+**22 November, 20:01 UTC: the readout-adequacy diagnostic is complete.**
+Using existing correction activations and whole-narrative outer holdouts,
+Llama solves **20.42% / 65.00% / 95.00%** of complete primary quartets with
+direct linear, RBF, and four learned factors plus the supplied rule. Qwen scores
+**2.08% / 1.67% / 45.42%**. Read the
+[new report and figure](docs/results/cached-readout-adequacy-2026-11-22/results.md)
+and [critical interpretation](docs/CACHED_READOUT_ADEQUACY_INTERPRETATION_2026-11-22.md).
+This is posthoc exposed-bank crossfit with 1,536 fitting rows per outer refit,
+not fresh confirmation or an equal-supervision comparison. The Llama result
+shows recoverable ingredients, not the model's causal use of an integrated
+belief representation. No new language-model inference was needed.
+
+New [leakage](docs/MAIN_STUDY_LEAKAGE_FORENSICS_2026-11-22.md) and
+[measurement](docs/MAIN_STUDY_MEASUREMENT_FORENSICS_2026-11-22.md) audits recheck
+membership, preprocessing, selection, labels and failure denominators. The
+[research evidence map](docs/MAIN_STUDY_RESEARCH_EVIDENCE_MAP_2026-11-22.md)
+records eight close primary works and the narrower fresh-study question.
+Original frozen results below remain unchanged.
+
 **22 November, 19:14 UTC: the frozen exploratory experiment is complete.** Both
 models, all 3,840 held-out prose-monitor inputs, integrated analyses and final
 figures finished successfully. The text extractor plus symbolic fold scores
