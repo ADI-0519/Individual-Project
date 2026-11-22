@@ -26,6 +26,9 @@ An [editable four-slide update](presentations/progress2-main-study-2026-11-22/re
 and [PDF](presentations/progress2-main-study-2026-11-22/reviewed/Progress-2-main-study.pdf)
 present the measured comparison, barriers and planned next steps.
 The fixed prose baseline is now running; this report explicitly marks it missing.
+Its independently audited **development** run scores **430/512 (84.0%)**, with
+zero invalid outputs. Its separate 3,840-input test run is in progress; the
+development score is not a held-out comparison with the latent readouts.
 Human semantic review is incomplete and the study is agent-audited exploratory.
 Readout failure does not establish absence of belief information. The
 [separate recovery](docs/MAIN_STUDY_INTERRUPTION_RECOVERY_2026-11-22.md) preserved

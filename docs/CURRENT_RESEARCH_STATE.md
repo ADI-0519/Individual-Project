@@ -1,6 +1,6 @@
 # Verified continuation state: 22 November 2026
 
-## Latest: 16:25 UTC, both held-out analyses independently verified
+## Latest: both model analyses verified; fixed prose test running
 
 Both pinned models completed **2,048 train/development and 3,840 held-out
 prefix captures each: 11,776 main-study measurements in total**. Each has
@@ -51,8 +51,8 @@ adds Qwen's weaker one-step performance and the predeclared same-format controls
 The [editable four-slide update](../presentations/progress2-main-study-2026-11-22/reviewed/Progress-2-main-study.pptx),
 [PDF](../presentations/progress2-main-study-2026-11-22/reviewed/Progress-2-main-study.pdf)
 and [speaker notes](../presentations/progress2-main-study-2026-11-22/reviewed/speaker-notes.md)
-bind this actual interim report. The new focused checks pass **41 tests with
-two optional presentation skips** in the inner CPU environment; all **18 slide
+bind this actual interim report. At that export checkpoint, focused checks passed
+**41 tests with two optional presentation skips** in the inner CPU environment; all **18 slide
 tests**, including those two rendering checks, pass in the existing outer
 presentation environment. These counts overlap and must not be added together.
 All repository hooks pass. Thirteen exported files, including both manifests,
@@ -62,13 +62,23 @@ Earlier slide drafts and their receipts are preserved in native recovery storage
 The CI presentation job now checks provenance/layout and rebuilds the new update;
 the last already completed five-job CI run is [752bf62](https://github.com/ADI-0519/Individual-Project/actions/runs/45037480228).
 
-The fixed Qwen prose-only monitor began its 512-row development capture after
-the two held-out analyses completed. Its prompt, parser, 384-token cap and
-invalid-as-incorrect policy remain unchanged; its 3,840-row test capture and
-integrated final reporting follow in the existing recovery campaign. The
-interim report explicitly marks this comparator missing. Do not relabel that
-report as a completed baseline comparison or tune the running monitor using
-the exposed results.
+The fixed Qwen prose-only monitor completed its 512-row development capture at
+16:41:52 UTC. Its [saved development analysis](validation/2026-11-22-main-study-monitor-development-analysis.json)
+reports **430/512 correct (83.9844%), zero invalid outputs and 56/128 complete
+quartets (43.75%)** across 16 groups. The independent
+[development audit](validation/2026-11-22-main-study-monitor-development-independent.json)
+reparsed all 512 raw cached generations and reproduced the fold, formal labels,
+group/pair/quartet and overall metrics without project imports. Six additional
+corruption/fold/invalid-denominator tests pass. Valid JSON and verbatim location
+names do not prove correct semantic extraction. Development performance must
+not be compared as though it came from the latent readouts' held-out cohort.
+
+Its unchanged **3,840-row test capture began at 16:43:43 UTC**; integrated final
+reporting follows in the existing recovery campaign. The prompt, parser,
+384-token cap and invalid-as-incorrect policy remain fixed. The committed
+two-model interim report explicitly marks the held-out comparator missing.
+Do not relabel that report as a completed baseline comparison, substitute
+development scores, or tune the running monitor using these outcomes.
 
 All results remain `agent_audited_exploratory`, `human_review_complete=false`
 and `confirmatory_result=false`. Later human review cannot retroactively turn

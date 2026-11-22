@@ -155,6 +155,28 @@ def test_committed_slide_outputs_and_source_bindings_survive_checkout():
         assert raw.endswith(b"\n") and not raw.endswith(b"\n\n")
 
 
+def test_committed_monitor_development_analysis_matches_independent_audit():
+    analysis_path = ROOT / "docs/validation/2026-11-22-main-study-monitor-development-analysis.json"
+    audit = read(
+        ROOT / "docs/validation/2026-11-22-main-study-monitor-development-independent.json"
+    )
+    analysis = read(analysis_path)
+    assert hashlib.sha256(analysis_path.read_bytes()).hexdigest() == audit["analysis_sha256"]
+    assert analysis["partition"] == audit["partition"] == "development"
+    assert audit["status"] == "passed"
+    assert audit["test_result_files_accessed"] is False
+    for data in (analysis, audit):
+        assert data["research_status"] == "agent_audited_exploratory"
+        assert data["human_review_complete"] is False
+        assert data["confirmatory_result"] is False
+    assert analysis["overall"] == audit["independent_overall"]
+    assert analysis["by_mechanism"] == audit["independent_by_mechanism"]
+    assert analysis["source_sha256"] == audit["source_sha256"]
+    assert (
+        analysis["overall"]["rows"] == audit["coverage"]["raw_generation_texts_and_hashes_checked"]
+    )
+
+
 @pytest.mark.parametrize("corruption", ["asset_bytes", "undeclared_file", "omitted_manifest_entry"])
 def test_snapshot_corruption_is_detected(snapshot_records, tmp_path, corruption):
     manifest, _, _ = snapshot_records
