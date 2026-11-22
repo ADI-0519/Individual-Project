@@ -60,7 +60,11 @@ have identical working-tree and staged bytes. Scientific SVGs are exempt from
 whitespace rewriting; generated notes/receipt now emit LF with one final newline.
 Earlier slide drafts and their receipts are preserved in native recovery storage.
 The CI presentation job now checks provenance/layout and rebuilds the new update;
-the last already completed five-job CI run is [752bf62](https://github.com/ADI-0519/Individual-Project/actions/runs/45037480228).
+all five CI jobs passed for the two-model export at
+[a616616](https://github.com/ADI-0519/Individual-Project/actions/runs/45045442702),
+including the new slide rebuild and Ubuntu Python 3.11/3.12 and Windows 3.11
+test runs. The subsequent monitor-development audit adds six focused checks and
+a portable analysis/audit binding check; their 18-test focused run also passes.
 
 The fixed Qwen prose-only monitor completed its 512-row development capture at
 16:41:52 UTC. Its [saved development analysis](validation/2026-11-22-main-study-monitor-development-analysis.json)
