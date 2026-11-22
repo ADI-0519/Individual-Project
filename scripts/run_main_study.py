@@ -16,10 +16,17 @@ def main():
     pre.add_argument("--bank", type=Path, required=True)
     pre.add_argument("--output", type=Path, required=True)
     pre.add_argument("--model", choices=("llama", "qwen"), default="llama")
-    run = sub.add_parser("execute", help="Requires accepted review and execution freeze")
+    run = sub.add_parser(
+        "execute", help="Requires human review or separate agent exploratory freeze"
+    )
     run.add_argument("--output", type=Path, required=True)
     run.add_argument("--partition", choices=("train_dev", "test"), required=True)
-    run.add_argument("--review-ledger", type=Path, required=True)
+    run.add_argument(
+        "--review-ledger",
+        type=Path,
+        required=True,
+        help="Human ledger, or agent audit only with explicit agent exploratory freeze schema",
+    )
     run.add_argument("--execution-freeze", type=Path, required=True)
     run.add_argument("--fit-dir", type=Path)
     run.add_argument("--resume", action="store_true")

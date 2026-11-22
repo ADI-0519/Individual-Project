@@ -1,7 +1,7 @@
 """Bound, review-gated main-study feature capture with complete row journals.
 
 Preparation loads a pinned tokenizer/config only. Real execution requires an
-accepted human ledger and a separate frozen execution specification. No label,
+accepted human ledger or a distinct agent exploratory freeze. No label,
 answer, threshold, or fitted model influences which rows are captured.
 """
 
@@ -268,8 +268,14 @@ def _authorization(protocol, ledger_path, freeze_path, *, partition, fit_dir):
         "Execution requires a human-review ledger and frozen execution specification",
     )
     bank = load_bank(protocol["bank_path"])
-    review = verify_review_ledger(bank, ledger_path)
     freeze = read_json(freeze_path)
+    from .main_study_execution import AGENT_FREEZE_SCHEMA, authorize_agent_execution
+
+    if freeze.get("schema") == AGENT_FREEZE_SCHEMA:
+        return authorize_agent_execution(
+            protocol, ledger_path, freeze_path, partition=partition, fit_dir=fit_dir
+        )
+    review = verify_review_ledger(bank, ledger_path)
     require(
         freeze.get("schema") == "main-study-execution-freeze-v1"
         and freeze.get("status") == "frozen"
@@ -304,6 +310,10 @@ def _authorization(protocol, ledger_path, freeze_path, *, partition, fit_dir):
             "Fitted-head fixture identity differs",
         )
         capture = settings.get("capture_provenance", {})
+        require(
+            capture.get("research_status") != "agent_audited_exploratory",
+            "Human freeze cannot relabel agent exploratory fits",
+        )
         require(
             capture.get("bank_sha256") == protocol["bank_sha256"]
             and capture.get("model_settings") == protocol["model_settings"]
@@ -443,6 +453,14 @@ def _finalize(output, protocol, selected, authorization, manifest):
         "capture_layer": protocol["capture_layer"],
         "partition": manifest["partition"],
         "source_bindings": authorization["sha256"],
+        "research_status": authorization.get(
+            "research_status",
+            "engineering_fixture" if protocol["test_fixture"] else "human_reviewed",
+        ),
+        "human_review_complete": authorization.get(
+            "human_review_complete", not protocol["test_fixture"]
+        ),
+        "confirmatory_result": authorization.get("confirmatory_result", False),
     }
     atomic_npz(
         output / "features.npz",

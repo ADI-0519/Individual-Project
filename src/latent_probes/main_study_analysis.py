@@ -268,6 +268,10 @@ def analyse_study(
             raise ValueError(f"Fit/evaluation capture provenance mismatch: {key}")
         if not cache.test_fixture and key not in cache.provenance:
             raise ValueError(f"Missing capture provenance: {key}")
+    if not cache.test_fixture:
+        for key in ("research_status", "human_review_complete"):
+            if cache.provenance.get(key) != settings["capture_provenance"].get(key):
+                raise ValueError(f"Fit/evaluation research status mismatch: {key}")
     group_indices: dict[str, list[int]] = defaultdict(list)
     for i, row in enumerate(cache.rows):
         group_indices[row["group_id"]].append(i)
@@ -399,6 +403,10 @@ def analyse_study(
         "schema": "main-study-analysis-v1",
         "test_fixture": cache.test_fixture,
         "scientific_result": not cache.test_fixture,
+        "real_empirical_result": not cache.test_fixture,
+        "research_status": cache.provenance.get("research_status", "unspecified_legacy"),
+        "human_review_complete": cache.provenance.get("human_review_complete", False),
+        "confirmatory_result": False,
         "target": "fictional sender-attributed reader belief content, not deception",
         "capture_provenance": cache.provenance,
         "capture_source_hashes": cache.source_hashes,

@@ -1,0 +1,58 @@
+{
+  "schema": "main-study-agent-execution-checkpoint-v1",
+  "created_at": "2026-11-22T14:07:03.888816+00:00",
+  "research_status": "agent_audited_exploratory",
+  "human_review_complete": false,
+  "confirmatory_result": false,
+  "tests": {
+    "windows_passed": 1255,
+    "windows_skipped": 2,
+    "subtests_passed": 48,
+    "elapsed_seconds": 729.08,
+    "skip_reasons": [
+      "Linux mount policy test on Windows",
+      "Optional Matplotlib absent in Windows CPU environment"
+    ],
+    "wsl_reporting_tests_passed": 31
+  },
+  "quality_checks": {
+    "ruff_check": "passed",
+    "ruff_format": "passed",
+    "pre_commit_all_files": "passed",
+    "wheel_and_sdist_build": "passed",
+    "twine": "passed",
+    "extracted_source_agent_audit": {
+      "groups": 154,
+      "answers": 736,
+      "human_review_complete": false
+    }
+  },
+  "training_freeze_sha256": "9c1cb066e2a4c8a354127bad06b83dddf0851cf3cb0ca52140c6dfbea64da3a4",
+  "all_27_frozen_sources_still_match": true,
+  "llama_capture": {
+    "status": "complete",
+    "rows": 2048,
+    "manifest_sha256": "6d04c4ee1d750481cfaf065a6dd5c8926163049be4e2702a20d73bcd1fcad951",
+    "independent_audit_sha256": "c106964ab8de235a86fee975312f3cc5885aa795dce225dc71d07c6279612090"
+  },
+  "llama_fit": {
+    "comparison_status_counts": {
+      "complete": 30
+    },
+    "selected_arm_count": 60,
+    "settings_sha256": "d8bcaba0573de37632fe13aa4e812d95e0b44f88c9a6c1bc7ac64543236c0fd1",
+    "heads_sha256": "45fbd2d149540247ae2c928f57ea9a1ef37befcedba4dc006d6e4d8238fe173e"
+  },
+  "qwen_at_checkpoint": {
+    "status": "running",
+    "completed_rows": 5
+  },
+  "campaign": {
+    "native_path": "/home/adirj/kcl-latent-probes-runs/main_v1_agent_20261122_campaign",
+    "config_sha256": "da3b2e3194af23398e06d650683712118431861875088bb7c16258983a4bba7b",
+    "state_at_checkpoint": "running",
+    "continuation": "Read live state.json; fixed campaign continues without changing scientific policy"
+  },
+  "held_out_results": "not yet collected",
+  "scope": "Actual data and engineering checkpoint; fitting is not evidence of held-out transfer or novel second-order anticipation"
+}

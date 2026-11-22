@@ -1,4 +1,75 @@
-# Verified continuation state: 21 November 2026
+# Verified continuation state: 22 November 2026
+
+## 22 November: independent agent audit and exploratory execution
+
+The user explicitly requested independent agent checking and continued work.
+The [prospective amendment](MAIN_STUDY_AGENT_EXECUTION_AMENDMENT_2026-11-22.md)
+adds a separate agent-audited exploratory route; the original human gate remains
+unchanged. No agent record is a human attestation. Later human review cannot
+retroactively make exposed results confirmatory.
+
+An author-independent agent read all 154 narrative openings/setups and 16 full
+normalized semantic paths, covering all 736 representative prompts. Its
+[frozen answers](../data/annotations/main_study_v1_agent_semantic_20261122.json)
+were saved before comparison to formal gold; all 736 agree, with zero UNSURE
+answers or unresolved blockers. This is grouped agent checking, not 736 separate
+human judgments or inspection of all 5,888 expanded prompts. See the
+[semantic audit](MAIN_STUDY_AGENT_SEMANTIC_AUDIT_2026-11-22.md). Human records are
+still blank. The [new primary-source audit](MAIN_STUDY_NOVELTY_AUDIT_2026-11-22.md)
+finds substantial prior art; only a substantive matched-coverage/correction
+transfer result could support the narrower candidate contribution.
+
+A new native train/dev execution freeze exists at
+`/home/adirj/kcl-latent-probes-runs/main_v1_agent_20261122_training_freeze.json`.
+Fresh Llama/Qwen tokenizer preparations each bind all 5,888 exact inputs without
+truncation (538-721 and 530-719 tokens respectively). The Llama train/dev capture
+has now completed **2,048 real forwards**, and the
+[independent raw-array audit](validation/2026-11-22-main-study-llama-train-audit.json)
+passed every row. All **30 matched fit comparisons** are complete, yielding 60
+selected activation/TF-IDF arm models. Qwen train/dev execution is running.
+No held-out result is claimed by this checkpoint.
+The [independent fit audit](validation/2026-11-22-main-study-llama-fit-independent.json)
+checks all 60 training memberships, 210 saved arrays and selected development
+predictions without importing the fitting/analysis modules or refitting.
+Activation scalers reproduce exactly; selected-model losses agree within
+1.11e-16. Unselected-C losses are checked for metadata consistency only because
+their coefficient arrays were not retained. No held-out outputs were accessed.
+Both models' fits must bind that exact initial freeze before the separate test
+freeze can be built. Every new capture, fit and analysis records
+`agent_audited_exploratory`, `human_review_complete=false` and
+`confirmatory_result=false`. Historical experiments and their failures stay fixed.
+
+The [sequential campaign](MAIN_STUDY_CAMPAIGN_RUNBOOK_2026-11-22.md) was launched
+at 13:43 UTC. Its native directory is
+`/home/adirj/kcl-latent-probes-runs/main_v1_agent_20261122_campaign`.
+Read `state.json` there for the current stage; it observes the existing Llama
+capture without duplicating it, then audits/fits both models, freezes test
+eligibility, collects each held-out partition and runs the full fixed prose
+baseline. It stops on failures with logs and original row journals preserved.
+It never silently retries or overwrites. The runbook explains its between-stage
+`STOP` file. Initial analyses explicitly mark a missing monitor; the final
+`*_analysis_with_monitor.json` files are separate outputs after it completes.
+
+The [execution checkpoint](validation/2026-11-22-main-study-agent-execution-checkpoint.json)
+records **1,255 passing Windows tests, 48 passing subtests and two expected
+platform/optional-plot skips**. All 31 reporting tests, including actual static
+figure export, pass in the existing WSL CPU environment. Lint, formatting,
+pre-commit, wheel/source builds and metadata checks pass. The extracted source
+archive also preserves and validates all 736 agent answers. All 27 frozen
+scientific inputs still match; no test-conditioned policy change has occurred.
+
+The [assessment evidence note](MAIN_STUDY_ASSESSMENT_EVIDENCE_2026-11-22.md)
+maps the supplied college/module criteria and original slides to evidence and
+remaining gaps. It distinguishes actual guidance versions and proposes December
+deliverables; it predicts neither marks nor admissions. The scope change from
+deception/omissions to the separate controlled belief-readout study remains
+explicit and should be communicated to the supervisor.
+
+The [standalone capture auditor](../scripts/audit_main_study_capture.py) imports
+no project modules and checks raw versus saved versus exported arrays and full
+logit summaries. Its tests include corruption and float32-rounding cases. These
+are saved-measurement checks, not an independent rerun of model computation or
+proof that a decoder measures a model's own beliefs.
 
 Read this file and the linked protocols before changing the project. It records
 the current evidence boundary so continuation does not depend on chat memory.

@@ -412,3 +412,54 @@ def test_nonfixture_analysis_requires_preheldout_fit_binding(fitted, test_cache)
     real = replace(test_cache, test_fixture=False)
     with pytest.raises(ValueError, match="bound before held-out"):
         analyse_study(real, settings, arrays)
+
+
+def test_exploratory_status_propagates_without_claiming_human_or_confirmatory_review(
+    training_cache, test_cache
+):
+    provenance = dict(
+        training_cache.provenance,
+        research_status="agent_audited_exploratory",
+        human_review_complete=False,
+    )
+    settings, arrays = fit_study(
+        replace(training_cache, provenance=provenance),
+        default_training_groups(),
+        kinds=("activation",),
+        sizes=(128,),
+        seeds=(11,),
+    )
+    assert settings["research_status"] == "agent_audited_exploratory"
+    assert settings["human_review_complete"] is False
+    assert settings["confirmatory_result"] is False
+    test = replace(
+        test_cache,
+        provenance=dict(
+            test_cache.provenance,
+            **{
+                "research_status": "agent_audited_exploratory",
+                "human_review_complete": False,
+            },
+        ),
+    )
+    result = analyse_study(test, settings, arrays, allow_fixture=True)
+    assert result["research_status"] == "agent_audited_exploratory"
+    assert not result["human_review_complete"] and not result["confirmatory_result"]
+    assert not result["real_empirical_result"]  # All feature values here are fixtures.
+
+
+def test_real_analysis_rejects_train_test_review_path_mixing(fitted, test_cache):
+    settings, arrays = fitted
+    settings = json.loads(json.dumps(settings))
+    settings.update(test_fixture=False, _artifact_sha256={"settings.json": "s", "heads.npz": "h"})
+    settings["capture_provenance"].update(
+        research_status="agent_audited_exploratory",
+        human_review_complete=False,
+    )
+    provenance = dict(
+        test_cache.provenance, research_status="human_reviewed", human_review_complete=True
+    )
+    provenance["source_bindings"] = {"/fixture/settings.json": "s", "/fixture/heads.npz": "h"}
+    real = replace(test_cache, test_fixture=False, provenance=provenance)
+    with pytest.raises(ValueError, match="research status mismatch"):
+        analyse_study(real, settings, arrays)

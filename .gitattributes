@@ -9,6 +9,7 @@ data/annotations/*_agent_draft.csv -text whitespace=-blank-at-eol,-blank-at-eof
 data/communication/natural_selection_pilot_draft_v1.json -text whitespace=-blank-at-eol,-blank-at-eof
 data/annotations/natural_selection_pilot_v1_reviewer_*_agent_draft.json -text whitespace=-blank-at-eol,-blank-at-eof
 data/annotations/natural_selection_review_protocol_v1.json -text whitespace=-blank-at-eol,-blank-at-eof
+data/annotations/main_study_v1_agent_semantic_20261122.json -text whitespace=-blank-at-eol,-blank-at-eof
 data/belief_diagnostic/future_goal_content_controls_draft_v1.json -text
 data/belief_diagnostic/crossed_belief_validation_v1.json -text
 

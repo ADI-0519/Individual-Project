@@ -317,8 +317,14 @@ def _authorize(protocol, ledger_path, freeze_path, partition, fit_dir):
         ledger_path is not None and freeze_path is not None,
         "Execution requires a human-review ledger and frozen execution specification",
     )
-    review = verify_review_ledger(load_bank(protocol["bank_path"]), ledger_path)
     freeze = read_json(freeze_path)
+    from .main_study_execution import AGENT_FREEZE_SCHEMA, authorize_agent_execution
+
+    if freeze.get("schema") == AGENT_FREEZE_SCHEMA:
+        return authorize_agent_execution(
+            protocol, ledger_path, freeze_path, partition=partition, fit_dir=fit_dir, monitor=True
+        )
+    review = verify_review_ledger(load_bank(protocol["bank_path"]), ledger_path)
     require(
         freeze.get("schema") == "main-study-execution-freeze-v1"
         and freeze.get("status") == "frozen"
@@ -354,6 +360,11 @@ def _authorize(protocol, ledger_path, freeze_path, partition, fit_dir):
         require(fit_dir is not None, "Held-out monitor requires frozen development-selected fits")
         directory = Path(fit_dir).resolve()
         settings, _ = load_fit_bundle(directory)
+        require(
+            settings.get("capture_provenance", {}).get("research_status")
+            != "agent_audited_exploratory",
+            "Human freeze cannot relabel agent exploratory fits",
+        )
         require(
             settings.get("test_fixture") == protocol["test_fixture"]
             and settings.get("capture_provenance", {}).get("bank_sha256")
@@ -604,6 +615,14 @@ def execute_monitor(
                 "model_settings": protocol["model_settings"],
                 "partition": partition,
                 "test_fixture": protocol["test_fixture"],
+                "research_status": authorization.get(
+                    "research_status",
+                    "engineering_fixture" if protocol["test_fixture"] else "human_reviewed",
+                ),
+                "human_review_complete": authorization.get(
+                    "human_review_complete", not protocol["test_fixture"]
+                ),
+                "confirmatory_result": False,
                 "records": records,
             },
         )

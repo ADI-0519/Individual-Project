@@ -1,0 +1,81 @@
+{
+  "schema": "main-study-independent-capture-audit-v1",
+  "capture": {
+    "directory": "/home/adirj/kcl-latent-probes-runs/main_v1_agent_20261122_llama_train_dev",
+    "model": "llama",
+    "partition": "train_dev",
+    "rows_verified": 2048,
+    "groups_verified": 64,
+    "test_fixture": false,
+    "provenance": {
+      "bank_sha256": "e038025571a38a7f2c489e5f8c3bf3b0a3c11a05f9b8c7e89d26292a4e7bfb1d",
+      "protocol_sha256": "7a361e40cc322fedbda2b639f8abab55a6bdc12f646e19ff49570c46d1e3e75b",
+      "model_settings": {
+        "model_id": "meta-llama/Llama-3.1-8B-Instruct",
+        "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+        "dtype": "bfloat16",
+        "quantization": "4bit",
+        "device": "cuda",
+        "capture_layers": [
+          16
+        ],
+        "max_input_tokens": 2048,
+        "max_memory": null,
+        "allow_cpu_offload": false,
+        "local_files_only": true
+      },
+      "capture_layer": 16,
+      "partition": "train_dev",
+      "source_bindings": {
+        "/home/adirj/kcl-latent-probes-runs/main_v1_agent_20261122_training_freeze.json": "9c1cb066e2a4c8a354127bad06b83dddf0851cf3cb0ca52140c6dfbea64da3a4",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/annotations/main_study_v1_agent_semantic_20261122.json": "71b021952823a65ba345763100c8d8a493e16363ce7317dc068fba429ee028af",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/baseline_protocol_v1.json": "72625e62a86832918efc2c8c8654e68236865ea42fc5aa9ed9a4849a5550841b",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/main_v1/main_bank_v1.json": "802f1519abe98172366e8381a1fa0dfe0772372991c8e8883c2570c431c5cac1",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/text_monitor_protocol_v1.json": "bcefd89009250413e7759991188e94f83169d7a7943345255c6a7b24c192d936",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/docs/MAIN_STUDY_AGENT_EXECUTION_AMENDMENT_2026-11-22.md": "b1b889097a6719371a3ffa3e311c4f8e93d324bb55382845039e0c9e7d61eedf",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/docs/review/main_study_v1/review_prompts.jsonl": "fa4791f72c8fb2743d5d29361ea38f8b1ad0e94cd3795250f189f28735f97751",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/analyse_main_study.py": "460ddc257121adeb2a06747a1da9a27a012f862d0ff2bb89a2b4bcb4a7d20a2e",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/analyse_main_study_monitor.py": "a208813a8c8dbe7516a81431c34c4e414f28b2206218607ec066343f075dbd2d",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/build_main_study_bank.py": "ae2484fc9413db5101205344d9ac563ea373bd6682a24f4e9092d23539dd6055",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/fit_main_study.py": "3c7569cf7505ba676cef61b39958cb32fc8aff85cc5d3443ebaa43dd3dc921ec",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/prepare_main_study_execution.py": "9cea84289ee72996d131515ce54ded3cbe7f973761d5335717966b8ec973ff78",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/run_main_study.py": "591259dc0b4a6edc2a89f633bf2eb4127798e342d690ecd7b9db1c3a6b0dc9b2",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/run_main_study_monitor.py": "82f93a407840910fe3a87fe42fe773d98838afc1f18a3b0bf400f5e6085a5354",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/backends.py": "692d9778e4bf69081ab1afea702dfd573119f2b6cc454e51072bb3d2233402a2",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/config.py": "0fc63546c88a826bc1e87efeebb51b6a23488272e0d76de8018fdd99543bb608",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/crossed_belief_validation.py": "c38ace6dbd71d9a56a61b6fe44fa9268bdef4815e6086211365e9cea8e33d1ad",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/main_study_analysis.py": "3a566dc1f282b18d6fd2a6c3e108b992804d2ad147907481e076212ed7638027",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/main_study_bank.py": "b5d9aae9105e856bd2eeea061e5098291601074b32d6be0730768d6295c40162",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/main_study_design.py": "0973d047d2e98736c1b9144d2187079a60d87f2280eeca691330ff91135506b9",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/main_study_execution.py": "818b345cb0e601101cc1cdcc423d38a518ba2c1ce922c384753943c212e41c32",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/main_study_fit.py": "67b651810fff1900bbb79da712217d115911928f050fc20d3d1c3c00fb9406f9",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/main_study_materials.py": "29fe882d8f08f02cd79b39d6bfa2fe359935f1b0be2c01c720a93536c1e36c46",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/main_study_monitor.py": "69986fef4afc89c8ef73786479c1fd431ca31bb21c3af798909869d990487df5",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/main_study_monitor_analysis.py": "6727059dc861c40165b849278ae1c328ffea27cfbe877a050054a8ae835ab12a",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/main_study_review.py": "128425e0694aff8fa973d238abba2ca32b2494fc721fd710423f4b416300d3c7",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/main_study_run.py": "09f219b7aedcb222c0eea05ba1ea9324d28fd298f49a2a45004429d7ede10501",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/storage.py": "1de87a24cc3bd701c0384d648d405ddb6066280beae3e21bf1b173c203ee0e84"
+      },
+      "research_status": "agent_audited_exploratory",
+      "human_review_complete": false,
+      "confirmatory_result": false
+    },
+    "raw_export_array_identity": true,
+    "full_vocabulary_summary_reconstructed": true,
+    "protocol_journal_export_identity": true,
+    "feature_dimensions": 4096,
+    "vocabulary_logits": 128256,
+    "recorded_forward_seconds_sum": 418.45679442999915,
+    "capture_manifest_sha256": "6d04c4ee1d750481cfaf065a6dd5c8926163049be4e2702a20d73bcd1fcad951"
+  },
+  "auditor_source_sha256": "c6ca29394d08acc55949414fa6e510b526a46848406417784c9689f9a9db0bd7",
+  "project_modules_imported": false,
+  "new_model_calls": 0,
+  "scope": "Saved measurement integrity; not human semantic validation or a result analysis",
+  "limitations": [
+    "Checks saved arrays and recorded metadata; does not rerun tokenization or a model.",
+    "Checks internal hash consistency, not authenticity against an external trusted digest.",
+    "Same-forward and hook-alignment claims are recorded assertions; raw alignment references are not saved.",
+    "Does not validate semantic labels, authorization evidence, or current external source files."
+  ]
+}

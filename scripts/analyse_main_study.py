@@ -38,13 +38,18 @@ def main() -> None:
             monitor["partition"] != "test"
             or monitor["bank_sha256"] != cache.provenance.get("bank_sha256")
             or monitor["test_fixture"] != cache.test_fixture
+            or monitor["research_status"] != result["research_status"]
+            or monitor["human_review_complete"] != result["human_review_complete"]
         ):
             parser.error("Prose monitor must match the held-out bank and fixture provenance")
         result["prose_monitor"] = {"status": "complete", **monitor}
     result["fit_settings_sha256"] = file_sha256(args.fit / "settings.json")
     result["fit_heads_sha256"] = file_sha256(args.fit / "heads.npz")
     atomic_json(args.output, result)
-    print(f"Saved held-out analysis; scientific_result={result['scientific_result']}")
+    print(
+        f"Saved held-out analysis; scientific_result={result['scientific_result']}; "
+        f"research_status={result['research_status']}; confirmatory_result=False"
+    )
 
 
 if __name__ == "__main__":

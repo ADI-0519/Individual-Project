@@ -16,10 +16,17 @@ def main():
     prepare.add_argument("--bank", type=Path, required=True)
     prepare.add_argument("--output", type=Path, required=True)
     prepare.add_argument("--monitor-protocol", type=Path, default=DEFAULT_PROTOCOL)
-    execute = sub.add_parser("execute", help="Requires actual human ledger and frozen sources")
+    execute = sub.add_parser(
+        "execute", help="Requires human review or separate agent exploratory freeze"
+    )
     execute.add_argument("--output", type=Path, required=True)
     execute.add_argument("--partition", choices=("development", "test"), required=True)
-    execute.add_argument("--review-ledger", type=Path, required=True)
+    execute.add_argument(
+        "--review-ledger",
+        type=Path,
+        required=True,
+        help="Human ledger, or agent audit only with explicit agent exploratory freeze schema",
+    )
     execute.add_argument("--execution-freeze", type=Path, required=True)
     execute.add_argument("--fit-dir", type=Path)
     execute.add_argument("--resume", action="store_true")

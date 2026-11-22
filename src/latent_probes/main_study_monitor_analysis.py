@@ -156,6 +156,14 @@ def analyse_monitor_run(
         raise ValueError("Monitor fixture provenance differs")
     if fixture and not allow_fixture:
         raise ValueError("Fixture outputs cannot be presented as scientific results")
+    if payload.get("research_status") == "agent_audited_exploratory":
+        authorization = manifest.get("authorization", {})
+        if (
+            authorization.get("research_status") != payload["research_status"]
+            or payload.get("human_review_complete") is not False
+            or authorization.get("human_review_complete") is not False
+        ):
+            raise ValueError("Monitor agent exploratory provenance differs")
     if payload.get("monitor_protocol_sha256") != protocol.get("monitor_protocol_sha256"):
         raise ValueError("Monitor extraction policy binding differs")
     if payload.get("model_settings") != protocol.get("model_settings"):
@@ -207,6 +215,10 @@ def analyse_monitor_run(
         "partition": split,
         "test_fixture": fixture,
         "scientific_result": not fixture,
+        "real_empirical_result": not fixture,
+        "research_status": payload.get("research_status", "unspecified_legacy"),
+        "human_review_complete": payload.get("human_review_complete", False),
+        "confirmatory_result": False,
         "method": "prose_extractor_then_symbolic_fold",
         "is_symbolic_oracle": False,
         "model_settings": payload["model_settings"],

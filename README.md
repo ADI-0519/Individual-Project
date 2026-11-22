@@ -19,7 +19,19 @@ targets, human-reviewed data, competitive frozen controls, independent family
 holdouts, a second reader and the final analysis/write-up remain ahead. The
 [main-study gates](docs/MAIN_STUDY_GATES.md) define what counts as completion.
 
-**Latest implementation (21 November):** the matched-coverage study now has a
+**22 November update:** an independent agent's blinded semantic answers agree
+with all 736 representative labels across 154 groups. The
+[prospective exploratory amendment](docs/MAIN_STUDY_AGENT_EXECUTION_AMENDMENT_2026-11-22.md)
+allows continued model execution with explicit agent-only validation; human
+records remain blank and no confirmatory result is implied. Llama has completed
+2,048 real train/dev forwards, an independent raw-array audit, and all 30 matched
+fit comparisons. Qwen execution and the remaining fixed
+[campaign](docs/MAIN_STUDY_CAMPAIGN_RUNBOOK_2026-11-22.md) are active. Both model
+fits must be frozen before held-out capture. The
+[new literature audit](docs/MAIN_STUDY_NOVELTY_AUDIT_2026-11-22.md) narrows the
+candidate contribution against existing second-order and composition work.
+
+**Implementation (21 November):** the matched-coverage study now has a
 [154-group draft bank](data/belief_main/main_v1/main_bank_v1.json), 5,888 unique
 inputs per model, group-preserving split manifests and 15 paired fitting
 allocations. The prose-only monitor, matched fitting and held-out analysis are
