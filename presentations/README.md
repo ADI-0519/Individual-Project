@@ -1,6 +1,17 @@
 # Progress presentations
 
-The latest empirical update is the [22 November main-study PowerPoint](./progress2-main-study-2026-11-22/reviewed/Progress-2-main-study.pptx)
+The completed experiment's latest [four-slide PowerPoint](./progress2-main-study-2026-11-22/completed/Progress-2-main-study.pptx),
+[PDF](./progress2-main-study-2026-11-22/completed/Progress-2-main-study.pdf) and
+[speaker notes](./progress2-main-study-2026-11-22/completed/speaker-notes.md)
+include the finished shared prose comparison: 33.75% correction quartets,
+44 invalid test outputs retained, and the computation/semantic-review limits.
+Its [receipt](./progress2-main-study-2026-11-22/completed/source-receipt.json)
+binds the [completed report summary](../docs/results/main-study-2026-11-22-complete/results_summary.json).
+Use the rebuild command below with `main-study-2026-11-22-complete` as both input
+folders and a fresh output folder. CI rebuilds both the interim and completed
+updates. Neither snapshot claims a meeting date or human-reviewed confirmation.
+
+The earlier interim update is the [22 November main-study PowerPoint](./progress2-main-study-2026-11-22/reviewed/Progress-2-main-study.pptx)
 and [PDF](./progress2-main-study-2026-11-22/reviewed/Progress-2-main-study.pdf), with
 [speaker notes](./progress2-main-study-2026-11-22/reviewed/speaker-notes.md). It has exactly
 four slides: title/name/description, current progress, barriers and next steps.

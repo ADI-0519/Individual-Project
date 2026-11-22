@@ -1,6 +1,54 @@
 # Verified continuation state: 22 November 2026
 
-## Latest: both model analyses verified; fixed prose test running
+## Latest: campaign complete at 19:14:37 UTC
+
+The frozen experiment has finished, including the entire 3,840-row prose test,
+both integrated model analyses and reporting. The native recovery campaign's
+`state.json` and all stage records are complete. No further model job is needed
+to finish this specified experiment. Its [completed report](results/main-study-2026-11-22-complete/results.md),
+[source-bound summary](results/main-study-2026-11-22-complete/results_summary.json),
+[figures/manifest](results/main-study-2026-11-22-complete/report_manifest.json) and
+[final interpretation](MAIN_STUDY_FINAL_INTERPRETATION_2026-11-22.md) supersede
+the interim comparison below. Those earlier exports remain unchanged.
+
+The shared Qwen prose extractor plus symbolic fold solves **81/240 correction
+quartets (33.75%)**, compared with raw N512 readouts **3.75%/3.00% for Llama** and
+**1.8333%/1.00% for Qwen**, restricted/full. The primary coverage contrasts and
+their intervals are unchanged and do not support the expected benefit.
+Llama's one-step quartets remain stronger than the prose baseline; Qwen's are
+weaker. This is not a universal latent-versus-text or isolated-composition claim.
+The baseline receives additional generation and external symbolic computation.
+No paired uncertainty interval for those descriptive baseline gaps was saved.
+
+The monitor gets **2,962/3,840 test rows correct (77.1354%)**; equal-group
+accuracy is **78.6111%**, since correction groups have twice as many rows.
+Its **44 invalid responses** remain incorrect: 34 nonverbatim locations,
+nine invalid update counts and one malformed JSON. The independent
+[test audit](validation/2026-11-22-main-study-monitor-test-independent.json)
+checks every cached response, parse/fold, formal label, all 90 groups,
+1,920 receipt pairs and 720 quartets against the
+[saved test analysis](validation/2026-11-22-main-study-monitor-test-analysis.json).
+This is one shared baseline attached to both model reports, not two replications.
+Development's 430/512 score is a separate one-step cohort.
+
+The [integration audit](validation/2026-11-22-main-study-monitor-integration-independent.json)
+checks all fields of both full analyses against the earlier independently
+reconstructed versions: **only `prose_monitor` changed**. Capture provenance,
+all fitted-head scores, baselines, primary outcomes and bootstrap intervals are
+identical. Its four focused preservation/corruption tests pass. No new inference,
+refitting, case selection, retry or threshold change was used for these audits.
+
+The latest [editable four-slide deck](../presentations/progress2-main-study-2026-11-22/completed/Progress-2-main-study.pptx),
+[PDF](../presentations/progress2-main-study-2026-11-22/completed/Progress-2-main-study.pdf)
+and [notes](../presentations/progress2-main-study-2026-11-22/completed/speaker-notes.md)
+include the completed baseline. The prior interim deck is a preserved snapshot.
+All five CI jobs passed at [19934bc](https://github.com/ADI-0519/Individual-Project/actions/runs/45047006439);
+the final export changes require their own subsequent CI run. Human semantics
+remain unreviewed. The agent-only amendment and disclosed interruption/recovery
+remain part of the evidence; completion does not mean confirmation, spontaneous
+anticipation, a finished dissertation or an accepted paper.
+
+## Earlier: verified model analyses; prose generation in progress
 
 Both pinned models completed **2,048 train/development and 3,840 held-out
 prefix captures each: 11,776 main-study measurements in total**. Each has

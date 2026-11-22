@@ -1,0 +1,73 @@
+{
+  "schema": "main-study-monitor-independent-audit-v1",
+  "reviewer_type": "agent",
+  "created_at": "2026-11-22T19:15:47.786133+00:00",
+  "status": "passed",
+  "partition": "test",
+  "research_status": "agent_audited_exploratory",
+  "human_review_complete": false,
+  "confirmatory_result": false,
+  "source_sha256": {
+    "records.json": "aa58b9afaeedfe009236d8ac3f7c1b65a79aca6a733fc15c80bf4a07ce20787a",
+    "run_manifest.json": "a550a15500067a65738e288204d4ace60897eea0dcd89fff59ca2e17e18a5d26",
+    "protocol.json": "2cd78e5665310adac89e0fa67a2acdf7e2a9ddd6a137e192177d054941a38f00"
+  },
+  "analysis_sha256": "6c7d5fba54c2e49170b1f5abcd4e32ebc1788bfb1f0ce134c018f5c9d02aa215",
+  "gold_rows_source_sha256": "a2eb5e1ae20858a1e725d8d7320122a796f7b6f109259301a13d1b4d033ec000",
+  "auditor_source_sha256": "53eda86e7762f32ada12f8f3c41fb67905cddcd4444ffc23e0471ab1c78a3e0e",
+  "coverage": {
+    "raw_generation_texts_and_hashes_checked": 3840,
+    "strict_parses_and_folds_checked": 3840,
+    "unique_cases": 3840,
+    "scenario_groups": 90,
+    "quartets_checked": 720,
+    "receipt_pairs_checked": 1920,
+    "all_group_overall_mechanism_metrics_match": true,
+    "all_source_prefix_and_journal_export_bindings_match": true
+  },
+  "independent_overall": {
+    "rows": 3840,
+    "valid": 3796,
+    "invalid": 44,
+    "correct": 2962,
+    "accuracy": 0.7713541666666667,
+    "macro_scenario_accuracy": 0.7861111111111111
+  },
+  "independent_by_mechanism": {
+    "correction": {
+      "scenario_groups": 30,
+      "macro_complete_quartet_accuracy": 0.3375,
+      "macro_accuracy": 0.7270833333333333,
+      "invalid": 12
+    },
+    "message": {
+      "scenario_groups": 30,
+      "macro_complete_quartet_accuracy": 0.32916666666666666,
+      "macro_accuracy": 0.8010416666666667,
+      "invalid": 30
+    },
+    "observation": {
+      "scenario_groups": 30,
+      "macro_complete_quartet_accuracy": 0.4125,
+      "macro_accuracy": 0.8302083333333333,
+      "invalid": 2
+    }
+  },
+  "strict_quartets_correct": 259,
+  "extracted_update_count_distribution": {
+    "2": 3206,
+    "1": 590
+  },
+  "raw_journal_inventory_sha256": "13ca5136353b1499ff83654944df448c101785c3b4c7c4a816e9873f50d66dff",
+  "new_model_calls": 0,
+  "new_fits_or_selections": 0,
+  "project_modules_imported": false,
+  "test_result_files_accessed": true,
+  "limitations": [
+    "Strict validity is syntactic/verbatim-name validity, not proof the extracted events or access beliefs are semantically correct.",
+    "The parsed hard score is a symbolic fold of model-extracted prose; this method is neither an oracle nor a probability estimate.",
+    "Raw cached generation texts, token metadata and hashes were verified; generated token IDs were not independently decoded with a tokenizer.",
+    "Only the selected monitor partition was evaluated. Development observations do not authorize prompt/parser/model/code changes to the already fixed test.",
+    "Scenario groups, not factorial rows, are the distinct authored narrative units; no confirmatory or human-review status is created."
+  ]
+}

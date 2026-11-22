@@ -111,6 +111,25 @@ def load_sources(summary_path: Path, manifest_path: Path) -> tuple[dict, dict]:
                 _finite(row.get(arm))
         if model.get("prose_monitor", {}).get("status") not in ("complete", "not_provided"):
             raise ValueError("Explicit prose monitor status required")
+        monitor = model["prose_monitor"]
+        if monitor["status"] == "complete":
+            if (
+                type(monitor.get("rows")) is not int
+                or monitor["rows"] != 3840
+                or type(monitor.get("invalid")) is not int
+                or not 0 <= monitor["invalid"] <= monitor["rows"]
+            ):
+                raise ValueError("Complete prose baseline requires full row and invalid counts")
+            scores = model.get("baselines", {}).get("prose_monitor", {})
+            for mechanism in ("observation", "message", "correction"):
+                _finite(scores.get(mechanism))
+    if len({m["prose_monitor"]["status"] for m in models}) != 1:
+        raise ValueError("Both model reports must use the same shared prose-baseline status")
+    if models[0]["prose_monitor"]["status"] == "complete" and (
+        models[0]["prose_monitor"] != models[1]["prose_monitor"]
+        or models[0]["baselines"]["prose_monitor"] != models[1]["baselines"]["prose_monitor"]
+    ):
+        raise ValueError("Shared prose-baseline metrics differ between model reports")
     if len(manifest.get("inputs", [])) != 2:
         raise ValueError("Two saved analysis source bindings are required")
     for item in manifest["inputs"]:
@@ -246,9 +265,19 @@ def _slides(summary: dict, bindings: dict) -> list:
         17,
         max_height=0.8,
     )
-    progress.text(
+    progress_detail = (
         "Restricted: prior belief differs from incoming information.\n"
-        "Full coverage also includes agreement; fitting budgets and groups match.",
+        "Full coverage also includes agreement; fitting budgets and groups match."
+    )
+    if not missing:
+        monitor = models["Qwen"]["prose_monitor"]
+        score = models["Qwen"]["baselines"]["prose_monitor"]["correction"]
+        progress_detail = (
+            f"One shared Qwen text baseline: {100 * score:.2f}% correction quartets.\n"
+            f"{monitor['invalid']:,}/{monitor['rows']:,} invalid outputs retained as incorrect."
+        )
+    progress.text(
+        progress_detail,
         0.7,
         5.7,
         11.9,
@@ -269,15 +298,23 @@ def _slides(summary: dict, bindings: dict) -> list:
         "Full-bank capture totals are omitted because the report summary does "
         "not independently bind those counts." + provenance
     )
+    if not missing:
+        progress.notes += (
+            "\n\nRestricted fitting means the initial attributed belief differs from incoming "
+            "information; full coverage also includes agreement, with matched budgets and groups. "
+            "The displayed text baseline is one shared Qwen evidence extractor plus explicit "
+            "symbolic belief updating. It uses additional generated tokens and computation. "
+            "Repeated baseline entries under the two model reports are not two replications."
+        )
 
     barriers = header("CURRENT BARRIERS", "Interpretation, validation and scope", 3)
     baseline_heading = (
-        "Fixed prose baseline pending" if missing else "Complete baseline interpretation"
+        "Fixed prose baseline pending" if missing else "Baseline uses extra computation"
     )
     baseline_body = (
         "The shared fixed monitor is not yet attached to the " + ", ".join(missing) + " reports."
         if missing
-        else "Report text/output comparisons and all invalid outputs together."
+        else "Qwen generates structured evidence; an explicit symbolic update rule computes the answer."
     )
     points = [
         (
@@ -310,17 +347,32 @@ def _slides(summary: dict, bindings: dict) -> list:
         "is established. Scope remains distinct from the original natural "
         "omission/recipient-outcome extension." + retention + provenance
     )
+    if not missing:
+        barriers.notes += (
+            "\n\nThe completed comparator uses extra Qwen generation and an explicit symbolic "
+            "update rule, unlike the single-prefix activation readout. This is not an "
+            "equal-compute comparison, and the baseline is not perfect or a human reader. "
+            "Its invalid extractions remain incorrect in the full denominator."
+        )
 
     next_steps = header(
-        "PLANNED NEXT STEPS", "Finish the fixed comparison and agree the contribution", 4
+        "PLANNED NEXT STEPS",
+        "Finish the fixed comparison and agree the contribution"
+        if missing
+        else "Interpret the completed comparison and agree the scope",
+        4,
     )
     items = [
         (
-            "Finish the frozen prose monitor" if missing else "Report the frozen prose comparison",
-            "Preserve invalid answers, failed attempts and full denominators.",
+            "Finish the frozen prose monitor" if missing else "Interpret the text–probe comparison",
+            "Preserve invalid answers, failed attempts and full denominators."
+            if missing
+            else "Extra generation and explicit rules differ from a single activation readout.",
         ),
         (
-            "Complete the baseline table and write-up",
+            "Complete the baseline table and write-up"
+            if missing
+            else "Write the complete results narrative",
             "Both models, calibration, one-message retention and correction transfer.",
         ),
         (
@@ -339,7 +391,9 @@ def _slides(summary: dict, bindings: dict) -> list:
         next_steps.text(body, 1.48, y + 0.4, 10.85, 14, style.MUTED, max_height=0.5)
     next_steps.rect(0.7, 6.12, 11.9, 0.56, style.PALE)
     next_steps.text(
-        "PLAN: materials + fits + both test analyses complete → baselines + interpretation + report",
+        "PLAN: materials + fits + both test analyses complete → baselines + interpretation + report"
+        if missing
+        else "PLAN: materials + fits + two-model tests + prose baseline complete → interpretation + report",
         0.9,
         6.25,
         11.5,
@@ -349,8 +403,12 @@ def _slides(summary: dict, bindings: dict) -> list:
         max_height=0.35,
     )
     next_steps.notes = (
-        "Finish the declared comparison before choosing a publication claim. "
-        "Do not change prompts, cases, thresholds or layers to obtain a positive "
+        (
+            "Finish the declared comparison before choosing a publication claim. "
+            if missing
+            else "The declared comparison is complete; interpret it before choosing a publication claim. "
+        )
+        + "Do not change prompts, cases, thresholds or layers to obtain a positive "
         "outcome. The next deliverable is the complete empirical argument and "
         "source-bound results package. Later human review cannot retroactively "
         "make exposed outcomes confirmatory. New hypothesis-driven follow-ups "

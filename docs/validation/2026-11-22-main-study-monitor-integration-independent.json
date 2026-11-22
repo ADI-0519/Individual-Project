@@ -1,0 +1,71 @@
+{
+  "schema": "main-study-monitor-integration-audit-v1",
+  "created_at": "2026-11-22T19:19:48.568679+00:00",
+  "status": "passed",
+  "reviewer_type": "agent",
+  "research_status": "agent_audited_exploratory",
+  "human_review_complete": false,
+  "confirmatory_result": false,
+  "auditor_source_sha256": "4cf7b8188de0ceb00070b971c949f1f97a2b9a32ebad1d6d848a912edd3ef615",
+  "comparisons": {
+    "llama": {
+      "before": {
+        "path": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\main_v1_agent_20261122_recovery_v1\\llama_analysis_without_monitor.json",
+        "sha256": "32793a3e5bfbb31355dcacb9638ab17c43d99bd4a8947732d6acdfd9aae104e7"
+      },
+      "after": {
+        "path": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\main_v1_agent_20261122_recovery_v1\\llama_analysis_with_monitor.json",
+        "sha256": "bfa3d7fefa3016b114f1b6de9931804f815c984ea8c5b702c6d12c0cafe26b19"
+      },
+      "identical_fields": [
+        "baselines",
+        "capture_provenance",
+        "capture_source_hashes",
+        "comparisons",
+        "confirmatory_result",
+        "fit_heads_sha256",
+        "fit_settings_sha256",
+        "human_review_complete",
+        "primary",
+        "real_empirical_result",
+        "research_status",
+        "schema",
+        "scientific_result",
+        "target",
+        "test_fixture"
+      ],
+      "only_changed_field": "prose_monitor"
+    },
+    "qwen": {
+      "before": {
+        "path": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\main_v1_agent_20261122_recovery_v1\\qwen_analysis_without_monitor.json",
+        "sha256": "a9c500ecf13572f02f70886a96d85d213f8e5cf393abd444bfea104175d61b52"
+      },
+      "after": {
+        "path": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\main_v1_agent_20261122_recovery_v1\\qwen_analysis_with_monitor.json",
+        "sha256": "02f66b9a15854e6c9209b3da6d9753d2c49ae2ff44b3e0ec07c77e162dcdff5d"
+      },
+      "identical_fields": [
+        "baselines",
+        "capture_provenance",
+        "capture_source_hashes",
+        "comparisons",
+        "confirmatory_result",
+        "fit_heads_sha256",
+        "fit_settings_sha256",
+        "human_review_complete",
+        "primary",
+        "real_empirical_result",
+        "research_status",
+        "schema",
+        "scientific_result",
+        "target",
+        "test_fixture"
+      ],
+      "only_changed_field": "prose_monitor"
+    }
+  },
+  "new_model_calls": 0,
+  "new_fits_or_selections": 0,
+  "limitations": "Structural result equality, not new inference or human semantic review."
+}

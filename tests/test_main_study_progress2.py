@@ -84,6 +84,43 @@ def _save(tmp_path, data=None):
     return summary, path
 
 
+def _completed_metadata():
+    data = _metadata()
+    for model in data["models"]:
+        model["prose_monitor"] = {"status": "complete", "rows": 3840, "invalid": 12}
+        model["baselines"] = {
+            "prose_monitor": {"observation": 0.5, "message": 0.25, "correction": 0.375}
+        }
+    return data
+
+
+def test_complete_shared_prose_baseline_loads(tmp_path):
+    data, _ = builder.load_sources(*_save(tmp_path, _completed_metadata()))
+    assert data["models"][0]["prose_monitor"]["rows"] == 3840
+
+
+@pytest.mark.parametrize(
+    "mutation", ["mixed", "rows", "invalid", "nonfinite", "different", "missing"]
+)
+def test_bad_or_unshared_complete_baseline_refused(tmp_path, mutation):
+    data = _completed_metadata()
+    first = data["models"][0]
+    if mutation == "mixed":
+        first["prose_monitor"]["status"] = "not_provided"
+    elif mutation == "rows":
+        first["prose_monitor"]["rows"] = 3800
+    elif mutation == "invalid":
+        first["prose_monitor"]["invalid"] = -1
+    elif mutation == "nonfinite":
+        first["baselines"]["prose_monitor"]["correction"] = float("nan")
+    elif mutation == "different":
+        first["baselines"]["prose_monitor"]["correction"] = 0.625
+    else:
+        first["baselines"]["prose_monitor"].pop("message")
+    with pytest.raises(ValueError):
+        builder.load_sources(*_save(tmp_path, data))
+
+
 def test_summary_hash_must_match(tmp_path):
     summary, manifest = _save(tmp_path)
     summary.write_text(summary.read_text(encoding="utf-8") + " ", encoding="utf-8")
@@ -209,3 +246,21 @@ def test_generated_notes_and_receipt_use_portable_bound_lf_bytes(tmp_path):
     assert receipt["outputs"]["speaker-notes.md"] == notes_sha
     saved_receipt = json.loads((output / "source-receipt.json").read_bytes())
     assert saved_receipt["outputs"]["speaker-notes.md"] == notes_sha
+
+
+def test_complete_baseline_visible_without_stale_pending_plan():
+    pytest.importorskip("pptx")
+    pytest.importorskip("reportlab")
+    if not Path("C:/Windows/Fonts/arial.ttf").exists():
+        pytest.skip("Original editable deck's Arial fonts are unavailable")
+    data = _completed_metadata()
+    data["test_fixture"] = True
+    slides = builder._slides(data, {"fixture": "synthetic layout only"})
+    text = "\n".join(" ".join(obj[1]) for s in slides for obj in s.objects if obj[0] == "text")
+    assert len(slides) == 4 and "SYNTHETIC FIXTURE" in text
+    assert "One shared Qwen text baseline: 37.50%" in text
+    assert "12/3,840 invalid outputs retained as incorrect" in text
+    assert "Baseline uses extra computation" in text
+    assert "Fixed prose baseline pending" not in text
+    assert "Finish the frozen prose monitor" not in text
+    assert "explicit symbolic update rule" in text
