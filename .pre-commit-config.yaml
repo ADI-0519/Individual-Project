@@ -10,7 +10,8 @@ repos:
         # Versioned source/derived input packets; raw model runs remain ignored.
         # Derived packets reproduce from the authored bank; the independent
         # agent-answer snapshot is preserved as immutable audit evidence.
-        exclude: ^(uv\.lock|data/belief_diagnostic/contrast_validation_v1\.json|data/belief_main/main_v1/split_manifest_v1\.json|data/annotations/main_study_v1_agent_semantic_20261122\.json|docs/review/main_study_v1/(review_prompts\.jsonl|review\.html))$
+        # The query-control analysis preserves all 3,840 same-response score traces.
+        exclude: ^(uv\.lock|data/belief_diagnostic/contrast_validation_v1\.json|data/belief_main/main_v1/split_manifest_v1\.json|data/annotations/main_study_v1_agent_semantic_20261122\.json|docs/review/main_study_v1/(review_prompts\.jsonl|review\.html)|docs/validation/2026-11-22-main-study-query-anchoring-posthoc\.json)$
       - id: check-merge-conflict
         entry: python -m pre_commit_hooks.check_merge_conflict
       - id: check-yaml
