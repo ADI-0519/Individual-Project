@@ -1,0 +1,809 @@
+{
+  "schema": "fresh-readout-blind-answers-v1",
+  "reviewer_type": "agent",
+  "human_review_complete": false,
+  "context_reviews": [
+    {
+      "group_id": "fresh_correction_fit_00",
+      "acceptable": true,
+      "notes": "Yared and Rahel have distinct roles, and the insulated sensor case and calibration notebook drawer are distinguishable storage sites. The workshop token and private written channel are separated from measurements, so no sensor evidence implicitly updates Rahel."
+    },
+    {
+      "group_id": "fresh_correction_fit_01",
+      "acceptable": true,
+      "notes": "Leonor and Manuel are unambiguous people; the headphone adapter case and listening bench drawer are distinct. The rehearsal explicitly excludes listener outcomes, and independent reading records prevent message text alone from establishing access."
+    },
+    {
+      "group_id": "fresh_correction_fit_02",
+      "acceptable": true,
+      "notes": "Lamine and Mariama track a token rather than decode Braille. The raised print sample tray and tactile label folder are distinct sites, and the private written channel supplies no automatic view; tactile wording adds no observation."
+    },
+    {
+      "group_id": "fresh_correction_fit_03",
+      "acceptable": true,
+      "notes": "Beatriz and Duarte track a glaze-reference token, with no kiln operation. Kiln schedule box and glaze swatch cabinet are distinct storage labels, while samples and catalogue entries remain separate from the private reports."
+    },
+    {
+      "group_id": "fresh_correction_fit_04",
+      "acceptable": true,
+      "notes": "Getahun and Almaz have clear roles and the timetable planning shelf differs from the model platform cupboard. 'Inside/in the shelf' is slightly awkward spatial phrasing but still identifies one storage site unambiguously; no train movement or live layout view supplies evidence."
+    },
+    {
+      "group_id": "fresh_correction_fit_05",
+      "acceptable": true,
+      "notes": "Dragana and Dusan follow a glossary token through a written channel. Dialogue sheet wallet and pronunciation card basket are distinct locations; the prose expressly excludes audio and playback as further evidence."
+    },
+    {
+      "group_id": "fresh_correction_fit_06",
+      "acceptable": true,
+      "notes": "Koffi and Abena's token is separate from biological measurement and image evidence. Annotation desk cabinet and seed image folder remain distinct storage labels; the live spatial checks support the physical-folder reading without implying that image files reveal location."
+    },
+    {
+      "group_id": "fresh_correction_fit_07",
+      "acceptable": true,
+      "notes": "Dolores and Ignacio track a photograph-metadata token separately from photographs and restoration records. Restoration ledger shelf and reference print drawer are distinguishable; 'inside/in the shelf' is mildly awkward but does not obscure which site is meant."
+    },
+    {
+      "group_id": "fresh_correction_fit_08",
+      "acceptable": true,
+      "notes": "Thabo and Refilwe's barcode-proof drill has a private written channel and no dispatched parcel. Barcode proof tray and dispatch label binder are distinct, and scanning explicitly gives no additional observation."
+    },
+    {
+      "group_id": "fresh_correction_fit_09",
+      "acceptable": true,
+      "notes": "Sabina and Stanislav practise with a token rather than a historical document. Catalogue slip envelope and scanning queue cabinet are distinct storage sites; catalogue entries and the scanner do not automatically disclose token position."
+    },
+    {
+      "group_id": "fresh_correction_fit_10",
+      "acceptable": true,
+      "notes": "Mandla and Buhle's scheduling token is independent of antenna operation. Test booking drawer and antenna diagram cabinet are clear alternatives, and no radio signal gives token-location evidence."
+    },
+    {
+      "group_id": "fresh_correction_fit_11",
+      "acceptable": true,
+      "notes": "Danica and Dejan's token is an index-correction stand-in. Thread sample drawer and swatch catalogue box are distinct, while fabric colour, index content and inspection do not add location evidence."
+    },
+    {
+      "group_id": "fresh_correction_fit_12",
+      "acceptable": true,
+      "notes": "Sibusiso and Nomvula track an asset-entry token without game playback. Sound cue binder and recording notes cupboard are distinguishable, and filenames or audio cues explicitly reveal no token position."
+    },
+    {
+      "group_id": "fresh_correction_fit_13",
+      "acceptable": true,
+      "notes": "Ilona and Janusz's design rehearsal operates no cutting process. Lead template case and glass pattern portfolio are distinct storage sites; 'lead' is understandable in the stained-glass context and the pattern drawings provide no automatic token view."
+    },
+    {
+      "group_id": "fresh_correction_fit_14",
+      "acceptable": true,
+      "notes": "Emeka and Chiamaka track a draft-kerning token rather than judge typography. Letter spacing folder and type specimen drawer are clear alternatives, and the private channel has no shared display exposing location."
+    },
+    {
+      "group_id": "fresh_correction_fit_15",
+      "acceptable": true,
+      "notes": "Yolanda and Salvador's token represents a weave-chart change, with no loom running. Loom design cupboard and weave chart basket are distinct, and symbols or layout supply no further token observation."
+    },
+    {
+      "group_id": "fresh_correction_dev_00",
+      "acceptable": true,
+      "notes": "Themba and Nkosazana track a revision token rather than a vessel. Bearing exercise folder and star chart drawer are distinct storage sites; navigation instruments do not convey token location."
+    },
+    {
+      "group_id": "fresh_correction_dev_01",
+      "acceptable": true,
+      "notes": "Pilar and Rodrigo rehearse survey paperwork rather than observe wildlife. Survey form cabinet and species checklist box are distinguishable, and the forms are explicitly excluded as independent location evidence."
+    },
+    {
+      "group_id": "fresh_correction_dev_02",
+      "acceptable": true,
+      "notes": "Souleymane and Oumou handle a fictional inspection-instruction token. Inspection sheet tray and cork sample cupboard are distinct; grading quality and sample inspection do not secretly determine location."
+    },
+    {
+      "group_id": "fresh_correction_dev_03",
+      "acceptable": true,
+      "notes": "Marcela and Przemek's catalogue token is independent of bicycle assembly. Hinge diagram folder and component list cabinet are distinguishable, and diagrams supply no extra location channel."
+    },
+    {
+      "group_id": "fresh_correction_dev_04",
+      "acceptable": true,
+      "notes": "Girma and Meseret track a mock-map token outside real water-flow conditions. Irrigation map drawer and valve plan portfolio are distinct storage labels, and map markings explicitly reveal no token position."
+    },
+    {
+      "group_id": "fresh_correction_dev_05",
+      "acceptable": true,
+      "notes": "Fernanda and Gaspar's version-index token is separate from stitched material. Badge pattern wallet and stitch chart cabinet are distinct, and artwork or revision labels supply no extra observation."
+    },
+    {
+      "group_id": "fresh_correction_dev_06",
+      "acceptable": true,
+      "notes": "Endale and Mulu's bristle-entry token is handled as paperwork. Bristle sample case and brush catalogue drawer are distinct; product performance and catalogue specifications provide no location evidence."
+    },
+    {
+      "group_id": "fresh_correction_dev_07",
+      "acceptable": true,
+      "notes": "Tatiana and Vaclav's annotation token is separate from drone operation. Flight annotation folder and terrain worksheet box are distinguishable; no camera, maps, photographs or telemetry furnish additional access."
+    },
+    {
+      "group_id": "fresh_test_00",
+      "acceptable": true,
+      "notes": "Abdoulaye and Aminata have clear paperwork roles. The plain drill token excludes customer clothing, and front claims drawer differs clearly from back service cupboard; private reports and explicitly restricted access control the attribution."
+    },
+    {
+      "group_id": "fresh_test_01",
+      "acceptable": true,
+      "notes": "Adriana and Ernesto's clue-query token is separate from the crossword. Clue review folder and proof desk cabinet are distinct physical alternatives; ambiguous puzzle clues do not introduce ambiguity about either location or the stated final attribution."
+    },
+    {
+      "group_id": "fresh_test_02",
+      "acceptable": true,
+      "notes": "Berhanu and Senait track a loose physical token separate from every computer and software record. Keyboard test tray and screen review drawer are distinct storage sites; keyboard navigation does not provide an implicit digital location update."
+    },
+    {
+      "group_id": "fresh_test_03",
+      "acceptable": true,
+      "notes": "Dorota and Frantisek's physical position-card token is used at a desk, with no players on court. Rotation planning case and substitution card wallet are distinct; sports terms do not imply token movement or extra observers."
+    },
+    {
+      "group_id": "fresh_test_04",
+      "acceptable": true,
+      "notes": "Bongani and Lerato's scenario token is explicitly not a board playing piece. Scenario draft chest and balance review box are distinguishable, so game mechanics do not supply movement or location evidence."
+    },
+    {
+      "group_id": "fresh_test_05",
+      "acceptable": true,
+      "notes": "Ines and Jacinto's dummy exposure-sheet token belongs to paperwork outside the animation set. Timing sheet folder and animation desk locker are distinct, and animation activity contributes no extra token view."
+    },
+    {
+      "group_id": "fresh_test_06",
+      "acceptable": true,
+      "notes": "Kagiso and Zanele handle a physical practice-envelope token with no real election or completed vote. Ballot practice tin and club office chest are distinct storage sites; ballot content does not determine token belief."
+    },
+    {
+      "group_id": "fresh_test_07",
+      "acceptable": true,
+      "notes": "Mirjana and Radek's physical layout token is stored separately from floor-plan drawings. Layout sample cabinet and planning desk drawer are distinguishable; office rearrangement does not imply an observed token move."
+    },
+    {
+      "group_id": "fresh_test_08",
+      "acceptable": true,
+      "notes": "Cheikh and Fatoumata's physical price-tag token concerns a rehearsal without goods for sale. Price review basket and stockroom label cupboard are clear alternatives, and prices or labels furnish no additional token-location access."
+    },
+    {
+      "group_id": "fresh_test_09",
+      "acceptable": true,
+      "notes": "Noelia and Octavio's physical reset-tag token stays in the office outside puzzle rooms. Reset checklist pouch and prop office bin are distinct; the escape-room setting creates no hidden puzzle clue or movement evidence."
+    },
+    {
+      "group_id": "fresh_test_10",
+      "acceptable": true,
+      "notes": "Ashenafi and Saba track a physical spare-flap token with empty prototypes. Carton sample drawer and packaging test case are distinguishable; no customer packaging process provides an implicit token observation."
+    },
+    {
+      "group_id": "fresh_test_11",
+      "acceptable": true,
+      "notes": "Jarmila and Ludek's invented offer-slip token is separate from coins and money. Swap catalogue cabinet and offer slip folder are distinct storage sites, so collecting interests and catalogue content add no location evidence."
+    },
+    {
+      "group_id": "fresh_test_12",
+      "acceptable": true,
+      "notes": "Obinna and Ifeoma's physical name-card token is used without perfume or scent tests. Name selection wallet and design meeting chest are distinguishable, and ordinary naming language does not create an extra evidence channel."
+    },
+    {
+      "group_id": "fresh_test_13",
+      "acceptable": true,
+      "notes": "Lidia and Lubomir's reservation-counter token is physical and separate from any map, campers or tents. Booking desk box and pitch plan drawer are distinct storage sites; campsite pitches do not act as token locations themselves."
+    },
+    {
+      "group_id": "fresh_test_14",
+      "acceptable": true,
+      "notes": "Tesfaye and Tigist track a physical duty-coupon token in a paper rota exercise. Rota planning folder and kitchen office cupboard are distinct, and no cooking or cleaning activity implies additional observation or movement."
+    },
+    {
+      "group_id": "fresh_test_15",
+      "acceptable": true,
+      "notes": "Teresa and Vicente's speaking-order token is used only in planning; nobody speaks. Programme desk chest and speech order case are distinct storage sites, and a speech's order or length does not provide token-location evidence."
+    },
+    {
+      "group_id": "fresh_test_16",
+      "acceptable": true,
+      "notes": "Chinedu and Ngozi use a plain physical appointment token separate from the diary and any real client. Appointment practice wallet and salon office drawer are distinguishable; scheduling work gives no implicit access to the physical check."
+    },
+    {
+      "group_id": "fresh_test_17",
+      "acceptable": true,
+      "notes": "Blanka and Bogdan's dummy label-master token is physical and involves no real goods or displayed prices. Label master cabinet and shelf planning tray are distinct; the word 'shelf' is part of one tray label and does not identify the cabinet."
+    },
+    {
+      "group_id": "fresh_test_18",
+      "acceptable": true,
+      "notes": "Dawit and Selamawit's physical review-flag token is separate from actual toys, inspections or loans. Repair review basket and inspection record case are distinguishable; the invented summaries do not independently reveal token position."
+    },
+    {
+      "group_id": "fresh_test_19",
+      "acceptable": true,
+      "notes": "Cecilia and Santiago's physical cue-sheet token is kept away from stage and lighting controls. Cue sheet cabinet and lighting office folder are distinct, and lighting cues or script pauses supply no extra token observation."
+    },
+    {
+      "group_id": "fresh_test_20",
+      "acceptable": true,
+      "notes": "Kwame and Akosua's physical field-specimen token stays outside documents; no letters are sent or personal data used. Merge proof drawer and letter template box are distinguishable, so document fields do not function as a token-location display."
+    },
+    {
+      "group_id": "fresh_test_21",
+      "acceptable": true,
+      "notes": "Estela and Joaquin's physical inscription-proof token remains within the office. Inscription sample wallet and park planning cabinet are distinct; bench layouts and line breaks do not reveal location, and no installed bench creates an extra observation."
+    },
+    {
+      "group_id": "fresh_test_22",
+      "acceptable": true,
+      "notes": "Sekou and Aissatou's ordinary scorecard-master token is separate from the course diagram, with no game played. Scorecard proof case and club design drawer are distinct storage sites; hole order supplies no movement or location evidence."
+    },
+    {
+      "group_id": "fresh_test_23",
+      "acceptable": true,
+      "notes": "Beata and Cezary's physical cutting-template token is separate from patterns and operating machinery. Cutting pattern cabinet and piece test folder are distinguishable, and narrow-piece checks give no independent access to token location."
+    }
+  ],
+  "answers": [
+    {
+      "review_id": "R001",
+      "answer": "YES",
+      "reason": "Sekou accepts records saying Aissatou read neither report, so he retains her shared 09:00 belief in the club design drawer. His private check in the scorecard proof case supplies her no evidence."
+    },
+    {
+      "review_id": "R002",
+      "answer": "NO",
+      "reason": "Marcela accepts both nonreading records. She therefore attributes the baseline hinge diagram folder belief to Przemek, rather than the queried component list cabinet; the private check does not update him."
+    },
+    {
+      "review_id": "R003",
+      "answer": "NO",
+      "reason": "Abdoulaye accepts that Aminata read both reports. The 09:10 replacement puts her attributed belief in the front claims drawer, superseding the back service cupboard report."
+    },
+    {
+      "review_id": "R004",
+      "answer": "NO",
+      "reason": "Obinna accepts that Ifeoma obtained neither report. Her attributed belief stays at the baseline name selection wallet, not the queried design meeting chest."
+    },
+    {
+      "review_id": "R005",
+      "answer": "NO",
+      "reason": "Abdoulaye accepts that Aminata missed the first report but fully read the replacement specifying the front claims drawer. Her attributed belief is that drawer despite his later private check in the back service cupboard."
+    },
+    {
+      "review_id": "R006",
+      "answer": "YES",
+      "reason": "Dorota accepts the record that Frantisek fully read the 09:05 rotation planning case report. With no later accessible update, she attributes that queried location belief to him."
+    },
+    {
+      "review_id": "R007",
+      "answer": "NO",
+      "reason": "Fernanda accepts both records of no report access. She therefore retains Gaspar's baseline badge pattern wallet belief, not the stitch chart cabinet in the unread replacement."
+    },
+    {
+      "review_id": "R008",
+      "answer": "NO",
+      "reason": "Both accepted records say Aminata obtained neither report, so Abdoulaye attributes the front claims drawer baseline belief to her. His private knowledge of the back service cupboard does not transfer to her."
+    },
+    {
+      "review_id": "R009",
+      "answer": "NO",
+      "reason": "The accepted record says Aminata read the replacement locating the token in the back service cupboard. Abdoulaye therefore attributes that belief to her, not the front claims drawer."
+    },
+    {
+      "review_id": "R010",
+      "answer": "YES",
+      "reason": "Kagiso accepts that Zanele obtained no report content or notice. Her attributed belief remains the club office chest from the shared baseline, despite his private ballot practice tin check."
+    },
+    {
+      "review_id": "R011",
+      "answer": "NO",
+      "reason": "Dragana accepts that Dusan read neither report. She consequently retains his pronunciation card basket baseline belief, rather than the dialogue sheet wallet named only in the unread replacement."
+    },
+    {
+      "review_id": "R012",
+      "answer": "YES",
+      "reason": "Estela accepts that Joaquin read both reports, making the later inscription sample wallet replacement his attributed belief. This matches the queried location."
+    },
+    {
+      "review_id": "R013",
+      "answer": "YES",
+      "reason": "Sekou accepts that Aissatou read the scorecard proof case report but not the later club design drawer replacement. He therefore attributes the queried scorecard proof case belief to her, despite his private drawer check."
+    },
+    {
+      "review_id": "R014",
+      "answer": "YES",
+      "reason": "Chinedu accepts that Ngozi read the appointment practice wallet report and missed the replacement. Her attributed belief remains the queried wallet, although his private check locates the token in the salon office drawer."
+    },
+    {
+      "review_id": "R015",
+      "answer": "YES",
+      "reason": "Abdoulaye accepts that Aminata read the front claims drawer report but missed the later back service cupboard replacement. He attributes the queried front claims drawer belief to her despite his private cupboard check."
+    },
+    {
+      "review_id": "R016",
+      "answer": "NO",
+      "reason": "Souleymane accepts both nonreading records, retaining Oumou's inspection sheet tray baseline belief. The queried cork sample cupboard appears only in an unread replacement."
+    },
+    {
+      "review_id": "R017",
+      "answer": "YES",
+      "reason": "Abdoulaye accepts that Aminata read the front claims drawer report and missed the replacement. He retains her front claims drawer belief; the private back service cupboard check supplies her no update."
+    },
+    {
+      "review_id": "R018",
+      "answer": "NO",
+      "reason": "Berhanu accepts that Senait received no report content or notice. Her attributed belief stays in the screen review drawer, not the keyboard test tray named in the unread report."
+    },
+    {
+      "review_id": "R019",
+      "answer": "YES",
+      "reason": "Tesfaye accepts that Tigist read the rota planning folder report and missed the kitchen office cupboard replacement. He therefore attributes the queried folder belief to her despite his private cupboard check."
+    },
+    {
+      "review_id": "R020",
+      "answer": "NO",
+      "reason": "Ashenafi accepts that Saba read neither report. Her attributed belief remains the shared carton sample drawer baseline, not the packaging test case."
+    },
+    {
+      "review_id": "R021",
+      "answer": "NO",
+      "reason": "Yared accepts both nonreading records. Rahel's attributed belief stays in the insulated sensor case, not the calibration notebook drawer named in the unread replacement."
+    },
+    {
+      "review_id": "R022",
+      "answer": "NO",
+      "reason": "Obinna accepts that Ifeoma read the design meeting chest report but missed the name selection wallet replacement. He attributes the chest belief to her, so the queried wallet belief is false."
+    },
+    {
+      "review_id": "R023",
+      "answer": "NO",
+      "reason": "Abdoulaye accepts that Aminata read both reports. The later front claims drawer replacement supersedes the back service cupboard report for his attribution."
+    },
+    {
+      "review_id": "R024",
+      "answer": "NO",
+      "reason": "Mandla accepts records denying Buhle access to either report. He retains her test booking drawer baseline belief, not the antenna diagram cabinet in the unread correction."
+    },
+    {
+      "review_id": "R025",
+      "answer": "NO",
+      "reason": "Abdoulaye accepts that Aminata read both reports; the later front claims drawer replacement governs his attribution. His private back service cupboard check does not change her attributed belief."
+    },
+    {
+      "review_id": "R026",
+      "answer": "YES",
+      "reason": "Noelia accepts that Octavio fully read the reset checklist pouch report, which preserves that baseline location. No subsequent accessible update changes his attributed belief."
+    },
+    {
+      "review_id": "R027",
+      "answer": "NO",
+      "reason": "Lamine accepts that Mariama received neither report. Her attributed belief remains the raised print sample tray from the shared inspection, not the tactile label folder."
+    },
+    {
+      "review_id": "R028",
+      "answer": "NO",
+      "reason": "Emeka accepts records that Chiamaka read neither report. Her attributed belief remains the letter spacing folder rather than the type specimen drawer in the unread replacement."
+    },
+    {
+      "review_id": "R029",
+      "answer": "NO",
+      "reason": "Sabina accepts that Stanislav obtained neither report's content or notice. She retains his catalogue slip envelope baseline belief, not the scanning queue cabinet."
+    },
+    {
+      "review_id": "R030",
+      "answer": "NO",
+      "reason": "Yolanda accepts both nonreading records. Salvador's attributed belief remains in the loom design cupboard, not the weave chart basket specified only in an unread replacement."
+    },
+    {
+      "review_id": "R031",
+      "answer": "YES",
+      "reason": "Abdoulaye accepts that Aminata read the back service cupboard report and missed the later front claims drawer replacement. He attributes the queried cupboard belief to her."
+    },
+    {
+      "review_id": "R032",
+      "answer": "YES",
+      "reason": "Bongani accepts the record of no report access, so Lerato's attributed belief remains the shared balance review box baseline. His private scenario draft chest check does not update her."
+    },
+    {
+      "review_id": "R033",
+      "answer": "YES",
+      "reason": "Noelia accepts that Octavio missed the first report but fully read the replacement specifying the prop office bin. She attributes that queried location belief to him."
+    },
+    {
+      "review_id": "R034",
+      "answer": "YES",
+      "reason": "Abdoulaye accepts that Aminata read the front claims drawer report but missed the back service cupboard replacement. The queried front claims drawer remains her attributed belief."
+    },
+    {
+      "review_id": "R035",
+      "answer": "NO",
+      "reason": "Abdoulaye accepts that Aminata fully read the front claims drawer replacement. He therefore attributes that belief, not his privately checked back service cupboard location."
+    },
+    {
+      "review_id": "R036",
+      "answer": "NO",
+      "reason": "Dorota accepts that Frantisek read the rotation planning case report. His attributed belief remains in that case; her private substitution card wallet check is inaccessible to him."
+    },
+    {
+      "review_id": "R037",
+      "answer": "YES",
+      "reason": "Cecilia accepts that Santiago read both reports. The later cue sheet cabinet replacement supersedes the lighting office folder report and matches the query."
+    },
+    {
+      "review_id": "R038",
+      "answer": "NO",
+      "reason": "Bongani accepts that Lerato obtained no report content or notification. Her attributed belief remains the balance review box, not the scenario draft chest."
+    },
+    {
+      "review_id": "R039",
+      "answer": "NO",
+      "reason": "Cheikh accepts that Fatoumata read neither report. He retains her price review basket baseline belief, not the stockroom label cupboard in the unread correction."
+    },
+    {
+      "review_id": "R040",
+      "answer": "NO",
+      "reason": "Getahun accepts both nonreading records, so Almaz's attributed belief remains the timetable planning shelf. The model platform cupboard replacement supplies her no update."
+    },
+    {
+      "review_id": "R041",
+      "answer": "NO",
+      "reason": "Tesfaye accepts that Tigist obtained neither report. He retains her rota planning folder baseline belief, not the kitchen office cupboard stated in the unread first report."
+    },
+    {
+      "review_id": "R042",
+      "answer": "NO",
+      "reason": "Estela accepts that Joaquin fully read the inscription sample wallet replacement. He is therefore attributed that belief, rather than the queried park planning cabinet that Estela privately checks."
+    },
+    {
+      "review_id": "R043",
+      "answer": "NO",
+      "reason": "Dolores accepts that Ignacio obtained neither report. His attributed belief remains the restoration ledger shelf baseline, not the reference print drawer in the unread replacement."
+    },
+    {
+      "review_id": "R044",
+      "answer": "NO",
+      "reason": "Endale accepts both nonreading records and thus retains Mulu's bristle sample case baseline belief. The queried brush catalogue drawer is supplied only by an unread report."
+    },
+    {
+      "review_id": "R045",
+      "answer": "YES",
+      "reason": "The account directly states Adriana's final attribution that Ernesto believes the token is in the proof desk cabinet. The query repeats that attribution; no report sequence needs reconstruction."
+    },
+    {
+      "review_id": "R046",
+      "answer": "NO",
+      "reason": "Abdoulaye accepts that Aminata read both reports, so the later back service cupboard replacement governs his attribution. His private front claims drawer check does not change her attributed belief."
+    },
+    {
+      "review_id": "R047",
+      "answer": "YES",
+      "reason": "Abdoulaye accepts that Aminata read the front claims drawer report and missed the back service cupboard replacement. He attributes the queried front claims drawer belief even though his private check finds the cupboard."
+    },
+    {
+      "review_id": "R048",
+      "answer": "NO",
+      "reason": "The account directly supplies Berhanu's attribution that Senait believes the keyboard test tray. The query instead asks about the screen review drawer; the private physical check gives Senait no new evidence."
+    },
+    {
+      "review_id": "R049",
+      "answer": "NO",
+      "reason": "Adriana accepts that Ernesto read both reports. The 09:10 proof desk cabinet replacement governs his attributed belief, rather than the clue review folder found in her private check."
+    },
+    {
+      "review_id": "R050",
+      "answer": "NO",
+      "reason": "Abdoulaye accepts that Aminata obtained neither report. Her attributed belief remains the back service cupboard baseline, not the front claims drawer."
+    },
+    {
+      "review_id": "R051",
+      "answer": "NO",
+      "reason": "Both accepted records deny Aminata report content or notification. Abdoulaye therefore retains her back service cupboard baseline belief, not the queried front claims drawer."
+    },
+    {
+      "review_id": "R052",
+      "answer": "YES",
+      "reason": "Mirjana accepts that Radek fully read the layout sample cabinet report, which leaves him attributed that queried location belief. There is no later accessible update."
+    },
+    {
+      "review_id": "R053",
+      "answer": "NO",
+      "reason": "Abdoulaye accepts that Aminata read neither report, so he attributes the baseline back service cupboard belief to her. His private front claims drawer check does not transfer that knowledge."
+    },
+    {
+      "review_id": "R054",
+      "answer": "NO",
+      "reason": "Abdoulaye accepts that Aminata read both reports. The later replacement specifies the back service cupboard and supersedes the first front claims drawer report."
+    },
+    {
+      "review_id": "R055",
+      "answer": "YES",
+      "reason": "Jarmila accepts that Ludek read both reports, so the swap catalogue cabinet replacement is his final attributed belief. It matches the queried location."
+    },
+    {
+      "review_id": "R056",
+      "answer": "NO",
+      "reason": "Abdoulaye accepts that Aminata read both reports. The front claims drawer replacement controls his attribution even though his private check finds the back service cupboard."
+    },
+    {
+      "review_id": "R057",
+      "answer": "NO",
+      "reason": "Thabo accepts both records of no report access. Refilwe's attributed belief remains the barcode proof tray baseline, not the dispatch label binder."
+    },
+    {
+      "review_id": "R058",
+      "answer": "NO",
+      "reason": "Tatiana accepts that Vaclav received neither report's content or notice. She retains his flight annotation folder baseline belief rather than the terrain worksheet box."
+    },
+    {
+      "review_id": "R059",
+      "answer": "NO",
+      "reason": "Girma accepts both nonreading records, so Meseret remains attributed the irrigation map drawer belief. The valve plan portfolio appears only in an unread replacement."
+    },
+    {
+      "review_id": "R060",
+      "answer": "NO",
+      "reason": "Beata accepts that Cezary read both reports. The later piece test folder replacement governs his attributed belief, not the cutting pattern cabinet that Beata privately checks."
+    },
+    {
+      "review_id": "R061",
+      "answer": "YES",
+      "reason": "Abdoulaye accepts that Aminata read the back service cupboard report but missed the front claims drawer replacement. He attributes the queried cupboard belief despite his private drawer check."
+    },
+    {
+      "review_id": "R062",
+      "answer": "NO",
+      "reason": "Abdoulaye accepts that Aminata read neither report. Her attributed belief stays at the front claims drawer baseline, not the back service cupboard in the unread first report."
+    },
+    {
+      "review_id": "R063",
+      "answer": "NO",
+      "reason": "Beata accepts that Cezary read the cutting pattern cabinet replacement. His attributed belief is that cabinet, not the piece test folder that Beata privately checks."
+    },
+    {
+      "review_id": "R064",
+      "answer": "YES",
+      "reason": "Ines accepts that Jacinto fully read the timing sheet folder report. With no later accessible update, she attributes the queried folder belief to him."
+    },
+    {
+      "review_id": "R065",
+      "answer": "NO",
+      "reason": "Pilar accepts both nonreading records, retaining Rodrigo's survey form cabinet baseline belief. The species checklist box in the unread replacement does not update him."
+    },
+    {
+      "review_id": "R066",
+      "answer": "NO",
+      "reason": "Abdoulaye accepts that Aminata obtained neither report. He retains her baseline back service cupboard belief rather than his privately checked front claims drawer location."
+    },
+    {
+      "review_id": "R067",
+      "answer": "YES",
+      "reason": "Cheikh accepts that Fatoumata obtained no report content or notice. He retains her price review basket baseline belief despite his private check in the stockroom label cupboard."
+    },
+    {
+      "review_id": "R068",
+      "answer": "YES",
+      "reason": "Kagiso accepts that Zanele did not obtain the report. Her attributed belief remains the ballot practice tin baseline; his private club office chest check supplies her no update."
+    },
+    {
+      "review_id": "R069",
+      "answer": "NO",
+      "reason": "Abdoulaye accepts that Aminata read the back service cupboard replacement. That is her attributed belief, not the front claims drawer found in his later private check."
+    },
+    {
+      "review_id": "R070",
+      "answer": "NO",
+      "reason": "Abdoulaye accepts that Aminata missed the first report but fully read the back service cupboard replacement. He therefore does not attribute the queried front claims drawer belief."
+    },
+    {
+      "review_id": "R071",
+      "answer": "NO",
+      "reason": "Abdoulaye accepts that Aminata obtained no report content or notification. Her attributed belief remains the front claims drawer baseline, not the queried back service cupboard."
+    },
+    {
+      "review_id": "R072",
+      "answer": "YES",
+      "reason": "Abdoulaye accepts that Aminata read the front claims drawer report but missed the back service cupboard replacement. Her final attributed belief matches the front claims drawer query."
+    },
+    {
+      "review_id": "R073",
+      "answer": "NO",
+      "reason": "Danica accepts both records denying Dejan report access. His attributed belief remains the thread sample drawer baseline, not the swatch catalogue box."
+    },
+    {
+      "review_id": "R074",
+      "answer": "YES",
+      "reason": "The account directly states Dorota's final attribution that Frantisek believes the substitution card wallet. The queried attribution is exactly that statement."
+    },
+    {
+      "review_id": "R075",
+      "answer": "YES",
+      "reason": "Kwame accepts that Akosua read neither report. He therefore retains her letter template box baseline belief, despite his private check in the merge proof drawer."
+    },
+    {
+      "review_id": "R076",
+      "answer": "NO",
+      "reason": "Leonor accepts both nonreading records. Manuel's attributed belief remains the listening bench drawer, not the headphone adapter case in the unread replacement."
+    },
+    {
+      "review_id": "R077",
+      "answer": "NO",
+      "reason": "Abdoulaye accepts that Aminata read both reports, making the back service cupboard replacement her final attributed belief rather than the queried front claims drawer."
+    },
+    {
+      "review_id": "R078",
+      "answer": "NO",
+      "reason": "Abdoulaye accepts that Aminata read both reports; the back service cupboard replacement takes priority. His private front claims drawer check does not change that attribution."
+    },
+    {
+      "review_id": "R079",
+      "answer": "NO",
+      "reason": "Abdoulaye accepts that Aminata read the back service cupboard replacement, so that is her attributed belief. His private front claims drawer check supplies her no update."
+    },
+    {
+      "review_id": "R080",
+      "answer": "YES",
+      "reason": "Lidia accepts that Lubomir read both reports. The later booking desk box replacement supersedes the pitch plan drawer report and matches the query."
+    },
+    {
+      "review_id": "R081",
+      "answer": "YES",
+      "reason": "Jarmila accepts that Ludek missed the first report but read the offer slip folder replacement. She attributes the queried folder belief to him."
+    },
+    {
+      "review_id": "R082",
+      "answer": "NO",
+      "reason": "Abdoulaye accepts both nonreading records. Aminata remains attributed the shared front claims drawer baseline belief, not the back service cupboard in the unread report."
+    },
+    {
+      "review_id": "R083",
+      "answer": "NO",
+      "reason": "Blanka accepts that Bogdan read both reports. The shelf planning tray replacement governs his final attributed belief rather than the label master cabinet that Blanka privately checks."
+    },
+    {
+      "review_id": "R084",
+      "answer": "NO",
+      "reason": "Ilona accepts that Janusz obtained neither report. His attributed belief remains the lead template case baseline, not the glass pattern portfolio in the unread replacement."
+    },
+    {
+      "review_id": "R085",
+      "answer": "NO",
+      "reason": "Abdoulaye accepts that Aminata fully read the front claims drawer replacement. Her final attributed belief is that drawer, not the back service cupboard in the missed first report."
+    },
+    {
+      "review_id": "R086",
+      "answer": "NO",
+      "reason": "Koffi accepts that Abena read neither report. Her attributed belief remains the annotation desk cabinet baseline, not the seed image folder in the unread replacement."
+    },
+    {
+      "review_id": "R087",
+      "answer": "NO",
+      "reason": "Themba accepts both nonreading records, retaining Nkosazana's bearing exercise folder baseline belief. The queried star chart drawer supplies no read update."
+    },
+    {
+      "review_id": "R088",
+      "answer": "YES",
+      "reason": "Abdoulaye accepts that Aminata read the back service cupboard report but missed the front claims drawer replacement. He attributes the queried cupboard belief despite his private drawer check."
+    },
+    {
+      "review_id": "R089",
+      "answer": "NO",
+      "reason": "Adriana accepts that Ernesto read the clue review folder report. His attributed belief remains that folder; her private proof desk cabinet check gives him no update."
+    },
+    {
+      "review_id": "R090",
+      "answer": "NO",
+      "reason": "Ashenafi accepts that Saba read the packaging test case report and missed the carton sample drawer replacement. He attributes the test case belief, not the queried drawer."
+    },
+    {
+      "review_id": "R091",
+      "answer": "NO",
+      "reason": "Mirjana accepts that Radek read the layout sample cabinet report. She attributes that cabinet belief, not the planning desk drawer found in her inaccessible private check."
+    },
+    {
+      "review_id": "R092",
+      "answer": "YES",
+      "reason": "Cecilia accepts that Santiago read the lighting office folder replacement. It supplies his final attributed belief and matches the query, regardless of missing the first report."
+    },
+    {
+      "review_id": "R093",
+      "answer": "NO",
+      "reason": "Teresa accepts that Vicente read both reports. The speech order case replacement governs his attributed belief rather than the programme desk chest that Teresa privately checks."
+    },
+    {
+      "review_id": "R094",
+      "answer": "NO",
+      "reason": "Sibusiso accepts both nonreading records and retains Nomvula's sound cue binder baseline belief. The recording notes cupboard in the unread replacement supplies no update."
+    },
+    {
+      "review_id": "R095",
+      "answer": "YES",
+      "reason": "Dawit accepts that Selamawit read neither report. Her attributed belief remains the inspection record case baseline, despite his private repair review basket check."
+    },
+    {
+      "review_id": "R096",
+      "answer": "NO",
+      "reason": "Kwame accepts that Akosua read the letter template box report but missed the merge proof drawer replacement. He attributes the box belief, not the queried drawer."
+    },
+    {
+      "review_id": "R097",
+      "answer": "NO",
+      "reason": "Abdoulaye accepts that Aminata read the front claims drawer replacement. He attributes that drawer belief to her rather than the back service cupboard in the unread first report."
+    },
+    {
+      "review_id": "R098",
+      "answer": "NO",
+      "reason": "Lidia accepts that Lubomir read the booking desk box replacement. His attributed belief is the box, not the pitch plan drawer revealed only by Lidia's private check."
+    },
+    {
+      "review_id": "R099",
+      "answer": "NO",
+      "reason": "Dawit accepts that Selamawit read the inspection record case report but missed the repair review basket replacement. He attributes the case belief rather than the queried basket."
+    },
+    {
+      "review_id": "R100",
+      "answer": "NO",
+      "reason": "Teresa accepts that Vicente read the programme desk chest replacement. That governs his attributed belief, not the speech order case that Teresa privately checks."
+    },
+    {
+      "review_id": "R101",
+      "answer": "NO",
+      "reason": "The account directly states Abdoulaye's final attribution that Aminata believes the front claims drawer. The question asks instead about the back service cupboard."
+    },
+    {
+      "review_id": "R102",
+      "answer": "NO",
+      "reason": "Berhanu accepts that Senait obtained no report content or notification. Her attributed belief remains the keyboard test tray baseline, not the queried screen review drawer."
+    },
+    {
+      "review_id": "R103",
+      "answer": "YES",
+      "reason": "Blanka accepts that Bogdan fully read the shelf planning tray replacement. His final attributed belief matches that queried tray, even though he missed the first report."
+    },
+    {
+      "review_id": "R104",
+      "answer": "NO",
+      "reason": "Ines accepts that Jacinto read the timing sheet folder report. She attributes that folder belief, not the animation desk locker found in her later private check."
+    },
+    {
+      "review_id": "R105",
+      "answer": "NO",
+      "reason": "Beatriz accepts that Duarte read neither report. His attributed belief remains the kiln schedule box baseline, not the glaze swatch cabinet in the unread replacement."
+    },
+    {
+      "review_id": "R106",
+      "answer": "NO",
+      "reason": "Abdoulaye accepts both nonreading records, retaining Aminata's front claims drawer baseline belief. His private back service cupboard check supplies her no evidence."
+    },
+    {
+      "review_id": "R107",
+      "answer": "YES",
+      "reason": "Chinedu accepts that Ngozi obtained neither report. He retains her salon office drawer baseline belief despite his private appointment practice wallet check."
+    },
+    {
+      "review_id": "R108",
+      "answer": "YES",
+      "reason": "Abdoulaye accepts that Aminata read the back service cupboard report but missed the front claims drawer replacement. He therefore attributes the queried back service cupboard belief to her."
+    }
+  ],
+  "exposure": {
+    "packet_path": "C:/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/fresh_readout_v2/compiled_v1/review_packet.json",
+    "packet_sha256": "222ad9e662f8b683c44bf09b7f575a3c30d11384e74b0954c880412adf7ed2f6",
+    "files_read": [
+      "C:/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/fresh_readout_v2/compiled_v1/review_packet.json"
+    ],
+    "reviewed_all_48_base_contexts": true,
+    "reviewed_all_108_full_prompts": true,
+    "limits": [
+      "This is an agent's independent saved-prose interpretation, not human approval, a formal-label comparison, or a claim that a study passed.",
+      "Only the supplied packet was used as substantive input. No bank, key, project source, design protocol, earlier result, other agent output, model fit, model forward pass, external API, or installation was accessed.",
+      "Accepted reading records determine the sender's attribution; whether they match the reader's actual private access is deliberately undisclosed. Private physical checks were not transferred to the reader.",
+      "All full system and user prompt texts were read in eighteen six-prompt batches; all 48 base contexts were read separately. Opaque review IDs served only as answer identifiers.",
+      "All contexts are judged acceptable for the specified nested-belief questions. Mild shelf-preposition awkwardness and potentially digital-sounding folder labels were considered in context; neither changes the distinct storage labels or evidence restrictions."
+    ],
+    "any_parser_use": {
+      "semantic_answer_parser_used": false,
+      "details": "Python standard-library json/pathlib/hashlib decoded and displayed the packet, checked input/output counts and hashes, and serialized this artifact. No text-extraction rule, semantic parser, source formula, key lookup, fitted rule, or automated answer derivation was used; all answers and reasons were supplied after reading the full prose."
+    }
+  }
+}

@@ -10,6 +10,7 @@ recursive-include data/communication *.json
 recursive-include data/mask_specificity *.json *.md
 recursive-include data/annotations *.csv
 include data/annotations/main_study_v1_agent_semantic_20261122.json
+include data/annotations/fresh_readout_v2_blind_agent_answers_v1.json
 recursive-include configs *.json
 recursive-include docs *.md
 recursive-include docs/validation *.json

@@ -1,0 +1,45 @@
+{
+  "record_id": "fresh_engineering_excluded_v2__correction_hard_A__i0_u1_b0_b11_w1_map0",
+  "case_id": "fresh_engineering_excluded_v2__correction_hard_A__i0_u1_b0_b11_w1_map0",
+  "group_id": "fresh_engineering_excluded_v2",
+  "partition": "engineering",
+  "split": "engineering",
+  "original_split": null,
+  "condition": "correction_hard",
+  "mechanism": "correction",
+  "renderer": "A",
+  "state": {
+    "group_id": "fresh_engineering_excluded_v2",
+    "mechanism": "correction",
+    "initial": 0,
+    "update": 1,
+    "receipt": 0,
+    "world": 1,
+    "name_map": 0,
+    "first_receipt": 1
+  },
+  "gold": 1,
+  "messages": [
+    {
+      "role": "system",
+      "content": "Read the fictional scene. Questions will follow. Each person has only the observations and messages explicitly available to them. People remember the last place they observed the token and update after seeing a move or receiving a trusted message about its current place. They do not infer an unobserved move. Narrator-only information is not shared with a character merely because the narrator describes it."
+    },
+    {
+      "role": "user",
+      "content": "In a fictional routing-paperwork rehearsal, Wesley Maddison and Susannah Fenwick track a token. This example is excluded from every scientific cohort.\n\nAt 09:00, Wesley Maddison and Susannah Fenwick jointly inspect the token inside the striped cable tray. They see each other complete this inspection. Susannah Fenwick believes the token is in the striped cable tray, and Wesley Maddison knows that initial belief.\n\nThe rehearsal provides a private written location channel to Wesley Maddison. At 09:05, Wesley Maddison sends exactly: \"The token is in the plain routing drawer.\" The report's content is not guaranteed to match the actual token location.\n\nAt 09:07, a reading record supplied to Wesley Maddison states: \"Susannah Fenwick fully read the 09:05 report.\" Wesley Maddison accepts this particular record as definitive.\n\nAt 09:10, Wesley Maddison sends a separate replacement report: \"Correction: the token is in the striped cable tray. Use this location instead of any earlier location report you read.\" The replacement explicitly supplies a location and does not merely withdraw the previous report.\n\nAt 09:12, a second reading record supplied to Wesley Maddison states: \"Susannah Fenwick received no content or notification from the 09:10 replacement report.\" Wesley Maddison accepts this particular record as definitive.\n\nSusannah Fenwick trusts each fully read location report. A fully read report replaces the preceding location belief even when its content is false in the world. The most recently read report takes priority. A report that is not read supplies neither content nor a notification; in that case the preceding belief is retained. Wesley Maddison knows and applies these rules and has no access evidence besides the accepted records. The account does not disclose whether those records agree with actual private reading.\n\nAt 09:15, Wesley Maddison alone makes an accurate private live check: the token is now in the plain routing drawer. Susannah Fenwick cannot access this check and receives no notice of it. Any movement between the timed checks occurs outside the reader's view without a movement notice. The token remains in this privately checked location through 09:20.\n\nThe question concerns 09:20. Apart from any access described in the accepted records, Susannah Fenwick gets no additional observation, report or location evidence. Wesley Maddison retains those records; neither person infers an unobserved move.\n\nCandidate proposition: \"The token is in the plain routing drawer.\" This is a statement to assess, not new evidence or a message received by either person.\n\nEnd of account. A question may follow.\n\nAt the end of the scene, does Wesley Maddison think that Susannah Fenwick believes that the token is in the plain routing drawer? Answer only YES or NO."
+    }
+  ],
+  "user_content_char_spans": {
+    "account": [
+      0,
+      2647
+    ],
+    "query_location": [
+      2755,
+      2775
+    ]
+  },
+  "span_boundary_policy": {
+    "query_location": "leading_whitespace"
+  }
+}

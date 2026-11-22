@@ -1,0 +1,345 @@
+{
+  "schema_version": "fresh-readout-authored-contexts-v1",
+  "status": "draft_unreviewed",
+  "authorship": "agent",
+  "human_review_complete": false,
+  "model_observations": 0,
+  "groups": [
+    {
+      "group_id": "fresh_correction_fit_00",
+      "split": "correction_fit",
+      "wording_group": "climate_calibration_sequence",
+      "sender": "Lamine Kouyate",
+      "reader": "Mariama Sagna",
+      "locations": [
+        "insulated sensor case",
+        "calibration notebook drawer"
+      ],
+      "introduction": "A climate-instrument workshop uses a token for a practice calibration-sequence card. {sender} coordinates the paperwork and {reader} tracks the token within this fictional exercise.",
+      "event_description": "A private written channel is available to {sender} for reporting the token location; its reports are separate from instrument measurements.",
+      "authoring_notes": "Fictional contextual framing only; all timed evidence and attributed-access rules come from the declared renderer. No extra reading, delivery, truthful report, public location channel or report count is implied."
+    },
+    {
+      "group_id": "fresh_correction_fit_01",
+      "split": "correction_fit",
+      "wording_group": "audio_demo_order",
+      "sender": "Abdoulaye Mbaye",
+      "reader": "Aminata Diop",
+      "locations": [
+        "headphone adapter case",
+        "listening bench drawer"
+      ],
+      "introduction": "In an audio-accessibility demonstration rehearsal, {sender} and {reader} use a token to stand for an equipment-order card. No listener performance or health outcome is part of the exercise.",
+      "event_description": "The demonstration paperwork includes a private location-message channel managed by {sender}, with reading records kept independently of its message text.",
+      "authoring_notes": "Fictional contextual framing only; all timed evidence and attributed-access rules come from the declared renderer. No extra reading, delivery, truthful report, public location channel or report count is implied."
+    },
+    {
+      "group_id": "fresh_correction_fit_02",
+      "split": "correction_fit",
+      "wording_group": "braille_label_proof",
+      "sender": "Cheikh Ndiaye",
+      "reader": "Fatoumata Keita",
+      "locations": [
+        "raised print sample tray",
+        "tactile label folder"
+      ],
+      "introduction": "A label-proofing practice run assigns {sender} and {reader} a token representing a proposed Braille label sheet. The task concerns where the token is considered to be, not interpreting its raised characters.",
+      "event_description": "For the proofing exercise, {sender} can issue written location reports over a private channel that does not provide an automatic view of the token.",
+      "authoring_notes": "Fictional contextual framing only; all timed evidence and attributed-access rules come from the declared renderer. No extra reading, delivery, truthful report, public location channel or report count is implied."
+    },
+    {
+      "group_id": "fresh_correction_fit_03",
+      "split": "correction_fit",
+      "wording_group": "ceramic_glaze_catalogue",
+      "sender": "Sekou Diallo",
+      "reader": "Aissatou Sow",
+      "locations": [
+        "glaze swatch cabinet",
+        "kiln schedule box"
+      ],
+      "introduction": "A ceramics catalogue exercise lets {sender} coordinate a token that represents a glaze-reference card while {reader} keeps the corresponding location belief. This rehearsal does not operate a kiln.",
+      "event_description": "The studio exercise offers {sender} a private text channel for location statements, distinct from the physical glaze samples and their catalogue entries.",
+      "authoring_notes": "Fictional contextual framing only; all timed evidence and attributed-access rules come from the declared renderer. No extra reading, delivery, truthful report, public location channel or report count is implied."
+    },
+    {
+      "group_id": "fresh_correction_fit_04",
+      "split": "correction_fit",
+      "wording_group": "model_railway_timetable",
+      "sender": "Souleymane Bah",
+      "reader": "Oumou Traore",
+      "locations": [
+        "timetable planning shelf",
+        "model platform cupboard"
+      ],
+      "introduction": "While drafting a model-railway timetable, {sender} and {reader} rehearse record handling with a token standing for a route-planning slip. Train movement is outside this fictional task.",
+      "event_description": "An internal written channel lets {sender} report the token location without showing a live view of the model layout.",
+      "authoring_notes": "Fictional contextual framing only; all timed evidence and attributed-access rules come from the declared renderer. No extra reading, delivery, truthful report, public location channel or report count is implied."
+    },
+    {
+      "group_id": "fresh_correction_fit_05",
+      "split": "correction_fit",
+      "wording_group": "dubbing_pronunciation_glossary",
+      "sender": "Koffi Adjovi",
+      "reader": "Abena Nyarko",
+      "locations": [
+        "dialogue sheet wallet",
+        "pronunciation card basket"
+      ],
+      "introduction": "A dubbing workshop uses a token to represent a pronunciation-glossary draft. {sender} manages the rehearsal and {reader} follows the token, rather than listening to a recorded performance.",
+      "event_description": "The glossary exercise provides {sender} with a private written reporting channel; no audio or playback channel supplies location evidence.",
+      "authoring_notes": "Fictional contextual framing only; all timed evidence and attributed-access rules come from the declared renderer. No extra reading, delivery, truthful report, public location channel or report count is implied."
+    },
+    {
+      "group_id": "fresh_correction_fit_06",
+      "split": "correction_fit",
+      "wording_group": "seed_image_annotation",
+      "sender": "Kwame Boateng",
+      "reader": "Akosua Osei",
+      "locations": [
+        "annotation desk cabinet",
+        "seed image folder"
+      ],
+      "introduction": "In a seed-image annotation rehearsal, {sender} and {reader} use a token for a proposed labelling-guideline card. No biological measurement is inferred from the token.",
+      "event_description": "The annotation practice permits private written location reports from {sender}; image files themselves are not a location-evidence channel.",
+      "authoring_notes": "Fictional contextual framing only; all timed evidence and attributed-access rules come from the declared renderer. No extra reading, delivery, truthful report, public location channel or report count is implied."
+    },
+    {
+      "group_id": "fresh_correction_fit_07",
+      "split": "correction_fit",
+      "wording_group": "conservation_photo_metadata",
+      "sender": "Chinedu Okafor",
+      "reader": "Ngozi Nwosu",
+      "locations": [
+        "reference print drawer",
+        "restoration ledger shelf"
+      ],
+      "introduction": "A conservation-documentation rehearsal tracks a token representing a photograph-metadata worksheet. {sender} organises the practice and {reader} maintains a belief about that token.",
+      "event_description": "The paperwork procedure gives {sender} a private message channel for location claims, independently of photographs or restoration records.",
+      "authoring_notes": "Fictional contextual framing only; all timed evidence and attributed-access rules come from the declared renderer. No extra reading, delivery, truthful report, public location channel or report count is implied."
+    },
+    {
+      "group_id": "fresh_correction_fit_08",
+      "split": "correction_fit",
+      "wording_group": "carton_barcode_proof",
+      "sender": "Obinna Eze",
+      "reader": "Ifeoma Umeh",
+      "locations": [
+        "barcode proof tray",
+        "dispatch label binder"
+      ],
+      "introduction": "A carton-labelling drill replaces a barcode-proof slip with a token. {sender} coordinates this fictional paperwork task with {reader}, and no parcel is actually dispatched.",
+      "event_description": "The drill has a private written location-report channel available to {sender}; scanning a barcode is not an additional observation in this account.",
+      "authoring_notes": "Fictional contextual framing only; all timed evidence and attributed-access rules come from the declared renderer. No extra reading, delivery, truthful report, public location channel or report count is implied."
+    },
+    {
+      "group_id": "fresh_correction_fit_09",
+      "split": "correction_fit",
+      "wording_group": "archive_scanning_queue",
+      "sender": "Emeka Nnamani",
+      "reader": "Chiamaka Obi",
+      "locations": [
+        "scanning queue cabinet",
+        "catalogue slip envelope"
+      ],
+      "introduction": "An archive-digitisation exercise uses a token for a scanning-queue instruction card. {sender} and {reader} practise tracking the token instead of handling any historical document.",
+      "event_description": "The exercise allows {sender} to send private location notes; neither a catalogue entry nor a scanning machine automatically reveals where the token is.",
+      "authoring_notes": "Fictional contextual framing only; all timed evidence and attributed-access rules come from the declared renderer. No extra reading, delivery, truthful report, public location channel or report count is implied."
+    },
+    {
+      "group_id": "fresh_correction_fit_10",
+      "split": "correction_fit",
+      "wording_group": "antenna_bench_booking",
+      "sender": "Sibusiso Dlamini",
+      "reader": "Nomvula Nkosi",
+      "locations": [
+        "test booking drawer",
+        "antenna diagram cabinet"
+      ],
+      "introduction": "An antenna-bench scheduling rehearsal assigns a token to a draft booking sheet. {sender} manages its paperwork and {reader} tracks the token within the simulation.",
+      "event_description": "The scheduling exercise provides a private written channel for {sender} to report locations, with no radio signal carrying token-location evidence.",
+      "authoring_notes": "Fictional contextual framing only; all timed evidence and attributed-access rules come from the declared renderer. No extra reading, delivery, truthful report, public location channel or report count is implied."
+    },
+    {
+      "group_id": "fresh_correction_fit_11",
+      "split": "correction_fit",
+      "wording_group": "fabric_swatch_index",
+      "sender": "Thabo Mokoena",
+      "reader": "Refilwe Molefe",
+      "locations": [
+        "swatch catalogue box",
+        "thread sample drawer"
+      ],
+      "introduction": "A fabric-swatch indexing practice uses a token to stand for an index-correction card. {sender} coordinates the practice with {reader}; fabric colour does not determine the token location.",
+      "event_description": "A private written reporting channel is available to {sender}, separate from the swatch index and any physical fabric inspection.",
+      "authoring_notes": "Fictional contextual framing only; all timed evidence and attributed-access rules come from the declared renderer. No extra reading, delivery, truthful report, public location channel or report count is implied."
+    },
+    {
+      "group_id": "fresh_correction_fit_12",
+      "split": "correction_fit",
+      "wording_group": "game_audio_asset_register",
+      "sender": "Kagiso Khumalo",
+      "reader": "Zanele Mthembu",
+      "locations": [
+        "sound cue binder",
+        "recording notes cupboard"
+      ],
+      "introduction": "An independent-game audio register is rehearsed with a token representing a proposed asset-entry card. {sender} and {reader} track that token without using any game playback.",
+      "event_description": "The register rehearsal offers {sender} a private location-note channel; asset filenames and sound cues contain no token-location evidence.",
+      "authoring_notes": "Fictional contextual framing only; all timed evidence and attributed-access rules come from the declared renderer. No extra reading, delivery, truthful report, public location channel or report count is implied."
+    },
+    {
+      "group_id": "fresh_correction_fit_13",
+      "split": "correction_fit",
+      "wording_group": "stained_glass_pattern_register",
+      "sender": "Bongani Cele",
+      "reader": "Lerato Modise",
+      "locations": [
+        "glass pattern portfolio",
+        "lead template case"
+      ],
+      "introduction": "A stained-glass design rehearsal uses a token for a pattern-register draft. {sender} supervises the exercise and {reader} follows the token, with no glass cutting taking place.",
+      "event_description": "The design paperwork includes a private written channel through which {sender} can report token locations independently of the pattern drawings.",
+      "authoring_notes": "Fictional contextual framing only; all timed evidence and attributed-access rules come from the declared renderer. No extra reading, delivery, truthful report, public location channel or report count is implied."
+    },
+    {
+      "group_id": "fresh_correction_fit_14",
+      "split": "correction_fit",
+      "wording_group": "kerning_proof_revision",
+      "sender": "Themba Hlongwane",
+      "reader": "Nkosazana Buthelezi",
+      "locations": [
+        "letter spacing folder",
+        "type specimen drawer"
+      ],
+      "introduction": "A typography proofing exercise treats a token as a draft kerning instruction. {sender} and {reader} practise keeping track of the token, rather than evaluating any printed font.",
+      "event_description": "For this proofing task, {sender} has a private written location-report channel that does not expose the token through a shared display.",
+      "authoring_notes": "Fictional contextual framing only; all timed evidence and attributed-access rules come from the declared renderer. No extra reading, delivery, truthful report, public location channel or report count is implied."
+    },
+    {
+      "group_id": "fresh_correction_fit_15",
+      "split": "correction_fit",
+      "wording_group": "rug_weave_pattern_draft",
+      "sender": "Mandla Ngcobo",
+      "reader": "Buhle Gumede",
+      "locations": [
+        "weave chart basket",
+        "loom design cupboard"
+      ],
+      "introduction": "A rug-pattern drafting rehearsal replaces a weave-chart change slip with a token. {sender} coordinates the practice with {reader}, without running a loom.",
+      "event_description": "The rehearsal permits private written location reports from {sender}; chart symbols and the loom layout do not provide further token observations.",
+      "authoring_notes": "Fictional contextual framing only; all timed evidence and attributed-access rules come from the declared renderer. No extra reading, delivery, truthful report, public location channel or report count is implied."
+    },
+    {
+      "group_id": "fresh_correction_dev_00",
+      "split": "correction_dev",
+      "wording_group": "navigation_teaching_chart",
+      "sender": "Tesfaye Bekele",
+      "reader": "Tigist Alemu",
+      "locations": [
+        "bearing exercise folder",
+        "star chart drawer"
+      ],
+      "introduction": "A celestial-navigation teaching simulation uses a token for a chart-exercise revision card. {sender} and {reader} track the token rather than calculating an actual vessel position.",
+      "event_description": "The simulation supplies {sender} with a private written location-report channel; no navigation instrument conveys where the token is.",
+      "authoring_notes": "Fictional contextual framing only; all timed evidence and attributed-access rules come from the declared renderer. No extra reading, delivery, truthful report, public location channel or report count is implied."
+    },
+    {
+      "group_id": "fresh_correction_dev_01",
+      "split": "correction_dev",
+      "wording_group": "biodiversity_survey_form",
+      "sender": "Dawit Tadesse",
+      "reader": "Selamawit Mekonnen",
+      "locations": [
+        "survey form cabinet",
+        "species checklist box"
+      ],
+      "introduction": "An urban-biodiversity paperwork rehearsal uses a token to represent a survey-form amendment. {sender} coordinates the exercise and {reader} tracks the token instead of observing wildlife.",
+      "event_description": "A private note channel allows {sender} to state token locations; survey forms themselves do not establish location evidence.",
+      "authoring_notes": "Fictional contextual framing only; all timed evidence and attributed-access rules come from the declared renderer. No extra reading, delivery, truthful report, public location channel or report count is implied."
+    },
+    {
+      "group_id": "fresh_correction_dev_02",
+      "split": "correction_dev",
+      "wording_group": "cork_inspection_worksheet",
+      "sender": "Yared Abebe",
+      "reader": "Rahel Getachew",
+      "locations": [
+        "inspection sheet tray",
+        "cork sample cupboard"
+      ],
+      "introduction": "A cork-grading worksheet exercise assigns a token to a draft inspection instruction. {sender} and {reader} follow the token in a fictional practice run, without judging material quality.",
+      "event_description": "The worksheet exercise provides {sender} a private written location channel, separate from any sample inspection or grading result.",
+      "authoring_notes": "Fictional contextual framing only; all timed evidence and attributed-access rules come from the declared renderer. No extra reading, delivery, truthful report, public location channel or report count is implied."
+    },
+    {
+      "group_id": "fresh_correction_dev_03",
+      "split": "correction_dev",
+      "wording_group": "folding_bicycle_catalogue",
+      "sender": "Berhanu Gebre",
+      "reader": "Senait Desta",
+      "locations": [
+        "hinge diagram folder",
+        "component list cabinet"
+      ],
+      "introduction": "A folding-bicycle catalogue rehearsal uses a token for a component-list revision. {sender} manages the practice with {reader}; no bicycle is assembled or repaired.",
+      "event_description": "The catalogue procedure offers {sender} a private written channel for location reports, independently of assembly diagrams.",
+      "authoring_notes": "Fictional contextual framing only; all timed evidence and attributed-access rules come from the declared renderer. No extra reading, delivery, truthful report, public location channel or report count is implied."
+    },
+    {
+      "group_id": "fresh_correction_dev_04",
+      "split": "correction_dev",
+      "wording_group": "irrigation_mock_map",
+      "sender": "Girma Haile",
+      "reader": "Meseret Kebede",
+      "locations": [
+        "irrigation map drawer",
+        "valve plan portfolio"
+      ],
+      "introduction": "An irrigation-planning simulation lets {sender} and {reader} use a token for a mock-map amendment. Water flow and real agricultural conditions are outside this exercise.",
+      "event_description": "The mock-map task has a private written location-report channel managed by {sender}; map markings do not reveal token positions.",
+      "authoring_notes": "Fictional contextual framing only; all timed evidence and attributed-access rules come from the declared renderer. No extra reading, delivery, truthful report, public location channel or report count is implied."
+    },
+    {
+      "group_id": "fresh_correction_dev_05",
+      "split": "correction_dev",
+      "wording_group": "embroidered_badge_version",
+      "sender": "Getahun Assefa",
+      "reader": "Almaz Fekadu",
+      "locations": [
+        "badge pattern wallet",
+        "stitch chart cabinet"
+      ],
+      "introduction": "An embroidered-badge design exercise uses a token for a version-index draft. {sender} coordinates the rehearsal and {reader} follows the token without inspecting stitched material.",
+      "event_description": "The version-index procedure permits private location notes from {sender}, separately from badge artwork or its revision labels.",
+      "authoring_notes": "Fictional contextual framing only; all timed evidence and attributed-access rules come from the declared renderer. No extra reading, delivery, truthful report, public location channel or report count is implied."
+    },
+    {
+      "group_id": "fresh_correction_dev_06",
+      "split": "correction_dev",
+      "wording_group": "brush_bristle_catalogue",
+      "sender": "Ashenafi Birhanu",
+      "reader": "Saba Tekle",
+      "locations": [
+        "bristle sample case",
+        "brush catalogue drawer"
+      ],
+      "introduction": "A brush-manufacturing catalogue rehearsal tracks a token standing for a bristle-entry correction card. {sender} and {reader} practise paperwork handling without examining product performance.",
+      "event_description": "A private written reporting channel is available to {sender}; catalogue specifications are not another source of token-location evidence.",
+      "authoring_notes": "Fictional contextual framing only; all timed evidence and attributed-access rules come from the declared renderer. No extra reading, delivery, truthful report, public location channel or report count is implied."
+    },
+    {
+      "group_id": "fresh_correction_dev_07",
+      "split": "correction_dev",
+      "wording_group": "photogrammetry_annotation_sheet",
+      "sender": "Endale Tolosa",
+      "reader": "Mulu Abate",
+      "locations": [
+        "flight annotation folder",
+        "terrain worksheet box"
+      ],
+      "introduction": "A drone-photogrammetry annotation rehearsal uses a token for a worksheet draft. {sender} coordinates the simulation with {reader}; no flight or camera feed is available in this task.",
+      "event_description": "The annotation exercise offers {sender} a private written location channel independent of photographs, maps and flight telemetry.",
+      "authoring_notes": "Fictional contextual framing only; all timed evidence and attributed-access rules come from the declared renderer. No extra reading, delivery, truthful report, public location channel or report count is implied."
+    }
+  ]
+}
