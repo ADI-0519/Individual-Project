@@ -24,8 +24,11 @@ docs/results/*/* -text whitespace=-blank-at-eol,-blank-at-eof
 
 # Preserve byte-bound forensic evidence, including its original Windows newlines.
 docs/validation/2026-11-22-main-study-*forensics*.json -text whitespace=-blank-at-eol,-blank-at-eof
-docs/validation/2026-11-22-main-study-query-anchoring-posthoc.json -text whitespace=-blank-at-eol,-blank-at-eof
+docs/validation/2026-11-22-main-study-query-anchoring-posthoc*.json -text whitespace=-blank-at-eol,-blank-at-eof
+docs/validation/2026-11-22-cached-readout-adequacy*.json -text whitespace=-blank-at-eol,-blank-at-eof
+docs/validation/audit-source-snapshots-2026-11-22/* -text whitespace=-blank-at-eol,-blank-at-eof
 docs/MAIN_STUDY_MEASUREMENT_FORENSICS_2026-11-22.md -text whitespace=-blank-at-eol,-blank-at-eof
+docs/MAIN_STUDY_QUERY_ANCHORING_POSTHOC_2026-11-22.md -text whitespace=-blank-at-eol,-blank-at-eof
 
 *.bat text eol=crlf
 *.cmd text eol=crlf

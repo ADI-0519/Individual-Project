@@ -1,0 +1,64 @@
+{
+  "schema": "audit-source-snapshots-v1",
+  "purpose": "Exact historical source bytes preserved before formatting current helpers/tests; never execute or format these snapshots.",
+  "snapshots": [
+    {
+      "original_path": "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\scripts\\audit_main_study_measurement_forensics.py",
+      "original_repo_path": "scripts/audit_main_study_measurement_forensics.py",
+      "snapshot_path": "docs/validation/audit-source-snapshots-2026-11-22/audit_main_study_measurement_forensics.py.txt",
+      "snapshot_index_relative_path": "audit_main_study_measurement_forensics.py.txt",
+      "sha256": "330873ab913abee2ed04f7cb2df7ba288f0842c583aa65065bb85bd5c3cec0e3",
+      "bytes": 17685,
+      "historical_report_links": [
+        "../../MAIN_STUDY_MEASUREMENT_FORENSICS_2026-11-22.md",
+        "../2026-11-22-main-study-measurement-forensics.json",
+        "../../MAIN_STUDY_QUERY_ANCHORING_POSTHOC_2026-11-22.md",
+        "../2026-11-22-main-study-query-anchoring-posthoc.json"
+      ]
+    },
+    {
+      "original_path": "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\tests\\test_main_study_measurement_forensics.py",
+      "original_repo_path": "tests/test_main_study_measurement_forensics.py",
+      "snapshot_path": "docs/validation/audit-source-snapshots-2026-11-22/test_main_study_measurement_forensics.py.txt",
+      "snapshot_index_relative_path": "test_main_study_measurement_forensics.py.txt",
+      "sha256": "a2ba736d3f5d7c429989cf5e69b59ac3eb6ab06de4a473b863c235d5baaaab89",
+      "bytes": 2909,
+      "historical_report_links": [
+        "../../MAIN_STUDY_MEASUREMENT_FORENSICS_2026-11-22.md",
+        "../2026-11-22-main-study-measurement-forensics.json",
+        "../../MAIN_STUDY_QUERY_ANCHORING_POSTHOC_2026-11-22.md",
+        "../2026-11-22-main-study-query-anchoring-posthoc.json"
+      ]
+    },
+    {
+      "original_path": "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\scripts\\audit_main_study_query_anchoring.py",
+      "original_repo_path": "scripts/audit_main_study_query_anchoring.py",
+      "snapshot_path": "docs/validation/audit-source-snapshots-2026-11-22/audit_main_study_query_anchoring.py.txt",
+      "snapshot_index_relative_path": "audit_main_study_query_anchoring.py.txt",
+      "sha256": "c51f0b75dd00ae2739c0678867ca25dd9197762922e1871c411162f76d4a8ec0",
+      "bytes": 11849,
+      "historical_report_links": [
+        "../../MAIN_STUDY_QUERY_ANCHORING_POSTHOC_2026-11-22.md",
+        "../2026-11-22-main-study-query-anchoring-posthoc.json"
+      ]
+    },
+    {
+      "original_path": "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\tests\\test_main_study_query_anchoring.py",
+      "original_repo_path": "tests/test_main_study_query_anchoring.py",
+      "snapshot_path": "docs/validation/audit-source-snapshots-2026-11-22/test_main_study_query_anchoring.py.txt",
+      "snapshot_index_relative_path": "test_main_study_query_anchoring.py.txt",
+      "sha256": "881e939eeec7178234c3e1effed003d94efcc6f2e4adf48562fbf806843963fd",
+      "bytes": 4103,
+      "historical_report_links": [
+        "../../MAIN_STUDY_QUERY_ANCHORING_POSTHOC_2026-11-22.md",
+        "../2026-11-22-main-study-query-anchoring-posthoc.json"
+      ]
+    }
+  ],
+  "historical_reports": {
+    "docs/MAIN_STUDY_MEASUREMENT_FORENSICS_2026-11-22.md": "b8969e2d3808f64e7714cba6fb393ce142466a68292a4f0640d4e1120d923140",
+    "docs/validation/2026-11-22-main-study-measurement-forensics.json": "968589f4f5c32bcf4ea4f368b2ee4afa513b1039142e1f4bee2ba6b96b894c81",
+    "docs/MAIN_STUDY_QUERY_ANCHORING_POSTHOC_2026-11-22.md": "b8f90f376be74f39fad51105046e426daa592b2190cfb6be46489945f821f330",
+    "docs/validation/2026-11-22-main-study-query-anchoring-posthoc.json": "99be90d7a43bb3bb9984b409a45502cb74973ba70846fb6c8c142b596b6fe0b4"
+  }
+}
