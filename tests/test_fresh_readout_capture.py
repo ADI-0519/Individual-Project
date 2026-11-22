@@ -253,6 +253,65 @@ def test_preparation_has_no_weights_and_exact_fixed_panel(prepared):
     assert prepared.protocol["original_site"] == "layer_16_prompt_last"
 
 
+def test_nested_input_provenance_preserves_complete_tokenizer_identity(
+    prepared, tmp_path, monkeypatch
+):
+    """Native-shaped source bindings must never replace the tokenizer contract."""
+    source_root = tmp_path / "source_root"
+    source_root.mkdir()
+    monkeypatch.setattr(capture, "ROOT", source_root)
+    monkeypatch.setattr(capture, "POLICY_FILES", ("policy.py",))
+    (source_root / "policy.py").write_text(
+        "# Explicit engineering policy fixture\n", encoding="utf-8"
+    )
+    inputs = []
+    for name in ("source_bank.json", "authored_train.json", "authored_test.json"):
+        path = source_root / name
+        atomic_json(path, {"schema": "explicit-nested-provenance-fixture", "name": name})
+        inputs.append({"path": name, "sha256": file_sha256(path)})
+    payload = read_json(prepared.bank)
+    payload.update(source_bank=inputs[0], authored_inputs=inputs[1:])
+    nested_bank = tmp_path / "nested_bank.json"
+    atomic_json(nested_bank, payload)
+    protocol = capture.prepare(
+        nested_bank,
+        tmp_path / "nested_capture",
+        tokenizer=prepared.tokenizer,
+        model_config=prepared.config,
+        forward=Model.forward,
+        test_fixture=True,
+    )
+    assert protocol["tokenizer"] == capture.tokenizer_binding(prepared.tokenizer)
+    assert "answer_token_ids" in protocol["tokenizer"] and "backend_sha256" in protocol["tokenizer"]
+    for binding in inputs:
+        assert protocol["source_sha256"][str(source_root / binding["path"])] == binding["sha256"]
+    # Exercise the complete native identity/config branch with synthetic tensors,
+    # without constructing pretrained weights or invoking any model forward.
+    backend = prepared.backend(capture.ModelSettings(**protocol["model_settings"]))
+    native_contract = copy.deepcopy(protocol)
+    native_contract["test_fixture"] = False
+    backend.metadata["is_test_fixture"] = False
+    for name, value in vars(prepared.config).items():
+        setattr(backend.model.config, name, value)
+    capture._validate_backend(backend, native_contract)
+    assert not backend.model.training and Model.calls == 0
+    backend.close()
+
+
+@pytest.mark.parametrize("field", ["fields", "backend_sha256", "answer_token_ids"])
+def test_tokenizer_identity_mismatch_names_exact_component(prepared, field):
+    protocol = copy.deepcopy(prepared.protocol)
+    if field == "fields":
+        protocol["tokenizer"] = {"path": "unrelated-input.json", "sha256": "unrelated"}
+    else:
+        protocol["tokenizer"][field] = "changed"
+    backend = prepared.backend(capture.ModelSettings(**protocol["model_settings"]))
+    with pytest.raises(ValueError, match="Pinned tokenizer identity differs: " + field):
+        capture._validate_backend(backend, protocol)
+    assert Model.calls == 0
+    backend.close()
+
+
 def test_query_span_selects_last_subtoken_of_exact_question_occurrence():
     tokenizer, original = Tokenizer(), row()
     planned = capture.prepare_row(tokenizer, original)

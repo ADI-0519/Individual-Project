@@ -297,7 +297,7 @@ def prepare(
         local_files_only=True,
     )
     limit = min(settings.max_input_tokens, model_config.max_position_embeddings)
-    binding = tokenizer_binding(tokenizer)
+    tokenizer_identity = tokenizer_binding(tokenizer)
     planned = [prepare_row(tokenizer, row, max_tokens=limit) for row in rows]
     require(
         planned and len({r["row_id"] for r in planned}) == len(planned), "Duplicate/empty row IDs"
@@ -317,17 +317,17 @@ def prepare(
     sources = {str((ROOT / name).resolve()): file_sha256(ROOT / name) for name in POLICY_FILES}
     # Source narratives and authored packets are independent frozen inputs, even
     # though the fully expanded messages are also preserved in the protocol.
-    for binding in (
+    for input_binding in (
         [payload["source_bank"]] + payload.get("authored_inputs", [])
         if "source_bank" in payload
         else []
     ):
-        relative = Path(binding["path"])
+        relative = Path(input_binding["path"])
         require(
             not relative.is_absolute() and ".." not in relative.parts,
             "Nested bank input escapes the source tree",
         )
-        sources[str((ROOT / relative).resolve())] = binding["sha256"]
+        sources[str((ROOT / relative).resolve())] = input_binding["sha256"]
     sources.update(source_bindings or {})
     snapshot_files(sources)
     protocol = {
@@ -347,7 +347,7 @@ def prepare(
         "vocab_size": model_config.vocab_size,
         "max_position_embeddings": model_config.max_position_embeddings,
         "forward_contract": _forward_contract(forward),
-        "tokenizer": binding,
+        "tokenizer": tokenizer_identity,
         "sites": panel_sites(model_key),
         "position_order": list(POSITIONS),
         "original_site": f"layer_{16 if model_key == 'llama' else 14}_prompt_last",
@@ -696,14 +696,28 @@ def _validate_backend(backend, protocol):
     )
     for key in ("model_id", "dtype", "quantization", "capture_layers"):
         require(metadata[key] == protocol["model_settings"][key], "Backend setting differs: " + key)
+    for key, actual, expected in (
+        (
+            "resolved_revision",
+            metadata["resolved_revision"],
+            protocol["model_settings"]["revision"],
+        ),
+        ("decoder_blocks", metadata["decoder_blocks"], protocol["decoder_blocks"]),
+        ("hidden_size", metadata["hidden_size"], protocol["hidden_size"]),
+        (
+            "forward_contract",
+            _forward_contract(backend.model.forward),
+            protocol["forward_contract"],
+        ),
+    ):
+        require(actual == expected, "Pinned backend identity differs: " + key)
+    actual_tokenizer = tokenizer_binding(backend.tokenizer)
     require(
-        metadata["resolved_revision"] == protocol["model_settings"]["revision"]
-        and metadata["decoder_blocks"] == protocol["decoder_blocks"]
-        and metadata["hidden_size"] == protocol["hidden_size"]
-        and _forward_contract(backend.model.forward) == protocol["forward_contract"]
-        and tokenizer_binding(backend.tokenizer) == protocol["tokenizer"],
-        "Pinned backend/tokenizer/forward identity differs",
+        set(actual_tokenizer) == set(protocol["tokenizer"]),
+        "Pinned tokenizer identity differs: fields",
     )
+    for key, actual in actual_tokenizer.items():
+        require(actual == protocol["tokenizer"][key], "Pinned tokenizer identity differs: " + key)
     if not protocol["test_fixture"]:
         config = backend.model.config
         require(

@@ -1,0 +1,245 @@
+{
+  "schema": "fresh-readout-startup-failure-audit-v1",
+  "created_at": "2026-11-22T22:09:43.546826+00:00",
+  "original_campaign": "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261122_campaign",
+  "original_commit": "3206391f7f4e5700b3399de01006e7140bb5068c",
+  "status": "failed_before_engineering_or_cohort_forward",
+  "completed_rows": 0,
+  "engineering_or_cohort_artifacts_found": [],
+  "evidence_limit": "Code fails at backend identity validation before _measure_row; checkpoint weights loaded but no scientific model forward is reached.",
+  "original_files": {
+    "campaign_launch.json": {
+      "size": 987,
+      "sha256": "1b300b9fdd328d7c842622030d46f9a2715db05cfbc579031bbf8a67c5231f0e"
+    },
+    "campaign_logs/llama_training.stderr.log": {
+      "size": 1805,
+      "sha256": "88622a145779719baab5cb1f76bce33b5c152c1431c3f1b7045697e05edd4e71"
+    },
+    "campaign_logs/llama_training.stdout.log": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "campaign_plan.json": {
+      "size": 11210,
+      "sha256": "41a547617366d9f16ed4086b0de438a30c99009c125073fc94e458d6f67d238f"
+    },
+    "campaign_source_archive/0000_preparation.json": {
+      "size": 152,
+      "sha256": "5a93ad759c7d11aa3bc8aaa7d2cd1e83d7bb340dd1226cc2443bc290c438db39"
+    },
+    "campaign_source_archive/0001_protocol.json": {
+      "size": 103080167,
+      "sha256": "48f476621f149af85feacc4aa164e0ca7615c6d1b078e3744316fd7c368a7856"
+    },
+    "campaign_source_archive/0002_llama_training_bindings.json": {
+      "size": 7676,
+      "sha256": "badc354d0649a5cf8dd8abb02264c68e3da396c0c986a683f4f791917e3df2fa"
+    },
+    "campaign_source_archive/0003_preparation.json": {
+      "size": 152,
+      "sha256": "0f32f7b405e1bf3e984812df7175156a307f02bbfa232f3f91f34309ad9b23ab"
+    },
+    "campaign_source_archive/0004_protocol.json": {
+      "size": 102233851,
+      "sha256": "00d6069838d86ef087567da2061868c1bf0cad4ae3749f93bfabe85675cca416"
+    },
+    "campaign_source_archive/0005_qwen_training_bindings.json": {
+      "size": 7676,
+      "sha256": "25edfbcc62d46157708dca648f86f116bfd658ecd0633c55ae28141dcb5e3e6c"
+    },
+    "campaign_source_archive/0006_source_bindings.json": {
+      "size": 1089,
+      "sha256": "9cce65dba20ec312211c6485b95933d32e14f514048615a6978c99393256bae8"
+    },
+    "campaign_source_archive/0007_modeling_llama.py": {
+      "size": 20714,
+      "sha256": "31bf660a663259134324bc65da4e155951dc89c5ca46471d2325a9938e859e26"
+    },
+    "campaign_source_archive/0008_modeling_qwen2.py": {
+      "size": 21621,
+      "sha256": "a59fa06524227361fb401baf4d177124a27aec146bc01ec931235a9abbab17cb"
+    },
+    "campaign_source_archive/0009_fresh_readout_v2_blind_agent_answers_v1.json": {
+      "size": 45350,
+      "sha256": "45ec92d8807f81fc27d1b1e51475d83c18440a402fa0fb0dd656d2cb160ac285"
+    },
+    "campaign_source_archive/0010_authored_test_contexts_v1.json": {
+      "size": 24456,
+      "sha256": "c01b02ec1523d17c89bb6476e3fe6ddef7c1edf15a86d010de5fe60b3e37e198"
+    },
+    "campaign_source_archive/0011_authored_train_dev_contexts_v1.json": {
+      "size": 22170,
+      "sha256": "df704d8c3aa3d02abfed7a032907eb85fbdaf75fcef641dc63281592e3915d35"
+    },
+    "campaign_source_archive/0012_agent_review_receipt_v1.json": {
+      "size": 2622,
+      "sha256": "7a394d5462ee758ae25267a88183930a372d2c23d13c914efcee61ceb10e5ab1"
+    },
+    "campaign_source_archive/0013_bank.json": {
+      "size": 102013,
+      "sha256": "bb277ba4efa6e090879405e472a8cb70a973b3ab53cfe340ede56c61cfa98e35"
+    },
+    "campaign_source_archive/0014_engineering_row.json": {
+      "size": 4192,
+      "sha256": "0605b428bc9bdbfa5075a812793bec41d308cfd79e86c3a2490d12ae1ed9a15d"
+    },
+    "campaign_source_archive/0015_review_key.json": {
+      "size": 20873,
+      "sha256": "d1141a61d4a36694bd32a3e34d6b58a3e53e5e70397bafc39b278ee1b00435d2"
+    },
+    "campaign_source_archive/0016_review_packet.json": {
+      "size": 394057,
+      "sha256": "222ad9e662f8b683c44bf09b7f575a3c30d11384e74b0954c880412adf7ed2f6"
+    },
+    "campaign_source_archive/0017_split_manifest.json": {
+      "size": 423233,
+      "sha256": "05313b80575e4c87a9b44c2d920d08805885117d3f18ab90fc0cb40f4cc95ba5"
+    },
+    "campaign_source_archive/0018_main_bank_v1.json": {
+      "size": 121788,
+      "sha256": "802f1519abe98172366e8381a1fa0dfe0772372991c8e8883c2570c431c5cac1"
+    },
+    "campaign_source_archive/0019_FRESH_READOUT_EXECUTION_PROTOCOL_V2.md": {
+      "size": 11446,
+      "sha256": "8b8b9eef71d28b4e254bae4ac9ee22513bf2ad7c27c21f43368ff5e9caddbbf3"
+    },
+    "campaign_source_archive/0020_analyze_fresh_readout.py": {
+      "size": 807,
+      "sha256": "13880aed34f905b399e5bfdd84f4443f1dd03ae36a5db75ff59e3082ac9b9db8"
+    },
+    "campaign_source_archive/0021_build_fresh_readout_bank.py": {
+      "size": 3748,
+      "sha256": "7ca1cb9775454e4de7f469b581ee3974ee149d23e434d237840ff528724e6474"
+    },
+    "campaign_source_archive/0022_fit_fresh_readout.py": {
+      "size": 2088,
+      "sha256": "20438a81c01692967079d35f4f7c929bc95a4f59a871138df017a8f207bca7c2"
+    },
+    "campaign_source_archive/0023_run_fresh_readout_campaign.py": {
+      "size": 21893,
+      "sha256": "443765e1e8fa5b4fe609daf998b10ba32459ce992eaf2340e3168e3add9f9ced"
+    },
+    "campaign_source_archive/0024_run_fresh_readout_capture.py": {
+      "size": 1914,
+      "sha256": "1de6cb9c2497af4619fd29e59aff2139a79d3cd8923e65715480fbaf41b4a84e"
+    },
+    "campaign_source_archive/0025_backends.py": {
+      "size": 21458,
+      "sha256": "692d9778e4bf69081ab1afea702dfd573119f2b6cc454e51072bb3d2233402a2"
+    },
+    "campaign_source_archive/0026_config.py": {
+      "size": 5820,
+      "sha256": "0fc63546c88a826bc1e87efeebb51b6a23488272e0d76de8018fdd99543bb608"
+    },
+    "campaign_source_archive/0027_crossed_belief_validation.py": {
+      "size": 5032,
+      "sha256": "c38ace6dbd71d9a56a61b6fe44fa9268bdef4815e6086211365e9cea8e33d1ad"
+    },
+    "campaign_source_archive/0028_fresh_readout_analysis.py": {
+      "size": 20330,
+      "sha256": "875c16eabb3ae3f8f21b148d94d779fcbfcfae812489dc7af6fca2be98838a8d"
+    },
+    "campaign_source_archive/0029_fresh_readout_bank.py": {
+      "size": 26384,
+      "sha256": "0765526fd11f6d0d4e44948597340b686dccd46f05d4e21257b5724d6ce66dfb"
+    },
+    "campaign_source_archive/0030_fresh_readout_capture.py": {
+      "size": 45715,
+      "sha256": "bdd2209c328a4c80d562d7e9e9ddeb53152e18e9bca9d418a17029374631178f"
+    },
+    "campaign_source_archive/0031_fresh_readout_fit.py": {
+      "size": 43680,
+      "sha256": "cc1886c379ed2127cbf7e16f715939c634595f8b248ce5a2a100910d53738cc5"
+    },
+    "campaign_source_archive/0032_fresh_readout_review.py": {
+      "size": 6014,
+      "sha256": "dd551d604284687c7544653c4ffd9897f8bb3e48b8fbdfdd942a11f23f3c55d3"
+    },
+    "campaign_source_archive/0033_main_study_bank.py": {
+      "size": 24368,
+      "sha256": "b5d9aae9105e856bd2eeea061e5098291601074b32d6be0730768d6295c40162"
+    },
+    "campaign_source_archive/0034_main_study_design.py": {
+      "size": 10937,
+      "sha256": "0973d047d2e98736c1b9144d2187079a60d87f2280eeca691330ff91135506b9"
+    },
+    "campaign_source_archive/0035_main_study_run.py": {
+      "size": 27844,
+      "sha256": "09f219b7aedcb222c0eea05ba1ea9324d28fd298f49a2a45004429d7ede10501"
+    },
+    "campaign_source_archive/0036_storage.py": {
+      "size": 3051,
+      "sha256": "1de87a24cc3bd701c0384d648d405ddb6066280beae3e21bf1b173c203ee0e84"
+    },
+    "campaign_source_archive/manifest.json": {
+      "size": 13766,
+      "sha256": "7ce215be778a53b0b84d04b793cbacfd38ada6819c1f55828289d30cd66b248f"
+    },
+    "campaign_state.json": {
+      "size": 9941,
+      "sha256": "fe8587f87ef71303ca22e025488e4eb643e42521c1e84c01a65022262e5998c8"
+    },
+    "campaign_worker.log": {
+      "size": 935,
+      "sha256": "a5079efc9b8a7930f25bcaf30b69d440e924eee5e23eadf428c1f24005d8e9f1"
+    },
+    "llama/preparation.json": {
+      "size": 152,
+      "sha256": "5a93ad759c7d11aa3bc8aaa7d2cd1e83d7bb340dd1226cc2443bc290c438db39"
+    },
+    "llama/protocol.json": {
+      "size": 103080167,
+      "sha256": "48f476621f149af85feacc4aa164e0ca7615c6d1b078e3744316fd7c368a7856"
+    },
+    "llama/training/attempts/0000.json": {
+      "size": 163,
+      "sha256": "436db62eead8dcac487ece9b65c3d65aa5b03557b128bd99b96b3938d92f5d36"
+    },
+    "llama/training/manifest.json": {
+      "size": 8852,
+      "sha256": "788205d124c24868b9fed04e002354077a469c0b88825635bc27e76000326e18"
+    },
+    "llama_training_bindings.json": {
+      "size": 7676,
+      "sha256": "badc354d0649a5cf8dd8abb02264c68e3da396c0c986a683f4f791917e3df2fa"
+    },
+    "qwen/preparation.json": {
+      "size": 152,
+      "sha256": "0f32f7b405e1bf3e984812df7175156a307f02bbfa232f3f91f34309ad9b23ab"
+    },
+    "qwen/protocol.json": {
+      "size": 102233851,
+      "sha256": "00d6069838d86ef087567da2061868c1bf0cad4ae3749f93bfabe85675cca416"
+    },
+    "qwen_training_bindings.json": {
+      "size": 7676,
+      "sha256": "25edfbcc62d46157708dca648f86f116bfd658ecd0633c55ae28141dcb5e3e6c"
+    },
+    "source_bindings.json": {
+      "size": 1089,
+      "sha256": "9cce65dba20ec312211c6485b95933d32e14f514048615a6978c99393256bae8"
+    }
+  },
+  "original_protocols": {
+    "llama": {
+      "protocol_sha256": "48f476621f149af85feacc4aa164e0ca7615c6d1b078e3744316fd7c368a7856",
+      "rows": 7040,
+      "malformed_tokenizer_field": {
+        "path": "data/belief_main/fresh_readout_v2/authored_test_contexts_v1.json",
+        "sha256": "c01b02ec1523d17c89bb6476e3fe6ddef7c1edf15a86d010de5fe60b3e37e198"
+      }
+    },
+    "qwen": {
+      "protocol_sha256": "00d6069838d86ef087567da2061868c1bf0cad4ae3749f93bfabe85675cca416",
+      "rows": 7040,
+      "malformed_tokenizer_field": {
+        "path": "data/belief_main/fresh_readout_v2/authored_test_contexts_v1.json",
+        "sha256": "c01b02ec1523d17c89bb6476e3fe6ddef7c1edf15a86d010de5fe60b3e37e198"
+      }
+    }
+  },
+  "reused_measurements": 0,
+  "research_status": "agent_audited_exploratory",
+  "human_semantic_review_complete": false
+}
