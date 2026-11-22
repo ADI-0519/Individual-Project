@@ -1,6 +1,55 @@
 # Verified continuation state: 22 November 2026
 
-## Latest: readout-adequacy diagnostic complete at 20:01:16 UTC
+## Latest: fresh campaign started at 22:18 UTC
+
+The [prospective twelve-site protocol](FRESH_READOUT_EXECUTION_PROTOCOL_V2.md)
+and fixed, independently agent-reviewed fresh bank are implemented. The native
+campaign is running in `fresh_readout_v2_20261122_recovery_v1`, with 7,040
+planned inputs per model and 24 paired test contexts across two renderers.
+Scientific source freeze: commit `3b3e219`. One sequential GPU worker captures
+both training/development sets, then fits and seals both bundles before any
+fresh test capture. No fresh-study outcome is reported yet.
+
+The first campaign at commit `3206391` stopped before its first forward because
+preparation had overwritten tokenizer identity with an authored-file reference.
+Its zero-row capture and all 53 retained files remain unchanged. The
+[startup correction](FRESH_READOUT_STARTUP_RECOVERY_V1.md) records the minimal
+repair and new run boundary; the
+[re-preparation receipt](validation/2026-11-22-fresh-readout-startup-recovery-v1.json)
+records exact equality of all original scientific rows, tokens, spans, labels,
+sites and settings. Two agents independently checked the defect and repair.
+The first inline re-preparation also stopped during local config lookup because
+cache variables were assigned after imports; no preparation or forward existed.
+The receipt discloses that environment correction.
+
+Checks completed: full local CPU suite 1,524 passed, six optional/platform skips,
+48 subtests; final capture/campaign tests 43 passed; final reporter suite 22
+passed in WSL including actual PDF/SVG/PNG exports. The reporter received a
+separate-author review. A new independently authored numerical audit is being
+prepared using schemas and synthetic fixtures only; it may inspect actual
+outputs only after both analyses finish. Do not promote intermediate scores,
+select another site on test labels, silently repeat failed attempts, or label
+agent review as human validation.
+
+The separate [completion watcher](../scripts/complete_fresh_readout_campaign.py)
+automates the saved-data audit, report export and exact local copy after both
+analyses finish. Its [runbook](FRESH_READOUT_CAMPAIGN_RUNBOOK_V2.md) describes
+the native receipts and recovery boundaries. A separate-author review found
+two audit-development issues before any native audit execution: overly
+permissive extra numeric fields and inaccurate synthetic receipt fixtures.
+Both are repaired; the original audit sources and authoring receipt are
+preserved, with a versioned correction receipt. The revised auditor/watcher
+suite has 56 passing tests. Read the
+[interpretation rules](FRESH_READOUT_INTERPRETATION_RULES_V2.md) before claiming
+an effect, equivalence, factor accessibility or isolated composition failure.
+
+CI at scientific freeze commit `3b3e219` passed all five jobs, including
+Linux Python 3.11/3.12 and Windows Python 3.11. Its Python 3.12 test job reports
+1,534 passed and six skips. The completion/audit additions receive subsequent
+CI separately. BLAS/OpenMP threads are capped at four in that CI, and the
+test-job timeout is raised from 20 to 30 minutes for the enlarged suite.
+
+## Earlier: readout-adequacy diagnostic complete at 20:01:16 UTC
 
 The new sealed **posthoc exposed-bank group-crossfit** diagnostic is complete.
 On the same saved midpoint activations, correction-trained readouts achieve:

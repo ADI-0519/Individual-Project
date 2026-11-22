@@ -21,12 +21,16 @@ env:
   PYTHONHASHSEED: "0"
   PYTHONDONTWRITEBYTECODE: "1"
   UV_NO_PROGRESS: "1"
+  OMP_NUM_THREADS: "4"
+  OPENBLAS_NUM_THREADS: "4"
+  MKL_NUM_THREADS: "4"
+  NUMEXPR_NUM_THREADS: "4"
 
 jobs:
   tests:
     name: Offline tests (${{ matrix.os }}, Python ${{ matrix.python }})
     runs-on: ${{ matrix.os }}
-    timeout-minutes: 20
+    timeout-minutes: 30
     strategy:
       fail-fast: false
       matrix:

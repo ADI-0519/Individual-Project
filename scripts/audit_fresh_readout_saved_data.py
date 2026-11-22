@@ -1,0 +1,1096 @@
+"""Independent saved-data reconstruction; no production imports, fitting or model calls.
+
+The native command requires both completed analyses and explicit authorization.
+Both independent reconstructions are committed to disk before either saved
+predictions/results payload is parsed. File bytes are hashed for the completion
+gate first. Only stdlib and NumPy implement this audit.
+Unretained candidate coefficients are unavailable: candidate ranking is checked
+against the frozen history, and development losses are recomputed for retained
+heads only. The audit cannot establish optimizer provenance from final arrays.
+"""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import re
+from collections import Counter, defaultdict
+from datetime import UTC, datetime
+from pathlib import Path
+
+import numpy as np
+
+TOLERANCE = 1e-9
+PARTITIONS = ("source_fit", "source_dev", "correction_fit", "correction_dev")
+CONDITIONS = ("one_step", "correction_easy", "correction_hard", "asserted")
+FACTORS = ("I", "M1", "B1", "B2")
+FACTOR_FIELDS = ("initial", "update", "first_receipt", "receipt")
+DIRECT_GRID = (0.001, 0.01, 0.1, 1.0, 10.0)
+FACTOR_GRID = (0.01, 0.1, 1.0, 10.0, 100.0)
+POSITIONS = ("account_last", "query_location_last", "prompt_last")
+
+
+class AuditFailure(ValueError):
+    pass
+
+
+def check(condition, message):
+    if not condition:
+        raise AuditFailure(message)
+
+
+def now():
+    return datetime.now(UTC).isoformat()
+
+
+def digest(path):
+    hasher = hashlib.sha256()
+    with Path(path).open("rb") as stream:
+        for block in iter(lambda: stream.read(8 * 1024 * 1024), b""):
+            hasher.update(block)
+    return hasher.hexdigest()
+
+
+def write_json(path, data):
+    with Path(path).open("x", encoding="utf-8") as stream:
+        json.dump(data, stream, indent=2, allow_nan=False)
+        stream.write("\n")
+
+
+class Reader:
+    """Append-only chronological receipt, including all native data reads."""
+
+    def __init__(self, directory):
+        self.directory = Path(directory)
+        self.stage = "completion_gate"
+        self.events = []
+
+    def event(self, kind, **fields):
+        event = {"at": now(), "stage": self.stage, "kind": kind, **fields}
+        self.events.append(event)
+        with (self.directory / "access_log.jsonl").open("a", encoding="utf-8") as stream:
+            stream.write(json.dumps(event, allow_nan=False) + "\n")
+
+    def json(self, path, role):
+        path = Path(path)
+        self.event("read_begin", path=str(path.resolve()), role=role)
+        content = path.read_bytes()
+        result = json.loads(content)
+        self.event(
+            "read_complete",
+            path=str(path.resolve()),
+            role=role,
+            sha256=hashlib.sha256(content).hexdigest(),
+        )
+        return result
+
+    def npz(self, path, role):
+        path = Path(path)
+        self.event("read_begin", path=str(path.resolve()), role=role)
+        with np.load(path, allow_pickle=False) as saved:
+            result = {name: saved[name].copy() for name in saved.files}
+        self.event("read_complete", path=str(path.resolve()), role=role, sha256=digest(path))
+        return result
+
+    def bindings(self, bindings, role):
+        check(isinstance(bindings, dict) and bool(bindings), "Missing hash bindings: " + role)
+        for name, expected in bindings.items():
+            observed = digest(name)
+            self.event("hash_check", path=str(Path(name).resolve()), role=role, sha256=observed)
+            check(observed == expected, "Changed bound file: " + name)
+
+
+def sigmoid(values):
+    values = np.asarray(values, dtype=np.float64)
+    result = np.empty_like(values)
+    positive = values >= 0
+    result[positive] = 1 / (1 + np.exp(-values[positive]))
+    exponents = np.exp(values[~positive])
+    result[~positive] = exponents / (1 + exponents)
+    return result
+
+
+def linear_margin(features, arrays, prefix):
+    """Float64 centering/scaling, then row L2, then one saved linear map."""
+    values = np.asarray(features, dtype=np.float64)
+    mean, scale, weights, intercept = (
+        np.asarray(arrays[prefix + "__" + field])
+        for field in ("mean", "scale", "coef", "intercept")
+    )
+    check(
+        values.ndim == 2 and mean.shape == scale.shape == weights.shape == values.shape[1:],
+        "Invalid linear-head dimensions",
+    )
+    check(intercept.shape == (1,) and (scale > 0).all(), "Invalid scale/intercept")
+    check(
+        all(np.isfinite(v).all() for v in (values, mean, scale, weights, intercept)),
+        "Nonfinite linear-head input",
+    )
+    standardized = (values - mean) / scale
+    lengths = np.sqrt(np.einsum("ij,ij->i", standardized, standardized))
+    # sklearn's documented floating zero protection treats extremely small norms
+    # as unit divisors. This affects only near-zero rows; zero still predicts b.
+    lengths[lengths < 10 * np.finfo(np.float64).eps] = 1
+    standardized /= lengths[:, None]
+    margins = np.einsum("ij,j->i", standardized, weights) + intercept[0]
+    check(np.isfinite(margins).all(), "Nonfinite reconstructed margins")
+    return margins
+
+
+def reconstruct(settings, arrays, features, rows):
+    sites = settings["capture_provenance"]["sites"]
+    check(len(sites) == len(set(sites)) == 12, "Need twelve unique sites")
+    check(features.shape == (len(rows), 12, settings["hidden_size"]), "Wrong test tensor")
+    head_margins = {
+        name: linear_margin(features[:, sites.index(head["site"])], arrays, head["array_prefix"])
+        for name, head in settings["heads"].items()
+    }
+    names = ["S0", "S1", "C1", "C2", "output"] + ["source_" + s for s in sites]
+    check(len(names) == len(set(names)) == 17, "Wrong method inventory")
+    verdicts = np.empty((len(rows), 17), dtype=np.int64)
+    margins = np.empty((len(rows), 17), dtype=np.float64)
+    for column, method in enumerate(("S0", "S1", "C1")):
+        margins[:, column] = head_margins[settings["pipelines"][method]["head_key"]]
+        verdicts[:, column] = margins[:, column] > 0
+    factor_margins = np.column_stack(
+        [head_margins[settings["pipelines"]["C2"]["factor_heads"][factor]] for factor in FACTORS]
+    )
+    factor_predictions = (factor_margins > 0).astype(np.int64)
+    # Explicit scalar truth table, independent of the production vector fold.
+    verdicts[:, 3] = [
+        1 - m if b2 else m if b1 else i for i, m, b1, b2 in factor_predictions.tolist()
+    ]
+    margins[:, 3] = 2 * verdicts[:, 3] - 1  # compatibility column, no probability claim
+    margins[:, 4] = [r["output_yes_no_logitdiff"] for r in rows]
+    verdicts[:, 4] = margins[:, 4] > 0
+    panel = settings["source_panel"]
+    check([head["site"] for head in panel] == sites, "Source-panel order changed")
+    for column, head in enumerate(panel, 5):
+        margins[:, column] = head_margins[head["head_key"]]
+        verdicts[:, column] = margins[:, column] > 0
+    return {
+        "row_ids": np.array([r["row_id"] for r in rows]),
+        "methods": np.array(names),
+        "verdicts": verdicts,
+        "margins": margins,
+        "factor_margins": factor_margins,
+        "factor_predictions": factor_predictions,
+    }
+
+
+def auc_from_ranks(labels, margins):
+    """Mann-Whitney rank sum with average ranks for exact tied scores."""
+    labels, margins = np.asarray(labels), np.asarray(margins)
+    positives = int(np.sum(labels))
+    negatives = len(labels) - positives
+    if positives == 0 or negatives == 0:
+        return None
+    order = np.argsort(margins, kind="stable")
+    rank_sum, start = 0.0, 0
+    while start < len(order):
+        end = start + 1
+        while end < len(order) and margins[order[end]] == margins[order[start]]:
+            end += 1
+        rank_sum += float(np.sum(labels[order[start:end]])) * (start + 1 + end) / 2
+        start = end
+    return float((rank_sum - positives * (positives + 1) / 2) / (positives * negatives))
+
+
+def measure(rows, predicted, margins=None):
+    predicted = np.asarray(predicted)
+    truth = np.array([r["gold"] for r in rows])
+    check(
+        len(rows) > 0 and predicted.shape == truth.shape and np.isin(predicted, [0, 1]).all(),
+        "Invalid row predictions",
+    )
+    correct = predicted == truth
+    result = {
+        "rows": len(rows),
+        "correct": int(correct.sum()),
+        "row_accuracy": float(correct.mean()),
+        "class_recalls": {
+            str(k): float(correct[truth == k].mean()) if np.any(truth == k) else None
+            for k in (0, 1)
+        },
+    }
+    quartet_cells = defaultdict(list)
+    paired = {name: defaultdict(dict) for name in ("world", "name_map", "first_receipt", "receipt")}
+    for row, prediction, success in zip(rows, predicted.tolist(), correct.tolist(), strict=True):
+        state = row["state"]
+        common = (row["group_id"], row["renderer"], row["condition"])
+        if row["condition"] != "asserted":
+            key = (*common, state["update"], state["world"], state["name_map"])
+            quartet_cells[key].append(success)
+        for factor, panels in paired.items():
+            if state.get(factor) is None:
+                continue
+            key = (
+                *common,
+                tuple(
+                    sorted(
+                        (k, v)
+                        for k, v in state.items()
+                        if k not in (factor, "group_id", "mechanism")
+                    )
+                ),
+            )
+            check(state[factor] not in panels[key], "Duplicate paired state")
+            panels[key][state[factor]] = (prediction, row["gold"])
+    check(all(len(cells) == 4 for cells in quartet_cells.values()), "Incomplete quartet")
+    histogram = Counter(sum(cells) for cells in quartet_cells.values())
+    result.update(
+        quartets=len(quartet_cells),
+        complete_quartets=histogram[4],
+        quartet_accuracy=histogram[4] / len(quartet_cells) if quartet_cells else None,
+        quartet_correct_cells_histogram={str(k): histogram[k] for k in range(5)},
+    )
+    result["nuisance_pairs"], result["receipt_pairs"] = {}, {}
+    for factor, panels in paired.items():
+        check(all(set(panel) == {0, 1} for panel in panels.values()), "Incomplete paired state")
+
+        def counts(subset):
+            return {
+                "pairs": len(subset),
+                "verdict_flips": sum(panel[0][0] != panel[1][0] for panel in subset),
+                "both_correct": sum(
+                    all(pred == gold for pred, gold in panel.values()) for panel in subset
+                ),
+            }
+
+        if factor in ("world", "name_map"):
+            check(
+                all(panel[0][1] == panel[1][1] for panel in panels.values()),
+                "Nuisance changes target",
+            )
+            result["nuisance_pairs"][factor] = counts(list(panels.values()))
+        else:
+            result["receipt_pairs"][factor] = {
+                kind: counts([p for p in panels.values() if (p[0][1] != p[1][1]) == changes])
+                for changes, kind in ((False, "preserving"), (True, "changing"))
+            }
+    if margins is not None:
+        margins = np.asarray(margins, dtype=np.float64)
+        check(margins.shape == truth.shape and np.isfinite(margins).all(), "Bad score vector")
+        probabilities = sigmoid(margins)
+        assignments = np.minimum((10 * probabilities).astype(int), 9)
+        calibration_error = 0.0
+        for index in range(10):
+            selected = assignments == index
+            if selected.any():
+                calibration_error += float(selected.mean()) * abs(
+                    float(probabilities[selected].mean()) - float(truth[selected].mean())
+                )
+        result["unrecalibrated_score_diagnostics"] = {
+            "auroc": auc_from_ranks(truth, margins),
+            "brier": float(np.mean((probabilities - truth) ** 2)),
+            "log_loss": float(np.mean(np.logaddexp(0, margins) - truth * margins)),
+            "equal_width_ece10": calibration_error,
+            "bins": 10,
+        }
+    return result
+
+
+def primary(group_scores):
+    groups = sorted(group_scores)
+    check(len(groups) == 24, "Primary requires exactly 24 complete contexts")
+    s0 = np.array([group_scores[g]["S0"] for g in groups], dtype=np.float64)
+    s1 = np.array([group_scores[g]["S1"] for g in groups], dtype=np.float64)
+    check(
+        np.isfinite(s0).all()
+        and np.isfinite(s1).all()
+        and ((s0 >= 0) & (s0 <= 1) & (s1 >= 0) & (s1 <= 1)).all(),
+        "Bad context scores",
+    )
+    deltas = s1 - s0
+    # Identical frozen sampling convention: default_rng, integer context indices,
+    # 10,000 rows of 24 paired draws; linear 2.5/97.5 percentile interpolation.
+    draws = np.random.default_rng(20261122).integers(0, 24, size=(10000, 24))
+    means = np.mean(deltas[draws], axis=1)
+    result = {
+        "contrast": "S1_minus_S0",
+        "renderer": "A",
+        "condition": "correction_hard",
+        "endpoint": "complete_four_case_quartet_accuracy",
+        "groups": 24,
+        "quartets": 192,
+        "S0": float(s0.mean()),
+        "S1": float(s1.mean()),
+        "difference": float(deltas.mean()),
+        "conditional_percentile_interval_95": np.quantile(
+            means, [0.025, 0.975], method="linear"
+        ).tolist(),
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 20261122,
+        "group_values": [
+            {"group_id": g, "S0": float(a), "S1": float(b), "difference": float(b - a)}
+            for g, a, b in zip(groups, s0, s1, strict=True)
+        ],
+    }
+    return result, means
+
+
+def summarize(rows, reconstructed, answer_tokens):
+    check(len(rows) == 4992 and len({r["group_id"] for r in rows}) == 24, "Wrong test inventory")
+    result = {"methods": {}, "factor_diagnostics": {}, "strict_first_token_diagnostic": {}}
+    primary_groups = {}
+    for column, name in enumerate(reconstructed["methods"].tolist()):
+        strata = {}
+        for renderer in ("A", "B"):
+            for condition in CONDITIONS:
+                indices = [
+                    i
+                    for i, r in enumerate(rows)
+                    if r["renderer"] == renderer and r["condition"] == condition
+                ]
+                subset = [rows[i] for i in indices]
+
+                def score(selected):
+                    return measure(
+                        [rows[i] for i in selected],
+                        reconstructed["verdicts"][selected, column],
+                        None if name == "C2" else reconstructed["margins"][selected, column],
+                    )
+
+                groups = []
+                for group in sorted({r["group_id"] for r in subset}):
+                    selected = [i for i in indices if rows[i]["group_id"] == group]
+                    metrics = score(selected)
+                    groups.append({"group_id": group, **metrics})
+                    if (renderer, condition) == ("A", "correction_hard") and name in ("S0", "S1"):
+                        check(metrics["quartets"] == 8, "Primary context lacks eight quartets")
+                        primary_groups.setdefault(group, {})[name] = metrics["quartet_accuracy"]
+                strata[renderer + "/" + condition] = {"aggregate": score(indices), "groups": groups}
+        result["methods"][name] = {
+            "margin_kind": "synthetic_hard_fold"
+            if name == "C2"
+            else "conditional_YES_NO_logitdiff"
+            if name == "output"
+            else "logistic_decision",
+            "strata": strata,
+        }
+    result["primary"], bootstrap_draws = primary(primary_groups)
+    for renderer in ("A", "B"):
+        for condition in ("correction_easy", "correction_hard"):
+            selected = [
+                i
+                for i, r in enumerate(rows)
+                if r["renderer"] == renderer and r["condition"] == condition
+            ]
+            truth = np.array(
+                [[rows[i]["state"][field] for field in FACTOR_FIELDS] for i in selected]
+            )
+            successes = reconstructed["factor_predictions"][selected] == truth
+            result["factor_diagnostics"][renderer + "/" + condition] = {
+                "rows": len(selected),
+                "factor_order": list(FACTORS),
+                "accuracy": successes.mean(axis=0).tolist(),
+                "all_four_correct": float(successes.all(axis=1).mean()),
+            }
+        for condition in CONDITIONS:
+            subset = [r for r in rows if r["renderer"] == renderer and r["condition"] == condition]
+            accepted, successes, ties, masses = 0, 0, 0, []
+            for row in subset:
+                logits = row["output_logits"]
+                token = logits["argmax_token_id"]
+                candidate = token in (answer_tokens["YES"], answer_tokens["NO"])
+                accepted += int(candidate)
+                successes += int(candidate and int(token == answer_tokens["YES"]) == row["gold"])
+                ties += int(logits["argmax_tie_count"] > 1)
+                masses.append(float(np.exp(logits["yes_logprob"]) + np.exp(logits["no_logprob"])))
+            result["strict_first_token_diagnostic"][renderer + "/" + condition] = {
+                "rows": len(subset),
+                "candidate_first_tokens": accepted,
+                "outside_candidate_first_tokens": len(subset) - accepted,
+                "correct_full_denominator": successes,
+                "accuracy_full_denominator": successes / len(subset),
+                "candidate_first_token_rate": accepted / len(subset),
+                "full_vocab_argmax_ties": ties,
+                "mean_candidate_token_mass": float(np.mean(masses)),
+            }
+    return result, bootstrap_draws
+
+
+def close_numbers(observed, expected, name, tolerance=TOLERANCE):
+    observed, expected = np.asarray(observed), np.asarray(expected)
+    check(observed.shape == expected.shape, "Shape mismatch: " + name)
+    difference = float(np.max(np.abs(observed - expected))) if observed.size else 0.0
+    check(
+        np.isfinite(observed).all() and np.isfinite(expected).all() and difference <= tolerance,
+        f"Numeric mismatch {name}: max_abs={difference:.17g}, tolerance={tolerance}",
+    )
+    return difference
+
+
+def development_loss(rows, margins, target):
+    labels = np.array(
+        [
+            r["gold"] if target == "Y" else r["state"][FACTOR_FIELDS[FACTORS.index(target)]]
+            for r in rows
+        ]
+    )
+    losses = np.logaddexp(0, margins) - labels * margins
+    return float(
+        np.mean(
+            [
+                np.mean([losses[i] for i, r in enumerate(rows) if r["group_id"] == group])
+                for group in sorted({r["group_id"] for r in rows})
+            ]
+        )
+    )
+
+
+def source_key(record, original):
+    parsed = re.fullmatch(
+        r"layer_(\d+)_(account_last|query_location_last|prompt_last)", record["site"]
+    )
+    check(parsed is not None, "Invalid source site")
+    return (
+        record["dev_group_log_loss"],
+        record["C"],
+        int(record["site"] != original),
+        int(parsed[1]),
+        POSITIONS.index(parsed[2]),
+    )
+
+
+def validate_selection(settings, history):
+    sites = settings["capture_provenance"]["sites"]
+    check(len(settings["heads"]) == 17, "Need twelve source plus five correction heads")
+    for kind, expected_count, grid in (
+        ("source", 60, DIRECT_GRID),
+        ("C1", 5, DIRECT_GRID),
+        ("C2", 5, FACTOR_GRID),
+    ):
+        records = history[kind + "_candidates"]
+        check(
+            records == settings[kind + "_candidates"] and len(records) == expected_count,
+            "Incomplete or divergent candidate history",
+        )
+        check(
+            all(r["status"] in ("ok", "failed") and r["C"] in grid for r in records),
+            "Invalid candidate grid/status",
+        )
+        for record in records:
+            if record["status"] == "ok":
+                check(np.isfinite(record["dev_group_log_loss"]), "Nonfinite successful candidate")
+            else:
+                check(
+                    "failure" in record
+                    or any(f["status"] == "failed" for f in record.get("factors", {}).values()),
+                    "Unexplained candidate failure",
+                )
+    panel = settings["source_panel"]
+    check([r["site"] for r in panel] == sites, "Wrong source inventory/order")
+    for selected in panel:
+        options = [r for r in history["source_candidates"] if r["site"] == selected["site"]]
+        check([r["C"] for r in options] == list(DIRECT_GRID), "Incomplete per-site grid")
+        winner = min(
+            (r for r in options if r["status"] == "ok"),
+            key=lambda r: (r["dev_group_log_loss"], r["C"]),
+        )
+        check(all(selected.get(k) == v for k, v in winner.items()), "Wrong source C winner")
+        head = settings["heads"][selected["head_key"]]
+        check(
+            all(head[field] == selected[field] for field in ("site", "C", "dev_group_log_loss"))
+            and head["target"] == "Y",
+            "Retained source head differs from selected candidate",
+        )
+    winner = min(panel, key=lambda r: source_key(r, settings["original_site"]))
+    pipes = settings["pipelines"]
+    original = next(r for r in panel if r["site"] == settings["original_site"])
+    check(
+        pipes["S0"]["head_key"] == original["head_key"]
+        and pipes["S1"]["head_key"] == winner["head_key"],
+        "Wrong S0/S1 winner",
+    )
+    for method, grid in (("C1", DIRECT_GRID), ("C2", FACTOR_GRID)):
+        options = history[method + "_candidates"]
+        check(
+            [r["C"] for r in options] == list(grid)
+            and all(r["site"] == winner["site"] for r in options),
+            "Correction grid/site changed",
+        )
+        selected = min(
+            (r for r in options if r["status"] == "ok"),
+            key=lambda r: (r["dev_group_log_loss"], r["C"]),
+        )
+        keys = (
+            [pipes[method]["head_key"]]
+            if method == "C1"
+            else [pipes[method]["factor_heads"][f] for f in FACTORS]
+        )
+        check(
+            all(settings["heads"][key]["C"] == selected["C"] for key in keys),
+            "Wrong correction selected C",
+        )
+        check(
+            all(settings["heads"][key]["site"] == winner["site"] for key in keys),
+            "Correction head moved from selected source site",
+        )
+        if method == "C1":
+            check(
+                settings["heads"][keys[0]]["dev_group_log_loss"] == selected["dev_group_log_loss"],
+                "Retained C1 loss differs from selected candidate",
+            )
+        if method == "C2":
+            check(
+                pipes[method]["shared_C"] == selected["C"]
+                and pipes[method]["privileged_supervision"] is True
+                and pipes[method]["external_fold"] == "1-M1 if B2 else M1 if B1 else I",
+                "Wrong C2 algorithm/privilege",
+            )
+            for candidate in options:
+                factors = candidate["factors"]
+                check(set(factors) == set(FACTORS), "Incomplete factor history")
+                if candidate["status"] == "ok":
+                    check(
+                        all(factors[f]["status"] == "ok" for f in FACTORS), "Failed factor selected"
+                    )
+                    close_numbers(
+                        candidate["dev_group_log_loss"],
+                        np.mean([factors[f]["dev_group_log_loss"] for f in FACTORS]),
+                        "factor mean objective",
+                        tolerance=1e-14,
+                    )
+            check(
+                all(
+                    settings["heads"][pipes["C2"]["factor_heads"][factor]]["dev_group_log_loss"]
+                    == selected["factors"][factor]["dev_group_log_loss"]
+                    for factor in FACTORS
+                ),
+                "Retained factor loss differs from selected candidate",
+            )
+    for kind in ("source", "C1", "C2"):
+        fit = "source_fit" if kind == "source" else "correction_fit"
+        dev = "source_dev" if kind == "source" else "correction_dev"
+        check(
+            all(
+                r["training_partition"] == fit and r["development_partition"] == dev
+                for r in history[kind + "_candidates"]
+            ),
+            "Candidate fitting/development cohort differs",
+        )
+    return {
+        "selected_site": winner["site"],
+        "S0_equals_S1": pipes["S0"] == pipes["S1"],
+        "individual_candidate_fits": 85,
+        "failed_source_C1_candidates": sum(
+            r["status"] == "failed" for k in ("source", "C1") for r in history[k + "_candidates"]
+        ),
+        "failed_factor_candidates": sum(
+            f["status"] == "failed" for r in history["C2_candidates"] for f in r["factors"].values()
+        ),
+    }
+
+
+def check_training(settings, arrays, rows, features, test_rows):
+    check(set(r["partition"] for r in rows) == set(PARTITIONS), "Test/unknown row in fit cache")
+    check(
+        Counter(r["partition"] for r in rows) == dict.fromkeys(PARTITIONS, 512),
+        "Wrong N512 support",
+    )
+    groups = [{r["group_id"] for r in rows if r["partition"] == p} for p in PARTITIONS]
+    groups.append({r["group_id"] for r in test_rows})
+    check(
+        all(not a.intersection(b) for i, a in enumerate(groups) for b in groups[i + 1 :]),
+        "Fit/development/test contextual leakage",
+    )
+    ids = [r["row_id"] for r in rows] + [r["row_id"] for r in test_rows]
+    check(len(ids) == len(set(ids)), "Duplicate/overlapping row IDs")
+    for partition in PARTITIONS:
+        expected = [r["row_id"] for r in rows if r["partition"] == partition]
+        check(settings[partition + "_ids"] == expected, "Training/development ID binding differs")
+    check(
+        settings["fit_context"]["test_rows_loaded"] == 0
+        and settings["fit_context"]["development_absorbed"] is False,
+        "Declared fitting leakage",
+    )
+    sites = settings["capture_provenance"]["sites"]
+    source_heads = {r["head_key"] for r in settings["source_panel"]}
+    reports = {}
+    for key, head in settings["heads"].items():
+        fit = "source_fit" if key in source_heads else "correction_fit"
+        dev = "source_dev" if key in source_heads else "correction_dev"
+        check(
+            head["training_partition"] == fit
+            and head["training_ids"] == settings[fit + "_ids"]
+            and head["scaler_n_samples_seen"] == 512,
+            "Head/scaler support differs",
+        )
+        check(
+            head["target"]
+            == (
+                "Y"
+                if key in source_heads or key == settings["pipelines"]["C1"]["head_key"]
+                else next(
+                    f for f in FACTORS if settings["pipelines"]["C2"]["factor_heads"][f] == key
+                )
+            ),
+            "Wrong head target",
+        )
+        site = sites.index(head["site"])
+        fi = [i for i, r in enumerate(rows) if r["partition"] == fit]
+        di = [i for i, r in enumerate(rows) if r["partition"] == dev]
+        fitting = np.asarray(features[fi, site], dtype=np.float64)
+        mean = np.mean(fitting, axis=0)
+        centered = fitting - mean
+        # Corrected two-pass population variance, without a fitted transformer.
+        variance = (np.sum(centered * centered, axis=0) - np.sum(centered, axis=0) ** 2 / 512) / 512
+        epsilon = np.finfo(np.float64).eps
+        constant = variance <= 512 * epsilon * variance + (512 * mean * epsilon) ** 2
+        scale = np.sqrt(variance)
+        scale[constant] = 1
+        prefix = head["array_prefix"]
+        differences = {
+            field: close_numbers(arrays[prefix + "__" + field], value, key + " train-only " + field)
+            for field, value in (("mean", mean), ("var", variance), ("scale", scale))
+        }
+        margin = linear_margin(features[di, site], arrays, prefix)
+        loss = development_loss([rows[i] for i in di], margin, head["target"])
+        close_numbers(loss, head["dev_group_log_loss"], key + " retained development loss")
+        reports[key] = {
+            "training_rows": 512,
+            "development_rows": 512,
+            "scaler_max_abs_differences": differences,
+            "recomputed_development_loss": loss,
+            "recorded_development_loss": head["dev_group_log_loss"],
+        }
+    return reports
+
+
+def capture(reader, directory, protocol, partition, seal=None):
+    directory = Path(directory)
+    payload = reader.json(directory / "rows.json", partition + " aggregate rows")
+    manifest = reader.json(directory / "manifest.json", partition + " capture manifest")
+    check(
+        payload["schema"] == "fresh-readout-capture-v1"
+        and manifest["schema"] == "fresh-readout-capture-manifest-v1"
+        and manifest["status"] == "complete"
+        and manifest["partition"] == partition,
+        "Incomplete capture",
+    )
+    for filename, field in (("rows.json", "rows_sha256"), ("features.npz", "features_sha256")):
+        check(digest(directory / filename) == manifest[field], "Capture aggregate hash mismatch")
+    rows = payload["rows"]
+    check(manifest["completed_rows"] == len(rows), "Capture count differs")
+    planned = [
+        r for r in protocol["planned_rows"] if (r["partition"] == "test") == (partition == "test")
+    ]
+    check(
+        [r["row_id"] for r in rows] == [r["row_id"] for r in planned],
+        "Reordered/missing planned rows",
+    )
+    for row, plan in zip(rows, planned, strict=True):
+        check(all(row.get(k) == v for k, v in plan.items()), "Planned row differs")
+    saved = reader.npz(directory / "features.npz", partition + " feature cache")
+    check(set(saved) == {"features", "row_ids", "sites"}, "Wrong cache array inventory")
+    check(
+        saved["row_ids"].tolist() == [r["row_id"] for r in rows]
+        and saved["sites"].tolist() == protocol["sites"],
+        "Wrong cache identities",
+    )
+    features = saved["features"]
+    check(
+        features.dtype == np.float32
+        and features.shape == (len(rows), 12, protocol["hidden_size"])
+        and np.isfinite(features).all(),
+        "Invalid capture tensor",
+    )
+    planned_ids = {r["row_id"] for r in rows}
+    journal_root = directory / "row_journal"
+    check(
+        {p.name for p in journal_root.iterdir()} == planned_ids, "Unexpected/missing row journals"
+    )
+    for index, row in enumerate(rows):
+        journal = journal_root / row["row_id"]
+        complete = reader.json(journal / "complete.json", partition + " row journal")
+        check(complete.get("status") == "complete", "Noncomplete row journal")
+        for name in ("output_yes_no_logitdiff", "output_logits"):
+            if name in complete:
+                check(row[name] == complete[name], "Aggregate output summary differs")
+        check(
+            row["output_yes_no_logitdiff"] == complete["output_logits"]["yes_minus_no"],
+            "Aggregate output margin differs",
+        )
+        raw = reader.npz(journal / "arrays.npz", partition + " raw feature journal")
+        check(
+            np.array_equal(features[index], raw["features"]), "Aggregate feature differs from raw"
+        )
+        check(digest(journal / "arrays.npz") == complete["arrays_sha256"], "Changed row arrays")
+        check(
+            digest(journal / "raw_forward.npz") == complete["raw_forward_sha256"],
+            "Changed raw forward",
+        )
+        forward = reader.npz(journal / "raw_forward.npz", partition + " original forward arrays")
+        check(
+            np.array_equal(raw["features"], forward["features"])
+            and np.array_equal(raw["output_candidate_logits"], forward["output_candidate_logits"]),
+            "Raw forward differs from recorded arrays",
+        )
+        candidates = raw["output_candidate_logits"]
+        check(
+            candidates.shape == (2,)
+            and candidates.dtype == np.float32
+            and np.isfinite(candidates).all(),
+            "Invalid raw candidate logits",
+        )
+        check(
+            [complete["output_logits"]["yes_logit"], complete["output_logits"]["no_logit"]]
+            == candidates.tolist()
+            and float(candidates[0]) - float(candidates[1]) == row["output_yes_no_logitdiff"],
+            "Raw output margin differs",
+        )
+        check(
+            raw["output_candidate_token_ids"].tolist()
+            == [protocol["tokenizer"]["answer_token_ids"][word] for word in ("YES", "NO")],
+            "Wrong raw candidate token identities",
+        )
+        if seal is not None:
+            started = reader.json(journal / "started.json", "test forward chronology")
+            check(
+                datetime.fromisoformat(seal["created_at"])
+                < datetime.fromisoformat(started["started_at"]),
+                "Test forward preceded both-model freeze",
+            )
+    return rows, features
+
+
+def reconstruct_model(reader, model, fit_dir, test_dir, seal):
+    fit_dir = Path(fit_dir)
+    settings = reader.json(fit_dir / "settings.json", model + " safe fit metadata")
+    check(
+        settings["schema"] == "fresh-readout-fit-v2"
+        and settings["status"] == "frozen"
+        and settings["test_fixture"] is False,
+        "Native audit requires frozen nonfixture fit",
+    )
+    check(settings["capture_provenance"]["model_key"] == model, "Wrong model bundle")
+    expected_sites = [
+        f"layer_{block}_{position}"
+        for block in ((8, 16, 24, 30) if model == "llama" else (7, 14, 21, 26))
+        for position in POSITIONS
+    ]
+    check(settings["capture_provenance"]["sites"] == expected_sites, "Wrong model site geometry")
+    manifest = reader.json(fit_dir / "manifest.json", model + " fit manifest")
+    check(manifest["status"] == "frozen", "Unfrozen fit manifest")
+    reader.bindings(
+        {str(fit_dir / name): value for name, value in manifest["output_sha256"].items()},
+        model + " frozen fit artifacts",
+    )
+    for name in ("settings.json", "heads.npz", "candidates.json", "manifest.json"):
+        check(
+            seal["fitted_artifact_sha256"].get(str((fit_dir / name).resolve()))
+            == digest(fit_dir / name),
+            "Fit omitted/changed in both-model seal",
+        )
+    reader.bindings(settings["fitting_source_sha256"], model + " fitting implementation")
+    reader.bindings(settings["input_artifact_sha256"], model + " fit input binding")
+    protocol_path = settings["fit_context"]["protocol_path"]
+    protocol = reader.json(protocol_path, model + " frozen protocol")
+    check(
+        seal["model_protocol_sha256"][model] == digest(protocol_path), "Protocol differs from seal"
+    )
+    reader.bindings(protocol["source_sha256"], model + " frozen execution sources")
+    check(
+        protocol["test_fixture"] is False and protocol["model_key"] == model,
+        "Wrong native protocol",
+    )
+    arrays = reader.npz(fit_dir / "heads.npz", model + " safe head arrays")
+    expected_arrays = {
+        key + "__" + field
+        for key in settings["heads"]
+        for field in ("mean", "scale", "var", "coef", "intercept")
+    }
+    check(set(arrays) == expected_arrays, "Unexpected/missing safe head arrays")
+    for key, head in settings["heads"].items():
+        check(head["array_prefix"] == key, "Head array prefix changed")
+        for field in ("mean", "scale", "var", "coef", "intercept"):
+            value = arrays[key + "__" + field]
+            check(
+                value.dtype == np.float64
+                and np.isfinite(value).all()
+                and value.shape == ((1,) if field == "intercept" else (settings["hidden_size"],)),
+                "Invalid safe parameter array",
+            )
+    correction_keys = [settings["pipelines"]["C1"]["head_key"]] + [
+        settings["pipelines"]["C2"]["factor_heads"][factor] for factor in FACTORS
+    ]
+    for field in ("mean", "var", "scale"):
+        check(
+            all(
+                np.array_equal(
+                    arrays[key + "__" + field], arrays[correction_keys[0] + "__" + field]
+                )
+                for key in correction_keys[1:]
+            ),
+            "Correction heads do not share a fitting transform",
+        )
+    policy = settings["policy"]
+    expected_policy = {
+        "source_allocation": {"n": 512, "seed": 11, "support": "full"},
+        "training_partitions": list(PARTITIONS),
+        "development_absorbed": False,
+        "transform": ["float64", "training_only_StandardScaler", "row_L2"],
+        "logistic_regression": {
+            "solver": "lbfgs",
+            "penalty": "l2",
+            "fit_intercept": True,
+            "max_iter": 2000,
+            "tol": 1e-4,
+            "class_weight": None,
+            "sample_weight": None,
+            "random_state": 11,
+        },
+        "direct_C_grid": list(DIRECT_GRID),
+        "factor_C_grid": list(FACTOR_GRID),
+        "selected_refit": False,
+        "calibration": None,
+        "margin_orientation": "positive_is_symbolic_target_1",
+        "threshold": "margin > 0; exact zero predicts 0",
+        "numerical_thread_limit": 4,
+    }
+    check(
+        all(policy.get(key) == value for key, value in expected_policy.items()),
+        "Recorded fitting policy differs from frozen protocol",
+    )
+    history = reader.json(fit_dir / "candidates.json", model + " candidate history")
+    selection = validate_selection(settings, history)
+    test_rows, test_features = capture(reader, test_dir, protocol, "test", seal)
+    scores = reconstruct(settings, arrays, test_features, test_rows)
+    del test_features
+    training_rows, training_features = capture(
+        reader, settings["fit_context"]["capture_dir"], protocol, "training"
+    )
+    training = check_training(settings, arrays, training_rows, training_features, test_rows)
+    del training_features
+    metrics, draws = summarize(test_rows, scores, protocol["tokenizer"]["answer_token_ids"])
+    return scores, metrics, draws, {"selection": selection, "retained_heads": training}
+
+
+def allowed_extra_field(path, key, value):
+    """Only prose and explicit result metadata may extend reconstructed metrics."""
+    if path == "":
+        metadata_flags = {
+            "test_fixture": False,
+            "human_review_complete": False,
+            "confirmatory_result": False,
+            "fresh_test": True,
+        }
+        if key in metadata_flags:
+            return value is metadata_flags[key]
+        if key == "source_sha256":
+            return isinstance(value, dict) and all(
+                isinstance(name, str)
+                and isinstance(digest_value, str)
+                and re.fullmatch(r"[0-9a-f]{64}", digest_value) is not None
+                for name, digest_value in value.items()
+            )
+    return isinstance(value, str)
+
+
+def compare_tree(expected, observed, path="", differences=None):
+    """Compare all metrics; reject unrecognized numeric or structured extras.
+
+    Explanatory string leaves and explicit root provenance/identity metadata
+    are allowed. New metric objects, numbers, arrays or boolean fields require
+    independent reconstruction before this audit can declare a match.
+    """
+    if differences is None:
+        differences = []
+    if isinstance(expected, dict):
+        if not isinstance(observed, dict):
+            differences.append({"path": path, "reason": "not a mapping"})
+        else:
+            for key, value in expected.items():
+                if key not in observed:
+                    differences.append({"path": path + "/" + key, "reason": "missing"})
+                else:
+                    compare_tree(value, observed[key], path + "/" + key, differences)
+            for key in sorted(set(observed) - set(expected)):
+                if not allowed_extra_field(path, key, observed[key]):
+                    differences.append(
+                        {"path": path + "/" + key, "reason": "unexpected nonprose metric field"}
+                    )
+    elif isinstance(expected, list):
+        if not isinstance(observed, list) or len(expected) != len(observed):
+            differences.append({"path": path, "reason": "list length/type"})
+        else:
+            for index, value in enumerate(expected):
+                compare_tree(value, observed[index], path + "/" + str(index), differences)
+    elif isinstance(expected, (int, float)) and not isinstance(expected, bool):
+        good_type = isinstance(observed, (int, float)) and not isinstance(observed, bool)
+        agrees = (
+            good_type
+            and np.isfinite(observed)
+            and (
+                observed == expected
+                if isinstance(expected, int)
+                else abs(observed - expected) <= TOLERANCE
+            )
+        )
+        if not agrees:
+            differences.append({"path": path, "expected": expected, "observed": observed})
+    elif observed != expected:
+        differences.append({"path": path, "expected": expected, "observed": observed})
+    return differences
+
+
+def run_audit(models, seal_path, output, *, authorized_both_complete=False):
+    check(
+        authorized_both_complete,
+        "Native reads require explicit BOTH-analysis-complete authorization",
+    )
+    check(
+        {m[0] for m in models} == {"llama", "qwen"} and len(models) == 2,
+        "Must audit both fixed models together",
+    )
+    output = Path(output).resolve()
+    check(not output.exists(), "Use a new audit output; preserve earlier evidence")
+    output.mkdir(parents=True)
+    reader = Reader(output)
+    reader.event(
+        "audit_started",
+        source_sha256=digest(__file__),
+        absolute_tolerance=TOLERANCE,
+        authorization="explicit BOTH-analysis-complete flag",
+        independent_imports="stdlib and NumPy only; no production modules",
+    )
+    manifests = {}
+    for model, _, _, analysis in models:
+        manifest = reader.json(Path(analysis) / "manifest.json", model + " completed-analysis gate")
+        check(
+            manifest.get("schema") == "fresh-readout-analysis-manifest-v2"
+            and set(manifest["output_sha256"]) == {"results.json", "predictions.npz"},
+            "Both analyses must have final manifests",
+        )
+        manifests[model] = manifest
+    # Verify both completed pairs exist and match their final manifests before
+    # reading any fitting/cache data. Hashing bytes does not parse outcomes.
+    for model, _, _, analysis in models:
+        reader.bindings(
+            {
+                str(Path(analysis) / name): value
+                for name, value in manifests[model]["output_sha256"].items()
+            },
+            model + " completed analysis output bytes, unparsed",
+        )
+    seal = reader.json(seal_path, "both-model pretest fit freeze")
+    check(
+        seal["schema"] == "fresh-readout-fit-seal-v2" and seal["status"] == "frozen",
+        "Wrong both-model fit seal",
+    )
+    reader.bindings(seal["fitted_artifact_sha256"], "all sealed fitting files")
+    frozen = {}
+    for model, fit_dir, test_dir, _ in models:
+        reader.stage = "independent_reconstruction_" + model
+        scores, metrics, draws, training = reconstruct_model(reader, model, fit_dir, test_dir, seal)
+        target = output / model
+        target.mkdir()
+        np.savez_compressed(target / "reconstructed_predictions.npz", **scores)
+        np.savez_compressed(target / "fixed_bootstrap_draws.npz", context_mean_differences=draws)
+        write_json(target / "reconstructed_metrics.json", metrics)
+        write_json(target / "training_selection_checks.json", training)
+        frozen[model] = {p.name: digest(p) for p in target.iterdir()}
+        reader.event("model_reconstruction_frozen", model=model, sha256=frozen[model])
+    reader.stage = "both_reconstructions_frozen"
+    write_json(
+        output / "reconstruction_freeze.json",
+        {
+            "frozen_at": now(),
+            "sha256": frozen,
+            "saved_results_or_predictions_parsed": False,
+            "completed_output_bytes_hashed_before_reconstruction": True,
+            "limitation": "Unretained candidate scores are checked against saved ranking records only; no refit, no optimizer provenance proof.",
+        },
+    )
+    reader.event(
+        "both_reconstructions_frozen", sha256=digest(output / "reconstruction_freeze.json")
+    )
+    comparisons = {}
+    for model, _, _, analysis in models:
+        reader.stage = "saved_output_comparison_" + model
+        analysis, target = Path(analysis), output / model
+        for filename, expected in manifests[model]["output_sha256"].items():
+            check(digest(analysis / filename) == expected, "Saved analysis output hash differs")
+        independent = reader.npz(
+            target / "reconstructed_predictions.npz", "frozen independent predictions"
+        )
+        saved = reader.npz(analysis / "predictions.npz", model + " saved analysis predictions")
+        array_checks = {}
+        check(set(saved) == set(independent), "Saved prediction array inventory differs")
+        for key, expected in independent.items():
+            observed = saved[key]
+            if key in ("row_ids", "methods", "verdicts", "factor_predictions"):
+                check(
+                    np.array_equal(expected, observed), "Exact prediction/identity mismatch: " + key
+                )
+                array_checks[key] = {"exact": True, "shape": list(expected.shape)}
+            else:
+                array_checks[key] = {
+                    "max_abs_difference": close_numbers(observed, expected, key),
+                    "shape": list(expected.shape),
+                }
+        expected_metrics = reader.json(
+            target / "reconstructed_metrics.json", "frozen independent metrics"
+        )
+        observed_metrics = reader.json(analysis / "results.json", model + " saved analysis metrics")
+        check(
+            observed_metrics.get("schema") == "fresh-readout-analysis-v2"
+            and observed_metrics.get("model_key") == model
+            and observed_metrics.get("test_fixture") is False,
+            "Saved results have wrong native schema/model/fixture identity",
+        )
+        differences = compare_tree(expected_metrics, observed_metrics)
+        comparisons[model] = {
+            "prediction_arrays": array_checks,
+            "metric_differences": differences,
+            "all_metrics_match": not differences,
+        }
+        # Detect any mutation of the independently frozen evidence after comparison.
+        for filename, expected_hash in frozen[model].items():
+            check(
+                digest(target / filename) == expected_hash,
+                "Independent frozen reconstruction changed",
+            )
+    result = {
+        "schema": "independent-fresh-readout-saved-data-audit-v1",
+        "finished_at": now(),
+        "status": "pass"
+        if all(c["all_metrics_match"] for c in comparisons.values())
+        else "mismatch",
+        "absolute_tolerance": TOLERANCE,
+        "models": comparisons,
+        "policy": "Both-model reconstructions frozen before any saved results/predictions parsing; completion-gate byte hashing precedes reconstruction; fixed bootstrap only; no fitting or model calls.",
+        "limitations": [
+            "Unretained candidate coefficients are not saved; their numeric development losses cannot be reconstructed without prohibited refitting.",
+            "Final coefficient arrays and recorded histories cannot alone prove optimizer execution or absence of unrecorded fitting.",
+        ],
+    }
+    write_json(output / "audit_result.json", result)
+    reader.event("audit_finished", status=result["status"])
+    return result
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--model",
+        nargs=4,
+        action="append",
+        required=True,
+        metavar=("KEY", "FIT_DIR", "TEST_DIR", "ANALYSIS_DIR"),
+    )
+    parser.add_argument("--seal", required=True, type=Path)
+    parser.add_argument("--output", required=True, type=Path)
+    parser.add_argument("--authorized-both-complete", action="store_true")
+    args = parser.parse_args()
+    result = run_audit(
+        args.model, args.seal, args.output, authorized_both_complete=args.authorized_both_complete
+    )
+    print(json.dumps({"status": result["status"], "output": str(args.output.resolve())}))
+    return 0 if result["status"] == "pass" else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

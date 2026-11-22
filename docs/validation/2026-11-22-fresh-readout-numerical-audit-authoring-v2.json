@@ -1,0 +1,80 @@
+{
+  "schema": "fresh-readout-independent-numerical-audit-authoring-v2",
+  "written_at": "2026-11-22T22:40:20.734031+00:00",
+  "author_agent": "/root/fresh_numerical_auditor",
+  "supersedes_for_future_native_execution": {
+    "receipt": "docs/validation/2026-11-22-fresh-readout-numerical-audit-authoring-v1.json",
+    "receipt_sha256": "01e9a9ed135f7e2bfab506169db9e3c9aa798f06155c771701855f62430cf6a3",
+    "auditor_sha256": "1fb30645c81cb9b7916c8308761b0d5a22b9eb6c731e38275410606a1ba841c2"
+  },
+  "v1_preserved_unchanged": {
+    "docs/validation/2026-11-22-fresh-readout-numerical-audit-authoring-v1.json": "01e9a9ed135f7e2bfab506169db9e3c9aa798f06155c771701855f62430cf6a3",
+    "docs/validation/audit-source-snapshots-2026-11-22/1fb30645c81cb9b7916c8308761b0d5a22b9eb6c731e38275410606a1ba841c2_audit_fresh_readout_saved_data.py.txt": "1fb30645c81cb9b7916c8308761b0d5a22b9eb6c731e38275410606a1ba841c2",
+    "docs/validation/audit-source-snapshots-2026-11-22/d28ca699a583ad0b6b32990b97a2f98a68fe8676db0b650f996ad36a16dcb4bf_test_fresh_readout_saved_data_audit.py.txt": "d28ca699a583ad0b6b32990b97a2f98a68fe8676db0b650f996ad36a16dcb4bf"
+  },
+  "source_sha256": {
+    "scripts/audit_fresh_readout_saved_data.py": "cf74bec502e14f7e35577b277bbe95e36f0687ffb28dc54ccb16fc251f7101ce",
+    "tests/test_fresh_readout_saved_data_audit.py": "78392d935c6d5fdcc0aeed54785862e4003b3a098fa612008aaf8f5703597772"
+  },
+  "native_outcome_artifacts_read_or_parsed": false,
+  "native_predictions_or_results_seen": false,
+  "native_audit_attempts": 0,
+  "model_calls_or_fitting_executions": 0,
+  "correction_class": "Preserved pre-native software audit and synthetic-fixture corrections; scientific fitting/capture/analysis sources unchanged",
+  "defects_found_by_separate_author": [
+    {
+      "defect": "v1 compare_tree ignored all unexpected observed keys, so an extra numeric or structured metric could be omitted while all_metrics_match was true.",
+      "fix": "Reject unexpected numbers, booleans, lists and objects at every metric location. Allow explanatory string leaves and explicitly typed root metadata flags/source_sha256 mapping only. Expected fields still compare recursively.",
+      "regressions": "25 parametrized checks across root, primary, stratum aggregate, context group, and nuisance controls; compatibility test for current production prose, bool flags and source hashes."
+    },
+    {
+      "defect": "Synthetic panel_rows fixture reversed easy/hard initial-update relations and represented one-step receipt in the wrong field. This affected fixture semantic fidelity, not the generic measure algorithm.",
+      "fix": "Hard uses initial!=update; easy uses initial==update; one_step first_receipt=None and receipt is the varying receipt bit. No inference/metric algorithm changed for this fixture defect.",
+      "regressions": "Hard has 8 changing and 8 preserving pairs for each receipt; easy has all16 first-receipt pairs preserving and all16 second-receipt pairs changing; one_step has no first-receipt pairs and 8 changing/8 preserving receipt pairs."
+    }
+  ],
+  "chronology": [
+    {
+      "order": 1,
+      "event": "Separate author reviewed standalone checker and synthetic fixtures without reading fresh native outcomes; reported the two concrete defects."
+    },
+    {
+      "order": 2,
+      "event": "Root and watcher agent were told to hold launch with v1 checker SHA. Root explicitly authorized correction before watcher launch and required immutable v1 preservation."
+    },
+    {
+      "order": 3,
+      "at": "2026-11-22T22:36:43.9500831Z",
+      "time_semantics": "Command completion timestamp",
+      "event": "Exact v1 checker bytes preserved and SHA verified before any source edit; v1 tests also copied and SHA checked before test edits. Original authoring v1 receipt unchanged."
+    },
+    {
+      "order": 4,
+      "event": "Authored comparer restrictions and regressions, corrected synthetic fixture semantics, formatted and linted standalone files only."
+    },
+    {
+      "order": 5,
+      "at": "2026-11-22T22:39:08.3121620Z",
+      "time_semantics": "Command completion timestamp",
+      "event": "Read-only review of completion watcher audit_pass helper confirmed final output receipt contracts match; no contract changes required, only updated checker source SHA."
+    },
+    {
+      "order": 6,
+      "event": "All44 synthetic test cases passed in10.61seconds, including full two-model current-schema run_audit/reconstruct_model integration; Ruff lint passed."
+    },
+    {
+      "order": 7,
+      "event": "This versioned receipt binds corrected source for a fresh watcher freeze. No native audit has executed under either checker version."
+    }
+  ],
+  "validation": {
+    "synthetic_tests": "44 passed in 10.61s",
+    "ruff_check": "passed",
+    "scientific_sources_modified": false
+  },
+  "native_gate": "Root conditionally authorized native audit only after BOTH final analysis manifests and both output pairs pass hashes. Freeze BOTH independently reconstructed model arrays/metrics/bootstrap draws before parsing either saved output payload.",
+  "limitations_unchanged": [
+    "Unretained candidate coefficient arrays are not saved, so their numeric development objectives cannot be independently reconstructed without forbidden refitting.",
+    "Final coefficient arrays and recorded histories do not independently prove optimizer execution or absence of unrecorded fits."
+  ]
+}

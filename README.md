@@ -13,6 +13,26 @@ controlled study tests a frozen readout of sender-attributed current belief;
 this target is distinct from Apollo deception detection. See the
 [current research decision](docs/CURRENT_RESEARCH_STATE.md).
 
+**22 November, 22:18 UTC: the fresh two-model campaign has been started.**
+The [prospective protocol](docs/FRESH_READOUT_EXECUTION_PROTOCOL_V2.md) fixes
+7,040 inputs per model, twelve capture sites, development-only selection,
+two renderers and 24 paired test contexts. A separate agent reviewed all
+48 new contexts and 108 full prompts; human semantic review remains incomplete.
+Both model bundles must be frozen before either fresh test capture.
+There are no fresh-study results yet.
+The [completion runbook](docs/FRESH_READOUT_CAMPAIGN_RUNBOOK_V2.md) explains the
+automatic independent audit/report export and preserved-failure boundaries.
+The [interpretation rules](docs/FRESH_READOUT_INTERPRETATION_RULES_V2.md) state
+what each possible outcome can establish, including an identical S0/S1 head.
+
+The first startup exposed a preparation variable-shadowing bug before any
+model forward. Its zero-row attempt remains preserved. The
+[documented correction](docs/FRESH_READOUT_STARTUP_RECOVERY_V1.md) and
+[exact re-preparation receipt](docs/validation/2026-11-22-fresh-readout-startup-recovery-v1.json)
+retain every original prompt, token, state, label and capture site. The repaired
+capture/campaign tests and independent review passed; the complete local CPU
+suite also passed, with separate Linux plotting checks.
+
 **22 November, 20:01 UTC: the readout-adequacy diagnostic is complete.**
 Using existing correction activations and whole-narrative outer holdouts,
 Llama solves **20.42% / 65.00% / 95.00%** of complete primary quartets with
