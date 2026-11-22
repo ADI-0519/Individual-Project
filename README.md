@@ -13,6 +13,13 @@ controlled study tests a frozen readout of sender-attributed current belief;
 this target is distinct from Apollo deception detection. See the
 [current research decision](docs/CURRENT_RESEARCH_STATE.md).
 
+**22 November, 15:14 UTC recovery:** WSL stopped during Llama held-out capture.
+All 2,758 completed rows and both fitted model bundles passed an independent
+integrity audit. A [separate recovery](docs/MAIN_STUDY_INTERRUPTION_RECOVERY_2026-11-22.md)
+preserves the originals and resumes the remaining 1,082 fixed cases without
+refitting. Its new live state is recorded in the continuation document; the
+original campaign's `running` flag is stale. No final held-out finding exists yet.
+
 **Project status: early research development.** The engineering baseline and
 small pilot are complete; the main study and dissertation are not. Validated
 targets, human-reviewed data, competitive frozen controls, independent family

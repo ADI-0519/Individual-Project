@@ -1,5 +1,36 @@
 # Verified continuation state: 22 November 2026
 
+## Latest: 15:14 UTC interruption recovery
+
+The original WSL instance powered off at 14:59:38 after **2,758/3,840** Llama
+test rows. Its exact shutdown cause is unknown. Its original `state.json` and
+capture manifest remain preserved with stale `running` flags; those flags do
+not establish that a producer is alive. Both training captures and both fitted
+bundles had already completed.
+
+The [independent interruption audit](validation/2026-11-22-main-study-interruption-independent.json)
+verified every completed row, original source/fit bindings and the required
+runtime environment. The
+[boot evidence](validation/2026-11-22-main-study-interruption-boot-evidence.json)
+pins the old WSL boot by ID. Exactly one additional case has only `started.json`
+and no saved measurement. Its computational outcome is unknown.
+
+The [explicit recovery](MAIN_STUDY_INTERRUPTION_RECOVERY_2026-11-22.md) copied
+and revalidated all 2,758 completed rows into fresh native storage, leaving
+the originals untouched. It retains **1,082** pending IDs: the one disclosed
+unknown attempt plus 1,081 previously unattempted cases. The unknown attempt's
+repeat is not an additional independent case. There is no refitting, selection
+change, source-policy change or automatic retry loop.
+
+The recovery was launched at 15:14 UTC through a detached hidden Windows WSL
+client (PID45904 at launch). Its live directory is
+`/home/adirj/kcl-latent-probes-runs/main_v1_agent_20261122_recovery_v1`;
+read its `state.json` and logs for current progress. The receipt/config are
+sealed before execution. `windows_launcher.json` records the launch and native
+Windows stdout/stderr paths. Detachment does not protect against OS/WSL shutdown.
+All 14 focused recovery tests pass, including checks with the original saved-row
+validator. The previous section below records the pre-interruption campaign.
+
 ## 22 November: independent agent audit and exploratory execution
 
 The user explicitly requested independent agent checking and continued work.
