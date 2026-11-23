@@ -1,6 +1,37 @@
-# Verified continuation state: 22 November 2026
+# Verified continuation state: 23 November 2026
 
-## Latest: fresh campaign started at 22:18 UTC
+## Latest: interrupted worker, saved-data audit passed
+
+At 23:56 UTC on 22 November, live-process checks established that the fresh
+campaign and completion worker had stopped. Their `running`/`waiting` files
+were stale: the final Qwen write was 22:55:45. Both old execution-session IDs
+were gone and WSL had restarted. The earlier ETA is invalid. Do not trust a
+status field without a live producer and recent progress/heartbeat evidence.
+
+An independent audit verifies all 2,048 completed Llama training/development
+rows, all 900 completed Qwen rows, both engineering checks and the exact Llama
+aggregate. All 11,869 original campaign/completion files remain unchanged.
+There are no started-only/partial/failed rows, fitted heads or test forwards.
+The [audit receipt](validation/2026-11-23-fresh-readout-interruption-audit-v2.json)
+has SHA `df8b5cdc31c8ea0f56bdad435809da3dc05729152413045ab48033d51e1fabd0`.
+
+The separately reviewed [recovery helper](../scripts/recover_fresh_readout_campaign.py)
+has 27 passing recovery/coordinator/watcher tests. It copies the completed
+measurements to a new native root, adopts Llama, resumes only Qwen's 1,148
+unstarted rows and preserves all later stages and scientific gates. No case
+is repeated. Scientific sources, labels, selection and analyses are unchanged.
+See the [versioned continuation record](FRESH_READOUT_INTERRUPTION_RECOVERY_V2.md).
+
+Before model execution resumes, a terminal-independent Windows launcher is
+being tested. The user confirmed closing a terminal at 00:02, matching a
+harmless console-canary interruption; the 22:55 termination cause is unknown.
+An unsigned GUI-host option was blocked by Windows application control and is
+not used. No security policy is disabled. Keep failed launcher tests distinct
+from scientific measurements. The original numerical entropy check requires
+four threads; a preserved read-only audit with default 32 threads failed only
+that reduction, and the unchanged checker passed under the original setting.
+
+## Earlier: fresh campaign started at 22:18 UTC
 
 The [prospective twelve-site protocol](FRESH_READOUT_EXECUTION_PROTOCOL_V2.md)
 and fixed, independently agent-reviewed fresh bank are implemented. The native

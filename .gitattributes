@@ -32,6 +32,7 @@ docs/MAIN_STUDY_QUERY_ANCHORING_POSTHOC_2026-11-22.md -text whitespace=-blank-at
 data/belief_main/fresh_readout_v2/** -text whitespace=-blank-at-eol,-blank-at-eof
 data/annotations/fresh_readout_v2*.json -text whitespace=-blank-at-eol,-blank-at-eof
 docs/validation/2026-11-22-fresh-readout-*.json -text whitespace=-blank-at-eol,-blank-at-eof
+docs/validation/2026-11-23-fresh-readout-*.json -text whitespace=-blank-at-eol,-blank-at-eof
 
 *.bat text eol=crlf
 *.cmd text eol=crlf
