@@ -13,13 +13,16 @@ controlled study tests a frozen readout of sender-attributed current belief;
 this target is distinct from Apollo deception detection. See the
 [current research decision](docs/CURRENT_RESEARCH_STATE.md).
 
-**23 November: an interruption was found and the saved-data audit passed.**
+**23 November, 00:24 UTC: the interrupted run has resumed.**
 The earlier worker stopped at 2,048 Llama and 900 Qwen training/development
 captures. All 2,948 completed rows remain valid; no partial or unknown row
 requires repeating. No fresh test or fitting stage had started. The
 [versioned recovery](docs/FRESH_READOUT_INTERRUPTION_RECOVERY_V2.md) preserves
-the original run and resumes only unattempted inputs. A terminal-independent
-launcher is being tested before execution resumes; the earlier ETA is invalid.
+the original run and resumes only unattempted inputs. The replacement launcher
+passed a seven-minute no-console/no-job test, and Qwen advanced from 900 to 950
+rows after resuming at 00:21 UTC. Both the live worker and its heartbeat were
+verified. The earlier ETA is invalid; allow roughly another two to three hours
+at observed throughput, with final checks and reporting afterward.
 
 **22 November, 22:18 UTC: the fresh two-model campaign has been started.**
 The [prospective protocol](docs/FRESH_READOUT_EXECUTION_PROTOCOL_V2.md) fixes

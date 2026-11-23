@@ -1,0 +1,27 @@
+from pathlib import Path
+import json,hashlib,sys,datetime
+
+def require(condition,message):
+    if not condition:
+        raise ValueError(message)
+
+root=Path(__file__).resolve().parent
+seal_path=root/'launch_seal_v3.json'
+seal=json.loads(seal_path.read_text())
+seal_hash=hashlib.sha256(seal_path.read_bytes()).hexdigest()
+if sys.argv[1]=='completion':
+    started=json.loads((root/'launch_started_v3.json').read_text())
+    require(started['seal_sha256']==seal_hash,'Launch seal changed after start')
+    require(started['source_sha256']==seal['source_sha256'],'Launch sources changed after start')
+    require(started['guard_sha256']==seal['guard_sha256'],'Launch guard definition changed')
+    require(started['runner_sha256']==seal['runner_sha256'],'Launch runner definition changed')
+else:
+    require(sys.argv[1]=='start','Unknown launch stage')
+for filename,digest in seal['source_sha256'].items():
+    require(hashlib.sha256(Path(filename).read_bytes()).hexdigest()==digest,'Changed frozen launch source: '+filename)
+require(hashlib.sha256(Path(__file__).read_bytes()).hexdigest()==seal['guard_sha256'],'Changed launch guard')
+require(hashlib.sha256((root/'continue_and_report_v3.sh').read_bytes()).hexdigest()==seal['runner_sha256'],'Changed launch runner')
+name='launch_started_v3.json' if sys.argv[1]=='start' else 'completion_sources_reverified_v3.json'
+with (root/name).open('x',encoding='utf-8',newline='\n') as f:
+    json.dump({'at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'stage':sys.argv[1],'seal_sha256':seal_hash,'source_sha256':seal['source_sha256'],'guard_sha256':seal['guard_sha256'],'runner_sha256':seal['runner_sha256'],'model_calls_by_guard':0},f,indent=2);f.write('\n')
+print(json.dumps({'launch_sources_verified':True,'stage':sys.argv[1]}),flush=True)

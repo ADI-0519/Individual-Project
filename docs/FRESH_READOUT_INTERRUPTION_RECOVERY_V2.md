@@ -4,6 +4,10 @@
 [startup correction](FRESH_READOUT_STARTUP_RECOVERY_V1.md), under the unchanged
 [scientific execution protocol](FRESH_READOUT_EXECUTION_PROTOCOL_V2.md).
 
+Continuation began at 00:21:24 UTC on 23 November. A live worker, fresh Windows
+heartbeat and Qwen's advance from 900 to 950 rows were verified at 00:24 UTC.
+The original 2,948 completed measurements remain retained without repetition.
+
 ## What stopped
 
 At 23:56 UTC on 22 November, a live status check found no experiment producer.
@@ -86,6 +90,23 @@ then. A separate unsigned GUI-host option was blocked by Windows application
 control and was not used. Both engineering attempts remain preserved. Neither
 is a successful durability test or a reason to weaken a security policy. The
 22:55 experiment stop remains unexplained.
+
+The successful launch uses the signed installed PowerShell through CIM with
+`CREATE_NO_WINDOW | CREATE_BREAKAWAY_FROM_JOB` (`0x09000000`). Its canary
+completed 85 heartbeats over 420.63 seconds, exit zero. The process was outside
+the caller's job, and the same-flag API probe verified no attached console.
+The [validation receipt](validation/2026-11-23-fresh-readout-durable-windows-launch-v1.json)
+records all attempts, checks and scoped cleanup. This replaces the earlier
+chat-session lifetime assumption; shutdown/logoff or explicitly stopping WSL
+can still terminate the job.
+
+The final native runner, guard and seal use version 3. Before model execution,
+independent review tightened the original guard to compare completion against
+the exact start seal and to use checks that remain enabled under Python
+optimization. Normal and optimized harmless probes reject duplicate start,
+seal changes and jointly changed source/seal inputs. Earlier versions remain
+preserved and were never used for scientific model calls. All scientific
+capture, fit, score, label and split sources remain unchanged.
 
 Future status reports must check the Windows worker/task, live Linux producer,
 and recent progress timestamps together. A stopped task invalidates its ETA.

@@ -1,0 +1,74 @@
+{
+  "schema": "fresh-readout-detached-campaign-start-v1",
+  "checked_at": "2026-11-23T00:26:47.851923+00:00",
+  "research_status": "agent_audited_exploratory",
+  "native_campaign": "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2",
+  "windows_worker_directory": "C:\\Users\\adirj\\AppData\\Local\\FreshReadoutDurable\\20261123T002123Z_f3b1fcef76c64deeb5884cebb29ca7a5",
+  "launch_method": "CimDetached",
+  "create_flags": 150994944,
+  "worker_pid": 25828,
+  "worker_started_at": "2026-11-23T00:21:24.5766746Z",
+  "worker_parent_chain": [
+    {
+      "pid": 25828,
+      "parent_pid": 53740,
+      "name": "powershell.exe",
+      "executable_path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "creation_date": "2026-11-23T00:21:24.2148450Z"
+    },
+    {
+      "pid": 53740,
+      "parent_pid": 2572,
+      "name": "WmiPrvSE.exe",
+      "executable_path": null,
+      "creation_date": "2026-11-23T00:21:23.4310300Z"
+    },
+    {
+      "pid": 2572,
+      "parent_pid": 2344,
+      "name": "svchost.exe",
+      "executable_path": null,
+      "creation_date": "2026-11-22T12:20:47.2800180Z"
+    },
+    {
+      "pid": 2344,
+      "parent_pid": 2268,
+      "name": "services.exe",
+      "executable_path": null,
+      "creation_date": "2026-11-22T12:20:47.0472570Z"
+    },
+    {
+      "pid": 2268,
+      "parent_pid": 2076,
+      "name": "wininit.exe",
+      "executable_path": null,
+      "creation_date": "2026-11-22T12:20:46.7869800Z"
+    }
+  ],
+  "worker_sha256": "1d1c3c75f689b4f5d7309418b9bd68f3aafb087327cf89b25262c84fe67aa47a",
+  "last_heartbeat_at_check": "2026-11-23T00:26:44.8834069Z",
+  "llama_retained": 2048,
+  "qwen_retained_at_resume": 900,
+  "qwen_completed_at_check": 1225,
+  "qwen_status_at_check": "running",
+  "repeat_count": 0,
+  "native_preparation_sha256": "a183ad2693fd887b8ca575bcdd47865a85adb63d59e57a22ad08a7bb5f9cce8d",
+  "recovery_receipt_sha256": "acc248c15dddabb0cf12934ec835dff83f9843460d66ef8e24ef2b01e483c9f8",
+  "launch_files": {
+    "continue_and_report_v3.sh": {
+      "sha256": "c98449321dc36a42d56e620abe252e17c62b45fe6132138a6dc3869b1e169c64",
+      "snapshot_path": "docs/validation/audit-source-snapshots-2026-11-23/c98449321dc36a42d56e620abe252e17c62b45fe6132138a6dc3869b1e169c64_continue_and_report_v3.sh.txt"
+    },
+    "verify_launch_seal_v3.py": {
+      "sha256": "52df2622b0492a37a3badc8618cd0d025a574c22c70f36f7480054bbbb7940b6",
+      "snapshot_path": "docs/validation/audit-source-snapshots-2026-11-23/52df2622b0492a37a3badc8618cd0d025a574c22c70f36f7480054bbbb7940b6_verify_launch_seal_v3.py.txt"
+    },
+    "launch_seal_v3.json": {
+      "sha256": "ff4ef546cc15f21ff641cbe071b7212219ac84d512dc14a990fa85d9cb361ad5",
+      "snapshot_path": "docs/validation/audit-source-snapshots-2026-11-23/ff4ef546cc15f21ff641cbe071b7212219ac84d512dc14a990fa85d9cb361ad5_launch_seal_v3.json.txt"
+    }
+  },
+  "launch_started_receipt_sha256": "4600132b941aefa793090bfa28adeb6ce08d84733ae3b1f17393d349f0c7dee3",
+  "guard_probes_sha256": "ea0cf6cec891fea97f86832a8ea66f88246113ad8c157c7f189196aae6b57057",
+  "fresh_held_out_results_reported": false
+}

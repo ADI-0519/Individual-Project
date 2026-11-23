@@ -1,6 +1,37 @@
 # Verified continuation state: 23 November 2026
 
-## Latest: interrupted worker, saved-data audit passed
+## Latest: resumed at 00:21 UTC through a detached Windows worker
+
+The replacement Windows worker started at 00:21:24 UTC using CIM process
+creation with `CREATE_NO_WINDOW | CREATE_BREAKAWAY_FROM_JOB` (`0x09000000`).
+The signed installed PowerShell worker holds the foreground WSL command until
+recovery, analyses, independent audit and reporting finish. At 00:24 UTC the
+worker was alive with a fresh heartbeat and Qwen had advanced from 900 to 950
+completed rows. This is actual new capture progress, not a stale status label.
+
+The native campaign is now
+`/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2`.
+Its runner is `continue_and_report_v3.sh`; Windows receipts are under
+`C:/Users/adirj/AppData/Local/FreshReadoutDurable/20261123T002123Z_f3b1fcef76c64deeb5884cebb29ca7a5/`.
+The worker PID at launch is 25828, parent 53740 (`WmiPrvSE.exe`); future checks
+must compare creation time and registration, since PIDs can be reused.
+
+The [launcher validation](validation/2026-11-23-fresh-readout-durable-windows-launch-v1.json)
+records 85 canary heartbeats over 420.63 seconds, exit zero, no associated
+console under the tested flags and no caller job membership. Eight focused
+launcher tests pass. Failed earlier canaries and the blocked unsigned GUI host
+remain preserved; only the two owned inactive probe task definitions were
+removed after archiving their XML/status. No security policy was disabled.
+
+The launch source seal freezes recovery, completion, independent-checker and
+reporter bytes before any fresh test. The final guard uses explicit exceptions,
+compares the seal to its original exclusive start receipt at completion, and
+passed normal/optimized tests rejecting duplicate start and seal/source edits.
+Earlier unexecuted guard proposals remain native with their review history.
+The report destination is `docs/results/fresh-readout-2026-11-23/`.
+No fresh held-out result has yet been reported.
+
+## Earlier: interrupted worker, saved-data audit passed
 
 At 23:56 UTC on 22 November, live-process checks established that the fresh
 campaign and completion worker had stopped. Their `running`/`waiting` files

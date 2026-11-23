@@ -1,6 +1,6 @@
 # Fresh campaign: running, completion and recovery
 
-22 November 2026. Scientific policy is the unchanged
+Updated 23 November 2026. Scientific policy is the unchanged
 [execution protocol](FRESH_READOUT_EXECUTION_PROTOCOL_V2.md), with the
 [zero-forward startup correction](FRESH_READOUT_STARTUP_RECOVERY_V1.md).
 Read the [interpretation rules](FRESH_READOUT_INTERPRETATION_RULES_V2.md) before
@@ -12,7 +12,7 @@ configuration or a repeat selected on performance.
 The active native Linux campaign is:
 
 ```text
-/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261122_recovery_v1
+/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2
 ```
 
 The original failed campaign and its 53-file failure inventory remain preserved.
@@ -20,14 +20,26 @@ The new preparation receipt establishes exact equality of both 7,040-row plans,
 their excluded engineering rows, settings, spans and token identities. Only
 tokenizer identity and declared provenance/environment metadata changed.
 
-The coordinator runs in a persistent foreground WSL execution session. It uses
-one sequential GPU worker. Both training/development captures precede fitting;
+The [interruption recovery](FRESH_READOUT_INTERRUPTION_RECOVERY_V2.md) supersedes
+the earlier chat-session launch. The old worker stopped at Llama 2,048/Qwen 900;
+all 2,948 completed measurements were verified and copied without repeats.
+The run resumed at 00:21:24 UTC through a signed installed PowerShell worker
+created by CIM with no-console/job-breakaway flags. It holds the foreground WSL
+command through the entire workflow. Its tested source and
+[launch evidence](validation/2026-11-23-fresh-readout-durable-windows-launch-v1.json)
+are preserved. No additional Windows Task Scheduler task is required by this
+successful method. A seven-minute canary passed; eight launcher tests pass.
+
+The coordinator uses one sequential GPU worker. Both training/development captures precede fitting;
 both bundles precede the test freeze; both fresh test captures precede their
 analyses. Do not launch another producer or shut down WSL while it is running.
 The first real Llama engineering forward passed all twelve hook/HF alignment
 checks. The first 87 training rows gave about 1.25 rows/second, an early estimate
 of roughly three hours for 14,080 capture inputs before subsequent work.
-Later conditions and Qwen may differ; this is not a completion promise.
+That earlier ETA was invalidated by interruption. At 00:24 UTC, Qwen's new
+count of 950 plus a live worker and fresh heartbeat confirmed actual progress.
+Allow roughly two to three more hours at measured throughput, with final
+checks/reporting afterward; inspect current evidence before revising that ETA.
 
 ## Automatic completion
 
@@ -51,17 +63,36 @@ capture provenance. Its fixed subsequent order is:
 The watcher uses these distinct native output directories:
 
 ```text
-fresh_readout_v2_20261122_recovery_v1_completion
-fresh_readout_v2_20261122_recovery_v1_audit
-fresh_readout_v2_20261122_recovery_v1_report
+fresh_readout_v2_20261123_recovery_v2_completion
+fresh_readout_v2_20261123_recovery_v2_audit
+fresh_readout_v2_20261123_recovery_v2_report
 ```
 
 On successful completion, the repository destination is
-`docs/results/fresh-readout-2026-11-22/`. It is created only after the report
+`docs/results/fresh-readout-2026-11-23/`. It is created only after the report
 passes verification. The native completion directory contains
 `completion_receipt.json`, source snapshots and child logs. A campaign status
 of `complete` alone does not establish that the audit or report passed: check
 the separate completion receipt and report manifest.
+
+The current native `continue_and_report_v3.sh` invokes the completion helper
+after the scientific coordinator finishes. Absence of the new completion
+directory during capture is therefore expected. Before capture and again before
+completion, `verify_launch_seal_v3.py` checks the original launch receipt's
+seal/guard/runner/source hashes. The independent-checker and reporter bytes
+were sealed before any fresh test. Earlier unexecuted guard proposals and their
+review corrections remain native.
+
+The Windows worker's receipts are in:
+
+```text
+C:/Users/adirj/AppData/Local/FreshReadoutDurable/20261123T002123Z_f3b1fcef76c64deeb5884cebb29ca7a5/
+```
+
+`registration.json` records worker identity; `started.json` its parent chain;
+`windows_worker_alive.json` updates while foreground WSL runs. `finished.json`
+and `failure.json` record termination. Verify the current process and creation
+time alongside the heartbeat, since a stale receipt or reused PID is insufficient.
 
 ## Inspect status without inspecting partial scores
 
