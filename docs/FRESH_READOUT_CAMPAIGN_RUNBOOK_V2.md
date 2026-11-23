@@ -1,4 +1,4 @@
-# Fresh campaign: running, completion and recovery
+# Fresh campaign: completed run, reporting and recovery history
 
 Updated 23 November 2026. Scientific policy is the unchanged
 [execution protocol](FRESH_READOUT_EXECUTION_PROTOCOL_V2.md), with the
@@ -7,7 +7,22 @@ Read the [interpretation rules](FRESH_READOUT_INTERPRETATION_RULES_V2.md) before
 describing an outcome. These instructions do not authorize another scientific
 configuration or a repeat selected on performance.
 
-## Active paths and processes
+## Completed status
+
+The campaign, independent audit, reporting and exact local copy finished at
+02:43:31 GMT on 23 November. The final Windows receipt records exit zero; all
+ten scientific stages are complete. Each model has 2,048 training/development
+and 4,992 fresh test prefixes. All seven exports are in the
+[completed result directory](results/fresh-readout-2026-11-23/).
+Read the [interpretation](FRESH_READOUT_RESULTS_INTERPRETATION_2026-11-23.md)
+and [completion review](validation/2026-11-23-fresh-readout-completion-review-v1.json).
+No model process needs to remain running after successful completion, and
+these commands must not be repeated against the existing outputs.
+
+The following launch/status instructions are retained as operational history;
+their earlier estimates and live counts do not describe the current state.
+
+## Preserved paths and launch history
 
 The active native Linux campaign is:
 

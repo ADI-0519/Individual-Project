@@ -31,6 +31,19 @@ function Read-JsonFile([string]$Path) {
 
 function Utc-Now { [DateTime]::UtcNow.ToString('o') }
 
+function Get-LiteralFileSha256([string]$Path) {
+    # Receipt hashes must not depend on Get-FileHash module discovery in PS5.
+    $sha256 = [Security.Cryptography.SHA256]::Create()
+    $stream = $null
+    try {
+        $stream = [IO.File]::OpenRead($Path)
+        return ([BitConverter]::ToString($sha256.ComputeHash($stream))).Replace('-', '').ToLowerInvariant()
+    } finally {
+        if ($null -ne $stream) { $stream.Dispose() }
+        $sha256.Dispose()
+    }
+}
+
 function Get-ProcessChain {
     $chain = @()
     $processId = $PID
@@ -114,7 +127,7 @@ if ($Mode -eq 'Worker') {
         schema = 'fresh-readout-durable-worker-v1'; started_at = Utc-Now
         pid = $PID; kind = $config.kind; user = [Security.Principal.WindowsIdentity]::GetCurrent().Name
         parent_chain = @(Get-ProcessChain)
-        worker_sha256 = (Get-FileHash -LiteralPath $PSCommandPath -Algorithm SHA256).Hash.ToLowerInvariant()
+        worker_sha256 = Get-LiteralFileSha256 $PSCommandPath
     }
     Write-JsonFile (Join-Path $RunDirectory 'started.json') $started
     try {
@@ -248,7 +261,7 @@ if (Test-Path -LiteralPath $RunDirectory) { throw 'Use a fresh exclusive RunDire
 [IO.Directory]::CreateDirectory($RunDirectory) | Out-Null
 $workerPath = Join-Path $RunDirectory 'worker.ps1'
 Copy-Item -LiteralPath $PSCommandPath -Destination $workerPath
-$workerHash = (Get-FileHash -LiteralPath $workerPath -Algorithm SHA256).Hash.ToLowerInvariant()
+$workerHash = Get-LiteralFileSha256 $workerPath
 Write-JsonFile (Join-Path $RunDirectory 'worker_config.json') @{
     schema = 'fresh-readout-durable-worker-config-v1'; kind = $kind
     canary_seconds = $CanarySeconds; distribution = $Distribution; linux_runner_path = $LinuxRunnerPath

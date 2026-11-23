@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import subprocess
@@ -38,6 +39,19 @@ def run_ps(arguments, timeout=30):
         text=True,
         timeout=timeout,
         check=False,
+    )
+
+
+def without_filehash_command():
+    """Keep other PS5 commands available while reproducing the missing hash function."""
+    return (
+        "$ErrorActionPreference='Stop';"
+        "Import-Module Microsoft.PowerShell.Utility;"
+        "Import-Module Microsoft.PowerShell.Management;"
+        "Import-Module CimCmdlets;"
+        "$PSModuleAutoLoadingPreference='None';"
+        "Remove-Item Function:\\Get-FileHash -ErrorAction SilentlyContinue;"
+        "if(Get-Command Get-FileHash -ErrorAction SilentlyContinue){throw 'Get-FileHash is available'};"
     )
 
 
@@ -94,6 +108,24 @@ def test_foreground_process_drains_large_stderr_and_stdout_and_preserves_exit(tm
     assert (tmp_path / "wsl_stderr.log").read_bytes().count(b"X" * 1024) == 3000
 
 
+def test_worker_hashes_literal_script_without_get_filehash(tmp_path):
+    """A direct harmless canary covers worker hashing without invoking WSL."""
+    (tmp_path / "worker_config.json").write_text(
+        json.dumps({"kind": "canary", "canary_seconds": 0}), encoding="utf-8"
+    )
+    command = (
+        without_filehash_command()
+        + f"& {ps_quote(SCRIPT)} -Mode Worker -RunDirectory {ps_quote(tmp_path)}"
+    )
+    result = run_ps(["-Command", command])
+    assert result.returncode == 0, result.stderr + result.stdout
+    started = json.loads((tmp_path / "started.json").read_text())
+    assert started["worker_sha256"] == hashlib.sha256(SCRIPT.read_bytes()).hexdigest()
+    assert json.loads((tmp_path / "finished.json").read_text())["exit_code"] == 0
+    heartbeat = json.loads((tmp_path / "heartbeat.jsonl").read_text())
+    assert heartbeat["model_calls"] == 0
+
+
 def test_harmless_wsl_worker_receives_environment_before_shell_execution(tmp_path):
     """Foreground local WSL printf only; no model calls, Python or scheduler task."""
     linux_runner = tmp_path / "harmless_runner.sh"
@@ -129,25 +161,18 @@ def test_harmless_wsl_worker_receives_environment_before_shell_execution(tmp_pat
 
 def test_cim_no_window_worker_outlives_launcher_and_cleans_only_own_completed_canary(tmp_path):
     native = tmp_path / "exclusive_canary"
-    result = run_ps(
-        [
-            "-File",
-            str(SCRIPT),
-            "-Mode",
-            "Canary",
-            "-LaunchMethod",
-            "CimDetached",
-            "-CanarySeconds",
-            "10",
-            "-RunDirectory",
-            str(native),
-        ]
+    command = (
+        without_filehash_command()
+        + f"& {ps_quote(SCRIPT)} -Mode Canary -LaunchMethod CimDetached "
+        + f"-CanarySeconds 10 -RunDirectory {ps_quote(native)}"
     )
+    result = run_ps(["-Command", command])
     assert result.returncode == 0, result.stderr + result.stdout
     registration = json.loads(result.stdout)
     assert registration["cim_return_value"] == 0
     assert registration["create_flags"] == 0x09000000
     assert registration["password_supplied"] is False
+    assert registration["worker_sha256"] == hashlib.sha256(SCRIPT.read_bytes()).hexdigest()
     # subprocess.run returned: the registering PowerShell process has exited.
     deadline = time.monotonic() + 25
     while not (native / "finished.json").exists() and time.monotonic() < deadline:
@@ -156,6 +181,11 @@ def test_cim_no_window_worker_outlives_launcher_and_cleans_only_own_completed_ca
     finished = json.loads((native / "finished.json").read_text())
     assert finished["exit_code"] == 0
     started = json.loads((native / "started.json").read_text())
+    assert started["worker_sha256"] == registration["worker_sha256"]
+    assert (
+        hashlib.sha256((native / "worker.ps1").read_bytes()).hexdigest()
+        == registration["worker_sha256"]
+    )
     assert any(p["name"].lower() == "wmiprvse.exe" for p in started["parent_chain"])
     heartbeats = [
         json.loads(line) for line in (native / "heartbeat.jsonl").read_text().splitlines()

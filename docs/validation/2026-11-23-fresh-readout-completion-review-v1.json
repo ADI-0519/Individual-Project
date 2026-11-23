@@ -1,0 +1,619 @@
+{
+  "schema": "fresh-readout-post-completion-provenance-review-v1",
+  "created_at": "2026-11-23T12:24:16.089908+00:00",
+  "review_kind": "separate-agent post-completion saved-data provenance review",
+  "reviewer_task": "/root/completion_provenance_review",
+  "status": "pass",
+  "scope": {
+    "human_semantic_review": false,
+    "numerical_auditor_rerun": false,
+    "independently_authored_numerical_audit": false,
+    "new_language_model_calls": 0,
+    "classifier_fits": 0,
+    "scientific_source_or_output_changes": false,
+    "only_created_artifact": "docs/validation/2026-11-23-fresh-readout-completion-review-v1.json"
+  },
+  "code_freeze": {
+    "current_head": "1e19daea9f39833d8ddadebd7b502f035ea8f8c1",
+    "expected_head": "1e19daea9f39833d8ddadebd7b502f035ea8f8c1",
+    "matches_expected_head": true,
+    "completion_source_hashes_match_current_files": true
+  },
+  "raw_artifacts": {
+    "campaign_state": {
+      "path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/campaign_state.json",
+      "sha256": "ad3b27a1254a24e1dfb3a315464deccebaaabf063c58500d0be0aea7a7fbc695",
+      "bytes": 29589
+    },
+    "completion_receipt": {
+      "path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2_completion/completion_receipt.json",
+      "sha256": "e382c487193d8bd128fb951f48f37d0171265623a97641e2db25334e6745b3e8",
+      "bytes": 13149
+    },
+    "numerical_audit_result": {
+      "path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2_audit/audit_result.json",
+      "sha256": "a960e62101e9662c96f5deee33b6e4cc37f3564b7028c0f9b630633eb77432b3",
+      "bytes": 2487
+    },
+    "numerical_audit_reconstruction_freeze": {
+      "path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2_audit/reconstruction_freeze.json",
+      "sha256": "c8bcb5faff33f9a4ef7a7cdf0ff38e2700adf7502e4e8bcfeb472e514b7c5ca4",
+      "bytes": 1204
+    },
+    "numerical_audit_access_log": {
+      "path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2_audit/access_log.jsonl",
+      "sha256": "3f246f4268ee4079918d0ff0e6f55140ddef2b213631a1da0d334da2c6d696bf",
+      "bytes": 37346128
+    },
+    "test_fit_freeze": {
+      "path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/test_fit_freeze.json",
+      "sha256": "f344702f7dd887c90aad9e292e68b767cd41a2c764b23fe5c079a11d4997d3f2",
+      "bytes": 7478
+    },
+    "completion_sources_reverified": {
+      "path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/completion_sources_reverified_v3.json",
+      "sha256": "0c823708f6b8d8457b9b9ab7cdb707a0b78bf6323bd688807ec172c27c33178a",
+      "bytes": 1219
+    },
+    "launch_started_v3": {
+      "path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/launch_started_v3.json",
+      "sha256": "4600132b941aefa793090bfa28adeb6ce08d84733ae3b1f17393d349f0c7dee3",
+      "bytes": 1214
+    },
+    "report_manifest": {
+      "path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2_report/manifest.json",
+      "sha256": "6e2e0e93909743a057ddfe9c473e50198d2788e3dbfe61d8b8b30eacfd48bada",
+      "bytes": 4496
+    },
+    "worker_registration": {
+      "path": "C:/Users/adirj/AppData/Local/FreshReadoutDurable/20261123T002123Z_f3b1fcef76c64deeb5884cebb29ca7a5/registration.json",
+      "sha256": "9f46c8757b74aab76aa3ea57de26bde00ddd1052a1e68b20b39e8e525177d25d",
+      "bytes": 3733
+    },
+    "worker_started": {
+      "path": "C:/Users/adirj/AppData/Local/FreshReadoutDurable/20261123T002123Z_f3b1fcef76c64deeb5884cebb29ca7a5/started.json",
+      "sha256": "ae59d422c0ed92a3a2d9eb3c5d5e36b0f6be01c69d6b92c6154b672f38abb4f3",
+      "bytes": 2102
+    },
+    "worker_finished": {
+      "path": "C:/Users/adirj/AppData/Local/FreshReadoutDurable/20261123T002123Z_f3b1fcef76c64deeb5884cebb29ca7a5/finished.json",
+      "sha256": "c2e9f5957c550a1413b68816670ab88ec1778d8e134178cf6b7a40a669e5e50c",
+      "bytes": 184
+    }
+  },
+  "observed_completion": {
+    "campaign_status": "complete",
+    "campaign_finished_at": "2026-11-23T02:42:26.771216+00:00",
+    "campaign_stages": [
+      {
+        "name": "llama_training",
+        "status": "complete",
+        "returncode": null,
+        "adopted_complete": true
+      },
+      {
+        "name": "qwen_training",
+        "status": "complete",
+        "returncode": 0,
+        "adopted_complete": false
+      },
+      {
+        "name": "fit_llama",
+        "status": "complete",
+        "returncode": 0,
+        "adopted_complete": false
+      },
+      {
+        "name": "fit_qwen",
+        "status": "complete",
+        "returncode": 0,
+        "adopted_complete": false
+      },
+      {
+        "name": "freeze_both_fits",
+        "status": "complete",
+        "returncode": 0,
+        "adopted_complete": false
+      },
+      {
+        "name": "bind_both_tests",
+        "status": "complete",
+        "returncode": null,
+        "adopted_complete": false
+      },
+      {
+        "name": "llama_test",
+        "status": "complete",
+        "returncode": 0,
+        "adopted_complete": false
+      },
+      {
+        "name": "qwen_test",
+        "status": "complete",
+        "returncode": 0,
+        "adopted_complete": false
+      },
+      {
+        "name": "analyze_llama",
+        "status": "complete",
+        "returncode": 0,
+        "adopted_complete": false
+      },
+      {
+        "name": "analyze_qwen",
+        "status": "complete",
+        "returncode": 0,
+        "adopted_complete": false
+      }
+    ],
+    "campaign_stage_count": 10,
+    "all_campaign_stages_complete": true,
+    "completion_status": "complete",
+    "completion_finished_at": "2026-11-23T02:43:31.829095+00:00",
+    "completion_stages": [
+      {
+        "name": "audit",
+        "status": "complete",
+        "returncode": 0,
+        "finished_at": "2026-11-23T02:43:23.252860+00:00"
+      },
+      {
+        "name": "report",
+        "status": "complete",
+        "returncode": 0,
+        "finished_at": "2026-11-23T02:43:31.593868+00:00"
+      }
+    ],
+    "worker_exit_code": 0,
+    "worker_finished_at": "2026-11-23T02:43:31.8859919Z",
+    "pending_or_failed_recorded_stage_found": false,
+    "campaign_stderr_files": [
+      {
+        "name": "analyze_llama.stderr.log",
+        "bytes": 0,
+        "fatal_error_marker_found": false
+      },
+      {
+        "name": "analyze_qwen.stderr.log",
+        "bytes": 0,
+        "fatal_error_marker_found": false
+      },
+      {
+        "name": "fit_llama.stderr.log",
+        "bytes": 0,
+        "fatal_error_marker_found": false
+      },
+      {
+        "name": "fit_qwen.stderr.log",
+        "bytes": 0,
+        "fatal_error_marker_found": false
+      },
+      {
+        "name": "freeze_both_fits.stderr.log",
+        "bytes": 0,
+        "fatal_error_marker_found": false
+      },
+      {
+        "name": "llama_test.stderr.log",
+        "bytes": 503,
+        "fatal_error_marker_found": false
+      },
+      {
+        "name": "qwen_test.stderr.log",
+        "bytes": 503,
+        "fatal_error_marker_found": false
+      },
+      {
+        "name": "qwen_training.stderr.log",
+        "bytes": 503,
+        "fatal_error_marker_found": false
+      }
+    ],
+    "nonempty_campaign_stderr_interpretation": "The three nonempty capture stderr files contain checkpoint loading progress bars.",
+    "completion_log_hash_checks": [
+      {
+        "stage": "audit",
+        "stream": "stdout",
+        "path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2_completion/audit.stdout.log",
+        "sha256": "77e0837acd7958c92febd7dfc45f398c20a0d4d39e0d3eaef6c3a06c3d13100b",
+        "matches_recorded": true,
+        "bytes": 111
+      },
+      {
+        "stage": "audit",
+        "stream": "stderr",
+        "path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2_completion/audit.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "matches_recorded": true,
+        "bytes": 0
+      },
+      {
+        "stage": "report",
+        "stream": "stdout",
+        "path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2_completion/report.stdout.log",
+        "sha256": "4dc85bda663bad759d529337c9fa1addd242169841f281bd817995cbf2189e25",
+        "matches_recorded": true,
+        "bytes": 170
+      },
+      {
+        "stage": "report",
+        "stream": "stderr",
+        "path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2_completion/report.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "matches_recorded": true,
+        "bytes": 0
+      }
+    ]
+  },
+  "models": {
+    "llama": {
+      "model_id": "meta-llama/Llama-3.1-8B-Instruct",
+      "captures": {
+        "training": {
+          "manifest": {
+            "path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama/training/manifest.json",
+            "sha256": "55d0584cd3cbb6a52cefa7832915f2081c1e2c7118809837ef8ed9df84567319",
+            "bytes": 13246
+          },
+          "status": "complete",
+          "completed_rows": 2048,
+          "actual_saved_rows": 2048,
+          "test_fixture": false,
+          "row_count_matches_manifest": true
+        },
+        "test": {
+          "manifest": {
+            "path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama/test/manifest.json",
+            "sha256": "7e1ae0abb318ff21bd055a1ed3b4802213d9b3698178f134f58dabb2d23005e5",
+            "bytes": 15874
+          },
+          "status": "complete",
+          "completed_rows": 4992,
+          "actual_saved_rows": 4992,
+          "test_fixture": false,
+          "row_count_matches_manifest": true
+        }
+      },
+      "saved_auditor_result": {
+        "prediction_arrays": {
+          "row_ids": {
+            "exact": true,
+            "shape": [
+              4992
+            ]
+          },
+          "methods": {
+            "exact": true,
+            "shape": [
+              17
+            ]
+          },
+          "verdicts": {
+            "exact": true,
+            "shape": [
+              4992,
+              17
+            ]
+          },
+          "margins": {
+            "max_abs_difference": 2.042810365310288e-14,
+            "shape": [
+              4992,
+              17
+            ]
+          },
+          "factor_margins": {
+            "max_abs_difference": 2.4868995751603507e-14,
+            "shape": [
+              4992,
+              4
+            ]
+          },
+          "factor_predictions": {
+            "exact": true,
+            "shape": [
+              4992,
+              4
+            ]
+          }
+        },
+        "metric_differences": [],
+        "all_metrics_match": true
+      }
+    },
+    "qwen": {
+      "model_id": "Qwen/Qwen2.5-7B-Instruct",
+      "captures": {
+        "training": {
+          "manifest": {
+            "path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen/training/manifest.json",
+            "sha256": "2fa1103357a1f01f2e468e1dfa78383fc405def68eeb71895af5720c5452de8d",
+            "bytes": 13225
+          },
+          "status": "complete",
+          "completed_rows": 2048,
+          "actual_saved_rows": 2048,
+          "test_fixture": false,
+          "row_count_matches_manifest": true
+        },
+        "test": {
+          "manifest": {
+            "path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen/test/manifest.json",
+            "sha256": "9122df9b24a76ef62774eb055fc627d9b71f4f834e5d093067ead73338d35aa1",
+            "bytes": 15853
+          },
+          "status": "complete",
+          "completed_rows": 4992,
+          "actual_saved_rows": 4992,
+          "test_fixture": false,
+          "row_count_matches_manifest": true
+        }
+      },
+      "saved_auditor_result": {
+        "prediction_arrays": {
+          "row_ids": {
+            "exact": true,
+            "shape": [
+              4992
+            ]
+          },
+          "methods": {
+            "exact": true,
+            "shape": [
+              17
+            ]
+          },
+          "verdicts": {
+            "exact": true,
+            "shape": [
+              4992,
+              17
+            ]
+          },
+          "margins": {
+            "max_abs_difference": 1.7763568394002505e-14,
+            "shape": [
+              4992,
+              17
+            ]
+          },
+          "factor_margins": {
+            "max_abs_difference": 3.197442310920451e-14,
+            "shape": [
+              4992,
+              4
+            ]
+          },
+          "factor_predictions": {
+            "exact": true,
+            "shape": [
+              4992,
+              4
+            ]
+          }
+        },
+        "metric_differences": [],
+        "all_metrics_match": true
+      }
+    }
+  },
+  "saved_numerical_audit": {
+    "status": "pass",
+    "finished_at": "2026-11-23T02:43:22.979472+00:00",
+    "absolute_tolerance": 1e-09,
+    "all_model_metrics_match": true,
+    "total_exact_verdict_entries": 169728,
+    "total_exact_factor_prediction_entries": 39936,
+    "counts_derived_from": "Saved audit_result.json array shapes across both models; numerical predictions were not recomputed in this review.",
+    "largest_reported_margin_absolute_difference": 2.042810365310288e-14,
+    "largest_reported_factor_margin_absolute_difference": 3.197442310920451e-14,
+    "limitations": [
+      "Unretained candidate coefficients are not saved; their numeric development losses cannot be reconstructed without prohibited refitting.",
+      "Final coefficient arrays and recorded histories cannot alone prove optimizer execution or absence of unrecorded fitting."
+    ]
+  },
+  "freeze_before_saved_output_read": {
+    "scope": "Recorded access-log chronology; this review did not rerun or re-author the numerical audit.",
+    "completed_output_byte_hash_events": [
+      {
+        "at": "2026-11-23T02:42:32.032533+00:00",
+        "stage": "completion_gate",
+        "kind": "hash_check",
+        "path": "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama_analysis/results.json",
+        "role": "llama completed analysis output bytes, unparsed",
+        "sha256": "256342115ca704859654c6c962061daaf68d4642627a9ba25e964ec40c1d5ca5"
+      },
+      {
+        "at": "2026-11-23T02:42:32.032964+00:00",
+        "stage": "completion_gate",
+        "kind": "hash_check",
+        "path": "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama_analysis/predictions.npz",
+        "role": "llama completed analysis output bytes, unparsed",
+        "sha256": "3cdd11df723a8c2c9e64cf552a4b8c2b7525652015476dfdb0972cc02219b954"
+      },
+      {
+        "at": "2026-11-23T02:42:32.036098+00:00",
+        "stage": "completion_gate",
+        "kind": "hash_check",
+        "path": "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen_analysis/results.json",
+        "role": "qwen completed analysis output bytes, unparsed",
+        "sha256": "cd85c2ced5c8ad27c39420e624a7b4a37602996956245d757a73affc8261da75"
+      },
+      {
+        "at": "2026-11-23T02:42:32.036465+00:00",
+        "stage": "completion_gate",
+        "kind": "hash_check",
+        "path": "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen_analysis/predictions.npz",
+        "role": "qwen completed analysis output bytes, unparsed",
+        "sha256": "57e91d5139d505ebe62411140b7526b625c7ca8a0c9f91ceba226d3d3c754864"
+      }
+    ],
+    "first_independent_reconstruction_event_at": "2026-11-23T02:42:32.039068+00:00",
+    "completed_output_bytes_hashed_before_first_reconstruction": true,
+    "model_freeze_events": [
+      {
+        "at": "2026-11-23T02:42:59.332270+00:00",
+        "model": "llama"
+      },
+      {
+        "at": "2026-11-23T02:43:22.653318+00:00",
+        "model": "qwen"
+      }
+    ],
+    "reconstruction_freeze_file_frozen_at": "2026-11-23T02:43:22.653395+00:00",
+    "both_reconstructions_frozen_event_at": "2026-11-23T02:43:22.653484+00:00",
+    "first_saved_results_or_predictions_read_at": "2026-11-23T02:43:22.665525+00:00",
+    "saved_output_read_begin_events": [
+      {
+        "at": "2026-11-23T02:43:22.665525+00:00",
+        "stage": "saved_output_comparison_llama",
+        "kind": "read_begin",
+        "path": "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama_analysis/predictions.npz",
+        "role": "llama saved analysis predictions"
+      },
+      {
+        "at": "2026-11-23T02:43:22.691077+00:00",
+        "stage": "saved_output_comparison_llama",
+        "kind": "read_begin",
+        "path": "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama_analysis/results.json",
+        "role": "llama saved analysis metrics"
+      },
+      {
+        "at": "2026-11-23T02:43:22.825142+00:00",
+        "stage": "saved_output_comparison_qwen",
+        "kind": "read_begin",
+        "path": "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen_analysis/predictions.npz",
+        "role": "qwen saved analysis predictions"
+      },
+      {
+        "at": "2026-11-23T02:43:22.848751+00:00",
+        "stage": "saved_output_comparison_qwen",
+        "kind": "read_begin",
+        "path": "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen_analysis/results.json",
+        "role": "qwen saved analysis metrics"
+      }
+    ],
+    "all_logged_saved_results_predictions_reads_after_both_freeze": true,
+    "freeze_declares_saved_results_or_predictions_parsed": false,
+    "read_begin_count": 52257,
+    "all_logged_reads_have_matching_completion": true
+  },
+  "completion_receipt_reference_hash_checks": {
+    "source_sha256": {
+      "checked_references": 3,
+      "all_match": true,
+      "mismatches": []
+    },
+    "analysis_input_sha256": {
+      "checked_references": 11,
+      "all_match": true,
+      "mismatches": []
+    },
+    "audit_artifact_sha256": {
+      "checked_references": 11,
+      "all_match": true,
+      "mismatches": []
+    },
+    "published_sha256": {
+      "checked_references": 7,
+      "all_match": true,
+      "mismatches": []
+    },
+    "report_export_sha256": {
+      "checked_references": 7,
+      "all_match": true,
+      "mismatches": []
+    }
+  },
+  "report_exports": {
+    "native_file_count": 7,
+    "repository_file_count": 7,
+    "all_seven_byte_identical": true,
+    "files": [
+      {
+        "name": "fresh_readout.pdf",
+        "native_path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2_report/fresh_readout.pdf",
+        "repository_path": "C:/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/docs/results/fresh-readout-2026-11-23/fresh_readout.pdf",
+        "native_sha256": "7c33aee538612e88824b3b1caaad53028a9ed1ed2ff10610281a41a9b454748c",
+        "repository_sha256": "7c33aee538612e88824b3b1caaad53028a9ed1ed2ff10610281a41a9b454748c",
+        "matches_native": true,
+        "matches_completion_receipt": true,
+        "bytes": 23674
+      },
+      {
+        "name": "fresh_readout.png",
+        "native_path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2_report/fresh_readout.png",
+        "repository_path": "C:/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/docs/results/fresh-readout-2026-11-23/fresh_readout.png",
+        "native_sha256": "241fe130b8d80b2c791fd7c98d8a1bdfa6c28dcbc117f20df1987983c1cbc29a",
+        "repository_sha256": "241fe130b8d80b2c791fd7c98d8a1bdfa6c28dcbc117f20df1987983c1cbc29a",
+        "matches_native": true,
+        "matches_completion_receipt": true,
+        "bytes": 102572
+      },
+      {
+        "name": "fresh_readout.svg",
+        "native_path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2_report/fresh_readout.svg",
+        "repository_path": "C:/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/docs/results/fresh-readout-2026-11-23/fresh_readout.svg",
+        "native_sha256": "c62303f2684a6c0270919e894f0721efc53937e9c2a0baabc01e2866575aeff6",
+        "repository_sha256": "c62303f2684a6c0270919e894f0721efc53937e9c2a0baabc01e2866575aeff6",
+        "matches_native": true,
+        "matches_completion_receipt": true,
+        "bytes": 70505
+      },
+      {
+        "name": "manifest.json",
+        "native_path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2_report/manifest.json",
+        "repository_path": "C:/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/docs/results/fresh-readout-2026-11-23/manifest.json",
+        "native_sha256": "6e2e0e93909743a057ddfe9c473e50198d2788e3dbfe61d8b8b30eacfd48bada",
+        "repository_sha256": "6e2e0e93909743a057ddfe9c473e50198d2788e3dbfe61d8b8b30eacfd48bada",
+        "matches_native": true,
+        "matches_completion_receipt": true,
+        "bytes": 4496
+      },
+      {
+        "name": "preparation.json",
+        "native_path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2_report/preparation.json",
+        "repository_path": "C:/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/docs/results/fresh-readout-2026-11-23/preparation.json",
+        "native_sha256": "f9467e652b23f381fe747479df67ecd2a4c8f34da5790d7cb333551b551e4542",
+        "repository_sha256": "f9467e652b23f381fe747479df67ecd2a4c8f34da5790d7cb333551b551e4542",
+        "matches_native": true,
+        "matches_completion_receipt": true,
+        "bytes": 3733
+      },
+      {
+        "name": "results.md",
+        "native_path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2_report/results.md",
+        "repository_path": "C:/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/docs/results/fresh-readout-2026-11-23/results.md",
+        "native_sha256": "eafc6312a7a62fbb99c846e2180e61266e2f34c75d411a8608d4dfda842e9fee",
+        "repository_sha256": "eafc6312a7a62fbb99c846e2180e61266e2f34c75d411a8608d4dfda842e9fee",
+        "matches_native": true,
+        "matches_completion_receipt": true,
+        "bytes": 40257
+      },
+      {
+        "name": "summary.json",
+        "native_path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2_report/summary.json",
+        "repository_path": "C:/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/docs/results/fresh-readout-2026-11-23/summary.json",
+        "native_sha256": "6cc9c681c53013fc24949e49b2909e77ea59c8f38bbefadab80f7da488a7e0cf",
+        "repository_sha256": "6cc9c681c53013fc24949e49b2909e77ea59c8f38bbefadab80f7da488a7e0cf",
+        "matches_native": true,
+        "matches_completion_receipt": true,
+        "bytes": 767596
+      }
+    ]
+  },
+  "research_qualification": {
+    "research_status": "agent_audited_exploratory",
+    "human_review_complete": false,
+    "confirmatory_result": false,
+    "paired_test_contexts": 24,
+    "test_contexts_shared_between_models": true,
+    "independent_models_pooled": false,
+    "hard_quartets_per_renderer_per_model": 192
+  },
+  "limitations": [
+    "This review reads completed artifacts and verifies their hashes/statuses; it is separate from and does not rerun the independently authored numerical reconstruction audit.",
+    "The experiment remains agent-audited exploratory, with human semantic review incomplete; these checks do not establish absence of bias.",
+    "No absence-of-unrecorded-fitting or optimizer-execution proof follows from the retained coefficients or histories."
+  ]
+}

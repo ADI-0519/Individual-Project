@@ -13,7 +13,22 @@ controlled study tests a frozen readout of sender-attributed current belief;
 this target is distinct from Apollo deception detection. See the
 [current research decision](docs/CURRENT_RESEARCH_STATE.md).
 
-**23 November, 00:24 UTC: the interrupted run has resumed.**
+**23 November, 02:43 GMT: the fresh two-model study is complete.**
+All 14,080 planned cohort prefixes, both fresh test captures, the independent
+saved-data audit and all report exports finished. The primary source-only
+site-selection comparison shows no established benefit: Llama improves by
+1.04 percentage points, with conditional 95% interval [-3.65, +5.73].
+The prespecified four-factor readout plus supplied rule solves 176/192 hard
+quartets for Llama and 118/192 for Qwen in the original format, falling to
+17/192 and 12/192 in the alternate format. Extra labels and external computation
+make this an accessibility diagnostic, not an equal-capacity or causal claim.
+Read the [completed report](docs/results/fresh-readout-2026-11-23/results.md),
+[figure PDF](docs/results/fresh-readout-2026-11-23/fresh_readout.pdf) and
+[critical interpretation](docs/FRESH_READOUT_RESULTS_INTERPRETATION_2026-11-23.md).
+Human semantic review and the dissertation remain unfinished. These are
+agent-audited exploratory results, not human-reviewed confirmation.
+
+**Historical checkpoint, 23 November, 00:24 UTC: the interrupted run resumed.**
 The earlier worker stopped at 2,048 Llama and 900 Qwen training/development
 captures. All 2,948 completed rows remain valid; no partial or unknown row
 requires repeating. No fresh test or fitting stage had started. The
@@ -21,8 +36,7 @@ requires repeating. No fresh test or fitting stage had started. The
 the original run and resumes only unattempted inputs. The replacement launcher
 passed a seven-minute no-console/no-job test, and Qwen advanced from 900 to 950
 rows after resuming at 00:21 UTC. Both the live worker and its heartbeat were
-verified. The earlier ETA is invalid; allow roughly another two to three hours
-at observed throughput, with final checks and reporting afterward.
+verified. The continuation subsequently completed at 02:43 GMT.
 
 **22 November, 22:18 UTC: the fresh two-model campaign has been started.**
 The [prospective protocol](docs/FRESH_READOUT_EXECUTION_PROTOCOL_V2.md) fixes
@@ -30,7 +44,8 @@ The [prospective protocol](docs/FRESH_READOUT_EXECUTION_PROTOCOL_V2.md) fixes
 two renderers and 24 paired test contexts. A separate agent reviewed all
 48 new contexts and 108 full prompts; human semantic review remains incomplete.
 Both model bundles must be frozen before either fresh test capture.
-There are no fresh-study results yet.
+At that checkpoint no fresh-study result had been reported; the completed
+results are linked above.
 The [completion runbook](docs/FRESH_READOUT_CAMPAIGN_RUNBOOK_V2.md) explains the
 automatic independent audit/report export and preserved-failure boundaries.
 The [interpretation rules](docs/FRESH_READOUT_INTERPRETATION_RULES_V2.md) state

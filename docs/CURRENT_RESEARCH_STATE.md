@@ -1,6 +1,31 @@
 # Verified continuation state: 23 November 2026
 
-## Latest: resumed at 00:21 UTC through a detached Windows worker
+## Latest: fresh study complete at 02:43 GMT
+
+All ten scientific stages, the independent numerical audit, report generation
+and exact seven-file repository copy completed. The Windows worker exited zero
+at 02:43:31 GMT; no model worker needs to remain running. Both checkpoints have
+7,040 completed cohort prefixes, including 4,992 fresh test prefixes each.
+The interruption recovery retained all 2,948 original completed measurements
+without repeating a case.
+
+The primary Llama S1-minus-S0 hard-quartet difference is +1.04 percentage points
+(13/192 versus 11/192), conditional 95% interval [-3.65, +5.73]. Qwen's named
+secondary difference is +0.52 pp (2/192 versus 1/192). Neither establishes a
+selection benefit or equivalence. C2's four learned factors plus supplied rule
+score 176/192 Llama and 118/192 Qwen hard panels in A, but only 17/192 and 12/192
+in B. This is fresh evidence of format-sensitive ingredient accessibility
+under a privileged diagnostic, not robust second-order belief or deception
+detection. All test contexts are now exposed.
+
+Read the [critical interpretation](FRESH_READOUT_RESULTS_INTERPRETATION_2026-11-23.md),
+[generated report](results/fresh-readout-2026-11-23/results.md) and
+[completion review](validation/2026-11-23-fresh-readout-completion-review-v1.json).
+Human semantic review remains incomplete; the study is agent-audited exploratory.
+Next is semantic review and a supervisor discussion of a separately specified
+format-coverage follow-up, not another test-selected fit on this bank.
+
+## Earlier: resumed at 00:21 UTC through a detached Windows worker
 
 The replacement Windows worker started at 00:21:24 UTC using CIM process
 creation with `CREATE_NO_WINDOW | CREATE_BREAKAWAY_FROM_JOB` (`0x09000000`).
