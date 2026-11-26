@@ -1,0 +1,9 @@
+{
+  "schema": "format-score-post-execution-formatting-review-v1",
+  "change": "Ruff formatting of reusable script/tests only; executed v1 and pooled source copies retained unchanged",
+  "old_executed_source_sha256": "c824bdb0997d840abde1e0f6bbedba8da0655f02110e808819ef882cda0441cf",
+  "current_source_sha256": "71e90d54b9fa58d94279b5444b2432e62175edef757e56e81624b9b3ad9075c7",
+  "ast_identical_without_locations": true,
+  "model_calls": 0,
+  "classifier_fits": 0
+}

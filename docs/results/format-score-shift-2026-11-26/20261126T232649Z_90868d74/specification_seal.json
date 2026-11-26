@@ -1,0 +1,9 @@
+﻿{
+    "schema":  "format-score-shift-specification-seal-v1",
+    "sealed_at_utc":  "2026-11-26T23:26:49.8746590Z",
+    "specification_path":  "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\docs\\FORMAT_SCORE_SHIFT_DIAGNOSTIC_SPEC_V1.md",
+    "specification_sha256":  "3abbc410cbc760a4d5cb81c65902f80f604e6001754ab9292b3223421d70c157",
+    "raw_margin_arrays_parsed_before_seal":  false,
+    "known_exposure":  "Published interpretation and code/schema only",
+    "output":  "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\docs\\results\\format-score-shift-2026-11-26\\20261126T232649Z_90868d74"
+}

@@ -1,6 +1,32 @@
-# Verified continuation state: 23 November 2026
+# Verified continuation state: 26 November 2026
 
-## Latest: fresh study complete at 02:43 GMT
+## Latest: full saved-score format diagnosis and reviewed next-study design
+
+The [new result](FORMAT_TRANSFER_RESULTS_2026-11-26.md) independently rechecks
+all 4,992 saved test rows/model. On pooled easy/hard corrections, initial and
+report-location heads retain B raw AUROC 0.987-0.999, while first-message receipt
+AUROC falls to 0.696 for Llama and 0.670 for Qwen. Qwen replacement-receipt AUROC
+is 0.677. Receipt transfer involves loss of ranking, so a common offset alone
+cannot restore the source discrimination. The asserted Qwen control separately
+has 50% accuracy with AUROC 0.9936, illustrating boundary mismatch.
+
+This is posthoc exposed-bank diagnosis, not fresh confirmation. The pooled
+supplement was separately sealed after an independent critic identified the
+hard-only I/M1 anticorrelation. All v1 outcomes and sources remain unchanged.
+A separate-author reconstruction checked 36,100 scalar values across 3,200
+score and 300 joint-factor scopes, maximum difference 1.11e-16. No new model
+calls, fits or threshold optimization were used for these findings.
+
+The [current literature review](FORMAT_TRANSFER_RESEARCH_REVIEW_2026-11-26.md)
+finds direct precedent for mixed-style repair and narrows the next comparison
+to equal-observation coefficient adaptation versus intercept-only adaptation.
+The [independent design review](FORMAT_TRANSFER_DESIGN_REVIEW_2026-11-26.md)
+sets out fresh-context allocations and package-crossing controls. A tested
+input builder prepares all eight package combinations on the exposed contexts;
+those are diagnostic inputs, not new model results or human-reviewed cases.
+Human semantic review and fresh adaptation execution remain outstanding.
+
+## Earlier: fresh study complete at 02:43 GMT
 
 All ten scientific stages, the independent numerical audit, report generation
 and exact seven-file repository copy completed. The Windows worker exited zero

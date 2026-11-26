@@ -128,6 +128,22 @@ def test_worker_hashes_literal_script_without_get_filehash(tmp_path):
 
 def test_harmless_wsl_worker_receives_environment_before_shell_execution(tmp_path):
     """Foreground local WSL printf only; no model calls, Python or scheduler task."""
+    # Hosted Windows runners need not have this user's Ubuntu distribution.
+    # Skip only absent registration; a registered but broken Ubuntu still fails.
+    import winreg
+
+    try:
+        with winreg.OpenKey(
+            winreg.HKEY_CURRENT_USER, r"Software\Microsoft\Windows\CurrentVersion\Lxss"
+        ) as key:
+            names = []
+            for index in range(winreg.QueryInfoKey(key)[0]):
+                with winreg.OpenKey(key, winreg.EnumKey(key, index)) as distro:
+                    names.append(winreg.QueryValueEx(distro, "DistributionName")[0])
+    except FileNotFoundError:
+        pytest.skip("Local WSL integration requires a registered Ubuntu distribution")
+    if "Ubuntu" not in names:
+        pytest.skip("Local WSL integration requires a registered Ubuntu distribution")
     linux_runner = tmp_path / "harmless_runner.sh"
     linux_runner.write_bytes(
         b'#!/bin/bash\nset -eu\nprintf \'%s\\n\' "$OPENBLAS_NUM_THREADS" "$OMP_NUM_THREADS" "$MKL_NUM_THREADS" "$NUMEXPR_NUM_THREADS" "$HF_HOME" "$HF_HUB_CACHE" "$HF_HUB_OFFLINE" "$TRANSFORMERS_OFFLINE" "$TOKENIZERS_PARALLELISM"\nprintf \'harmless stderr\\n\' >&2\n'

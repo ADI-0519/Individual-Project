@@ -1,0 +1,270 @@
+"""Prepare posthoc crossed prompt inputs; optional tokenizer checks, never weights."""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import itertools
+import json
+from collections import Counter, defaultdict
+from pathlib import Path
+
+from latent_probes import format_bridge as bridge
+from latent_probes.fresh_readout_bank import ROOT, iter_rows, load_bank
+from latent_probes.storage import file_sha256, utc_now
+
+
+def fresh_json(path, value):
+    with path.open("x", encoding="utf-8", newline="\n") as stream:
+        json.dump(value, stream, indent=2, ensure_ascii=False, allow_nan=False)
+        stream.write("\n")
+
+
+def prepare(bank_path, output, *, check_tokenizers=False, reference_root=None):
+    bank_path, output = Path(bank_path).resolve(), Path(output).resolve()
+    # An existing attempt, including a failed tokenizer gate, is never overwritten.
+    output.mkdir(parents=True, exist_ok=False)
+    policy_paths = [
+        Path(__file__),
+        Path(bridge.__file__),
+        bank_path,
+        ROOT / "src/latent_probes/fresh_readout_bank.py",
+        ROOT / "src/latent_probes/fresh_readout_capture.py",
+        ROOT / "src/latent_probes/main_study_bank.py",
+        ROOT / "src/latent_probes/main_study_design.py",
+        ROOT / "src/latent_probes/main_study_run.py",
+        ROOT / "src/latent_probes/storage.py",
+    ]
+    sources = {str(p.resolve()): file_sha256(p) for p in policy_paths}
+    snapshots = output / "source_snapshots"
+    snapshots.mkdir()
+    for source_path, digest in sources.items():
+        (snapshots / (digest + "_" + Path(source_path).name + ".txt")).write_bytes(
+            Path(source_path).read_bytes()
+        )
+    fresh_json(
+        output / "started.json",
+        {"created_at": utc_now(), "source_sha256": sources, "model_calls": 0, "classifier_fits": 0},
+    )
+    try:
+        bank = load_bank(bank_path)
+        pairs = bridge.paired_donors(iter_rows(bank, "test"))
+        group_states = defaultdict(set)
+        for pair in pairs:
+            state = pair["A"]["state"]
+            group_states[pair["A"]["group_id"]].add(
+                tuple(
+                    state[k]
+                    for k in ("initial", "update", "first_receipt", "receipt", "world", "name_map")
+                )
+            )
+        expected_states = set(itertools.product((0, 1), repeat=6))
+        bridge.require(len(pairs) == 1536 and len(group_states) == 24, "Incomplete fixed cohort")
+        bridge.require(
+            all(states == expected_states for states in group_states.values()),
+            "Incomplete formal states within a context",
+        )
+        rows = [row for pair in pairs for row in bridge.cross_pair(pair)]
+        bridge.require(len({r["row_id"] for r in rows}) == 12288, "Bridge ID collision")
+        prompt_digest = hashlib.sha256()
+        for row in rows:
+            prompt_digest.update(
+                (
+                    bridge.canonical(
+                        {
+                            k: row[k]
+                            for k in (
+                                "record_id",
+                                "messages",
+                                "user_content_char_spans",
+                                "state",
+                                "gold",
+                            )
+                        }
+                    )
+                    + "\n"
+                ).encode("utf-8")
+            )
+
+        # Representative semantic-review inputs cover all 16 I/M1/B1/B2 paths
+        # under every package crossing. These are review inputs, not approval.
+        by_path = defaultdict(list)
+        for pair in pairs:
+            s = pair["A"]["state"]
+            by_path[tuple(s[k] for k in ("initial", "update", "first_receipt", "receipt"))].append(
+                pair
+            )
+        packet, key = [], []
+        for index, path in enumerate(sorted(by_path)):
+            choices = by_path[path]
+            chosen = choices[(index * 17) % len(choices)]
+            for row in bridge.cross_pair(chosen):
+                opaque_id = hashlib.sha256(row["record_id"].encode()).hexdigest()[:24]
+                packet.append({"review_id": opaque_id, "messages": row["messages"]})
+                key.append(
+                    {"review_id": opaque_id, "record_id": row["record_id"], "gold": row["gold"]}
+                )
+        fresh_json(output / "review_packet.json", {"human_review_complete": False, "items": packet})
+        fresh_json(output / "review_key.json", {"items": key})
+
+        tokenizer_checks = {}
+        if check_tokenizers:
+            bridge.require(
+                reference_root is not None, "Token checks require saved diagonal references"
+            )
+            from transformers import AutoTokenizer
+
+            from latent_probes.fresh_readout_capture import prepare_row
+            from latent_probes.main_study_run import MODELS
+
+            for model_key in ("llama", "qwen"):
+                model = MODELS[model_key]
+                tokenizer = AutoTokenizer.from_pretrained(
+                    model["model_id"], revision=model["revision"], local_files_only=True
+                )
+                token_digest = hashlib.sha256()
+                lengths = []
+                reference_path = Path(reference_root) / model_key / "test/rows.json"
+                reference = json.loads(reference_path.read_text(encoding="utf-8"))
+                bridge.require(not reference["test_fixture"], "Real diagonal references required")
+                references = {r["row_id"]: r for r in reference["rows"]}
+                bridge.require(
+                    len(references) == len(reference["rows"]) == 4992,
+                    "Invalid completed reference inventory",
+                )
+                reference_manifest = (
+                    Path(reference_root) / (model_key + "_analysis") / "manifest.json"
+                )
+                bindings = json.loads(reference_manifest.read_text(encoding="utf-8"))[
+                    "input_sha256"
+                ]
+                recorded = [
+                    value
+                    for key, value in bindings.items()
+                    if key.endswith("/" + model_key + "/test/rows.json")
+                ]
+                bridge.require(
+                    recorded == [file_sha256(reference_path)],
+                    "Diagonal reference differs from completed analysis binding",
+                )
+                diagonal_checks = 0
+
+                def planned():
+                    nonlocal diagonal_checks
+                    for row in rows:
+                        item = prepare_row(tokenizer, row, max_tokens=2048)
+                        if row["renderer"] in ("AAA", "BBB"):
+                            original_id = row["source_case_ids"][row["renderer"][0]]
+                            original = references[original_id]
+                            for key in (
+                                "messages_sha256",
+                                "rendered_chat_sha256",
+                                "prompt_token_ids_sha256",
+                                "token_positions",
+                                "selected_tokens",
+                            ):
+                                bridge.require(
+                                    item[key] == original[key], "Saved diagonal mismatch: " + key
+                                )
+                            diagonal_checks += 1
+                        lengths.append(len(item["prompt_token_ids"]))
+                        token_digest.update(
+                            (
+                                bridge.canonical(
+                                    {
+                                        k: item[k]
+                                        for k in ("row_id", "prompt_token_ids", "token_positions")
+                                    }
+                                )
+                                + "\n"
+                            ).encode("utf-8")
+                        )
+                        yield item
+
+                controls = bridge.check_query_prefix_invariance(planned())
+                bridge.require(diagonal_checks == 3072, "Incomplete saved diagonal checks")
+                tokenizer_checks[model_key] = {
+                    "model_id": model["model_id"],
+                    "revision": model["revision"],
+                    "prefixes": len(lengths),
+                    "max_prefix_tokens": max(lengths),
+                    "query_prefix_controls": controls,
+                    "query_prefix_controls_passed": True,
+                    "ordered_prefix_sha256": token_digest.hexdigest(),
+                    "saved_diagonal_checks": diagonal_checks,
+                    "saved_diagonal_checks_passed": True,
+                    "reference_rows_sha256": file_sha256(reference_path),
+                    "reference_analysis_manifest_sha256": file_sha256(reference_manifest),
+                }
+        bridge.require(
+            all(file_sha256(p) == sha for p, sha in sources.items()),
+            "Preparation sources changed during execution",
+        )
+        result = {
+            "schema": "posthoc-format-bridge-preparation-v1",
+            "created_at": utc_now(),
+            "status": "prepared_no_weights",
+            "exposed_contexts": True,
+            "fresh_confirmation": False,
+            "human_review_complete": False,
+            "model_calls": 0,
+            "classifier_fits": 0,
+            "contexts": 24,
+            "formal_correction_states": len(pairs),
+            "prompt_variants": len(rows),
+            "variant_order": ["system", "narrative", "question"],
+            "counts": dict(sorted(Counter(r["renderer"] for r in rows).items())),
+            "ordered_prompt_sha256": prompt_digest.hexdigest(),
+            "source_sha256": sources,
+            "tokenizer_checks": tokenizer_checks,
+            "review_items": len(packet),
+            "review_packet_sha256": file_sha256(output / "review_packet.json"),
+            "review_key_sha256": file_sha256(output / "review_key.json"),
+            "interpretation": "Exact diagonal reproduction and causal-prefix availability checks; no model outcome, semantic approval, or hidden-state invariance measurement.",
+        }
+        fresh_json(output / "preparation.json", result)
+        return result
+    except BaseException as error:
+        fresh_json(
+            output / "failure.json",
+            {
+                "created_at": utc_now(),
+                "exception_type": type(error).__name__,
+                "message": str(error),
+                "model_calls": 0,
+                "classifier_fits": 0,
+            },
+        )
+        raise
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--bank",
+        type=Path,
+        default=ROOT / "data/belief_main/fresh_readout_v2/compiled_v1/bank.json",
+    )
+    parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--check-tokenizers", action="store_true")
+    parser.add_argument("--reference-root", type=Path)
+    args = parser.parse_args()
+    result = prepare(
+        args.bank,
+        args.output,
+        check_tokenizers=args.check_tokenizers,
+        reference_root=args.reference_root,
+    )
+    print(
+        json.dumps(
+            {
+                "status": result["status"],
+                "prompt_variants": result["prompt_variants"],
+                "tokenizer_checks": result["tokenizer_checks"],
+            }
+        )
+    )
+
+
+if __name__ == "__main__":
+    main()

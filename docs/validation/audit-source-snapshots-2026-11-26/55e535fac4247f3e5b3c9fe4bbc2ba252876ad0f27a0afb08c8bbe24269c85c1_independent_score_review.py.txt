@@ -1,0 +1,93 @@
+"""Separate-author outcome-aware numerical check, no production diagnostic imports."""
+import hashlib,json,sys
+from pathlib import Path
+from datetime import datetime,timezone
+import numpy as np
+from sklearn.metrics import roc_auc_score
+root=Path.cwd()
+native=Path('//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2')
+outputs=root/'docs/results/format-score-shift-2026-11-26'
+reports={'strata':outputs/'20261126T232649Z_90868d74','pooled':outputs/'20261126T233413Z_76bd60ed_correction_pool'}
+sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+inputs={}
+computed={}
+joint={}
+paired_counts={}
+for model in ['llama','qwen']:
+ rowpath=native/model/'test/rows.json'; predpath=native/(model+'_analysis')/'predictions.npz'
+ inputs[str(rowpath)]=sha(rowpath); inputs[str(predpath)]=sha(predpath)
+ rows=json.loads(rowpath.read_text())['rows']
+ lookup={r['row_id']:r for r in rows}
+ assert len(lookup)==4992
+ with np.load(predpath,allow_pickle=False) as z:
+  ids=[str(x) for x in z['row_ids']]; names=[str(x) for x in z['methods']]
+  margins=z['margins'].copy(); factors=z['factor_margins'].copy(); fp=z['factor_predictions'].copy()
+ assert len(ids)==4992 and len(set(ids))==4992 and set(ids)==set(lookup)
+ assert np.array_equal(fp,(factors>0).astype(int))
+ meta=[lookup[i] for i in ids]
+ pairs={}
+ for r in meta:
+  key=(r['group_id'],r['condition'],json.dumps(r['state'],sort_keys=True))
+  p=pairs.setdefault(key,{})
+  assert r['renderer'] not in p
+  p[r['renderer']]=r
+ assert len(pairs)==2496
+ assert all(set(p)=={'A','B'} and p['A']['gold']==p['B']['gold'] for p in pairs.values())
+ paired_counts[model]=len(pairs)
+ groups=sorted({r['group_id'] for r in meta}); assert len(groups)==24
+ for scope,conditions in [('strata',['correction_easy','correction_hard','one_step','asserted']),('pooled',['correction_all'])]:
+  for condition in conditions:
+   valid=lambda r: r['condition']==condition if condition!='correction_all' else r['condition'] in ['correction_easy','correction_hard']
+   heads=['S0','S1','C1','output']+(['I','M1','B1','B2'] if condition.startswith('correction_') else [])
+   for renderer in ['A','B']:
+    for group in [None,*groups]:
+     indices=np.array([i for i,r in enumerate(meta) if valid(r) and r['renderer']==renderer and (group is None or r['group_id']==group)])
+     assert len(indices)>0
+     gold=np.array([meta[i]['gold'] for i in indices])
+     if condition.startswith('correction_'):
+      truth=np.array([[meta[i]['state'][k] for k in ['initial','update','first_receipt','receipt']] for i in indices])
+      preds=(factors[indices]>0).astype(int)
+      folded=np.where(preds[:,3]==1,1-preds[:,1],np.where(preds[:,2]==1,preds[:,1],preds[:,0]))
+      joint[(scope,model,condition,renderer,group)]={'n':len(indices),'all_four_correct':float(np.mean(np.all(preds==truth,axis=1))),'C2_fold_accuracy':float(np.mean(folded==gold))}
+     for head in heads:
+      if head in ['I','M1','B1','B2']:
+       col=['I','M1','B1','B2'].index(head); y=truth[:,col]; score=factors[indices,col]
+      else:
+       y=gold;score=margins[indices,names.index(head)]
+      assert np.isfinite(score).all()
+      metric={'n':len(y),'raw_auroc':float(roc_auc_score(y,score)) if len(set(y))==2 else None,'accuracy_at_zero':float(np.mean((score>0)==y)),'predicted_positive_rate':float(np.mean(score>0)),'classes':{}}
+      metric['positive_minus_negative_mean_margin']=float(np.mean(score[y==1])-np.mean(score[y==0])) if len(set(y))==2 else None
+      for label in [0,1]:
+       subset=score[y==label]
+       metric['classes'][str(label)]={'n':len(subset),'recall_at_zero':float(np.mean((subset>0)==label)) if len(subset) else None,'margin':{'mean':float(np.mean(subset)) if len(subset) else None}}
+      computed[(scope,model,condition,head,renderer,group)]=metric
+freeze=root/'.cache/format-score-independent-reconstruction-v1.json'
+freeze.write_text(json.dumps({'computed':[[list(k),v] for k,v in computed.items()],'joint':[[list(k),v] for k,v in joint.items()]},sort_keys=True)+'\n')
+frozen_at=datetime.now(timezone.utc).isoformat(); frozen_sha=sha(freeze)
+# Expected reports are first parsed only after the independent reconstruction.
+expected={key:json.loads((path/'summary.json').read_text()) for key,path in reports.items()}
+comparisons=0;max_error=0.0
+
+def compare(a,b):
+ global comparisons,max_error
+ if isinstance(a,dict):
+  assert isinstance(b,dict)
+  for key,value in a.items(): compare(value,b[key])
+ elif a is None:
+  assert b is None; comparisons+=1
+ else:
+  err=abs(float(a)-float(b));max_error=max(max_error,err);assert err<1e-10,(a,b,err);comparisons+=1
+for (scope,model,condition,head,renderer,group),value in computed.items():
+ renderer_data=expected[scope]['results'][model]['conditions'][condition][head]['renderers'][renderer]
+ compare(value,renderer_data['pooled'] if group is None else renderer_data['contexts'][group])
+for (scope,model,condition,renderer,group),value in joint.items():
+ d=expected[scope]['results'][model]['joint_factors'][condition][renderer]
+ compare(value,d['pooled'] if group is None else d['contexts'][group])
+for scope,path in reports.items():
+ manifest=json.loads((path/'manifest.json').read_text())
+ for name,h in manifest['output_sha256'].items():assert sha(path/name)==h,(path,name)
+ inputs[str(path/'summary.json')]=sha(path/'summary.json')
+receipt={'schema':'separate-author-format-score-numerical-review-v1','status':'pass','created_at':datetime.now(timezone.utc).isoformat(),'source_sha256':sha(__file__),'interpreter':sys.executable,'input_sha256':inputs,'score_scopes':len(computed),'joint_factor_scopes':len(joint),'scalar_comparisons':comparisons,'max_absolute_difference':max_error,'tolerance':1e-10,'formal_A_B_pairs_per_model':paired_counts,'independent_reconstruction_frozen_at':frozen_at,'independent_reconstruction_sha256':frozen_sha,'scope':'Separate author, known headline outcomes, sklearn plus NumPy independent of diagnostic; all pooled/context raw AUROCs, fixed-zero accuracy, recalls, class means and joint-factor/fold accuracy; not every quantile/correlation/order/nuisance field independently reimplemented.','new_language_model_calls':0,'classifier_fits':0,'human_semantic_review':False,'fresh_confirmation':False}
+path=root/'docs/validation/2026-11-26-format-score-independent-review-v1.json'
+with path.open('x',encoding='utf-8') as f:json.dump(receipt,f,indent=2);f.write('\n')
+print(json.dumps({k:receipt[k] for k in ['status','score_scopes','joint_factor_scopes','scalar_comparisons','max_absolute_difference']}))

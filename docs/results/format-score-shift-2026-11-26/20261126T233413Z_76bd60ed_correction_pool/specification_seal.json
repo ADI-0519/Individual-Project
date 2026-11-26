@@ -1,0 +1,11 @@
+﻿{
+    "schema":  "format-score-shift-pooling-addendum-seal-v1",
+    "sealed_at_utc":  "2026-11-26T23:34:38.5259546Z",
+    "specification_path":  "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\docs\\results\\format-score-shift-2026-11-26\\20261126T233413Z_76bd60ed_correction_pool\\specification_addendum.md",
+    "specification_sha256":  "dae3203cb450991da6cbec5d101e8ed4b5f2fb546870771a76551ac0e3cbc6fd",
+    "raw_margin_arrays_parsed_before_seal":  true,
+    "initial_stratum_outcomes_seen":  true,
+    "new_scope_computed_before_seal":  false,
+    "reason":  "Independent algebraic-identifiability review: I/M1 depend within hard/easy, vary independently jointly",
+    "output":  "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\docs\\results\\format-score-shift-2026-11-26\\20261126T233413Z_76bd60ed_correction_pool"
+}

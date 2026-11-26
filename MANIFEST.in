@@ -16,7 +16,9 @@ recursive-include docs *.md
 recursive-include docs/validation *.json
 recursive-include docs/validation/audit-source-snapshots-2026-11-22 *.txt
 recursive-include docs/validation/audit-source-snapshots-2026-11-23 *.txt
-recursive-include docs/results *.json *.png *.svg *.pdf
+recursive-include docs/validation/audit-source-snapshots-2026-11-26 *.txt
+recursive-include docs/results *.json *.png *.svg *.pdf *.csv *.py
+recursive-include docs/review/format_bridge_v1 *.json
 recursive-include docs/review/main_study_v1 *.csv *.json *.jsonl *.html
 recursive-include docs/figures *.png *.svg *.pdf
 recursive-include scripts *.py *.sh *.ps1

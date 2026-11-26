@@ -13,6 +13,20 @@ controlled study tests a frozen readout of sender-attributed current belief;
 this target is distinct from Apollo deception detection. See the
 [current research decision](docs/CURRENT_RESEARCH_STATE.md).
 
+**26 November: the complete score-shift diagnostic is finished.**
+The [new diagnosis](docs/FORMAT_TRANSFER_RESULTS_2026-11-26.md) finds preserved
+location-content ranking but much poorer reading-record ranking under format B:
+first-receipt raw AUROC is 0.696 for Llama and 0.670 for Qwen. Both location
+factors retain 0.987-0.999. This posthoc analysis uses all saved test cases and
+an independently reviewed easy/hard pooling supplement; it requires no new
+model calls, fits or threshold repair. Separate-author arithmetic agrees on
+36,100 scalar checks. See the [figure PDF](docs/results/format-score-shift-2026-11-26/figure/factor_transfer.pdf),
+[deep literature review](docs/FORMAT_TRANSFER_RESEARCH_REVIEW_2026-11-26.md)
+and [proposed controlled follow-up](docs/FORMAT_TRANSFER_DESIGN_REVIEW_2026-11-26.md).
+Generic mixed-format repair already has precedent; the next fresh comparison
+must distinguish coefficient adaptation from an equal-observation intercept-only
+control. Human semantic review and that fresh experiment remain unfinished.
+
 **23 November, 02:43 GMT: the fresh two-model study is complete.**
 All 14,080 planned cohort prefixes, both fresh test captures, the independent
 saved-data audit and all report exports finished. The primary source-only

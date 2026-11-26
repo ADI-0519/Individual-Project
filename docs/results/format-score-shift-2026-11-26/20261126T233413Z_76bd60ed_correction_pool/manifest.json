@@ -1,0 +1,31 @@
+{
+  "schema": "posthoc-format-score-shift-manifest-v1",
+  "completed_at_utc": "2026-11-26T23:35:38.320124+00:00",
+  "input_sha256": {
+    "docs\\results\\format-score-shift-2026-11-26\\20261126T233413Z_76bd60ed_correction_pool\\specification_addendum.md": "dae3203cb450991da6cbec5d101e8ed4b5f2fb546870771a76551ac0e3cbc6fd",
+    "docs\\results\\format-score-shift-2026-11-26\\20261126T233413Z_76bd60ed_correction_pool\\specification_seal.json": "82ce450e5154d3604b07977a164978771652092be5d43c63891efe9fcf287b26",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\llama_analysis\\manifest.json": "3f6852b3f10244cafd76523c2d2825a177a1c5eeafb5a2739f0a0f0e4c180d44",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\llama_analysis\\predictions.npz": "3cdd11df723a8c2c9e64cf552a4b8c2b7525652015476dfdb0972cc02219b954",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\llama\\test\\rows.json": "f3d8de2ee74ea5bb2300b32b9e26fb711b7435793b24ebbf5128d776b74f6f41",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\qwen_analysis\\manifest.json": "ba7ecd08a3c7a261573992cdf7d9f582d8f1e675fc0af92dffae15f4b8310e64",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\qwen_analysis\\predictions.npz": "57e91d5139d505ebe62411140b7526b625c7ca8a0c9f91ceba226d3d3c754864",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\qwen\\test\\rows.json": "0e54205e838d49d3c0ee1b5558371d6ae6d908078001fb36b0616dd2e3a88d3f"
+  },
+  "source_sha256": "c824bdb0997d840abde1e0f6bbedba8da0655f02110e808819ef882cda0441cf",
+  "interpreter": "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9",
+  "numpy_version": "2.4.6",
+  "specification_sealed_at_utc": "2026-11-26T23:34:38.5259546Z",
+  "output_sha256": {
+    "nuisance_pairs.csv": "1f04ac1d3d93fee691b6263f3b70c825f6d9df255a0f226ed84977c85fc7b319",
+    "order_transitions.csv": "0bbbbc688d12cb54e413bb1ad83cc7d1d13b0efd94f9664cf7fe00f638a59f33",
+    "paired_scores.csv": "c72e5ce767797dd0a3eb26aee86b9e0b77b84748ef0d8eb69d5ccb0fee0f2e6d",
+    "pairing_inventory.csv": "445f55ce93fb9c662c55efb78d8080b7d2f9d350237d58747a49a2888778ebf9",
+    "receipt.md": "2c1e1bff832a445b02aec40d5815fead4adb4a2143cdc9dc62fcfc0150ccabe9",
+    "scores.csv": "47d29bc9ff7aa73f6afd6aa43dfff116672b440bb2d1f07d43ef7b9e9ad407b4",
+    "specification_addendum.md": "dae3203cb450991da6cbec5d101e8ed4b5f2fb546870771a76551ac0e3cbc6fd",
+    "specification_seal.json": "82ce450e5154d3604b07977a164978771652092be5d43c63891efe9fcf287b26",
+    "summary.json": "75c5aedb17d761c64f9107d8e8656a46dda9e1e5f7b591e51a82d2a372677052"
+  },
+  "integrity_checks": "Completed prediction/row manifest hashes; exact ID joins; full formal A/B states; prompt identities; 24 complete contexts; cross-model inventories; formal gold and frozen thresholds/fold"
+}

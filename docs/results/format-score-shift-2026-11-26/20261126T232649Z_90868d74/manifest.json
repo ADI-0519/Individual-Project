@@ -1,0 +1,30 @@
+{
+  "schema": "posthoc-format-score-shift-manifest-v1",
+  "completed_at_utc": "2026-11-26T23:31:36.574706+00:00",
+  "input_sha256": {
+    "docs\\FORMAT_SCORE_SHIFT_DIAGNOSTIC_SPEC_V1.md": "3abbc410cbc760a4d5cb81c65902f80f604e6001754ab9292b3223421d70c157",
+    "docs\\results\\format-score-shift-2026-11-26\\20261126T232649Z_90868d74\\specification_seal.json": "c4ce39a707221f524e04df40028e499320fb338f0e4039136507c021fe058d34",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\llama_analysis\\manifest.json": "3f6852b3f10244cafd76523c2d2825a177a1c5eeafb5a2739f0a0f0e4c180d44",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\llama_analysis\\predictions.npz": "3cdd11df723a8c2c9e64cf552a4b8c2b7525652015476dfdb0972cc02219b954",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\llama\\test\\rows.json": "f3d8de2ee74ea5bb2300b32b9e26fb711b7435793b24ebbf5128d776b74f6f41",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\qwen_analysis\\manifest.json": "ba7ecd08a3c7a261573992cdf7d9f582d8f1e675fc0af92dffae15f4b8310e64",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\qwen_analysis\\predictions.npz": "57e91d5139d505ebe62411140b7526b625c7ca8a0c9f91ceba226d3d3c754864",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\qwen\\test\\rows.json": "0e54205e838d49d3c0ee1b5558371d6ae6d908078001fb36b0616dd2e3a88d3f"
+  },
+  "source_sha256": "2953dc1c4a7101ec664237a6635187bf7ed9dd7ce6a180250e2be06473b513ef",
+  "interpreter": "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9",
+  "numpy_version": "2.4.6",
+  "specification_sealed_at_utc": "2026-11-26T23:26:49.8746590Z",
+  "output_sha256": {
+    "nuisance_pairs.csv": "0896f7c8f571df331f71a5bceb447e1351f078c481729cb05ca24c2b0d4bc9eb",
+    "order_transitions.csv": "6d89b5bbc73f3ebf635de943b0f9cd801f5047fb30f986f3b03ebea69e7590a2",
+    "paired_scores.csv": "e356b69a45b41202d660cc57f369e227d84a9cd80092db72aecadce65c6a0667",
+    "pairing_inventory.csv": "57d1a6da3baaea410ed992e7fa0d9f8a711ef548333db7abe0a13b2c70bd27ed",
+    "receipt.md": "af3b573b4fe9bf69ff5505208cd42c2f642c4c29b376c0a281ac90f719a2ac1f",
+    "scores.csv": "9643be6ad1446e1094056cc7f73ee9d0143332319d91b5053967444cb8f8fbb4",
+    "specification_seal.json": "c4ce39a707221f524e04df40028e499320fb338f0e4039136507c021fe058d34",
+    "summary.json": "3a6810ff176516db5c441190ef1f1531b8ee17f445c6219402a10948888bd097"
+  },
+  "integrity_checks": "Completed prediction/row manifest hashes; exact ID joins; full formal A/B states; prompt identities; 24 complete contexts; cross-model inventories; formal gold and frozen thresholds/fold"
+}

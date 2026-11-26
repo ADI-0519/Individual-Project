@@ -1,0 +1,75 @@
+{
+  "schema": "format-bridge-native-preflight-export-v1",
+  "status": "pass",
+  "model_calls": 0,
+  "classifier_fits": 0,
+  "fresh_confirmation": false,
+  "human_semantic_review": false,
+  "exports": {
+    "docs\\review\\format_bridge_v1\\preparation.json": {
+      "native": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_bridge_preflight_20261126_v3\\preparation.json",
+      "sha256": "93d97c6235871d8f6a7c1c8fceeb411fc65f421057af71590dc8da56fdf64607"
+    },
+    "docs\\review\\format_bridge_v1\\review_packet.json": {
+      "native": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_bridge_preflight_20261126_v3\\review_packet.json",
+      "sha256": "3bcb2d2ab39e4acf055b3037baf57a6f4e0778217b006934114396741bf05928"
+    },
+    "docs\\review\\format_bridge_v1\\review_key.json": {
+      "native": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_bridge_preflight_20261126_v3\\review_key.json",
+      "sha256": "caefb48169bf3ac3da9b6fb58e5849b85650c05d1cbbc65d0742aba126d3447e"
+    },
+    "docs\\review\\format_bridge_v1\\started.json": {
+      "native": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_bridge_preflight_20261126_v3\\started.json",
+      "sha256": "e2c26835fb199c66597f95908e4dbff7b7564a057dfa7077b55543824bc4fe7b"
+    },
+    "docs\\review\\format_bridge_v1\\failed_v2_failure.json": {
+      "native": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_bridge_preflight_20261126_v2\\failure.json",
+      "sha256": "5782f541354d2f4fa7bee900e7d516dbf194fae3437a056d2a704cb07217b1c5"
+    },
+    "docs\\review\\format_bridge_v1\\failed_v2_started.json": {
+      "native": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_bridge_preflight_20261126_v2\\started.json",
+      "sha256": "2854e8396ba1d5ae2f3bfafc59304e8412460e4fd8283a5f40b7ccbc7629c9aa"
+    },
+    "docs\\validation\\audit-source-snapshots-2026-11-26\\0765526fd11f6d0d4e44948597340b686dccd46f05d4e21257b5724d6ce66dfb_fresh_readout_bank.py.txt": {
+      "native": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_bridge_preflight_20261126_v2\\source_snapshots\\0765526fd11f6d0d4e44948597340b686dccd46f05d4e21257b5724d6ce66dfb_fresh_readout_bank.py.txt",
+      "sha256": "0765526fd11f6d0d4e44948597340b686dccd46f05d4e21257b5724d6ce66dfb"
+    },
+    "docs\\validation\\audit-source-snapshots-2026-11-26\\5e1cc2195f15973be82b6bd62101a8753f03c61f4667256a40b1a45b9d083292_fresh_readout_capture.py.txt": {
+      "native": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_bridge_preflight_20261126_v2\\source_snapshots\\5e1cc2195f15973be82b6bd62101a8753f03c61f4667256a40b1a45b9d083292_fresh_readout_capture.py.txt",
+      "sha256": "5e1cc2195f15973be82b6bd62101a8753f03c61f4667256a40b1a45b9d083292"
+    },
+    "docs\\validation\\audit-source-snapshots-2026-11-26\\b5d9aae9105e856bd2eeea061e5098291601074b32d6be0730768d6295c40162_main_study_bank.py.txt": {
+      "native": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_bridge_preflight_20261126_v2\\source_snapshots\\b5d9aae9105e856bd2eeea061e5098291601074b32d6be0730768d6295c40162_main_study_bank.py.txt",
+      "sha256": "b5d9aae9105e856bd2eeea061e5098291601074b32d6be0730768d6295c40162"
+    },
+    "docs\\validation\\audit-source-snapshots-2026-11-26\\bb277ba4efa6e090879405e472a8cb70a973b3ab53cfe340ede56c61cfa98e35_bank.json.txt": {
+      "native": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_bridge_preflight_20261126_v2\\source_snapshots\\bb277ba4efa6e090879405e472a8cb70a973b3ab53cfe340ede56c61cfa98e35_bank.json.txt",
+      "sha256": "bb277ba4efa6e090879405e472a8cb70a973b3ab53cfe340ede56c61cfa98e35"
+    },
+    "docs\\validation\\audit-source-snapshots-2026-11-26\\09f219b7aedcb222c0eea05ba1ea9324d28fd298f49a2a45004429d7ede10501_main_study_run.py.txt": {
+      "native": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_bridge_preflight_20261126_v2\\source_snapshots\\09f219b7aedcb222c0eea05ba1ea9324d28fd298f49a2a45004429d7ede10501_main_study_run.py.txt",
+      "sha256": "09f219b7aedcb222c0eea05ba1ea9324d28fd298f49a2a45004429d7ede10501"
+    },
+    "docs\\validation\\audit-source-snapshots-2026-11-26\\241983fd083fc299185c0c9f709b7f2b0356a54fc8045b8a85311c850441af7d_format_bridge.py.txt": {
+      "native": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_bridge_preflight_20261126_v2\\source_snapshots\\241983fd083fc299185c0c9f709b7f2b0356a54fc8045b8a85311c850441af7d_format_bridge.py.txt",
+      "sha256": "241983fd083fc299185c0c9f709b7f2b0356a54fc8045b8a85311c850441af7d"
+    },
+    "docs\\validation\\audit-source-snapshots-2026-11-26\\1de87a24cc3bd701c0384d648d405ddb6066280beae3e21bf1b173c203ee0e84_storage.py.txt": {
+      "native": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_bridge_preflight_20261126_v2\\source_snapshots\\1de87a24cc3bd701c0384d648d405ddb6066280beae3e21bf1b173c203ee0e84_storage.py.txt",
+      "sha256": "1de87a24cc3bd701c0384d648d405ddb6066280beae3e21bf1b173c203ee0e84"
+    },
+    "docs\\validation\\audit-source-snapshots-2026-11-26\\0973d047d2e98736c1b9144d2187079a60d87f2280eeca691330ff91135506b9_main_study_design.py.txt": {
+      "native": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_bridge_preflight_20261126_v2\\source_snapshots\\0973d047d2e98736c1b9144d2187079a60d87f2280eeca691330ff91135506b9_main_study_design.py.txt",
+      "sha256": "0973d047d2e98736c1b9144d2187079a60d87f2280eeca691330ff91135506b9"
+    },
+    "docs\\validation\\audit-source-snapshots-2026-11-26\\400cb4f72ebc8402bbf17cb55f64bdb5fb8d379a9f36d84e5696e4042bcd9fbb_prepare_format_bridge.py.txt": {
+      "native": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_bridge_preflight_20261126_v3\\source_snapshots\\400cb4f72ebc8402bbf17cb55f64bdb5fb8d379a9f36d84e5696e4042bcd9fbb_prepare_format_bridge.py.txt",
+      "sha256": "400cb4f72ebc8402bbf17cb55f64bdb5fb8d379a9f36d84e5696e4042bcd9fbb"
+    },
+    "docs\\validation\\audit-source-snapshots-2026-11-26\\eaa2ce59d6600b640cf5a9f95c2f5885140b87b04b5b4f05eb39d31eb97ed2c0_prepare_format_bridge.py.txt": {
+      "native": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_bridge_preflight_20261126_v2\\source_snapshots\\eaa2ce59d6600b640cf5a9f95c2f5885140b87b04b5b4f05eb39d31eb97ed2c0_prepare_format_bridge.py.txt",
+      "sha256": "eaa2ce59d6600b640cf5a9f95c2f5885140b87b04b5b4f05eb39d31eb97ed2c0"
+    }
+  },
+  "history": "v1 donor-only preparation passed; v2 stronger reference gate failed at an incorrect manifest key before model use; v3 adapter correction and regression passed. All native attempts retained. v2/v3 exact source snapshots exported; v1 original source hash remains in native receipt, without an exported exact source snapshot."
+}

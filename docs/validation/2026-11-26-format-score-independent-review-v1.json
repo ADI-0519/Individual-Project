@@ -1,0 +1,31 @@
+{
+  "schema": "separate-author-format-score-numerical-review-v1",
+  "status": "pass",
+  "created_at": "2026-11-26T23:38:12.142866+00:00",
+  "source_sha256": "55e535fac4247f3e5b3c9fe4bbc2ba252876ad0f27a0afb08c8bbe24269c85c1",
+  "interpreter": "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\.venv\\Scripts\\python.exe",
+  "input_sha256": {
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\llama\\test\\rows.json": "f3d8de2ee74ea5bb2300b32b9e26fb711b7435793b24ebbf5128d776b74f6f41",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\llama_analysis\\predictions.npz": "3cdd11df723a8c2c9e64cf552a4b8c2b7525652015476dfdb0972cc02219b954",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\qwen\\test\\rows.json": "0e54205e838d49d3c0ee1b5558371d6ae6d908078001fb36b0616dd2e3a88d3f",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\qwen_analysis\\predictions.npz": "57e91d5139d505ebe62411140b7526b625c7ca8a0c9f91ceba226d3d3c754864",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\docs\\results\\format-score-shift-2026-11-26\\20261126T232649Z_90868d74\\summary.json": "3a6810ff176516db5c441190ef1f1531b8ee17f445c6219402a10948888bd097",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\docs\\results\\format-score-shift-2026-11-26\\20261126T233413Z_76bd60ed_correction_pool\\summary.json": "75c5aedb17d761c64f9107d8e8656a46dda9e1e5f7b591e51a82d2a372677052"
+  },
+  "score_scopes": 3200,
+  "joint_factor_scopes": 300,
+  "scalar_comparisons": 36100,
+  "max_absolute_difference": 1.1102230246251565e-16,
+  "tolerance": 1e-10,
+  "formal_A_B_pairs_per_model": {
+    "llama": 2496,
+    "qwen": 2496
+  },
+  "independent_reconstruction_frozen_at": "2026-11-26T23:38:12.014366+00:00",
+  "independent_reconstruction_sha256": "512c73fc282803abd67e8f73835e788f6e52a9b57b066241fbf08c14bb8de274",
+  "scope": "Separate author, known headline outcomes, sklearn plus NumPy independent of diagnostic; all pooled/context raw AUROCs, fixed-zero accuracy, recalls, class means and joint-factor/fold accuracy; not every quantile/correlation/order/nuisance field independently reimplemented.",
+  "new_language_model_calls": 0,
+  "classifier_fits": 0,
+  "human_semantic_review": false,
+  "fresh_confirmation": false
+}
