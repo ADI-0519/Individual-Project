@@ -1,0 +1,70 @@
+{
+  "schema": "format-adaptation-portable-replay-independent-review-v1",
+  "status": "pass_source_and_synthetic_scope",
+  "reviewed_at_utc": "2026-11-27T02:20:45.023951+00:00",
+  "reviewer": "independent adaptation_protocol_critic agent",
+  "source_sha256": {
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\scripts\\export_format_adaptation_replay.py": "a118ed35baf5410951e233fcf24f4b408697c7d08f3f24294f87f27cdef66a5c",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\tests\\test_export_format_adaptation_replay.py": "f60db61bfe46596ef4aad9175ea3e2da86d9d179e112ab0dabd68eb7ad1e9eb1",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\docs\\FORMAT_ADAPTATION_PORTABLE_REPLAY.md": "77fd08ee9d2868df97633b311dd107d0421808e95e7c485381ad4d76fbcff2da"
+  },
+  "current_campaign_outcomes_accessed": false,
+  "real_export_or_real_replay_executed": false,
+  "bound_scientific_sources_modified": false,
+  "author_files_modified_by_reviewer": false,
+  "model_calls": 0,
+  "classifier_fits": 0,
+  "independent_arithmetic_audit_performed_by_this_replay_review": false,
+  "independently_executed_tests": [
+    {
+      "selection": "projection_refuses_nested_or_misplaced_vectors",
+      "passed": 3,
+      "deselected": 18,
+      "elapsed_seconds": 1.42
+    },
+    {
+      "selection": "round_trip_retains_exact_original_bytes_and_all_metric_scopes or standalone_copy_replays_without_native_files_repo_import_or_pythonpath",
+      "passed": 2,
+      "deselected": 19,
+      "elapsed_seconds": 64.11
+    }
+  ],
+  "author_reported_full_suite": {
+    "passed": 21,
+    "elapsed_seconds": 51.05,
+    "ruff": "clean"
+  },
+  "source_review_checks": [
+    "Public real export requires passing both-model audit with exact original campaign identity; both complete captures and analyses are checked and their bytes linked back to audit/test/reconstruction seals.",
+    "Prediction NPZ is preflighted before output creation: exact permitted keys, all four arms/factors and their order, all4992 row identities/order, exact shapes, finite float64 margins, binary integer predictions and boolean strict flags. Exact original NPZ bytes are copied.",
+    "Projected states use exact formal field closure and scalar bits/None; row identities are nonempty scalar strings and optional original hashes are64hex strings. Prompts, token arrays and hidden vectors are omitted.",
+    "Projected rows retain full formal states, gold, format/condition/context plus scalar output summaries and candidate IDs needed by unchanged score_arrays and output_token_detail. Production validators check formal labels, full A/B factorial inventory and factor decision/external-fold consistency.",
+    "All prescribed production metric scopes replay, including arm/class/quartet/nuisance metrics and percontext values, pooled/easy/hard factors, pairedformat, conditional/strict output, Llama primary/Qwen secondary, Mixed-Offset and fixed context bootstrap.",
+    "Three scientific metric modules are copied as exact original sealed bytes and imported under an isolated package. Independent standalone test copied the bundle, made native fixture inputs unavailable, removed repository/PYTHONPATH access and trapped latent_probes/torch/transformers imports.",
+    "Public fixture export/replay and promotion by simple flag mismatch are refused; private software fixtures retain conspicuous synthetic status. Static/rehashed tamper, stale/wrong audit and existing-output refusals are covered by code/test inspection. Failed partial bundles preserve failed status and original input bytes are rechecked after export."
+  ],
+  "resolved_findings": [
+    {
+      "issue": "Top-level projection whitelist originally allowed unexpected nested state/hash/identity vectors to be retained.",
+      "resolution": "Author added exact formal-state key/type closure, scalar identity and64hex hash checks; reviewer independently ran the three rejecting cases after fix.",
+      "remaining_blocker": false
+    },
+    {
+      "issue": "Unexpected NPZ keys could originally be copied into a failed partial export before replay rejected them.",
+      "resolution": "Author added prediction-array inventory preflight before any export output is created.",
+      "remaining_blocker": false
+    },
+    {
+      "issue": "Windows relative module path rendering differed from standalone receipt contract.",
+      "resolution": "Author uses as_posix() and reviewer independently passed relocated standalone replay.",
+      "remaining_blocker": false
+    }
+  ],
+  "remaining_limits": [
+    "This implementation reuses production metric functions; it is portable replay, not a second independent numeric audit or a hidden-feature-to-prediction reconstruction.",
+    "Original capture/audit hashes and export implementation bind the projection; omitted prompts/vectors cannot be independently reconstructed from this compact bundle.",
+    "Local hashes provide integrity relative to a retained manifest, not a digital signature. Record/publish the exported manifest hash separately when distributing.",
+    "This review covers the named source bytes and synthetic tests. Actual completed campaign export/replay remains subject to root outcome unlock and its own execution receipt."
+  ],
+  "remaining_blocking_issues": []
+}
