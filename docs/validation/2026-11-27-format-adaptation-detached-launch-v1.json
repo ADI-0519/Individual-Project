@@ -1,0 +1,95 @@
+{
+  "schema": "format-adaptation-detached-launch-v1",
+  "created_at": "2026-11-27T01:32:48.840026+00:00",
+  "source_commit": "40ae42efe73e7cdfa0917eb89a5d4697bee3ca75",
+  "native_campaign": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_adaptation_v1_20261127_campaign",
+  "windows_worker_directory": "C:\\Users\\adirj\\AppData\\Local\\FreshReadoutDurable\\20261127T012649Z_b57d6945755e4b53aeada19d617200dd",
+  "scientific_source_files": 50,
+  "preparation_sha256": "d714ce20a2380192cd1e0859b8b251ac7639646d99b7446cab775e56ade960aa",
+  "model_protocol_sha256": {
+    "llama": "f963488e2e088814d2733f8c8972fc4a15b6c57951563a19eeb4e88d62ae68d0",
+    "qwen": "5521868d727a4a6fe36265267ba44512ecf423c5326f59ecdae18ad952837f1e"
+  },
+  "registered_worker": {
+    "password_supplied": false,
+    "run_directory": "C:\\Users\\adirj\\AppData\\Local\\FreshReadoutDurable\\20261127T012649Z_b57d6945755e4b53aeada19d617200dd",
+    "created_at": "2026-11-27T01:26:49.2656558Z",
+    "kind": "campaign",
+    "logon_type": 3,
+    "user": "ADI-DESKTOP\\adirj",
+    "status": "started",
+    "run_level": 0,
+    "cim_return_value": 0,
+    "action_window_style": "Hidden",
+    "new_language_model_calls": 0,
+    "worker_sha256": "a5d00c49daa9f898c0037b2a80ff775facc57e2b312000c7bc6c007d57c06ad0",
+    "worker_pid": 46824,
+    "task_name": "CodexFreshReadoutCampaign_b57d6945755e4b53aeada19d617200dd",
+    "caller_parent_chain": [
+      {
+        "pid": 43024,
+        "parent_pid": 19216,
+        "name": "powershell.exe",
+        "executable_path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "creation_date": "2026-11-27T01:26:48.5484980Z"
+      },
+      {
+        "pid": 19216,
+        "parent_pid": 42544,
+        "name": "powershell.exe",
+        "executable_path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "creation_date": "2026-11-27T01:26:40.7189770Z"
+      },
+      {
+        "pid": 42544,
+        "parent_pid": 38232,
+        "name": "codex.exe",
+        "executable_path": "C:\\Users\\adirj\\AppData\\Roaming\\Code\\agent-host\\sdk-cache\\codex\\0.163.0\\win32-x64\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe",
+        "creation_date": "2026-11-26T15:56:35.4432080Z"
+      },
+      {
+        "pid": 38232,
+        "parent_pid": 44124,
+        "name": "Code.exe",
+        "executable_path": "C:\\Users\\adirj\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+        "creation_date": "2026-11-26T15:56:10.0668000Z"
+      },
+      {
+        "pid": 44124,
+        "parent_pid": 3308,
+        "name": "Code.exe",
+        "executable_path": "C:\\Users\\adirj\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+        "creation_date": "2026-11-26T15:56:07.6413710Z"
+      }
+    ],
+    "create_flags": 150994944,
+    "caller_pid": 43024,
+    "method": "CimDetached",
+    "schema": "fresh-readout-durable-registration-v1",
+    "launch_returned_at": "2026-11-27T01:26:50.0465600Z"
+  },
+  "windows_worker_alive_snapshot": {
+    "wsl_pid": 34548,
+    "pid": 46824,
+    "state": "waiting_for_foreground_wsl",
+    "at": "2026-11-27T01:32:46.8091276Z"
+  },
+  "native_worker_alive_snapshot": {
+    "at": "2026-11-27T01:32:44.820362+00:00",
+    "pid": 6073,
+    "child_pid": 6180,
+    "stage": "llama_fit_capture"
+  },
+  "observed_stage": "llama_fit_capture",
+  "observed_llama_fit_completed_rows": 703,
+  "observed_progress_at": "2026-11-27T01:32:48.654672+00:00",
+  "engineering_twelve_site_alignment": true,
+  "expected_cohort_forwards": 11520,
+  "tests": {
+    "focused_Windows_passed": 107,
+    "optional_plot_skip": 1,
+    "WSL_report_fixture_passed": 5,
+    "latest_capture_campaign_after_launcher_binding_passed": 56
+  },
+  "interpretation": "Historical observed-progress snapshot, not current completion. No fitting/test outcome score was parsed. Both-model freeze still required before test."
+}

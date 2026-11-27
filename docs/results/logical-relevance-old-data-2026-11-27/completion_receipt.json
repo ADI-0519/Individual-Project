@@ -1,0 +1,116 @@
+{
+  "schema": "logical-relevance-old-completion-receipt-v1",
+  "status": "complete_old_only_exploratory_diagnostic",
+  "completed_at_utc": "2026-11-27T01:44:20.126726+00:00",
+  "spec_sha256": "2db8aae7e35e7ba41d7591b8b4945ec9da0fdb24ef1035f652893914df1f83f8",
+  "spec_sealed_at_utc": "2026-11-27T01:31:42.926022+00:00",
+  "declared_old_data_first_load_at_utc": "2026-11-27T01:37:47.771110+00:00",
+  "artifact_sha256": {
+    "docs/results/logical-relevance-old-data-2026-11-27/analysis_receipt.json": "c9c79b43d0aeb7bb8c2f9c99a4eedca9731dd025cee3ae521e32e0f972fdb6ac",
+    "docs/results/logical-relevance-old-data-2026-11-27/factor_comparisons.csv": "3ddb9174acfec5d02e559d777d82e4efd1f1bc2d68e11673d09e7e698b14d77b",
+    "docs/results/logical-relevance-old-data-2026-11-27/factor_metrics.csv": "d6b06bbf163480c8b42752116173cf81ddef4d42944232268be1d1415fa1fb52",
+    "docs/results/logical-relevance-old-data-2026-11-27/independent_review_receipt.json": "37df3e1a89fc79e9e4593c0f0844bf2ebdacb8958022f3f193f80c7abf70c500",
+    "docs/results/logical-relevance-old-data-2026-11-27/oracle_metrics.csv": "9923b4e60caa1850922d6eec4aaa12528bbd52dc49bf3b07d79159573facc0b2",
+    "docs/results/logical-relevance-old-data-2026-11-27/README.md": "c6070efea73983401ec957f8d98a43ad58b9cdfbcc896378f32d3c5888f77f3a",
+    "docs/results/logical-relevance-old-data-2026-11-27/source_coverage.json": "97acc8ed11c07a2a978314e6581e62856901cdb1df5156a07a72d294dc3524e2",
+    "docs/results/logical-relevance-old-data-2026-11-27/spec_seal.json": "92ab0a840ba6c1e39ddebebea33cb93f93547b808018413d45f6e37c3ae6e86b",
+    "docs/results/logical-relevance-old-data-2026-11-27/summary.json": "028533bcb90b21ba0c97ed0a8ecbd0434f78850ec7b8fdce17af018cde48edb0"
+  },
+  "source_sha256": {
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\scripts\\analyse_logical_relevance_old.py": "79252a154da2fe4815e62d0dad90afad18827d507f0ad55e8339a9e69490efc1",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\tests\\test_logical_relevance_old.py": "ff1312fd7a815e44aeae1f38bbec8beb583c8c4187790bda76207557b04bd670",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\docs\\LOGICAL_RELEVANCE_OLD_DATA_SPEC_2026-11-27.md": "2db8aae7e35e7ba41d7591b8b4945ec9da0fdb24ef1035f652893914df1f83f8",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\docs\\results\\logical-relevance-old-data-2026-11-27\\spec_seal.json": "92ab0a840ba6c1e39ddebebea33cb93f93547b808018413d45f6e37c3ae6e86b"
+  },
+  "independent_review": {
+    "status": "pass_scoped_numeric_reconstruction",
+    "numeric_scalars": 77600,
+    "null_cells": 10400,
+    "maximum_absolute_difference": 2.220446049250313e-16,
+    "tables_completely_checked": {
+      "factor_metrics": 2400,
+      "factor_comparisons": 1200,
+      "oracle_metrics": 4800
+    },
+    "checker_source_sha256": {
+      "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\docs\\validation\\logical_relevance_old_independent_check_2026-11-27.py": "8fd09a42663d3e0ba4288a799e9d631b4e467383dd4e125ea813f267185ad2dd"
+    }
+  },
+  "validation_commands": [
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_logical_relevance_old.py -q",
+      "result": "13 passed in 8.16s",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m ruff check scripts/analyse_logical_relevance_old.py tests/test_logical_relevance_old.py",
+      "result": "All checks passed",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m ruff format --check scripts/analyse_logical_relevance_old.py tests/test_logical_relevance_old.py",
+      "result": "2 files already formatted",
+      "exit_code": 0
+    }
+  ],
+  "full_scope_retained": {
+    "models": [
+      "llama",
+      "qwen"
+    ],
+    "renderers": [
+      "A",
+      "B"
+    ],
+    "contexts": 24,
+    "factors": [
+      "I",
+      "U",
+      "B1",
+      "B2"
+    ],
+    "relevance_populations": [
+      "relevant",
+      "irrelevant"
+    ],
+    "strata": [
+      "union",
+      "correction_easy",
+      "correction_hard"
+    ],
+    "oracle_masks": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  "new_campaign_artifacts_accessed": false,
+  "existing_sealed_sources_tests_protocols_modified": false,
+  "model_calls": 0,
+  "fitting": false,
+  "threshold_selection": false,
+  "feature_arrays_opened": false,
+  "old_native_artifacts_modified": false,
+  "commits": false,
+  "limits": [
+    "Exploratory finite hypothesis about previously collected data, bounded before this new raw-margin analysis.",
+    "True-factor relevance uses privileged labels and differs from relevance under predicted other factors.",
+    "Oracle substitutions affect only the supplied external Boolean fold; no deployable repair or internal model mechanism is established.",
+    "Errors can compensate, so oracle effects need not be additive or monotone.",
+    "Exact joins and old manifest hashes are checked, but original model forwards and hidden-state factor margins were not reconstructed.",
+    "A specification timestamp and self-attested access boundary do not independently certify unobserved historical access."
+  ]
+}

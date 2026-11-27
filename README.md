@@ -13,6 +13,18 @@ controlled study tests a frozen readout of sender-attributed current belief;
 this target is distinct from Apollo deception detection. See the
 [current research decision](docs/CURRENT_RESEARCH_STATE.md).
 
+**27 November: the fresh matched-budget adaptation study is running.**
+The [frozen protocol](docs/FORMAT_ADAPTATION_EXECUTION_PROTOCOL_V1.md) compares
+512 source-format observations with 512 mixed-format observations, plus a
+same-observation intercept-only control. It retains fixed historical sites and
+feature maps, 40 fresh contexts and both checkpoints. At 01:37 GMT, Llama's 768
+fitting captures were complete and Qwen had completed 518/768; no held-out result
+is reported. Both fitted bundles must freeze before either test capture, and
+the separate-author numerical audit must pass before the final report. Read the
+[continuation state](docs/CURRENT_RESEARCH_STATE.md) and
+[runbook](docs/FORMAT_ADAPTATION_CAMPAIGN_RUNBOOK_2026-11-27.md). Human semantic
+review remains incomplete.
+
 **26 November: the complete score-shift diagnostic is finished.**
 The [new diagnosis](docs/FORMAT_TRANSFER_RESULTS_2026-11-26.md) finds preserved
 location-content ranking but much poorer reading-record ranking under format B:

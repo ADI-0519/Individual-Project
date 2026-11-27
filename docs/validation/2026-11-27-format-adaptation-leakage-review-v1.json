@@ -1,0 +1,992 @@
+{
+  "schema": "format-adaptation-leakage-review-v1",
+  "status": "pass",
+  "started_at": "2026-11-27T01:46:57.174623+00:00",
+  "finished_at": "2026-11-27T01:47:01.919097+00:00",
+  "source_commit": "40ae42efe73e7cdfa0917eb89a5d4697bee3ca75",
+  "campaign": "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign",
+  "review_scope": "Independent recomputation of prepared input identities, allocations and old-instrument metadata before current-study outcome inspection",
+  "reviewer_role": "Separate from context authoring and bank compiler; reviewer previously implemented fit/analysis engines; agent review, not independent human validation",
+  "current_study_outcomes_read": false,
+  "fresh_feature_or_fit_arrays_opened": false,
+  "capture_journals_opened": false,
+  "prediction_or_scientific_result_values_read": false,
+  "model_calls": 0,
+  "classifier_fits": 0,
+  "tokenizer_invocations": 0,
+  "sealed_source_count": 50,
+  "all_sealed_source_bytes_match_before_and_after": true,
+  "preparation_sha256": "d714ce20a2380192cd1e0859b8b251ac7639646d99b7446cab775e56ade960aa",
+  "input_artifact_sha256": {
+    "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/preparation.json": "d714ce20a2380192cd1e0859b8b251ac7639646d99b7446cab775e56ade960aa",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/format_adaptation_v1/authored_contexts_v1.json": "67530090b800736b1f8320b42fb9b6cf18684899ed02ab61514150439684320f",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/format_adaptation_v1/authoring_receipt_v1.json": "34c54d588167fe86eaa214c75e11e931dd5fe50e75901e84a7496dec092408db",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/format_adaptation_v1/compiled_v1/bank.json": "a05737d2b0ceaccbc71588ffdde31e3dfe73a251d3acbacf0dad190c8375aeed",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/format_adaptation_v1/compiled_v1/allocation_audit.json": "405fba0555f8fcb6be452dec98de33cd06673400fb09653bf6d0ec452c701239",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/format_adaptation_v1/compiled_v1/build_receipt.json": "13343cbbacc19af7de9a57abb0f5f3a78409d301bbbad716828e592848aa20ff",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/format_adaptation_v1/agent_review_receipt_v2.json": "e591af7c1de20e8beaf3ef556faae9ad5c1e08e4afc0d6cec950be4a3b48078e",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/authored_train_dev_v1.json": "1d3b5bc9345d00255e8762824a7795bc6fc08f397f8f6a7e466ec15f3f72668f",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/authored_test_v1.json": "c2a1a767494d4daed7a1c9221f7634fa0f557f1c3725aeff94bfe6e3ba6caf54",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/main_v1/main_bank_v1.json": "802f1519abe98172366e8381a1fa0dfe0772372991c8e8883c2570c431c5cac1",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/fresh_readout_v2/authored_train_dev_contexts_v1.json": "df704d8c3aa3d02abfed7a032907eb85fbdaf75fcef641dc63281592e3915d35",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/fresh_readout_v2/authored_test_contexts_v1.json": "c01b02ec1523d17c89bb6476e3fe6ddef7c1edf15a86d010de5fe60b3e37e198",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/fresh_readout_v2/compiled_v1/bank.json": "bb277ba4efa6e090879405e472a8cb70a973b3ab53cfe340ede56c61cfa98e35",
+    "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/llama/protocol.json": "f963488e2e088814d2733f8c8972fc4a15b6c57951563a19eeb4e88d62ae68d0",
+    "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/llama/fit_plan.json": "fc924839fdf65cdc926b29b39e08640e6bc6cfa927dbdd88fe3d1e42e6f51783",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama_fit/settings.json": "6a459648e7bc17bb4526ee6e76c5bd47601a0b06643f3fb6c3d0e9cea8538c45",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama_fit/manifest.json": "65d4ba64470abd3ab1f5c36a88b3ca8d8cb906d1c74cb4c5b0fab7063e80047f",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama/protocol.json": "fa8a9cb8a16f0872af129e8b65ea79ab39d418139407d66cf8567172b0a5d8ef",
+    "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/qwen/protocol.json": "5521868d727a4a6fe36265267ba44512ecf423c5326f59ecdae18ad952837f1e",
+    "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/qwen/fit_plan.json": "c7453de3e910899a6a66d731123e936f99c9e0e2bdb48358c0f31e312aaf0653",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen_fit/settings.json": "c4d98c5b0fbedc1b965f6faf75067e47c0f1685e28a2cd76122f599b7171ece4",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen_fit/manifest.json": "011d43e88988de0953942a85e657ab7f77327d125bd257f0f39d1842ad8fd1fb",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen/protocol.json": "7cc8eed3ea66b5f2c3be618be7c246a5edb2007eee7d85b4ffc989b727abb05a"
+  },
+  "checked_source_sha256": {
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/format_adaptation_bank.py": "6431ceb0904130a9fdf321d399558620d3b653ad040947523e7d364a6c3f6ebb",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/format_adaptation_capture.py": "b423dddba08ca73b8df411855314369ba9f8a742b7a251ae03117617e267d30f",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/format_adaptation_fit.py": "3123300615abbe77288f06c283805157054cfb092284169df5e1731c0c76a770",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/format_adaptation_analysis.py": "f2b10dbecfe5141102ac3b4a177a47e359bb089c3249ddbf6911fd4f60f294ed",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/run_format_adaptation_capture.py": "0eb2412ba5bceb71a59fa300db34bb7b035bebac2066aaf72611c07891ed1c6e",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/run_format_adaptation_campaign.py": "1b14812403ecff9c5544599355ee7f8add0c29c88c71c0cd520cb9ae623bb524",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/start_fresh_readout_durable.ps1": "a5d00c49daa9f898c0037b2a80ff775facc57e2b312000c7bc6c007d57c06ad0",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/fit_format_adaptation.py": "bee00778ce0acd75e4ae59852d0c2a7999789098eb9c5da466e552e253c60fee",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/analyse_format_adaptation.py": "9088b07b94269004278e9c4b974358c36c7918ea6b3d8a9f359e8dd00ce24d2c",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/audit_format_adaptation.py": "2c681a60ecac294333eb08324ec2c66706704704d92b9f200269a6bf21e0ec10",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/report_format_adaptation.py": "04557a1dc12a01c1b690111856dcbeafb05fe7c456ff8cfeb4f8da4aa2c85fba",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/tests/test_audit_format_adaptation.py": "f01b599f6a99d49672bcd42454dc5b5691ddfb34df6dfbc0991bce7d957722d1",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/tests/test_format_adaptation_bank.py": "6739e7b11247c71f392e0111d9d7dfc00f72e08a94f3f939268874deb89f2076",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/tests/test_format_adaptation_capture.py": "6a84faddff5a28d07fa6c84e2a74bcaa15438f6feb75dc7a251d43f6b115210c",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/tests/test_format_adaptation_fit.py": "974001f1f813dba1ab77797d3995585b9e21d129ccd43e07c27bde79c5b1e0c9",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/tests/test_format_adaptation_analysis.py": "ba2dbc4025104006e022647ba872d0b1dfc1f9621708b928bae5cda6b97923f9",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/tests/test_format_adaptation_campaign.py": "55706861e3adc71c1798d48de9e2e6e86431fc5f009e558a4cedb78137cb8c2b",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/tests/test_format_adaptation_report.py": "39ce7ebf89bcf2cab353afa7f89212e70a5556524c2c4363887ba46e555a2d80",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/fresh_readout_capture.py": "5e1cc2195f15973be82b6bd62101a8753f03c61f4667256a40b1a45b9d083292",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/fresh_readout_bank.py": "0765526fd11f6d0d4e44948597340b686dccd46f05d4e21257b5724d6ce66dfb",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/main_study_bank.py": "b5d9aae9105e856bd2eeea061e5098291601074b32d6be0730768d6295c40162",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/main_study_design.py": "0973d047d2e98736c1b9144d2187079a60d87f2280eeca691330ff91135506b9",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/main_study_run.py": "09f219b7aedcb222c0eea05ba1ea9324d28fd298f49a2a45004429d7ede10501",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/backends.py": "692d9778e4bf69081ab1afea702dfd573119f2b6cc454e51072bb3d2233402a2",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/config.py": "0fc63546c88a826bc1e87efeebb51b6a23488272e0d76de8018fdd99543bb608",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/storage.py": "1de87a24cc3bd701c0384d648d405ddb6066280beae3e21bf1b173c203ee0e84",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/crossed_belief_validation.py": "c38ace6dbd71d9a56a61b6fe44fa9268bdef4815e6086211365e9cea8e33d1ad",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/docs/FORMAT_ADAPTATION_EXECUTION_PROTOCOL_V1.md": "36330a0fd820f84791eca9f06534dde23dcbe9514328e10995250979fe1755e1",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/docs/FORMAT_ADAPTATION_PROTOCOL_REVIEW_2026-11-27.md": "f693f398af365270f35fb3aab1dc5ae3281f2f9e87bf2f5868cc8d97021530d2",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/docs/validation/2026-11-27-format-adaptation-bank-review-v1.json": "59af651328d2aa54e64be66d6ed934b7522acc4b9755a628e426c3a084a761b3",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/docs/validation/2026-11-27-format-adaptation-capture-review-v1.json": "98601638452f091b045c5e4810eab92e0fdf0be48bc9ddc9327ceeaf1a2e8381",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/format_adaptation_v1/compiled_v1/bank.json": "a05737d2b0ceaccbc71588ffdde31e3dfe73a251d3acbacf0dad190c8375aeed",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/format_adaptation_v1/agent_review_receipt_v2.json": "e591af7c1de20e8beaf3ef556faae9ad5c1e08e4afc0d6cec950be4a3b48078e",
+    "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_launch.sh": "9a354a5a80e08eb890e66ad9b2aa5075bbc16256dad1876c9c05556cd46eab4d",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/format_adaptation_v1/compiled_v1/review_packet.json": "3adf3a22c5d4dce219498b5e0ad6f915c939b8fbeaf19b0eb4a8ecb0505b3fa0",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/format_adaptation_v1/compiled_v1/review_key.json": "e27d82242cdb34eda518ea1a21d692ffba9e83592169a66b16e1885681cc626d",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/format_adaptation_v1/blind_review_answers_v1.json": "4eaad489ab019fe8795733291d6b68e0de91f8fa9122d7ce1122f2f9b2fc4753",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/format_adaptation_v1/authored_contexts_v1.json": "67530090b800736b1f8320b42fb9b6cf18684899ed02ab61514150439684320f",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/format_adaptation_v1/authoring_receipt_v1.json": "34c54d588167fe86eaa214c75e11e931dd5fe50e75901e84a7496dec092408db",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/format_adaptation_v1/compiled_v1/build_receipt.json": "13343cbbacc19af7de9a57abb0f5f3a78409d301bbbad716828e592848aa20ff",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama/protocol.json": "fa8a9cb8a16f0872af129e8b65ea79ab39d418139407d66cf8567172b0a5d8ef",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama_fit/settings.json": "6a459648e7bc17bb4526ee6e76c5bd47601a0b06643f3fb6c3d0e9cea8538c45",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama_fit/heads.npz": "9473175eda13e5af4041591b1edb9dc28e49c4ad2056fab281736fb96261e2d7",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama_fit/manifest.json": "65d4ba64470abd3ab1f5c36a88b3ca8d8cb906d1c74cb4c5b0fab7063e80047f",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama_fit/candidates.json": "d28e4b1f43f3e409b7b64df4d6faba37b58d1c1d44898bb4945c6ab44941c318",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen/protocol.json": "7cc8eed3ea66b5f2c3be618be7c246a5edb2007eee7d85b4ffc989b727abb05a",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen_fit/settings.json": "c4d98c5b0fbedc1b965f6faf75067e47c0f1685e28a2cd76122f599b7171ece4",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen_fit/heads.npz": "c1a818f3074ef6c73121ce9dc4220a628d121a8707a26fb4a691fe4d78115a04",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen_fit/manifest.json": "011d43e88988de0953942a85e657ab7f77327d125bd257f0f39d1842ad8fd1fb",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen_fit/candidates.json": "450b66bfcfe240ad9c5f3d7b4a8cab30c0b36a508b32d97771bafb0331e8fd3e"
+  },
+  "checks": [
+    {
+      "check": "all_50_sealed_source_bytes_match_before_review",
+      "pass": true
+    },
+    {
+      "check": "preparation_schema_and_no_weights_status",
+      "pass": true
+    },
+    {
+      "check": "committed_input_matches_authored_contexts_v1.json",
+      "pass": true
+    },
+    {
+      "check": "committed_input_matches_authoring_receipt_v1.json",
+      "pass": true
+    },
+    {
+      "check": "committed_input_matches_compiled_v1/bank.json",
+      "pass": true
+    },
+    {
+      "check": "committed_input_matches_compiled_v1/allocation_audit.json",
+      "pass": true
+    },
+    {
+      "check": "committed_input_matches_compiled_v1/build_receipt.json",
+      "pass": true
+    },
+    {
+      "check": "committed_input_matches_agent_review_receipt_v2.json",
+      "pass": true
+    },
+    {
+      "check": "bank_raw_hash_matches_preparation",
+      "pass": true
+    },
+    {
+      "check": "bank_authoring_canonical_hash",
+      "pass": true
+    },
+    {
+      "check": "build_authored_raw_hash",
+      "pass": true
+    },
+    {
+      "check": "build_output_allocation_audit.json",
+      "pass": true
+    },
+    {
+      "check": "build_output_bank.json",
+      "pass": true
+    },
+    {
+      "check": "build_output_review_key.json",
+      "pass": true
+    },
+    {
+      "check": "build_output_review_packet.json",
+      "pass": true
+    },
+    {
+      "check": "review_binding_data/belief_main/format_adaptation_v1/compiled_v1/review_packet.json",
+      "pass": true
+    },
+    {
+      "check": "review_binding_data/belief_main/format_adaptation_v1/compiled_v1/review_key.json",
+      "pass": true
+    },
+    {
+      "check": "review_binding_data/belief_main/format_adaptation_v1/blind_review_answers_v1.json",
+      "pass": true
+    },
+    {
+      "check": "review_binding_data/belief_main/format_adaptation_v1/compiled_v1/bank.json",
+      "pass": true
+    },
+    {
+      "check": "review_binding_data/belief_main/format_adaptation_v1/authored_contexts_v1.json",
+      "pass": true
+    },
+    {
+      "check": "review_binding_data/belief_main/format_adaptation_v1/authoring_receipt_v1.json",
+      "pass": true
+    },
+    {
+      "check": "review_binding_data/belief_main/format_adaptation_v1/compiled_v1/build_receipt.json",
+      "pass": true
+    },
+    {
+      "check": "context_identity_isolation",
+      "pass": true
+    },
+    {
+      "check": "compiled_contexts_exact_declared_actor_shuffle",
+      "pass": true
+    },
+    {
+      "check": "domain_proportions_match_2_fit_3_test",
+      "pass": true
+    },
+    {
+      "check": "framing_template_proportions_match_4_fit_6_test",
+      "pass": true
+    },
+    {
+      "check": "new_fit_test_entities_wording_and_exact_framings_disjoint",
+      "pass": true
+    },
+    {
+      "check": "historical_comparison_input_hashes",
+      "pass": true
+    },
+    {
+      "check": "historical_engineering_input_hash",
+      "pass": true
+    },
+    {
+      "check": "new_context_ids_and_entities_disjoint_from_historical_inputs",
+      "pass": true
+    },
+    {
+      "check": "one_author_pool_and_no_independent_author_claim",
+      "pass": true
+    },
+    {
+      "check": "llama_protocol_hash",
+      "pass": true
+    },
+    {
+      "check": "llama_fit_plan_hash",
+      "pass": true
+    },
+    {
+      "check": "llama_source_and_bank_bindings",
+      "pass": true
+    },
+    {
+      "check": "llama_complete_inventory",
+      "pass": true
+    },
+    {
+      "check": "llama_fit_plan_exact_rows_order",
+      "pass": true
+    },
+    {
+      "check": "llama_context_split_mapping",
+      "pass": true
+    },
+    {
+      "check": "llama_messages_sha256_unique_no_cross_partition_duplicate",
+      "pass": true
+    },
+    {
+      "check": "llama_rendered_chat_sha256_unique_no_cross_partition_duplicate",
+      "pass": true
+    },
+    {
+      "check": "llama_prompt_token_ids_sha256_unique_no_cross_partition_duplicate",
+      "pass": true
+    },
+    {
+      "check": "llama_recomputed_complete_message_hashes",
+      "pass": true
+    },
+    {
+      "check": "llama_recomputed_complete_token_id_hashes",
+      "pass": true
+    },
+    {
+      "check": "llama_token_input_limits_and_types",
+      "pass": true
+    },
+    {
+      "check": "llama_account_last_no_cross_partition_prefix_duplicate",
+      "pass": true
+    },
+    {
+      "check": "llama_query_location_last_no_cross_partition_prefix_duplicate",
+      "pass": true
+    },
+    {
+      "check": "llama_prompt_last_no_cross_partition_prefix_duplicate",
+      "pass": true
+    },
+    {
+      "check": "llama_excluded_engineering_prompt_and_tokens",
+      "pass": true
+    },
+    {
+      "check": "llama_formal_gold_independently_recomputed",
+      "pass": true
+    },
+    {
+      "check": "llama_512_fit_state_pairs_exact_membership",
+      "pass": true
+    },
+    {
+      "check": "llama_same_512_underlying_states_A512_Mixed512",
+      "pass": true
+    },
+    {
+      "check": "llama_shared_256A_and_complementary_256B",
+      "pass": true
+    },
+    {
+      "check": "llama_exact_per_context_XOR_roster_and_all_16_paths_each_format",
+      "pass": true
+    },
+    {
+      "check": "llama_128_conditional_format_path_nuisance_cells_each_count4",
+      "pass": true
+    },
+    {
+      "check": "llama_A512_balanced_each_factor",
+      "pass": true
+    },
+    {
+      "check": "llama_Mixed512_balanced_each_factor",
+      "pass": true
+    },
+    {
+      "check": "llama_Ahalf256_balanced_each_factor",
+      "pass": true
+    },
+    {
+      "check": "llama_B256Offset_balanced_each_factor",
+      "pass": true
+    },
+    {
+      "check": "llama_2496_exact_test_semantic_pairs",
+      "pass": true
+    },
+    {
+      "check": "llama_all104_test_states_per_context_and_format",
+      "pass": true
+    },
+    {
+      "check": "llama_192_hard_quartets_per_format",
+      "pass": true
+    },
+    {
+      "check": "llama_fit_plan_exact_old_bundle_binding",
+      "pass": true
+    },
+    {
+      "check": "llama_old_bundle_frozen_and_hash_verified",
+      "pass": true
+    },
+    {
+      "check": "llama_old_fixed_site_C_and_training_map_origin",
+      "pass": true
+    },
+    {
+      "check": "llama_old_map_to_original_model_protocol",
+      "pass": true
+    },
+    {
+      "check": "llama_counts_match_committed_allocation_audit",
+      "pass": true
+    },
+    {
+      "check": "qwen_protocol_hash",
+      "pass": true
+    },
+    {
+      "check": "qwen_fit_plan_hash",
+      "pass": true
+    },
+    {
+      "check": "qwen_source_and_bank_bindings",
+      "pass": true
+    },
+    {
+      "check": "qwen_complete_inventory",
+      "pass": true
+    },
+    {
+      "check": "qwen_fit_plan_exact_rows_order",
+      "pass": true
+    },
+    {
+      "check": "qwen_context_split_mapping",
+      "pass": true
+    },
+    {
+      "check": "qwen_messages_sha256_unique_no_cross_partition_duplicate",
+      "pass": true
+    },
+    {
+      "check": "qwen_rendered_chat_sha256_unique_no_cross_partition_duplicate",
+      "pass": true
+    },
+    {
+      "check": "qwen_prompt_token_ids_sha256_unique_no_cross_partition_duplicate",
+      "pass": true
+    },
+    {
+      "check": "qwen_recomputed_complete_message_hashes",
+      "pass": true
+    },
+    {
+      "check": "qwen_recomputed_complete_token_id_hashes",
+      "pass": true
+    },
+    {
+      "check": "qwen_token_input_limits_and_types",
+      "pass": true
+    },
+    {
+      "check": "qwen_account_last_no_cross_partition_prefix_duplicate",
+      "pass": true
+    },
+    {
+      "check": "qwen_query_location_last_no_cross_partition_prefix_duplicate",
+      "pass": true
+    },
+    {
+      "check": "qwen_prompt_last_no_cross_partition_prefix_duplicate",
+      "pass": true
+    },
+    {
+      "check": "qwen_excluded_engineering_prompt_and_tokens",
+      "pass": true
+    },
+    {
+      "check": "qwen_formal_gold_independently_recomputed",
+      "pass": true
+    },
+    {
+      "check": "qwen_512_fit_state_pairs_exact_membership",
+      "pass": true
+    },
+    {
+      "check": "qwen_same_512_underlying_states_A512_Mixed512",
+      "pass": true
+    },
+    {
+      "check": "qwen_shared_256A_and_complementary_256B",
+      "pass": true
+    },
+    {
+      "check": "qwen_exact_per_context_XOR_roster_and_all_16_paths_each_format",
+      "pass": true
+    },
+    {
+      "check": "qwen_128_conditional_format_path_nuisance_cells_each_count4",
+      "pass": true
+    },
+    {
+      "check": "qwen_A512_balanced_each_factor",
+      "pass": true
+    },
+    {
+      "check": "qwen_Mixed512_balanced_each_factor",
+      "pass": true
+    },
+    {
+      "check": "qwen_Ahalf256_balanced_each_factor",
+      "pass": true
+    },
+    {
+      "check": "qwen_B256Offset_balanced_each_factor",
+      "pass": true
+    },
+    {
+      "check": "qwen_2496_exact_test_semantic_pairs",
+      "pass": true
+    },
+    {
+      "check": "qwen_all104_test_states_per_context_and_format",
+      "pass": true
+    },
+    {
+      "check": "qwen_192_hard_quartets_per_format",
+      "pass": true
+    },
+    {
+      "check": "qwen_fit_plan_exact_old_bundle_binding",
+      "pass": true
+    },
+    {
+      "check": "qwen_old_bundle_frozen_and_hash_verified",
+      "pass": true
+    },
+    {
+      "check": "qwen_old_fixed_site_C_and_training_map_origin",
+      "pass": true
+    },
+    {
+      "check": "qwen_old_map_to_original_model_protocol",
+      "pass": true
+    },
+    {
+      "check": "checkpoint_prepared_semantic_inventory_and_messages_identical",
+      "pass": true
+    },
+    {
+      "check": "qwen_counts_match_committed_allocation_audit",
+      "pass": true
+    },
+    {
+      "check": "all_50_sealed_source_bytes_match_after_review",
+      "pass": true
+    }
+  ],
+  "failures": [],
+  "authoring": {
+    "author_pool_id": "single_context_author_pool_v1",
+    "shared_fit_test_author_pool": true,
+    "independent_test_author": false,
+    "human_review_complete": false,
+    "split_balance": {
+      "fit": {
+        "contexts": 16,
+        "domains": {
+          "activity_programmes": 2,
+          "classroom_displays": 2,
+          "decorative_gardens": 2,
+          "miniature_interiors": 2,
+          "paper_publications": 2,
+          "stage_paperwork": 2,
+          "stationery_design": 2,
+          "wardrobe_design": 2
+        },
+        "framing_templates": {
+          "neutral_0": 4,
+          "neutral_1": 4,
+          "neutral_2": 4,
+          "neutral_3": 4
+        }
+      },
+      "test": {
+        "contexts": 24,
+        "domains": {
+          "activity_programmes": 3,
+          "classroom_displays": 3,
+          "decorative_gardens": 3,
+          "miniature_interiors": 3,
+          "paper_publications": 3,
+          "stage_paperwork": 3,
+          "stationery_design": 3,
+          "wardrobe_design": 3
+        },
+        "framing_templates": {
+          "neutral_0": 6,
+          "neutral_1": 6,
+          "neutral_2": 6,
+          "neutral_3": 6
+        }
+      }
+    },
+    "fit_test_entity_and_exact_framing_overlaps": {
+      "actor_full_names": [],
+      "actor_components": [],
+      "locations": [],
+      "wording_groups": [],
+      "exact_framings": []
+    },
+    "historical_input_entity_overlaps": {
+      "group_ids": [],
+      "actor_full_names": [],
+      "actor_components": [],
+      "complete_location_entities": []
+    },
+    "novel_reasoning_family_claim": false
+  },
+  "models": {
+    "llama": {
+      "planned_rows": 5760,
+      "fit_captures": 768,
+      "test_captures": 4992,
+      "full_prefix_hashes": {
+        "messages_sha256": {
+          "unique": 5760,
+          "duplicate_hash_groups": 0,
+          "cross_partition_duplicates": 0
+        },
+        "rendered_chat_sha256": {
+          "unique": 5760,
+          "duplicate_hash_groups": 0,
+          "cross_partition_duplicates": 0
+        },
+        "prompt_token_ids_sha256": {
+          "unique": 5760,
+          "duplicate_hash_groups": 0,
+          "cross_partition_duplicates": 0
+        }
+      },
+      "causal_prefix_hashes": {
+        "account_last": {
+          "unique_fit_prefixes": 768,
+          "unique_test_prefixes": 4992,
+          "cross_partition_duplicates": 0
+        },
+        "query_location_last": {
+          "unique_fit_prefixes": 768,
+          "unique_test_prefixes": 4992,
+          "cross_partition_duplicates": 0
+        },
+        "prompt_last": {
+          "unique_fit_prefixes": 768,
+          "unique_test_prefixes": 4992,
+          "cross_partition_duplicates": 0
+        }
+      },
+      "token_lengths": {
+        "minimum": 336,
+        "maximum": 741
+      },
+      "fit_state_replication": {
+        "1": 256,
+        "2": 256
+      },
+      "test_semantic_pairs": 2496,
+      "arms": {
+        "A512": {
+          "observations": 512,
+          "contexts": 16,
+          "underlying_states": 512,
+          "factor_class_counts": {
+            "initial": {
+              "0": 256,
+              "1": 256
+            },
+            "update": {
+              "0": 256,
+              "1": 256
+            },
+            "first_receipt": {
+              "0": 256,
+              "1": 256
+            },
+            "receipt": {
+              "0": 256,
+              "1": 256
+            }
+          },
+          "conditions": {
+            "correction_easy": 256,
+            "correction_hard": 256
+          },
+          "ordered_row_ids_sha256": "eeae939c30e4f45e317c5286ee223be2233d3e60d6b917c9e0cbff2704e049fb",
+          "effective_C": 100,
+          "role": "four_factor_coefficient_fit"
+        },
+        "Mixed512": {
+          "observations": 512,
+          "contexts": 16,
+          "underlying_states": 512,
+          "factor_class_counts": {
+            "initial": {
+              "0": 256,
+              "1": 256
+            },
+            "update": {
+              "0": 256,
+              "1": 256
+            },
+            "first_receipt": {
+              "0": 256,
+              "1": 256
+            },
+            "receipt": {
+              "0": 256,
+              "1": 256
+            }
+          },
+          "conditions": {
+            "correction_easy": 256,
+            "correction_hard": 256
+          },
+          "ordered_row_ids_sha256": "95ddfadc62665780c6f937ca4765f30e419bb79b04929ea0aa8ca51652e0fe37",
+          "effective_C": 100,
+          "role": "four_factor_coefficient_fit"
+        },
+        "Ahalf256": {
+          "observations": 256,
+          "contexts": 16,
+          "underlying_states": 256,
+          "factor_class_counts": {
+            "initial": {
+              "0": 128,
+              "1": 128
+            },
+            "update": {
+              "0": 128,
+              "1": 128
+            },
+            "first_receipt": {
+              "0": 128,
+              "1": 128
+            },
+            "receipt": {
+              "0": 128,
+              "1": 128
+            }
+          },
+          "conditions": {
+            "correction_easy": 128,
+            "correction_hard": 128
+          },
+          "ordered_row_ids_sha256": "821204652623f3442729c099b5a6f235d5438fb05c0601398dac9fec95b76f6a",
+          "effective_C": 200,
+          "role": "four_factor_coefficient_fit"
+        },
+        "B256Offset": {
+          "observations": 256,
+          "contexts": 16,
+          "underlying_states": 256,
+          "factor_class_counts": {
+            "initial": {
+              "0": 128,
+              "1": 128
+            },
+            "update": {
+              "0": 128,
+              "1": 128
+            },
+            "first_receipt": {
+              "0": 128,
+              "1": 128
+            },
+            "receipt": {
+              "0": 128,
+              "1": 128
+            }
+          },
+          "conditions": {
+            "correction_easy": 128,
+            "correction_hard": 128
+          },
+          "ordered_row_ids_sha256": "9036b8a08ff62d8b257c11dfb22ae4e3f9860905c607f9761991c4f2765e56b5",
+          "effective_C": null,
+          "role": "unpenalized_B_intercept_only_rows",
+          "base_Ahalf_effective_C": 200,
+          "offset_penalty": null
+        }
+      },
+      "conditional_cells": 128,
+      "conditional_cell_count_histogram": {
+        "4": 128
+      },
+      "counts": {
+        "fit/A/correction_easy": 256,
+        "fit/A/correction_hard": 256,
+        "fit/B/correction_easy": 128,
+        "fit/B/correction_hard": 128,
+        "test/A/asserted": 192,
+        "test/A/correction_easy": 768,
+        "test/A/correction_hard": 768,
+        "test/A/one_step": 768,
+        "test/B/asserted": 192,
+        "test/B/correction_easy": 768,
+        "test/B/correction_hard": 768,
+        "test/B/one_step": 768
+      },
+      "hard_quartets_per_format": 192,
+      "old_instrument": {
+        "path": "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama_fit",
+        "site": "layer_16_query_location_last",
+        "C": 100.0,
+        "old_settings_sha256": "6a459648e7bc17bb4526ee6e76c5bd47601a0b06643f3fb6c3d0e9cea8538c45",
+        "old_heads_file_sha256": "9473175eda13e5af4041591b1edb9dc28e49c4ad2056fab281736fb96261e2d7",
+        "scaler_origin_partition": "old_correction_fit",
+        "scaler_training_rows": 512,
+        "old_arrays_hashed_without_opening_values": true
+      }
+    },
+    "qwen": {
+      "planned_rows": 5760,
+      "fit_captures": 768,
+      "test_captures": 4992,
+      "full_prefix_hashes": {
+        "messages_sha256": {
+          "unique": 5760,
+          "duplicate_hash_groups": 0,
+          "cross_partition_duplicates": 0
+        },
+        "rendered_chat_sha256": {
+          "unique": 5760,
+          "duplicate_hash_groups": 0,
+          "cross_partition_duplicates": 0
+        },
+        "prompt_token_ids_sha256": {
+          "unique": 5760,
+          "duplicate_hash_groups": 0,
+          "cross_partition_duplicates": 0
+        }
+      },
+      "causal_prefix_hashes": {
+        "account_last": {
+          "unique_fit_prefixes": 768,
+          "unique_test_prefixes": 4992,
+          "cross_partition_duplicates": 0
+        },
+        "query_location_last": {
+          "unique_fit_prefixes": 768,
+          "unique_test_prefixes": 4992,
+          "cross_partition_duplicates": 0
+        },
+        "prompt_last": {
+          "unique_fit_prefixes": 768,
+          "unique_test_prefixes": 4992,
+          "cross_partition_duplicates": 0
+        }
+      },
+      "token_lengths": {
+        "minimum": 322,
+        "maximum": 739
+      },
+      "fit_state_replication": {
+        "1": 256,
+        "2": 256
+      },
+      "test_semantic_pairs": 2496,
+      "arms": {
+        "A512": {
+          "observations": 512,
+          "contexts": 16,
+          "underlying_states": 512,
+          "factor_class_counts": {
+            "initial": {
+              "0": 256,
+              "1": 256
+            },
+            "update": {
+              "0": 256,
+              "1": 256
+            },
+            "first_receipt": {
+              "0": 256,
+              "1": 256
+            },
+            "receipt": {
+              "0": 256,
+              "1": 256
+            }
+          },
+          "conditions": {
+            "correction_easy": 256,
+            "correction_hard": 256
+          },
+          "ordered_row_ids_sha256": "eeae939c30e4f45e317c5286ee223be2233d3e60d6b917c9e0cbff2704e049fb",
+          "effective_C": 100,
+          "role": "four_factor_coefficient_fit"
+        },
+        "Mixed512": {
+          "observations": 512,
+          "contexts": 16,
+          "underlying_states": 512,
+          "factor_class_counts": {
+            "initial": {
+              "0": 256,
+              "1": 256
+            },
+            "update": {
+              "0": 256,
+              "1": 256
+            },
+            "first_receipt": {
+              "0": 256,
+              "1": 256
+            },
+            "receipt": {
+              "0": 256,
+              "1": 256
+            }
+          },
+          "conditions": {
+            "correction_easy": 256,
+            "correction_hard": 256
+          },
+          "ordered_row_ids_sha256": "95ddfadc62665780c6f937ca4765f30e419bb79b04929ea0aa8ca51652e0fe37",
+          "effective_C": 100,
+          "role": "four_factor_coefficient_fit"
+        },
+        "Ahalf256": {
+          "observations": 256,
+          "contexts": 16,
+          "underlying_states": 256,
+          "factor_class_counts": {
+            "initial": {
+              "0": 128,
+              "1": 128
+            },
+            "update": {
+              "0": 128,
+              "1": 128
+            },
+            "first_receipt": {
+              "0": 128,
+              "1": 128
+            },
+            "receipt": {
+              "0": 128,
+              "1": 128
+            }
+          },
+          "conditions": {
+            "correction_easy": 128,
+            "correction_hard": 128
+          },
+          "ordered_row_ids_sha256": "821204652623f3442729c099b5a6f235d5438fb05c0601398dac9fec95b76f6a",
+          "effective_C": 200,
+          "role": "four_factor_coefficient_fit"
+        },
+        "B256Offset": {
+          "observations": 256,
+          "contexts": 16,
+          "underlying_states": 256,
+          "factor_class_counts": {
+            "initial": {
+              "0": 128,
+              "1": 128
+            },
+            "update": {
+              "0": 128,
+              "1": 128
+            },
+            "first_receipt": {
+              "0": 128,
+              "1": 128
+            },
+            "receipt": {
+              "0": 128,
+              "1": 128
+            }
+          },
+          "conditions": {
+            "correction_easy": 128,
+            "correction_hard": 128
+          },
+          "ordered_row_ids_sha256": "9036b8a08ff62d8b257c11dfb22ae4e3f9860905c607f9761991c4f2765e56b5",
+          "effective_C": null,
+          "role": "unpenalized_B_intercept_only_rows",
+          "base_Ahalf_effective_C": 200,
+          "offset_penalty": null
+        }
+      },
+      "conditional_cells": 128,
+      "conditional_cell_count_histogram": {
+        "4": 128
+      },
+      "counts": {
+        "fit/A/correction_easy": 256,
+        "fit/A/correction_hard": 256,
+        "fit/B/correction_easy": 128,
+        "fit/B/correction_hard": 128,
+        "test/A/asserted": 192,
+        "test/A/correction_easy": 768,
+        "test/A/correction_hard": 768,
+        "test/A/one_step": 768,
+        "test/B/asserted": 192,
+        "test/B/correction_easy": 768,
+        "test/B/correction_hard": 768,
+        "test/B/one_step": 768
+      },
+      "hard_quartets_per_format": 192,
+      "old_instrument": {
+        "path": "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen_fit",
+        "site": "layer_21_query_location_last",
+        "C": 100.0,
+        "old_settings_sha256": "c4d98c5b0fbedc1b965f6faf75067e47c0f1685e28a2cd76122f599b7171ece4",
+        "old_heads_file_sha256": "c1a818f3074ef6c73121ce9dc4220a628d121a8707a26fb4a691fe4d78115a04",
+        "scaler_origin_partition": "old_correction_fit",
+        "scaler_training_rows": 512,
+        "old_arrays_hashed_without_opening_values": true
+      }
+    }
+  },
+  "interpretation_limits": [
+    "Identical abstract formal cells across different contextual groups are deliberate shared-task support, not a fresh reasoning-family holdout.",
+    "A/B counterparts repeat underlying states deliberately; Mixed512 itself uses each of its 512 underlying states once.",
+    "Both checkpoints share identical prepared messages and contextual groups; they are not 48 independent context units.",
+    "Within a fitting context, assigned format is determined by world; exact factor/path/nuisance balance holds across the 16-context cohort, not conditionally within each context.",
+    "Pooled easy plus hard correction cells independently vary all four targets; hard-only I=1-M1 remains a dependency.",
+    "Complete rendered-chat hashes were checked for uniqueness and cross-partition overlap; chat rendering/tokenization were not rerun. Message hashes and complete token-ID hashes were independently recomputed from stored prepared inputs.",
+    "No fresh fitted-map equality, parameter values, predictions, score differences, model behavior or semantic human acceptance is assessed by this input-only review."
+  ],
+  "deliberate_repetition": {
+    "fit_underlying_states_per_model": 512,
+    "fit_states_rendered_in_A_and_B": 256,
+    "fit_states_rendered_in_A_only": 256,
+    "test_underlying_states_per_model": 2496,
+    "each_test_state_formats": [
+      "A",
+      "B"
+    ],
+    "shared_formal_rules_and_format_templates": true
+  },
+  "files_written": [
+    "docs/validation/2026-11-27-format-adaptation-leakage-review-v1.json"
+  ],
+  "commits": false
+}

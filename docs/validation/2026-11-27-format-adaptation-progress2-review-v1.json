@@ -1,0 +1,102 @@
+{
+  "schema": "format-adaptation-progress2-independent-source-review-v1",
+  "status": "pass",
+  "created_at": "2026-11-27T01:57:03.810517+00:00",
+  "fresh_campaign_outcomes_or_arrays_opened": false,
+  "existing_source_files_edited": false,
+  "model_calls": 0,
+  "classifier_fits": 0,
+  "scientific_reanalysis": false,
+  "source_sha256": {
+    "scripts/build_format_adaptation_progress2.py": "193c838a65898c4ea79f596ae7a814eb2a90335ab0df82de8ffa419a1b699cba",
+    "tests/test_format_adaptation_progress2.py": "e2954e4baa4ac461c51cc8868b1a4d3fa06c228c6a0d244b7c40a688a212e578",
+    "scripts/report_format_adaptation.py": "04557a1dc12a01c1b690111856dcbeafb05fe7c456ff8cfeb4f8da4aa2c85fba",
+    "src/latent_probes/format_adaptation_analysis.py": "f2b10dbecfe5141102ac3b4a177a47e359bb089c3249ddbf6911fd4f60f294ed",
+    "src/latent_probes/storage.py": "1de87a24cc3bd701c0384d648d405ddb6066280beae3e21bf1b173c203ee0e84",
+    "scripts/update_progress2.py": "4a1d5d60dd954a80caf7ff48394c7f3b40d074c2d3c68fa31e286c6f04082e78",
+    "presentations/templates/progress2-original.pptx": "c63d6eb4be21cfb626ba0b99fd54fb43629d7e7bd89717da4284af42c80e4255"
+  },
+  "tests": {
+    "command": ".venv/Scripts/python.exe -m pytest tests/test_format_adaptation_progress2.py -q",
+    "passed": 19,
+    "failed": 0,
+    "elapsed_seconds": 4.3,
+    "ruff": "pass",
+    "real_synthetic_pptx_and_vector_pdf_export_exercised": true
+  },
+  "schema_and_provenance": {
+    "frozen_report_and_analysis_schemas_match": true,
+    "analysis_serialization": "Exact UTF-8 JSON indent=2, ensure_ascii=False, allow_nan=False, original insertion order, terminal LF; matches storage.atomic_json on native Linux",
+    "copied_report_native_paths_need_not_exist": true,
+    "embedded_model_bytes_match_audited_analysis_hashes": true,
+    "passing_both_model_audit_and_canonical_campaign_identity_required": true,
+    "stale_cross_campaign_and_unaudited_result_bindings_refused": true,
+    "public_build_and_cli_fixture_refusal": true,
+    "private_synthetic_fixture_output_watermarked_on_all_four_slides_and_notes": true,
+    "count_score_group_consistency_checked": true,
+    "ci_display": "Preserves signed audited differences and interval endpoints; multiplies fractions by 100 to percentage points; checks finite ordered bounds, not a new bootstrap computation"
+  },
+  "content_review": {
+    "fixed_primary": "Llama, B hard correction complete-four-case quartet accuracy, Mixed512 minus A512",
+    "qwen_role": "named secondary replication",
+    "all_four_arms_visible": [
+      "A512",
+      "Mixed512",
+      "Ahalf256",
+      "Offset"
+    ],
+    "both_A_and_B_hard_controls_retained": true,
+    "quartets_per_model_format": 192,
+    "paired_contexts_not_independently_pooled": 24,
+    "named_Mixed512_minus_Offset_diagnostic": "Preserved in speaker notes with full saved contrast metadata; no geometric/causal attribution",
+    "uncertainty_limits": "Conditional on fitted heads and authored task; fitting-cohort uncertainty excluded",
+    "human_review_incomplete_visible": true,
+    "privileged_factor_supervision_and_external_rule_visible": true,
+    "one_author_pool_shared_templates_and_NF4_scope_visible": true,
+    "no_spontaneous_anticipation_deception_or_internal_causal_algorithm_claim": true,
+    "BF16_CREATE_replication": "Explicitly proposed, not performed"
+  },
+  "layout_review": {
+    "artifact": "Actual synthetic editable PPTX produced by the test; PDF vector structure verified by tests",
+    "visual_method": "Read-only PPTX shape/font geometry rendered to a temporary contact sheet with installed Arial; not a rasterization of the PDF",
+    "slides": 4,
+    "dimensions_inches": [
+      13.333,
+      7.5
+    ],
+    "text_boxes_per_slide": [
+      9,
+      26,
+      14,
+      16
+    ],
+    "text_box_overlaps_per_slide": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "all_text_bounds_inside_slide": true,
+    "font_pt_min_per_slide": [
+      8.3,
+      8.3,
+      8.3,
+      8.3
+    ],
+    "font_pt_max_per_slide": [
+      40.0,
+      28.0,
+      28.0,
+      28.0
+    ],
+    "assessment": "Readable at normal slide size; body and table hierarchy is clear, all metric columns and captions fit. Small footer metadata is secondary to larger visible measurement-limit text.",
+    "original_template_and_renderer_bytes_preserved_by_export_test": true
+  },
+  "blocking_issues": [],
+  "limits": [
+    "Synthetic exports establish code/layout behavior and preserve negative example values; they are not current campaign findings.",
+    "Numerical audit correctness is inherited from the frozen independent audit receipt and exact result bytes; the deck builder intentionally does not recompute research metrics.",
+    "This is an agent source/layout review, not human semantic acceptance."
+  ],
+  "commits": false
+}

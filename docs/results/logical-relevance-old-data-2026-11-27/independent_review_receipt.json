@@ -1,0 +1,269 @@
+{
+  "schema": "logical-relevance-old-independent-review-v1",
+  "status": "pass_scoped_numeric_reconstruction",
+  "completed_at_utc": "2026-11-27T01:41:56.869158+00:00",
+  "old_only": true,
+  "new_campaign_artifacts_accessed": false,
+  "model_calls": 0,
+  "classifier_fits": 0,
+  "production_analysis_functions_imported": false,
+  "source_sha256": {
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\docs\\validation\\logical_relevance_old_independent_check_2026-11-27.py": "8fd09a42663d3e0ba4288a799e9d631b4e467383dd4e125ea813f267185ad2dd"
+  },
+  "author_receipt_sha256": "c9c79b43d0aeb7bb8c2f9c99a4eedca9731dd025cee3ae521e32e0f972fdb6ac",
+  "checked_old_input_sha256": {
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\llama_analysis\\manifest.json": "3f6852b3f10244cafd76523c2d2825a177a1c5eeafb5a2739f0a0f0e4c180d44",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\llama_analysis\\predictions.npz": "3cdd11df723a8c2c9e64cf552a4b8c2b7525652015476dfdb0972cc02219b954",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\llama\\test\\rows.json": "f3d8de2ee74ea5bb2300b32b9e26fb711b7435793b24ebbf5128d776b74f6f41",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\llama_fit\\settings.json": "6a459648e7bc17bb4526ee6e76c5bd47601a0b06643f3fb6c3d0e9cea8538c45",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\llama_fit\\heads.npz": "9473175eda13e5af4041591b1edb9dc28e49c4ad2056fab281736fb96261e2d7",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\qwen_analysis\\manifest.json": "ba7ecd08a3c7a261573992cdf7d9f582d8f1e675fc0af92dffae15f4b8310e64",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\qwen_analysis\\predictions.npz": "57e91d5139d505ebe62411140b7526b625c7ca8a0c9f91ceba226d3d3c754864",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\qwen\\test\\rows.json": "0e54205e838d49d3c0ee1b5558371d6ae6d908078001fb36b0616dd2e3a88d3f",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\qwen_fit\\settings.json": "c4d98c5b0fbedc1b965f6faf75067e47c0f1685e28a2cd76122f599b7171ece4",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\qwen_fit\\heads.npz": "c1a818f3074ef6c73121ce9dc4220a628d121a8707a26fb4a691fe4d78115a04"
+  },
+  "checked_author_output_sha256": {
+    "factor_metrics.csv": "d6b06bbf163480c8b42752116173cf81ddef4d42944232268be1d1415fa1fb52",
+    "factor_comparisons.csv": "3ddb9174acfec5d02e559d777d82e4efd1f1bc2d68e11673d09e7e698b14d77b",
+    "oracle_metrics.csv": "9923b4e60caa1850922d6eec4aaa12528bbd52dc49bf3b07d79159573facc0b2",
+    "summary.json": "028533bcb90b21ba0c97ed0a8ecbd0434f78850ec7b8fdce17af018cde48edb0"
+  },
+  "numeric_scalars_compared": 77600,
+  "explicit_null_cells_compared": 10400,
+  "maximum_absolute_difference": 2.220446049250313e-16,
+  "tables_completely_checked": {
+    "factor_metrics": 2400,
+    "factor_comparisons": 1200,
+    "oracle_metrics": 4800
+  },
+  "per_context_relevance_counts": [
+    {
+      "stratum": "union",
+      "factor": "I",
+      "relevance": "relevant",
+      "n": 16
+    },
+    {
+      "stratum": "union",
+      "factor": "I",
+      "relevance": "irrelevant",
+      "n": 48
+    },
+    {
+      "stratum": "union",
+      "factor": "U",
+      "relevance": "relevant",
+      "n": 48
+    },
+    {
+      "stratum": "union",
+      "factor": "U",
+      "relevance": "irrelevant",
+      "n": 16
+    },
+    {
+      "stratum": "union",
+      "factor": "B1",
+      "relevance": "relevant",
+      "n": 16
+    },
+    {
+      "stratum": "union",
+      "factor": "B1",
+      "relevance": "irrelevant",
+      "n": 48
+    },
+    {
+      "stratum": "union",
+      "factor": "B2",
+      "relevance": "relevant",
+      "n": 48
+    },
+    {
+      "stratum": "union",
+      "factor": "B2",
+      "relevance": "irrelevant",
+      "n": 16
+    },
+    {
+      "stratum": "correction_easy",
+      "factor": "I",
+      "relevance": "relevant",
+      "n": 8
+    },
+    {
+      "stratum": "correction_easy",
+      "factor": "I",
+      "relevance": "irrelevant",
+      "n": 24
+    },
+    {
+      "stratum": "correction_easy",
+      "factor": "U",
+      "relevance": "relevant",
+      "n": 24
+    },
+    {
+      "stratum": "correction_easy",
+      "factor": "U",
+      "relevance": "irrelevant",
+      "n": 8
+    },
+    {
+      "stratum": "correction_easy",
+      "factor": "B1",
+      "relevance": "relevant",
+      "n": 0
+    },
+    {
+      "stratum": "correction_easy",
+      "factor": "B1",
+      "relevance": "irrelevant",
+      "n": 32
+    },
+    {
+      "stratum": "correction_easy",
+      "factor": "B2",
+      "relevance": "relevant",
+      "n": 32
+    },
+    {
+      "stratum": "correction_easy",
+      "factor": "B2",
+      "relevance": "irrelevant",
+      "n": 0
+    },
+    {
+      "stratum": "correction_hard",
+      "factor": "I",
+      "relevance": "relevant",
+      "n": 8
+    },
+    {
+      "stratum": "correction_hard",
+      "factor": "I",
+      "relevance": "irrelevant",
+      "n": 24
+    },
+    {
+      "stratum": "correction_hard",
+      "factor": "U",
+      "relevance": "relevant",
+      "n": 24
+    },
+    {
+      "stratum": "correction_hard",
+      "factor": "U",
+      "relevance": "irrelevant",
+      "n": 8
+    },
+    {
+      "stratum": "correction_hard",
+      "factor": "B1",
+      "relevance": "relevant",
+      "n": 16
+    },
+    {
+      "stratum": "correction_hard",
+      "factor": "B1",
+      "relevance": "irrelevant",
+      "n": 16
+    },
+    {
+      "stratum": "correction_hard",
+      "factor": "B2",
+      "relevance": "relevant",
+      "n": 16
+    },
+    {
+      "stratum": "correction_hard",
+      "factor": "B2",
+      "relevance": "irrelevant",
+      "n": 16
+    }
+  ],
+  "oracle_cells_below_mask0_pooled": [
+    {
+      "model": "llama",
+      "renderer": "B",
+      "stratum": "correction_easy",
+      "mask": 4,
+      "row_change": -0.01822916666666674,
+      "quartet_change": -0.04166666666666663
+    },
+    {
+      "model": "llama",
+      "renderer": "B",
+      "stratum": "correction_easy",
+      "mask": 5,
+      "row_change": -0.01822916666666674,
+      "quartet_change": -0.04166666666666663
+    },
+    {
+      "model": "qwen",
+      "renderer": "B",
+      "stratum": "correction_easy",
+      "mask": 2,
+      "row_change": -0.0078125,
+      "quartet_change": 0.005208333333333336
+    },
+    {
+      "model": "qwen",
+      "renderer": "B",
+      "stratum": "correction_easy",
+      "mask": 3,
+      "row_change": -0.0078125,
+      "quartet_change": 0.005208333333333336
+    },
+    {
+      "model": "qwen",
+      "renderer": "B",
+      "stratum": "correction_easy",
+      "mask": 6,
+      "row_change": -0.0078125,
+      "quartet_change": 0.005208333333333336
+    },
+    {
+      "model": "qwen",
+      "renderer": "B",
+      "stratum": "correction_easy",
+      "mask": 7,
+      "row_change": -0.0078125,
+      "quartet_change": 0.005208333333333336
+    },
+    {
+      "model": "qwen",
+      "renderer": "B",
+      "stratum": "correction_hard",
+      "mask": 8,
+      "row_change": 0.01171875,
+      "quartet_change": -0.046875
+    },
+    {
+      "model": "qwen",
+      "renderer": "B",
+      "stratum": "correction_hard",
+      "mask": 9,
+      "row_change": 0.01171875,
+      "quartet_change": -0.046875
+    },
+    {
+      "model": "qwen",
+      "renderer": "B",
+      "stratum": "correction_hard",
+      "mask": 10,
+      "row_change": 0.11197916666666663,
+      "quartet_change": -0.052083333333333336
+    },
+    {
+      "model": "qwen",
+      "renderer": "B",
+      "stratum": "correction_hard",
+      "mask": 11,
+      "row_change": 0.11197916666666663,
+      "quartet_change": -0.052083333333333336
+    }
+  ],
+  "scope_limit": "Recomputes saved-margin metrics, relevance partitions, all16 external-factor substitutions, every reporting scope and context-mean difference. Does not reconstruct hidden-state margins from original features, validate story semantics, verify a model-internal mechanism, or certify the author's actual first-access time."
+}

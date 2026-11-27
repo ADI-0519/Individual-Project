@@ -1,6 +1,40 @@
-# Verified continuation state: 26 November 2026
+# Verified continuation state: 27 November 2026
 
-## Latest: full saved-score format diagnosis and reviewed next-study design
+## Running: fresh equal-observation format adaptation
+
+The [fixed protocol](FORMAT_ADAPTATION_EXECUTION_PROTOCOL_V1.md) and numerical
+auditor were frozen at commit `40ae42e` before model execution. The new study
+uses 40 newly authored contexts (16 fitting, 24 test), two pinned checkpoints
+and four fitting procedures. Its primary is Llama format-B hard complete-quartet
+accuracy, Mixed512 minus A512. Mixed512 versus the same-observation intercept-only
+Offset procedure is a named diagnostic; Qwen is a secondary replication.
+
+At the **01:37 GMT, 27 November** progress check, all 768 Llama fitting captures
+were complete and Qwen had completed 518/768. The Linux coordinator and detached
+Windows worker had fresh heartbeats. These are capture counts, not fitted or
+held-out results. Both fitted bundles must be frozen before either test forward.
+No current-study scientific outcome has been read or reported at this checkpoint.
+
+The campaign root is
+`/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign`.
+The [launch receipt](validation/2026-11-27-format-adaptation-detached-launch-v1.json)
+records the durable worker, exact prepared-source identities and an earlier
+703-row progress snapshot. Check a live producer and fresh progress/heartbeat;
+a historical `running` field alone proves nothing. Do not modify sealed source,
+repeat attempted rows, inspect partial test scores, or tune this fixed study.
+Both analyses, the separate-author reconstruction and the passing report gate
+are required before interpretation. The
+[continuation runbook](FORMAT_ADAPTATION_CAMPAIGN_RUNBOOK_2026-11-27.md)
+describes completion checks and preserved-failure boundaries.
+
+All 118 blind agent-review answers agree with the semantic key. Human semantic
+review remains incomplete. This is agent-audited exploratory research, with
+privileged factor labels and a supplied Boolean fold, rather than evidence of
+spontaneous reader anticipation or a causal belief algorithm. The separate
+logical-relevance diagnostic uses only the exposed November 23 study and cannot
+change any current fitting or analysis decision.
+
+## Earlier: full saved-score format diagnosis and reviewed next-study design
 
 The [new result](FORMAT_TRANSFER_RESULTS_2026-11-26.md) independently rechecks
 all 4,992 saved test rows/model. On pooled easy/hard corrections, initial and
