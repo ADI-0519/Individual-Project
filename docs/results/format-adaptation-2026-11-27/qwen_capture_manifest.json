@@ -1,0 +1,19 @@
+{
+  "schema": "format-adaptation-capture-manifest-v1",
+  "status": "complete",
+  "partition": "test",
+  "model_key": "qwen",
+  "started_at": "2026-11-27T02:01:48.649556+00:00",
+  "completed_rows": 4992,
+  "bank_sha256": "a05737d2b0ceaccbc71588ffdde31e3dfe73a251d3acbacf0dad190c8375aeed",
+  "protocol_sha256": "5521868d727a4a6fe36265267ba44512ecf423c5326f59ecdae18ad952837f1e",
+  "input_artifact_sha256": {
+    "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/qwen/protocol.json": "5521868d727a4a6fe36265267ba44512ecf423c5326f59ecdae18ad952837f1e"
+  },
+  "seal_sha256": "8295a9d0e8d6774413bd472458d2ef547f13d359edd9bd3a6c694bfe6a9528e4",
+  "last_progress_at": "2026-11-27T02:22:40.457056+00:00",
+  "finished_at": "2026-11-27T02:22:51.214907+00:00",
+  "rows_sha256": "3024961eb517d92d6ae0fbc538d472c246b11574bc902afdf2da884a8b64fc36",
+  "features_sha256": "ad317ac4a84493dbe78560ab2ab0555e08722717a94b4cb2c32d9e0fcb187882",
+  "engineering_complete_sha256": "f23464191fcbb6ff0fd7a644aa6c269713314f270342d41387f3e20bd4ae0fcb"
+}

@@ -1,0 +1,204 @@
+{
+  "schema": "format-adaptation-release-independent-review-v1",
+  "status": "pass",
+  "created_at": "2026-11-27T11:19:12.178444+00:00",
+  "reviewer": "/root/release_repro_audit",
+  "source_commit_before_release": "523a87fb51bbca72283333c6ef5d76bbce6b4de1",
+  "scientific_source_freeze": "40ae42efe73e7cdfa0917eb89a5d4697bee3ca75",
+  "scope": "Independent release, provenance, packaging and public offline replay review. This review does not replace the frozen numerical audit or assess novelty and human semantic validity.",
+  "model_calls": 0,
+  "classifier_fits": 0,
+  "scientific_sources_modified": false,
+  "scientific_exports_modified": false,
+  "reviewed_source_sha256": {
+    ".github/workflows/ci.yml": "1b0a13bcf1b7f6f0028711969f260060d1fefda1568cde61677895ad29860ff8",
+    ".pre-commit-config.yaml": "c04d2487523b322c03d122258c9eb66abd5b13d05d05fda958cd95853ca41863",
+    "MANIFEST.in": "742df6870fc9e768991381f2f8b8e3abd9ea708e32e5aaf98eb797908b31eaea",
+    ".gitignore": "f11a001c0bd95d88b920fc94a9e40e1350041dd9a8cace5ddf77024619e9f96f",
+    "scripts/export_format_adaptation_replay.py": "a118ed35baf5410951e233fcf24f4b408697c7d08f3f24294f87f27cdef66a5c",
+    "scripts/build_format_adaptation_progress2.py": "193c838a65898c4ea79f596ae7a814eb2a90335ab0df82de8ffa419a1b699cba",
+    "tests/test_export_format_adaptation_replay.py": "f60db61bfe46596ef4aad9175ea3e2da86d9d179e112ab0dabd68eb7ad1e9eb1",
+    "tests/test_format_adaptation_progress2.py": "e2954e4baa4ac461c51cc8868b1a4d3fa06c228c6a0d244b7c40a688a212e578"
+  },
+  "exact_byte_checks": {
+    "bundle_manifest_members": 19,
+    "exact_native_collection_files": 14,
+    "scientific_sources_unchanged": 50,
+    "report_output_hashes": 5,
+    "presentation_output_hashes": 3,
+    "presentation_source_hashes": 4,
+    "slides_pptx": 4,
+    "slides_pdf": 4,
+    "all_11_stages_complete": true,
+    "windows_exit_code": 0,
+    "user_review_file_preserved": true
+  },
+  "portable_projection_checks": {
+    "lossless_gzip_originals": 9,
+    "models": {
+      "llama": {
+        "rows": 4992,
+        "all_projected_fields_match_native": true,
+        "original_answer_tokens_match": true
+      },
+      "qwen": {
+        "rows": 4992,
+        "all_projected_fields_match_native": true,
+        "original_answer_tokens_match": true
+      }
+    }
+  },
+  "public_real_replay": {
+    "command": ".venv/Scripts/python.exe docs/results/format-adaptation-2026-11-27/replay/replay.py replay --bundle docs/results/format-adaptation-2026-11-27/replay --output .cache/release-independent-real-replay-20261127.json",
+    "status": "pass",
+    "test_fixture": false,
+    "bundle_manifest_sha256": "bb3397fe70031872ce4be10e863bd322f948ed723e83e2e89ddd2fb5697980b3",
+    "independent_audit": false,
+    "feature_to_prediction_verified": false,
+    "recomputed_scopes": [
+      "arms",
+      "output_baseline",
+      "factor_diagnostics",
+      "paired_format",
+      "primary",
+      "named_diagnostic",
+      "factor_truth_scope",
+      "output_first_token_detail"
+    ],
+    "models": {
+      "llama": {
+        "rows": 4992,
+        "arms": [
+          "A512",
+          "Mixed512",
+          "Ahalf256",
+          "Offset"
+        ],
+        "factor_order": [
+          "I",
+          "M1",
+          "B1",
+          "B2"
+        ],
+        "replayed_scopes": [
+          "arms",
+          "output_baseline",
+          "factor_diagnostics",
+          "paired_format",
+          "primary",
+          "named_diagnostic",
+          "factor_truth_scope",
+          "output_first_token_detail"
+        ],
+        "comparisons": {
+          "exact": 28051,
+          "numeric": 30280,
+          "maximum_absolute_difference": 1.1102230246251565e-16
+        }
+      },
+      "qwen": {
+        "rows": 4992,
+        "arms": [
+          "A512",
+          "Mixed512",
+          "Ahalf256",
+          "Offset"
+        ],
+        "factor_order": [
+          "I",
+          "M1",
+          "B1",
+          "B2"
+        ],
+        "replayed_scopes": [
+          "arms",
+          "output_baseline",
+          "factor_diagnostics",
+          "paired_format",
+          "primary",
+          "named_diagnostic",
+          "factor_truth_scope",
+          "output_first_token_detail"
+        ],
+        "comparisons": {
+          "exact": 28051,
+          "numeric": 30280,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    "receipt_sha256": "f6383c7f1d139e9a769affbaeaa0a23375365e5255a9b0494dbc52b4ccacd8d9"
+  },
+  "focused_tests": {
+    "command": ".venv/Scripts/python.exe -m pytest tests/test_export_format_adaptation_replay.py tests/test_format_adaptation_progress2.py -q",
+    "passed": 40,
+    "failed": 0,
+    "elapsed_seconds": 40.78
+  },
+  "actual_presentation_rebuild": {
+    "cli_status": "pass",
+    "ci_dependency_profile": "uv run --locked --extra slides",
+    "input_bindings_identical": true,
+    "source_bindings_identical": true,
+    "all_slide_xml_identical": true,
+    "speaker_notes_identical": true,
+    "slides_pptx": 4,
+    "slides_pdf": 4,
+    "rebuilt_source_receipt_sha256": "0a503221b2f067c5eb471a87e70556938b02cf7ca18493ad1f6e2d4bbb0d02c9"
+  },
+  "source_distribution": {
+    "path": ".cache\\format-adaptation-release-build-20261127\\kcl_latent_probes-0.1.0.tar.gz",
+    "sha256": "93c4c3d39d3662ad5b88c706a87bb5a06598a1b5ea52bf73a925ff59ba690694",
+    "exact_bundle_members": 20,
+    "includes_all_19_manifest_members_plus_manifest": true,
+    "verified_npz_gzip_txt_python_and_json": true
+  },
+  "public_guards_reviewed": [
+    "Public export and replay reject synthetic or mixed fixture evidence; only private test helpers permit explicit fixtures.",
+    "Replay checks the exact file inventory, safe paths, every bundle hash, source closure and self hash before metric imports.",
+    "The original passing both-model audit, test seal, reconstruction seal, output hashes, selected sites, row populations and original capture identities are verified.",
+    "Derived NPZ loading uses allow_pickle=False, an exact allowed array inventory, joined row/arm/factor identities, finite margins and strict Boolean flags; no hidden-state vectors or fitted coefficients are shipped.",
+    "Actual projected rows were independently compared with every corresponding native row and retained scalar field for both checkpoints; all nine losslessly compressed originals match their native source bytes.",
+    "Public presentation loading requires exact audited embedded result bytes, report/receipt/campaign bindings and matching shared context sets; it does not rerun scientific analysis.",
+    "Global NPZ ignore remains intact. Only the two exact audited derived prediction files are staged; the user-modified review packet is excluded from the index.",
+    "The source-distribution include is narrowed to this replay directory for NPZ, gzip and text; the large-file exemption is narrowed to the exact immutable report summary."
+  ],
+  "ci_review": {
+    "real_public_replay_runs_in_all_three_test_matrix_jobs": true,
+    "replay_receipts_retained_with_coverage": true,
+    "actual_four_slide_deck_rebuild_uses_locked_slides_extra": true,
+    "actual_deck_outputs_retained_as_artifacts": true,
+    "new_workflow_execution": "Pending release commit; this review verifies current workflow source and independently executes the real Windows replay and exact slides dependency profile. It does not claim these uncommitted workflow additions have run remotely."
+  },
+  "resolved_findings": [
+    {
+      "issue": "The new actual presentation rebuild output path was absent from the CI artifact upload list.",
+      "resolution": "Root added the exact .cache/format-adaptation-progress2-check/* path; final workflow source was rechecked.",
+      "scientific_effect": "None"
+    }
+  ],
+  "operational_attempts": [
+    {
+      "attempt": "Direct real deck rebuild with the lightweight inner .venv Python.",
+      "outcome": "ModuleNotFoundError: pptx; no scientific export was altered and no deck was emitted.",
+      "resolution": "Rebuilt successfully using the exact declared CI command profile: uv run --locked --extra slides python scripts/build_format_adaptation_progress2.py. It installed six declared slides packages. All four slide XMLs and speaker-note bytes equal the delivered actual deck."
+    }
+  ],
+  "environment": {
+    "actual_interpreter": "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\.venv\\Scripts\\python.exe",
+    "runtime_python": "3.11.9",
+    "configuration_tool": "configurePythonEnvironment and getPythonExecutableCommand were attempted twice but returned an unknown-thread host error in this delegated thread. The already-chosen explicit project interpreter and locked uv profile were verified by successful execution; no editor-selected-interpreter claim is made."
+  },
+  "plugins": {
+    "graphify": "Existing 727-node graph queried for navigation; graph is stale for the new study, so all release conclusions use direct source and runtime/byte evidence. No graph rebuild or additional plugin used."
+  },
+  "blocking_issues": [],
+  "limits": [
+    "This public replay reuses the frozen production metric functions. It is metric reproducibility from derived predictions, not an independent feature-to-prediction reconstruction; that full audit remains a separate native artifact.",
+    "Raw prompts, tokenizer inputs, activation vectors and fitted heads are deliberately absent from the lightweight replay bundle. Original native evidence remains necessary for end-to-end reconstruction.",
+    "The package archive hash identifies the exact archive inspected before subsequent documentation-only updates; final package rebuilds may legitimately have a different archive hash. The immutable replay-member hashes must remain identical.",
+    "Human semantic review remains incomplete. Agent review, passing code checks and reliable packaging do not establish publication novelty, spontaneous belief anticipation, causal internal computation or actual deception.",
+    "Remote CI for the final release commit must still complete; only pre-release local checks and source wiring are certified here."
+  ],
+  "commits": false
+}

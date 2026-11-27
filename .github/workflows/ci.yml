@@ -59,11 +59,18 @@ jobs:
         run: uv sync --locked --group dev
       - name: Run offline fixture tests with coverage
         run: uv run --locked python -m pytest tests -m "not model" --cov=latent_probes --cov-report=term-missing --cov-report=xml
+      - name: Replay every audited format-adaptation metric without models
+        run: >-
+          uv run --locked python docs/results/format-adaptation-2026-11-27/replay/replay.py replay
+          --bundle docs/results/format-adaptation-2026-11-27/replay
+          --output format-adaptation-ci-replay.json
       - name: Retain coverage report
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: coverage-${{ matrix.os }}-py${{ matrix.python }}
-          path: coverage.xml
+          path: |
+            coverage.xml
+            format-adaptation-ci-replay.json
           if-no-files-found: error
           retention-days: 14
 
@@ -95,6 +102,15 @@ jobs:
           --pdf .cache/progress2-check.pdf
       - name: Check main-study slide provenance and four-slide layout
         run: uv run --locked --extra slides python -m pytest tests/test_main_study_progress2.py -q
+      - name: Check format-adaptation slide provenance and four-slide layout
+        run: uv run --locked --extra slides python -m pytest tests/test_format_adaptation_progress2.py -q
+      - name: Rebuild the completed audited format-adaptation update
+        run: >-
+          uv run --locked --extra slides python scripts/build_format_adaptation_progress2.py
+          --summary docs/results/format-adaptation-2026-11-27/summary.json
+          --manifest docs/results/format-adaptation-2026-11-27/manifest.json
+          --audit docs/results/format-adaptation-2026-11-27/audit_receipt.json
+          --output .cache/format-adaptation-progress2-check
       - name: Rebuild the two-model empirical update from its bound report
         run: >-
           uv run --locked --extra slides python scripts/build_main_study_progress2.py
@@ -116,6 +132,7 @@ jobs:
             .cache/progress2-check.pdf
             .cache/main-study-progress2-check/*
             .cache/main-study-progress2-complete-check/*
+            .cache/format-adaptation-progress2-check/*
           if-no-files-found: error
           retention-days: 14
 

@@ -1,6 +1,42 @@
 # Verified continuation state: 27 November 2026
 
-## Running: fresh equal-observation format adaptation
+## Latest: fresh equal-observation format adaptation completed at 02:24 GMT
+
+All eleven stages and the detached worker exited successfully. Each model has
+768 fitting and 4,992 test measurements; the full cohort total is 11,520. Both
+fits were frozen before any test forward, and all 50 scientific source hashes
+still match. The independent audit checked 389,392 prediction scalars with zero
+margin difference and 60,560 numerical metric values within 1.11e-16.
+
+The fixed Llama B-hard primary improves from 2/192 A512 panels to 151/192
+Mixed512 panels: +77.60 pp, conditional 95% interval [68.23, 85.42]. Qwen's named
+replication improves 3/192 to 125/192: +63.54 pp [54.69, 71.35]. Offset reaches
+20/192 and 11/192. Mixed-minus-Offset is +68.23 pp [58.85, 76.04] for Llama and
++59.38 pp [51.04, 67.19] for Qwen. These compare the fixed procedures, not a
+uniquely identified geometric mechanism.
+
+Source A hard performance falls 185/192 to 166/192 for Llama and 162/192 to
+131/192 for Qwen; one-step controls are not generally repaired. The result is
+partial transfer repair for the explicitly queried attributed-belief assay.
+The shared 24 contexts, one author pool, fixed templates/rules, privileged
+factor labels/external fold and NF4 runtime bound generalization. Human semantic
+review remains incomplete. The earlier negative primary remains unchanged.
+
+The [complete report](results/format-adaptation-2026-11-27/results.md),
+[interpretation](FORMAT_ADAPTATION_RESULTS_INTERPRETATION_2026-11-27.md),
+[collection receipt](validation/2026-11-27-format-adaptation-result-collection-v1.json),
+[portable replay guide](FORMAT_ADAPTATION_PORTABLE_REPLAY.md) and
+[four-slide presentation](../presentations/progress2-format-adaptation-2026-11-27/Progress-2-format-adaptation.pptx)
+are the continuation entry points. Fourteen native exports were copied exactly.
+Both native replay and relocated Windows replay pass; neither replaces the
+separate numerical auditor. No model worker needs to remain running.
+
+Next: complete the final package/CI checks, document supervisor scope feedback
+and human review, write the BSPR/results argument, and separately specify any
+matched BF16 replication on CREATE. Do not refit on these exposed test labels or
+promote this result into spontaneous anticipation or natural deception detection.
+
+## Earlier: running fresh equal-observation format adaptation
 
 The [fixed protocol](FORMAT_ADAPTATION_EXECUTION_PROTOCOL_V1.md) and numerical
 auditor were frozen at commit `40ae42e` before model execution. The new study

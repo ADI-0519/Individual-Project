@@ -1,0 +1,80 @@
+{
+  "schema": "format-adaptation-portable-replay-receipt-v1",
+  "status": "pass",
+  "created_at": "2026-11-27T02:28:16.682128+00:00",
+  "test_fixture": false,
+  "scope": "Portable replay using unchanged production metrics; not a second independent audit or a feature-to-prediction reconstruction. No model calls, fits, tokenizer calls, new thresholds or hidden vectors.",
+  "independent_audit": false,
+  "feature_to_prediction_verified": false,
+  "model_calls": 0,
+  "classifier_fits": 0,
+  "original_campaign": "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign",
+  "bundle_manifest_sha256": "bb3397fe70031872ce4be10e863bd322f948ed723e83e2e89ddd2fb5697980b3",
+  "production_metric_module": "production/latent_probes/format_adaptation_analysis.py",
+  "numeric_tolerance": {
+    "absolute": 2e-10,
+    "relative": 2e-10
+  },
+  "models": {
+    "llama": {
+      "rows": 4992,
+      "arms": [
+        "A512",
+        "Mixed512",
+        "Ahalf256",
+        "Offset"
+      ],
+      "factor_order": [
+        "I",
+        "M1",
+        "B1",
+        "B2"
+      ],
+      "replayed_scopes": [
+        "arms",
+        "output_baseline",
+        "factor_diagnostics",
+        "paired_format",
+        "primary",
+        "named_diagnostic",
+        "factor_truth_scope",
+        "output_first_token_detail"
+      ],
+      "comparisons": {
+        "exact": 28051,
+        "numeric": 30280,
+        "maximum_absolute_difference": 0.0
+      }
+    },
+    "qwen": {
+      "rows": 4992,
+      "arms": [
+        "A512",
+        "Mixed512",
+        "Ahalf256",
+        "Offset"
+      ],
+      "factor_order": [
+        "I",
+        "M1",
+        "B1",
+        "B2"
+      ],
+      "replayed_scopes": [
+        "arms",
+        "output_baseline",
+        "factor_diagnostics",
+        "paired_format",
+        "primary",
+        "named_diagnostic",
+        "factor_truth_scope",
+        "output_first_token_detail"
+      ],
+      "comparisons": {
+        "exact": 28051,
+        "numeric": 30280,
+        "maximum_absolute_difference": 0.0
+      }
+    }
+  }
+}

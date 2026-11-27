@@ -2,6 +2,23 @@
 
 27 November 2026. Prepared for discussion before fresh adaptation outcomes. Results remain agent-audited exploratory. This is a material scope change to discuss with the supervisor; agreement and completed human semantic review are not claimed.
 
+## Completed result added after the frozen run
+
+The [new study](results/format-adaptation-2026-11-27/results.md) finished at
+02:24 GMT with all 11,520 cohort measurements and a passing independent
+numerical audit. Llama B-hard complete panels improve from 2/192 with A512 to
+151/192 with Mixed512; Qwen improves from 3/192 to 125/192. The equal-observation
+intercept-only procedures reach 20/192 and 11/192. Llama's fixed primary gain is
++77.60 pp, conditional 95% interval [68.23, 85.42].
+
+The repair has a clear trade-off: original-format A hard panels fall 185 to 166
+for Llama and 162 to 131 for Qwen. One-step controls are not generally repaired.
+This supports a scoped result about supervised readout transfer. The
+[critical interpretation](FORMAT_ADAPTATION_RESULTS_INTERPRETATION_2026-11-27.md)
+retains these failures, the second model, all four arms and the missing human
+review. The prospective explanation below remains the record of why the study
+was chosen.
+
 ## What changed, and what remains separate
 
 Variant 2 concerns latent-probe reliability under perturbations and distribution shifts. The original direction combined an Apollo-style deception-probe adaptation with truthful omissions: does a frozen monitor distinguish consequential missing information when recipient knowledge and reporting pressure change? The current core question is narrower: **does a readout of a fictional sender's attributed reader belief transfer across controlled prompt formats, and which supervised adaptation procedure helps?** The [initial protocol](EXPERIMENT_PROTOCOL.md) and [dated research decision](MAIN_STUDY_DECISION_2026-11-21.md) preserve that distinction.

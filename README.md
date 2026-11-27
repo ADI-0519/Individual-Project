@@ -1,4 +1,4 @@
-# Latent probes under reporting pressure
+# Latent Probes and Listener Beliefs
 
 [![CI](https://github.com/ADI-0519/Individual-Project/actions/workflows/ci.yml/badge.svg)](https://github.com/ADI-0519/Individual-Project/actions/workflows/ci.yml)
 
@@ -13,17 +13,45 @@ controlled study tests a frozen readout of sender-attributed current belief;
 this target is distinct from Apollo deception detection. See the
 [current research decision](docs/CURRENT_RESEARCH_STATE.md).
 
-**27 November: the fresh matched-budget adaptation study is running.**
-The [frozen protocol](docs/FORMAT_ADAPTATION_EXECUTION_PROTOCOL_V1.md) compares
-512 source-format observations with 512 mixed-format observations, plus a
-same-observation intercept-only control. It retains fixed historical sites and
-feature maps, 40 fresh contexts and both checkpoints. At 01:37 GMT, Llama's 768
-fitting captures were complete and Qwen had completed 518/768; no held-out result
-is reported. Both fitted bundles must freeze before either test capture, and
-the separate-author numerical audit must pass before the final report. Read the
-[continuation state](docs/CURRENT_RESEARCH_STATE.md) and
-[runbook](docs/FORMAT_ADAPTATION_CAMPAIGN_RUNBOOK_2026-11-27.md). Human semantic
-review remains incomplete.
+**27 November: the fresh matched-budget adaptation study is complete.**
+All 11,520 planned cohort measurements, both analyses and the independent
+numerical audit finished at 02:24 GMT. On new format-B hard correction cases,
+mixed-format fitting partially repairs the four-factor readout at the same
+512-observation budget:
+
+| Checkpoint | A512 | Mixed512 | Ahalf256 | Intercept-only Offset |
+| --- | ---: | ---: | ---: | ---: |
+| Llama 3.1 8B | 2/192 | **151/192** | 7/192 | 20/192 |
+| Qwen 2.5 7B | 3/192 | **125/192** | 4/192 | 11/192 |
+
+Each entry counts complete four-case receipt panels across the same 24 test
+contexts. The fixed Llama primary improvement is **77.60 percentage points**,
+conditional 95% interval [68.23, 85.42]; Qwen's named replication is +63.54 pp
+[54.69, 71.35]. The gain has a source-format cost: A hard panels fall from
+185 to 166 for Llama and 162 to 131 for Qwen. One-step controls are not generally
+repaired. Four supervised factors plus a supplied rule measure accessibility;
+spontaneous anticipation and deception detection remain unestablished. Human
+semantic review remains incomplete.
+
+Read the [full report](docs/results/format-adaptation-2026-11-27/results.md),
+[critical interpretation](docs/FORMAT_ADAPTATION_RESULTS_INTERPRETATION_2026-11-27.md),
+[figure PDF](docs/results/format-adaptation-2026-11-27/adaptation.pdf),
+[four-slide deck](presentations/progress2-format-adaptation-2026-11-27/Progress-2-format-adaptation.pptx)
+and [scope update](docs/SUPERVISOR_SCOPE_UPDATE_2026-11-27.md).
+The [frozen protocol](docs/FORMAT_ADAPTATION_EXECUTION_PROTOCOL_V1.md) and
+[replay guide](docs/FORMAT_ADAPTATION_PORTABLE_REPLAY.md) specify the comparison
+and its reproducibility boundaries. Both fitted bundles were sealed before
+either test capture; no new site, threshold or regularization selection occurred.
+
+Replay the saved metrics without either language model:
+
+```sh
+uv run --locked python docs/results/format-adaptation-2026-11-27/replay/replay.py replay --bundle docs/results/format-adaptation-2026-11-27/replay
+```
+
+The compact bundle passed native Linux and relocated Windows replay. The
+independent native auditor separately reconstructs predictions from saved
+features; production-function replay verifies the exported scores and metrics.
 
 **26 November: the complete score-shift diagnostic is finished.**
 The [new diagnosis](docs/FORMAT_TRANSFER_RESULTS_2026-11-26.md) finds preserved

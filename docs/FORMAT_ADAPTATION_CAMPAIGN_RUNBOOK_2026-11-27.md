@@ -1,5 +1,11 @@
 # Format-adaptation campaign continuation runbook
 
+**Completed at 02:24 GMT on 27 November.** All eleven stages and the detached
+worker exited successfully. Start with the
+[completed interpretation](FORMAT_ADAPTATION_RESULTS_INTERPRETATION_2026-11-27.md)
+and [current state](CURRENT_RESEARCH_STATE.md). The running snapshot below is
+historical; no model worker needs to remain active and no relaunch is needed.
+
 Written 27 November 2026. This is a new, unbound operational handoff for an
 already running campaign. It does not amend the sealed scientific sources,
 tests, inputs, execution protocol or analysis definitions. The governing design is the

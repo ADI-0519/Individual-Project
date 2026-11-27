@@ -1,0 +1,96 @@
+{
+  "schema": "format-adaptation-result-collection-v1",
+  "created_at": "2026-11-27T02:25:39.393085+00:00",
+  "status": "complete_exact_native_export",
+  "campaign_finished_at": "2026-11-27T02:24:03.290202+00:00",
+  "native_campaign": "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign",
+  "report_source_commit": "40ae42efe73e7cdfa0917eb89a5d4697bee3ca75",
+  "cohort_counts": {
+    "llama": {
+      "fit": 768,
+      "test": 4992
+    },
+    "qwen": {
+      "fit": 768,
+      "test": 4992
+    }
+  },
+  "all_50_scientific_sources_still_match": true,
+  "audit_receipt_sha256": "1daa87e5692a6e04aacd46750b5919ba80e08dca94de7b2f3dcc492227fe660f",
+  "windows_exit_code": 0,
+  "copied": {
+    "summary.json": {
+      "source": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_adaptation_v1_20261127_campaign_report\\summary.json",
+      "sha256": "b20171e7c77ad704b37c29bec1aabe6bfcb5d7d60a38f4c5b9fe6132dc81392e",
+      "bytes": 6896781
+    },
+    "adaptation.pdf": {
+      "source": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_adaptation_v1_20261127_campaign_report\\adaptation.pdf",
+      "sha256": "24d0d910ba1a9ecee48846976da6053ad39daec2f96819036408801f2a595013",
+      "bytes": 21195
+    },
+    "results.md": {
+      "source": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_adaptation_v1_20261127_campaign_report\\results.md",
+      "sha256": "59eccf334cb8458fffba9c2c9d6d712a676413a13892c58dfc234e938c67ac2d",
+      "bytes": 22597
+    },
+    "adaptation.svg": {
+      "source": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_adaptation_v1_20261127_campaign_report\\adaptation.svg",
+      "sha256": "f44f7d0fcdd80490ea91f513ea0d525c27357f673140dbe91fcbde6b0189a140",
+      "bytes": 64677
+    },
+    "adaptation.png": {
+      "source": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_adaptation_v1_20261127_campaign_report\\adaptation.png",
+      "sha256": "7cf813c1101f35cb9191b94575f8447e4c62e7340bddcc137b1d6c36ee631b27",
+      "bytes": 110657
+    },
+    "manifest.json": {
+      "source": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_adaptation_v1_20261127_campaign_report\\manifest.json",
+      "sha256": "3d03d215a3f8e56abbe1aa76f708a072992caff4c33088f8bff32e90b3fce67a",
+      "bytes": 1593
+    },
+    "audit_receipt.json": {
+      "source": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_adaptation_v1_20261127_campaign_audit\\audit_receipt.json",
+      "sha256": "1daa87e5692a6e04aacd46750b5919ba80e08dca94de7b2f3dcc492227fe660f",
+      "bytes": 18310
+    },
+    "reconstruction_seal.json": {
+      "source": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_adaptation_v1_20261127_campaign_audit\\reconstruction_seal.json",
+      "sha256": "79faab97536fe247e0bae3c4bde6aaad9f85480255f29896db242a0af773e3ad",
+      "bytes": 15505
+    },
+    "test_seal.json": {
+      "source": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_adaptation_v1_20261127_campaign\\test_seal.json",
+      "sha256": "8295a9d0e8d6774413bd472458d2ef547f13d359edd9bd3a6c694bfe6a9528e4",
+      "bytes": 11129
+    },
+    "campaign_state.json": {
+      "source": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_adaptation_v1_20261127_campaign\\campaign_state.json",
+      "sha256": "726309f2e0939c8804a1337d06bf2e449f93c4b64bf33178d68a67962f57ddfd",
+      "bytes": 8966
+    },
+    "preparation.json": {
+      "source": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_adaptation_v1_20261127_campaign\\preparation.json",
+      "sha256": "d714ce20a2380192cd1e0859b8b251ac7639646d99b7446cab775e56ade960aa",
+      "bytes": 11603
+    },
+    "windows_finished.json": {
+      "source": "C:\\Users\\adirj\\AppData\\Local\\FreshReadoutDurable\\20261127T012649Z_b57d6945755e4b53aeada19d617200dd\\finished.json",
+      "sha256": "dbcb2bd5d7a7c7b7150127f680661b418bcb0f20a298cc2ca84082881b7ed232",
+      "bytes": 184
+    },
+    "llama_capture_manifest.json": {
+      "source": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_adaptation_v1_20261127_campaign\\llama\\test\\manifest.json",
+      "sha256": "f7b77018e8cf4def841a6ba5763a4cdeb740051ce86785f02d9d6af38a490488",
+      "bytes": 1052
+    },
+    "qwen_capture_manifest.json": {
+      "source": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_adaptation_v1_20261127_campaign\\qwen\\test\\manifest.json",
+      "sha256": "ba494bcae3059007a274c22ecfdbdd32d22cc8e143c70fe10bc4aa87e314e4e4",
+      "bytes": 1050
+    }
+  },
+  "model_calls": 0,
+  "classifier_fits": 0,
+  "human_review_complete": false
+}

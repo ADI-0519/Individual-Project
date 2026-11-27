@@ -1,0 +1,203 @@
+{
+  "schema": "format-adaptation-campaign-state-v1",
+  "status": "complete",
+  "started_at": "2026-11-27T01:27:03.088557+00:00",
+  "pid": 6073,
+  "stages": [
+    {
+      "name": "llama_fit_capture",
+      "status": "complete",
+      "started_at": "2026-11-27T01:27:04.465073+00:00",
+      "command": [
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/.venv-wsl/bin/python",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/run_format_adaptation_capture.py",
+        "capture",
+        "--output",
+        "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/llama",
+        "--partition",
+        "fit"
+      ],
+      "child_pid": 6180,
+      "returncode": 0,
+      "finished_at": "2026-11-27T01:33:14.824711+00:00"
+    },
+    {
+      "name": "qwen_fit_capture",
+      "status": "complete",
+      "started_at": "2026-11-27T01:33:15.118235+00:00",
+      "command": [
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/.venv-wsl/bin/python",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/run_format_adaptation_capture.py",
+        "capture",
+        "--output",
+        "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/qwen",
+        "--partition",
+        "fit"
+      ],
+      "child_pid": 7646,
+      "returncode": 0,
+      "finished_at": "2026-11-27T01:38:40.323314+00:00"
+    },
+    {
+      "name": "llama_fit",
+      "status": "complete",
+      "started_at": "2026-11-27T01:38:40.620800+00:00",
+      "command": [
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/.venv-wsl/bin/python",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/fit_format_adaptation.py",
+        "--capture",
+        "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/llama/fit",
+        "--old-bundle",
+        "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama_fit",
+        "--model-key",
+        "llama",
+        "--output",
+        "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/llama_fit"
+      ],
+      "child_pid": 15825,
+      "returncode": 0,
+      "finished_at": "2026-11-27T01:38:50.626679+00:00"
+    },
+    {
+      "name": "qwen_fit",
+      "status": "complete",
+      "started_at": "2026-11-27T01:38:50.928321+00:00",
+      "command": [
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/.venv-wsl/bin/python",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/fit_format_adaptation.py",
+        "--capture",
+        "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/qwen/fit",
+        "--old-bundle",
+        "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen_fit",
+        "--model-key",
+        "qwen",
+        "--output",
+        "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/qwen_fit"
+      ],
+      "child_pid": 15873,
+      "returncode": 0,
+      "finished_at": "2026-11-27T01:39:00.934156+00:00"
+    },
+    {
+      "name": "seal_both_fits",
+      "status": "complete",
+      "started_at": "2026-11-27T01:39:01.268721+00:00",
+      "command": null,
+      "finished_at": "2026-11-27T01:39:03.895255+00:00"
+    },
+    {
+      "name": "llama_test_capture",
+      "status": "complete",
+      "started_at": "2026-11-27T01:39:04.178966+00:00",
+      "command": [
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/.venv-wsl/bin/python",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/run_format_adaptation_capture.py",
+        "capture",
+        "--output",
+        "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/llama",
+        "--partition",
+        "test",
+        "--seal",
+        "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/test_seal.json"
+      ],
+      "child_pid": 15887,
+      "returncode": 0,
+      "finished_at": "2026-11-27T02:01:45.652869+00:00"
+    },
+    {
+      "name": "qwen_test_capture",
+      "status": "complete",
+      "started_at": "2026-11-27T02:01:45.980789+00:00",
+      "command": [
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/.venv-wsl/bin/python",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/run_format_adaptation_capture.py",
+        "capture",
+        "--output",
+        "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/qwen",
+        "--partition",
+        "test",
+        "--seal",
+        "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/test_seal.json"
+      ],
+      "child_pid": 24125,
+      "returncode": 0,
+      "finished_at": "2026-11-27T02:22:56.679480+00:00"
+    },
+    {
+      "name": "llama_analysis",
+      "status": "complete",
+      "started_at": "2026-11-27T02:22:56.976434+00:00",
+      "command": [
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/.venv-wsl/bin/python",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/analyse_format_adaptation.py",
+        "--capture",
+        "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/llama/test",
+        "--fit",
+        "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/llama_fit",
+        "--seal",
+        "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/test_seal.json",
+        "--output",
+        "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/llama_analysis"
+      ],
+      "child_pid": 24325,
+      "returncode": 0,
+      "finished_at": "2026-11-27T02:23:17.034682+00:00"
+    },
+    {
+      "name": "qwen_analysis",
+      "status": "complete",
+      "started_at": "2026-11-27T02:23:17.347045+00:00",
+      "command": [
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/.venv-wsl/bin/python",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/analyse_format_adaptation.py",
+        "--capture",
+        "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/qwen/test",
+        "--fit",
+        "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/qwen_fit",
+        "--seal",
+        "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/test_seal.json",
+        "--output",
+        "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/qwen_analysis"
+      ],
+      "child_pid": 24332,
+      "returncode": 0,
+      "finished_at": "2026-11-27T02:23:37.357207+00:00"
+    },
+    {
+      "name": "independent_audit",
+      "status": "complete",
+      "started_at": "2026-11-27T02:23:37.676139+00:00",
+      "command": [
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/.venv-wsl/bin/python",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/audit_format_adaptation.py",
+        "--campaign",
+        "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign",
+        "--output",
+        "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign_audit"
+      ],
+      "child_pid": 24348,
+      "returncode": 0,
+      "finished_at": "2026-11-27T02:23:52.685083+00:00"
+    },
+    {
+      "name": "report",
+      "status": "complete",
+      "started_at": "2026-11-27T02:23:53.004458+00:00",
+      "command": [
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/.venv-wsl/bin/python",
+        "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/report_format_adaptation.py",
+        "--campaign",
+        "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign",
+        "--audit",
+        "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign_audit",
+        "--output",
+        "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign_report"
+      ],
+      "child_pid": 24355,
+      "returncode": 0,
+      "finished_at": "2026-11-27T02:24:03.008523+00:00"
+    }
+  ],
+  "finished_at": "2026-11-27T02:24:03.290202+00:00",
+  "audit_receipt_sha256": "1daa87e5692a6e04aacd46750b5919ba80e08dca94de7b2f3dcc492227fe660f"
+}
