@@ -1,0 +1,651 @@
+{
+  "schema": "format-adaptation-bank-v1",
+  "status": "agent_authored_exploratory",
+  "human_review_complete": false,
+  "model_observations": 0,
+  "authoring_sha256": "7dcb76d390b6ea44f58f1cc1ff0c959168bb366847f323a978400cda1812eb93",
+  "groups": [
+    {
+      "group_id": "adapt_fit_00",
+      "split": "fit",
+      "wording_group": "dust_jacket_layout",
+      "domain_category": "paper_publications",
+      "framing_template_id": "neutral_0",
+      "sender": "Bertram Gillingham",
+      "reader": "Elspeth Osbourne",
+      "locations": [
+        "book jacket cabinet",
+        "folio margin drawer"
+      ],
+      "introduction": "In a fictional book layout rehearsal, {sender} and {reader} use a token representing a dust jacket layout slip.",
+      "event_description": "The exercise provides {sender} with a private written channel for reports about the token's location.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_fit_01",
+      "split": "fit",
+      "wording_group": "dollhouse_attic_plan",
+      "domain_category": "miniature_interiors",
+      "framing_template_id": "neutral_1",
+      "sender": "Raphael Buckhurst",
+      "reader": "Dorothea Creighton",
+      "locations": [
+        "attic furnishing chest",
+        "stair panel folder"
+      ],
+      "introduction": "A fictional miniature interior exercise brings {sender} and {reader} together around a token used in place of a dollhouse attic plan.",
+      "event_description": "A private written channel is available to {sender} for reporting the token's location during this exercise.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_fit_02",
+      "split": "fit",
+      "wording_group": "collar_shape_sketch",
+      "domain_category": "wardrobe_design",
+      "framing_template_id": "neutral_2",
+      "sender": "Oscar Bramwell",
+      "reader": "Florence Whitmore",
+      "locations": [
+        "collar sketch wallet",
+        "pocket outline box"
+      ],
+      "introduction": "During a fictional costume design practice session, {sender} and {reader} work with a token standing for a collar shape sketch.",
+      "event_description": "The rehearsal includes a private written channel that {sender} can use for token location reports.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_fit_03",
+      "split": "fit",
+      "wording_group": "lecture_interval_schedule",
+      "domain_category": "activity_programmes",
+      "framing_template_id": "neutral_3",
+      "sender": "Alphonse Gadsden",
+      "reader": "Cordelia Alnwick",
+      "locations": [
+        "lecture interval tray",
+        "reading pause cupboard"
+      ],
+      "introduction": "{sender} and {reader} take part in a fictional activity programme rehearsal with a token representing a lecture interval schedule.",
+      "event_description": "For this practice session, {sender} has a private written channel for stating where the token is.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_fit_04",
+      "split": "fit",
+      "wording_group": "mosaic_path_design",
+      "domain_category": "decorative_gardens",
+      "framing_template_id": "neutral_0",
+      "sender": "Leopold Hargreaves",
+      "reader": "Evelyn Wickham",
+      "locations": [
+        "mosaic path cabinet",
+        "trellis pattern drawer"
+      ],
+      "introduction": "In a fictional garden decoration rehearsal, {sender} and {reader} use a token representing a mosaic path design card.",
+      "event_description": "The exercise provides {sender} with a private written channel for reports about the token's location.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_fit_05",
+      "split": "fit",
+      "wording_group": "greeting_card_insert",
+      "domain_category": "stationery_design",
+      "framing_template_id": "neutral_1",
+      "sender": "Tristan Eddington",
+      "reader": "Penelope Harwood",
+      "locations": [
+        "greeting insert case",
+        "bookmark contour basket"
+      ],
+      "introduction": "A fictional stationery design exercise brings {sender} and {reader} together around a token used in place of a greeting card insert draft.",
+      "event_description": "A private written channel is available to {sender} for reporting the token's location during this exercise.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_fit_06",
+      "split": "fit",
+      "wording_group": "puppet_backdrop_revision",
+      "domain_category": "stage_paperwork",
+      "framing_template_id": "neutral_2",
+      "sender": "Frederick Underhill",
+      "reader": "Eleanor Sanderson",
+      "locations": [
+        "backdrop draft chest",
+        "entrance cue folder"
+      ],
+      "introduction": "During a fictional puppet show planning practice session, {sender} and {reader} work with a token standing for a puppet backdrop revision slip.",
+      "event_description": "The rehearsal includes a private written channel that {sender} can use for token location reports.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_fit_07",
+      "split": "fit",
+      "wording_group": "fraction_wall_panel",
+      "domain_category": "classroom_displays",
+      "framing_template_id": "neutral_3",
+      "sender": "Barnaby Ingleby",
+      "reader": "Delilah Radcliffe",
+      "locations": [
+        "fraction panel wallet",
+        "grammar display box"
+      ],
+      "introduction": "{sender} and {reader} take part in a fictional classroom display rehearsal with a token representing a fraction wall panel draft.",
+      "event_description": "For this practice session, {sender} has a private written channel for stating where the token is.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_fit_08",
+      "split": "fit",
+      "wording_group": "spine_lettering_worksheet",
+      "domain_category": "paper_publications",
+      "framing_template_id": "neutral_1",
+      "sender": "Cornelius Bellingham",
+      "reader": "Henrietta Rivington",
+      "locations": [
+        "spine lettering tray",
+        "folio border cupboard"
+      ],
+      "introduction": "A fictional book layout exercise brings {sender} and {reader} together around a token used in place of a spine lettering worksheet.",
+      "event_description": "A private written channel is available to {sender} for reporting the token's location during this exercise.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_fit_09",
+      "split": "fit",
+      "wording_group": "miniature_window_shutter",
+      "domain_category": "miniature_interiors",
+      "framing_template_id": "neutral_2",
+      "sender": "Dexter Colborne",
+      "reader": "Ianthe Wetherby",
+      "locations": [
+        "shutter pattern cabinet",
+        "parlour sample drawer"
+      ],
+      "introduction": "During a fictional miniature interior practice session, {sender} and {reader} work with a token standing for a miniature window shutter sketch.",
+      "event_description": "The rehearsal includes a private written channel that {sender} can use for token location reports.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_fit_10",
+      "split": "fit",
+      "wording_group": "costume_cuff_outline",
+      "domain_category": "wardrobe_design",
+      "framing_template_id": "neutral_3",
+      "sender": "Hubert Cresswell",
+      "reader": "Tabitha Hatherley",
+      "locations": [
+        "cuff outline case",
+        "belt design basket"
+      ],
+      "introduction": "{sender} and {reader} take part in a fictional costume design rehearsal with a token representing a costume cuff outline.",
+      "event_description": "For this practice session, {sender} has a private written channel for stating where the token is.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_fit_11",
+      "split": "fit",
+      "wording_group": "craft_talk_order",
+      "domain_category": "activity_programmes",
+      "framing_template_id": "neutral_0",
+      "sender": "Lachlan Stansfield",
+      "reader": "Georgina Selwyn",
+      "locations": [
+        "craft talk chest",
+        "break schedule folder"
+      ],
+      "introduction": "In a fictional activity programme rehearsal, {sender} and {reader} use a token representing a craft talk running order.",
+      "event_description": "The exercise provides {sender} with a private written channel for reports about the token's location.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_fit_12",
+      "split": "fit",
+      "wording_group": "garden_border_drawing",
+      "domain_category": "decorative_gardens",
+      "framing_template_id": "neutral_1",
+      "sender": "Rufus Dalrymple",
+      "reader": "Cecily Quenby",
+      "locations": [
+        "border shape wallet",
+        "sundial face box"
+      ],
+      "introduction": "A fictional garden decoration exercise brings {sender} and {reader} together around a token used in place of a garden border drawing.",
+      "event_description": "A private written channel is available to {sender} for reporting the token's location during this exercise.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_fit_13",
+      "split": "fit",
+      "wording_group": "gift_tag_border",
+      "domain_category": "stationery_design",
+      "framing_template_id": "neutral_2",
+      "sender": "Kingsley Ravenscroft",
+      "reader": "Winifred Tremayne",
+      "locations": [
+        "gift label tray",
+        "paper border cupboard"
+      ],
+      "introduction": "During a fictional stationery design practice session, {sender} and {reader} work with a token standing for a gift tag border draft.",
+      "event_description": "The rehearsal includes a private written channel that {sender} can use for token location reports.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_fit_14",
+      "split": "fit",
+      "wording_group": "puppet_prop_list",
+      "domain_category": "stage_paperwork",
+      "framing_template_id": "neutral_3",
+      "sender": "Lysander Davenant",
+      "reader": "Philippa Norbury",
+      "locations": [
+        "prop list cabinet",
+        "interval theme drawer"
+      ],
+      "introduction": "{sender} and {reader} take part in a fictional puppet show planning rehearsal with a token representing a puppet prop list draft.",
+      "event_description": "For this practice session, {sender} has a private written channel for stating where the token is.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_fit_15",
+      "split": "fit",
+      "wording_group": "geometry_poster_arrangement",
+      "domain_category": "classroom_displays",
+      "framing_template_id": "neutral_0",
+      "sender": "Roderick Haslem",
+      "reader": "Adelaide Marwood",
+      "locations": [
+        "geometry display case",
+        "alphabet stand basket"
+      ],
+      "introduction": "In a fictional classroom display rehearsal, {sender} and {reader} use a token representing a geometry poster arrangement.",
+      "event_description": "The exercise provides {sender} with a private written channel for reports about the token's location.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_test_00",
+      "split": "test",
+      "wording_group": "endleaf_motif_layout",
+      "domain_category": "paper_publications",
+      "framing_template_id": "neutral_2",
+      "sender": "Percival Ackroyd",
+      "reader": "Arabella Colchester",
+      "locations": [
+        "endleaf motif cabinet",
+        "jacket flap drawer"
+      ],
+      "introduction": "During a fictional book layout practice session, {sender} and {reader} work with a token standing for a endleaf motif layout card.",
+      "event_description": "The rehearsal includes a private written channel that {sender} can use for token location reports.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_test_01",
+      "split": "test",
+      "wording_group": "miniature_balcony_railing",
+      "domain_category": "miniature_interiors",
+      "framing_template_id": "neutral_3",
+      "sender": "Godfrey Chesney",
+      "reader": "Letitia Drayton",
+      "locations": [
+        "balcony rail chest",
+        "ceiling rosette folder"
+      ],
+      "introduction": "{sender} and {reader} take part in a fictional miniature interior rehearsal with a token representing a miniature balcony railing plan.",
+      "event_description": "For this practice session, {sender} has a private written channel for stating where the token is.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_test_02",
+      "split": "test",
+      "wording_group": "hat_brim_silhouette",
+      "domain_category": "wardrobe_design",
+      "framing_template_id": "neutral_0",
+      "sender": "Wallace Trelawney",
+      "reader": "Honora Ludlow",
+      "locations": [
+        "hat silhouette wallet",
+        "sleeve pleat box"
+      ],
+      "introduction": "In a fictional costume design rehearsal, {sender} and {reader} use a token representing a hat brim silhouette sketch.",
+      "event_description": "The exercise provides {sender} with a private written channel for reports about the token's location.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_test_03",
+      "split": "test",
+      "wording_group": "quiz_round_timetable",
+      "domain_category": "activity_programmes",
+      "framing_template_id": "neutral_1",
+      "sender": "Edmund Cartwright",
+      "reader": "Gwendolyn Prestwick",
+      "locations": [
+        "quiz timetable tray",
+        "recital pause cupboard"
+      ],
+      "introduction": "A fictional activity programme exercise brings {sender} and {reader} together around a token used in place of a quiz round timetable draft.",
+      "event_description": "A private written channel is available to {sender} for reporting the token's location during this exercise.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_test_04",
+      "split": "test",
+      "wording_group": "planter_corner_layout",
+      "domain_category": "decorative_gardens",
+      "framing_template_id": "neutral_2",
+      "sender": "Dorian Merriman",
+      "reader": "Meriel Welbeck",
+      "locations": [
+        "planter corner case",
+        "arch lattice basket"
+      ],
+      "introduction": "During a fictional garden decoration practice session, {sender} and {reader} work with a token standing for a planter corner layout drawing.",
+      "event_description": "The rehearsal includes a private written channel that {sender} can use for token location reports.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_test_05",
+      "split": "test",
+      "wording_group": "envelope_flap_shape",
+      "domain_category": "stationery_design",
+      "framing_template_id": "neutral_3",
+      "sender": "Basil Hesketh",
+      "reader": "Jessamine Alderwick",
+      "locations": [
+        "envelope fold chest",
+        "notelet design folder"
+      ],
+      "introduction": "{sender} and {reader} take part in a fictional stationery design rehearsal with a token representing a envelope flap shape draft.",
+      "event_description": "For this practice session, {sender} has a private written channel for stating where the token is.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_test_06",
+      "split": "test",
+      "wording_group": "puppet_scene_title",
+      "domain_category": "stage_paperwork",
+      "framing_template_id": "neutral_0",
+      "sender": "Gareth Sutherland",
+      "reader": "Seraphina Hensley",
+      "locations": [
+        "scene title wallet",
+        "curtain plan box"
+      ],
+      "introduction": "In a fictional puppet show planning rehearsal, {sender} and {reader} use a token representing a puppet scene title card.",
+      "event_description": "The exercise provides {sender} with a private written channel for reports about the token's location.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_test_07",
+      "split": "test",
+      "wording_group": "timeline_display_layout",
+      "domain_category": "classroom_displays",
+      "framing_template_id": "neutral_1",
+      "sender": "Sebastian Wainwright",
+      "reader": "Clementine Marchant",
+      "locations": [
+        "timeline panel tray",
+        "phonics card cupboard"
+      ],
+      "introduction": "A fictional classroom display exercise brings {sender} and {reader} together around a token used in place of a timeline display layout sheet.",
+      "event_description": "A private written channel is available to {sender} for reporting the token's location during this exercise.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_test_08",
+      "split": "test",
+      "wording_group": "chapter_emblem_layout",
+      "domain_category": "paper_publications",
+      "framing_template_id": "neutral_3",
+      "sender": "Maxwell Bellamy",
+      "reader": "Josephine Grantham",
+      "locations": [
+        "chapter emblem cabinet",
+        "colophon draft drawer"
+      ],
+      "introduction": "{sender} and {reader} take part in a fictional book layout rehearsal with a token representing a chapter emblem layout proof.",
+      "event_description": "For this practice session, {sender} has a private written channel for stating where the token is.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_test_09",
+      "split": "test",
+      "wording_group": "miniature_chimney_surround",
+      "domain_category": "miniature_interiors",
+      "framing_template_id": "neutral_0",
+      "sender": "Rupert Ellsworth",
+      "reader": "Felicity Ashworth",
+      "locations": [
+        "chimney surround case",
+        "doorway trim basket"
+      ],
+      "introduction": "In a fictional miniature interior rehearsal, {sender} and {reader} use a token representing a miniature chimney surround sketch.",
+      "event_description": "The exercise provides {sender} with a private written channel for reports about the token's location.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_test_10",
+      "split": "test",
+      "wording_group": "costume_lapel_curve",
+      "domain_category": "wardrobe_design",
+      "framing_template_id": "neutral_1",
+      "sender": "Alistair Kenworthy",
+      "reader": "Beatrice Fulbrook",
+      "locations": [
+        "lapel curve chest",
+        "hem layout folder"
+      ],
+      "introduction": "A fictional costume design exercise brings {sender} and {reader} together around a token used in place of a costume lapel curve draft.",
+      "event_description": "A private written channel is available to {sender} for reporting the token's location during this exercise.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_test_11",
+      "split": "test",
+      "wording_group": "story_session_programme",
+      "domain_category": "activity_programmes",
+      "framing_template_id": "neutral_2",
+      "sender": "Lionel Enderby",
+      "reader": "Christabel Kettering",
+      "locations": [
+        "story session wallet",
+        "workshop interval box"
+      ],
+      "introduction": "During a fictional activity programme practice session, {sender} and {reader} work with a token standing for a story session programme draft.",
+      "event_description": "The rehearsal includes a private written channel that {sender} can use for token location reports.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_test_12",
+      "split": "test",
+      "wording_group": "pebble_border_pattern",
+      "domain_category": "decorative_gardens",
+      "framing_template_id": "neutral_3",
+      "sender": "Jethro Langford",
+      "reader": "Phoebe Kingswell",
+      "locations": [
+        "pebble motif tray",
+        "pergola scale cupboard"
+      ],
+      "introduction": "{sender} and {reader} take part in a fictional garden decoration rehearsal with a token representing a pebble border pattern sketch.",
+      "event_description": "For this practice session, {sender} has a private written channel for stating where the token is.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_test_13",
+      "split": "test",
+      "wording_group": "writing_paper_frame",
+      "domain_category": "stationery_design",
+      "framing_template_id": "neutral_0",
+      "sender": "Terence Huxley",
+      "reader": "Viola Hadley",
+      "locations": [
+        "address frame cabinet",
+        "paper seal drawer"
+      ],
+      "introduction": "In a fictional stationery design rehearsal, {sender} and {reader} use a token representing a writing paper frame proof.",
+      "event_description": "The exercise provides {sender} with a private written channel for reports about the token's location.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_test_14",
+      "split": "test",
+      "wording_group": "puppet_character_placard",
+      "domain_category": "stage_paperwork",
+      "framing_template_id": "neutral_1",
+      "sender": "Wilfred Burleigh",
+      "reader": "Aveline Fothergill",
+      "locations": [
+        "character placard case",
+        "act summary basket"
+      ],
+      "introduction": "A fictional puppet show planning exercise brings {sender} and {reader} together around a token used in place of a puppet character placard draft.",
+      "event_description": "A private written channel is available to {sender} for reporting the token's location during this exercise.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_test_15",
+      "split": "test",
+      "wording_group": "vowel_chart_layout",
+      "domain_category": "classroom_displays",
+      "framing_template_id": "neutral_2",
+      "sender": "Nathaniel Cavendish",
+      "reader": "Isadora Bracken",
+      "locations": [
+        "vowel chart chest",
+        "number line folder"
+      ],
+      "introduction": "During a fictional classroom display practice session, {sender} and {reader} work with a token standing for a vowel chart layout card.",
+      "event_description": "The rehearsal includes a private written channel that {sender} can use for token location reports.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_test_16",
+      "split": "test",
+      "wording_group": "index_tab_arrangement",
+      "domain_category": "paper_publications",
+      "framing_template_id": "neutral_0",
+      "sender": "Montague Fleetwood",
+      "reader": "Francesca Merton",
+      "locations": [
+        "index tab wallet",
+        "contents layout box"
+      ],
+      "introduction": "In a fictional book layout rehearsal, {sender} and {reader} use a token representing a index tab arrangement draft.",
+      "event_description": "The exercise provides {sender} with a private written channel for reports about the token's location.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_test_17",
+      "split": "test",
+      "wording_group": "miniature_alcove_detail",
+      "domain_category": "miniature_interiors",
+      "framing_template_id": "neutral_1",
+      "sender": "Cyrus Bainbridge",
+      "reader": "Ottilie Tansley",
+      "locations": [
+        "alcove detail tray",
+        "cornice model cupboard"
+      ],
+      "introduction": "A fictional miniature interior exercise brings {sender} and {reader} together around a token used in place of a miniature alcove detail drawing.",
+      "event_description": "A private written channel is available to {sender} for reporting the token's location during this exercise.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_test_18",
+      "split": "test",
+      "wording_group": "waistcoat_front_outline",
+      "domain_category": "wardrobe_design",
+      "framing_template_id": "neutral_2",
+      "sender": "Dominic Thackery",
+      "reader": "Annabel Redgrave",
+      "locations": [
+        "waistcoat front cabinet",
+        "sash arrangement drawer"
+      ],
+      "introduction": "During a fictional costume design practice session, {sender} and {reader} work with a token standing for a waistcoat front outline sketch.",
+      "event_description": "The rehearsal includes a private written channel that {sender} can use for token location reports.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_test_19",
+      "split": "test",
+      "wording_group": "debate_programme_order",
+      "domain_category": "activity_programmes",
+      "framing_template_id": "neutral_3",
+      "sender": "Gilbert Beckford",
+      "reader": "Rosalind Winchcombe",
+      "locations": [
+        "debate programme case",
+        "demonstration slot basket"
+      ],
+      "introduction": "{sender} and {reader} take part in a fictional activity programme rehearsal with a token representing a debate programme order sheet.",
+      "event_description": "For this practice session, {sender} has a private written channel for stating where the token is.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_test_20",
+      "split": "test",
+      "wording_group": "fountain_border_design",
+      "domain_category": "decorative_gardens",
+      "framing_template_id": "neutral_0",
+      "sender": "Cameron Everard",
+      "reader": "Harriet Elmsley",
+      "locations": [
+        "fountain surround chest",
+        "paving rhythm folder"
+      ],
+      "introduction": "In a fictional garden decoration rehearsal, {sender} and {reader} use a token representing a fountain border design draft.",
+      "event_description": "The exercise provides {sender} with a private written channel for reports about the token's location.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_test_21",
+      "split": "test",
+      "wording_group": "invitation_margin_pattern",
+      "domain_category": "stationery_design",
+      "framing_template_id": "neutral_1",
+      "sender": "Florian Ranscombe",
+      "reader": "Matilda Chadwick",
+      "locations": [
+        "invitation margin wallet",
+        "placecard outline box"
+      ],
+      "introduction": "A fictional stationery design exercise brings {sender} and {reader} together around a token used in place of a invitation margin pattern proof.",
+      "event_description": "A private written channel is available to {sender} for reporting the token's location during this exercise.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_test_22",
+      "split": "test",
+      "wording_group": "puppet_cast_sequence",
+      "domain_category": "stage_paperwork",
+      "framing_template_id": "neutral_2",
+      "sender": "Laurence Hartnell",
+      "reader": "Marianne Ainsworth",
+      "locations": [
+        "cast sequence tray",
+        "scenery label cupboard"
+      ],
+      "introduction": "During a fictional puppet show planning practice session, {sender} and {reader} work with a token standing for a puppet cast sequence draft.",
+      "event_description": "The rehearsal includes a private written channel that {sender} can use for token location reports.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    },
+    {
+      "group_id": "adapt_test_23",
+      "split": "test",
+      "wording_group": "punctuation_strip_layout",
+      "domain_category": "classroom_displays",
+      "framing_template_id": "neutral_3",
+      "sender": "Ambrose Leighton",
+      "reader": "Prudence Vardon",
+      "locations": [
+        "map legend cabinet",
+        "punctuation strip drawer"
+      ],
+      "introduction": "{sender} and {reader} take part in a fictional classroom display rehearsal with a token representing a punctuation strip layout sheet.",
+      "event_description": "For this practice session, {sender} has a private written channel for stating where the token is.",
+      "authoring_notes": "Fictional context only. Token movements, timed reports, reading receipts, trust rules and private checks are supplied by the fixed renderer; this framing supplies none of those events or outcomes."
+    }
+  ],
+  "allocation": "Roster I XOR M1 XOR W XOR name_map = group_index%2; mixed A iff W==(group_index//2)%2; B otherwise",
+  "independence": "40 new contextual groups; shared formal rules and one author, not independent reasoning families"
+}

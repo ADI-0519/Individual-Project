@@ -1,0 +1,25 @@
+{
+  "rows_per_checkpoint": 5760,
+  "fit_captures": 768,
+  "fit_underlying_states": 512,
+  "mixed_observations": 512,
+  "test_captures": 4992,
+  "conditional_balance_cells": 128,
+  "each_conditional_cell_count": 4,
+  "fit_groups": 16,
+  "test_groups": 24,
+  "counts": {
+    "fit/A/correction_easy": 256,
+    "fit/A/correction_hard": 256,
+    "fit/B/correction_easy": 128,
+    "fit/B/correction_hard": 128,
+    "test/A/asserted": 192,
+    "test/A/correction_easy": 768,
+    "test/A/correction_hard": 768,
+    "test/A/one_step": 768,
+    "test/B/asserted": 192,
+    "test/B/correction_easy": 768,
+    "test/B/correction_hard": 768,
+    "test/B/one_step": 768
+  }
+}

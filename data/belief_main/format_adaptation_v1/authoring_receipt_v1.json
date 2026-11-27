@@ -1,0 +1,144 @@
+{
+  "schema": "format-adaptation-context-authoring-receipt-v1",
+  "status": "draft_agent_authored",
+  "authorship": "agent",
+  "author_pool_id": "single_context_author_pool_v1",
+  "human_review_complete": false,
+  "agent_semantic_review_complete": false,
+  "model_observations": 0,
+  "authored_context_file": {
+    "path": "data/belief_main/format_adaptation_v1/authored_contexts_v1.json",
+    "sha256": "67530090b800736b1f8320b42fb9b6cf18684899ed02ab61514150439684320f"
+  },
+  "comparison_inputs": [
+    {
+      "path": "data/belief_main/authored_train_dev_v1.json",
+      "sha256": "1d3b5bc9345d00255e8762824a7795bc6fc08f397f8f6a7e466ec15f3f72668f",
+      "groups": 64
+    },
+    {
+      "path": "data/belief_main/authored_test_v1.json",
+      "sha256": "c2a1a767494d4daed7a1c9221f7634fa0f557f1c3725aeff94bfe6e3ba6caf54",
+      "groups": 90
+    },
+    {
+      "path": "data/belief_main/main_v1/main_bank_v1.json",
+      "sha256": "802f1519abe98172366e8381a1fa0dfe0772372991c8e8883c2570c431c5cac1",
+      "groups": 154
+    },
+    {
+      "path": "data/belief_main/fresh_readout_v2/authored_train_dev_contexts_v1.json",
+      "sha256": "df704d8c3aa3d02abfed7a032907eb85fbdaf75fcef641dc63281592e3915d35",
+      "groups": 24
+    },
+    {
+      "path": "data/belief_main/fresh_readout_v2/authored_test_contexts_v1.json",
+      "sha256": "c01b02ec1523d17c89bb6476e3fe6ddef7c1edf15a86d010de5fe60b3e37e198",
+      "groups": 24
+    },
+    {
+      "path": "data/belief_main/fresh_readout_v2/compiled_v1/bank.json",
+      "sha256": "bb277ba4efa6e090879405e472a8cb70a973b3ab53cfe340ede56c61cfa98e35",
+      "groups": 48
+    }
+  ],
+  "additional_engineering_entity_input": {
+    "path": "data/belief_main/fresh_readout_v2/compiled_v1/engineering_row.json",
+    "sha256": "0605b428bc9bdbfa5075a812793bec41d308cfd79e86c3a2490d12ae1ed9a15d",
+    "actor_names": [
+      "Wesley Maddison",
+      "Susannah Fenwick"
+    ]
+  },
+  "renderer_constraint_reference": {
+    "path": "src/latent_probes/fresh_readout_bank.py",
+    "sha256": "0765526fd11f6d0d4e44948597340b686dccd46f05d4e21257b5724d6ce66dfb"
+  },
+  "comparison_policy": "Casefold and collapse whitespace for full actor names, unordered actor pairs, complete location entities, wording groups and complete introduction-plus-channel framings. Also compare every alphabetic actor-name component. Include the prior excluded engineering actors. No formal labels were generated or inspected to choose contexts.",
+  "prior_unique_entity_counts": {
+    "actor_full_names": 406,
+    "actor_components": 631,
+    "physical_location_entities": 404,
+    "actor_pairs": 202
+  },
+  "new_unique_entity_counts": {
+    "actor_full_names": 80,
+    "actor_components": 160,
+    "physical_location_entities": 80,
+    "actor_pairs": 40
+  },
+  "overlap_results": {
+    "actor_full_name_overlap": [],
+    "actor_component_overlap": [],
+    "unordered_actor_pair_overlap": [],
+    "location_entity_overlap": [],
+    "wording_group_overlap": [],
+    "exact_normalized_full_framing_overlap": []
+  },
+  "structural_checks": {
+    "pass": true,
+    "exact_roster": true,
+    "two_word_ascii_actor_names": true,
+    "two_locations_of_two_to_four_words": true,
+    "valid_sender_reader_placeholders": true,
+    "unique_framings": true
+  },
+  "split_balance": {
+    "fit": {
+      "groups": 16,
+      "domains": {
+        "activity_programmes": 2,
+        "classroom_displays": 2,
+        "decorative_gardens": 2,
+        "miniature_interiors": 2,
+        "paper_publications": 2,
+        "stage_paperwork": 2,
+        "stationery_design": 2,
+        "wardrobe_design": 2
+      },
+      "framing_templates": {
+        "neutral_0": 4,
+        "neutral_1": 4,
+        "neutral_2": 4,
+        "neutral_3": 4
+      },
+      "framing_word_count": {
+        "minimum": 32,
+        "maximum": 38,
+        "mean": 35.4375
+      }
+    },
+    "test": {
+      "groups": 24,
+      "domains": {
+        "activity_programmes": 3,
+        "classroom_displays": 3,
+        "decorative_gardens": 3,
+        "miniature_interiors": 3,
+        "paper_publications": 3,
+        "stage_paperwork": 3,
+        "stationery_design": 3,
+        "wardrobe_design": 3
+      },
+      "framing_templates": {
+        "neutral_0": 6,
+        "neutral_1": 6,
+        "neutral_2": 6,
+        "neutral_3": 6
+      },
+      "framing_word_count": {
+        "minimum": 33,
+        "maximum": 39,
+        "mean": 35.875
+      }
+    }
+  },
+  "authoring_note": "One agent authored every fit and test context in a single explicit pool under the same production rules. Eight broad domains and four neutral framing templates have identical proportional representation across splits. All contexts are fictional paperwork or design rehearsals, and introductions describe only the setting and token stand-in. A private written channel is available; the framing adds no report, movement, observation, receipt, private check or trust event. The later fixed renderer supplies such events. Actor assignments remain placeholders for the separately declared pool shuffle. No development context or new hyperparameter-selection rule is included.",
+  "limits": "Automated exact-entity and framing checks do not establish semantic independence. Test authorship is shared with fit authorship. These settings do not introduce independent abstract reasoning families. Independent agent semantic review and any human review are incomplete.",
+  "activities": {
+    "formal_label_generation": false,
+    "model_calls": false,
+    "source_code_changes": false,
+    "commits": false
+  }
+}

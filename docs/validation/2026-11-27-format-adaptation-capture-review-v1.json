@@ -1,0 +1,144 @@
+{
+  "schema": "format-adaptation-capture-code-review-v1",
+  "created_at_utc": "2026-11-27T01:10:18.004647+00:00",
+  "status": "pass_after_early_fit_plan_validation_repair",
+  "review_scope": "CPU-only control-flow tests of review provenance, preparation snapshots, native/output guards, fit-plan fingerprints and the both-model test seal. No scientific model observation or real backend was constructed.",
+  "human_review_complete": false,
+  "real_model_calls": 0,
+  "real_HFBackend_constructions": 0,
+  "gpu_work": false,
+  "reviewer_source_changes": false,
+  "semantic_review_answers_opened": false,
+  "semantic_review_key_opened": false,
+  "bindings": [
+    {
+      "path": "src/latent_probes/format_adaptation_capture.py",
+      "sha256": "b3718f7e434a2940b05b7694bda2f5fd87d75e1be6408c7a46565dde4e8ac79d"
+    },
+    {
+      "path": "src/latent_probes/fresh_readout_capture.py",
+      "sha256": "5e1cc2195f15973be82b6bd62101a8753f03c61f4667256a40b1a45b9d083292"
+    },
+    {
+      "path": "src/latent_probes/main_study_run.py",
+      "sha256": "09f219b7aedcb222c0eea05ba1ea9324d28fd298f49a2a45004429d7ede10501"
+    },
+    {
+      "path": "src/latent_probes/config.py",
+      "sha256": "0fc63546c88a826bc1e87efeebb51b6a23488272e0d76de8018fdd99543bb608"
+    },
+    {
+      "path": "tests/test_format_adaptation_capture.py",
+      "sha256": "6a84faddff5a28d07fa6c84e2a74bcaa15438f6feb75dc7a251d43f6b115210c"
+    }
+  ],
+  "validation_repair_chronology": {
+    "finding": "Fit capture recorded the expected fit-plan hash without checking actual fit_plan.json bytes or the preparation's fit-plan hash before constructing the backend.",
+    "first_reproduction": {
+      "tests": 35,
+      "passed": 34,
+      "failed": 1,
+      "regression": "changed actual fit_plan.json",
+      "failure": "Injected backend factory was reached and raised BackendConstructionStopped instead of pre-backend ValueError."
+    },
+    "expanded_pre_repair_reproduction": {
+      "tests": 42,
+      "passed": 40,
+      "failed": 2,
+      "regressions": [
+        "changed actual fit_plan.json",
+        "changed preparation.fit_plan_sha256 for current model"
+      ],
+      "failure": "Both mutations reached the injected backend factory."
+    },
+    "repair_author": "root agent",
+    "repair": "Require the actual fit-plan file hash to equal both the protocol's expected hash and the preparation's expected per-model hash before backend construction.",
+    "post_repair": {
+      "tests": 42,
+      "passed": 42,
+      "failed": 0
+    },
+    "current_reviewed_capture_source": {
+      "path": "src/latent_probes/format_adaptation_capture.py",
+      "sha256": "b3718f7e434a2940b05b7694bda2f5fd87d75e1be6408c7a46565dde4e8ac79d"
+    }
+  },
+  "checks": {
+    "agent_review": {
+      "exact_bank_hash": true,
+      "declared_schema_status_and_human_review_flag": true,
+      "all_reviewed_input_bytes_rechecked": true,
+      "empty_source_bindings_rejected": true
+    },
+    "test_seal": {
+      "exact_both_model_inventory": true,
+      "bank_match": true,
+      "source_map_match": true,
+      "source_bytes_rechecked": true,
+      "all_six_fit_bundle_file_hashes_checked": true,
+      "both_bundle_directories_required": true
+    },
+    "capture_ordering": {
+      "missing_seal_stops_before_backend": true,
+      "invalid_seal_stops_before_backend": true,
+      "either_changed_model_bundle_stops_before_backend": true,
+      "changed_protocol_stops_before_backend": true,
+      "changed_source_stops_before_backend": true,
+      "changed_environment_stops_before_backend": true,
+      "changed_actual_fit_plan_stops_before_backend": true,
+      "changed_preparation_plan_hash_stops_before_backend": true
+    },
+    "preservation": {
+      "existing_capture_cohort_refused": true,
+      "existing_campaign_root_refused": true,
+      "existing_fresh_json_bytes_preserved": true,
+      "positive_injected_backend_failure_manifest_preserved": true
+    },
+    "native_guards": {
+      "non_linux_rejected": true,
+      "checkout_output_rejected": true,
+      "production_flags_unchanged": true
+    },
+    "preparation": {
+      "both_model_protocol_hashes_recorded": true,
+      "both_fit_plan_hashes_recorded": true,
+      "all_source_snapshot_bytes_exact": true,
+      "each_old_bundle_four_file_hashes_recorded": true,
+      "old_protocol_provenance_required": true,
+      "old_fixed_site_reselection_rejected": true,
+      "old_C2_hyperparameter_preserved": true,
+      "fit_plan_contains_only_768_fit_rows": true,
+      "planned_inventory_5760_per_model": true,
+      "preparation_failure_records_zero_model_calls": true,
+      "tokenizer_fixture_demands_local_files_only": true
+    },
+    "measurement_implementation": {
+      "same_imported_measure_row_function_as_previous_capture": true,
+      "real_forward_integration_outside_this_review": true
+    }
+  },
+  "validation_commands": [
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_format_adaptation_capture.py -q",
+      "exit_code": 0,
+      "result": "42 passed in 1.21s"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m ruff check tests/test_format_adaptation_capture.py",
+      "exit_code": 0,
+      "result": "All checks passed"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m ruff format --check tests/test_format_adaptation_capture.py",
+      "exit_code": 0,
+      "result": "1 file already formatted"
+    }
+  ],
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "fixture_policy": "Synthetic temporary files and monkeypatched native/environment/tokenizer/planning functions exercise CPU gates only. The injected backend factory always raises before constructing a backend. Production native guards are separately tested. No HFBackend, model download, model weights, GPU forward, scientific capture or commit was used.",
+  "limits": "This review establishes the tested gates and preparation bookkeeping. It does not execute the production Linux/GPU workflow, confer human acceptance, re-audit real model-forward alignment or inspect semantic review answers. Root has not frozen execution sources at the time of this review.",
+  "reviewer_writes": [
+    "tests/test_format_adaptation_capture.py",
+    "docs/validation/2026-11-27-format-adaptation-capture-review-v1.json"
+  ]
+}

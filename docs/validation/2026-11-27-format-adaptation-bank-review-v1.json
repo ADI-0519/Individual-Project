@@ -1,0 +1,165 @@
+{
+  "schema": "format-adaptation-bank-code-review-v1",
+  "created_at_utc": "2026-11-27T01:02:51.189827+00:00",
+  "status": "pass_after_validation_repair",
+  "review_scope": "Independent contract tests of formal labels, fixed observation budgets, conditional support, entity isolation, actor permutation, prompt boundaries and frozen provenance. This reviewer also authored the context pool; semantic review is a separate blind agent task.",
+  "human_review_complete": false,
+  "model_observations": 0,
+  "model_calls": 0,
+  "semantic_review_packet_opened": false,
+  "semantic_review_key_opened": false,
+  "semantic_review_answers_opened": false,
+  "bindings": [
+    {
+      "path": "data/belief_main/format_adaptation_v1/authored_contexts_v1.json",
+      "sha256": "67530090b800736b1f8320b42fb9b6cf18684899ed02ab61514150439684320f"
+    },
+    {
+      "path": "data/belief_main/format_adaptation_v1/authoring_receipt_v1.json",
+      "sha256": "34c54d588167fe86eaa214c75e11e931dd5fe50e75901e84a7496dec092408db"
+    },
+    {
+      "path": "data/belief_main/format_adaptation_v1/compiled_v1/bank.json",
+      "sha256": "a05737d2b0ceaccbc71588ffdde31e3dfe73a251d3acbacf0dad190c8375aeed"
+    },
+    {
+      "path": "data/belief_main/format_adaptation_v1/compiled_v1/allocation_audit.json",
+      "sha256": "405fba0555f8fcb6be452dec98de33cd06673400fb09653bf6d0ec452c701239"
+    },
+    {
+      "path": "data/belief_main/format_adaptation_v1/compiled_v1/build_receipt.json",
+      "sha256": "13343cbbacc19af7de9a57abb0f5f3a78409d301bbbad716828e592848aa20ff"
+    },
+    {
+      "path": "src/latent_probes/format_adaptation_bank.py",
+      "sha256": "6431ceb0904130a9fdf321d399558620d3b653ad040947523e7d364a6c3f6ebb"
+    },
+    {
+      "path": "scripts/build_format_adaptation_bank.py",
+      "sha256": "73107e09111a9da7a2cd5a51038524e233f894ebd281e8b39bea7e316b5d24ac"
+    },
+    {
+      "path": "tests/test_format_adaptation_bank.py",
+      "sha256": "6739e7b11247c71f392e0111d9d7dfc00f72e08a94f3f939268874deb89f2076"
+    },
+    {
+      "path": "docs/validation/audit-source-snapshots-2026-11-27/69648709d87128000b6727c39706110e4f15109e222b877d174af205e8e420a0_prevalidation_format_adaptation_bank.py.txt",
+      "sha256": "69648709d87128000b6727c39706110e4f15109e222b877d174af205e8e420a0"
+    }
+  ],
+  "validation_repair_chronology": {
+    "finding": "Authored schema/status/review/observation metadata were not validated; compilation could reset measured or differently reviewed inputs to false/zero metadata. Compiled-bank status and observation metadata were unchecked.",
+    "pre_repair_source_sha256": "69648709d87128000b6727c39706110e4f15109e222b877d174af205e8e420a0",
+    "pre_repair_original_source_snapshot": {
+      "path": "docs/validation/audit-source-snapshots-2026-11-27/69648709d87128000b6727c39706110e4f15109e222b877d174af205e8e420a0_prevalidation_format_adaptation_bank.py.txt",
+      "sha256": "69648709d87128000b6727c39706110e4f15109e222b877d174af205e8e420a0"
+    },
+    "initial_regression_run": {
+      "tests": 6,
+      "failed": 6,
+      "failure": "DID NOT RAISE ValueError",
+      "mutations": [
+        "authored schema_version unrelated-schema",
+        "authored status measured",
+        "authored human_review_complete true",
+        "authored model_observations 1",
+        "bank status measured",
+        "bank model_observations 1"
+      ]
+    },
+    "repair_author": "root agent",
+    "repair": "Require the declared authored schema/status, explicit false human review, and integer zero observations before compilation; require the declared compiled status and integer zero observations during validation.",
+    "post_repair_current_source": {
+      "path": "src/latent_probes/format_adaptation_bank.py",
+      "sha256": "6431ceb0904130a9fdf321d399558620d3b653ad040947523e7d364a6c3f6ebb"
+    },
+    "original_build_receipt_preserved": true,
+    "original_compiled_bank_preserved": true,
+    "current_compilation_equals_saved_bank_json_object": true,
+    "original_build_source_hash_matches_archived_snapshot": true,
+    "ordered_prompt_identity_matches_original_build_receipt": true
+  },
+  "results": {
+    "total_rows": 5760,
+    "partition_rows": {
+      "fit": 768,
+      "test": 4992
+    },
+    "fit_unique_underlying_states": 512,
+    "a_only_observations": 512,
+    "mixed_observations": 512,
+    "mixed_format_counts": {
+      "A": 256,
+      "B": 256
+    },
+    "a_half_observations": 256,
+    "a_only_and_mixed_underlying_states_identical": true,
+    "conditional_cells": 128,
+    "conditional_cell_counts": [
+      4
+    ],
+    "conditional_factors": [
+      "renderer",
+      "initial",
+      "update",
+      "first_receipt",
+      "receipt",
+      "world",
+      "name_map"
+    ],
+    "fit_per_context": {
+      "contexts": 16,
+      "unique_states": 32,
+      "raw_captures": 48,
+      "mixed_A": 16,
+      "mixed_B": 16
+    },
+    "test_per_context_per_renderer": {
+      "contexts": 24,
+      "correction_states": 64,
+      "one_step_states": 32,
+      "asserted_states": 8
+    },
+    "gold_rows_checked_by_independent_event_fold": 5760,
+    "complete_correction_receipt_quartets": 960,
+    "hard_quartets_with_three_to_one_labels": 480,
+    "test_paired_renderer_cases": 2496,
+    "test_world_and_mapping_quartets": 1248,
+    "metadata_mutations_rejected_after_fix": 6,
+    "structural_context_mutations_rejected": 8,
+    "unknown_development_partition_rejected": true,
+    "fit_test_entities_and_record_ids_disjoint": true,
+    "original_bank_entity_overlap_receipt_recomputed": true,
+    "authoring_receipt_roster_hashes_and_split_balance_reproduced": true,
+    "only_actor_pairs_change_during_compilation": true,
+    "deterministic_actor_permutation_verified": true,
+    "actor_permutation_leaves_labels_and_ids_unchanged": true,
+    "all_prompt_ids_unique": true,
+    "all_prompt_texts_unique": true,
+    "query_and_account_spans_checked_for_all_rows": true,
+    "no_metadata_id_or_gold_assignment_exposure_found": true
+  },
+  "validation_commands": [
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_format_adaptation_bank.py -q",
+      "exit_code": 0,
+      "result": "26 passed in 0.65s"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m ruff check tests/test_format_adaptation_bank.py",
+      "exit_code": 0,
+      "result": "All checks passed"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m ruff format --check tests/test_format_adaptation_bank.py",
+      "exit_code": 0,
+      "result": "1 file already formatted"
+    }
+  ],
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "limits": "This establishes the tested formal inventory and input checks. It does not confer human acceptance, validate unseen semantic review answers, establish independent test authorship, or claim independent abstract reasoning families. No models, GPUs or experiment execution were used.",
+  "reviewer_writes": [
+    "tests/test_format_adaptation_bank.py",
+    "docs/validation/2026-11-27-format-adaptation-bank-review-v1.json"
+  ]
+}

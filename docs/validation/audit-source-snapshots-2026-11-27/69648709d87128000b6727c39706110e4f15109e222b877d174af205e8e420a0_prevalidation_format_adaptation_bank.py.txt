@@ -1,0 +1,242 @@
+"""Fresh contexts and fixed equal-observation format allocation; no measurements."""
+
+from __future__ import annotations
+
+import copy
+import hashlib
+import itertools
+import json
+from collections import Counter, defaultdict
+from dataclasses import asdict
+from pathlib import Path
+
+from .fresh_readout_bank import _fresh_row
+from .main_study_design import BeliefCase, correction_states
+
+
+def require(value, message):
+    if not value:
+        raise ValueError(message)
+
+
+def canonical(value):
+    return json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
+
+
+def sha(value):
+    return hashlib.sha256(canonical(value).encode("utf-8")).hexdigest()
+
+
+def load(path):
+    value = json.loads(Path(path).read_text(encoding="utf-8"))
+    validate(value)
+    return value
+
+
+def validate(bank):
+    require(bank.get("schema") == "format-adaptation-bank-v1", "Wrong bank schema")
+    require(bank.get("human_review_complete") is False, "No human acceptance has occurred")
+    groups = bank["groups"]
+    require(Counter(g["split"] for g in groups) == {"fit": 16, "test": 24}, "Wrong context split")
+    require(len({g["group_id"] for g in groups}) == 40, "Duplicate context")
+    expected = {f"adapt_fit_{i:02d}" for i in range(16)} | {
+        f"adapt_test_{i:02d}" for i in range(24)
+    }
+    require({g["group_id"] for g in groups} == expected, "Wrong fresh context IDs")
+    names, places = [], []
+    for group in groups:
+        require(group["split"] in group["group_id"], "Context split/ID disagreement")
+        for role in ("sender", "reader"):
+            parts = group[role].split()
+            require(
+                len(parts) == 2 and all(p.isalpha() and p.isascii() for p in parts), "Actor names"
+            )
+            names.extend(p.casefold() for p in parts)
+        require(len(group["locations"]) == 2, "Need two locations")
+        for place in group["locations"]:
+            require(2 <= len(place.split()) <= 4 and place.isascii(), "Location wording")
+            places.append(place.casefold())
+        for field in ("introduction", "event_description"):
+            require(isinstance(group[field], str) and group[field], "Missing context prose")
+            group[field].format(sender=group["sender"], reader=group["reader"])
+    require(len(names) == len(set(names)), "Actor name components repeat")
+    require(len(places) == len(set(places)), "Physical locations repeat")
+
+
+def compile_bank(authored):
+    groups = copy.deepcopy(authored["groups"])
+    # One author supplies both cohorts. Mix actors across cohorts deterministically;
+    # do not invent independent authorship or demographic balancing claims.
+    actors = sorted(
+        [(g["sender"], g["reader"]) for g in groups],
+        key=lambda p: sha(["adaptation-actors-20261127", *p]),
+    )
+    groups.sort(key=lambda g: g["group_id"])
+    for group, (sender, reader) in zip(groups, actors, strict=True):
+        group.update(sender=sender, reader=reader)
+    bank = {
+        "schema": "format-adaptation-bank-v1",
+        "status": "agent_authored_exploratory",
+        "human_review_complete": False,
+        "model_observations": 0,
+        "authoring_sha256": sha(authored),
+        "groups": groups,
+        "allocation": "Roster I XOR M1 XOR W XOR name_map = group_index%2; mixed A iff W==(group_index//2)%2; B otherwise",
+        "independence": "40 new contextual groups; shared formal rules and one author, not independent reasoning families",
+    }
+    validate(bank)
+    return bank
+
+
+def iter_rows(bank, partition=None):
+    require(partition in (None, "fit", "test"), "Unknown partition")
+    for group in bank["groups"]:
+        if partition is not None and group["split"] != partition:
+            continue
+        index = int(group["group_id"].rsplit("_", 1)[1])
+        for case in correction_states(group["group_id"]):
+            if group["split"] == "fit":
+                if case.initial ^ case.update ^ case.world ^ case.name_map != index % 2:
+                    continue
+                mixed_format = "A" if case.world == (index // 2) % 2 else "B"
+                formats = ("A", "B") if mixed_format == "B" else ("A",)
+            else:
+                mixed_format, formats = None, ("A", "B")
+            condition = "correction_hard" if case.initial != case.update else "correction_easy"
+            for renderer in formats:
+                yield {
+                    **_fresh_row(group, asdict(case), renderer, condition),
+                    "mixed_format": mixed_format,
+                }
+        if group["split"] == "test":
+            for renderer in ("A", "B"):
+                for i, u, b, w, m in itertools.product((0, 1), repeat=5):
+                    state = asdict(BeliefCase(group["group_id"], "message", i, u, b, w, m))
+                    yield {**_fresh_row(group, state, renderer, "one_step"), "mixed_format": None}
+                for e, w, m in itertools.product((0, 1), repeat=3):
+                    state = {
+                        "group_id": group["group_id"],
+                        "mechanism": "asserted",
+                        "asserted": e,
+                        "world": w,
+                        "name_map": m,
+                    }
+                    yield {**_fresh_row(group, state, renderer, "asserted"), "mixed_format": None}
+
+
+def audit_rows(bank):
+    rows = list(iter_rows(bank))
+    require(
+        Counter(r["partition"] for r in rows) == {"fit": 768, "test": 4992}, "Wrong row inventory"
+    )
+    require(len({r["record_id"] for r in rows}) == len(rows), "Duplicate row ID")
+    require(len({sha(r["messages"]) for r in rows}) == len(rows), "Duplicate prompt")
+    state_fits, groups, cells = defaultdict(dict), defaultdict(list), Counter()
+    for row in rows:
+        state = row["state"]
+        # Independent expression rather than accepting the renderer's gold blindly.
+        expected = (
+            state["asserted"]
+            if row["condition"] == "asserted"
+            else (
+                (
+                    1 - state["update"]
+                    if state["receipt"]
+                    else state["update"]
+                    if state["first_receipt"]
+                    else state["initial"]
+                )
+                if state["mechanism"] == "correction"
+                else state["update"]
+                if state["receipt"]
+                else state["initial"]
+            )
+        )
+        require(row["gold"] == expected, "Formal label mismatch")
+        groups[row["group_id"]].append(row)
+        if row["partition"] == "fit":
+            key = canonical(state)
+            require(row["renderer"] not in state_fits[key], "Duplicate fit state/format")
+            state_fits[key][row["renderer"]] = row
+            if row["renderer"] == row["mixed_format"]:
+                path = tuple(state[k] for k in ("initial", "update", "first_receipt", "receipt"))
+                cells[(row["mixed_format"], *path, state["world"], state["name_map"])] += 1
+    require(len(state_fits) == 512, "Wrong underlying fit-state count")
+    for pair in state_fits.values():
+        assigned = pair["A"]["mixed_format"]
+        require(set(pair) == ({"A"} if assigned == "A" else {"A", "B"}), "Mixed roster mismatch")
+    # Exact format x four-target path x nuisance support across the cohort.
+    require(
+        len(cells) == 128 and set(cells.values()) == {4},
+        "Conditional format/factor/nuisance imbalance",
+    )
+    for key, values in groups.items():
+        if "fit" in key:
+            chosen = [r for r in values if r["renderer"] == r["mixed_format"]]
+            require(
+                Counter(r["renderer"] for r in chosen) == {"A": 16, "B": 16},
+                "Within-context format imbalance",
+            )
+        else:
+            require(len(values) == 208, "Missing full test controls")
+    return {
+        "rows_per_checkpoint": len(rows),
+        "fit_captures": 768,
+        "fit_underlying_states": 512,
+        "mixed_observations": 512,
+        "test_captures": 4992,
+        "conditional_balance_cells": len(cells),
+        "each_conditional_cell_count": 4,
+        "fit_groups": 16,
+        "test_groups": 24,
+        "counts": {
+            "/".join(k): v
+            for k, v in sorted(
+                Counter((r["partition"], r["renderer"], r["condition"]) for r in rows).items()
+            )
+        },
+    }
+
+
+def review_packet(bank):
+    rows = list(iter_rows(bank))
+    selected = {}
+
+    def add(row):
+        selected[row["record_id"]] = row
+
+    for group in bank["groups"]:
+        for renderer in ("A", "B"):
+            pool = [
+                r for r in rows if r["group_id"] == group["group_id"] and r["renderer"] == renderer
+            ]
+            add(min(pool, key=lambda r: sha(["adaptation-review-20261127", r["record_id"]])))
+    for condition in ("correction_easy", "correction_hard", "one_step", "asserted"):
+        for renderer in ("A", "B"):
+            pool = [r for r in rows if r["condition"] == condition and r["renderer"] == renderer]
+            if condition.startswith("correction_"):
+                for path in itertools.product((0, 1), repeat=4):
+                    subset = [
+                        r
+                        for r in pool
+                        if tuple(
+                            r["state"][k] for k in ("initial", "update", "first_receipt", "receipt")
+                        )
+                        == path
+                    ]
+                    if subset:
+                        add(min(subset, key=lambda r: sha(["path-review", r["record_id"]])))
+            else:
+                for gold in (0, 1):
+                    add(
+                        min(
+                            (r for r in pool if r["gold"] == gold),
+                            key=lambda r: sha(["control-review", r["record_id"]]),
+                        )
+                    )
+    packet, answers = [], []
+    for row in sorted(selected.values(), key=lambda r: sha(["opaque-order", r["record_id"]])):
+        opaque = sha(["adaptation-blind-review", row["record_id"]])[:24]
+        packet.append({"review_id": opaque, "messages": row["messages"]})
+        answers.append({"review_id": opaque, "case_id": row["record_id"], "gold": row["gold"]})
+    return {"schema": "format-adaptation-opaque-review-v1", "items": packet}, {"items": answers}
