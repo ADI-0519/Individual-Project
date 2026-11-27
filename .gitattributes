@@ -42,6 +42,7 @@ docs/validation/audit-source-snapshots-2026-11-26/* -text whitespace=-blank-at-e
 docs/review/format_bridge_v1/* -text whitespace=-blank-at-eol,-blank-at-eof
 data/belief_main/format_adaptation_v1/** -text whitespace=-blank-at-eol,-blank-at-eof
 docs/validation/2026-11-27-format-adaptation-*.json -text whitespace=-blank-at-eol,-blank-at-eof
+docs/validation/2026-11-27-lexical-control-*.json -text whitespace=-blank-at-eol,-blank-at-eof
 docs/validation/audit-source-snapshots-2026-11-27/* -text whitespace=-blank-at-eol,-blank-at-eof
 
 *.bat text eol=crlf

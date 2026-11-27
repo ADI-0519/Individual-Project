@@ -1,0 +1,76 @@
+{
+  "schema": "lexical-control-release-validation-v1",
+  "date": "2026-11-27",
+  "scientific_freeze_commit": "483e07459dbed659f083b3244ed8fa22f816be1e",
+  "research_status": "posthoc_exposed_bank_lexical_shortcut_diagnostic",
+  "human_review_complete": false,
+  "new_language_model_calls": 0,
+  "new_logistic_heads": 24,
+  "new_scalar_offset_optimizations": 8,
+  "validation": {
+    "all_new_focused_tests": {
+      "passed": 88,
+      "elapsed_seconds": 27.20,
+      "files": [
+        "tests/test_format_adaptation_text.py",
+        "tests/test_format_adaptation_text_analysis.py",
+        "tests/test_run_format_adaptation_text.py",
+        "tests/test_audit_format_adaptation_text.py",
+        "tests/test_report_format_adaptation_text.py",
+        "tests/test_plot_format_adaptation_text.py",
+        "tests/test_replay_format_adaptation_text.py"
+      ]
+    },
+    "broader_worktree_suite": {
+      "passed": 1848,
+      "failed": 1,
+      "skipped": 4,
+      "subtests_passed": 48,
+      "elapsed_seconds": 505.84,
+      "failure": "tests/test_main_study_agent_artifact.py::test_actual_agent_answers_remain_bound_and_distinct_from_human_review",
+      "reason": "Existing user whitespace edit changes the raw review-packet checksum; the integrity guard correctly rejects it.",
+      "worktree_review_packet_sha256": "5dcec09a2209e36eda0ce1fc9848aa699701877f3ce179ad539c7a4fe7c4349d",
+      "committed_review_packet_sha256": "fa4791f72c8fb2743d5d29361ea38f8b1ad0e94cd3795250f189f28735f97751",
+      "user_edit_preserved": true,
+      "validator_weakened": false,
+      "committed_packet_check": {
+        "method": "Git archive of the unchanged test, bank, audit answers and committed review packet; original package code",
+        "passed": 1,
+        "elapsed_seconds": 1.10,
+        "independent_repeat_passed": 1,
+        "semantic_jsonl_records_equal": 736,
+        "scope": "Focused committed-input binding check, not a second full-suite run"
+      }
+    },
+    "independent_saved_metric_reconstruction": {
+      "numeric_checks": 60308,
+      "exact_checks": 55688,
+      "maximum_numeric_difference": 0.0,
+      "receipt": "docs/results/lexical-controls-2026-11-27/audit/audit_receipt.json",
+      "scope": "Independent reconstruction of saved margins to all declared metrics; not an independent fit or semantic review"
+    },
+    "restored_fitted_feature_replay": {
+      "margins_checked": 159744,
+      "factor_decisions_checked": 159744,
+      "verdicts_checked": 39936,
+      "maximum_margin_difference": 0.0,
+      "receipt": "docs/validation/2026-11-27-lexical-control-restored-fit-replay-v1.json",
+      "receipt_sha256": "5a1b62d5b2d6fac727bbc3a5f842ea5410529a7c97906995ed91f1bc1be69e0c",
+      "scope": "Production prediction replay from safe archived fits, no refitting; distinct from independent metric reconstruction"
+    },
+    "figure": {
+      "source_and_input_bound": true,
+      "standard_plotting_library": "matplotlib 3.11.2",
+      "isolated_locked_environment": true,
+      "visual_review": "Final PNG inspected; source panel counts visible, shared comparator and limitations retained",
+      "manifest": "docs/results/lexical-controls-2026-11-27/figure-manifest.json"
+    },
+    "scientific_claims_review": "docs/validation/2026-11-27-lexical-control-claims-review-v1.json",
+    "ci_configuration": {
+      "platforms": ["Ubuntu Python 3.11", "Ubuntu Python 3.12", "Windows Python 3.11"],
+      "real_metric_replay_added": true,
+      "real_fitted_prediction_replay_added": true,
+      "remote_execution_result": "Check the pull request at its current head; configuration and local checks do not imply a remote pass"
+    }
+  }
+}

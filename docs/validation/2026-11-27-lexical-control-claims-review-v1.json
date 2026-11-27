@@ -1,0 +1,91 @@
+{
+  "schema": "lexical-control-independent-claims-review-v1",
+  "status": "pass",
+  "created_at": "2026-11-27T21:37:40.059780+00:00",
+  "reviewer": "/root/next_study_methods",
+  "scope": "Independent scientific-claims and descriptive-figure data/label review against audited saved results. Does not establish novelty, independently refit lexical classifiers, certify human semantics or certify remote CI.",
+  "new_model_calls": 0,
+  "classifier_fits": 0,
+  "human_review_complete": false,
+  "reviewed_sha256": {
+    "docs/HANQI_RESEARCH_UPDATE_2026-11-27.md": "fa7a133b4c9ceaea1a0ff8d1b32682efd72f5ae24d032a5dde5a55567abcbe40",
+    "docs/LEXICAL_CONTROL_PROTOCOL_V1.md": "2ad037e562a18320424f01123800ad8003ff55959680b8246ba6ff6af12964dd",
+    "docs/CREATE_ADAPTATION_REPLICATION_PLAN_V1.md": "c0f36496ee1e7cdc989aa2067a7e81e1df5a8c88b60ea38060dd36199c918f85",
+    "scripts/plot_format_adaptation_text.py": "14e6140516c5341e9e26174bb5867db92d5195b360c632d432af3357e5419fcb",
+    "docs/results/lexical-controls-2026-11-27/README.md": "01f2ba8ebaaa3f703b15bbbbafb06bc85a0d1e18cfb5721f78781bf2036f2161",
+    "docs/results/lexical-controls-2026-11-27/metrics.json": "d1c0e6c345a3e38c380d719cffd22344759cfa4c6585bdaed2626f4c05c0ad76",
+    "docs/results/lexical-controls-2026-11-27/latent-comparison.json": "ebc20688a83c11f1257768b92ef249e410b1fb3a5cb5f11c022b28e261e3266c",
+    "docs/results/lexical-controls-2026-11-27/figure-manifest.json": "4b717318b0ac5a8fc50d20e50691e8210c3feebdc36549137c811d0cd4018216",
+    "docs/results/lexical-controls-2026-11-27/audit/audit_receipt.json": "dead2e233946a81aca637bee2128d424f11eb3e30926193907234247080ca80d",
+    "docs/CURRENT_RESEARCH_STATE.md": "afe1a0dc57ef759ce90608fc1c69cc3f2b1e74e8232082b3a9c8d469d5ee4508"
+  },
+  "exact_checks": {
+    "report_output_hashes": 16,
+    "figure_output_hashes": 3,
+    "figure_input_hashes": 3,
+    "plot_source_matches_figure_manifest": true,
+    "svg_caveat_and_failure_labels_verified": true
+  },
+  "claim_checks": [
+    "Original matched-coverage and source-site-selection null results remain unchanged; correction-trained B-seen adaptation does not reverse them.",
+    "Latent A/B counts, source-format costs, Llama primary and Qwen secondary intervals agree with completed original results.",
+    "Lexical fitting and scoring are explicitly post-outcome on the exposed bank; one text comparator is shared across checkpoints.",
+    "Lexical B-hard quartet gain is reported alongside 399/768 correct rows, class recalls, 219/384 name flips and 195/384 both-correct world pairs.",
+    "Perfect B receipt-factor classification is scoped to 1536 pooled easy/hard correction rows; I and M1 remain weak and I predicts one throughout.",
+    "Mixed lexical one-step quartets remain zero in both formats; system-only hard panels remain zero and asserted accuracy is 96/192.",
+    "Lower lexical count than latent counts is descriptive and does not establish unique activation information or superiority over capable neural text monitors.",
+    "Per-arm lexical vocabularies/IDF differ from common latent historical map; numerical C does not equalize capacity.",
+    "Independent metric reconstruction is distinguished from independent refitting, semantic review and causal mechanism evidence.",
+    "CREATE proposal remains an unimplemented planning document; existing-bank technical replication differs from fresh confirmation and NF4 transport differs from BF16 refitting."
+  ],
+  "figure_review": {
+    "data_and_labels": "pass",
+    "source_bound_outputs": "pass",
+    "pixel_layout_review": "Not independently completed: view_image returned a host file-not-found error for the existing Windows file. Root separately inspected layout and moved the legend; this receipt verifies final source, SVG text, bound data and hashes only."
+  },
+  "known_worktree_test_failure": {
+    "full_suite_status": "failed",
+    "full_suite_reported_by": "Root execution report; not rerun by this reviewer",
+    "reported_failed": 1,
+    "reported_passed": 1848,
+    "reported_skipped": 4,
+    "reported_subtests_passed": 48,
+    "reported_elapsed_seconds": 505.84,
+    "test": "tests/test_main_study_agent_artifact.py::test_actual_agent_answers_remain_bound_and_distinct_from_human_review",
+    "reason": "Existing user edit adds leading whitespace to the exact-hash-bound review packet; strict raw-byte validation correctly rejects it.",
+    "worktree_sha256": "5dcec09a2209e36eda0ce1fc9848aa699701877f3ce179ad539c7a4fe7c4349d",
+    "committed_packet_sha256": "fa4791f72c8fb2743d5d29361ea38f8b1ad0e94cd3795250f189f28735f97751",
+    "all_736_jsonl_records_semantically_equal": true,
+    "user_file_preserved": true,
+    "validator_loosened": false,
+    "independent_pristine_rerun": {
+      "command": ".venv/Scripts/python.exe -m pytest -q .cache/lexical-review-binding-snapshot/tests/test_main_study_agent_artifact.py",
+      "passed": 1,
+      "failed": 0,
+      "elapsed_seconds": 1.19
+    },
+    "interpretation": "Pristine focused pass isolates this worktree checksum mismatch; it is not a claim that the complete edited working-tree suite passed."
+  },
+  "remaining_limits": [
+    "Human semantic review incomplete.",
+    "No capable neural text-monitor comparison or unique-belief-information conclusion.",
+    "Conditional intervals exclude fitting-cohort uncertainty.",
+    "Shared rules/templates and one author pool limit generalization.",
+    "Remote CI for the new commit has not been certified by this review."
+  ],
+  "blocking_findings": [],
+  "recommendation": "Complete human semantic review; qualify a capable prose-only four-factor comparator on separate development controls; then freeze a confirmation crossing fresh reviewed contexts with source and held-out renderers. Treat existing-bank NF4/BF16 replay as a separate numerical robustness check rather than a novelty milestone.",
+  "last_reviewed_at": "2026-11-27T21:39:51.767342+00:00",
+  "wording_clarification_review": {
+    "status": "pass",
+    "kind": "Uncommitted prose-review receipt refreshed after final planning clarification; no scientific source, fit, captured vector or result changed.",
+    "clarifications_verified": [
+      "Human semantic review and a qualified capable prose-only four-factor comparator are prioritized before fresh scientific confirmation.",
+      "Neural monitor qualification uses separate development controls for attribution and chronology; prompt, parser, supplied fold and computation budget are frozen before fresh outcomes; invalids remain in full denominators.",
+      "Fresh human-reviewed contexts are crossed under A/B and proposed renderer C withheld from probe fitting, separating context difficulty from format.",
+      "Neither a third renderer nor known held-out-style augmentation is automatically novel; contribution remains bounded by prior work.",
+      "Existing-bank paired NF4/BF16 replay is a technical numerical robustness check, not a substitute for paper-critical controls or a novelty milestone.",
+      "No precision runner, GPU campaign, strong neural-monitor qualification or fresh-renderer experiment is claimed complete."
+    ]
+  }
+}

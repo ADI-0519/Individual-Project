@@ -1,0 +1,12 @@
+{
+  "schema": "format-adaptation-text-metric-reconstruction-seal-v1",
+  "saved_summary_opened": false,
+  "views_reconstructed": [
+    "full_messages",
+    "system_only"
+  ],
+  "output_sha256": {
+    "full_messages_reconstruction.json": "9b3cdc5c22c85e67fb96b38f6cc0ac1f04acc4b56855186a8bae00903d51f9f3",
+    "system_only_reconstruction.json": "68e2a2114d5b217997fa6cdea9037c8040f9b02a33ee398a530ed6e525af8333"
+  }
+}

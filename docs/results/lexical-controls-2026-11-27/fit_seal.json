@@ -1,0 +1,15 @@
+{
+  "schema": "adaptation-lexical-fit-seal-v1",
+  "created_at": "2026-11-27T21:23:06.511956+00:00",
+  "preparation_sha256": "b705b5895ffe498c898752d18fd6862d46ef0d06c8082917b4139f36960513b4",
+  "files_sha256": {
+    "fit/full_messages/arrays.npz": "18e47582fc840b994d41c562ed0a76d2bd7a8045de8bf4ef58493f93112eb7cb",
+    "fit/full_messages/manifest.json": "23ef481d9cd5a12fbf87dc8cc9cb31e9a52d23ff9c3a3a2e2e3451e3208f4d03",
+    "fit/full_messages/settings.json": "c4256e461d24b52a6236fe4065496e9dd266cc78b1b4b5e75555493a096abcce",
+    "fit/system_only/arrays.npz": "137ebcf003569007dce92753a75a4040892a5d0aa7045d514a1f008589ed4c0f",
+    "fit/system_only/manifest.json": "1d8306ba37650f2d3e92de2fe6b09f147f312325bd39ad6a47703cc3cc163122",
+    "fit/system_only/settings.json": "b428bb0e3457214fa8e14bd25086cc8bb4e004602876fbef7eeee8469728b8a9"
+  },
+  "all_views_frozen_before_scoring": true,
+  "research_status": "posthoc_diagnostic_not_fresh_confirmation"
+}

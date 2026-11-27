@@ -1,0 +1,105 @@
+{
+  "schema": "format-adaptation-text-portable-prediction-replay-v1",
+  "status": "pass",
+  "started_at": "2026-11-27T21:39:08.408726+00:00",
+  "report": "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\docs\\results\\lexical-controls-2026-11-27",
+  "replay_source_sha256": "a77c2828173661daca38e09e7beb648255e48af331f599d8201d7ec1cc6b9738",
+  "new_language_model_forwards": 0,
+  "classifier_fits": 0,
+  "scope": "Restored production text feature maps and prediction replay; not an independent audit or refit",
+  "full_summary_deserialized": false,
+  "environment": {
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "packages": {
+      "numpy": "2.4.6",
+      "scikit-learn": "1.9.1",
+      "torch": null,
+      "transformers": null,
+      "tokenizers": null,
+      "huggingface-hub": null,
+      "accelerate": null,
+      "bitsandbytes": null,
+      "safetensors": null
+    },
+    "git_commit": "483e07459dbed659f083b3244ed8fa22f816be1e",
+    "code_sha256": "ff23949d0afd60785633717dc4542d0b66c8f7300ad1747602ca6156b6b39ea4"
+  },
+  "report_manifest_sha256": "ddc36cd205574f45df2b3c22f03cf1301e76c967baaf7dc93ced768f5998fed6",
+  "verified_report_members": 16,
+  "restored_fit_members_sha256": {
+    "fit/full_messages/arrays.npz": "18e47582fc840b994d41c562ed0a76d2bd7a8045de8bf4ef58493f93112eb7cb",
+    "fit/full_messages/manifest.json": "23ef481d9cd5a12fbf87dc8cc9cb31e9a52d23ff9c3a3a2e2e3451e3208f4d03",
+    "fit/full_messages/settings.json": "c4256e461d24b52a6236fe4065496e9dd266cc78b1b4b5e75555493a096abcce",
+    "fit/system_only/arrays.npz": "137ebcf003569007dce92753a75a4040892a5d0aa7045d514a1f008589ed4c0f",
+    "fit/system_only/manifest.json": "1d8306ba37650f2d3e92de2fe6b09f147f312325bd39ad6a47703cc3cc163122",
+    "fit/system_only/settings.json": "b428bb0e3457214fa8e14bd25086cc8bb4e004602876fbef7eeee8469728b8a9"
+  },
+  "comparisons": {
+    "margin_comparisons": 159744,
+    "strict_factor_bit_comparisons": 159744,
+    "verdict_comparisons": 39936,
+    "maximum_absolute_margin_difference": 0.0,
+    "rtol": 1e-12,
+    "atol": 1e-12,
+    "views": {
+      "full_messages": {
+        "A512": {
+          "margins": 19968,
+          "strict_factor_bits": 19968,
+          "verdicts": 4992,
+          "maximum_absolute_margin_difference": 0.0
+        },
+        "Mixed512": {
+          "margins": 19968,
+          "strict_factor_bits": 19968,
+          "verdicts": 4992,
+          "maximum_absolute_margin_difference": 0.0
+        },
+        "Ahalf256": {
+          "margins": 19968,
+          "strict_factor_bits": 19968,
+          "verdicts": 4992,
+          "maximum_absolute_margin_difference": 0.0
+        },
+        "Offset": {
+          "margins": 19968,
+          "strict_factor_bits": 19968,
+          "verdicts": 4992,
+          "maximum_absolute_margin_difference": 0.0
+        }
+      },
+      "system_only": {
+        "A512": {
+          "margins": 19968,
+          "strict_factor_bits": 19968,
+          "verdicts": 4992,
+          "maximum_absolute_margin_difference": 0.0
+        },
+        "Mixed512": {
+          "margins": 19968,
+          "strict_factor_bits": 19968,
+          "verdicts": 4992,
+          "maximum_absolute_margin_difference": 0.0
+        },
+        "Ahalf256": {
+          "margins": 19968,
+          "strict_factor_bits": 19968,
+          "verdicts": 4992,
+          "maximum_absolute_margin_difference": 0.0
+        },
+        "Offset": {
+          "margins": 19968,
+          "strict_factor_bits": 19968,
+          "verdicts": 4992,
+          "maximum_absolute_margin_difference": 0.0
+        }
+      }
+    }
+  },
+  "finished_at": "2026-11-27T21:39:51.653842+00:00",
+  "reconstructed_rows": 4992,
+  "test_input_sha256": "fa868237899b7e04061bca991b6d54eb3021b23982e8e6e6739b92a59b4879c2",
+  "prediction_reconstruction_sha256": "d3271b4d48aecc2dd0179aa5bfc57124b32b324d9c14742746201e3ddcab9b85",
+  "prediction_reconstruction_seal_sha256": "483d3370469a9c789d3b4ce8adc00502f877c60af296e2c1cc53f47a266b6449"
+}

@@ -216,8 +216,21 @@ licenses and access permissions. No credentials belong in the repository.
 
 ## Concrete next implementation decision
 
-Finish the no-GPU lexical control and human semantic review while agreeing this
-resource request. Then implement and test a new profile-aware preparation,
+The no-GPU lexical control is complete. Finish human semantic review while
+agreeing this resource request. A stronger paper also needs a qualified capable
+prose-only four-factor extractor and a separately frozen confirmation on fresh,
+human-reviewed contexts. Cross those same contexts under A/B and a renderer
+withheld from probe fitting to avoid confounding new-context difficulty with
+format. Qualify the text monitor on separate development controls and freeze its
+prompt, parser, supplied fold and compute budget before new evaluation; keep
+invalid outputs. Equal target labels do not imply equal computational capacity.
+These are separate future designs, not executed experiments or guarantees of
+publication novelty. Known held-out-style augmentation already has precedent.
+
+The existing-bank precision replay is a numerical robustness check, not a
+substitute for those paper-critical controls or an independent novelty milestone.
+Once its scientific prerequisites and access are satisfied, implement and test
+a new profile-aware preparation,
 capture, train-only map, sealing and independent-audit path. Freeze the final
 execution protocol after a CREATE engineering profile and before cohort
 measurement. Preserve this v1 proposal as the decision record; it is not evidence

@@ -1,5 +1,44 @@
 # Verified continuation state: 27 November 2026
 
+## Latest follow-up: exposed-bank lexical controls completed and independently audited
+
+The same fitting allocations and four factor labels now have a CPU-only lexical
+shortcut control. Its word/character TF-IDF Mixed arm completes 56/192 B-hard
+panels versus 1/192 for A512; all lexical A-hard arms complete zero. This is
+not broad recovery: B-hard row accuracy is 399/768 (51.95%), with class recalls
+38.02%/65.89% and 219/384 name-map flips. Mixed's B receipt heads are perfect,
+but the location factors remain near chance. System-only has zero complete
+panels and 50% row accuracy. One-step Mixed panels are zero in both formats.
+
+All 4,992 test inputs match both original model records, and all 768 fitting
+renderings match the original fitting plans. Thirty-nine repository bindings
+and eleven native historical artifacts remain byte exact under the prerun
+review. Both views and all arms were frozen before scoring; the protocol and
+independent checker were committed at `483e074` before fitting. The separate
+numerical reconstruction verifies 60,308 numerical and 55,688 exact metric
+values with zero discrepancy. There were 24 logistic heads, eight scalar-offset
+optimizations, and zero new language-model/GPU calls.
+
+This is one shared text comparison on an exposed bank. It cannot establish
+activation value over capable neural monitors, private beliefs or spontaneous
+anticipation. Per-arm lexical maps also differ from the common historical latent
+map. The earlier nulls and positive latent adaptation result remain unchanged.
+
+Entry points: [complete lexical report](results/lexical-controls-2026-11-27/README.md),
+[Hanqi briefing](HANQI_RESEARCH_UPDATE_2026-11-27.md),
+[control protocol](LEXICAL_CONTROL_PROTOCOL_V1.md),
+[primary-source review](LEXICAL_CONTROL_RESEARCH_REVIEW_2026-11-27.md), and
+[separate CREATE proposal](CREATE_ADAPTATION_REPLICATION_PLAN_V1.md). The latter
+is a design proposal, not an implemented or executed precision campaign.
+
+Next: human semantic review, supervisor agreement on the bounded instrument
+claim, and the BSPR/paper argument. Paper-critical follow-ups are a qualified
+capable prose-only four-factor comparator and a separately frozen confirmation
+crossing fresh reviewed contexts with a renderer withheld from fitting. The
+CREATE precision campaign is a distinct numerical robustness check, not a
+substitute for those controls or a novelty milestone. Preserve these exposed outcomes; further feature tuning
+cannot turn this bank into fresh confirmation.
+
 ## Latest: fresh equal-observation format adaptation completed at 02:24 GMT
 
 All eleven stages and the detached worker exited successfully. Each model has
@@ -31,7 +70,7 @@ are the continuation entry points. Fourteen native exports were copied exactly.
 Both native replay and relocated Windows replay pass; neither replaces the
 separate numerical auditor. No model worker needs to remain running.
 
-Next: complete the final package/CI checks, document supervisor scope feedback
+The original package and all five CI checks passed at `954d177`. Next, document supervisor scope feedback
 and human review, write the BSPR/results argument, and separately specify any
 matched BF16 replication on CREATE. Do not refit on these exposed test labels or
 promote this result into spontaneous anticipation or natural deception detection.

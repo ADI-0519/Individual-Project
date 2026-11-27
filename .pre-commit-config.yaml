@@ -24,7 +24,7 @@ repos:
       - id: end-of-file-fixer
         entry: python -m pre_commit_hooks.end_of_file_fixer
         # Byte-bound research inputs are checked by their manifest validator.
-        exclude: ^(data/annotations/.*_agent_draft\.csv|data/annotations/main_study_v1_agent_semantic_20261122\.json|data/belief_main/.*\.json|docs/review/main_study_v1/.*|research/deceptionbench/.*\.json|docs/results/format-score-shift-2026-11-26/.*|docs/validation/audit-source-snapshots-2026-11-26/.*)$
+        exclude: ^(data/annotations/.*_agent_draft\.csv|data/annotations/main_study_v1_agent_semantic_20261122\.json|data/belief_main/.*\.json|docs/review/main_study_v1/.*|research/deceptionbench/.*\.json|docs/results/format-score-shift-2026-11-26/.*|docs/results/lexical-controls-2026-11-27/(analysis_started|fit_started)\.json|docs/validation/audit-source-snapshots-2026-11-26/.*)$
       - id: trailing-whitespace
         entry: python -m pre_commit_hooks.trailing_whitespace_fixer
         args: [--markdown-linebreak-ext=md]

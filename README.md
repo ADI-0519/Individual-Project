@@ -53,6 +53,34 @@ The compact bundle passed native Linux and relocated Windows replay. The
 independent native auditor separately reconstructs predictions from saved
 features; production-function replay verifies the exported scores and metrics.
 
+**27 November follow-up: matched lexical shortcut controls are complete.**
+A fixed word/character TF-IDF pipeline uses the same fitting states, four
+factor labels and supplied rule. Mixed fits complete 56/192 B hard panels,
+versus 1/192 for A512; system-only inputs complete zero in every arm/format.
+However, Mixed B-hard row accuracy is only 399/768 (51.95%), and name
+substitutions flip 219/384 judgments. Both receipt heads are perfect on B
+corrections, while location-factor accuracy stays near 50%. These results
+separate simple receipt extraction from reliable complete judgments.
+
+The comparison is a **posthoc diagnostic on the exposed bank**, with one shared
+text baseline, rather than another independent checkpoint replication or a
+capable neural text monitor. The independently reconstructed 115,996 metric
+values agree exactly. No new language-model or GPU calls were needed. Read
+the [full lexical report](docs/results/lexical-controls-2026-11-27/README.md),
+[Hanqi briefing](docs/HANQI_RESEARCH_UPDATE_2026-11-27.md),
+[comparison figure](docs/results/lexical-controls-2026-11-27/lexical-comparison.pdf),
+[fixed control protocol](docs/LEXICAL_CONTROL_PROTOCOL_V1.md) and
+[CREATE replication proposal](docs/CREATE_ADAPTATION_REPLICATION_PLAN_V1.md).
+Human semantic review and the proposed precision replication remain unfinished.
+
+Replay the independent lexical metric audit without model weights:
+
+```sh
+uv run --locked python scripts/audit_format_adaptation_text.py --source docs/results/lexical-controls-2026-11-27 --output .cache/new-lexical-audit
+```
+
+Use a fresh audit output path; existing attempts are preserved.
+
 **26 November: the complete score-shift diagnostic is finished.**
 The [new diagnosis](docs/FORMAT_TRANSFER_RESULTS_2026-11-26.md) finds preserved
 location-content ranking but much poorer reading-record ranking under format B:
