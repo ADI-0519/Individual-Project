@@ -1,0 +1,109 @@
+{
+  "scope": "Previously completed latent result, displayed only; no new latent analysis or primary",
+  "source_sha256": {
+    "summary.json": "b20171e7c77ad704b37c29bec1aabe6bfcb5d7d60a38f4c5b9fe6132dc81392e",
+    "manifest.json": "3d03d215a3f8e56abbe1aa76f708a072992caff4c33088f8bff32e90b3fce67a"
+  },
+  "models": {
+    "llama": {
+      "A512": {
+        "A": {
+          "complete_quartets": 185,
+          "quartets": 192,
+          "quartet_accuracy": 0.9635416666666666
+        },
+        "B": {
+          "complete_quartets": 2,
+          "quartets": 192,
+          "quartet_accuracy": 0.010416666666666666
+        }
+      },
+      "Mixed512": {
+        "A": {
+          "complete_quartets": 166,
+          "quartets": 192,
+          "quartet_accuracy": 0.8645833333333334
+        },
+        "B": {
+          "complete_quartets": 151,
+          "quartets": 192,
+          "quartet_accuracy": 0.7864583333333334
+        }
+      },
+      "Ahalf256": {
+        "A": {
+          "complete_quartets": 178,
+          "quartets": 192,
+          "quartet_accuracy": 0.9270833333333334
+        },
+        "B": {
+          "complete_quartets": 7,
+          "quartets": 192,
+          "quartet_accuracy": 0.036458333333333336
+        }
+      },
+      "Offset": {
+        "A": {
+          "complete_quartets": 178,
+          "quartets": 192,
+          "quartet_accuracy": 0.9270833333333334
+        },
+        "B": {
+          "complete_quartets": 20,
+          "quartets": 192,
+          "quartet_accuracy": 0.10416666666666667
+        }
+      }
+    },
+    "qwen": {
+      "A512": {
+        "A": {
+          "complete_quartets": 162,
+          "quartets": 192,
+          "quartet_accuracy": 0.84375
+        },
+        "B": {
+          "complete_quartets": 3,
+          "quartets": 192,
+          "quartet_accuracy": 0.015625
+        }
+      },
+      "Mixed512": {
+        "A": {
+          "complete_quartets": 131,
+          "quartets": 192,
+          "quartet_accuracy": 0.6822916666666666
+        },
+        "B": {
+          "complete_quartets": 125,
+          "quartets": 192,
+          "quartet_accuracy": 0.6510416666666666
+        }
+      },
+      "Ahalf256": {
+        "A": {
+          "complete_quartets": 145,
+          "quartets": 192,
+          "quartet_accuracy": 0.7552083333333334
+        },
+        "B": {
+          "complete_quartets": 4,
+          "quartets": 192,
+          "quartet_accuracy": 0.020833333333333332
+        }
+      },
+      "Offset": {
+        "A": {
+          "complete_quartets": 145,
+          "quartets": 192,
+          "quartet_accuracy": 0.7552083333333334
+        },
+        "B": {
+          "complete_quartets": 11,
+          "quartets": 192,
+          "quartet_accuracy": 0.057291666666666664
+        }
+      }
+    }
+  }
+}

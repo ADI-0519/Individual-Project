@@ -1,0 +1,26 @@
+{
+  "schema": "logical-relevance-old-audit-source-formatting-v1",
+  "created_at": "2026-11-27T01:50:35.701033+00:00",
+  "change": "Formatting only after executed old-data independent review; original executed bytes preserved. Historical source references resolve to this exact archive, while the reusable Python path is formatted.",
+  "executed_archive": "docs/validation/audit-source-snapshots-2026-11-27/8fd09a42663d3e0ba4288a799e9d631b4e467383dd4e125ea813f267185ad2dd_logical_relevance_old_independent_check.py.txt",
+  "executed_sha256": "8fd09a42663d3e0ba4288a799e9d631b4e467383dd4e125ea813f267185ad2dd",
+  "formatted_source": "docs/validation/logical_relevance_old_independent_check_2026-11-27.py",
+  "formatted_sha256": "43205c64485d174107749742c9eacb40ad2c30b530e6cfb09a0396da487e2baf",
+  "ast_identical_without_position_attributes": true,
+  "completion_receipt_sha256": "13ee4738226b519afaa31c75209700c14f90c6550fb9d144fdaf944b19a713a2",
+  "unchanged_review_outputs": {
+    "docs/results/logical-relevance-old-data-2026-11-27/analysis_receipt.json": "c9c79b43d0aeb7bb8c2f9c99a4eedca9731dd025cee3ae521e32e0f972fdb6ac",
+    "docs/results/logical-relevance-old-data-2026-11-27/factor_comparisons.csv": "3ddb9174acfec5d02e559d777d82e4efd1f1bc2d68e11673d09e7e698b14d77b",
+    "docs/results/logical-relevance-old-data-2026-11-27/factor_metrics.csv": "d6b06bbf163480c8b42752116173cf81ddef4d42944232268be1d1415fa1fb52",
+    "docs/results/logical-relevance-old-data-2026-11-27/independent_review_receipt.json": "37df3e1a89fc79e9e4593c0f0844bf2ebdacb8958022f3f193f80c7abf70c500",
+    "docs/results/logical-relevance-old-data-2026-11-27/oracle_metrics.csv": "9923b4e60caa1850922d6eec4aaa12528bbd52dc49bf3b07d79159573facc0b2",
+    "docs/results/logical-relevance-old-data-2026-11-27/README.md": "c6070efea73983401ec957f8d98a43ad58b9cdfbcc896378f32d3c5888f77f3a",
+    "docs/results/logical-relevance-old-data-2026-11-27/source_coverage.json": "97acc8ed11c07a2a978314e6581e62856901cdb1df5156a07a72d294dc3524e2",
+    "docs/results/logical-relevance-old-data-2026-11-27/spec_seal.json": "92ab0a840ba6c1e39ddebebea33cb93f93547b808018413d45f6e37c3ae6e86b",
+    "docs/results/logical-relevance-old-data-2026-11-27/summary.json": "028533bcb90b21ba0c97ed0a8ecbd0434f78850ec7b8fdce17af018cde48edb0"
+  },
+  "model_calls": 0,
+  "fitting": false,
+  "diagnostic_or_audit_reruns": 0,
+  "fresh_campaign_artifacts_read": false
+}

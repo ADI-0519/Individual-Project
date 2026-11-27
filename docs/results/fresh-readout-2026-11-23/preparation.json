@@ -1,0 +1,30 @@
+{
+  "schema": "fresh-readout-report-preparation-v2",
+  "input_sha256": {
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama_analysis/manifest.json": "3f6852b3f10244cafd76523c2d2825a177a1c5eeafb5a2739f0a0f0e4c180d44",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama_analysis/results.json": "256342115ca704859654c6c962061daaf68d4642627a9ba25e964ec40c1d5ca5",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama_analysis/predictions.npz": "3cdd11df723a8c2c9e64cf552a4b8c2b7525652015476dfdb0972cc02219b954",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen_analysis/manifest.json": "ba7ecd08a3c7a261573992cdf7d9f582d8f1e675fc0af92dffae15f4b8310e64",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen_analysis/results.json": "cd85c2ced5c8ad27c39420e624a7b4a37602996956245d757a73affc8261da75",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen_analysis/predictions.npz": "57e91d5139d505ebe62411140b7526b625c7ca8a0c9f91ceba226d3d3c754864"
+  },
+  "upstream_source_sha256": {
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama/protocol.json": "fa8a9cb8a16f0872af129e8b65ea79ab39d418139407d66cf8567172b0a5d8ef",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/fresh_readout_v2/compiled_v1/bank.json": "bb277ba4efa6e090879405e472a8cb70a973b3ab53cfe340ede56c61cfa98e35",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/test_fit_freeze.json": "f344702f7dd887c90aad9e292e68b767cd41a2c764b23fe5c079a11d4997d3f2",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama_fit/settings.json": "6a459648e7bc17bb4526ee6e76c5bd47601a0b06643f3fb6c3d0e9cea8538c45",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama_fit/heads.npz": "9473175eda13e5af4041591b1edb9dc28e49c4ad2056fab281736fb96261e2d7",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama/test/rows.json": "f3d8de2ee74ea5bb2300b32b9e26fb711b7435793b24ebbf5128d776b74f6f41",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama/test/features.npz": "ec16e3f7853206abe465057a4e7f801d05dbac140c227971c9b48e443f7f3b1e",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/fresh_readout_analysis.py": "875c16eabb3ae3f8f21b148d94d779fcbfcfae812489dc7af6fca2be98838a8d",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen/protocol.json": "7cc8eed3ea66b5f2c3be618be7c246a5edb2007eee7d85b4ffc989b727abb05a",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen_fit/settings.json": "c4d98c5b0fbedc1b965f6faf75067e47c0f1685e28a2cd76122f599b7171ece4",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen_fit/heads.npz": "c1a818f3074ef6c73121ce9dc4220a628d121a8707a26fb4a691fe4d78115a04",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen/test/rows.json": "0e54205e838d49d3c0ee1b5558371d6ae6d908078001fb36b0616dd2e3a88d3f",
+    "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen/test/features.npz": "83fa5e96f5173741192eb2789c26e8e9559995c4f978550b0bc96b7ce8c9ba47"
+  },
+  "reporter_source_sha256": {
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/report_fresh_readout.py": "9a955e95e661f86c0c3a095ec3c7445fc0bff983027337f60711e6bce7f5359b"
+  },
+  "test_fixture": false
+}

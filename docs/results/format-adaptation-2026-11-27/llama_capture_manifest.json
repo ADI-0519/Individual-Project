@@ -1,0 +1,19 @@
+{
+  "schema": "format-adaptation-capture-manifest-v1",
+  "status": "complete",
+  "partition": "test",
+  "model_key": "llama",
+  "started_at": "2026-11-27T01:39:06.935840+00:00",
+  "completed_rows": 4992,
+  "bank_sha256": "a05737d2b0ceaccbc71588ffdde31e3dfe73a251d3acbacf0dad190c8375aeed",
+  "protocol_sha256": "f963488e2e088814d2733f8c8972fc4a15b6c57951563a19eeb4e88d62ae68d0",
+  "input_artifact_sha256": {
+    "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/llama/protocol.json": "f963488e2e088814d2733f8c8972fc4a15b6c57951563a19eeb4e88d62ae68d0"
+  },
+  "seal_sha256": "8295a9d0e8d6774413bd472458d2ef547f13d359edd9bd3a6c694bfe6a9528e4",
+  "last_progress_at": "2026-11-27T02:01:25.927959+00:00",
+  "finished_at": "2026-11-27T02:01:38.628105+00:00",
+  "rows_sha256": "5f0697b9225282cd38009dc2ac3d281dcfb3757d971f4d82aeaa9068dcb930a1",
+  "features_sha256": "e8d2c5cee8e010a049a50a87cb1b432b6d71729d767875fd3128466cfabc5222",
+  "engineering_complete_sha256": "471045184338580e75a14ebbb8f271959bd210be467ad13aa2e1770040ca6cf7"
+}

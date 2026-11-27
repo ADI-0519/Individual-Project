@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "audited_on": "2026-11-21",
+  "benchmark_id": "huang_2025_deceptionbench",
+  "validation_type": "executed_local_source_import_not_model_evaluation",
+  "repository_revision": "8f3175f66fdff89ded3ebdf0ee2055fa47c955db",
+  "dataset_revision": "38b412da565073483c0a68ce9e04eb15859beedc",
+  "source_manifest_sha256": "3192394b146b2fc6a5181382b9f2e9bb4e5d7df41b82a261add9d829b1b9247c",
+  "scenarios": 150,
+  "static_source_prompts": 900,
+  "unique_case_ids": 900,
+  "generated_model_calls": 0,
+  "behavior_labels": 0,
+  "raw_file_hashes_verified": 5,
+  "prompt_representation": "source_prompt_only_no_upstream_thought_response_wrapper",
+  "raw_files_vendored": false,
+  "focused_synthetic_fixture_tests_passed": 24,
+  "lint": "passed"
+}

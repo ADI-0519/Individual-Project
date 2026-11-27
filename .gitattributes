@@ -9,8 +9,41 @@ data/annotations/*_agent_draft.csv -text whitespace=-blank-at-eol,-blank-at-eof
 data/communication/natural_selection_pilot_draft_v1.json -text whitespace=-blank-at-eol,-blank-at-eof
 data/annotations/natural_selection_pilot_v1_reviewer_*_agent_draft.json -text whitespace=-blank-at-eol,-blank-at-eof
 data/annotations/natural_selection_review_protocol_v1.json -text whitespace=-blank-at-eol,-blank-at-eof
+data/annotations/main_study_v1_agent_semantic_20261122.json -text whitespace=-blank-at-eol,-blank-at-eof
 data/belief_diagnostic/future_goal_content_controls_draft_v1.json -text
 data/belief_diagnostic/crossed_belief_validation_v1.json -text
+
+# Versioned main-study inputs and review packets carry raw-byte SHA256 bindings.
+data/belief_main/*.json -text whitespace=-blank-at-eol,-blank-at-eof
+data/belief_main/main_v1/*.json -text whitespace=-blank-at-eol,-blank-at-eof
+docs/review/main_study_v1/* -text whitespace=-blank-at-eol,-blank-at-eof
+research/deceptionbench/*.json -text whitespace=-blank-at-eol,-blank-at-eof
+
+# Scientific exports retain the exact bytes recorded in their output manifests.
+docs/results/*/* -text whitespace=-blank-at-eol,-blank-at-eof
+
+# Preserve byte-bound forensic evidence, including its original Windows newlines.
+docs/validation/2026-11-22-main-study-*forensics*.json -text whitespace=-blank-at-eol,-blank-at-eof
+docs/validation/2026-11-22-main-study-query-anchoring-posthoc*.json -text whitespace=-blank-at-eol,-blank-at-eof
+docs/validation/2026-11-22-cached-readout-adequacy*.json -text whitespace=-blank-at-eol,-blank-at-eof
+docs/validation/audit-source-snapshots-2026-11-22/* -text whitespace=-blank-at-eol,-blank-at-eof
+docs/validation/audit-source-snapshots-2026-11-23/* -text whitespace=-blank-at-eol,-blank-at-eof
+docs/MAIN_STUDY_MEASUREMENT_FORENSICS_2026-11-22.md -text whitespace=-blank-at-eol,-blank-at-eof
+docs/MAIN_STUDY_QUERY_ANCHORING_POSTHOC_2026-11-22.md -text whitespace=-blank-at-eol,-blank-at-eof
+data/belief_main/fresh_readout_v2/** -text whitespace=-blank-at-eol,-blank-at-eof
+data/annotations/fresh_readout_v2*.json -text whitespace=-blank-at-eol,-blank-at-eof
+docs/validation/2026-11-22-fresh-readout-*.json -text whitespace=-blank-at-eol,-blank-at-eof
+docs/validation/2026-11-23-fresh-readout-*.json -text whitespace=-blank-at-eol,-blank-at-eof
+
+# Nested posthoc diagnostic exports and source evidence retain manifest bytes.
+docs/results/format-score-shift-2026-11-26/** -text whitespace=-blank-at-eol,-blank-at-eof
+docs/validation/2026-11-26-format-*.json -text whitespace=-blank-at-eol,-blank-at-eof
+docs/validation/audit-source-snapshots-2026-11-26/* -text whitespace=-blank-at-eol,-blank-at-eof
+docs/review/format_bridge_v1/* -text whitespace=-blank-at-eol,-blank-at-eof
+data/belief_main/format_adaptation_v1/** -text whitespace=-blank-at-eol,-blank-at-eof
+docs/validation/2026-11-27-format-adaptation-*.json -text whitespace=-blank-at-eol,-blank-at-eof
+docs/validation/2026-11-27-lexical-control-*.json -text whitespace=-blank-at-eol,-blank-at-eof
+docs/validation/audit-source-snapshots-2026-11-27/* -text whitespace=-blank-at-eol,-blank-at-eof
 
 *.bat text eol=crlf
 *.cmd text eol=crlf

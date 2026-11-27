@@ -1,0 +1,108 @@
+{
+  "schema": "main-study-training-freeze-independent-audit-v1",
+  "reviewer_type": "agent",
+  "reviewer_id": "/root/semantic_independent",
+  "created_at": "2026-11-22T13:38:48.359456+00:00",
+  "freeze_path": "/home/adirj/kcl-latent-probes-runs/main_v1_agent_20261122_training_freeze.json",
+  "freeze_sha256": "9c1cb066e2a4c8a354127bad06b83dddf0851cf3cb0ca52140c6dfbea64da3a4",
+  "research_status": "agent_audited_exploratory",
+  "human_review_complete": false,
+  "confirmatory_result": false,
+  "bank_sha256": "e038025571a38a7f2c489e5f8c3bf3b0a3c11a05f9b8c7e89d26292a4e7bfb1d",
+  "source_archive": {
+    "native_path": "/home/adirj/kcl-latent-probes-runs/main_v1_agent_20261122_training_source_archive",
+    "manifest_path": "/home/adirj/kcl-latent-probes-runs/main_v1_agent_20261122_training_source_archive/manifest.json",
+    "manifest_sha256": "cd654433791cab8ccbed08bb9a10418c56a89d70429e480412d2287887669ed6",
+    "frozen_source_input_count": 27,
+    "required_files_including_freeze": 28,
+    "supplementary_protocol_copies": 2,
+    "all_archived_file_hashes_verified": true,
+    "all_freeze_source_bindings_covered": true,
+    "no_overwrite": true
+  },
+  "independent_semantic_artifact": {
+    "path": "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/annotations/main_study_v1_agent_semantic_20261122.json",
+    "sha256": "71b021952823a65ba345763100c8d8a493e16363ce7317dc068fba429ee028af",
+    "equals_original_blind_artifact": true,
+    "equals_freeze_binding": true,
+    "review_packet_sha256": "fa4791f72c8fb2743d5d29361ea38f8b1ad0e94cd3795250f189f28735f97751",
+    "representative_case_hash_inventory_equal": true,
+    "representative_prompts": 736,
+    "frames": 154,
+    "agent_review_only": true
+  },
+  "hash_conventions": {
+    "review_packet_prompt_sha256": "SHA256 of compact sorted-key UTF-8 JSON plus LF",
+    "capture_messages_and_token_ids_sha256": "SHA256 of compact sorted-key UTF-8 JSON without trailing LF"
+  },
+  "tokenizer_exact_prefix_plans": [
+    {
+      "model_key": "llama",
+      "model_id": "meta-llama/Llama-3.1-8B-Instruct",
+      "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+      "original_protocol_path": "/home/adirj/kcl-latent-probes-runs/main_v1_agent_20261122_llama_train_dev/protocol.json",
+      "archived_protocol_relative_path": "files/0028__llama_capture_protocol.json",
+      "protocol_sha256": "7a361e40cc322fedbda2b639f8abab55a6bdc12f646e19ff49570c46d1e3e75b",
+      "chat_template_sha256": "ca5b86f15c19b53c24ff18228849e06ffb677b952d85171c66d9b720d924f9bb",
+      "answer_token_ids": {
+        "YES": 14331,
+        "NO": 9173
+      },
+      "rows_verified": 5888,
+      "split_counts": {
+        "train": 1536,
+        "development": 512,
+        "test": 3840
+      },
+      "independently_retokenized_rows": 5888,
+      "all_exact_prefixes_equal": true,
+      "all_message_and_token_hashes_equal": true,
+      "representative_packet_messages_equal": 736,
+      "minimum_prefix_tokens": 538,
+      "maximum_prefix_tokens": 721,
+      "shared_planned_content_sha256": "cc2566b936c4c4a10c418a28b6c83f526f6ff12c3b13265becccc2a61f9c6cc0",
+      "model_weights_loaded": false,
+      "model_calls": 0
+    },
+    {
+      "model_key": "qwen",
+      "model_id": "Qwen/Qwen2.5-7B-Instruct",
+      "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+      "original_protocol_path": "/home/adirj/kcl-latent-probes-runs/main_v1_agent_20261122_qwen_train_dev/protocol.json",
+      "archived_protocol_relative_path": "files/0029__qwen_capture_protocol.json",
+      "protocol_sha256": "514d6a5bd001cf428b59bd8c745161f9ef946fd7c17c00af1266e3d6a96e551b",
+      "chat_template_sha256": "2e2d2512cfe46af53dc1eed45368ecaab26ac4461c480e6b69fe571cf0ceaa75",
+      "answer_token_ids": {
+        "YES": 14004,
+        "NO": 8996
+      },
+      "rows_verified": 5888,
+      "split_counts": {
+        "train": 1536,
+        "development": 512,
+        "test": 3840
+      },
+      "independently_retokenized_rows": 5888,
+      "all_exact_prefixes_equal": true,
+      "all_message_and_token_hashes_equal": true,
+      "representative_packet_messages_equal": 736,
+      "minimum_prefix_tokens": 530,
+      "maximum_prefix_tokens": 719,
+      "shared_planned_content_sha256": "cc2566b936c4c4a10c418a28b6c83f526f6ff12c3b13265becccc2a61f9c6cc0",
+      "model_weights_loaded": false,
+      "model_calls": 0
+    }
+  ],
+  "both_models_have_identical_planned_case_message_inventory": true,
+  "tokenizer_loads_only": true,
+  "model_weights_loaded": false,
+  "new_model_calls": 0,
+  "gpu_operations_requested": 0,
+  "transformers_version": "4.57.6",
+  "elapsed_cpu_audit_seconds": 8.726701663999961,
+  "limitations": [
+    "Agent audit, not human review or confirmatory validation.",
+    "No capture outcomes or test responses were accessed; only frozen sources and prepared input plans.",
+    "The audit verifies recorded source bytes and independently repeats local pinned-tokenizer preparation; it does not evaluate any model."
+  ]
+}

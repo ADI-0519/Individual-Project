@@ -1,0 +1,8625 @@
+{
+  "schema": "main_study_design_cpu_validation_v2",
+  "status": "design_invariants_pass_narrative_review_not_assessed",
+  "model_calls": 0,
+  "fit_calls": 0,
+  "human_review_complete": false,
+  "policies_declared_not_frozen": true,
+  "group_ids_define_allocation_roster": true,
+  "authored_materials_audited_by_this_script": false,
+  "binding_algorithm": "SHA256 of UTF-8 text normalized to LF; no other transformations",
+  "file_hashes_utf8_lf": {
+    "src/latent_probes/main_study_design.py": "0973d047d2e98736c1b9144d2187079a60d87f2280eeca691330ff91135506b9",
+    "scripts/validate_main_study_design.py": "0de0d2fa8dce0a48751142dea4994fabc29bf61fe1aab93113debfd511d670c3",
+    "data/belief_main/design_examples_v1.json": "b9d1cbbd566b7e60e60cb764b7acc2579e3ba61abfac453322c39a791f8f7a8d",
+    "docs/MAIN_STUDY_SPECIFICATION_V1.md": "cc406b92882042563831a44afdc62a1b81889cb81b7bc3dc55655e1931301f1c"
+  },
+  "training_sizes": [
+    128,
+    256,
+    512
+  ],
+  "allocation_seeds": [
+    11,
+    23,
+    37,
+    53,
+    71
+  ],
+  "pair_selection": "SHA256 UTF-8 pipe-joined(pair-selection-v1,seed,mechanism,pair_id), ascending digest then pair_id; nested prefixes",
+  "full_mask": "For each(seed,pair_id,U), SHA256 UTF-8 pipe-joined(coverage-mask-v1,seed,pair_id,U,W,map), ascending digest then(W,map); first2of4 changing atoffset0, complementary atoffset1",
+  "case_id_hash_contract": "SHA256 of lexicographically sorted case IDs joined by LF with no trailing LF",
+  "reserved_training_groups": [
+    {
+      "group_id": "train_observation_00a",
+      "mechanism": "observation",
+      "pair_id": "train_observation_pair_00",
+      "offset": 0
+    },
+    {
+      "group_id": "train_observation_00b",
+      "mechanism": "observation",
+      "pair_id": "train_observation_pair_00",
+      "offset": 1
+    },
+    {
+      "group_id": "train_observation_01a",
+      "mechanism": "observation",
+      "pair_id": "train_observation_pair_01",
+      "offset": 0
+    },
+    {
+      "group_id": "train_observation_01b",
+      "mechanism": "observation",
+      "pair_id": "train_observation_pair_01",
+      "offset": 1
+    },
+    {
+      "group_id": "train_observation_02a",
+      "mechanism": "observation",
+      "pair_id": "train_observation_pair_02",
+      "offset": 0
+    },
+    {
+      "group_id": "train_observation_02b",
+      "mechanism": "observation",
+      "pair_id": "train_observation_pair_02",
+      "offset": 1
+    },
+    {
+      "group_id": "train_observation_03a",
+      "mechanism": "observation",
+      "pair_id": "train_observation_pair_03",
+      "offset": 0
+    },
+    {
+      "group_id": "train_observation_03b",
+      "mechanism": "observation",
+      "pair_id": "train_observation_pair_03",
+      "offset": 1
+    },
+    {
+      "group_id": "train_observation_04a",
+      "mechanism": "observation",
+      "pair_id": "train_observation_pair_04",
+      "offset": 0
+    },
+    {
+      "group_id": "train_observation_04b",
+      "mechanism": "observation",
+      "pair_id": "train_observation_pair_04",
+      "offset": 1
+    },
+    {
+      "group_id": "train_observation_05a",
+      "mechanism": "observation",
+      "pair_id": "train_observation_pair_05",
+      "offset": 0
+    },
+    {
+      "group_id": "train_observation_05b",
+      "mechanism": "observation",
+      "pair_id": "train_observation_pair_05",
+      "offset": 1
+    },
+    {
+      "group_id": "train_observation_06a",
+      "mechanism": "observation",
+      "pair_id": "train_observation_pair_06",
+      "offset": 0
+    },
+    {
+      "group_id": "train_observation_06b",
+      "mechanism": "observation",
+      "pair_id": "train_observation_pair_06",
+      "offset": 1
+    },
+    {
+      "group_id": "train_observation_07a",
+      "mechanism": "observation",
+      "pair_id": "train_observation_pair_07",
+      "offset": 0
+    },
+    {
+      "group_id": "train_observation_07b",
+      "mechanism": "observation",
+      "pair_id": "train_observation_pair_07",
+      "offset": 1
+    },
+    {
+      "group_id": "train_observation_08a",
+      "mechanism": "observation",
+      "pair_id": "train_observation_pair_08",
+      "offset": 0
+    },
+    {
+      "group_id": "train_observation_08b",
+      "mechanism": "observation",
+      "pair_id": "train_observation_pair_08",
+      "offset": 1
+    },
+    {
+      "group_id": "train_observation_09a",
+      "mechanism": "observation",
+      "pair_id": "train_observation_pair_09",
+      "offset": 0
+    },
+    {
+      "group_id": "train_observation_09b",
+      "mechanism": "observation",
+      "pair_id": "train_observation_pair_09",
+      "offset": 1
+    },
+    {
+      "group_id": "train_observation_10a",
+      "mechanism": "observation",
+      "pair_id": "train_observation_pair_10",
+      "offset": 0
+    },
+    {
+      "group_id": "train_observation_10b",
+      "mechanism": "observation",
+      "pair_id": "train_observation_pair_10",
+      "offset": 1
+    },
+    {
+      "group_id": "train_observation_11a",
+      "mechanism": "observation",
+      "pair_id": "train_observation_pair_11",
+      "offset": 0
+    },
+    {
+      "group_id": "train_observation_11b",
+      "mechanism": "observation",
+      "pair_id": "train_observation_pair_11",
+      "offset": 1
+    },
+    {
+      "group_id": "train_message_00a",
+      "mechanism": "message",
+      "pair_id": "train_message_pair_00",
+      "offset": 0
+    },
+    {
+      "group_id": "train_message_00b",
+      "mechanism": "message",
+      "pair_id": "train_message_pair_00",
+      "offset": 1
+    },
+    {
+      "group_id": "train_message_01a",
+      "mechanism": "message",
+      "pair_id": "train_message_pair_01",
+      "offset": 0
+    },
+    {
+      "group_id": "train_message_01b",
+      "mechanism": "message",
+      "pair_id": "train_message_pair_01",
+      "offset": 1
+    },
+    {
+      "group_id": "train_message_02a",
+      "mechanism": "message",
+      "pair_id": "train_message_pair_02",
+      "offset": 0
+    },
+    {
+      "group_id": "train_message_02b",
+      "mechanism": "message",
+      "pair_id": "train_message_pair_02",
+      "offset": 1
+    },
+    {
+      "group_id": "train_message_03a",
+      "mechanism": "message",
+      "pair_id": "train_message_pair_03",
+      "offset": 0
+    },
+    {
+      "group_id": "train_message_03b",
+      "mechanism": "message",
+      "pair_id": "train_message_pair_03",
+      "offset": 1
+    },
+    {
+      "group_id": "train_message_04a",
+      "mechanism": "message",
+      "pair_id": "train_message_pair_04",
+      "offset": 0
+    },
+    {
+      "group_id": "train_message_04b",
+      "mechanism": "message",
+      "pair_id": "train_message_pair_04",
+      "offset": 1
+    },
+    {
+      "group_id": "train_message_05a",
+      "mechanism": "message",
+      "pair_id": "train_message_pair_05",
+      "offset": 0
+    },
+    {
+      "group_id": "train_message_05b",
+      "mechanism": "message",
+      "pair_id": "train_message_pair_05",
+      "offset": 1
+    },
+    {
+      "group_id": "train_message_06a",
+      "mechanism": "message",
+      "pair_id": "train_message_pair_06",
+      "offset": 0
+    },
+    {
+      "group_id": "train_message_06b",
+      "mechanism": "message",
+      "pair_id": "train_message_pair_06",
+      "offset": 1
+    },
+    {
+      "group_id": "train_message_07a",
+      "mechanism": "message",
+      "pair_id": "train_message_pair_07",
+      "offset": 0
+    },
+    {
+      "group_id": "train_message_07b",
+      "mechanism": "message",
+      "pair_id": "train_message_pair_07",
+      "offset": 1
+    },
+    {
+      "group_id": "train_message_08a",
+      "mechanism": "message",
+      "pair_id": "train_message_pair_08",
+      "offset": 0
+    },
+    {
+      "group_id": "train_message_08b",
+      "mechanism": "message",
+      "pair_id": "train_message_pair_08",
+      "offset": 1
+    },
+    {
+      "group_id": "train_message_09a",
+      "mechanism": "message",
+      "pair_id": "train_message_pair_09",
+      "offset": 0
+    },
+    {
+      "group_id": "train_message_09b",
+      "mechanism": "message",
+      "pair_id": "train_message_pair_09",
+      "offset": 1
+    },
+    {
+      "group_id": "train_message_10a",
+      "mechanism": "message",
+      "pair_id": "train_message_pair_10",
+      "offset": 0
+    },
+    {
+      "group_id": "train_message_10b",
+      "mechanism": "message",
+      "pair_id": "train_message_pair_10",
+      "offset": 1
+    },
+    {
+      "group_id": "train_message_11a",
+      "mechanism": "message",
+      "pair_id": "train_message_pair_11",
+      "offset": 0
+    },
+    {
+      "group_id": "train_message_11b",
+      "mechanism": "message",
+      "pair_id": "train_message_pair_11",
+      "offset": 1
+    }
+  ],
+  "factorial_support_per_group": {
+    "observation": {
+      "rows": 32,
+      "unique_case_ids": 32,
+      "gold_0": 16,
+      "gold_1": 16,
+      "primary_quartets": 8,
+      "primary_rows": 32,
+      "secondary_rows": 0
+    },
+    "message": {
+      "rows": 32,
+      "unique_case_ids": 32,
+      "gold_0": 16,
+      "gold_1": 16,
+      "primary_quartets": 8,
+      "primary_rows": 32,
+      "secondary_rows": 0
+    },
+    "correction": {
+      "rows": 64,
+      "unique_case_ids": 64,
+      "gold_0": 32,
+      "gold_1": 32,
+      "primary_quartets": 8,
+      "primary_rows": 32,
+      "secondary_rows": 32
+    }
+  },
+  "design_example_audit": {
+    "cases_checked": 24,
+    "groups": 6,
+    "complete_quartets": 6,
+    "gold_prior_final_informativeness_answer_checks": "pass",
+    "human_semantic_validation": false,
+    "excluded_from_all_future_partitions": true
+  },
+  "allocations": [
+    {
+      "seed": 11,
+      "training_n": 128,
+      "selected_group_count": 8,
+      "selected_groups": [
+        {
+          "group_id": "train_observation_00a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_00",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_00b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_00",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_04a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_04",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_04b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_04",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_10a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_10",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_10b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_10",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_06a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_06",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_06b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_06",
+          "offset": 1
+        }
+      ],
+      "full_changing_cells_U_W_map_by_group": {
+        "train_observation_00a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_observation_00b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_04a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_04b": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_10a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_10b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_06a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_06b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "arms": {
+        "restricted": {
+          "rows": 128,
+          "unique_case_ids": 128,
+          "gold_0": 64,
+          "gold_1": 64,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "2c68077eacce2dd44d56dab2f9aa32858483769583d2fea0e590bf1ff0b12a8a"
+        },
+        "full": {
+          "rows": 128,
+          "unique_case_ids": 128,
+          "gold_0": 64,
+          "gold_1": 64,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "150e071beb7b64f6677a57cd3993ef1249153d621adcabb026fd6c342f46625d"
+        }
+      },
+      "exact_group_U_B_W_map_joint_match": true,
+      "all_receipt_pairs_intact": true,
+      "antithetic_partner_factorial_coverage": true
+    },
+    {
+      "seed": 11,
+      "training_n": 256,
+      "selected_group_count": 16,
+      "selected_groups": [
+        {
+          "group_id": "train_observation_00a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_00",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_00b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_00",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_04a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_04",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_04b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_04",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_02a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_02",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_02b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_02",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_06a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_06",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_06b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_06",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_10a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_10",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_10b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_10",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_06a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_06",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_06b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_06",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_11a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_11",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_11b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_11",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_00a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_00",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_00b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_00",
+          "offset": 1
+        }
+      ],
+      "full_changing_cells_U_W_map_by_group": {
+        "train_observation_00a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_observation_00b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_04a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_04b": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_02a": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_02b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_06a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_06b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_10a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_10b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_06a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_06b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_11a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_11b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_00a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_message_00b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "arms": {
+        "restricted": {
+          "rows": 256,
+          "unique_case_ids": 256,
+          "gold_0": 128,
+          "gold_1": 128,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "1b6aa440ee0a766c671247332c363de07e3e371138803c2176792cf43e4d462b"
+        },
+        "full": {
+          "rows": 256,
+          "unique_case_ids": 256,
+          "gold_0": 128,
+          "gold_1": 128,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "72be1e2196030dd692b10415219af13d1fedbd3a5efa409325859732d803e3fe"
+        }
+      },
+      "exact_group_U_B_W_map_joint_match": true,
+      "all_receipt_pairs_intact": true,
+      "antithetic_partner_factorial_coverage": true
+    },
+    {
+      "seed": 11,
+      "training_n": 512,
+      "selected_group_count": 32,
+      "selected_groups": [
+        {
+          "group_id": "train_observation_00a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_00",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_00b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_00",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_04a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_04",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_04b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_04",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_02a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_02",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_02b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_02",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_06a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_06",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_06b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_06",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_08a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_08",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_08b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_08",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_07a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_07",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_07b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_07",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_10a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_10",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_10b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_10",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_09a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_09",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_09b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_09",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_10a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_10",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_10b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_10",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_06a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_06",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_06b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_06",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_11a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_11",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_11b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_11",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_00a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_00",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_00b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_00",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_09a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_09",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_09b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_09",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_03a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_03",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_03b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_03",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_05a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_05",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_05b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_05",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_08a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_08",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_08b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_08",
+          "offset": 1
+        }
+      ],
+      "full_changing_cells_U_W_map_by_group": {
+        "train_observation_00a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_observation_00b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_04a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_04b": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_02a": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_02b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_06a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_06b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_08a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_observation_08b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_07a": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_07b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_observation_10a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_10b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_observation_09a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_09b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_10a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_10b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_06a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_06b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_11a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_11b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_00a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_message_00b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_09a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_09b": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_03a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_03b": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_05a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_message_05b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_08a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_08b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ]
+      },
+      "arms": {
+        "restricted": {
+          "rows": 512,
+          "unique_case_ids": 512,
+          "gold_0": 256,
+          "gold_1": 256,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "5cd8bc5e36d5020e8aa4a464738dbe9124d42bcc46f98899c6508752da9099e0"
+        },
+        "full": {
+          "rows": 512,
+          "unique_case_ids": 512,
+          "gold_0": 256,
+          "gold_1": 256,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "fbdc69c6c666681bf5554befb74f308fe71c6df1ed679c1297d8f71a2deed983"
+        }
+      },
+      "exact_group_U_B_W_map_joint_match": true,
+      "all_receipt_pairs_intact": true,
+      "antithetic_partner_factorial_coverage": true
+    },
+    {
+      "seed": 23,
+      "training_n": 128,
+      "selected_group_count": 8,
+      "selected_groups": [
+        {
+          "group_id": "train_observation_08a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_08",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_08b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_08",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_09a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_09",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_09b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_09",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_06a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_06",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_06b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_06",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_09a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_09",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_09b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_09",
+          "offset": 1
+        }
+      ],
+      "full_changing_cells_U_W_map_by_group": {
+        "train_observation_08a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_08b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_09a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_observation_09b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_06a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_06b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_09a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_09b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ]
+      },
+      "arms": {
+        "restricted": {
+          "rows": 128,
+          "unique_case_ids": 128,
+          "gold_0": 64,
+          "gold_1": 64,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "b3f7d9a2d12c620acd59054cfc20c97d4f8000089cde9c35a21e3e546e745506"
+        },
+        "full": {
+          "rows": 128,
+          "unique_case_ids": 128,
+          "gold_0": 64,
+          "gold_1": 64,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "5af81b251ccf809ba0ebde3da87fe05ed41f9d7277d6d4de7b740ae2281f3689"
+        }
+      },
+      "exact_group_U_B_W_map_joint_match": true,
+      "all_receipt_pairs_intact": true,
+      "antithetic_partner_factorial_coverage": true
+    },
+    {
+      "seed": 23,
+      "training_n": 256,
+      "selected_group_count": 16,
+      "selected_groups": [
+        {
+          "group_id": "train_observation_08a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_08",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_08b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_08",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_09a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_09",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_09b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_09",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_10a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_10",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_10b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_10",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_02a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_02",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_02b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_02",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_06a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_06",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_06b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_06",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_09a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_09",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_09b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_09",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_01a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_01",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_01b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_01",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_11a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_11",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_11b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_11",
+          "offset": 1
+        }
+      ],
+      "full_changing_cells_U_W_map_by_group": {
+        "train_observation_08a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_08b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_09a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_observation_09b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_10a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_10b": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_observation_02a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_observation_02b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_06a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_06b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_09a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_09b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_01a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_01b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_11a": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_message_11b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "arms": {
+        "restricted": {
+          "rows": 256,
+          "unique_case_ids": 256,
+          "gold_0": 128,
+          "gold_1": 128,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "7d11ffa22ac438f1e14d84abcf82a7e661617c636e168df11e7a70e5588998f9"
+        },
+        "full": {
+          "rows": 256,
+          "unique_case_ids": 256,
+          "gold_0": 128,
+          "gold_1": 128,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "5cd102d6a6a98dc499238ded509404a61cb40d10cc4a1988e582775bd5915694"
+        }
+      },
+      "exact_group_U_B_W_map_joint_match": true,
+      "all_receipt_pairs_intact": true,
+      "antithetic_partner_factorial_coverage": true
+    },
+    {
+      "seed": 23,
+      "training_n": 512,
+      "selected_group_count": 32,
+      "selected_groups": [
+        {
+          "group_id": "train_observation_08a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_08",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_08b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_08",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_09a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_09",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_09b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_09",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_10a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_10",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_10b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_10",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_02a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_02",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_02b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_02",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_00a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_00",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_00b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_00",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_04a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_04",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_04b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_04",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_01a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_01",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_01b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_01",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_06a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_06",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_06b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_06",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_06a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_06",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_06b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_06",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_09a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_09",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_09b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_09",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_01a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_01",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_01b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_01",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_11a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_11",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_11b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_11",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_04a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_04",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_04b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_04",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_08a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_08",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_08b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_08",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_02a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_02",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_02b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_02",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_03a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_03",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_03b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_03",
+          "offset": 1
+        }
+      ],
+      "full_changing_cells_U_W_map_by_group": {
+        "train_observation_08a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_08b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_09a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_observation_09b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_10a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_10b": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_observation_02a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_observation_02b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_00a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_00b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_04a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_04b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_01a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_01b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_06a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_06b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_06a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_06b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_09a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_09b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_01a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_01b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_11a": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_message_11b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_04a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_04b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_08a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_08b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_message_02a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_02b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_message_03a": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_03b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "arms": {
+        "restricted": {
+          "rows": 512,
+          "unique_case_ids": 512,
+          "gold_0": 256,
+          "gold_1": 256,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "d14e8e8d930a9c01c6550c195cd6bcd54dbca11454dc2a3e2d68dee2fdf4fd9b"
+        },
+        "full": {
+          "rows": 512,
+          "unique_case_ids": 512,
+          "gold_0": 256,
+          "gold_1": 256,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "6b7a3574ddc7b63a0f85aa711e8b9a1be9a2955f89900736b3b6f5b5a1f949a2"
+        }
+      },
+      "exact_group_U_B_W_map_joint_match": true,
+      "all_receipt_pairs_intact": true,
+      "antithetic_partner_factorial_coverage": true
+    },
+    {
+      "seed": 37,
+      "training_n": 128,
+      "selected_group_count": 8,
+      "selected_groups": [
+        {
+          "group_id": "train_observation_03a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_03",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_03b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_03",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_02a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_02",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_02b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_02",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_04a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_04",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_04b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_04",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_07a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_07",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_07b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_07",
+          "offset": 1
+        }
+      ],
+      "full_changing_cells_U_W_map_by_group": {
+        "train_observation_03a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_03b": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_02a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_02b": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_04a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_04b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_07a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_07b": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "arms": {
+        "restricted": {
+          "rows": 128,
+          "unique_case_ids": 128,
+          "gold_0": 64,
+          "gold_1": 64,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "08aca707353fb7c010f93e8df34cde1c5775bf41f09331f719c3503de02ef317"
+        },
+        "full": {
+          "rows": 128,
+          "unique_case_ids": 128,
+          "gold_0": 64,
+          "gold_1": 64,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "cfc14bfec6fea12a0c6ec0727140b2b9d57ca0bfcd4ea16db7f5e745734d4092"
+        }
+      },
+      "exact_group_U_B_W_map_joint_match": true,
+      "all_receipt_pairs_intact": true,
+      "antithetic_partner_factorial_coverage": true
+    },
+    {
+      "seed": 37,
+      "training_n": 256,
+      "selected_group_count": 16,
+      "selected_groups": [
+        {
+          "group_id": "train_observation_03a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_03",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_03b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_03",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_02a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_02",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_02b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_02",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_10a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_10",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_10b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_10",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_06a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_06",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_06b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_06",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_04a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_04",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_04b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_04",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_07a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_07",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_07b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_07",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_01a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_01",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_01b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_01",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_09a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_09",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_09b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_09",
+          "offset": 1
+        }
+      ],
+      "full_changing_cells_U_W_map_by_group": {
+        "train_observation_03a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_03b": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_02a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_02b": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_10a": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_10b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_06a": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_06b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_04a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_04b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_07a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_07b": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_01a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_01b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_message_09a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_09b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ]
+      },
+      "arms": {
+        "restricted": {
+          "rows": 256,
+          "unique_case_ids": 256,
+          "gold_0": 128,
+          "gold_1": 128,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "5c92bd822e408b49381105232008bba064dfb78238b7d349b889bdc91f368f6a"
+        },
+        "full": {
+          "rows": 256,
+          "unique_case_ids": 256,
+          "gold_0": 128,
+          "gold_1": 128,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "a1f03c3ba5e49beb5a980120dcbbe229ac3e8face31015e1e486199cd69ad921"
+        }
+      },
+      "exact_group_U_B_W_map_joint_match": true,
+      "all_receipt_pairs_intact": true,
+      "antithetic_partner_factorial_coverage": true
+    },
+    {
+      "seed": 37,
+      "training_n": 512,
+      "selected_group_count": 32,
+      "selected_groups": [
+        {
+          "group_id": "train_observation_03a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_03",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_03b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_03",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_02a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_02",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_02b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_02",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_10a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_10",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_10b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_10",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_06a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_06",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_06b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_06",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_04a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_04",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_04b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_04",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_09a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_09",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_09b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_09",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_08a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_08",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_08b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_08",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_01a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_01",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_01b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_01",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_04a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_04",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_04b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_04",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_07a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_07",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_07b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_07",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_01a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_01",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_01b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_01",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_09a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_09",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_09b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_09",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_08a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_08",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_08b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_08",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_10a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_10",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_10b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_10",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_03a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_03",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_03b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_03",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_11a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_11",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_11b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_11",
+          "offset": 1
+        }
+      ],
+      "full_changing_cells_U_W_map_by_group": {
+        "train_observation_03a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_03b": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_02a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_02b": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_10a": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_10b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_06a": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_06b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_04a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_04b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_observation_09a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_09b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_08a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_08b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_01a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_01b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_04a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_04b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_07a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_07b": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_01a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_01b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_message_09a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_09b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_message_08a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_08b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_10a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_10b": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_03a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_message_03b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_11a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_message_11b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "arms": {
+        "restricted": {
+          "rows": 512,
+          "unique_case_ids": 512,
+          "gold_0": 256,
+          "gold_1": 256,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "e6879d927337d067e94fc3b425ceeb95266226f535fccae218ba053b10cc451e"
+        },
+        "full": {
+          "rows": 512,
+          "unique_case_ids": 512,
+          "gold_0": 256,
+          "gold_1": 256,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "834f2d992bc1338d6e169463f465f2b256c5d4120075be2a7b3422549440a4cf"
+        }
+      },
+      "exact_group_U_B_W_map_joint_match": true,
+      "all_receipt_pairs_intact": true,
+      "antithetic_partner_factorial_coverage": true
+    },
+    {
+      "seed": 53,
+      "training_n": 128,
+      "selected_group_count": 8,
+      "selected_groups": [
+        {
+          "group_id": "train_observation_04a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_04",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_04b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_04",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_07a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_07",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_07b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_07",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_03a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_03",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_03b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_03",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_06a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_06",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_06b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_06",
+          "offset": 1
+        }
+      ],
+      "full_changing_cells_U_W_map_by_group": {
+        "train_observation_04a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_observation_04b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_07a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_07b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_03a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_03b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_06a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_06b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ]
+      },
+      "arms": {
+        "restricted": {
+          "rows": 128,
+          "unique_case_ids": 128,
+          "gold_0": 64,
+          "gold_1": 64,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "b17ea4b7726019c11d12e45de832dc35f73574daddd0ecc0d8ee88b3d86e592a"
+        },
+        "full": {
+          "rows": 128,
+          "unique_case_ids": 128,
+          "gold_0": 64,
+          "gold_1": 64,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "f02555f182de24d786672b3e7b167cc1a43d832d404880eaf793fb5361be07d0"
+        }
+      },
+      "exact_group_U_B_W_map_joint_match": true,
+      "all_receipt_pairs_intact": true,
+      "antithetic_partner_factorial_coverage": true
+    },
+    {
+      "seed": 53,
+      "training_n": 256,
+      "selected_group_count": 16,
+      "selected_groups": [
+        {
+          "group_id": "train_observation_04a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_04",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_04b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_04",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_07a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_07",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_07b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_07",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_06a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_06",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_06b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_06",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_08a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_08",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_08b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_08",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_03a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_03",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_03b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_03",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_06a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_06",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_06b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_06",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_00a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_00",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_00b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_00",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_07a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_07",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_07b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_07",
+          "offset": 1
+        }
+      ],
+      "full_changing_cells_U_W_map_by_group": {
+        "train_observation_04a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_observation_04b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_07a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_07b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_06a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_observation_06b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_08a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_08b": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_03a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_03b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_06a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_06b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_00a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_00b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_07a": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_07b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "arms": {
+        "restricted": {
+          "rows": 256,
+          "unique_case_ids": 256,
+          "gold_0": 128,
+          "gold_1": 128,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "47963655c9776e583925a025eb5dbd140b53a55b2ddaead91db4546ab2cd7e51"
+        },
+        "full": {
+          "rows": 256,
+          "unique_case_ids": 256,
+          "gold_0": 128,
+          "gold_1": 128,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "2e31cf0adb16aaeff4ede87fd2b11bc35707e8651a7ba0b2c524111ec1253d0c"
+        }
+      },
+      "exact_group_U_B_W_map_joint_match": true,
+      "all_receipt_pairs_intact": true,
+      "antithetic_partner_factorial_coverage": true
+    },
+    {
+      "seed": 53,
+      "training_n": 512,
+      "selected_group_count": 32,
+      "selected_groups": [
+        {
+          "group_id": "train_observation_04a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_04",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_04b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_04",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_07a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_07",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_07b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_07",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_06a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_06",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_06b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_06",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_08a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_08",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_08b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_08",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_02a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_02",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_02b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_02",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_01a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_01",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_01b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_01",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_10a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_10",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_10b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_10",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_03a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_03",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_03b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_03",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_03a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_03",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_03b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_03",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_06a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_06",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_06b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_06",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_00a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_00",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_00b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_00",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_07a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_07",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_07b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_07",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_01a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_01",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_01b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_01",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_11a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_11",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_11b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_11",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_10a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_10",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_10b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_10",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_08a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_08",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_08b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_08",
+          "offset": 1
+        }
+      ],
+      "full_changing_cells_U_W_map_by_group": {
+        "train_observation_04a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_observation_04b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_07a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_07b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_06a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_observation_06b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_08a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_08b": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_02a": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_02b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_01a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_observation_01b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_10a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_10b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_03a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_03b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_03a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_03b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_06a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_06b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_00a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_00b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_07a": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_07b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_01a": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_01b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_11a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_11b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_10a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_10b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_08a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_message_08b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "arms": {
+        "restricted": {
+          "rows": 512,
+          "unique_case_ids": 512,
+          "gold_0": 256,
+          "gold_1": 256,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "b19064a0aa9dbfb7802e601497ed47b1cadec87359613ca5c775d4d3569a33b8"
+        },
+        "full": {
+          "rows": 512,
+          "unique_case_ids": 512,
+          "gold_0": 256,
+          "gold_1": 256,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "350bdb275c6a659584fa20ce767d262de69e5260dc7b0f7b5a0bb132f6272dc5"
+        }
+      },
+      "exact_group_U_B_W_map_joint_match": true,
+      "all_receipt_pairs_intact": true,
+      "antithetic_partner_factorial_coverage": true
+    },
+    {
+      "seed": 71,
+      "training_n": 128,
+      "selected_group_count": 8,
+      "selected_groups": [
+        {
+          "group_id": "train_observation_11a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_11",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_11b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_11",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_02a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_02",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_02b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_02",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_04a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_04",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_04b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_04",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_08a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_08",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_08b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_08",
+          "offset": 1
+        }
+      ],
+      "full_changing_cells_U_W_map_by_group": {
+        "train_observation_11a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_11b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_observation_02a": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_02b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_04a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_04b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_08a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_08b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ]
+      },
+      "arms": {
+        "restricted": {
+          "rows": 128,
+          "unique_case_ids": 128,
+          "gold_0": 64,
+          "gold_1": 64,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "26888a7a3b23bb3aa49c16ac2d3f3becf3e035070201c5da1935b50d98c18a86"
+        },
+        "full": {
+          "rows": 128,
+          "unique_case_ids": 128,
+          "gold_0": 64,
+          "gold_1": 64,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "ed284b73c3e8cb56d85f20d8694c99429b72d67689681282c013fd438983a603"
+        }
+      },
+      "exact_group_U_B_W_map_joint_match": true,
+      "all_receipt_pairs_intact": true,
+      "antithetic_partner_factorial_coverage": true
+    },
+    {
+      "seed": 71,
+      "training_n": 256,
+      "selected_group_count": 16,
+      "selected_groups": [
+        {
+          "group_id": "train_observation_11a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_11",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_11b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_11",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_02a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_02",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_02b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_02",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_05a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_05",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_05b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_05",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_07a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_07",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_07b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_07",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_04a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_04",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_04b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_04",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_08a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_08",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_08b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_08",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_11a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_11",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_11b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_11",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_03a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_03",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_03b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_03",
+          "offset": 1
+        }
+      ],
+      "full_changing_cells_U_W_map_by_group": {
+        "train_observation_11a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_11b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_observation_02a": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_02b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_05a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_05b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_07a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_observation_07b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_04a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_04b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_08a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_08b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_11a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_11b": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_03a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_03b": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ]
+      },
+      "arms": {
+        "restricted": {
+          "rows": 256,
+          "unique_case_ids": 256,
+          "gold_0": 128,
+          "gold_1": 128,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "3f5e7c5ba965c35cc206b7060b678360abdccd472ff65bb18cc485d897ba073d"
+        },
+        "full": {
+          "rows": 256,
+          "unique_case_ids": 256,
+          "gold_0": 128,
+          "gold_1": 128,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "10edff6d23e35cfc6b3d455770a29faa02578c324455d867354cfed6bd39ea78"
+        }
+      },
+      "exact_group_U_B_W_map_joint_match": true,
+      "all_receipt_pairs_intact": true,
+      "antithetic_partner_factorial_coverage": true
+    },
+    {
+      "seed": 71,
+      "training_n": 512,
+      "selected_group_count": 32,
+      "selected_groups": [
+        {
+          "group_id": "train_observation_11a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_11",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_11b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_11",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_02a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_02",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_02b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_02",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_05a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_05",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_05b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_05",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_07a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_07",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_07b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_07",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_09a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_09",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_09b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_09",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_10a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_10",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_10b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_10",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_00a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_00",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_00b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_00",
+          "offset": 1
+        },
+        {
+          "group_id": "train_observation_01a",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_01",
+          "offset": 0
+        },
+        {
+          "group_id": "train_observation_01b",
+          "mechanism": "observation",
+          "pair_id": "train_observation_pair_01",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_04a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_04",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_04b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_04",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_08a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_08",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_08b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_08",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_11a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_11",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_11b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_11",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_03a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_03",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_03b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_03",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_06a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_06",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_06b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_06",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_00a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_00",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_00b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_00",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_07a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_07",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_07b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_07",
+          "offset": 1
+        },
+        {
+          "group_id": "train_message_05a",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_05",
+          "offset": 0
+        },
+        {
+          "group_id": "train_message_05b",
+          "mechanism": "message",
+          "pair_id": "train_message_pair_05",
+          "offset": 1
+        }
+      ],
+      "full_changing_cells_U_W_map_by_group": {
+        "train_observation_11a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_11b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_observation_02a": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_02b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_05a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_05b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_07a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_observation_07b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_09a": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_observation_09b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_10a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_observation_10b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_00a": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_00b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "train_observation_01a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_observation_01b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_04a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_04b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_08a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_08b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_11a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_11b": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_03a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_03b": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_06a": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_06b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_00a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_00b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_07a": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "train_message_07b": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_05a": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "train_message_05b": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ]
+      },
+      "arms": {
+        "restricted": {
+          "rows": 512,
+          "unique_case_ids": 512,
+          "gold_0": 256,
+          "gold_1": 256,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "85413b4eddc1b25b7478d4e3f2ea093072842311947a9f130ed08fb29f78ec34"
+        },
+        "full": {
+          "rows": 512,
+          "unique_case_ids": 512,
+          "gold_0": 256,
+          "gold_1": 256,
+          "sorted_case_ids_utf8_lf_no_trailing_lf_sha256": "2d4ba1deab11bf83ee75aa97e15945f0fbe2bebffe2c11cac963b7d8438be7b6"
+        }
+      },
+      "exact_group_U_B_W_map_joint_match": true,
+      "all_receipt_pairs_intact": true,
+      "antithetic_partner_factorial_coverage": true
+    }
+  ],
+  "all_fifteen_allocations_checked": true,
+  "nested_training_sizes": true,
+  "distinct_group_subsets_across_five_seeds_per_N": true,
+  "interpretation_limit": "Mathematical design checks do not validate narrative semantics, model capabilities, novelty or research outcomes. Finite within-story correlations remain despite pooled balance."
+}

@@ -4,14 +4,27 @@ recursive-include data/examples *.jsonl
 recursive-include data/reader_panel *.json
 recursive-include data/reader_forecast *.json
 recursive-include data/belief_diagnostic *.json
+recursive-include data/belief_main *.json
+recursive-include research/deceptionbench *.json
 recursive-include data/communication *.json
 recursive-include data/mask_specificity *.json *.md
 recursive-include data/annotations *.csv
+include data/annotations/main_study_v1_agent_semantic_20261122.json
+include data/annotations/fresh_readout_v2_blind_agent_answers_v1.json
 recursive-include configs *.json
 recursive-include docs *.md
 recursive-include docs/validation *.json
+recursive-include docs/validation/audit-source-snapshots-2026-11-22 *.txt
+recursive-include docs/validation/audit-source-snapshots-2026-11-23 *.txt
+recursive-include docs/validation/audit-source-snapshots-2026-11-26 *.txt
+recursive-include docs/validation/audit-source-snapshots-2026-11-27 *.txt
+recursive-include docs/results *.json *.png *.svg *.pdf *.csv *.py
+recursive-include docs/results/format-adaptation-2026-11-27/replay *.npz *.gz *.txt
+recursive-include docs/results/lexical-controls-2026-11-27 *.npz *.gz *.zip
+recursive-include docs/review/format_bridge_v1 *.json
+recursive-include docs/review/main_study_v1 *.csv *.json *.jsonl *.html
 recursive-include docs/figures *.png *.svg *.pdf
-recursive-include scripts *.py *.sh
+recursive-include scripts *.py *.sh *.ps1
 recursive-include presentations *.pptx *.pdf *.json
 prune data/raw
 prune data/private

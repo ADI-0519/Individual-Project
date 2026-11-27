@@ -1,0 +1,571 @@
+{
+  "schema": "lexical-control-prerun-independent-review-v1",
+  "status": "pass",
+  "created_at": "2026-11-27T21:22:11.629260+00:00",
+  "reviewer": "parallel repository integration reviewer; also authored lexical fitting engine, whose authoring is not an independent fit audit",
+  "scope": "Independent input/source membership checks and review of runner, scorer, protocol and separate metric auditor before real-bank lexical fitting. No model inference, classifier fitting or scientific outcome scoring.",
+  "human_review_complete": false,
+  "lexical_outcomes_opened": false,
+  "new_language_model_forwards": 0,
+  "real_bank_classifier_fits": 0,
+  "original_preparation_sha256": "d714ce20a2380192cd1e0859b8b251ac7639646d99b7446cab775e56ade960aa",
+  "bank_sha256": "a05737d2b0ceaccbc71588ffdde31e3dfe73a251d3acbacf0dad190c8375aeed",
+  "portable_manifest_sha256": "bb3397fe70031872ce4be10e863bd322f948ed723e83e2e89ddd2fb5697980b3",
+  "reviewed_source_snapshot_sha256": {
+    "scripts/run_format_adaptation_text.py": "a58fde5e7db899af411dff316fcf89054827f6ac6dd1154afba975368768789c",
+    "src/latent_probes/format_adaptation_text_analysis.py": "1041aa750d08cf386c1b2ab8ae5898d44f84b51e435d72a4f5541d58adf1e366",
+    "scripts/audit_format_adaptation_text.py": "250ddc6e81310f09ec49c74c3aad8c85cdee78f90a57b756ecb666328951cb8d",
+    "docs/LEXICAL_CONTROL_PROTOCOL_V1.md": "2ad037e562a18320424f01123800ad8003ff55959680b8246ba6ff6af12964dd",
+    "tests/test_run_format_adaptation_text.py": "b80ab6f000cb0ec2a91cb38e8562a4759e7ad3bc32f3fb96bd6442ad54b542dd"
+  },
+  "original_repository_source_checks": [
+    {
+      "repository_path": "src/latent_probes/format_adaptation_bank.py",
+      "sha256": "6431ceb0904130a9fdf321d399558620d3b653ad040947523e7d364a6c3f6ebb",
+      "status": "pass"
+    },
+    {
+      "repository_path": "src/latent_probes/format_adaptation_capture.py",
+      "sha256": "b423dddba08ca73b8df411855314369ba9f8a742b7a251ae03117617e267d30f",
+      "status": "pass"
+    },
+    {
+      "repository_path": "src/latent_probes/format_adaptation_fit.py",
+      "sha256": "3123300615abbe77288f06c283805157054cfb092284169df5e1731c0c76a770",
+      "status": "pass"
+    },
+    {
+      "repository_path": "src/latent_probes/format_adaptation_analysis.py",
+      "sha256": "f2b10dbecfe5141102ac3b4a177a47e359bb089c3249ddbf6911fd4f60f294ed",
+      "status": "pass"
+    },
+    {
+      "repository_path": "scripts/run_format_adaptation_capture.py",
+      "sha256": "0eb2412ba5bceb71a59fa300db34bb7b035bebac2066aaf72611c07891ed1c6e",
+      "status": "pass"
+    },
+    {
+      "repository_path": "scripts/run_format_adaptation_campaign.py",
+      "sha256": "1b14812403ecff9c5544599355ee7f8add0c29c88c71c0cd520cb9ae623bb524",
+      "status": "pass"
+    },
+    {
+      "repository_path": "scripts/start_fresh_readout_durable.ps1",
+      "sha256": "a5d00c49daa9f898c0037b2a80ff775facc57e2b312000c7bc6c007d57c06ad0",
+      "status": "pass"
+    },
+    {
+      "repository_path": "scripts/fit_format_adaptation.py",
+      "sha256": "bee00778ce0acd75e4ae59852d0c2a7999789098eb9c5da466e552e253c60fee",
+      "status": "pass"
+    },
+    {
+      "repository_path": "scripts/analyse_format_adaptation.py",
+      "sha256": "9088b07b94269004278e9c4b974358c36c7918ea6b3d8a9f359e8dd00ce24d2c",
+      "status": "pass"
+    },
+    {
+      "repository_path": "scripts/audit_format_adaptation.py",
+      "sha256": "2c681a60ecac294333eb08324ec2c66706704704d92b9f200269a6bf21e0ec10",
+      "status": "pass"
+    },
+    {
+      "repository_path": "scripts/report_format_adaptation.py",
+      "sha256": "04557a1dc12a01c1b690111856dcbeafb05fe7c456ff8cfeb4f8da4aa2c85fba",
+      "status": "pass"
+    },
+    {
+      "repository_path": "tests/test_audit_format_adaptation.py",
+      "sha256": "f01b599f6a99d49672bcd42454dc5b5691ddfb34df6dfbc0991bce7d957722d1",
+      "status": "pass"
+    },
+    {
+      "repository_path": "tests/test_format_adaptation_bank.py",
+      "sha256": "6739e7b11247c71f392e0111d9d7dfc00f72e08a94f3f939268874deb89f2076",
+      "status": "pass"
+    },
+    {
+      "repository_path": "tests/test_format_adaptation_capture.py",
+      "sha256": "6a84faddff5a28d07fa6c84e2a74bcaa15438f6feb75dc7a251d43f6b115210c",
+      "status": "pass"
+    },
+    {
+      "repository_path": "tests/test_format_adaptation_fit.py",
+      "sha256": "974001f1f813dba1ab77797d3995585b9e21d129ccd43e07c27bde79c5b1e0c9",
+      "status": "pass"
+    },
+    {
+      "repository_path": "tests/test_format_adaptation_analysis.py",
+      "sha256": "ba2dbc4025104006e022647ba872d0b1dfc1f9621708b928bae5cda6b97923f9",
+      "status": "pass"
+    },
+    {
+      "repository_path": "tests/test_format_adaptation_campaign.py",
+      "sha256": "55706861e3adc71c1798d48de9e2e6e86431fc5f009e558a4cedb78137cb8c2b",
+      "status": "pass"
+    },
+    {
+      "repository_path": "tests/test_format_adaptation_report.py",
+      "sha256": "39ce7ebf89bcf2cab353afa7f89212e70a5556524c2c4363887ba46e555a2d80",
+      "status": "pass"
+    },
+    {
+      "repository_path": "src/latent_probes/fresh_readout_capture.py",
+      "sha256": "5e1cc2195f15973be82b6bd62101a8753f03c61f4667256a40b1a45b9d083292",
+      "status": "pass"
+    },
+    {
+      "repository_path": "src/latent_probes/fresh_readout_bank.py",
+      "sha256": "0765526fd11f6d0d4e44948597340b686dccd46f05d4e21257b5724d6ce66dfb",
+      "status": "pass"
+    },
+    {
+      "repository_path": "src/latent_probes/main_study_bank.py",
+      "sha256": "b5d9aae9105e856bd2eeea061e5098291601074b32d6be0730768d6295c40162",
+      "status": "pass"
+    },
+    {
+      "repository_path": "src/latent_probes/main_study_design.py",
+      "sha256": "0973d047d2e98736c1b9144d2187079a60d87f2280eeca691330ff91135506b9",
+      "status": "pass"
+    },
+    {
+      "repository_path": "src/latent_probes/main_study_run.py",
+      "sha256": "09f219b7aedcb222c0eea05ba1ea9324d28fd298f49a2a45004429d7ede10501",
+      "status": "pass"
+    },
+    {
+      "repository_path": "src/latent_probes/backends.py",
+      "sha256": "692d9778e4bf69081ab1afea702dfd573119f2b6cc454e51072bb3d2233402a2",
+      "status": "pass"
+    },
+    {
+      "repository_path": "src/latent_probes/config.py",
+      "sha256": "0fc63546c88a826bc1e87efeebb51b6a23488272e0d76de8018fdd99543bb608",
+      "status": "pass"
+    },
+    {
+      "repository_path": "src/latent_probes/storage.py",
+      "sha256": "1de87a24cc3bd701c0384d648d405ddb6066280beae3e21bf1b173c203ee0e84",
+      "status": "pass"
+    },
+    {
+      "repository_path": "src/latent_probes/crossed_belief_validation.py",
+      "sha256": "c38ace6dbd71d9a56a61b6fe44fa9268bdef4815e6086211365e9cea8e33d1ad",
+      "status": "pass"
+    },
+    {
+      "repository_path": "docs/FORMAT_ADAPTATION_EXECUTION_PROTOCOL_V1.md",
+      "sha256": "36330a0fd820f84791eca9f06534dde23dcbe9514328e10995250979fe1755e1",
+      "status": "pass"
+    },
+    {
+      "repository_path": "docs/FORMAT_ADAPTATION_PROTOCOL_REVIEW_2026-11-27.md",
+      "sha256": "f693f398af365270f35fb3aab1dc5ae3281f2f9e87bf2f5868cc8d97021530d2",
+      "status": "pass"
+    },
+    {
+      "repository_path": "docs/validation/2026-11-27-format-adaptation-bank-review-v1.json",
+      "sha256": "59af651328d2aa54e64be66d6ed934b7522acc4b9755a628e426c3a084a761b3",
+      "status": "pass"
+    },
+    {
+      "repository_path": "docs/validation/2026-11-27-format-adaptation-capture-review-v1.json",
+      "sha256": "98601638452f091b045c5e4810eab92e0fdf0be48bc9ddc9327ceeaf1a2e8381",
+      "status": "pass"
+    },
+    {
+      "repository_path": "data/belief_main/format_adaptation_v1/compiled_v1/bank.json",
+      "sha256": "a05737d2b0ceaccbc71588ffdde31e3dfe73a251d3acbacf0dad190c8375aeed",
+      "status": "pass"
+    },
+    {
+      "repository_path": "data/belief_main/format_adaptation_v1/agent_review_receipt_v2.json",
+      "sha256": "e591af7c1de20e8beaf3ef556faae9ad5c1e08e4afc0d6cec950be4a3b48078e",
+      "status": "pass"
+    },
+    {
+      "repository_path": "data/belief_main/format_adaptation_v1/compiled_v1/review_packet.json",
+      "sha256": "3adf3a22c5d4dce219498b5e0ad6f915c939b8fbeaf19b0eb4a8ecb0505b3fa0",
+      "status": "pass"
+    },
+    {
+      "repository_path": "data/belief_main/format_adaptation_v1/compiled_v1/review_key.json",
+      "sha256": "e27d82242cdb34eda518ea1a21d692ffba9e83592169a66b16e1885681cc626d",
+      "status": "pass"
+    },
+    {
+      "repository_path": "data/belief_main/format_adaptation_v1/blind_review_answers_v1.json",
+      "sha256": "4eaad489ab019fe8795733291d6b68e0de91f8fa9122d7ce1122f2f9b2fc4753",
+      "status": "pass"
+    },
+    {
+      "repository_path": "data/belief_main/format_adaptation_v1/authored_contexts_v1.json",
+      "sha256": "67530090b800736b1f8320b42fb9b6cf18684899ed02ab61514150439684320f",
+      "status": "pass"
+    },
+    {
+      "repository_path": "data/belief_main/format_adaptation_v1/authoring_receipt_v1.json",
+      "sha256": "34c54d588167fe86eaa214c75e11e931dd5fe50e75901e84a7496dec092408db",
+      "status": "pass"
+    },
+    {
+      "repository_path": "data/belief_main/format_adaptation_v1/compiled_v1/build_receipt.json",
+      "sha256": "13343cbbacc19af7de9a57abb0f5f3a78409d301bbbad716828e592848aa20ff",
+      "status": "pass"
+    }
+  ],
+  "historical_native_source_checks": [
+    {
+      "original_path": "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_launch.sh",
+      "unc_path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_launch.sh",
+      "expected_sha256": "9a354a5a80e08eb890e66ad9b2aa5075bbc16256dad1876c9c05556cd46eab4d",
+      "actual_sha256": "9a354a5a80e08eb890e66ad9b2aa5075bbc16256dad1876c9c05556cd46eab4d",
+      "status": "pass"
+    },
+    {
+      "original_path": "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama/protocol.json",
+      "unc_path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama/protocol.json",
+      "expected_sha256": "fa8a9cb8a16f0872af129e8b65ea79ab39d418139407d66cf8567172b0a5d8ef",
+      "actual_sha256": "fa8a9cb8a16f0872af129e8b65ea79ab39d418139407d66cf8567172b0a5d8ef",
+      "status": "pass"
+    },
+    {
+      "original_path": "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama_fit/settings.json",
+      "unc_path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama_fit/settings.json",
+      "expected_sha256": "6a459648e7bc17bb4526ee6e76c5bd47601a0b06643f3fb6c3d0e9cea8538c45",
+      "actual_sha256": "6a459648e7bc17bb4526ee6e76c5bd47601a0b06643f3fb6c3d0e9cea8538c45",
+      "status": "pass"
+    },
+    {
+      "original_path": "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama_fit/heads.npz",
+      "unc_path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama_fit/heads.npz",
+      "expected_sha256": "9473175eda13e5af4041591b1edb9dc28e49c4ad2056fab281736fb96261e2d7",
+      "actual_sha256": "9473175eda13e5af4041591b1edb9dc28e49c4ad2056fab281736fb96261e2d7",
+      "status": "pass"
+    },
+    {
+      "original_path": "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama_fit/manifest.json",
+      "unc_path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama_fit/manifest.json",
+      "expected_sha256": "65d4ba64470abd3ab1f5c36a88b3ca8d8cb906d1c74cb4c5b0fab7063e80047f",
+      "actual_sha256": "65d4ba64470abd3ab1f5c36a88b3ca8d8cb906d1c74cb4c5b0fab7063e80047f",
+      "status": "pass"
+    },
+    {
+      "original_path": "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama_fit/candidates.json",
+      "unc_path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/llama_fit/candidates.json",
+      "expected_sha256": "d28e4b1f43f3e409b7b64df4d6faba37b58d1c1d44898bb4945c6ab44941c318",
+      "actual_sha256": "d28e4b1f43f3e409b7b64df4d6faba37b58d1c1d44898bb4945c6ab44941c318",
+      "status": "pass"
+    },
+    {
+      "original_path": "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen/protocol.json",
+      "unc_path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen/protocol.json",
+      "expected_sha256": "7cc8eed3ea66b5f2c3be618be7c246a5edb2007eee7d85b4ffc989b727abb05a",
+      "actual_sha256": "7cc8eed3ea66b5f2c3be618be7c246a5edb2007eee7d85b4ffc989b727abb05a",
+      "status": "pass"
+    },
+    {
+      "original_path": "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen_fit/settings.json",
+      "unc_path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen_fit/settings.json",
+      "expected_sha256": "c4d98c5b0fbedc1b965f6faf75067e47c0f1685e28a2cd76122f599b7171ece4",
+      "actual_sha256": "c4d98c5b0fbedc1b965f6faf75067e47c0f1685e28a2cd76122f599b7171ece4",
+      "status": "pass"
+    },
+    {
+      "original_path": "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen_fit/heads.npz",
+      "unc_path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen_fit/heads.npz",
+      "expected_sha256": "c1a818f3074ef6c73121ce9dc4220a628d121a8707a26fb4a691fe4d78115a04",
+      "actual_sha256": "c1a818f3074ef6c73121ce9dc4220a628d121a8707a26fb4a691fe4d78115a04",
+      "status": "pass"
+    },
+    {
+      "original_path": "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen_fit/manifest.json",
+      "unc_path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen_fit/manifest.json",
+      "expected_sha256": "011d43e88988de0953942a85e657ab7f77327d125bd257f0f39d1842ad8fd1fb",
+      "actual_sha256": "011d43e88988de0953942a85e657ab7f77327d125bd257f0f39d1842ad8fd1fb",
+      "status": "pass"
+    },
+    {
+      "original_path": "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen_fit/candidates.json",
+      "unc_path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2/qwen_fit/candidates.json",
+      "expected_sha256": "450b66bfcfe240ad9c5f3d7b4a8cab30c0b36a508b32d97771bafb0331e8fd3e",
+      "actual_sha256": "450b66bfcfe240ad9c5f3d7b4a8cab30c0b36a508b32d97771bafb0331e8fd3e",
+      "status": "pass"
+    }
+  ],
+  "historical_native_summary": {
+    "pass": 11
+  },
+  "original_model_input_checks": {
+    "llama": {
+      "native_fitting_plan_path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/llama/fit_plan.json",
+      "native_fitting_plan_sha256": "fc924839fdf65cdc926b29b39e08640e6bc6cfa927dbdd88fe3d1e42e6f51783",
+      "native_fitting_plan_hash_matches_original_preparation": true,
+      "fitting_rows_compared_in_original_order": 768,
+      "fitting_fields_compared": [
+        "row_id",
+        "group_id",
+        "partition",
+        "split",
+        "renderer",
+        "condition",
+        "state",
+        "gold",
+        "messages_sha256",
+        "mixed_format"
+      ],
+      "test_rows_compared_in_original_order": 4992,
+      "test_fields_compared": [
+        "row_id",
+        "group_id",
+        "partition",
+        "split",
+        "renderer",
+        "condition",
+        "state",
+        "gold",
+        "messages_sha256"
+      ],
+      "portable_test_projection_sha256": "0773d4fd76ef12d406fb1cfd3dfdcb08331b98d27df4ab307f6110c10b36d1fc",
+      "projection_hash_matches_original_replay_manifest": true,
+      "status": "pass"
+    },
+    "qwen": {
+      "native_fitting_plan_path": "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/qwen/fit_plan.json",
+      "native_fitting_plan_sha256": "c7453de3e910899a6a66d731123e936f99c9e0e2bdb48358c0f31e312aaf0653",
+      "native_fitting_plan_hash_matches_original_preparation": true,
+      "fitting_rows_compared_in_original_order": 768,
+      "fitting_fields_compared": [
+        "row_id",
+        "group_id",
+        "partition",
+        "split",
+        "renderer",
+        "condition",
+        "state",
+        "gold",
+        "messages_sha256",
+        "mixed_format"
+      ],
+      "test_rows_compared_in_original_order": 4992,
+      "test_fields_compared": [
+        "row_id",
+        "group_id",
+        "partition",
+        "split",
+        "renderer",
+        "condition",
+        "state",
+        "gold",
+        "messages_sha256"
+      ],
+      "portable_test_projection_sha256": "30dbaf92ad2e9572f70b661711ddbd13bfe8e26cb8441c31db6acc36f2313b00",
+      "projection_hash_matches_original_replay_manifest": true,
+      "status": "pass"
+    }
+  },
+  "fitting_and_test_groups": {
+    "fit_groups": [
+      "adapt_fit_00",
+      "adapt_fit_01",
+      "adapt_fit_02",
+      "adapt_fit_03",
+      "adapt_fit_04",
+      "adapt_fit_05",
+      "adapt_fit_06",
+      "adapt_fit_07",
+      "adapt_fit_08",
+      "adapt_fit_09",
+      "adapt_fit_10",
+      "adapt_fit_11",
+      "adapt_fit_12",
+      "adapt_fit_13",
+      "adapt_fit_14",
+      "adapt_fit_15"
+    ],
+    "test_groups": [
+      "adapt_test_00",
+      "adapt_test_01",
+      "adapt_test_02",
+      "adapt_test_03",
+      "adapt_test_04",
+      "adapt_test_05",
+      "adapt_test_06",
+      "adapt_test_07",
+      "adapt_test_08",
+      "adapt_test_09",
+      "adapt_test_10",
+      "adapt_test_11",
+      "adapt_test_12",
+      "adapt_test_13",
+      "adapt_test_14",
+      "adapt_test_15",
+      "adapt_test_16",
+      "adapt_test_17",
+      "adapt_test_18",
+      "adapt_test_19",
+      "adapt_test_20",
+      "adapt_test_21",
+      "adapt_test_22",
+      "adapt_test_23"
+    ],
+    "disjoint": true,
+    "fit_renderings": 768,
+    "test_renderings": 4992
+  },
+  "arm_allocation_checks": {
+    "A512": {
+      "observations": 512,
+      "index_sha256": "03e26d110d050844c96098b3c9c4bd6c70938b388549f6ee966db86a2556fd1d",
+      "ordered_row_ids_sha256": "eeae939c30e4f45e317c5286ee223be2233d3e60d6b917c9e0cbff2704e049fb",
+      "context_counts": {
+        "adapt_fit_00": 32,
+        "adapt_fit_01": 32,
+        "adapt_fit_02": 32,
+        "adapt_fit_03": 32,
+        "adapt_fit_04": 32,
+        "adapt_fit_05": 32,
+        "adapt_fit_06": 32,
+        "adapt_fit_07": 32,
+        "adapt_fit_08": 32,
+        "adapt_fit_09": 32,
+        "adapt_fit_10": 32,
+        "adapt_fit_11": 32,
+        "adapt_fit_12": 32,
+        "adapt_fit_13": 32,
+        "adapt_fit_14": 32,
+        "adapt_fit_15": 32
+      },
+      "factor_positive_counts": [
+        256,
+        256,
+        256,
+        256
+      ]
+    },
+    "Mixed512": {
+      "observations": 512,
+      "index_sha256": "c159ff7056d2de09f2b43b4281f422146e094aecb965b8490ba245a68cfb7208",
+      "ordered_row_ids_sha256": "95ddfadc62665780c6f937ca4765f30e419bb79b04929ea0aa8ca51652e0fe37",
+      "context_counts": {
+        "adapt_fit_00": 32,
+        "adapt_fit_01": 32,
+        "adapt_fit_02": 32,
+        "adapt_fit_03": 32,
+        "adapt_fit_04": 32,
+        "adapt_fit_05": 32,
+        "adapt_fit_06": 32,
+        "adapt_fit_07": 32,
+        "adapt_fit_08": 32,
+        "adapt_fit_09": 32,
+        "adapt_fit_10": 32,
+        "adapt_fit_11": 32,
+        "adapt_fit_12": 32,
+        "adapt_fit_13": 32,
+        "adapt_fit_14": 32,
+        "adapt_fit_15": 32
+      },
+      "factor_positive_counts": [
+        256,
+        256,
+        256,
+        256
+      ]
+    },
+    "Ahalf256": {
+      "observations": 256,
+      "index_sha256": "2081d5386b74493ac93849a30396630d8a367595a9f90e8de3c8f365d06932f6",
+      "ordered_row_ids_sha256": "821204652623f3442729c099b5a6f235d5438fb05c0601398dac9fec95b76f6a",
+      "context_counts": {
+        "adapt_fit_00": 16,
+        "adapt_fit_01": 16,
+        "adapt_fit_02": 16,
+        "adapt_fit_03": 16,
+        "adapt_fit_04": 16,
+        "adapt_fit_05": 16,
+        "adapt_fit_06": 16,
+        "adapt_fit_07": 16,
+        "adapt_fit_08": 16,
+        "adapt_fit_09": 16,
+        "adapt_fit_10": 16,
+        "adapt_fit_11": 16,
+        "adapt_fit_12": 16,
+        "adapt_fit_13": 16,
+        "adapt_fit_14": 16,
+        "adapt_fit_15": 16
+      },
+      "factor_positive_counts": [
+        128,
+        128,
+        128,
+        128
+      ]
+    },
+    "B_offset": {
+      "observations": 256,
+      "index_sha256": "e4d9c8fe26495037cac4782c7797b3bc2fce832a8efa11e57ac839802dee17f2",
+      "ordered_row_ids_sha256": "9036b8a08ff62d8b257c11dfb22ae4e3f9860905c607f9761991c4f2765e56b5",
+      "context_counts": {
+        "adapt_fit_00": 16,
+        "adapt_fit_01": 16,
+        "adapt_fit_02": 16,
+        "adapt_fit_03": 16,
+        "adapt_fit_04": 16,
+        "adapt_fit_05": 16,
+        "adapt_fit_06": 16,
+        "adapt_fit_07": 16,
+        "adapt_fit_08": 16,
+        "adapt_fit_09": 16,
+        "adapt_fit_10": 16,
+        "adapt_fit_11": 16,
+        "adapt_fit_12": 16,
+        "adapt_fit_13": 16,
+        "adapt_fit_14": 16,
+        "adapt_fit_15": 16
+      },
+      "factor_positive_counts": [
+        128,
+        128,
+        128,
+        128
+      ]
+    }
+  },
+  "preventive_guard_review": {
+    "finding": "Bind compressed original row projections to original completed scientific replay manifest before deserialization.",
+    "resolution": "Implemented by root before real fitting; reviewed and seven runner fixture tests independently passed.",
+    "current_projection_hashes_match": true
+  },
+  "code_review_conclusions": [
+    "Fitting consumes fit-only reconstructed records; classifier score input projects only messages and renderer.",
+    "Both lexical views and all arm artifacts are frozen before test scoring.",
+    "Four-factor fold and factor-only truth scope agree between scorer and independently authored metric auditor.",
+    "All eight condition/format verdict scopes, six correction factor scopes, twenty-four contexts, nuisance controls and two posthoc comparisons are retained.",
+    "No output logits are fabricated, no result is designated a fresh primary, and shared text scores are not counted as independent checkpoint replications.",
+    "Lexical full messages include final output-format instruction; protocol discloses difference from causal queried-location latent prefix.",
+    "No identified numerical or leakage blocker for this bounded, already-exposed-bank diagnostic."
+  ],
+  "validation_commands": [
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_format_adaptation_text.py tests/test_format_adaptation_fit.py -q",
+      "result": "33 passed; synthetic fixtures only; performed during engine implementation"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_run_format_adaptation_text.py -q",
+      "result": "7 passed; independently rerun after manifest guard landed"
+    },
+    {
+      "command": "Read-only inline CPython input/source reconstruction checker",
+      "result": "39 repository and 11 native historical hashes checked; both original fitting plans and test projections match; no fitting or outcomes opened"
+    }
+  ],
+  "limitations": [
+    "Not an independent refit or fitting-feature reconstruction.",
+    "No human semantic certification.",
+    "The 24 test contexts are already exposed; no claim of fresh confirmation.",
+    "Equal C does not equalize text and activation feature geometry.",
+    "Failure of a lexical baseline cannot establish incremental value over a capable neural text baseline."
+  ],
+  "user_dirty_review_prompts_sha256_preserved": "5dcec09a2209e36eda0ce1fc9848aa699701877f3ce179ad539c7a4fe7c4349d"
+}

@@ -21,12 +21,16 @@ env:
   PYTHONHASHSEED: "0"
   PYTHONDONTWRITEBYTECODE: "1"
   UV_NO_PROGRESS: "1"
+  OMP_NUM_THREADS: "4"
+  OPENBLAS_NUM_THREADS: "4"
+  MKL_NUM_THREADS: "4"
+  NUMEXPR_NUM_THREADS: "4"
 
 jobs:
   tests:
     name: Offline tests (${{ matrix.os }}, Python ${{ matrix.python }})
     runs-on: ${{ matrix.os }}
-    timeout-minutes: 20
+    timeout-minutes: 30
     strategy:
       fail-fast: false
       matrix:
@@ -55,11 +59,30 @@ jobs:
         run: uv sync --locked --group dev
       - name: Run offline fixture tests with coverage
         run: uv run --locked python -m pytest tests -m "not model" --cov=latent_probes --cov-report=term-missing --cov-report=xml
+      - name: Replay every audited format-adaptation metric without models
+        run: >-
+          uv run --locked python docs/results/format-adaptation-2026-11-27/replay/replay.py replay
+          --bundle docs/results/format-adaptation-2026-11-27/replay
+          --output format-adaptation-ci-replay.json
+      - name: Independently replay the complete lexical-control diagnostic
+        run: >-
+          uv run --locked python scripts/audit_format_adaptation_text.py
+          --source docs/results/lexical-controls-2026-11-27
+          --output lexical-control-ci-audit
+      - name: Restore saved lexical fits and reproduce every prediction
+        run: >-
+          uv run --locked python scripts/replay_format_adaptation_text.py
+          --report docs/results/lexical-controls-2026-11-27
+          --output lexical-control-ci-fit-replay
       - name: Retain coverage report
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: coverage-${{ matrix.os }}-py${{ matrix.python }}
-          path: coverage.xml
+          path: |
+            coverage.xml
+            format-adaptation-ci-replay.json
+            lexical-control-ci-audit/audit_receipt.json
+            lexical-control-ci-fit-replay/replay_receipt.json
           if-no-files-found: error
           retention-days: 14
 
@@ -89,6 +112,29 @@ jobs:
           --results presentations/progress2/Progress-2-measured-results.json
           --pptx .cache/progress2-check.pptx
           --pdf .cache/progress2-check.pdf
+      - name: Check main-study slide provenance and four-slide layout
+        run: uv run --locked --extra slides python -m pytest tests/test_main_study_progress2.py -q
+      - name: Check format-adaptation slide provenance and four-slide layout
+        run: uv run --locked --extra slides python -m pytest tests/test_format_adaptation_progress2.py -q
+      - name: Rebuild the completed audited format-adaptation update
+        run: >-
+          uv run --locked --extra slides python scripts/build_format_adaptation_progress2.py
+          --summary docs/results/format-adaptation-2026-11-27/summary.json
+          --manifest docs/results/format-adaptation-2026-11-27/manifest.json
+          --audit docs/results/format-adaptation-2026-11-27/audit_receipt.json
+          --output .cache/format-adaptation-progress2-check
+      - name: Rebuild the two-model empirical update from its bound report
+        run: >-
+          uv run --locked --extra slides python scripts/build_main_study_progress2.py
+          --summary docs/results/main-study-2026-11-22-interim/results_summary.json
+          --manifest docs/results/main-study-2026-11-22-interim/report_manifest.json
+          --output-directory .cache/main-study-progress2-check
+      - name: Rebuild the completed empirical update with the shared prose baseline
+        run: >-
+          uv run --locked --extra slides python scripts/build_main_study_progress2.py
+          --summary docs/results/main-study-2026-11-22-complete/results_summary.json
+          --manifest docs/results/main-study-2026-11-22-complete/report_manifest.json
+          --output-directory .cache/main-study-progress2-complete-check
       - name: Retain checked presentation
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
@@ -96,6 +142,9 @@ jobs:
           path: |
             .cache/progress2-check.pptx
             .cache/progress2-check.pdf
+            .cache/main-study-progress2-check/*
+            .cache/main-study-progress2-complete-check/*
+            .cache/format-adaptation-progress2-check/*
           if-no-files-found: error
           retention-days: 14
 
@@ -123,6 +172,10 @@ jobs:
         run: uv run --locked python -m ruff check .
       - name: Check formatting
         run: uv run --locked python -m ruff format --check .
+      - name: Validate main-study input manifests without model loading
+        run: >-
+          uv run --locked python scripts/validate_main_study_materials.py
+          --bank data/belief_main/main_v1/main_bank_v1.json
       - name: Check Bash job script syntax
         shell: bash
         run: |

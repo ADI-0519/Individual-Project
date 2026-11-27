@@ -1,0 +1,12 @@
+{
+  "created_at": "2026-11-27T21:23:57.235481+00:00",
+  "files_sha256": {
+    "rows.json.gz": "073997bcdf59056ac593d057cf17f2ce30030d501e2b909217011030c1b41dc8",
+    "predictions.npz": "d3271b4d48aecc2dd0179aa5bfc57124b32b324d9c14742746201e3ddcab9b85",
+    "summary.json.gz": "c78866ee6bde06b6a6ee256e99bf625dc0ac7796aadb6e2403d1f060d1cdb01b",
+    "metrics.json": "d1c0e6c345a3e38c380d719cffd22344759cfa4c6585bdaed2626f4c05c0ad76"
+  },
+  "preparation_sha256": "b705b5895ffe498c898752d18fd6862d46ef0d06c8082917b4139f36960513b4",
+  "fit_seal_sha256": "1e21c25a7d22d68843e60629c3f2997f649ca10050a56b5ed622fa034d5e489c",
+  "awaits_independent_numerical_audit": true
+}

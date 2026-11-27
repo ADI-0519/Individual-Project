@@ -1,0 +1,83 @@
+"""Failure-case tests for the supplementary auditor; no model calls or fitting."""
+
+import importlib.util
+from copy import deepcopy
+from pathlib import Path
+
+import pytest
+
+from latent_probes.main_study_bank import iter_rows
+
+ROOT = Path(__file__).resolve().parents[1]
+SPEC = importlib.util.spec_from_file_location(
+    "measurement_forensics", ROOT / "scripts/audit_main_study_measurement_forensics.py"
+)
+AUDIT = importlib.util.module_from_spec(SPEC)
+SPEC.loader.exec_module(AUDIT)
+
+
+@pytest.fixture(scope="module")
+def bank_rows():
+    return list(iter_rows(AUDIT.read(ROOT / "data/belief_main/main_v1/main_bank_v1.json")))
+
+
+def correction_group(bank_rows):
+    return [r for r in bank_rows if r["group_id"] == "test_correction_01"]
+
+
+def test_independent_physical_prose_fold_matches_every_bank_row(bank_rows):
+    assert len(bank_rows) == 5888
+    assert all(AUDIT.fold(AUDIT.source_evidence(r["messages"])) == r["gold"] for r in bank_rows)
+
+
+def test_final_question_controls_query_even_with_unchanged_candidate(bank_rows):
+    row = correction_group(bank_rows)[0]
+    messages = deepcopy(row["messages"])
+    evidence = AUDIT.source_evidence(messages)
+    other = evidence["initial_location"]
+    assert other != evidence["queried_location"]
+    before = AUDIT.fold(evidence)
+    prefix, question = messages[-1]["content"].rsplit("At the end of the scene,", 1)
+    messages[-1]["content"] = (
+        prefix + "At the end of the scene," + question.replace(evidence["queried_location"], other)
+    )
+    assert AUDIT.fold(AUDIT.source_evidence(messages)) == 1 - before
+
+
+def test_three_of_four_shortcut_and_nuisance_detector(bank_rows):
+    rows = correction_group(bank_rows)
+    shortcut = {r["case_id"]: 1 if 1 - r["state"]["update"] else -1 for r in rows}
+    scores = AUDIT.metrics(rows, shortcut)
+    assert scores["primary_row_accuracy"] == 0.75
+    assert scores["complete_quartet_accuracy"] == 0
+    assert scores["quartet_correct_histogram"]["3"] == 8
+    world = {r["case_id"]: 1 if r["state"]["world"] else -1 for r in rows}
+    assert (
+        AUDIT.metrics(rows, world)["label_preserving_nuisance_pairs"]["world"][
+            "prediction_flip_fraction"
+        ]
+        == 1
+    )
+
+
+def test_monitor_schema_valid_wrong_query_is_detected(bank_rows):
+    rows = correction_group(bank_rows)
+    records = []
+    for row in rows:
+        extraction = AUDIT.source_evidence(row["messages"])
+        records.append(
+            {
+                "case_id": row["case_id"],
+                "valid": True,
+                "extraction": extraction,
+                "prediction": AUDIT.fold(extraction),
+            }
+        )
+    records[0]["extraction"]["queried_location"] = records[0]["extraction"]["initial_location"]
+    records[0]["prediction"] = AUDIT.fold(records[0]["extraction"])
+    result = AUDIT.monitor_audit(rows, records)
+    assert result["valid_wrong_query_case_ids"] == [records[0]["case_id"]]
+    assert (
+        result["by_mechanism"]["correction"]["component_counts_valid_only"]["all_components_exact"]
+        == 63
+    )

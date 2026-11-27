@@ -1,0 +1,60 @@
+{
+    "schema":  "main-study-independent-review-sample-v1",
+    "bank_sha256":  "e038025571a38a7f2c489e5f8c3bf3b0a3c11a05f9b8c7e89d26292a4e7bfb1d",
+    "status":  "proposed_sample_not_human_review",
+    "selection":  "Minimum SHA256 UTF-8 independent-semantic-review-v1|20261121|split|mechanism|group_id within each split/mechanism stratum",
+    "groups":  [
+                   {
+                       "group_id":  "train_message_07a",
+                       "split":  "train",
+                       "mechanism":  "message",
+                       "rank_sha256":  "0191a929c6deb0e2b4d3f18146f172a5531d790c565dde1707243ff9ee2b3d67",
+                       "representative_prompts":  4
+                   },
+                   {
+                       "group_id":  "train_observation_10a",
+                       "split":  "train",
+                       "mechanism":  "observation",
+                       "rank_sha256":  "1131e35234134772a684e147e9cde7e4cd0ed3c9d23468a27e7d0552d0405f59",
+                       "representative_prompts":  4
+                   },
+                   {
+                       "group_id":  "dev_message_06",
+                       "split":  "development",
+                       "mechanism":  "message",
+                       "rank_sha256":  "1a0c211c1877813a2ae8c8f5a353caa64c86f1ff5b00b77ac1fe58e639fe179b",
+                       "representative_prompts":  4
+                   },
+                   {
+                       "group_id":  "dev_observation_04",
+                       "split":  "development",
+                       "mechanism":  "observation",
+                       "rank_sha256":  "0f040795d1bb354346b3ad14762f2a24832648b513561cf2a724f3ed59617901",
+                       "representative_prompts":  4
+                   },
+                   {
+                       "group_id":  "test_correction_11",
+                       "split":  "test",
+                       "mechanism":  "correction",
+                       "rank_sha256":  "0bfb2c1154ba133e3233cbc4fbe53a1b17ae3fdd3faef6556ad931879a9a1e0d",
+                       "representative_prompts":  8
+                   },
+                   {
+                       "group_id":  "test_message_07",
+                       "split":  "test",
+                       "mechanism":  "message",
+                       "rank_sha256":  "09373d61617a5d99296fe882c059994bb278e70f2e260dc3fa241cd8a3e6ec50",
+                       "representative_prompts":  4
+                   },
+                   {
+                       "group_id":  "test_observation_23",
+                       "split":  "test",
+                       "mechanism":  "observation",
+                       "rank_sha256":  "0257a2dce5c61c36903bb6b706eaa66e50484e2bbc4aeef7300e47e7c4ec83cd",
+                       "representative_prompts":  4
+                   }
+               ],
+    "representative_prompts":  32,
+    "additional_requirement":  "All disputed groups require independent review in addition to this sample",
+    "human_records_created":  0
+}

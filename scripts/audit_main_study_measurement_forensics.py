@@ -1,0 +1,532 @@
+"""After-results measurement diagnostics; no fitting, model calls or policy edits.
+
+This script reads completed frozen outputs and writes a NEW validation artifact.
+Its regex source-text fold is an independent audit of the authored template,
+not a learned prose baseline and not evidence of human semantic review.
+"""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import re
+from collections import Counter, defaultdict
+from pathlib import Path
+
+import numpy as np
+from sklearn.metrics import roc_auc_score
+
+ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_RUN = Path(
+    "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/main_v1_agent_20261122_recovery_v1"
+)
+DEFAULT_FITS = Path(
+    "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/main_v1_agent_20261122_campaign"
+)
+
+
+def read(path):
+    return json.loads(Path(path).read_text(encoding="utf-8"))
+
+
+def sha(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def source_binding(path, logical_root, root_path):
+    path = Path(path).resolve()
+    return {
+        "path": str(path),
+        "root": logical_root,
+        "relative_path": path.relative_to(Path(root_path).resolve()).as_posix(),
+        "sha256": sha(path),
+    }
+
+
+def one(pattern, text):
+    matches = re.findall(pattern, text)
+    assert len(matches) == 1, (pattern, len(matches))
+    return matches[0]
+
+
+def source_evidence(messages):
+    """Read physical evidence only, without symbolic states or row gold."""
+    text = messages[-1]["content"]
+    initial = one(r"jointly inspect the token inside the (.*?)\. They see", text)
+    query = one(r"At the end of the scene,.*?token is in the (.*?)\? Answer only YES or NO\.", text)
+    if "At 09:05 the token is actually in the " in text:
+        updates = [
+            {
+                "location": one(r"At 09:05 the token is actually in the (.*?)\.", text),
+                "accepted_access": "directly observed the complete 09:05 session"
+                in one(r'At 09:07, an access record.*?states: "(.*?)"', text),
+            }
+        ]
+    else:
+        updates = [
+            {
+                "location": one(r'At 09:05,.*?sends exactly: "The token is in the (.*?)\."', text),
+                "accepted_access": "fully read the 09:05 report"
+                in one(r'At 09:07, a reading record.*?states: "(.*?)"', text),
+            }
+        ]
+        if "At 09:10," in text:
+            updates.append(
+                {
+                    "location": one(
+                        r'At 09:10,.*?"Correction: the token is in the (.*?)\. Use this location',
+                        text,
+                    ),
+                    "accepted_access": "fully read the 09:10 replacement report"
+                    in one(r'At 09:12, a second reading record.*?states: "(.*?)"', text),
+                }
+            )
+    return {"initial_location": initial, "updates": updates, "queried_location": query}
+
+
+def fold(extraction):
+    current = extraction["initial_location"]
+    for update in extraction["updates"]:
+        if update["accepted_access"]:
+            current = update["location"]
+    return int(current == extraction["queried_location"])
+
+
+def quartet_ids(rows):
+    """Independently group primary cells; do not call primary_quartets()."""
+    blocks = defaultdict(list)
+    for row in rows:
+        s = row["state"]
+        if row["mechanism"] == "correction" and s["initial"] != 1 - s["update"]:
+            continue
+        blocks[(row["group_id"], s["update"], s["world"], s["name_map"])].append(row["case_id"])
+    assert all(len(ids) == 4 for ids in blocks.values())
+    return list(blocks.values())
+
+
+def metrics(rows, margin_by_id):
+    y = np.array([r["gold"] for r in rows])
+    margins = np.array([margin_by_id[r["case_id"]] for r in rows])
+    pred = margins > 0
+    correct = dict(zip((r["case_id"] for r in rows), pred == y))
+    qs = quartet_ids(rows)
+    hist = Counter(sum(bool(correct[i]) for i in ids) for ids in qs)
+    all_ids = [i for ids in qs for i in ids]
+    primary = set(all_ids)
+    selected = [j for j, r in enumerate(rows) if r["case_id"] in primary]
+    majority = []
+    labels_by_id = {r["case_id"]: r["gold"] for r in rows}
+    for ids in qs:
+        labels = [labels_by_id[i] for i in ids]
+        majority.append(max(sum(labels), 4 - sum(labels)))
+    nuisance = {}
+    for factor in ("world", "name_map"):
+        pairs = defaultdict(list)
+        for row in rows:
+            state = row["state"]
+            pairs[tuple((k, v) for k, v in sorted(state.items()) if k != factor)].append(row)
+        assert all(len(v) == 2 and v[0]["gold"] == v[1]["gold"] for v in pairs.values())
+        nuisance[factor] = {
+            "pairs": len(pairs),
+            "prediction_flip_fraction": float(
+                np.mean(
+                    [
+                        (margin_by_id[a["case_id"]] > 0) != (margin_by_id[b["case_id"]] > 0)
+                        for a, b in pairs.values()
+                    ]
+                )
+            ),
+            "mean_absolute_margin_difference": float(
+                np.mean(
+                    [
+                        abs(margin_by_id[a["case_id"]] - margin_by_id[b["case_id"]])
+                        for a, b in pairs.values()
+                    ]
+                )
+            ),
+        }
+    return {
+        "rows": len(rows),
+        "primary_rows": len(primary),
+        "positive_rows": int(y.sum()),
+        "primary_positive_rows": int(y[selected].sum()),
+        "row_accuracy": float(np.mean(pred == y)),
+        "primary_row_accuracy": float(np.mean(pred[selected] == y[selected])),
+        "auroc_margin_positive_class_1": float(roc_auc_score(y, margins)),
+        "positive_prediction_fraction": float(pred.mean()),
+        "quartets": len(qs),
+        "quartet_correct_histogram": {str(k): hist.get(k, 0) for k in range(5)},
+        "complete_quartet_accuracy": hist.get(4, 0) / len(qs),
+        "quartet_majority_label_counts": dict(Counter(majority)),
+        "absolute_margin_percentiles": np.percentile(
+            abs(margins), [0, 5, 25, 50, 95, 100]
+        ).tolist(),
+        "near_zero_margin_count_1e_6": int((abs(margins) < 1e-6).sum()),
+        "by_name_map_accuracy": {
+            str(v): float(
+                np.mean(
+                    [
+                        (margin_by_id[r["case_id"]] > 0) == r["gold"]
+                        for r in rows
+                        if r["state"]["name_map"] == v
+                    ]
+                )
+            )
+            for v in (0, 1)
+        },
+        "label_preserving_nuisance_pairs": nuisance,
+    }
+
+
+def monitor_audit(rows, records):
+    by_id = {r["case_id"]: r for r in rows}
+    component = defaultdict(Counter)
+    failures = Counter()
+    valid_prediction = {}
+    invalids = []
+    parsed_invalid_folds = Counter()
+    valid_wrong_queries = []
+    errors_by_gold = defaultdict(Counter)
+    for record in records:
+        row = by_id[record["case_id"]]
+        expected = source_evidence(row["messages"])
+        assert fold(expected) == row["gold"]
+        mechanism = row["mechanism"]
+        if not record["valid"]:
+            failures[record["invalid_reason"]] += 1
+            try:
+                extraction = json.loads(record["raw_response"])
+                raw_fold = fold(extraction)
+                parsed_invalid_folds["correct" if raw_fold == row["gold"] else "incorrect"] += 1
+                unexpected = sorted(
+                    {
+                        x
+                        for x in [
+                            extraction["initial_location"],
+                            extraction["queried_location"],
+                            *[u["location"] for u in extraction["updates"]],
+                        ]
+                    }
+                    - {
+                        expected["initial_location"],
+                        expected["queried_location"],
+                        *[u["location"] for u in expected["updates"]],
+                    }
+                )
+            except (ValueError, KeyError, TypeError):
+                unexpected = None
+                parsed_invalid_folds["unparseable"] += 1
+            invalids.append(
+                {
+                    "case_id": record["case_id"],
+                    "mechanism": mechanism,
+                    "gold": row["gold"],
+                    "reason": record["invalid_reason"],
+                    "unexpected_strings": unexpected,
+                }
+            )
+            continue
+        valid_prediction[record["case_id"]] = record["prediction"]
+        got = record["extraction"]
+        counts = component[mechanism]
+        counts["valid_rows"] += 1
+        counts["initial_exact"] += got["initial_location"] == expected["initial_location"]
+        counts["query_exact"] += got["queried_location"] == expected["queried_location"]
+        counts["update_count_exact"] += len(got["updates"]) == len(expected["updates"])
+        counts["ordered_locations_exact"] += [u["location"] for u in got["updates"]] == [
+            u["location"] for u in expected["updates"]
+        ]
+        counts["ordered_access_exact"] += [u["accepted_access"] for u in got["updates"]] == [
+            u["accepted_access"] for u in expected["updates"]
+        ]
+        counts["all_components_exact"] += got == expected
+        counts["final_answer_correct"] += record["prediction"] == row["gold"]
+        counts["correct_with_some_component_error"] += (
+            got != expected and record["prediction"] == row["gold"]
+        )
+        error_class = errors_by_gold[f"{mechanism}_gold{row['gold']}"]
+        error_class["rows"] += 1
+        error_class["wrong_query"] += got["queried_location"] != expected["queried_location"]
+        error_class["wrong_answer"] += record["prediction"] != row["gold"]
+        if got["queried_location"] != expected["queried_location"]:
+            valid_wrong_queries.append(record["case_id"])
+    mechanisms = {}
+    for mechanism in ("observation", "message", "correction"):
+        subset = [r for r in rows if r["mechanism"] == mechanism]
+        if not subset:
+            continue
+        qs = quartet_ids(subset)
+        full_correct = sum(all(valid_prediction.get(i) == by_id[i]["gold"] for i in q) for q in qs)
+        invalid_qs = sum(any(i not in valid_prediction for i in q) for q in qs)
+        mechanisms[mechanism] = {
+            "rows": len(subset),
+            "primary_quartets": len(qs),
+            "correct_quartets": full_correct,
+            "quartets_with_invalid": invalid_qs,
+            "upper_bound_if_all_invalid_rows_correct": (
+                full_correct
+                + sum(
+                    any(i not in valid_prediction for i in q)
+                    and all(
+                        valid_prediction.get(i) == by_id[i]["gold"]
+                        for i in q
+                        if i in valid_prediction
+                    )
+                    for q in qs
+                )
+            )
+            / len(qs),
+            "component_counts_valid_only": dict(component[mechanism]),
+        }
+    return {
+        "invalid_reasons": dict(failures),
+        "invalid_groups": dict(Counter(x["case_id"].split("__")[0] for x in invalids)),
+        "invalid_details": invalids,
+        "raw_json_fold_of_invalids_diagnostic_only_not_semantic_rescue": dict(parsed_invalid_folds),
+        "valid_wrong_query_case_ids": valid_wrong_queries,
+        "by_mechanism": mechanisms,
+        "valid_errors_by_mechanism_and_gold": {k: dict(v) for k, v in errors_by_gold.items()},
+    }
+
+
+def fit_sources(settings, bank_by_id, test_ids):
+    issues = []
+    selected_cs = Counter()
+    slopes = []
+    dev_ids = {i for i, row in bank_by_id.items() if row["split"] == "development"}
+    for comp in settings["comparisons"]:
+        if set(comp["development_ids"]) != dev_ids:
+            issues.append("development_inventory")
+        if set(comp["development_ids"]) & test_ids:
+            issues.append("development_test_overlap")
+        chosen = min(
+            (c["mean_loss"], c["C"]) for c in comp["candidates"] if not c["excluded_arms"]
+        )[1]
+        if comp["selected_C"] != chosen:
+            issues.append("C_selection")
+        selected_cs[str(comp["selected_C"])] += 1
+        for arm, meta in comp["arms"].items():
+            ids = meta["training_ids"]
+            if len(ids) != comp["training_n"] or len(set(ids)) != len(ids):
+                issues.append("training_count")
+            if set(ids) & test_ids or any(
+                bank_by_id[i]["split"] != "train" or bank_by_id[i]["mechanism"] == "correction"
+                for i in ids
+            ):
+                issues.append("training_source")
+            cal = meta["calibration"]
+            if set(cal["source_ids"]) != dev_ids or cal["slope"] < 0:
+                issues.append("calibration_source_or_orientation")
+            slopes.append(cal["slope"])
+    output = settings["output_calibration"]
+    if set(output["source_ids"]) != dev_ids or output["slope"] < 0:
+        issues.append("output_calibration")
+    return {
+        "issues": issues,
+        "comparisons": len(settings["comparisons"]),
+        "development_rows": len(dev_ids),
+        "selected_C_inventory": dict(selected_cs),
+        "head_calibration_slope_range": [min(slopes), max(slopes)],
+        "zero_slope_heads": sum(v == 0 for v in slopes),
+        "output_calibration_slope": output["slope"],
+        "output_calibration_intercept": output["intercept"],
+    }
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--run", type=Path, default=DEFAULT_RUN)
+    parser.add_argument("--fits", type=Path, default=DEFAULT_FITS)
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=ROOT / "docs/validation/2026-11-22-main-study-measurement-forensics-v2.json",
+    )
+    args = parser.parse_args()
+    if args.output.exists():
+        raise FileExistsError("Audit refuses to overwrite an existing artifact")
+    from latent_probes.main_study_bank import iter_rows
+
+    bank_path = ROOT / "data/belief_main/main_v1/main_bank_v1.json"
+    workspace_sources = {
+        "bank": bank_path,
+        "audit_code": Path(__file__),
+        "audit_tests": ROOT / "tests/test_main_study_measurement_forensics.py",
+        "historical_measurement_report": ROOT
+        / "docs/validation/2026-11-22-main-study-measurement-forensics.json",
+        "historical_measurement_doc": ROOT / "docs/MAIN_STUDY_MEASUREMENT_FORENSICS_2026-11-22.md",
+        "historical_source_snapshot_index": ROOT
+        / "docs/validation/audit-source-snapshots-2026-11-22/index.json",
+    }
+    sources = {
+        key: source_binding(path, "workspace", ROOT) for key, path in workspace_sources.items()
+    }
+    for model in ("llama", "qwen"):
+        sources[f"{model}_analysis"] = source_binding(
+            args.run / f"{model}_analysis_with_monitor.json", "run", args.run
+        )
+        sources[f"{model}_capture_rows"] = source_binding(
+            args.run / f"{model}_test/rows.json", "run", args.run
+        )
+        sources[f"{model}_fit_settings"] = source_binding(
+            args.fits / f"{model}_fit/settings.json", "fits", args.fits
+        )
+    sources["monitor_records"] = source_binding(
+        args.run / "monitor_test/records.json", "run", args.run
+    )
+    bank = read(bank_path)
+    bank_rows = list(iter_rows(bank))
+    bank_by_id = {r["case_id"]: r for r in bank_rows}
+    mismatches = [
+        r["case_id"] for r in bank_rows if fold(source_evidence(r["messages"])) != r["gold"]
+    ]
+    assert not mismatches
+    result = {
+        "schema": "main-study-measurement-forensics-v2",
+        "audit_version": 2,
+        "version_note": "Formatting/provenance refresh; historical v1 bytes and reports retained via source snapshots.",
+        "status": "after_results_exploratory_audit",
+        "human_review_complete": False,
+        "models_run": 0,
+        "heads_fitted": 0,
+        "policy_changed": False,
+        "bank_rows_independently_parsed": len(bank_rows),
+        "prose_fold_gold_mismatches": mismatches,
+        "source_hashes": {"bank": sha(bank_path), "audit_script": sha(__file__)},
+        "source_files": sources,
+        "models": {},
+    }
+    rows = read(args.run / "llama_test/rows.json")["rows"]
+    test_ids = {r["case_id"] for r in rows}
+    correction = [r for r in rows if r["mechanism"] == "correction"]
+    synthetic = {
+        "always_final_update": {
+            r["case_id"]: 1 if 1 - r["state"]["update"] else -1 for r in correction
+        },
+        "perfect_source_prose_fold": {
+            r["case_id"]: 1 if fold(source_evidence(r["messages"])) else -1 for r in correction
+        },
+    }
+    result["geometry_controls"] = {
+        name: metrics(correction, scores) for name, scores in synthetic.items()
+    }
+    for model in ("llama", "qwen"):
+        analysis_path = args.run / f"{model}_analysis_with_monitor.json"
+        analysis = read(analysis_path)
+        settings = read(args.fits / f"{model}_fit/settings.json")
+        result["source_hashes"][f"{model}_analysis"] = sha(analysis_path)
+        captured_rows = read(args.run / f"{model}_test/rows.json")["rows"]
+        assert {r["case_id"] for r in captured_rows} == test_ids
+        assert all(
+            r["messages"] == bank_by_id[r["case_id"]]["messages"]
+            and r["gold"] == bank_by_id[r["case_id"]]["gold"]
+            for r in captured_rows
+        )
+        output_margin = {r["case_id"]: r["output_yes_no_logitdiff"] for r in captured_rows}
+        primary = analysis["primary"]
+        differences = np.array([g["difference"] for g in primary["by_group"]])
+        output = {
+            "source_audit": fit_sources(settings, bank_by_id, test_ids),
+            "primary_saved": {
+                k: primary[k]
+                for k in ("restricted", "full", "full_minus_restricted", "percentile_95_interval")
+            },
+            "nonzero_group_differences": int(np.count_nonzero(differences)),
+            "negative_zero_positive_group_differences": [
+                int((differences < 0).sum()),
+                int((differences == 0).sum()),
+                int((differences > 0).sum()),
+            ],
+            "leave_one_group_out_difference_range": [
+                float(((differences.sum() - differences) / (len(differences) - 1)).min()),
+                float(((differences.sum() - differences) / (len(differences) - 1)).max()),
+            ],
+            "n512": [],
+        }
+        for mechanism in ("observation", "message", "correction"):
+            subset = [r for r in rows if r["mechanism"] == mechanism]
+            output.setdefault("output_raw", {})[mechanism] = metrics(subset, output_margin)
+        for comp in analysis["comparisons"]:
+            if comp["feature_kind"] != "activation" or comp["training_n"] != 512:
+                continue
+            for arm in ("restricted", "full"):
+                margins = {v["case_id"]: v["margin"] for v in comp["arms"][arm]["scores"]}
+                output["n512"].append(
+                    {
+                        "seed": comp["allocation_seed"],
+                        "arm": arm,
+                        "by_mechanism": {
+                            mechanism: metrics(
+                                [r for r in rows if r["mechanism"] == mechanism], margins
+                            )
+                            for mechanism in ("observation", "message", "correction")
+                        },
+                    }
+                )
+        result["models"][model] = output
+    monitor_path = args.run / "monitor_test/records.json"
+    records = read(monitor_path)["records"]
+    result["source_hashes"]["monitor_records"] = sha(monitor_path)
+    result["monitor"] = monitor_audit(rows, records)
+    # Both vectors below use the Qwen tokenizer. The monitor is a hybrid
+    # instructed generation plus externally supplied fold, not a fair compute
+    # match to zero-answer-token activation/output readouts.
+    qwen_rows = {r["case_id"]: r for r in captured_rows}
+    result["input_token_comparison_same_qwen_tokenizer"] = {
+        mechanism: {
+            "original_prompt_percentiles_min_median_max": np.percentile(
+                [
+                    len(qwen_rows[r["case_id"]]["prompt_token_ids"])
+                    for r in records
+                    if bank_by_id[r["case_id"]]["mechanism"] == mechanism
+                ],
+                [0, 50, 100],
+            ).tolist(),
+            "monitor_prompt_percentiles_min_median_max": np.percentile(
+                [
+                    len(r["prompt_token_ids"])
+                    for r in records
+                    if bank_by_id[r["case_id"]]["mechanism"] == mechanism
+                ],
+                [0, 50, 100],
+            ).tolist(),
+        }
+        for mechanism in ("observation", "message", "correction")
+    }
+    # This is a counterexample to guaranteed percentile coverage, not a model
+    # of these groups and not an estimated CI coverage rate for this study.
+    result["bootstrap_coverage_counterexample"] = {
+        "groups": 30,
+        "generator": "iid Bernoulli(p=.01) group differences; true mean=.01",
+        "probability_all_zero_and_degenerate_percentile_interval": 0.99**30,
+        "maximum_possible_unconditional_coverage": 1 - 0.99**30,
+        "interpretation": "Nominal 95% percentile coverage is not guaranteed for sparse bounded group differences; no actual-study coverage estimate.",
+    }
+    if any(sha(info["path"]) != info["sha256"] for info in sources.values()):
+        raise ValueError("Source or audit code changed during audit")
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    with args.output.open("x", encoding="utf-8", newline="\n") as stream:
+        json.dump(result, stream, indent=2, ensure_ascii=True, allow_nan=False)
+        stream.write("\n")
+    print(
+        json.dumps(
+            {
+                "output": str(args.output),
+                "parsed_bank_rows": len(bank_rows),
+                "mismatches": len(mismatches),
+                "source_issues": {
+                    k: v["source_audit"]["issues"] for k, v in result["models"].items()
+                },
+                "monitor_components": {
+                    k: v["component_counts_valid_only"]
+                    for k, v in result["monitor"]["by_mechanism"].items()
+                },
+            },
+            indent=2,
+        )
+    )
+
+
+if __name__ == "__main__":
+    main()

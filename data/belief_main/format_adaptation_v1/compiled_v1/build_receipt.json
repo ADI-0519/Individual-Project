@@ -1,0 +1,19 @@
+{
+  "schema": "format-adaptation-input-build-v1",
+  "created_at": "2026-11-27T00:56:10.011727+00:00",
+  "human_review_complete": false,
+  "model_observations": 0,
+  "authored_sha256": "67530090b800736b1f8320b42fb9b6cf18684899ed02ab61514150439684320f",
+  "source_sha256": {
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\scripts\\build_format_adaptation_bank.py": "73107e09111a9da7a2cd5a51038524e233f894ebd281e8b39bea7e316b5d24ac",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\src\\latent_probes\\format_adaptation_bank.py": "69648709d87128000b6727c39706110e4f15109e222b877d174af205e8e420a0"
+  },
+  "ordered_prompt_sha256": "59570f7118c8719b6e951481d4a82531405c0388eb14351fccaf768c8450c96d",
+  "review_items": 118,
+  "output_sha256": {
+    "allocation_audit.json": "405fba0555f8fcb6be452dec98de33cd06673400fb09653bf6d0ec452c701239",
+    "bank.json": "a05737d2b0ceaccbc71588ffdde31e3dfe73a251d3acbacf0dad190c8375aeed",
+    "review_key.json": "e27d82242cdb34eda518ea1a21d692ffba9e83592169a66b16e1885681cc626d",
+    "review_packet.json": "3adf3a22c5d4dce219498b5e0ad6f915c939b8fbeaf19b0eb4a8ecb0505b3fa0"
+  }
+}

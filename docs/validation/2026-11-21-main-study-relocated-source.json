@@ -1,0 +1,23 @@
+{
+  "schema": "main-study-relocated-source-audit-v1",
+  "archive_sha256": "ec41c4972dc13223bd896e9f4b5a3b313dd12856b7198ea0faead111249f5ff1",
+  "isolated_python": 1,
+  "imported_module": ".cache\\main-study-relocated-source-20261121-v2\\kcl_latent_probes-0.1.0\\src\\latent_probes\\main_study_materials.py",
+  "loaded_original_project_modules": false,
+  "main_materials": {
+    "schema": "main-study-materials-audit-v1",
+    "bank_sha256": "e038025571a38a7f2c489e5f8c3bf3b0a3c11a05f9b8c7e89d26292a4e7bfb1d",
+    "source_fragments_reconstructed": 2,
+    "groups": 154,
+    "prefixes": 5888,
+    "allocations": 15,
+    "human_review_complete": false,
+    "main_study_model_calls": 0,
+    "prepared_inputs": []
+  },
+  "review_worksheet_present": true,
+  "runbook_present": true,
+  "model_calls": 0,
+  "fits": 0,
+  "human_review_complete": false
+}

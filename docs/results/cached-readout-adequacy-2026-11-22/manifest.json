@@ -1,0 +1,19 @@
+{
+  "schema": "cached-readout-adequacy-export-v1",
+  "research_status": "posthoc_exposed_bank_group_crossfit",
+  "source_sha256": {
+    "/home/adirj/kcl-latent-probes-runs/readout_adequacy_cf_v1_20261122/completed_manifest.json": "35d4ce616c456694ec9794f133c9116979bb65d61f91c260347d94c88fc424d1",
+    "/home/adirj/kcl-latent-probes-runs/readout_adequacy_cf_v1_20261122/prepared_manifest.json": "ee6cde0a588013d09eb703ac2fe0db3f1dab6db6c14b55b83bc48585665b5764",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/docs/validation/2026-11-22-cached-readout-adequacy-independent.json": "7def38061c54c627526c227f377381bcbf2d78fafeaaae70dae4f20376383b42",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/report_cached_readout_adequacy.py": "91646ef031d413838212b2c93e08c11c1b63c1917459240d692061c98aa1ed84",
+    "/home/adirj/kcl-latent-probes-runs/readout_adequacy_cf_v1_20261122/llama/oof_results.json": "4b597a0395e3f98b6037ebe9be767b91ddad9377553de1897e6dd6ea94fa2d88",
+    "/home/adirj/kcl-latent-probes-runs/readout_adequacy_cf_v1_20261122/qwen/oof_results.json": "4725df0fa9789af77b54671b56608b57588e01342c810f33f2365c536401f5a8"
+  },
+  "output_sha256": {
+    "readout_adequacy.pdf": "878816e4418d2ff2a2bf9f93d6c365c5927c2d217fcc247a67a6b02f00fa5129",
+    "readout_adequacy.png": "c4e13e5db215668c2e63130411a51302ccaf0d69f39a0e0de90d03a57717ad97",
+    "readout_adequacy.svg": "e07dc06e7dd759a52b81ce762c9590a839b1041163209af176261b67f0ca14b1",
+    "results.md": "fa2b220ec9328991cfc694c8f515acbc4f5a62afe6d9b07c8ee6f7310994591a",
+    "summary.json": "a453c96b654cd44c1b01a80b269e32875de2ea8472b493ffa007c0eaa9dc9881"
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "schema": "fresh-readout-full-tokenizer-span-audit-v2",
+  "status": "passed",
+  "created_at": "2026-11-22T21:43:10.628863+00:00",
+  "model_weights_loaded": false,
+  "model_forwards": 0,
+  "source_file_sha256": {
+    "src/latent_probes/fresh_readout_capture.py": "ea39cb202f3a5bb426c280b348c089c832e6d7ab7cd7b50c0d16a6b61038f57f",
+    "src/latent_probes/fresh_readout_bank.py": "0765526fd11f6d0d4e44948597340b686dccd46f05d4e21257b5724d6ce66dfb",
+    "src/latent_probes/main_study_bank.py": "b5d9aae9105e856bd2eeea061e5098291601074b32d6be0730768d6295c40162",
+    "src/latent_probes/main_study_design.py": "0973d047d2e98736c1b9144d2187079a60d87f2280eeca691330ff91135506b9"
+  },
+  "bank_file_sha256": "bb277ba4efa6e090879405e472a8cb70a973b3ab53cfe340ede56c61cfa98e35",
+  "engineering_row_sha256": "0605b428bc9bdbfa5075a812793bec41d308cfd79e86c3a2490d12ae1ed9a15d",
+  "bank_sha256": "d32a451bf629e17f26714435f9dfaf2264122b5d42b9db2ce390d2064521a177",
+  "ordered_row_ids_sha256": "986d076ed800ee3066e541f88d33eebfd4148b7a33c3160becea9a2d0e40cb51",
+  "finished_at": "2026-11-22T21:43:33.008183+00:00",
+  "prefixes_checked": 14080,
+  "all_exact_prefix_ids_equal": true,
+  "all_spans_and_selected_token_ids_checked": true,
+  "native_audit_path": "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_token_spans_20261122/audit.json",
+  "native_audit_sha256": "01f0c059c7e50a2edf89f2199534a8fba6f91daf053d3c70ac115319f88bc176",
+  "environment": {
+    "python": "3.11.17",
+    "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "packages": {
+      "numpy": "2.4.6",
+      "scikit-learn": "1.9.1",
+      "torch": "2.14.1+cu130",
+      "transformers": "4.57.6",
+      "tokenizers": "0.22.2",
+      "huggingface-hub": "0.36.2",
+      "accelerate": "1.16.0",
+      "bitsandbytes": "0.50.2",
+      "safetensors": "0.8.0"
+    },
+    "git_commit": "60a02f2a47e83dd7eb853ceb7aa8040cf3227822",
+    "code_sha256": "29558c501a7cd8e574488cd8a708f86e4f5b37dc7a26386f22719a4bddd244c4"
+  },
+  "models": {
+    "llama": {
+      "model_id": "meta-llama/Llama-3.1-8B-Instruct",
+      "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+      "blocks": [
+        8,
+        16,
+        24,
+        30
+      ],
+      "decoder_blocks": 32,
+      "rows": 7040,
+      "partitions": {
+        "source_fit": 512,
+        "source_dev": 512,
+        "correction_fit": 512,
+        "correction_dev": 512,
+        "test": 4992
+      },
+      "strata": {
+        "correction_dev|correction_easy|A": 256,
+        "correction_dev|correction_hard|A": 256,
+        "correction_fit|correction_easy|A": 256,
+        "correction_fit|correction_hard|A": 256,
+        "source_dev|source_message|A": 256,
+        "source_dev|source_observation|A": 256,
+        "source_fit|source_message|A": 256,
+        "source_fit|source_observation|A": 256,
+        "test|asserted|A": 192,
+        "test|asserted|B": 192,
+        "test|correction_easy|A": 768,
+        "test|correction_easy|B": 768,
+        "test|correction_hard|A": 768,
+        "test|correction_hard|B": 768,
+        "test|one_step|A": 768,
+        "test|one_step|B": 768
+      },
+      "minimum_tokens": 359,
+      "maximum_tokens": 789,
+      "selected_position_ranges": {
+        "account_last": {
+          "minimum": 319,
+          "maximum": 742
+        },
+        "query_location_last": {
+          "minimum": 346,
+          "maximum": 776
+        },
+        "prompt_last": {
+          "minimum": 358,
+          "maximum": 788
+        }
+      },
+      "ordered_prefix_and_token_identities_sha256": "c97caff5172a286ba9ccea52651453db024a2ea4e5037fb420700c768fb7e370",
+      "detail_path": "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_token_spans_20261122/llama_prefix_token_identities.jsonl",
+      "detail_sha256": "24d6d6ad1172095511199d9dee3f17f4667f791c1ff5eed91736f963e05242d9",
+      "excluded_engineering_row": {
+        "record_id": "fresh_engineering_excluded_v2__correction_hard_A__i0_u1_b0_b11_w1_map0",
+        "token_positions": {
+          "account_last": 630,
+          "query_location_last": 657,
+          "prompt_last": 669
+        },
+        "prompt_token_ids_sha256": "c039ee12ffbabf6a7839ecf944558ea01a78658d2efa9e249bd5def233bd2924"
+      }
+    },
+    "qwen": {
+      "model_id": "Qwen/Qwen2.5-7B-Instruct",
+      "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+      "blocks": [
+        7,
+        14,
+        21,
+        26
+      ],
+      "decoder_blocks": 28,
+      "rows": 7040,
+      "partitions": {
+        "source_fit": 512,
+        "source_dev": 512,
+        "correction_fit": 512,
+        "correction_dev": 512,
+        "test": 4992
+      },
+      "strata": {
+        "correction_dev|correction_easy|A": 256,
+        "correction_dev|correction_hard|A": 256,
+        "correction_fit|correction_easy|A": 256,
+        "correction_fit|correction_hard|A": 256,
+        "source_dev|source_message|A": 256,
+        "source_dev|source_observation|A": 256,
+        "source_fit|source_message|A": 256,
+        "source_fit|source_observation|A": 256,
+        "test|asserted|A": 192,
+        "test|asserted|B": 192,
+        "test|correction_easy|A": 768,
+        "test|correction_easy|B": 768,
+        "test|correction_hard|A": 768,
+        "test|correction_hard|B": 768,
+        "test|one_step|A": 768,
+        "test|one_step|B": 768
+      },
+      "minimum_tokens": 345,
+      "maximum_tokens": 787,
+      "selected_position_ranges": {
+        "account_last": {
+          "minimum": 303,
+          "maximum": 740
+        },
+        "query_location_last": {
+          "minimum": 332,
+          "maximum": 774
+        },
+        "prompt_last": {
+          "minimum": 344,
+          "maximum": 786
+        }
+      },
+      "ordered_prefix_and_token_identities_sha256": "68a2281128f4009dc4da42452b241f9db0726a153f18a7f3c2f6dd40194443bf",
+      "detail_path": "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_token_spans_20261122/qwen_prefix_token_identities.jsonl",
+      "detail_sha256": "d550b5d5de6ea77f163f04996f6b70f89304021e8d014a1d89da78bd8a818ae2",
+      "excluded_engineering_row": {
+        "record_id": "fresh_engineering_excluded_v2__correction_hard_A__i0_u1_b0_b11_w1_map0",
+        "token_positions": {
+          "account_last": 628,
+          "query_location_last": 655,
+          "prompt_last": 667
+        },
+        "prompt_token_ids_sha256": "3ac9c090d13771682705166a0cf019e93df966f4c955f920d87e7271feec6a1e"
+      }
+    }
+  }
+}

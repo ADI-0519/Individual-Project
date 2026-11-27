@@ -1,0 +1,547 @@
+{
+  "schema_version": 1,
+  "status": "draft_unreviewed",
+  "authoring_notes": "Agent-authored test contextual framings for the prespecified three-mechanism study. These are not 90 independent reasoning families. Common state rules and access evidence are supplied exclusively by the renderer. Every narrative and its transformations require human semantic review before research execution.",
+  "groups": [
+    {
+      "group_id": "test_observation_01", "split": "test", "mechanism": "observation", "wording_group": "test_obs_curatorial_intake",
+      "sender": "Graciela", "reader": "Bastien", "locations": ["cobalt accession chest", "ochre specimen caddy"],
+      "introduction": "{sender} is documenting an intake rehearsal at a local museum. {reader} is the registrar for the exercise, and a single token stands in for the accession package whose location they track.",
+      "event_description": "A collection assistant stages a camera inspection of the token as part of testing the museum's intake procedure."
+    },
+    {
+      "group_id": "test_observation_02", "split": "test", "mechanism": "observation", "wording_group": "test_obs_harbor_manifest",
+      "sender": "Marisol", "reader": "Nikolai", "locations": ["teal manifest locker", "ivory dispatch bin"],
+      "introduction": "During a harbor paperwork drill, {sender} coordinates the dispatch desk and {reader} keeps the manifest. Their shared task is to track a token representing a consignment docket.",
+      "event_description": "The dispatch team records a visual token check while rehearsing its procedure for reorganizing paperwork."
+    },
+    {
+      "group_id": "test_observation_03", "split": "test", "mechanism": "observation", "wording_group": "test_obs_botanical_inventory",
+      "sender": "Elowen", "reader": "Kazuo", "locations": ["jade catalogue drawer", "umber propagation case"],
+      "introduction": "{sender} and {reader} are carrying out a botanical garden inventory simulation. A token substitutes for the tag attached to a specimen that has yet to enter the real collection.",
+      "event_description": "A technician arranges a photographed inspection station for the inventory token during the simulation."
+    },
+    {
+      "group_id": "test_observation_04", "split": "test", "mechanism": "observation", "wording_group": "test_obs_cinema_rehearsal",
+      "sender": "Safiya", "reader": "Teodoro", "locations": ["violet projection coffer", "silver ticket cassette"],
+      "introduction": "An independent cinema is rehearsing its festival handover. {sender} handles operations and {reader} handles admissions; a token represents the spare screening pass they must be able to locate.",
+      "event_description": "A rehearsal camera captures a check of the token for the cinema's handover log."
+    },
+    {
+      "group_id": "test_observation_05", "split": "test", "mechanism": "observation", "wording_group": "test_obs_bakery_dispatch",
+      "sender": "Ysabel", "reader": "Ossian", "locations": ["cream order tin", "scarlet pickup box"],
+      "introduction": "{sender} supervises a bakery dispatch exercise while {reader} assembles the order sheet. Instead of moving food, the exercise uses a token representing a collection voucher.",
+      "event_description": "The bakery's training assistant films an inspection of the token during the mock dispatch sequence."
+    },
+    {
+      "group_id": "test_observation_06", "split": "test", "mechanism": "observation", "wording_group": "test_obs_radio_handover",
+      "sender": "Amadou", "reader": "Leontine", "locations": ["bronze broadcast trunk", "indigo script compartment"],
+      "introduction": "A community radio station is practicing a shift handover. {sender} is the producer and {reader} is the incoming coordinator; the token represents a removable schedule card.",
+      "event_description": "The station prepares a recorded visual check of the token as one part of the handover rehearsal."
+    },
+    {
+      "group_id": "test_observation_07", "split": "test", "mechanism": "observation", "wording_group": "test_obs_polar_stores",
+      "sender": "Sigrun", "reader": "Iskandar", "locations": ["vermillion stores cabinet", "pearl logistics crate"],
+      "introduction": "In a polar research station's supply simulation, {sender} plans stores and {reader} prepares requests. A token stands for a noncritical equipment tag, so the exercise involves no live safety decisions.",
+      "event_description": "The station's stores assistant runs a camera inspection of the token while testing the visual inventory channel."
+    },
+    {
+      "group_id": "test_observation_08", "split": "test", "mechanism": "observation", "wording_group": "test_obs_glass_catalogue",
+      "sender": "Fabienne", "reader": "Tenzin", "locations": ["turquoise pattern chest", "maroon annealing caddy"],
+      "introduction": "{sender} administers a glass studio's sample catalogue and {reader} prepares the display list. Their training task uses an ordinary token instead of a fragile glass sample.",
+      "event_description": "A studio assistant documents the token with a fixed camera during a sample-handling demonstration."
+    },
+    {
+      "group_id": "test_observation_09", "split": "test", "mechanism": "observation", "wording_group": "test_obs_archery_signup",
+      "sender": "Damaris", "reader": "Hiroto", "locations": ["saffron entry locker", "graphite scoring tin"],
+      "introduction": "An archery club is rehearsing registration rather than running a competition. {sender} manages entries, {reader} manages the roster, and the token stands for a spare registration badge.",
+      "event_description": "The club makes a camera record of a token inspection for its registration practice session."
+    },
+    {
+      "group_id": "test_observation_10", "split": "test", "mechanism": "observation", "wording_group": "test_obs_flood_tabletop",
+      "sender": "Zuleika", "reader": "Eirik", "locations": ["azure planning box", "copper exercise drawer"],
+      "introduction": "{sender} and {reader} support a tabletop flood-response exercise using fictional supplies. Their token represents a paper exercise marker, not an item needed in an actual emergency.",
+      "event_description": "An exercise facilitator arranges a visual inspection of the marker token for the tabletop record."
+    },
+    {
+      "group_id": "test_observation_11", "split": "test", "mechanism": "observation", "wording_group": "test_obs_observatory_signup",
+      "sender": "Celestine", "reader": "Varun", "locations": ["plum reservation case", "sandstone viewing bin"],
+      "introduction": "A public observatory is testing how it tracks a visitor allocation. {sender} coordinates the test and {reader} maintains the booking sheet; the allocation is represented by a token.",
+      "event_description": "The observatory's visitor-services assistant conducts a photographed token check for the booking exercise."
+    },
+    {
+      "group_id": "test_observation_12", "split": "test", "mechanism": "observation", "wording_group": "test_obs_ceramics_fair",
+      "sender": "Kenza", "reader": "Ludovic", "locations": ["olive glazing coffer", "rose vendor chest"],
+      "introduction": "{sender} is preparing a ceramics fair and {reader} maintains the stall allocations. Their trial run uses a token in place of a vendor's collection slip.",
+      "event_description": "A fair volunteer records a token inspection to test the photographic handover process."
+    },
+    {
+      "group_id": "test_observation_13", "split": "test", "mechanism": "observation", "wording_group": "test_obs_cycle_courier",
+      "sender": "Aurelio", "reader": "Natsumi", "locations": ["mustard route cabinet", "slate parcel caddy"],
+      "introduction": "A cycle courier cooperative is trying out a paper dispatch procedure. {sender} acts as dispatcher, {reader} prepares the route sheet, and a token substitutes for one package label.",
+      "event_description": "The cooperative stages a visual token check as part of its dispatch desk rehearsal."
+    },
+    {
+      "group_id": "test_observation_14", "split": "test", "mechanism": "observation", "wording_group": "test_obs_loom_patterns",
+      "sender": "Fariha", "reader": "Tiburcio", "locations": ["lilac swatch box", "walnut shuttle drawer"],
+      "introduction": "At a weaving workshop, {sender} organizes pattern samples and {reader} plans their demonstration order. A token represents the index card for one sample.",
+      "event_description": "A workshop tutor makes a camera record of the token during a materials-handling demonstration."
+    },
+    {
+      "group_id": "test_observation_15", "split": "test", "mechanism": "observation", "wording_group": "test_obs_river_survey",
+      "sender": "Yaroslav", "reader": "Ofelia", "locations": ["aqua survey trunk", "rust fieldwork tin"],
+      "introduction": "{sender} arranges a river-survey practice session and {reader} prepares its sample register. The team tracks a token standing for an unused sample label rather than a collected sample.",
+      "event_description": "A survey assistant carries out a filmed inspection of the token while rehearsing the sample-register workflow."
+    },
+    {
+      "group_id": "test_observation_16", "split": "test", "mechanism": "observation", "wording_group": "test_obs_lifeboat_open_day",
+      "sender": "Thibault", "reader": "Zahira", "locations": ["coral welcome locker", "ash exhibit crate"],
+      "introduction": "A lifeboat station is arranging an open-day exhibit. {sender} organizes the display and {reader} checks the visitor materials; their token represents a demonstration card with no operational role.",
+      "event_description": "An open-day volunteer sets up a camera inspection of the token for the exhibit-preparation log."
+    },
+    {
+      "group_id": "test_observation_17", "split": "test", "mechanism": "observation", "wording_group": "test_obs_sports_kit_register",
+      "sender": "Eszter", "reader": "Kofi", "locations": ["lemon equipment chest", "bordeaux roster case"],
+      "introduction": "{sender} and {reader} are checking a sports club's practice loan register. The item being tracked is a token representing a kit reservation, rather than the kit itself.",
+      "event_description": "The equipment steward records a visual inspection of the token for the register trial."
+    },
+    {
+      "group_id": "test_observation_18", "split": "test", "mechanism": "observation", "wording_group": "test_obs_model_railway",
+      "sender": "Renata", "reader": "Tadashi", "locations": ["mint signal compartment", "mahogany timetable bin"],
+      "introduction": "A model railway society is rehearsing its exhibition setup. {sender} handles the layout plan, {reader} lists demonstration slots, and a token stands for the card assigning one demonstration.",
+      "event_description": "The society's setup coordinator arranges a camera check of the token during the exhibition rehearsal."
+    },
+    {
+      "group_id": "test_observation_19", "split": "test", "mechanism": "observation", "wording_group": "test_obs_library_display",
+      "sender": "Nasrin", "reader": "Boubacar", "locations": ["lavender display cassette", "terracotta lending box"],
+      "introduction": "For a library display rehearsal, {sender} is the curator and {reader} is the lending coordinator. They use a token to represent a display reservation slip.",
+      "event_description": "A library assistant photographs an inspection of the token while testing the display-preparation record."
+    },
+    {
+      "group_id": "test_observation_20", "split": "test", "mechanism": "observation", "wording_group": "test_obs_quarry_exhibit",
+      "sender": "Jeremias", "reader": "Maelle", "locations": ["burgundy geology drawer", "pistachio exhibit coffer"],
+      "introduction": "{sender} and {reader} are preparing a former quarry's educational exhibit. A token substitutes for a numbered specimen card in their practice inventory.",
+      "event_description": "The exhibit team films a token inspection for its trial specimen-tracking process."
+    },
+    {
+      "group_id": "test_observation_21", "split": "test", "mechanism": "observation", "wording_group": "test_obs_school_music",
+      "sender": "Aisling", "reader": "Sanjay", "locations": ["apricot music chest", "navy rehearsal caddy"],
+      "introduction": "A school music department is rehearsing instrument-loan administration. {sender} supervises the rehearsal, {reader} prepares the form list, and a token represents one mock loan receipt.",
+      "event_description": "The department's assistant makes a visual token check for the administration rehearsal."
+    },
+    {
+      "group_id": "test_observation_22", "split": "test", "mechanism": "observation", "wording_group": "test_obs_cave_visitor_center",
+      "sender": "Soraya", "reader": "Jorgen", "locations": ["pewter guide locker", "fuchsia tour case"],
+      "introduction": "At a cave visitor centre, {sender} schedules tours and {reader} arranges the guide packs. Their training token stands for a spare booking card and has no role in visitor safety.",
+      "event_description": "A visitor-centre colleague records an inspection of the token as part of the guide-pack workflow test."
+    },
+    {
+      "group_id": "test_observation_23", "split": "test", "mechanism": "observation", "wording_group": "test_obs_market_stall",
+      "sender": "Fionnuala", "reader": "Mateusz", "locations": ["hazel stall bin", "cerise booking trunk"],
+      "introduction": "{sender} manages a craft market's setup desk and {reader} maintains the stall map. Before opening, they practice tracking a token representing a vendor permit.",
+      "event_description": "A market organizer stages a photographed token inspection during the setup-desk practice."
+    },
+    {
+      "group_id": "test_observation_24", "split": "test", "mechanism": "observation", "wording_group": "test_obs_aquarium_education",
+      "sender": "Yasmin", "reader": "Hendrik", "locations": ["seafoam lesson cabinet", "brick outreach tin"],
+      "introduction": "An aquarium's education team is preparing a school workshop. {sender} plans the lesson and {reader} records the materials; a token represents a laminated worksheet identifier.",
+      "event_description": "An education assistant uses a camera to document a token check during the workshop preparation exercise."
+    },
+    {
+      "group_id": "test_observation_25", "split": "test", "mechanism": "observation", "wording_group": "test_obs_weather_club",
+      "sender": "Lumka", "reader": "Vittorio", "locations": ["sienna forecast coffer", "iceblue chart drawer"],
+      "introduction": "{sender} and {reader} coordinate a weather club's public demonstration. Their token represents a printed chart allocation in a rehearsal of the event's paperwork.",
+      "event_description": "A club member records the token's inspection with the demonstration camera."
+    },
+    {
+      "group_id": "test_observation_26", "split": "test", "mechanism": "observation", "wording_group": "test_obs_watch_repair",
+      "sender": "Calista", "reader": "Rasmus", "locations": ["mulberry repair cassette", "beige service chest"],
+      "introduction": "A watch-repair cooperative is testing a job-card handover. {sender} manages the desk and {reader} prepares the service list; a token is used instead of a customer's watch or paperwork.",
+      "event_description": "The cooperative's trainer arranges a filmed inspection of the token for the handover test."
+    },
+    {
+      "group_id": "test_observation_27", "split": "test", "mechanism": "observation", "wording_group": "test_obs_honey_fair",
+      "sender": "Pavlina", "reader": "Abasi", "locations": ["buttercup tasting box", "charcoal exhibitor caddy"],
+      "introduction": "{sender} organizes a honey fair's tasting schedule and {reader} checks exhibitor entries. They rehearse with a token standing for a tasting-slot card.",
+      "event_description": "A fair steward makes a camera record of the token during the schedule-handling rehearsal."
+    },
+    {
+      "group_id": "test_observation_28", "split": "test", "mechanism": "observation", "wording_group": "test_obs_camp_crafts",
+      "sender": "Nayeli", "reader": "Benoit", "locations": ["mauve activity crate", "khaki craft compartment"],
+      "introduction": "A holiday camp is practicing the administration of its craft sessions. {sender} coordinates activities, {reader} prepares the materials rota, and the token represents a mock session slip.",
+      "event_description": "An activity leader sets up a recorded inspection of the token for the camp's training log."
+    },
+    {
+      "group_id": "test_observation_29", "split": "test", "mechanism": "observation", "wording_group": "test_obs_fossil_workshop",
+      "sender": "Milena", "reader": "Tobias", "locations": ["ecru fossil cabinet", "raspberry teaching trunk"],
+      "introduction": "{sender} and {reader} are preparing a fossil-identification workshop. They track a token representing one teaching card rather than handling a specimen during the rehearsal.",
+      "event_description": "The workshop demonstrator conducts a photographed token inspection to test the teaching-card inventory process."
+    },
+    {
+      "group_id": "test_observation_30", "split": "test", "mechanism": "observation", "wording_group": "test_obs_letterpress_orders",
+      "sender": "Benazir", "reader": "Florent", "locations": ["sepia proof drawer", "viridian print coffer"],
+      "introduction": "A letterpress workshop is practicing how it hands over print orders. {sender} coordinates production, {reader} keeps the order list, and a token substitutes for a proof-approval card.",
+      "event_description": "A print technician makes a visual inspection record of the token during the handover practice."
+    },
+    {
+      "group_id": "test_message_01", "split": "test", "mechanism": "message", "wording_group": "test_msg_restoration_queue",
+      "sender": "Apolline", "reader": "Khaled", "locations": ["periwinkle intake cabinet", "cinnamon treatment bin"],
+      "introduction": "{sender} organizes a restoration workshop's trial work queue, and {reader} prepares the job register. A token represents an invented treatment-request card.",
+      "event_description": "For the trial queue, {sender} drafts a short location bulletin concerning the token."
+    },
+    {
+      "group_id": "test_message_02", "split": "test", "mechanism": "message", "wording_group": "test_msg_sound_archive",
+      "sender": "Zdravko", "reader": "Heloise", "locations": ["opal audio chest", "vermilion transfer case"],
+      "introduction": "A sound studio is rehearsing its archive transfer paperwork. {sender} coordinates the transfer list, {reader} maintains the index, and a token represents a mock recording identifier.",
+      "event_description": "{sender} uses the studio's written handover channel to issue a token-location report."
+    },
+    {
+      "group_id": "test_message_03", "split": "test", "mechanism": "message", "wording_group": "test_msg_volcano_display",
+      "sender": "Ekaterina", "reader": "Hassan", "locations": ["taupe geology caddy", "kingfisher poster box"],
+      "introduction": "{sender} and {reader} arrange a volcano visitor centre's display rehearsal. Their token stands for a poster-allocation card and is unrelated to any monitoring or warning system.",
+      "event_description": "The display rehearsal includes a written token-location notice prepared by {sender}."
+    },
+    {
+      "group_id": "test_message_04", "split": "test", "mechanism": "message", "wording_group": "test_msg_costume_loans",
+      "sender": "Domenica", "reader": "Eustathios", "locations": ["flax wardrobe coffer", "amaranth fitting drawer"],
+      "introduction": "A costume cooperative is testing how its loan cards move through the office. {sender} handles bookings and {reader} maintains the fitting list; a token stands in for one loan card.",
+      "event_description": "{sender} prepares a location message as the cooperative's mock loan-card handover."
+    },
+    {
+      "group_id": "test_message_05", "split": "test", "mechanism": "message", "wording_group": "test_msg_tea_tasting",
+      "sender": "Chinara", "reader": "Peregrine", "locations": ["celadon tasting cassette", "paprika menu tin"],
+      "introduction": "{sender} is arranging a tea-tasting workshop and {reader} compiles the session cards. The workshop planning exercise uses a token to represent a card for one tasting slot.",
+      "event_description": "A written planning exchange requires {sender} to send a concise report about the token's location."
+    },
+    {
+      "group_id": "test_message_06", "split": "test", "mechanism": "message", "wording_group": "test_msg_windfarm_exhibition",
+      "sender": "Anele", "reader": "Valentin", "locations": ["canary exhibit locker", "gunmetal brochure crate"],
+      "introduction": "At a wind-farm visitor exhibition, {sender} plans an outreach day and {reader} lists its printed materials. A token represents a demonstration leaflet batch, with no connection to turbine operations.",
+      "event_description": "{sender} prepares an outreach-desk message reporting where the token is placed."
+    },
+    {
+      "group_id": "test_message_07", "split": "test", "mechanism": "message", "wording_group": "test_msg_manuscript_digitisation",
+      "sender": "Grazyna", "reader": "Fawzi", "locations": ["dustrose folio chest", "spruce scanning bin"],
+      "introduction": "{sender} coordinates a manuscript digitisation rehearsal while {reader} prepares its catalogue. A token stands for a dummy folio request, so no manuscript is being moved in this exercise.",
+      "event_description": "The rehearsal uses a written token-location dispatch authored by {sender}."
+    },
+    {
+      "group_id": "test_message_08", "split": "test", "mechanism": "message", "wording_group": "test_msg_ferry_visitor_maps",
+      "sender": "Sorcha", "reader": "Takumi", "locations": ["champagne map cabinet", "petrol information box"],
+      "introduction": "A ferry terminal is practicing the distribution of visitor maps. {sender} coordinates the information desk, {reader} prepares a stock list, and their token represents a mock map voucher.",
+      "event_description": "{sender} writes a token-location note for the information desk's practice exchange."
+    },
+    {
+      "group_id": "test_message_09", "split": "test", "mechanism": "message", "wording_group": "test_msg_reef_classroom",
+      "sender": "Naledi", "reader": "Giacomo", "locations": ["aquamarine lesson coffer", "claret worksheet caddy"],
+      "introduction": "{sender} and {reader} are preparing a reef-conservation classroom activity. A token represents one lesson-resource card in a rehearsal of their materials register.",
+      "event_description": "For the resource-register exercise, {sender} sends a written statement locating the token."
+    },
+    {
+      "group_id": "test_message_10", "split": "test", "mechanism": "message", "wording_group": "test_msg_puppet_tour",
+      "sender": "Eulalie", "reader": "Kamran", "locations": ["blush touring trunk", "moss programme drawer"],
+      "introduction": "A puppet theatre is trying out its tour-office handover. {sender} coordinates venues and {reader} checks programme allocations; a token stands for an invented venue card.",
+      "event_description": "The tour-office exercise calls for {sender} to issue a location report about the token in writing."
+    },
+    {
+      "group_id": "test_message_11", "split": "test", "mechanism": "message", "wording_group": "test_msg_cartography_fair",
+      "sender": "Odalys", "reader": "Henrik", "locations": ["denim chart case", "wheat atlas compartment"],
+      "introduction": "{sender} organizes a cartography fair's display list and {reader} maintains its index. Their practice token represents a reservation card for a map exhibit.",
+      "event_description": "{sender} prepares a brief written token-location entry for the fair's coordination exercise."
+    },
+    {
+      "group_id": "test_message_12", "split": "test", "mechanism": "message", "wording_group": "test_msg_clock_museum",
+      "sender": "Anouk", "reader": "Seamus", "locations": ["damson clock cabinet", "alabaster label tin"],
+      "introduction": "A clock museum is rehearsing the assignment of exhibition labels. {sender} plans the labels, {reader} prepares the register, and a token substitutes for one label-allocation card.",
+      "event_description": "The register trial includes a token-location message written by {sender}."
+    },
+    {
+      "group_id": "test_message_13", "split": "test", "mechanism": "message", "wording_group": "test_msg_cycle_library",
+      "sender": "Ishani", "reader": "Miroslav", "locations": ["chartreuse loan chest", "espresso booking box"],
+      "introduction": "{sender} manages a bicycle library's mock reservations and {reader} prepares its borrowing sheet. The token they track represents a practice reservation slip rather than a bicycle key.",
+      "event_description": "{sender} records a token-location claim in a message for the reservation exercise."
+    },
+    {
+      "group_id": "test_message_14", "split": "test", "mechanism": "message", "wording_group": "test_msg_citizen_science",
+      "sender": "Hafsa", "reader": "Lorenzo", "locations": ["carmine survey coffer", "sage volunteer bin"],
+      "introduction": "A citizen-science group is practicing its volunteer paperwork. {sender} coordinates the exercise, {reader} keeps its register, and a token represents an invented survey assignment.",
+      "event_description": "The volunteer-paperwork rehearsal uses a written token-location statement prepared by {sender}."
+    },
+    {
+      "group_id": "test_message_15", "split": "test", "mechanism": "message", "wording_group": "test_msg_telescope_loans",
+      "sender": "Delyth", "reader": "Osman", "locations": ["midnight eyepiece case", "biscuit loan drawer"],
+      "introduction": "{sender} and {reader} administer a telescope club's trial loan register. An ordinary token stands in for a mock equipment reservation card.",
+      "event_description": "{sender} prepares a token-location bulletin during the club's written handover test."
+    },
+    {
+      "group_id": "test_message_16", "split": "test", "mechanism": "message", "wording_group": "test_msg_clay_collective",
+      "sender": "Katerina", "reader": "Jabari", "locations": ["salmon workshop locker", "loden clay cassette"],
+      "introduction": "A clay collective is practicing how it allocates workbench sessions. {sender} organizes the timetable, {reader} records reservations, and the token represents a sample booking card.",
+      "event_description": "As part of the timetable rehearsal, {sender} writes a message about the token's location."
+    },
+    {
+      "group_id": "test_message_17", "split": "test", "mechanism": "message", "wording_group": "test_msg_bird_ring_exhibit",
+      "sender": "Amandine", "reader": "Suleiman", "locations": ["prussian outreach chest", "honey label caddy"],
+      "introduction": "{sender} is preparing a bird-ringing information exhibit and {reader} organizes its public handouts. Their training token represents a printed demonstration label and is never used on an animal.",
+      "event_description": "The exhibit preparation includes a written token-location report from {sender}."
+    },
+    {
+      "group_id": "test_message_18", "split": "test", "mechanism": "message", "wording_group": "test_msg_railway_ephemera",
+      "sender": "Zoraida", "reader": "Leif", "locations": ["aubergine ticket coffer", "parchment archive case"],
+      "introduction": "A railway museum is testing a catalogue handover for reproduction tickets. {sender} manages the trial and {reader} keeps its index; a token stands for a reproduction's catalogue card.",
+      "event_description": "{sender} uses the trial catalogue's message channel to report the token's location."
+    },
+    {
+      "group_id": "test_message_19", "split": "test", "mechanism": "message", "wording_group": "test_msg_piano_festival",
+      "sender": "Tsvetana", "reader": "Nabil", "locations": ["pomegranate score cabinet", "mist recital bin"],
+      "introduction": "{sender} and {reader} rehearse the office procedure for a piano festival. A token represents a mock score-allocation slip in the practice schedule.",
+      "event_description": "{sender} drafts a written token-location notice as part of the festival's office rehearsal."
+    },
+    {
+      "group_id": "test_message_20", "split": "test", "mechanism": "message", "wording_group": "test_msg_canal_heritage",
+      "sender": "Nicolette", "reader": "Fadil", "locations": ["lichen volunteer trunk", "cranberry heritage box"],
+      "introduction": "A canal heritage centre is practicing its volunteer-desk handover. {sender} allocates activities, {reader} maintains the rota, and a token substitutes for one practice assignment card.",
+      "event_description": "The desk exercise includes a token-location message that {sender} prepares for the handover channel."
+    },
+    {
+      "group_id": "test_message_21", "split": "test", "mechanism": "message", "wording_group": "test_msg_chocolate_workshop",
+      "sender": "Ximena", "reader": "Konstantin", "locations": ["caramel tasting chest", "storm recipe drawer"],
+      "introduction": "{sender} arranges a chocolate workshop's practice tasting roster and {reader} compiles its session list. The token represents an invented allocation card, not a food sample.",
+      "event_description": "{sender} writes a location report for the token as part of the roster handover practice."
+    },
+    {
+      "group_id": "test_message_22", "split": "test", "mechanism": "message", "wording_group": "test_msg_tapestry_display",
+      "sender": "Branwen", "reader": "Rashid", "locations": ["heather textile caddy", "goldenrod display coffer"],
+      "introduction": "A tapestry society is trying out its exhibition catalogue process. {sender} coordinates labels, {reader} prepares the display register, and a token represents one sample catalogue entry.",
+      "event_description": "A written report from {sender} supplies the token-location statement used in the catalogue trial."
+    },
+    {
+      "group_id": "test_message_23", "split": "test", "mechanism": "message", "wording_group": "test_msg_rescue_fundraiser",
+      "sender": "Petronella", "reader": "Daichi", "locations": ["melon raffle tin", "steel event crate"],
+      "introduction": "{sender} and {reader} are preparing a rescue charity's fundraiser paperwork. Their rehearsal token stands for a mock raffle-book allocation and is unrelated to operational rescue equipment.",
+      "event_description": "{sender} prepares a token-location notice for the fundraiser's written coordination drill."
+    },
+    {
+      "group_id": "test_message_24", "split": "test", "mechanism": "message", "wording_group": "test_msg_photography_lab",
+      "sender": "Mehrunisa", "reader": "Rogelio", "locations": ["sorrel negative case", "glacier proof cabinet"],
+      "introduction": "A photography lab is rehearsing its collection-desk process with dummy jobs. {sender} supervises the exercise, {reader} prepares the collection list, and a token represents one dummy job slip.",
+      "event_description": "The collection-desk rehearsal calls for a written token-location report from {sender}."
+    },
+    {
+      "group_id": "test_message_25", "split": "test", "mechanism": "message", "wording_group": "test_msg_seed_exchange",
+      "sender": "Vassiliki", "reader": "Malachy", "locations": ["fern exchange bin", "cantaloupe packet coffer"],
+      "introduction": "{sender} organizes a seed-exchange event and {reader} keeps its participant register. They practice tracking a token used in place of an invented seed-packet request.",
+      "event_description": "{sender} sends a written token-location claim during the exchange event's paperwork rehearsal."
+    },
+    {
+      "group_id": "test_message_26", "split": "test", "mechanism": "message", "wording_group": "test_msg_planetarium_roster",
+      "sender": "Ondine", "reader": "Emre", "locations": ["iris programme chest", "fawn usher compartment"],
+      "introduction": "A planetarium is testing a new usher-assignment record. {sender} coordinates the test, {reader} maintains the roster, and a token represents a practice assignment slip.",
+      "event_description": "The roster test uses a short token-location message prepared by {sender}."
+    },
+    {
+      "group_id": "test_message_27", "split": "test", "mechanism": "message", "wording_group": "test_msg_kite_festival",
+      "sender": "Vesna", "reader": "Adem", "locations": ["sulfur entry caddy", "cerulean festival drawer"],
+      "introduction": "{sender} and {reader} are practicing registration for a kite festival. Their token represents an invented exhibitor pass in the mock entry register.",
+      "event_description": "{sender} drafts a location statement for the token using the festival's practice message channel."
+    },
+    {
+      "group_id": "test_message_28", "split": "test", "mechanism": "message", "wording_group": "test_msg_saltworks_museum",
+      "sender": "Vasilisa", "reader": "Oumar", "locations": ["chalk exhibit cassette", "wine tour locker"],
+      "introduction": "A saltworks museum is rehearsing the allocation of guided-tour materials. {sender} plans the tour packs, {reader} lists their contents, and a token substitutes for one practice allocation card.",
+      "event_description": "{sender} prepares a written location bulletin concerning the token for the museum's rehearsal."
+    },
+    {
+      "group_id": "test_message_29", "split": "test", "mechanism": "message", "wording_group": "test_msg_robotics_exhibition",
+      "sender": "Oriana", "reader": "Kensuke", "locations": ["electricblue demo chest", "oat assembly box"],
+      "introduction": "{sender} manages a robotics club's exhibition timetable and {reader} prepares its demonstration list. A token represents a dummy session-allocation card rather than a working robot component.",
+      "event_description": "The exhibition planning exercise includes a token-location report written by {sender}."
+    },
+    {
+      "group_id": "test_message_30", "split": "test", "mechanism": "message", "wording_group": "test_msg_beach_cleanup",
+      "sender": "Zehra", "reader": "Aurelian", "locations": ["driftwood volunteer cabinet", "magenta route tin"],
+      "introduction": "A beach-cleanup group is practicing its volunteer allocation paperwork. {sender} coordinates the drill, {reader} keeps the assignment sheet, and the token represents an invented team card.",
+      "event_description": "{sender} uses a written planning note to report a location for the token during the allocation drill."
+    },
+    {
+      "group_id": "test_correction_01", "split": "test", "mechanism": "correction", "wording_group": "test_corr_house_archive",
+      "sender": "Isabeau", "reader": "Fikret", "locations": ["smoke archive trunk", "persimmon inventory case"],
+      "introduction": "{sender} and {reader} are testing the records office at a historic house. Their token represents a reproduction inventory card, and the trial uses location reports that can later be replaced.",
+      "event_description": "The records-office trial begins with {sender} issuing a location report through its written reporting channel."
+    },
+    {
+      "group_id": "test_correction_02", "split": "test", "mechanism": "correction", "wording_group": "test_corr_paleobotany_collection",
+      "sender": "Desislava", "reader": "Kwaku", "locations": ["bottle green specimen drawer", "ceramic white catalogue bin"],
+      "introduction": "A paleobotany collection is rehearsing its catalogue handover. {sender} oversees the rehearsal, {reader} maintains the trial index, and a token substitutes for a dummy specimen card in an amendable reporting sequence.",
+      "event_description": "{sender} prepares the first token-location bulletin for the collection's written handover exercise."
+    },
+    {
+      "group_id": "test_correction_03", "split": "test", "mechanism": "correction", "wording_group": "test_corr_jazz_festival",
+      "sender": "Svetlana", "reader": "Xochitl", "locations": ["auburn stage coffer", "sapphire booking chest"],
+      "introduction": "{sender} manages a jazz festival's practice booking desk and {reader} prepares the session register. A token represents a mock booking card; the exercise permits explicit replacement location reports.",
+      "event_description": "The booking-desk rehearsal opens with a written location statement from {sender} about the token."
+    },
+    {
+      "group_id": "test_correction_04", "split": "test", "mechanism": "correction", "wording_group": "test_corr_sailing_club",
+      "sender": "Evdokia", "reader": "Bence", "locations": ["sea green roster cabinet", "redwood regatta caddy"],
+      "introduction": "A sailing club is trying out its social-event registration procedure. {sender} organizes the trial, {reader} keeps its list, and a token stands for an invented entry card rather than any sailing equipment.",
+      "event_description": "For an exercise in amendable written notices, {sender} prepares an initial token-location report."
+    },
+    {
+      "group_id": "test_correction_05", "split": "test", "mechanism": "correction", "wording_group": "test_corr_textile_conservation",
+      "sender": "Roxelana", "reader": "Tariq", "locations": ["dusty teal treatment box", "pale coral intake drawer"],
+      "introduction": "{sender} coordinates a textile-conservation training office and {reader} compiles its dummy job register. The token represents a sample request card used to practice successive location reports.",
+      "event_description": "{sender} writes the opening token-location notice for the training office's revision exercise."
+    },
+    {
+      "group_id": "test_correction_06", "split": "test", "mechanism": "correction", "wording_group": "test_corr_orchid_show",
+      "sender": "Lavinia", "reader": "Masato", "locations": ["orchid purple entry chest", "buff judging bin"],
+      "introduction": "An orchid society is rehearsing the administration of its annual show. {sender} assigns display paperwork, {reader} maintains the entry list, and a token represents a mock exhibitor card.",
+      "event_description": "The show-office drill tests replaceable location bulletins, beginning with a written token report from {sender}."
+    },
+    {
+      "group_id": "test_correction_07", "split": "test", "mechanism": "correction", "wording_group": "test_corr_cycle_fair",
+      "sender": "Mireille", "reader": "Noureddine", "locations": ["flame orange booth case", "dove grey repair coffer"],
+      "introduction": "{sender} and {reader} support a community cycling fair's registration rehearsal. Their token stands for a practice repair-booth reservation, with written location notices allowed to supersede earlier ones.",
+      "event_description": "{sender} initiates the registration rehearsal's reporting sequence with a token-location statement."
+    },
+    {
+      "group_id": "test_correction_08", "split": "test", "mechanism": "correction", "wording_group": "test_corr_pottery_collection",
+      "sender": "Anastazja", "reader": "Olivier", "locations": ["mud brown firing cassette", "cornflower collection locker"],
+      "introduction": "A pottery studio is practicing collection-desk paperwork with invented jobs. {sender} runs the practice desk, {reader} prepares the job list, and a token represents one dummy collection slip.",
+      "event_description": "As an exercise in revising written dispatches, {sender} sends the first location report for the token."
+    },
+    {
+      "group_id": "test_correction_09", "split": "test", "mechanism": "correction", "wording_group": "test_corr_acoustic_exhibit",
+      "sender": "Samira", "reader": "Evander", "locations": ["ink blue sound caddy", "warm ivory exhibit trunk"],
+      "introduction": "{sender} arranges a museum's acoustics demonstration and {reader} lists its teaching materials. A token represents a demonstration card in a practice sequence of location bulletins.",
+      "event_description": "The materials-register exercise begins with {sender} issuing a written token-location bulletin that may be replaced later."
+    },
+    {
+      "group_id": "test_correction_10", "split": "test", "mechanism": "correction", "wording_group": "test_corr_ice_sculpture",
+      "sender": "Bettina", "reader": "Chike", "locations": ["frost blue allocation chest", "cranberry red welcome drawer"],
+      "introduction": "An ice-sculpture festival is rehearsing office allocations before the event. {sender} coordinates displays, {reader} checks the participant list, and a token stands in for a sample allocation card.",
+      "event_description": "{sender} prepares the first token-location report for a drill in handling explicit replacement notices."
+    },
+    {
+      "group_id": "test_correction_11", "split": "test", "mechanism": "correction", "wording_group": "test_corr_water_history",
+      "sender": "Karolina", "reader": "Ibrahim", "locations": ["ocean blue archive coffer", "copper brown visitor bin"],
+      "introduction": "{sender} and {reader} are testing a water-history museum's visitor-materials register. A token represents an invented leaflet allocation, and the register exercise uses amendable written reports.",
+      "event_description": "{sender} supplies the opening location statement for the token through the exercise's reporting channel."
+    },
+    {
+      "group_id": "test_correction_12", "split": "test", "mechanism": "correction", "wording_group": "test_corr_marionette_archive",
+      "sender": "Salome", "reader": "Tsuyoshi", "locations": ["violet grey script cabinet", "rosewood catalogue box"],
+      "introduction": "A marionette archive is rehearsing how it tracks reproduction scripts. {sender} supervises the trial, {reader} maintains its index, and a token represents one reproduction's catalogue slip.",
+      "event_description": "A sequence of replaceable written dispatches starts with {sender} reporting a location for the token."
+    },
+    {
+      "group_id": "test_correction_13", "split": "test", "mechanism": "correction", "wording_group": "test_corr_bookbinding_guild",
+      "sender": "Viorica", "reader": "Nasser", "locations": ["clay pink binding chest", "deep olive order caddy"],
+      "introduction": "{sender} coordinates a bookbinding guild's mock order desk and {reader} prepares the job sheet. The tracked token substitutes for an invented order card during a reporting-revision drill.",
+      "event_description": "{sender} writes an initial location notice concerning the token for the guild's office exercise."
+    },
+    {
+      "group_id": "test_correction_14", "split": "test", "mechanism": "correction", "wording_group": "test_corr_cork_heritage",
+      "sender": "Rosalba", "reader": "Alhassan", "locations": ["cork tan display tin", "bright turquoise label compartment"],
+      "introduction": "A cork-industry heritage centre is practicing the assignment of display labels. {sender} organizes the rehearsal, {reader} keeps the label register, and a token represents a dummy assignment.",
+      "event_description": "The rehearsal tests successive written bulletins, starting with a token-location report authored by {sender}."
+    },
+    {
+      "group_id": "test_correction_15", "split": "test", "mechanism": "correction", "wording_group": "test_corr_fire_museum",
+      "sender": "Liljana", "reader": "Kenjiro", "locations": ["brick red programme case", "pale jade exhibit coffer"],
+      "introduction": "{sender} and {reader} are arranging a fire museum's school programme. Their rehearsal token stands for a teaching-pack card, has no emergency function, and is tracked through replaceable written reports.",
+      "event_description": "{sender} begins the programme-office reporting drill with a location statement about the token."
+    },
+    {
+      "group_id": "test_correction_16", "split": "test", "mechanism": "correction", "wording_group": "test_corr_moss_exhibition",
+      "sender": "Eirlys", "reader": "Hakeem", "locations": ["fern green sample drawer", "soft amber teaching crate"],
+      "introduction": "A natural-history group is rehearsing a moss exhibition's paperwork. {sender} organizes the samples list, {reader} compiles the teaching register, and a token replaces one mock display card.",
+      "event_description": "For a written-notice revision exercise, {sender} issues the initial token-location bulletin."
+    },
+    {
+      "group_id": "test_correction_17", "split": "test", "mechanism": "correction", "wording_group": "test_corr_dance_archive",
+      "sender": "Ariadna", "reader": "Wojciech", "locations": ["satin plum rehearsal bin", "pale wheat archive cabinet"],
+      "introduction": "{sender} manages a dance archive's catalogue trial and {reader} prepares its session index. A token represents a reproduction rehearsal-note card whose reported location can be amended.",
+      "event_description": "The catalogue trial starts with a written token-location report prepared by {sender}."
+    },
+    {
+      "group_id": "test_correction_18", "split": "test", "mechanism": "correction", "wording_group": "test_corr_radio_club_fair",
+      "sender": "Esmira", "reader": "Guilherme", "locations": ["signal yellow display trunk", "slate blue entry box"],
+      "introduction": "An amateur radio club is rehearsing its exhibition-desk paperwork. {sender} coordinates the trial, {reader} prepares the stall list, and a token stands for a dummy exhibitor card.",
+      "event_description": "The desk rehearsal includes amendable location notices, and {sender} prepares the first report about the token."
+    },
+    {
+      "group_id": "test_correction_19", "split": "test", "mechanism": "correction", "wording_group": "test_corr_stonemasonry_course",
+      "sender": "Graziella", "reader": "Faramarz", "locations": ["granite grey pattern chest", "copper orange course caddy"],
+      "introduction": "{sender} organizes a stonemasonry course's practice administration and {reader} keeps its sample register. The token represents an invented pattern-allocation card, so the exercise moves no stone samples.",
+      "event_description": "{sender} sends an opening token-location bulletin for a drill in updating the written register."
+    },
+    {
+      "group_id": "test_correction_20", "split": "test", "mechanism": "correction", "wording_group": "test_corr_space_outreach",
+      "sender": "Tasnim", "reader": "Leonidas", "locations": ["nebula pink workshop coffer", "meteor grey materials drawer"],
+      "introduction": "A space-science outreach group is rehearsing its workshop-materials handover. {sender} allocates activity packs, {reader} compiles the list, and a token substitutes for a dummy pack identifier.",
+      "event_description": "The group tests replacement reporting by having {sender} prepare an initial written location notice for the token."
+    },
+    {
+      "group_id": "test_correction_21", "split": "test", "mechanism": "correction", "wording_group": "test_corr_beekeeping_library",
+      "sender": "Zinaida", "reader": "Bashir", "locations": ["pollen gold loan case", "deep indigo catalogue bin"],
+      "introduction": "{sender} and {reader} run a beekeeping society's trial lending register. Their token represents a practice booklet-reservation card rather than any hive equipment.",
+      "event_description": "A drill in replaceable handover reports begins with {sender} issuing a written statement of the token's location."
+    },
+    {
+      "group_id": "test_correction_22", "split": "test", "mechanism": "correction", "wording_group": "test_corr_seal_sanctuary_exhibit",
+      "sender": "Nolwenn", "reader": "Seiji", "locations": ["seal grey outreach chest", "sea pink brochure locker"],
+      "introduction": "A seal sanctuary is practicing the visitor centre's leaflet-allocation procedure. {sender} coordinates the exercise, {reader} prepares the stock sheet, and a token stands for a mock brochure allocation.",
+      "event_description": "For the visitor-office revision test, {sender} prepares the first written token-location notice."
+    },
+    {
+      "group_id": "test_correction_23", "split": "test", "mechanism": "correction", "wording_group": "test_corr_food_history_fair",
+      "sender": "Marzena", "reader": "Quentin", "locations": ["cocoa brown recipe caddy", "mint green stall coffer"],
+      "introduction": "{sender} is arranging a food-history fair and {reader} prepares its demonstration roster. A token represents an invented recipe-card reservation in a rehearsal of the fair's paperwork.",
+      "event_description": "{sender} initiates a sequence of amendable location bulletins with a written report about the token."
+    },
+    {
+      "group_id": "test_correction_24", "split": "test", "mechanism": "correction", "wording_group": "test_corr_architecture_models",
+      "sender": "Yelena", "reader": "Abdelaziz", "locations": ["linen cream model cabinet", "oxide red booking tin"],
+      "introduction": "An architecture society is testing its model-exhibition booking process. {sender} coordinates the trial and {reader} keeps the list; a token substitutes for a dummy exhibit reservation card.",
+      "event_description": "The booking process rehearsal tests explicit report replacements, starting with {sender}'s written token-location statement."
+    },
+    {
+      "group_id": "test_correction_25", "split": "test", "mechanism": "correction", "wording_group": "test_corr_camera_heritage",
+      "sender": "Roseline", "reader": "Damir", "locations": ["lens black catalogue trunk", "butter yellow loan box"],
+      "introduction": "{sender} and {reader} are rehearsing a camera museum's reproduction-loan paperwork. Their token represents an invented catalogue card tracked by a sequence of revisable location reports.",
+      "event_description": "{sender} writes the opening token-location dispatch for the museum's loan-office rehearsal."
+    },
+    {
+      "group_id": "test_correction_26", "split": "test", "mechanism": "correction", "wording_group": "test_corr_watercolour_workshop",
+      "sender": "Fleurine", "reader": "Mansour", "locations": ["ultramarine class chest", "raw sienna registration drawer"],
+      "introduction": "A watercolour group is practicing workshop-registration handovers. {sender} allocates class materials, {reader} lists reservations, and a token represents one mock class-allocation slip.",
+      "event_description": "The handover practice uses replaceable written messages; {sender} prepares the first location report concerning the token."
+    },
+    {
+      "group_id": "test_correction_27", "split": "test", "mechanism": "correction", "wording_group": "test_corr_sundial_walk",
+      "sender": "Emanuela", "reader": "Azriel", "locations": ["sunflower yellow tour bin", "shadow violet map coffer"],
+      "introduction": "{sender} organizes a historical sundial walk and {reader} prepares its route materials. A token stands in for a practice map-allocation card during an office reporting drill.",
+      "event_description": "{sender} opens the drill's amendable notice sequence with a written token-location report."
+    },
+    {
+      "group_id": "test_correction_28", "split": "test", "mechanism": "correction", "wording_group": "test_corr_coral_art_display",
+      "sender": "Veronika", "reader": "Satoshi", "locations": ["reef turquoise display case", "shell beige label cabinet"],
+      "introduction": "A community art group is preparing a coral-themed exhibition. {sender} coordinates the labels, {reader} keeps the display index, and the token represents an invented label-allocation card.",
+      "event_description": "For a rehearsal of explicit written corrections, {sender} issues the initial report locating the token."
+    },
+    {
+      "group_id": "test_correction_29", "split": "test", "mechanism": "correction", "wording_group": "test_corr_boardgame_library",
+      "sender": "Ksenia", "reader": "Bilal", "locations": ["dice red reservation chest", "felt green loan caddy"],
+      "introduction": "{sender} and {reader} administer a board-game library's mock loan desk. A token represents a practice reservation slip, and written location reports can be superseded during the exercise.",
+      "event_description": "The loan-desk trial begins with {sender} preparing a location bulletin about the token."
+    },
+    {
+      "group_id": "test_correction_30", "split": "test", "mechanism": "correction", "wording_group": "test_corr_science_outreach_register",
+      "sender": "Bojana", "reader": "Idrissa", "locations": ["peacock blue lesson crate", "pumice grey register compartment"],
+      "introduction": "A bioinformatics outreach team is rehearsing the allocation of classroom activity sheets. {sender} organizes the trial, {reader} keeps its register, and a token substitutes for a dummy activity identifier.",
+      "event_description": "{sender} drafts the opening token-location report for the team's exercise in replacing earlier written notices."
+    }
+  ]
+}

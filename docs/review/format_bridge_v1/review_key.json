@@ -1,0 +1,644 @@
+{
+  "items": [
+    {
+      "review_id": "89304ec62c67d767e033ee49",
+      "record_id": "fresh_test_00__bridge_correction_easy_AAA__0787554680304fb7",
+      "gold": 0
+    },
+    {
+      "review_id": "c86a2248e98da6cb33aa517c",
+      "record_id": "fresh_test_00__bridge_correction_easy_AAB__0787554680304fb7",
+      "gold": 0
+    },
+    {
+      "review_id": "669c38202763bbe4b92115d5",
+      "record_id": "fresh_test_00__bridge_correction_easy_ABA__0787554680304fb7",
+      "gold": 0
+    },
+    {
+      "review_id": "b33f0b9aa893df063f301f0d",
+      "record_id": "fresh_test_00__bridge_correction_easy_ABB__0787554680304fb7",
+      "gold": 0
+    },
+    {
+      "review_id": "ee857be67963ec090ec17429",
+      "record_id": "fresh_test_00__bridge_correction_easy_BAA__0787554680304fb7",
+      "gold": 0
+    },
+    {
+      "review_id": "e07f4375f28a20f114be4665",
+      "record_id": "fresh_test_00__bridge_correction_easy_BAB__0787554680304fb7",
+      "gold": 0
+    },
+    {
+      "review_id": "cb41f63ccd932fee73afbf80",
+      "record_id": "fresh_test_00__bridge_correction_easy_BBA__0787554680304fb7",
+      "gold": 0
+    },
+    {
+      "review_id": "63ef23a739197271d3168fc3",
+      "record_id": "fresh_test_00__bridge_correction_easy_BBB__0787554680304fb7",
+      "gold": 0
+    },
+    {
+      "review_id": "a86fca30c95e76d526748508",
+      "record_id": "fresh_test_04__bridge_correction_easy_AAA__4c7089aa123f69a1",
+      "gold": 1
+    },
+    {
+      "review_id": "506c5bbeeb51fd0b71f0d6f8",
+      "record_id": "fresh_test_04__bridge_correction_easy_AAB__4c7089aa123f69a1",
+      "gold": 1
+    },
+    {
+      "review_id": "895129709ae4e29e02958f82",
+      "record_id": "fresh_test_04__bridge_correction_easy_ABA__4c7089aa123f69a1",
+      "gold": 1
+    },
+    {
+      "review_id": "bb754c810caea3e0aedc89d1",
+      "record_id": "fresh_test_04__bridge_correction_easy_ABB__4c7089aa123f69a1",
+      "gold": 1
+    },
+    {
+      "review_id": "73d6d906bb25f8f8e52b96f6",
+      "record_id": "fresh_test_04__bridge_correction_easy_BAA__4c7089aa123f69a1",
+      "gold": 1
+    },
+    {
+      "review_id": "90379966de74a58b769213ec",
+      "record_id": "fresh_test_04__bridge_correction_easy_BAB__4c7089aa123f69a1",
+      "gold": 1
+    },
+    {
+      "review_id": "e13ad0ce753ff46c4178f8ad",
+      "record_id": "fresh_test_04__bridge_correction_easy_BBA__4c7089aa123f69a1",
+      "gold": 1
+    },
+    {
+      "review_id": "76b158288ac184ddae97c782",
+      "record_id": "fresh_test_04__bridge_correction_easy_BBB__4c7089aa123f69a1",
+      "gold": 1
+    },
+    {
+      "review_id": "a86a18f82e6ba8069c31ccef",
+      "record_id": "fresh_test_08__bridge_correction_easy_AAA__e21c7ab50cb641c2",
+      "gold": 0
+    },
+    {
+      "review_id": "25dfd7a3a116696b9bf84b30",
+      "record_id": "fresh_test_08__bridge_correction_easy_AAB__e21c7ab50cb641c2",
+      "gold": 0
+    },
+    {
+      "review_id": "25812b8652f88d582216c187",
+      "record_id": "fresh_test_08__bridge_correction_easy_ABA__e21c7ab50cb641c2",
+      "gold": 0
+    },
+    {
+      "review_id": "29fe17145b6caba4d26f65af",
+      "record_id": "fresh_test_08__bridge_correction_easy_ABB__e21c7ab50cb641c2",
+      "gold": 0
+    },
+    {
+      "review_id": "866c4ee06ac9459aca5941bb",
+      "record_id": "fresh_test_08__bridge_correction_easy_BAA__e21c7ab50cb641c2",
+      "gold": 0
+    },
+    {
+      "review_id": "44415cbc50ed99d9e8d34763",
+      "record_id": "fresh_test_08__bridge_correction_easy_BAB__e21c7ab50cb641c2",
+      "gold": 0
+    },
+    {
+      "review_id": "94e24bec4c567dd6f9690bea",
+      "record_id": "fresh_test_08__bridge_correction_easy_BBA__e21c7ab50cb641c2",
+      "gold": 0
+    },
+    {
+      "review_id": "bd606aef0ce56df1eac2ef68",
+      "record_id": "fresh_test_08__bridge_correction_easy_BBB__e21c7ab50cb641c2",
+      "gold": 0
+    },
+    {
+      "review_id": "5b93834669b4214f085adca6",
+      "record_id": "fresh_test_12__bridge_correction_easy_AAA__83da004cc2da86a5",
+      "gold": 1
+    },
+    {
+      "review_id": "cdbab42b4734cb0e6c65d12e",
+      "record_id": "fresh_test_12__bridge_correction_easy_AAB__83da004cc2da86a5",
+      "gold": 1
+    },
+    {
+      "review_id": "27dde540c96e7cc72ef579db",
+      "record_id": "fresh_test_12__bridge_correction_easy_ABA__83da004cc2da86a5",
+      "gold": 1
+    },
+    {
+      "review_id": "688ad99bf6ba5f8121eacc38",
+      "record_id": "fresh_test_12__bridge_correction_easy_ABB__83da004cc2da86a5",
+      "gold": 1
+    },
+    {
+      "review_id": "94b3de0fa8f48d169b6c0365",
+      "record_id": "fresh_test_12__bridge_correction_easy_BAA__83da004cc2da86a5",
+      "gold": 1
+    },
+    {
+      "review_id": "1be45ca6dfaa59531b518d9b",
+      "record_id": "fresh_test_12__bridge_correction_easy_BAB__83da004cc2da86a5",
+      "gold": 1
+    },
+    {
+      "review_id": "736b37cd77251eeac957e2fc",
+      "record_id": "fresh_test_12__bridge_correction_easy_BBA__83da004cc2da86a5",
+      "gold": 1
+    },
+    {
+      "review_id": "407a282a2c81579260fc8325",
+      "record_id": "fresh_test_12__bridge_correction_easy_BBB__83da004cc2da86a5",
+      "gold": 1
+    },
+    {
+      "review_id": "f71635211d9f0f91d8ca20cb",
+      "record_id": "fresh_test_17__bridge_correction_hard_AAA__9067c3314aed0528",
+      "gold": 0
+    },
+    {
+      "review_id": "89d6373ae6fdad52f091b225",
+      "record_id": "fresh_test_17__bridge_correction_hard_AAB__9067c3314aed0528",
+      "gold": 0
+    },
+    {
+      "review_id": "157ae683f02f9f632c3b6bc4",
+      "record_id": "fresh_test_17__bridge_correction_hard_ABA__9067c3314aed0528",
+      "gold": 0
+    },
+    {
+      "review_id": "25729c06a36d7a9a2f8cbefc",
+      "record_id": "fresh_test_17__bridge_correction_hard_ABB__9067c3314aed0528",
+      "gold": 0
+    },
+    {
+      "review_id": "9a26caee29c58aab55369de4",
+      "record_id": "fresh_test_17__bridge_correction_hard_BAA__9067c3314aed0528",
+      "gold": 0
+    },
+    {
+      "review_id": "bebfad1e4b61968dfd386282",
+      "record_id": "fresh_test_17__bridge_correction_hard_BAB__9067c3314aed0528",
+      "gold": 0
+    },
+    {
+      "review_id": "601deb0f20e2e1643e83b61d",
+      "record_id": "fresh_test_17__bridge_correction_hard_BBA__9067c3314aed0528",
+      "gold": 0
+    },
+    {
+      "review_id": "6643c9d6274e92d12de70276",
+      "record_id": "fresh_test_17__bridge_correction_hard_BBB__9067c3314aed0528",
+      "gold": 0
+    },
+    {
+      "review_id": "e2a66e6842c2c25e4930e32d",
+      "record_id": "fresh_test_21__bridge_correction_hard_AAA__59d7d24f10d7a4b5",
+      "gold": 0
+    },
+    {
+      "review_id": "f1bfab88956f7b6bea5757fc",
+      "record_id": "fresh_test_21__bridge_correction_hard_AAB__59d7d24f10d7a4b5",
+      "gold": 0
+    },
+    {
+      "review_id": "45528aeb7f4a4892db8f4533",
+      "record_id": "fresh_test_21__bridge_correction_hard_ABA__59d7d24f10d7a4b5",
+      "gold": 0
+    },
+    {
+      "review_id": "95835afbf2b845464b40edc7",
+      "record_id": "fresh_test_21__bridge_correction_hard_ABB__59d7d24f10d7a4b5",
+      "gold": 0
+    },
+    {
+      "review_id": "fe1627648746ff8cafc88ae9",
+      "record_id": "fresh_test_21__bridge_correction_hard_BAA__59d7d24f10d7a4b5",
+      "gold": 0
+    },
+    {
+      "review_id": "61c0b0951dabb9fcaede5929",
+      "record_id": "fresh_test_21__bridge_correction_hard_BAB__59d7d24f10d7a4b5",
+      "gold": 0
+    },
+    {
+      "review_id": "64cde94ba54e25a080d22a56",
+      "record_id": "fresh_test_21__bridge_correction_hard_BBA__59d7d24f10d7a4b5",
+      "gold": 0
+    },
+    {
+      "review_id": "0d0fac279ca5152f80dc2991",
+      "record_id": "fresh_test_21__bridge_correction_hard_BBB__59d7d24f10d7a4b5",
+      "gold": 0
+    },
+    {
+      "review_id": "24ef3f0cdb0fdb19ce72f011",
+      "record_id": "fresh_test_01__bridge_correction_hard_AAA__5af1d64e56b25c6d",
+      "gold": 1
+    },
+    {
+      "review_id": "7cb5f01ef2942ad80f66a8cf",
+      "record_id": "fresh_test_01__bridge_correction_hard_AAB__5af1d64e56b25c6d",
+      "gold": 1
+    },
+    {
+      "review_id": "07c8f5877415316a9e821a05",
+      "record_id": "fresh_test_01__bridge_correction_hard_ABA__5af1d64e56b25c6d",
+      "gold": 1
+    },
+    {
+      "review_id": "5c83eb274dea067ffe25f6c6",
+      "record_id": "fresh_test_01__bridge_correction_hard_ABB__5af1d64e56b25c6d",
+      "gold": 1
+    },
+    {
+      "review_id": "e8c4bea1a6bb613100dd07c2",
+      "record_id": "fresh_test_01__bridge_correction_hard_BAA__5af1d64e56b25c6d",
+      "gold": 1
+    },
+    {
+      "review_id": "df3d89cbe834f61ff63bd7ca",
+      "record_id": "fresh_test_01__bridge_correction_hard_BAB__5af1d64e56b25c6d",
+      "gold": 1
+    },
+    {
+      "review_id": "b18706954dcd90fbcc827eb7",
+      "record_id": "fresh_test_01__bridge_correction_hard_BBA__5af1d64e56b25c6d",
+      "gold": 1
+    },
+    {
+      "review_id": "bfa5b3a30864e76224dce71c",
+      "record_id": "fresh_test_01__bridge_correction_hard_BBB__5af1d64e56b25c6d",
+      "gold": 1
+    },
+    {
+      "review_id": "36ff23709909c91aea515c47",
+      "record_id": "fresh_test_05__bridge_correction_hard_AAA__8a839393c87715ca",
+      "gold": 0
+    },
+    {
+      "review_id": "8dfd99b5b9a35601484bdf0e",
+      "record_id": "fresh_test_05__bridge_correction_hard_AAB__8a839393c87715ca",
+      "gold": 0
+    },
+    {
+      "review_id": "7bc4614f87143add8c48cbc1",
+      "record_id": "fresh_test_05__bridge_correction_hard_ABA__8a839393c87715ca",
+      "gold": 0
+    },
+    {
+      "review_id": "b9c4e66cb57d249aaa432442",
+      "record_id": "fresh_test_05__bridge_correction_hard_ABB__8a839393c87715ca",
+      "gold": 0
+    },
+    {
+      "review_id": "da9a39880378a744b3f1fc99",
+      "record_id": "fresh_test_05__bridge_correction_hard_BAA__8a839393c87715ca",
+      "gold": 0
+    },
+    {
+      "review_id": "0acc15e3127f3309e1988a7f",
+      "record_id": "fresh_test_05__bridge_correction_hard_BAB__8a839393c87715ca",
+      "gold": 0
+    },
+    {
+      "review_id": "1be6767e30ff330cd0774cc3",
+      "record_id": "fresh_test_05__bridge_correction_hard_BBA__8a839393c87715ca",
+      "gold": 0
+    },
+    {
+      "review_id": "c8f9068e1aa7b3d73ab2ec80",
+      "record_id": "fresh_test_05__bridge_correction_hard_BBB__8a839393c87715ca",
+      "gold": 0
+    },
+    {
+      "review_id": "df64440daccb13a60deb9e09",
+      "record_id": "fresh_test_10__bridge_correction_hard_AAA__19c1431591418ff0",
+      "gold": 1
+    },
+    {
+      "review_id": "e46d8b509715d313236b3125",
+      "record_id": "fresh_test_10__bridge_correction_hard_AAB__19c1431591418ff0",
+      "gold": 1
+    },
+    {
+      "review_id": "8eeaf7a7fac8bbc0c3aa377f",
+      "record_id": "fresh_test_10__bridge_correction_hard_ABA__19c1431591418ff0",
+      "gold": 1
+    },
+    {
+      "review_id": "36792cfeb9d7175ddd44cc4a",
+      "record_id": "fresh_test_10__bridge_correction_hard_ABB__19c1431591418ff0",
+      "gold": 1
+    },
+    {
+      "review_id": "73c029db3429d559d9e1685e",
+      "record_id": "fresh_test_10__bridge_correction_hard_BAA__19c1431591418ff0",
+      "gold": 1
+    },
+    {
+      "review_id": "6b4ae175b7cede42d15280bd",
+      "record_id": "fresh_test_10__bridge_correction_hard_BAB__19c1431591418ff0",
+      "gold": 1
+    },
+    {
+      "review_id": "883a586e067d3ae1ce73bd1d",
+      "record_id": "fresh_test_10__bridge_correction_hard_BBA__19c1431591418ff0",
+      "gold": 1
+    },
+    {
+      "review_id": "49b16ae66ccf297a97ccb0d4",
+      "record_id": "fresh_test_10__bridge_correction_hard_BBB__19c1431591418ff0",
+      "gold": 1
+    },
+    {
+      "review_id": "aae036bb9c62bf6d55271d6a",
+      "record_id": "fresh_test_14__bridge_correction_hard_AAA__b87110ca39979f5a",
+      "gold": 1
+    },
+    {
+      "review_id": "432335c56df9a6eb7af6d402",
+      "record_id": "fresh_test_14__bridge_correction_hard_AAB__b87110ca39979f5a",
+      "gold": 1
+    },
+    {
+      "review_id": "7ff61ea126a329521b83e7cf",
+      "record_id": "fresh_test_14__bridge_correction_hard_ABA__b87110ca39979f5a",
+      "gold": 1
+    },
+    {
+      "review_id": "e27574ef982014a2672b2098",
+      "record_id": "fresh_test_14__bridge_correction_hard_ABB__b87110ca39979f5a",
+      "gold": 1
+    },
+    {
+      "review_id": "52a12571fc0ce27b3fa6225b",
+      "record_id": "fresh_test_14__bridge_correction_hard_BAA__b87110ca39979f5a",
+      "gold": 1
+    },
+    {
+      "review_id": "886ff81672b9b203c798e914",
+      "record_id": "fresh_test_14__bridge_correction_hard_BAB__b87110ca39979f5a",
+      "gold": 1
+    },
+    {
+      "review_id": "d331d8bee8785b8d52031782",
+      "record_id": "fresh_test_14__bridge_correction_hard_BBA__b87110ca39979f5a",
+      "gold": 1
+    },
+    {
+      "review_id": "674db1be9c19b5501093e9d6",
+      "record_id": "fresh_test_14__bridge_correction_hard_BBB__b87110ca39979f5a",
+      "gold": 1
+    },
+    {
+      "review_id": "35a03617bbe74b0a25444575",
+      "record_id": "fresh_test_18__bridge_correction_hard_AAA__0a0480e57c581a0c",
+      "gold": 0
+    },
+    {
+      "review_id": "933c17e75502c2eb65546b28",
+      "record_id": "fresh_test_18__bridge_correction_hard_AAB__0a0480e57c581a0c",
+      "gold": 0
+    },
+    {
+      "review_id": "df23ea621cda61ca902d6b21",
+      "record_id": "fresh_test_18__bridge_correction_hard_ABA__0a0480e57c581a0c",
+      "gold": 0
+    },
+    {
+      "review_id": "265506565c2926fa51b44b33",
+      "record_id": "fresh_test_18__bridge_correction_hard_ABB__0a0480e57c581a0c",
+      "gold": 0
+    },
+    {
+      "review_id": "f965abed8db63cc953b1004e",
+      "record_id": "fresh_test_18__bridge_correction_hard_BAA__0a0480e57c581a0c",
+      "gold": 0
+    },
+    {
+      "review_id": "d37a80ce2b684ef45471abae",
+      "record_id": "fresh_test_18__bridge_correction_hard_BAB__0a0480e57c581a0c",
+      "gold": 0
+    },
+    {
+      "review_id": "3bc4e555411868083c7dd2b7",
+      "record_id": "fresh_test_18__bridge_correction_hard_BBA__0a0480e57c581a0c",
+      "gold": 0
+    },
+    {
+      "review_id": "3c259e51ea68caf827304b67",
+      "record_id": "fresh_test_18__bridge_correction_hard_BBB__0a0480e57c581a0c",
+      "gold": 0
+    },
+    {
+      "review_id": "1c716ea36bfcb7b44a3f8c11",
+      "record_id": "fresh_test_22__bridge_correction_hard_AAA__b7e35f0891bf0fa5",
+      "gold": 1
+    },
+    {
+      "review_id": "ac37f087f2f98ec600a9612f",
+      "record_id": "fresh_test_22__bridge_correction_hard_AAB__b7e35f0891bf0fa5",
+      "gold": 1
+    },
+    {
+      "review_id": "9a4ad1cd7faf07a9035ca6a6",
+      "record_id": "fresh_test_22__bridge_correction_hard_ABA__b7e35f0891bf0fa5",
+      "gold": 1
+    },
+    {
+      "review_id": "01f79b6df0efd039d129be50",
+      "record_id": "fresh_test_22__bridge_correction_hard_ABB__b7e35f0891bf0fa5",
+      "gold": 1
+    },
+    {
+      "review_id": "1853b9dcd4dd2b91c236b785",
+      "record_id": "fresh_test_22__bridge_correction_hard_BAA__b7e35f0891bf0fa5",
+      "gold": 1
+    },
+    {
+      "review_id": "4217503b4deb85e5a2717f12",
+      "record_id": "fresh_test_22__bridge_correction_hard_BAB__b7e35f0891bf0fa5",
+      "gold": 1
+    },
+    {
+      "review_id": "7a6f16c0149cb71d22782214",
+      "record_id": "fresh_test_22__bridge_correction_hard_BBA__b7e35f0891bf0fa5",
+      "gold": 1
+    },
+    {
+      "review_id": "fcc544c1a15132433fb722ea",
+      "record_id": "fresh_test_22__bridge_correction_hard_BBB__b7e35f0891bf0fa5",
+      "gold": 1
+    },
+    {
+      "review_id": "90403080e2538947b731ffe0",
+      "record_id": "fresh_test_03__bridge_correction_easy_AAA__b01f3978a18852a3",
+      "gold": 1
+    },
+    {
+      "review_id": "08b06720b6692ba8596dbc0b",
+      "record_id": "fresh_test_03__bridge_correction_easy_AAB__b01f3978a18852a3",
+      "gold": 1
+    },
+    {
+      "review_id": "ff1a63d7d7a47f5f4d898f85",
+      "record_id": "fresh_test_03__bridge_correction_easy_ABA__b01f3978a18852a3",
+      "gold": 1
+    },
+    {
+      "review_id": "7240f305635eaf4ab18f13c6",
+      "record_id": "fresh_test_03__bridge_correction_easy_ABB__b01f3978a18852a3",
+      "gold": 1
+    },
+    {
+      "review_id": "6f582fed122ca93d3b720b47",
+      "record_id": "fresh_test_03__bridge_correction_easy_BAA__b01f3978a18852a3",
+      "gold": 1
+    },
+    {
+      "review_id": "17ab56b954d492cf661adbad",
+      "record_id": "fresh_test_03__bridge_correction_easy_BAB__b01f3978a18852a3",
+      "gold": 1
+    },
+    {
+      "review_id": "c5678f97db1463207ed82e9f",
+      "record_id": "fresh_test_03__bridge_correction_easy_BBA__b01f3978a18852a3",
+      "gold": 1
+    },
+    {
+      "review_id": "158f033b631a141df57efc2f",
+      "record_id": "fresh_test_03__bridge_correction_easy_BBB__b01f3978a18852a3",
+      "gold": 1
+    },
+    {
+      "review_id": "39c756ead85b4ef5a36780d3",
+      "record_id": "fresh_test_07__bridge_correction_easy_AAA__c6b66c27605990a1",
+      "gold": 0
+    },
+    {
+      "review_id": "d6e6ce26bf499a6a5b333040",
+      "record_id": "fresh_test_07__bridge_correction_easy_AAB__c6b66c27605990a1",
+      "gold": 0
+    },
+    {
+      "review_id": "10f08ec158eeedad5238c235",
+      "record_id": "fresh_test_07__bridge_correction_easy_ABA__c6b66c27605990a1",
+      "gold": 0
+    },
+    {
+      "review_id": "435b992f0208a9aba1b20760",
+      "record_id": "fresh_test_07__bridge_correction_easy_ABB__c6b66c27605990a1",
+      "gold": 0
+    },
+    {
+      "review_id": "ea7525167466110426d83a79",
+      "record_id": "fresh_test_07__bridge_correction_easy_BAA__c6b66c27605990a1",
+      "gold": 0
+    },
+    {
+      "review_id": "628cacbed09e30ce422a5820",
+      "record_id": "fresh_test_07__bridge_correction_easy_BAB__c6b66c27605990a1",
+      "gold": 0
+    },
+    {
+      "review_id": "b24f424a942ab2d9327d2718",
+      "record_id": "fresh_test_07__bridge_correction_easy_BBA__c6b66c27605990a1",
+      "gold": 0
+    },
+    {
+      "review_id": "d1506f8c4591fb9a6a1e161a",
+      "record_id": "fresh_test_07__bridge_correction_easy_BBB__c6b66c27605990a1",
+      "gold": 0
+    },
+    {
+      "review_id": "25db70d8bfa178b48dadff7b",
+      "record_id": "fresh_test_11__bridge_correction_easy_AAA__87c262493861d848",
+      "gold": 1
+    },
+    {
+      "review_id": "a20c83af7d243cd625d85532",
+      "record_id": "fresh_test_11__bridge_correction_easy_AAB__87c262493861d848",
+      "gold": 1
+    },
+    {
+      "review_id": "5f4a8994c1623819ca7aff83",
+      "record_id": "fresh_test_11__bridge_correction_easy_ABA__87c262493861d848",
+      "gold": 1
+    },
+    {
+      "review_id": "0ab7002a49182721842a183e",
+      "record_id": "fresh_test_11__bridge_correction_easy_ABB__87c262493861d848",
+      "gold": 1
+    },
+    {
+      "review_id": "e6d4ff8282afb594c85dd74d",
+      "record_id": "fresh_test_11__bridge_correction_easy_BAA__87c262493861d848",
+      "gold": 1
+    },
+    {
+      "review_id": "1721b6c4a2b331d38273efe4",
+      "record_id": "fresh_test_11__bridge_correction_easy_BAB__87c262493861d848",
+      "gold": 1
+    },
+    {
+      "review_id": "a7ae2f02f4dbf352f2218b84",
+      "record_id": "fresh_test_11__bridge_correction_easy_BBA__87c262493861d848",
+      "gold": 1
+    },
+    {
+      "review_id": "fbd7f82887ef80a3d511871d",
+      "record_id": "fresh_test_11__bridge_correction_easy_BBB__87c262493861d848",
+      "gold": 1
+    },
+    {
+      "review_id": "59e43c7d94213a7f1e8f2746",
+      "record_id": "fresh_test_15__bridge_correction_easy_AAA__5fe7b03a4947cb4e",
+      "gold": 0
+    },
+    {
+      "review_id": "059be30915b7028ea0b6fdb6",
+      "record_id": "fresh_test_15__bridge_correction_easy_AAB__5fe7b03a4947cb4e",
+      "gold": 0
+    },
+    {
+      "review_id": "176771a7dbda01b52198a39c",
+      "record_id": "fresh_test_15__bridge_correction_easy_ABA__5fe7b03a4947cb4e",
+      "gold": 0
+    },
+    {
+      "review_id": "cb617bd6985e4486f575411e",
+      "record_id": "fresh_test_15__bridge_correction_easy_ABB__5fe7b03a4947cb4e",
+      "gold": 0
+    },
+    {
+      "review_id": "0d1f2394f25f196b679052de",
+      "record_id": "fresh_test_15__bridge_correction_easy_BAA__5fe7b03a4947cb4e",
+      "gold": 0
+    },
+    {
+      "review_id": "d51e1b012a1a64e06da9dcaf",
+      "record_id": "fresh_test_15__bridge_correction_easy_BAB__5fe7b03a4947cb4e",
+      "gold": 0
+    },
+    {
+      "review_id": "091d290bb64cee8ea791eb69",
+      "record_id": "fresh_test_15__bridge_correction_easy_BBA__5fe7b03a4947cb4e",
+      "gold": 0
+    },
+    {
+      "review_id": "14450e3ce9869f2e7dce70cc",
+      "record_id": "fresh_test_15__bridge_correction_easy_BBB__5fe7b03a4947cb4e",
+      "gold": 0
+    }
+  ]
+}

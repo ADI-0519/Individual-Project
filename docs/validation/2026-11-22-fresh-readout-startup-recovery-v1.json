@@ -1,0 +1,119 @@
+{
+  "schema": "fresh-readout-startup-recovery-repreparation-v1",
+  "created_at": "2026-11-22T22:15:16.381002+00:00",
+  "old_campaign": "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261122_campaign",
+  "new_campaign": "/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261122_recovery_v1",
+  "original_measurements_reused": 0,
+  "preparation_environment_note": "The first inline re-preparation stopped during local config lookup because cache environment variables were assigned after library import. No model preparation file or forward existed. This invocation sets cache/offline environment before all library imports.",
+  "models": {
+    "llama": {
+      "protocol_sha256": "fa8a9cb8a16f0872af129e8b65ea79ab39d418139407d66cf8567172b0a5d8ef",
+      "preparation_sha256": "54c78694913de086e66836d2b5e0807845c17224b84157e0090eb045d6e565a9",
+      "unchanged_fields": [
+        "schema",
+        "test_fixture",
+        "research_status",
+        "bank_path",
+        "bank_file_sha256",
+        "bank_sha256",
+        "model_key",
+        "model_settings",
+        "model_type",
+        "decoder_blocks",
+        "hidden_size",
+        "vocab_size",
+        "max_position_embeddings",
+        "forward_contract",
+        "sites",
+        "position_order",
+        "original_site",
+        "planned_rows",
+        "engineering_row",
+        "preflight",
+        "capture"
+      ],
+      "unchanged_rows": 7040,
+      "ordered_planned_rows_sha256": "a2e20ea475a5b88a32ae376608bf7a297d0d2225250931e950daaf2bd77350b0",
+      "tokenizer_identity_matches_separately_loaded_checkpoint": true,
+      "tokenizer_binding": {
+        "class": "PreTrainedTokenizerFast",
+        "chat_template_sha256": "ca5b86f15c19b53c24ff18228849e06ffb677b952d85171c66d9b720d924f9bb",
+        "backend_sha256": "96ccf965b778e3c6dda54cf8cbcce919f27bcf5f100177e78f9078e973481883",
+        "vocab_sha256": "f66003c7a898537275cd9d3ab290d6e247b9c5063352c2cc010213febfbe068f",
+        "special_token_ids": {
+          "eos": 128009,
+          "pad": null
+        },
+        "all_special_ids": [
+          128000,
+          128009
+        ],
+        "answer_token_ids": {
+          "YES": 14331,
+          "NO": 9173
+        }
+      }
+    },
+    "qwen": {
+      "protocol_sha256": "7cc8eed3ea66b5f2c3be618be7c246a5edb2007eee7d85b4ffc989b727abb05a",
+      "preparation_sha256": "a1a406f3438c88666e1c3529fd805a68457dbc92d0c15d16178f5ab6dfa72119",
+      "unchanged_fields": [
+        "schema",
+        "test_fixture",
+        "research_status",
+        "bank_path",
+        "bank_file_sha256",
+        "bank_sha256",
+        "model_key",
+        "model_settings",
+        "model_type",
+        "decoder_blocks",
+        "hidden_size",
+        "vocab_size",
+        "max_position_embeddings",
+        "forward_contract",
+        "sites",
+        "position_order",
+        "original_site",
+        "planned_rows",
+        "engineering_row",
+        "preflight",
+        "capture"
+      ],
+      "unchanged_rows": 7040,
+      "ordered_planned_rows_sha256": "96a8f3d85d849115dfc9e50c933a28326e723f46bc4b9e95fe112fa3bbf21546",
+      "tokenizer_identity_matches_separately_loaded_checkpoint": true,
+      "tokenizer_binding": {
+        "class": "Qwen2TokenizerFast",
+        "chat_template_sha256": "2e2d2512cfe46af53dc1eed45368ecaab26ac4461c480e6b69fe571cf0ceaa75",
+        "backend_sha256": "a3833016a0892676e98b4e285d6335263055116610a77cb4b28a73692521ee60",
+        "vocab_sha256": "54a4e00eec5a8c5f40d137afdde38da75f4c46ffa802b509cb5fb2157b5a5b0d",
+        "special_token_ids": {
+          "eos": 151645,
+          "pad": 151643
+        },
+        "all_special_ids": [
+          151645,
+          151643,
+          151644,
+          151646,
+          151647,
+          151648,
+          151649,
+          151650,
+          151651,
+          151652,
+          151653,
+          151654,
+          151655,
+          151656
+        ],
+        "answer_token_ids": {
+          "YES": 14004,
+          "NO": 8996
+        }
+      }
+    }
+  },
+  "status": "prepared_no_weights_with_exact_old_new_scientific_equality"
+}

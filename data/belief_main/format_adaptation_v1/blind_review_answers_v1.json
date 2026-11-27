@@ -1,0 +1,850 @@
+{
+  "schema": "format-adaptation-blind-semantic-review-v1",
+  "reviewer": "independent adaptation_protocol_critic agent; opaque natural-language review",
+  "human_review_complete": false,
+  "packet_path": "data/belief_main/format_adaptation_v1/compiled_v1/review_packet.json",
+  "packet_sha256": "3adf3a22c5d4dce219498b5e0ad6f915c939b8fbeaf19b0eb4a8ecb0505b3fa0",
+  "answers_frozen_utc": "2026-11-27T00:59:03.757795+00:00",
+  "reading_coverage": {
+    "complete_prompts_read": 118,
+    "system_and_user_messages_read": true,
+    "packet_item_positions_read": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117
+    ],
+    "distinct_introductions_read": 40,
+    "total_prompt_characters_read": 353540,
+    "method": "Direct reading of every full system/user prompt in contiguous batches; semantic answers and notes manually recorded before viewing labels, formal states, bank generation code or review key. IDs used only to join the already recorded answers.",
+    "sources_viewed_before_answer_freeze": [
+      "data/belief_main/format_adaptation_v1/compiled_v1/review_packet.json"
+    ],
+    "key_or_formal_label_access_before_freeze": false,
+    "review_limit": "Agent review of this representative packet, not human review or exhaustive inspection of every scientific rendering."
+  },
+  "items": [
+    {
+      "review_id": "704ee4c8f03ff5d9797a1268",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "Replacement was read and names the queried cabinet. Minor article error: 'a endleaf'."
+    },
+    {
+      "review_id": "e5e42493388203619607c345",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "No report was read, so the shared tray belief persists."
+    },
+    {
+      "review_id": "09caa252bd746eef9b093744",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The read replacement names the cabinet, not the queried drawer."
+    },
+    {
+      "review_id": "e09bfc85b331b248d374abcd",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "Neither report was read; the initial drawer belief persists."
+    },
+    {
+      "review_id": "6f570633132119fb9e96b10f",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The read replacement names the queried drawer."
+    },
+    {
+      "review_id": "ddd843331e845e3c0c76af0a",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The single report was read and names the queried basket."
+    },
+    {
+      "review_id": "85a4a6896d4b6bedf277001c",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "Neither report was read; the initial box belief persists."
+    },
+    {
+      "review_id": "eee7b795a21ca08f1bc62653",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The read replacement names the queried box. Minor article error: 'a index'."
+    },
+    {
+      "review_id": "24c4603c81cddcda9b722a48",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The directly supplied final attribution names the cabinet, not the queried drawer."
+    },
+    {
+      "review_id": "dd909fbd956e22269669b19f",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The directly stated attribution names the chest, not the queried folder."
+    },
+    {
+      "review_id": "79cdfcfbf3f08fca0aa927e3",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The read report names the jacket drawer, not the queried cabinet."
+    },
+    {
+      "review_id": "128b96c1acf3f7135b9e78a9",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The directly stated attribution names the queried drawer."
+    },
+    {
+      "review_id": "9b1f527893615a20ba688049",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The read single report names the queried basket."
+    },
+    {
+      "review_id": "e280ce29d1192bf56f97fe71",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The later read replacement names the queried wallet."
+    },
+    {
+      "review_id": "160b73334369634186a0d486",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The read replacement names the basket, not the queried case."
+    },
+    {
+      "review_id": "baaf68ddbc98fb05df1d7146",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "Neither report was read; the shared basket belief persists, not the queried case."
+    },
+    {
+      "review_id": "20e8153321e6ec7c63673c01",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "Neither report was read; the initial queried cabinet belief persists."
+    },
+    {
+      "review_id": "1001a584fc709f68f49bbc4c",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The read single report names the queried case."
+    },
+    {
+      "review_id": "c0a0cd78565ffd58f5296181",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "Neither report was read; the initial queried basket belief persists."
+    },
+    {
+      "review_id": "4f06ec0e6f31ba2936a8c9b9",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The read replacement names the drawer, not the queried cabinet."
+    },
+    {
+      "review_id": "1f715a621e836bb5f41dd930",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The read replacement names the queried case despite the private physical check."
+    },
+    {
+      "review_id": "8e86a907a1734dc61db07fff",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "Neither report was read; the initial queried wallet belief persists."
+    },
+    {
+      "review_id": "8dc3f06589c41e9221dd9e2a",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The later read replacement names the cupboard, not the queried tray."
+    },
+    {
+      "review_id": "5bf5d42b8d964251b2019c40",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The read replacement names the queried chest."
+    },
+    {
+      "review_id": "1e476b30baff44395b9ecdf4",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "Only the first report was read; it names the drawer, not the queried cabinet."
+    },
+    {
+      "review_id": "364971f362c77d51cb6ef1e3",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "Neither report was read; the initial basket belief persists."
+    },
+    {
+      "review_id": "9c3be892036cf113620af35f",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "Neither report was read; the initial queried tray belief persists."
+    },
+    {
+      "review_id": "e7a135310c3983f14397378f",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The read single report names the basket, not the queried case."
+    },
+    {
+      "review_id": "7016d93f86247eceecea7f3c",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The read replacement names the queried cupboard."
+    },
+    {
+      "review_id": "5245dd97366f8337e5d5e0da",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "Neither report was read; the initial wallet belief persists."
+    },
+    {
+      "review_id": "e6d556686e0798760712a78c",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The read single report names the folder, not the queried chest."
+    },
+    {
+      "review_id": "1b524ba9ea7a523cfed45131",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "Neither report was read; the initial queried wallet belief persists."
+    },
+    {
+      "review_id": "425ac351735af5c57211ae9d",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The replacement was not read; the read first report names the drawer."
+    },
+    {
+      "review_id": "35a1d3152e3df86af52675b9",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The later read replacement names the box, not the queried wallet. Minor article error: 'a invitation'."
+    },
+    {
+      "review_id": "7862ba21995989e6ff9d81ae",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The read replacement names the tray, not the queried cupboard."
+    },
+    {
+      "review_id": "0d7b119986e3e17185c989d7",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "Neither report was read; the initial cabinet belief persists."
+    },
+    {
+      "review_id": "063777774eb17eee9bdc5903",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "Only the first report was read; it names the cabinet, not the queried drawer."
+    },
+    {
+      "review_id": "96f17dce81f8ca84e140d524",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "Neither report was read; the initial queried cabinet belief persists."
+    },
+    {
+      "review_id": "0a6656860ad87c17e91e5372",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "Neither report was read; the initial box belief persists."
+    },
+    {
+      "review_id": "b2bd04f8714753c1d6d9e7d7",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "Neither report was read; the initial folder belief persists."
+    },
+    {
+      "review_id": "f1a7be0fc8f8cac00560cea8",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The later read replacement names the queried cupboard."
+    },
+    {
+      "review_id": "d07e6fdc28b6d4f5adb81fbb",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The read replacement names the queried cupboard."
+    },
+    {
+      "review_id": "947ded8d69576383a3050e10",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "Neither report was read; the initial queried tray belief persists."
+    },
+    {
+      "review_id": "88144068056ef5784bc0650b",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The later read replacement names the folder, not the queried chest. Minor article error: 'a envelope'."
+    },
+    {
+      "review_id": "81213b87d865955d661877db",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The later read replacement names the wallet, not the queried box."
+    },
+    {
+      "review_id": "80581aa6c7c14243d2e4cf42",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "Neither report was read; the initial box belief persists."
+    },
+    {
+      "review_id": "c45504338bf0f1ce92ba8bbd",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The later read replacement names the queried folder."
+    },
+    {
+      "review_id": "fb5bf511cf731feab1700629",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "Neither report was read; the initial queried case belief persists."
+    },
+    {
+      "review_id": "a3ae4f72bec5183ab42cc8ef",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The later read replacement names the queried chest."
+    },
+    {
+      "review_id": "05a86f4f815248ad9af81318",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The read single report names the queried folder."
+    },
+    {
+      "review_id": "2c3fc9bbfd6efcf50124d74c",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "Only the first report was read; it names the queried case."
+    },
+    {
+      "review_id": "e0a75404b50613d03824a79e",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The later read replacement names the queried box."
+    },
+    {
+      "review_id": "b9dfc8d849444966e24e1ae0",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The later read replacement names the queried cabinet."
+    },
+    {
+      "review_id": "3c07f3b6e22873a428f45bcc",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "Neither report was read; the initial queried wallet belief persists."
+    },
+    {
+      "review_id": "f07d90fbe4fa8ed9fe352706",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The read replacement names the queried chest."
+    },
+    {
+      "review_id": "04e05f1894bda944fa7046bd",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "Only the first report was read; it names the queried cupboard."
+    },
+    {
+      "review_id": "dd590a3c671797a4f388b48f",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The read single report names the queried cabinet."
+    },
+    {
+      "review_id": "ebf10b3403ef840d69a290b9",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The later read replacement names the queried cupboard."
+    },
+    {
+      "review_id": "0ecd115affc325f43cc906e9",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "Neither report was read; the initial queried box belief persists."
+    },
+    {
+      "review_id": "5711344aba90ec30cd436312",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "Neither report was read; the initial chest belief persists, not the queried folder."
+    },
+    {
+      "review_id": "b3e99b4760b4cf895f7873b9",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The later read replacement names the folder, not the queried chest."
+    },
+    {
+      "review_id": "6e070648dfecb08c620394a9",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "Only the first report was read; it names the wallet, not the queried box."
+    },
+    {
+      "review_id": "c10d9e70e7672c14167665f5",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The read single report names the queried wallet. Minor article error: 'a invitation'."
+    },
+    {
+      "review_id": "b44300b3161be879facc2115",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The directly stated final attribution names the queried case."
+    },
+    {
+      "review_id": "f796d495646780e5b1038121",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "Neither report was read; the initial drawer belief persists."
+    },
+    {
+      "review_id": "7ccbbf60e85c415c04374391",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The read replacement names the chest, not the queried folder."
+    },
+    {
+      "review_id": "f395126d1c8170334999a580",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "Neither report was read; the initial queried box belief persists. Minor article error: 'a index'."
+    },
+    {
+      "review_id": "aefca9761a676ebdcbeeb3f7",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The later read replacement names the queried cupboard."
+    },
+    {
+      "review_id": "8dbcb38465042adf7c249505",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "Neither report was read; the initial chest belief persists. Minor article error: 'a envelope'."
+    },
+    {
+      "review_id": "9091b9f8cd45a73d6abd8c85",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The read replacement names the box, not the queried wallet. Minor article error: 'a invitation'."
+    },
+    {
+      "review_id": "9a14b9e6d5ce4dcae13f0232",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The read single report names the queried folder."
+    },
+    {
+      "review_id": "7e2c37fabcf4a5783cdba98f",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The single report was not read; the initial cupboard belief persists."
+    },
+    {
+      "review_id": "51780d2c734a45fbd2033fb0",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "Only the first report was read; it names the box, not the queried wallet. Minor article error: 'a invitation'."
+    },
+    {
+      "review_id": "eb80d9f293890056f80b457f",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The later read replacement names the folder, not the queried chest."
+    },
+    {
+      "review_id": "03813c84a3790a181c456585",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "Only the first report was read; it names the queried tray."
+    },
+    {
+      "review_id": "97a7bbbef7342ac48f60cad8",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The later read replacement names the case, not the queried basket."
+    },
+    {
+      "review_id": "009d8fb13f59d3a977830f94",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The later read replacement names the queried cabinet."
+    },
+    {
+      "review_id": "1d37506bd2a3470654de8e9f",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The read replacement names the queried chest."
+    },
+    {
+      "review_id": "674aabe06f18f96fd39719f0",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The read replacement names the tray, not the queried cupboard."
+    },
+    {
+      "review_id": "de257ae0fe637d666f5821e7",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "Neither report was read; the initial wallet belief persists. Minor article error: 'a index'."
+    },
+    {
+      "review_id": "582cd8c7a44e327ac6604a8f",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The later read replacement names the queried basket."
+    },
+    {
+      "review_id": "388303c6166945c02be3b5b0",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "Neither report was read; the initial queried cabinet belief persists."
+    },
+    {
+      "review_id": "e499194389c0445dfbf4ab98",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "Only the first report was read; it names the cupboard, not the queried tray."
+    },
+    {
+      "review_id": "a7b127681210fd6e3dd8c3f8",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The single report was not read; the initial queried basket belief persists."
+    },
+    {
+      "review_id": "8db2d2f0d6f95251c7dc5af7",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The later read replacement names the tray, not the queried cupboard."
+    },
+    {
+      "review_id": "d52c06e57577733ba365fb69",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The later read replacement names the box, not the queried wallet."
+    },
+    {
+      "review_id": "4956899e37d4117e57d475c4",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The read single report names the queried tray."
+    },
+    {
+      "review_id": "05f17306e534d2acbc79ab07",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "Neither report was read; the initial queried box belief persists. Minor article error: 'a invitation'."
+    },
+    {
+      "review_id": "9c8296353bc0329b5d7b7167",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "Only the first report was read; it names the box, not the queried wallet. Minor article error: 'a index'."
+    },
+    {
+      "review_id": "e41621cea980f65f3e4acd44",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "Only the first report was read; it names the queried case."
+    },
+    {
+      "review_id": "c634ceaeca3bf11f31157b2a",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The later read replacement names the queried case."
+    },
+    {
+      "review_id": "518edae051f7cb178700e0a8",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The directly supplied attribution names the queried tray."
+    },
+    {
+      "review_id": "c500ad282374626a72363fea",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The read replacement names the queried wallet."
+    },
+    {
+      "review_id": "676e33b35be997b20e9064fe",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The later read replacement names the cabinet, not the queried drawer. Minor article error: 'a endleaf'."
+    },
+    {
+      "review_id": "2c738cb7fdee607c37223b53",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The later read replacement names the queried drawer."
+    },
+    {
+      "review_id": "9f92515e308b4c4b542cf888",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The read replacement names the wallet, not the queried box."
+    },
+    {
+      "review_id": "df743e3986369e69c759ec77",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "Only the first report was read; it names the chest, not the queried folder."
+    },
+    {
+      "review_id": "6726c013c5fa1d1dcb049be3",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The later read replacement names the queried cabinet."
+    },
+    {
+      "review_id": "3c70881a1b2bb25325bd9688",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The read single report names the tray, not the queried cupboard."
+    },
+    {
+      "review_id": "d28bb02765b25778bf0ac810",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The later read replacement names the queried tray."
+    },
+    {
+      "review_id": "4e3d0bbf779de09c9d0d80a9",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "Only the first report was read; it names the queried cabinet."
+    },
+    {
+      "review_id": "25c6bd945dd558c64ad5f031",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The read replacement names the queried folder."
+    },
+    {
+      "review_id": "01a0679c731abb0a158b50f8",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "Neither report was read; the initial queried wallet belief persists."
+    },
+    {
+      "review_id": "2fda0880a245f1ca67b57e5f",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The later read replacement names the queried drawer."
+    },
+    {
+      "review_id": "41fa13c19c18c5d040a2e296",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "Only the first report was read; it names the box, not the queried wallet. Minor article error: 'a index'."
+    },
+    {
+      "review_id": "25226f3ea53bdeb7b735b5e2",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The read replacement names the wallet, not the queried box."
+    },
+    {
+      "review_id": "aba16ab513c8a0bdf1f51691",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The read replacement names the queried drawer."
+    },
+    {
+      "review_id": "cb3f7f5d430bb454dbe276fb",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The read replacement names the queried case."
+    },
+    {
+      "review_id": "f60fee58b530a234e574496e",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The single report was not read; the initial queried cupboard belief persists."
+    },
+    {
+      "review_id": "83435ad0d90a8bf0d9e53dd0",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The read replacement names the chest, not the queried folder."
+    },
+    {
+      "review_id": "594e9b3dd2ef6d21a84e5e73",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The later read replacement names the chest, not the queried folder."
+    },
+    {
+      "review_id": "d151a051f048dbeee986a643",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "Only the first report was read; it names the queried cupboard."
+    },
+    {
+      "review_id": "97411899424f100455d31821",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The later read replacement names the tray, not the queried cupboard."
+    },
+    {
+      "review_id": "3b0c8c9fa26f360e2151aff3",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The later read replacement names the basket, not the queried case."
+    },
+    {
+      "review_id": "2dd0a2e2fc5fe575111fdc58",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The later read replacement names the queried folder."
+    },
+    {
+      "review_id": "59b142ab27798d7d8923eb5b",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The later read replacement names the chest, not the queried folder."
+    },
+    {
+      "review_id": "8aa0642a18619f94d57e7514",
+      "answer": "NO",
+      "acceptable": true,
+      "note": "The single report was not read; the initial wallet belief persists."
+    },
+    {
+      "review_id": "6f4df683d0c536c187ed0ac1",
+      "answer": "YES",
+      "acceptable": true,
+      "note": "The read replacement names the queried wallet."
+    }
+  ]
+}

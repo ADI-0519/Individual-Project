@@ -1,0 +1,26 @@
+{
+  "schema": "fresh-readout-build-receipt-v2",
+  "audit": {
+    "rows": 7040,
+    "partitions": {
+      "source_fit": 512,
+      "source_dev": 512,
+      "correction_fit": 512,
+      "correction_dev": 512,
+      "test": 4992
+    },
+    "fresh_contexts": 48,
+    "paired_test_contexts": 24,
+    "test_primary_quartets_per_renderer": 192,
+    "human_review_complete": false
+  },
+  "review_prompts": 108,
+  "review_base_contexts": 48,
+  "output_sha256": {
+    "bank.json": "bb277ba4efa6e090879405e472a8cb70a973b3ab53cfe340ede56c61cfa98e35",
+    "split_manifest.json": "05313b80575e4c87a9b44c2d920d08805885117d3f18ab90fc0cb40f4cc95ba5",
+    "review_packet.json": "222ad9e662f8b683c44bf09b7f575a3c30d11384e74b0954c880412adf7ed2f6",
+    "review_key.json": "d1141a61d4a36694bd32a3e34d6b58a3e53e5e70397bafc39b278ee1b00435d2",
+    "engineering_row.json": "0605b428bc9bdbfa5075a812793bec41d308cfd79e86c3a2490d12ae1ed9a15d"
+  }
+}

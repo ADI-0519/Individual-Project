@@ -1,0 +1,39 @@
+{
+  "schema": "fresh-readout-launcher-portability-v1",
+  "checked_on": "2026-11-23",
+  "scope": "Windows launcher receipt hashing only; scientific source, protocol and campaign outputs unchanged.",
+  "ci_failure": {
+    "run_url": "https://github.com/ADI-0519/Individual-Project/actions/runs/45088911490",
+    "platform": "windows-latest, Python 3.11",
+    "result": "2 failed, 1604 passed, 7 skipped",
+    "verified_cause": "Both failing launcher tests raised CommandNotFoundException for Get-FileHash.",
+    "unverified_environment_hypothesis": "PowerShell 5.1 inherited a module search path from PowerShell 7."
+  },
+  "change": "Use one streaming .NET SHA256 helper at both registration and worker receipt sites, preserving lowercase literal-file hashes and disposing the stream and algorithm.",
+  "historical_campaign_launcher": {
+    "sha256": "1d1c3c75f689b4f5d7309418b9bd68f3aafb087327cf89b25262c84fe67aa47a",
+    "bytes": 17070,
+    "snapshot_path": "docs/validation/audit-source-snapshots-2026-11-23/1d1c3c75f689b4f5d7309418b9bd68f3aafb087327cf89b25262c84fe67aa47a_start_fresh_readout_durable.ps1.txt",
+    "binding_receipt": "docs/validation/2026-11-23-fresh-readout-detached-campaign-start-v1.json",
+    "snapshot_matches_original_working_bytes": true,
+    "git_snapshot_text_attribute": "unset; original bytes retained"
+  },
+  "checked_sources": {
+    "scripts/start_fresh_readout_durable.ps1": "a5d00c49daa9f898c0037b2a80ff775facc57e2b312000c7bc6c007d57c06ad0",
+    "tests/test_fresh_readout_durable_launcher.py": "5a69320214f55dab4ac805b249925603e25337511158ae121161bfdcca3a7708"
+  },
+  "validation": {
+    "python": ".venv/Scripts/python.exe, Python 3.11.9",
+    "powershell": "Windows PowerShell 5.1.26100.9818",
+    "regression_setup": "Import required PowerShell modules, disable module autoloading, remove Get-FileHash and assert it is unavailable before invoking the launcher.",
+    "before_fix": "Focused direct canary Worker and detached canary tests: 2 failed with the original Get-FileHash CommandNotFoundException.",
+    "after_fix_command": ".venv/Scripts/python.exe -m pytest tests/test_fresh_readout_durable_launcher.py -q",
+    "after_fix_result": "9 passed in 19.67s",
+    "hash_checks": "Python hashlib.sha256 equals the direct worker receipt, detached registration receipt, detached worker receipt and copied worker.ps1 bytes.",
+    "other_checks": "ruff check, ruff format --check and git diff --check passed.",
+    "harmless_execution_only": "Zero-duration direct canary, ten-second detached canary, foreground stream-drain child, and WSL printf environment test."
+  },
+  "new_language_model_calls": 0,
+  "new_scientific_campaign_runs": 0,
+  "historical_campaign_receipts_rewritten": false
+}

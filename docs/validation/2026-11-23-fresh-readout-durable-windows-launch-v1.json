@@ -1,0 +1,473 @@
+{
+  "schema": "fresh-readout-durable-windows-launch-validation-v1",
+  "written_at": "2026-11-23T00:19:29.247385+00:00",
+  "status": "canary_pass_no_campaign_launched",
+  "model_calls": 0,
+  "classifier_fits": 0,
+  "fresh_native_outcomes_read": false,
+  "launcher_source_sha256": {
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\scripts\\start_fresh_readout_durable.ps1": "1d1c3c75f689b4f5d7309418b9bd68f3aafb087327cf89b25262c84fe67aa47a",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\tests\\test_fresh_readout_durable_launcher.py": "17b254264a60c94455048361fa5166c69e759da3d026fbb1126f5d489e8e3d8e"
+  },
+  "scientific_sources_unchanged_sha256": {
+    "src/latent_probes/fresh_readout_fit.py": "cc1886c379ed2127cbf7e16f715939c634595f8b248ce5a2a100910d53738cc5",
+    "src/latent_probes/fresh_readout_analysis.py": "875c16eabb3ae3f8f21b148d94d779fcbfcfae812489dc7af6fca2be98838a8d",
+    "src/latent_probes/fresh_readout_capture.py": "5e1cc2195f15973be82b6bd62101a8753f03c61f4667256a40b1a45b9d083292"
+  },
+  "validated_launch_method": {
+    "method": "Win32_Process.Create via local CIM",
+    "installed_executable": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe",
+    "ShowWindow": 0,
+    "CreateFlags": 150994944,
+    "CreateFlagsHex": "09000000",
+    "flags": [
+      "CREATE_NO_WINDOW08000000",
+      "CREATE_BREAKAWAY_FROM_JOB01000000"
+    ],
+    "user": "ADI-DESKTOP\\adirj",
+    "password_supplied": false,
+    "elevation_requested": false,
+    "global_power_or_application_control_policy_modified": false
+  },
+  "proof": {
+    "native_directory": "C:\\Users\\adirj\\AppData\\Local\\FreshReadoutDurable\\20261123T001014Z_0a4c7e930cd3439ab4ccd5d830e0926e",
+    "worker_pid": 52280,
+    "launch_returned_at": "2026-11-23T00:10:15.2616462Z",
+    "worker_started_at": "2026-11-23T00:10:15.5476468Z",
+    "finished_at": "2026-11-23T00:17:16.7933566Z",
+    "exit_code": 0,
+    "heartbeat_records": 85,
+    "first_sequence": 0,
+    "last_sequence": 84,
+    "elapsed_seconds": 420.6271667,
+    "max_heartbeat_interval_seconds": 5.068598099999974,
+    "worker_parent_chain": [
+      {
+        "pid": 52280,
+        "parent_pid": 3740,
+        "name": "powershell.exe",
+        "executable_path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "creation_date": "2026-11-23T00:10:15.2480190Z"
+      },
+      {
+        "pid": 3740,
+        "parent_pid": 2572,
+        "name": "WmiPrvSE.exe",
+        "executable_path": null,
+        "creation_date": "2026-11-23T00:02:25.1933610Z"
+      },
+      {
+        "pid": 2572,
+        "parent_pid": 2344,
+        "name": "svchost.exe",
+        "executable_path": null,
+        "creation_date": "2026-11-22T12:20:47.2800180Z"
+      },
+      {
+        "pid": 2344,
+        "parent_pid": 2268,
+        "name": "services.exe",
+        "executable_path": null,
+        "creation_date": "2026-11-22T12:20:47.0472570Z"
+      },
+      {
+        "pid": 2268,
+        "parent_pid": 2076,
+        "name": "wininit.exe",
+        "executable_path": null,
+        "creation_date": "2026-11-22T12:20:46.7869800Z"
+      }
+    ],
+    "actual_worker_job_query": {
+      "job_query_succeeded": true,
+      "pid": 52280,
+      "creation_utc": "2026-11-23T00:10:15.2480196Z",
+      "in_any_job": false,
+      "at": "2026-11-23T00:13:48.8356747Z"
+    },
+    "same_creation_flags_console_and_job_api_probe": {
+      "console_window_handle": 0,
+      "in_any_job": false,
+      "pid": 49732,
+      "job_query_succeeded": true,
+      "at": "2026-11-23T00:11:45.5781590Z"
+    },
+    "scope": "Verifies survival after registering shell/tool exit for420.627seconds, service-owned process parentage, no console and no job membership. Does not establish survival of Windows or WSL shutdown."
+  },
+  "validation": {
+    "pytest": "8 passed in16.36seconds",
+    "ruff": "passed",
+    "checks": [
+      "PowerShell5.1 parser",
+      "review and literal-argument guards before any campaign launch",
+      "simultaneous6MB stdout/stderr drain and nonzero child exit",
+      "harmless realWSL shell receives exact environment including spaces before execution",
+      "real10second CIM worker outlives launcher and owned cleanup",
+      "independent420second heartbeat and WindowsAPI no-console/no-job probes"
+    ]
+  },
+  "environment_before_any_linux_python_import": {
+    "OPENBLAS_NUM_THREADS": "4",
+    "OMP_NUM_THREADS": "4",
+    "MKL_NUM_THREADS": "4",
+    "NUMEXPR_NUM_THREADS": "4",
+    "HF_HOME": "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/.cache/huggingface-wsl",
+    "HF_HUB_CACHE": "/home/adirj/kcl-hf-cache",
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "TOKENIZERS_PARALLELISM": "false"
+  },
+  "root_launch_contract": {
+    "mode": "RegisterCampaign",
+    "LaunchMethod": "CimDetached",
+    "ReviewedCampaign_required": true,
+    "LinuxRunnerPath": "Root-reviewed absolute Linux recovery-then-completion runner; never supplied/executed by this auditor",
+    "foreground_wsl_waited": true,
+    "both_streams_drained_asynchronously": true,
+    "worker_receipts": [
+      "started.json",
+      "wsl_started.json",
+      "windows_worker_alive.json",
+      "finished.json or failure.json"
+    ],
+    "automatic_retry": false
+  },
+  "owned_task_cleanup": {
+    "completed_cim_canary": "No TaskScheduler task was created; worker exited; native cleanup receipt retained.",
+    "superseded_failed_tasks": "Exactly two owned inactive canary definitions were exported with currentuser/XML/state/LastResult checks and deleted00:18:21UTC. All native files retained.",
+    "unrelated_tasks_or_files_deleted": false
+  },
+  "history": [
+    {
+      "attempt": 1,
+      "native_directory": "C:\\Users\\adirj\\AppData\\Local\\FreshReadoutDurable\\20261122T235953Z_b5cf53ae77a545ebb4e89e141ffa1263",
+      "registration": {
+        "password_supplied": false,
+        "run_directory": "C:\\Users\\adirj\\AppData\\Local\\FreshReadoutDurable\\20261122T235953Z_b5cf53ae77a545ebb4e89e141ffa1263",
+        "created_at": "2026-11-22T23:59:53.2278273Z",
+        "kind": "canary",
+        "logon_type": 3,
+        "user": "ADI-DESKTOP\\adirj",
+        "status": "started",
+        "run_level": 0,
+        "action_window_style": "Hidden",
+        "new_language_model_calls": 0,
+        "worker_sha256": "a695c47f9ce3d3a36d50be9cd3c1135d91544847fa39670c864435077b2da98a",
+        "task_name": "CodexFreshReadoutCanary_b5cf53ae77a545ebb4e89e141ffa1263",
+        "instance_guid": "{7C9897E4-32CE-4B04-A258-2768D3A290FE}",
+        "caller_parent_chain": [
+          {
+            "pid": 45444,
+            "parent_pid": 21352,
+            "name": "powershell.exe",
+            "executable_path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+            "creation_date": "2026-11-22T23:59:52.8510450Z"
+          },
+          {
+            "pid": 21352,
+            "parent_pid": 6712,
+            "name": "codex.exe",
+            "executable_path": "C:\\Users\\adirj\\AppData\\Roaming\\Code\\agent-host\\sdk-cache\\codex\\0.163.0\\win32-x64\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe",
+            "creation_date": "2026-11-22T12:25:16.3344480Z"
+          },
+          {
+            "pid": 6712,
+            "parent_pid": 32388,
+            "name": "Code.exe",
+            "executable_path": "C:\\Users\\adirj\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+            "creation_date": "2026-11-22T12:25:11.6262830Z"
+          },
+          {
+            "pid": 32388,
+            "parent_pid": 9336,
+            "name": "Code.exe",
+            "executable_path": "C:\\Users\\adirj\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+            "creation_date": "2026-11-22T12:25:10.2939040Z"
+          },
+          {
+            "pid": 9336,
+            "parent_pid": 8668,
+            "name": "explorer.exe",
+            "executable_path": "C:\\Windows\\Explorer.EXE",
+            "creation_date": "2026-11-22T12:20:49.6354380Z"
+          }
+        ],
+        "caller_pid": 45444,
+        "method": "TaskSchedulerCOM",
+        "schema": "fresh-readout-durable-registration-v1",
+        "launch_returned_at": "2026-11-22T23:59:54.2382625Z"
+      },
+      "artifacts_sha256": {
+        "heartbeat.jsonl": "554d1412000d0c81f1bf468c25689cf6e77423b424ded00ccce922b438a38f97",
+        "registered_task.xml": "e1933778decf2190485f6ca44e5188488f6ee66c1537b7c2db3da05855268c49",
+        "registration.json": "c88d3beae4c96870593a78845d3a3b182e8938959b56ec421e8c80e83a73d92c",
+        "started.json": "90bdb5e4489807a3cb8c154523e30231c30e634b8a8308cf845710a99fc02555",
+        "status_20261123T000003064.json": "ef1a0588a19024607a2d17a8599b69d306e2ca6ad18eab80d645f10ea62d880c",
+        "status_20261123T000357587.json": "1570a1bcdf5207bdbeec841abf5cc8249cd1a44c3c325b1905b5438c9224f3bf",
+        "task_before_cleanup.xml": "5f82e17f230ee1f37bead85dd17dbc1cdd48c9ae7deeefda8edfaddf251825b0",
+        "task_cleanup.json": "19b15f2f9bbd49abc8b84e0bfaefb148b32e1ce1204199c27a4a5a4cf297b213",
+        "task_status_before_cleanup.json": "f91c79a35c5f55780b283211875d26bf9369e1dd6cb1b8ab5872ce320faa02c3",
+        "worker.ps1": "a695c47f9ce3d3a36d50be9cd3c1135d91544847fa39670c864435077b2da98a",
+        "worker_config.json": "02091b68cd49ca99a42fc1375cf12fbd825a46f92627c916e43dda9709e54369"
+      },
+      "outcome": "Stopped after135.1997166s with STATUS_CONTROL_C_EXIT C000013A; user later reported closing a terminal around00:02. Temporal consistency is recorded;22:55 interruption cause remains unknown."
+    },
+    {
+      "attempt": 2,
+      "native_directory": "C:\\Users\\adirj\\AppData\\Local\\FreshReadoutDurable\\20261123T000554Z_1e81d5e5b12c4f0bafd964b3ecfaf335",
+      "registration": {
+        "kind": "canary",
+        "launch_returned_at": "2026-11-23T00:05:55.6967395Z",
+        "host_source_sha256": "bd90884b3cae571943a6397dc319e283acecf5e6bb79b76049a078e8f0f82a5c",
+        "logon_type": 3,
+        "host_executable_sha256": "be80868ca21aee77d6387338442785f7adc4096ebcf9aa4b4cc5e1707fa59d7b",
+        "caller_parent_chain": [
+          {
+            "pid": 34612,
+            "parent_pid": 21352,
+            "name": "powershell.exe",
+            "executable_path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+            "creation_date": "2026-11-23T00:05:53.9709590Z"
+          },
+          {
+            "pid": 21352,
+            "parent_pid": 6712,
+            "name": "codex.exe",
+            "executable_path": "C:\\Users\\adirj\\AppData\\Roaming\\Code\\agent-host\\sdk-cache\\codex\\0.163.0\\win32-x64\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe",
+            "creation_date": "2026-11-22T12:25:16.3344480Z"
+          },
+          {
+            "pid": 6712,
+            "parent_pid": 32388,
+            "name": "Code.exe",
+            "executable_path": "C:\\Users\\adirj\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+            "creation_date": "2026-11-22T12:25:11.6262830Z"
+          },
+          {
+            "pid": 32388,
+            "parent_pid": 9336,
+            "name": "Code.exe",
+            "executable_path": "C:\\Users\\adirj\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+            "creation_date": "2026-11-22T12:25:10.2939040Z"
+          },
+          {
+            "pid": 9336,
+            "parent_pid": 8668,
+            "name": "explorer.exe",
+            "executable_path": "C:\\Windows\\Explorer.EXE",
+            "creation_date": "2026-11-22T12:20:49.6354380Z"
+          }
+        ],
+        "action_window_style": "Hidden",
+        "task_name": "CodexFreshReadoutCanary_1e81d5e5b12c4f0bafd964b3ecfaf335",
+        "action_host": "GUI subsystem .NET WindowsApplication; worker CreateNoWindow=true",
+        "user": "ADI-DESKTOP\\adirj",
+        "schema": "fresh-readout-durable-registration-v1",
+        "password_supplied": false,
+        "created_at": "2026-11-23T00:05:54.6222390Z",
+        "run_level": 0,
+        "caller_pid": 34612,
+        "status": "started",
+        "worker_sha256": "9b9f29d285181e28adfcf0b93e6aebc2debc261d49c60bd601e0b24a2d186a8a",
+        "run_directory": "C:\\Users\\adirj\\AppData\\Local\\FreshReadoutDurable\\20261123T000554Z_1e81d5e5b12c4f0bafd964b3ecfaf335",
+        "new_language_model_calls": 0,
+        "method": "TaskSchedulerCOM",
+        "instance_guid": "{0EC5485D-A11C-4DC5-8F92-DB8CBB66972F}"
+      },
+      "artifacts_sha256": {
+        "application_control_events.json": "2b879d05bbcfa5afbe0b8cabab0593a1cc5b2bd58ec2c45da68da4ea5b1a255b",
+        "registered_task.xml": "c0786abe15ee8b4aa7846791856fa2d3978e2147de77efb9f63721c05274943b",
+        "registration.json": "b67932487f37fc8445c9246d11682af8e274933cbf7928fd5ac3b0e64f663c70",
+        "status_20261123T000628993.json": "dc1691642ce4cb6265bcf363d567adfc511e8812989d256d686b027230d8bfcc",
+        "task_before_cleanup.xml": "69e57e9dc136d29d10f7abfdbb68f5f8d1b9dfbfa5ddf517066a8c6d07c40768",
+        "task_cleanup.json": "b2ba5bfc038897b2a1628826044fe696247861104dd2bccbd3e8e8b2c7c28d1e",
+        "task_host.cs": "bd90884b3cae571943a6397dc319e283acecf5e6bb79b76049a078e8f0f82a5c",
+        "task_host.exe": "be80868ca21aee77d6387338442785f7adc4096ebcf9aa4b4cc5e1707fa59d7b",
+        "task_status_before_cleanup.json": "f7389ea9ac064527d57b51a14aac07209e70fb6efd3a77d99c9912c4302791b9",
+        "worker.ps1": "9b9f29d285181e28adfcf0b93e6aebc2debc261d49c60bd601e0b24a2d186a8a",
+        "worker_config.json": "44b9083992ac088d6e00807e4928c48c79bb6154064f62b57878289299433ee6"
+      },
+      "outcome": "GUI .NET executable blocked before worker startup by Application Control,800711C7/4551; no policy disabled or escalation attempted."
+    },
+    {
+      "attempt": 3,
+      "native_directory": "C:\\Users\\adirj\\AppData\\Local\\FreshReadoutDurable\\20261123T000835Z_9b11e67347d249afaf13253756a8b2f4",
+      "registration": {
+        "password_supplied": false,
+        "run_directory": "C:\\Users\\adirj\\AppData\\Local\\FreshReadoutDurable\\20261123T000835Z_9b11e67347d249afaf13253756a8b2f4",
+        "created_at": "2026-11-23T00:08:35.7200929Z",
+        "kind": "canary",
+        "logon_type": 3,
+        "user": "ADI-DESKTOP\\adirj",
+        "status": "started",
+        "run_level": 0,
+        "cim_return_value": 0,
+        "action_window_style": "Hidden",
+        "new_language_model_calls": 0,
+        "worker_sha256": "dafccdde5c79753f52dcbbcd699548157572ee17e94218b7ed60357591c2a05e",
+        "worker_pid": 52196,
+        "task_name": "CodexFreshReadoutCanary_9b11e67347d249afaf13253756a8b2f4",
+        "caller_parent_chain": [
+          {
+            "pid": 54044,
+            "parent_pid": 21352,
+            "name": "powershell.exe",
+            "executable_path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+            "creation_date": "2026-11-23T00:08:35.3212960Z"
+          },
+          {
+            "pid": 21352,
+            "parent_pid": 6712,
+            "name": "codex.exe",
+            "executable_path": "C:\\Users\\adirj\\AppData\\Roaming\\Code\\agent-host\\sdk-cache\\codex\\0.163.0\\win32-x64\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe",
+            "creation_date": "2026-11-22T12:25:16.3344480Z"
+          },
+          {
+            "pid": 6712,
+            "parent_pid": 32388,
+            "name": "Code.exe",
+            "executable_path": "C:\\Users\\adirj\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+            "creation_date": "2026-11-22T12:25:11.6262830Z"
+          },
+          {
+            "pid": 32388,
+            "parent_pid": 9336,
+            "name": "Code.exe",
+            "executable_path": "C:\\Users\\adirj\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+            "creation_date": "2026-11-22T12:25:10.2939040Z"
+          },
+          {
+            "pid": 9336,
+            "parent_pid": 8668,
+            "name": "explorer.exe",
+            "executable_path": "C:\\Windows\\Explorer.EXE",
+            "creation_date": "2026-11-22T12:20:49.6354380Z"
+          }
+        ],
+        "create_flags": 16777224,
+        "caller_pid": 54044,
+        "method": "CimDetached",
+        "schema": "fresh-readout-durable-registration-v1",
+        "launch_returned_at": "2026-11-23T00:08:36.4435932Z"
+      },
+      "artifacts_sha256": {
+        "registration.json": "8be802b7609062431ab1831ef62a84457905c60079e93e2516ba057c3afd066c",
+        "status_20261123T000853452.json": "e62ea6ce15c5392ee8d2ef7a21e123ddfe9307ee9fb4864dae0450e14e621c2a",
+        "worker.ps1": "dafccdde5c79753f52dcbbcd699548157572ee17e94218b7ed60357591c2a05e",
+        "worker_config.json": "44b9083992ac088d6e00807e4928c48c79bb6154064f62b57878289299433ee6"
+      },
+      "outcome": "Win32_Process.Create with DETACHED_PROCESS|BREAKAWAY returned0 and PID52196, but no PowerShell worker-start receipt appeared and process exited. Bootstrap cause unestablished; this was not accepted as a successful launch."
+    },
+    {
+      "attempt": 4,
+      "native_directory": "C:\\Users\\adirj\\AppData\\Local\\FreshReadoutDurable\\20261123T001014Z_0a4c7e930cd3439ab4ccd5d830e0926e",
+      "registration": {
+        "password_supplied": false,
+        "run_directory": "C:\\Users\\adirj\\AppData\\Local\\FreshReadoutDurable\\20261123T001014Z_0a4c7e930cd3439ab4ccd5d830e0926e",
+        "created_at": "2026-11-23T00:10:14.6806489Z",
+        "kind": "canary",
+        "logon_type": 3,
+        "user": "ADI-DESKTOP\\adirj",
+        "status": "started",
+        "run_level": 0,
+        "cim_return_value": 0,
+        "action_window_style": "Hidden",
+        "new_language_model_calls": 0,
+        "worker_sha256": "1d1c3c75f689b4f5d7309418b9bd68f3aafb087327cf89b25262c84fe67aa47a",
+        "worker_pid": 52280,
+        "task_name": "CodexFreshReadoutCanary_0a4c7e930cd3439ab4ccd5d830e0926e",
+        "caller_parent_chain": [
+          {
+            "pid": 40724,
+            "parent_pid": 21352,
+            "name": "powershell.exe",
+            "executable_path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+            "creation_date": "2026-11-23T00:10:14.0864690Z"
+          },
+          {
+            "pid": 21352,
+            "parent_pid": 6712,
+            "name": "codex.exe",
+            "executable_path": "C:\\Users\\adirj\\AppData\\Roaming\\Code\\agent-host\\sdk-cache\\codex\\0.163.0\\win32-x64\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe",
+            "creation_date": "2026-11-22T12:25:16.3344480Z"
+          },
+          {
+            "pid": 6712,
+            "parent_pid": 32388,
+            "name": "Code.exe",
+            "executable_path": "C:\\Users\\adirj\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+            "creation_date": "2026-11-22T12:25:11.6262830Z"
+          },
+          {
+            "pid": 32388,
+            "parent_pid": 9336,
+            "name": "Code.exe",
+            "executable_path": "C:\\Users\\adirj\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+            "creation_date": "2026-11-22T12:25:10.2939040Z"
+          },
+          {
+            "pid": 9336,
+            "parent_pid": 8668,
+            "name": "explorer.exe",
+            "executable_path": "C:\\Windows\\Explorer.EXE",
+            "creation_date": "2026-11-22T12:20:49.6354380Z"
+          }
+        ],
+        "create_flags": 150994944,
+        "caller_pid": 40724,
+        "method": "CimDetached",
+        "schema": "fresh-readout-durable-registration-v1",
+        "launch_returned_at": "2026-11-23T00:10:15.2616462Z"
+      },
+      "artifacts_sha256": {
+        "actual_canary_job_query.json": "cdca427326db97791da6a1c894a42a4a45e869b7be1de1e14c193a56628981a0",
+        "finished.json": "8eceb64c0d7ebfa64dcfb4cd25d85ca60aff07cd088edf3a753e488332f6c7e7",
+        "heartbeat.jsonl": "7e3d0b577ed175fe2afdfe97e08da3d700ef4359d15d44f7d79a574ec80d9956",
+        "registration.json": "a579e1314c1c367e535189f9690c8106d5468e350045d0b094be71c039340ff0",
+        "started.json": "ecdef1485d4ea3ed5aa8ca7e89eb9f25eaf6615efcd2c39ef882db273a2fb01a",
+        "status_20261123T001022470.json": "14908988e24b48e25ec4c5e3b86c433728784b5b7ca05d8b73d643b9b3b1183f",
+        "status_20261123T001308256.json": "64ac283df0e4fda4d44560f1dcdcfcaaea948c6f4191ccc4cec582ccd534b714",
+        "status_20261123T001445134.json": "32ea629898691891dadf8d6ddc45820d3c1a089d7c4a5e1ffd940858d6ef18c3",
+        "status_20261123T001738197.json": "ce77f078dcd049a5b065a12fae21106c636fbc569b3c2545989ace4bc95e19c5",
+        "task_cleanup.json": "3f4f05ee77bb5e52a1ccb36686fb718518a1216c63317228d18fcd61551993db",
+        "worker.ps1": "1d1c3c75f689b4f5d7309418b9bd68f3aafb087327cf89b25262c84fe67aa47a",
+        "worker_config.json": "44b9083992ac088d6e00807e4928c48c79bb6154064f62b57878289299433ee6"
+      },
+      "outcome": "Passed full420second no-window, no-job harmless heartbeat canary and exited0."
+    }
+  ],
+  "additional_capability_probe_artifacts_sha256": {
+    "C:\\Users\\adirj\\AppData\\Local\\FreshReadoutDurable\\capability_2485beecc3ae48209c27bf1ee2f884b2\\capability.json": "047dd8cf93e7cd2dcf228764a87e468b2780b7a75762aa6278916e490de0cc56",
+    "C:\\Users\\adirj\\AppData\\Local\\FreshReadoutDurable\\capability_2485beecc3ae48209c27bf1ee2f884b2\\probe.ps1": "95907f9af3948aaee9ad3148e8ed6ebea6526f5cbf0415e29e0b9477efeeec06"
+  },
+  "official_microsoft_sources": [
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/cimwin32prov/create-method-in-class-win32-process",
+      "supports": "CIMCreate signature/result0 and provider-job breakaway requirement"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/cimwin32prov/win32-processstartup",
+      "supports": "StartupShowWindow and CreateFlags configuration"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/procthread/process-creation-flags",
+      "supports": "CREATE_NO_WINDOW and CREATE_BREAKAWAY_FROM_JOB semantics; NO_WINDOW ignored with DETACHED_PROCESS, so flags are not combined"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/console/getconsolewindow",
+      "supports": "NULL means no associated console"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/jobapi/nf-jobapi-isprocessinjob",
+      "supports": "NULLjobhandle queries membership in anyjob"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/taskschd/taskfolder-registertaskdefinition",
+      "supports": "Leastprivilege currentinteractiveuser task registration used in preserved unsuccessful attempts"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.process.standarderror?view=netframework-4.8.1",
+      "supports": "Concurrent/asynchronous stream drainage avoids nativepipe deadlocks"
+    }
+  ]
+}

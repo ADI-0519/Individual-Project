@@ -1,0 +1,119 @@
+{
+  "schema": "fresh-readout-independent-numerical-audit-authoring-v1",
+  "written_at": "2026-11-22T22:31:41.804424+00:00",
+  "author_agent": "/root/fresh_numerical_auditor",
+  "native_outcome_artifacts_read_or_parsed": false,
+  "native_predictions_or_results_seen": false,
+  "model_calls_or_fitting_executions": 0,
+  "source_sha256": {
+    "scripts/audit_fresh_readout_saved_data.py": "1fb30645c81cb9b7916c8308761b0d5a22b9eb6c731e38275410606a1ba841c2",
+    "tests/test_fresh_readout_saved_data_audit.py": "d28ca699a583ad0b6b32990b97a2f98a68fe8676db0b650f996ad36a16dcb4bf",
+    "docs/FRESH_READOUT_EXECUTION_PROTOCOL_V2.md": "8b8b9eef71d28b4e254bae4ac9ee22513bf2ad7c27c21f43368ff5e9caddbbf3",
+    "src/latent_probes/fresh_readout_fit.py": "cc1886c379ed2127cbf7e16f715939c634595f8b248ce5a2a100910d53738cc5",
+    "src/latent_probes/fresh_readout_analysis.py": "875c16eabb3ae3f8f21b148d94d779fcbfcfae812489dc7af6fca2be98838a8d",
+    "src/latent_probes/fresh_readout_capture.py": "5e1cc2195f15973be82b6bd62101a8753f03c61f4667256a40b1a45b9d083292"
+  },
+  "chronology": [
+    {
+      "order": 1,
+      "event": "Read graphify skill; schema-only repository lookup. No fresh native artifacts accessed."
+    },
+    {
+      "order": 2,
+      "at": "2026-11-22T22:14:49.5632600Z",
+      "time_semantics": "Command start timestamp",
+      "event": "Located named frozen protocol and fitting/analysis source files."
+    },
+    {
+      "order": 3,
+      "after": "2026-11-22T22:14:49.5632600Z",
+      "before": "2026-11-22T22:15:10.5836318Z",
+      "event": "Read full execution protocol and searched fitting/analysis schema declarations. Exact individual file-open instants were not instrumented; interval bounds are tool-command timestamps."
+    },
+    {
+      "order": 4,
+      "at": "2026-11-22T22:15:10.5836318Z",
+      "time_semantics": "Command start timestamp",
+      "event": "Read public analysis schema and fitting safe-array/head metadata and scoring schema. Parallel graphify schema query returned unrelated older-study summary labels; no fresh-study outcomes. These labels did not inform audit algorithms."
+    },
+    {
+      "order": 5,
+      "at": "2026-11-22T22:15:22.1392603Z",
+      "time_semantics": "Command start timestamp",
+      "event": "Read remaining analysis output inventory, fitting validation schema and project Python dependencies. No AGENTS.md found in ancestor paths checked."
+    },
+    {
+      "order": 6,
+      "event": "Proposed independent reconstruction/freeze/compare sequence to root; root authorized checker/test authoring while retaining the native-data gate."
+    },
+    {
+      "order": 7,
+      "at": "2026-11-22T22:16:05.1706048Z",
+      "time_semantics": "Command start timestamp",
+      "event": "Read protocol provenance and capture header/site schema for saved-data interface only."
+    },
+    {
+      "order": 8,
+      "at": "2026-11-22T22:20:03.7421707Z",
+      "time_semantics": "Windows filesystem creation time",
+      "event": "Created independently authored standalone audit script outside frozen scientific sources."
+    },
+    {
+      "order": 9,
+      "at": "2026-11-22T22:20:15.3650995Z",
+      "time_semantics": "Command start timestamp",
+      "event": "Read capture raw-forward/row-journal and both-fit seal schema. Subsequent source-only read expanded completed-row schema; no native artifacts opened."
+    },
+    {
+      "order": 10,
+      "at": "2026-11-22T22:22:26.3006846Z",
+      "time_semantics": "Windows filesystem creation time",
+      "event": "Created synthetic tests; iterated only on independent checker and tests."
+    },
+    {
+      "order": 11,
+      "event": "Initial 12 tests passed; expanded to 17 tests including 4992-row/17-method metrics and full two-model current-schema run_audit/reconstruct_model integration. Real raw-journal capture schema separately exercised with synthetic arrays. Integration replaces only capture boundary to avoid 70400 tiny test files."
+    },
+    {
+      "order": 12,
+      "event": "Root authorized future native audit execution conditionally only after both analyses have final manifests and output hashes verified, delegated to completion watcher. No native audit execution occurred during authoring."
+    },
+    {
+      "order": 13,
+      "event": "All 17 synthetic tests passed in 90.74 seconds; no production derivation, fitting, or inference imported."
+    },
+    {
+      "order": 14,
+      "at": "2026-11-22T22:30:08.9847038Z",
+      "time_semantics": "Windows filesystem last-write time",
+      "event": "Final audit-source edit clarified completion-gate byte hashing versus outcome parsing. Both independent reconstructions precede any saved-output parsing."
+    },
+    {
+      "order": 15,
+      "at": "2026-11-22T22:30:09.0337889Z",
+      "time_semantics": "Windows filesystem last-write time",
+      "event": "Updated matching receipt-field assertion in synthetic tests."
+    },
+    {
+      "order": 16,
+      "event": "Four affected authorization/freeze/import/fixture tests passed after final wording/receipt-field edit; Ruff lint passed. Final script SHA sent READY to completion-watcher agent."
+    }
+  ],
+  "test_results": {
+    "full_suite": "17 passed in 90.74s",
+    "post_final_receipt_field_edit": "4 passed, 13 deselected in 2.37s",
+    "ruff_check": "passed"
+  },
+  "independence_contract": {
+    "imports": "stdlib and NumPy only; AST synthetic test rejects production, sklearn and model imports",
+    "safe_array_prediction": "Float64 saved scaling, row L2, saved LR coefficient/intercept, strict positive threshold, learned four-factor Boolean fold including asserted cases, raw YES-minus-NO output margin",
+    "freeze_order": "Verify both analysis file-pair hashes without parsing; reconstruct and freeze BOTH model arrays/metrics/fixed-bootstrap draws; only then parse either saved predictions/results payload",
+    "numerical_tolerance": "Absolute 1e-9 for reconstructed floating margins/metrics; verdicts, factor predictions, row/method identities and integer counts exact",
+    "bootstrap": "Exactly 24 sorted paired contexts, 10000 whole-context draws, NumPy default_rng seed 20261122, linear 2.5/97.5 percentiles; no alternative resampling",
+    "limitations": [
+      "Unretained candidate coefficients are not saved, so their numeric development scores cannot be independently reconstructed without prohibited refitting.",
+      "Final arrays and recorded histories cannot prove optimizer execution or absence of unrecorded fitting.",
+      "Exact file-read instants before authoring were not instrumented; recorded bounds and command timestamps are labeled honestly."
+    ]
+  }
+}

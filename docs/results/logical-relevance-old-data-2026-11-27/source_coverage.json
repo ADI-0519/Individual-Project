@@ -1,0 +1,52 @@
+{
+  "schema": "logical-relevance-primary-source-coverage-v1",
+  "read_at_utc": "2026-11-27T01:41:54.994209+00:00",
+  "sources": [
+    {
+      "paper": "Prakash et al., Language Models Use Lookbacks to Track Beliefs",
+      "version": "2505.14685v3",
+      "primary_url": "https://arxiv.org/html/2505.14685v3",
+      "direct_review_coverage": [
+        "sections 3.1 and 3.3",
+        "section 4",
+        "sections 5.1 and 5.2",
+        "section 6 introduction"
+      ],
+      "delegated_literature_reviewer_coverage": [
+        "sections 3-5, PDF pages 3-8",
+        "section 6 setup/interventions, PDF pages 8-9",
+        "appendices G-H, PDF pages 24-25",
+        "appendix M, PDF pages 30-32"
+      ],
+      "report_claims_use": [
+        "selected behaviorally correct sample scope",
+        "pointer/payload interchange distinction",
+        "intervened high-level algorithm versus external decoding"
+      ]
+    },
+    {
+      "paper": "Steele et al., Belief-reality separation lives in routing over a shared value slot in language models",
+      "version": "2607.11945v2",
+      "primary_url": "https://arxiv.org/pdf/2607.11945v2",
+      "direct_review_coverage": [
+        "sections 3.2-3.4",
+        "sections 4.2-4.4, PDF pages 8-11",
+        "section 7, PDF page 13"
+      ],
+      "delegated_literature_reviewer_coverage": [
+        "section 3, PDF pages 5-7",
+        "sections 4.2-4.4, PDF pages 8-11",
+        "section 7, PDF page 13",
+        "appendices B-C, PDF pages 18-19",
+        "appendix F, PDF page 21"
+      ],
+      "report_claims_use": [
+        "decodability versus value-controlling subspace",
+        "recipient-value/donor-color routing control",
+        "clean-pass projection ablation",
+        "preservation and sample-sensitivity limitations"
+      ]
+    }
+  ],
+  "limits": "Coverage lists inspected sections, not a claim of exhaustive reading. Paper comparisons are interpretive context and provide no causal evidence about this diagnostic or current models."
+}

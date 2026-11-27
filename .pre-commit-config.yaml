@@ -7,8 +7,12 @@ repos:
       - id: check-added-large-files
         entry: python -m pre_commit_hooks.check_added_large_files
         args: [--maxkb=1000]
-        # Reviewed 128-case source bank is 1.13 MiB; raw runs remain ignored.
-        exclude: ^(uv\.lock|data/belief_diagnostic/contrast_validation_v1\.json)$
+        # Versioned source/derived input packets; raw model runs remain ignored.
+        # Derived packets reproduce from the authored bank; the independent
+        # agent-answer snapshot is preserved as immutable audit evidence.
+        # The query-control analysis preserves all 3,840 same-response score traces.
+        # Full per-context diagnostic summaries/pair inventories are manifest-bound.
+        exclude: ^(uv\.lock|data/belief_diagnostic/contrast_validation_v1\.json|data/belief_main/main_v1/split_manifest_v1\.json|data/annotations/main_study_v1_agent_semantic_20261122\.json|docs/review/main_study_v1/(review_prompts\.jsonl|review\.html)|docs/validation/2026-11-22-main-study-query-anchoring-posthoc(-v2)?\.json|docs/results/format-score-shift-2026-11-26/[^/]+/(summary\.json|pairing_inventory\.csv)|docs/results/format-adaptation-2026-11-27/summary\.json)$
       - id: check-merge-conflict
         entry: python -m pre_commit_hooks.check_merge_conflict
       - id: check-yaml
@@ -19,12 +23,13 @@ repos:
         entry: python -m pre_commit_hooks.detect_private_key
       - id: end-of-file-fixer
         entry: python -m pre_commit_hooks.end_of_file_fixer
-        exclude: ^data/annotations/.*_agent_draft\.csv$
+        # Byte-bound research inputs are checked by their manifest validator.
+        exclude: ^(data/annotations/.*_agent_draft\.csv|data/annotations/main_study_v1_agent_semantic_20261122\.json|data/belief_main/.*\.json|docs/review/main_study_v1/.*|research/deceptionbench/.*\.json|docs/results/format-score-shift-2026-11-26/.*|docs/results/lexical-controls-2026-11-27/(analysis_started|fit_started)\.json|docs/validation/audit-source-snapshots-2026-11-26/.*)$
       - id: trailing-whitespace
         entry: python -m pre_commit_hooks.trailing_whitespace_fixer
         args: [--markdown-linebreak-ext=md]
-        # Preserve exact captured evidence, including internal line-end spaces.
-        exclude: ^(data/annotations/.*_agent_draft\.csv|docs/review/natural_selection_v1_human/review\.md)$
+        # Preserve captured evidence and byte-bound Matplotlib SVG exports.
+        exclude: ^(data/annotations/.*_agent_draft\.csv|data/annotations/main_study_v1_agent_semantic_20261122\.json|docs/review/natural_selection_v1_human/review\.md|data/belief_main/.*\.json|docs/review/main_study_v1/.*|research/deceptionbench/.*\.json|docs/results/[^/]+/[^/]+\.svg|docs/results/format-score-shift-2026-11-26/.*|docs/validation/audit-source-snapshots-2026-11-26/.*)$
   - repo: local
     hooks:
       - id: ruff-check
@@ -33,9 +38,11 @@ repos:
         entry: uv run --locked --group dev python -m ruff check
         language: system
         types_or: [python, pyi]
+        exclude: ^docs/results/format-score-shift-2026-11-26/[^/]+/diagnostic_source.*\.py$
       - id: ruff-format
         name: Ruff format (locked environment)
         require_serial: true
         entry: uv run --locked --group dev python -m ruff format --check
         language: system
         types_or: [python, pyi]
+        exclude: ^docs/results/format-score-shift-2026-11-26/[^/]+/diagnostic_source.*\.py$

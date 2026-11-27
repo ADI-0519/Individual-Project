@@ -1,0 +1,30 @@
+{
+  "schema": "main-study-report-manifest-v1",
+  "created_at": "2026-11-22T19:14:37.185814+00:00",
+  "test_fixture": false,
+  "research_status": "agent_audited_exploratory",
+  "human_review_complete": false,
+  "confirmatory_result": false,
+  "bank_sha256": "e038025571a38a7f2c489e5f8c3bf3b0a3c11a05f9b8c7e89d26292a4e7bfb1d",
+  "inputs": [
+    {
+      "path": "/home/adirj/kcl-latent-probes-runs/main_v1_agent_20261122_recovery_v1/llama_analysis_with_monitor.json",
+      "sha256": "bfa3d7fefa3016b114f1b6de9931804f815c984ea8c5b702c6d12c0cafe26b19"
+    },
+    {
+      "path": "/home/adirj/kcl-latent-probes-runs/main_v1_agent_20261122_recovery_v1/qwen_analysis_with_monitor.json",
+      "sha256": "02f66b9a15854e6c9209b3da6d9753d2c49ae2ff44b3e0ec07c77e162dcdff5d"
+    }
+  ],
+  "report_script_sha256": "8a746f03bfcf116246b1e334d9fefda4554f76a0cc11f546adc2931236b7a395",
+  "outputs": {
+    "learning_curves.pdf": "f3c1748f3fd765ac94540b4d1fc75cd1e7a245ac5a5c760581e8cdbd7271f1a9",
+    "learning_curves.png": "98b829388a4a68bace77de9f7812610e5c911ecbbd43b3417d065aa63039ca96",
+    "learning_curves.svg": "d7a33ca2976abcb8c548a05ab47101e94f145944f37558d8adb532c41c0abdc6",
+    "primary.pdf": "622915f0e25f4aee84bfc0ce9762ae772e2075365add5f78583551581397ceb8",
+    "primary.png": "b26f5f8adc7af7dbed95f273989222975fbfcca94936daa5a6e93948ea66a74e",
+    "primary.svg": "2226cdfbe373e8583ac785f0fdee9f8040697e731cf3655f6d75abae1cbd0d83",
+    "results.md": "7632b3f887fe4776a4a80d015ce90b7f40954b6f4772387c2fd7c5d2baee1e44",
+    "results_summary.json": "b08f5ae3b25e0d567230f984984a32af0e7c1d6e9cbc93db4808bf492a3d6f73"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "main-study-materials-build-v1",
+  "bank_sha256": "e038025571a38a7f2c489e5f8c3bf3b0a3c11a05f9b8c7e89d26292a4e7bfb1d",
+  "groups": 154,
+  "unique_prefixes": 5888,
+  "allocations": 15,
+  "split_rows": {
+    "train": 1536,
+    "development": 512,
+    "test": 3840
+  },
+  "human_review_complete": false,
+  "model_calls": 0,
+  "bindings": {
+    "main_bank_v1.json": "802f1519abe98172366e8381a1fa0dfe0772372991c8e8883c2570c431c5cac1",
+    "matched_allocations_v1.json": "4e720d4d9d523e74e7e1d29de91cf06adbaae1e2976813558edcd889bd97d8fd",
+    "split_manifest_v1.json": "f3925e43d8c9b23672e0fdb89b94aaeb273cf8614db23e720bc5af3a309ef4d7"
+  },
+  "review_bindings": {
+    "annotations.csv": "dfbc64e7240e42ddbcc24fefdcb19ea7e526f700d31431b122a29dbd7594a291",
+    "review.md": "fd7cfa0af8fa360e43a45a6de79ed5f4563f8344a8c8a8d4c08ba1710d5f46f9",
+    "review_ledger.json": "7b83fbf24c526e4ccb5c9505a27080c2d1b00fc6b8c6e51937d566b7e85a2d86",
+    "review_prompts.jsonl": "fa4791f72c8fb2743d5d29361ea38f8b1ad0e94cd3795250f189f28735f97751"
+  }
+}

@@ -1,0 +1,594 @@
+{
+  "items": [
+    {
+      "review_id": "704ee4c8f03ff5d9797a1268",
+      "case_id": "adapt_test_00__correction_hard_A__i1_u0_b1_b10_w1_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "e5e42493388203619607c345",
+      "case_id": "adapt_test_17__one_step_B__i1_u0_b0_w0_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "09caa252bd746eef9b093744",
+      "case_id": "adapt_test_08__correction_easy_A__i1_u1_b1_b11_w0_map0",
+      "gold": 0
+    },
+    {
+      "review_id": "e09bfc85b331b248d374abcd",
+      "case_id": "adapt_fit_00__correction_easy_B__i0_u0_b0_b10_w1_map1",
+      "gold": 0
+    },
+    {
+      "review_id": "6f570633132119fb9e96b10f",
+      "case_id": "adapt_test_18__correction_hard_B__i1_u0_b1_b10_w1_map0",
+      "gold": 1
+    },
+    {
+      "review_id": "ddd843331e845e3c0c76af0a",
+      "case_id": "adapt_test_14__one_step_A__i0_u1_b1_w0_map0",
+      "gold": 1
+    },
+    {
+      "review_id": "85a4a6896d4b6bedf277001c",
+      "case_id": "adapt_test_06__correction_easy_A__i0_u0_b0_b10_w1_map1",
+      "gold": 0
+    },
+    {
+      "review_id": "eee7b795a21ca08f1bc62653",
+      "case_id": "adapt_test_16__correction_hard_A__i1_u0_b1_b10_w1_map0",
+      "gold": 1
+    },
+    {
+      "review_id": "24c4603c81cddcda9b722a48",
+      "case_id": "adapt_test_23__asserted_B__e0_w1_map0",
+      "gold": 0
+    },
+    {
+      "review_id": "dd909fbd956e22269669b19f",
+      "case_id": "adapt_test_10__asserted_A__e0_w0_map0",
+      "gold": 0
+    },
+    {
+      "review_id": "79cdfcfbf3f08fca0aa927e3",
+      "case_id": "adapt_test_00__one_step_B__i0_u0_b1_w1_map1",
+      "gold": 0
+    },
+    {
+      "review_id": "128b96c1acf3f7135b9e78a9",
+      "case_id": "adapt_test_13__asserted_A__e1_w0_map0",
+      "gold": 1
+    },
+    {
+      "review_id": "9b1f527893615a20ba688049",
+      "case_id": "adapt_test_04__one_step_A__i1_u1_b1_w0_map0",
+      "gold": 1
+    },
+    {
+      "review_id": "e280ce29d1192bf56f97fe71",
+      "case_id": "adapt_fit_02__correction_hard_B__i1_u0_b1_b11_w0_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "160b73334369634186a0d486",
+      "case_id": "adapt_test_14__correction_hard_B__i0_u1_b1_b10_w0_map1",
+      "gold": 0
+    },
+    {
+      "review_id": "baaf68ddbc98fb05df1d7146",
+      "case_id": "adapt_test_04__correction_hard_A__i0_u1_b0_b10_w1_map1",
+      "gold": 0
+    },
+    {
+      "review_id": "20e8153321e6ec7c63673c01",
+      "case_id": "adapt_fit_09__correction_hard_B__i1_u0_b0_b10_w1_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "1001a584fc709f68f49bbc4c",
+      "case_id": "adapt_test_09__one_step_B__i0_u1_b1_w1_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "c0a0cd78565ffd58f5296181",
+      "case_id": "adapt_test_19__correction_easy_A__i1_u1_b0_b10_w0_map0",
+      "gold": 1
+    },
+    {
+      "review_id": "4f06ec0e6f31ba2936a8c9b9",
+      "case_id": "adapt_fit_14__correction_hard_B__i0_u1_b1_b10_w0_map1",
+      "gold": 0
+    },
+    {
+      "review_id": "1f715a621e836bb5f41dd930",
+      "case_id": "adapt_test_09__correction_easy_A__i0_u0_b1_b10_w0_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "8e86a907a1734dc61db07fff",
+      "case_id": "adapt_test_02__correction_easy_A__i1_u1_b0_b10_w1_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "8dc3f06589c41e9221dd9e2a",
+      "case_id": "adapt_fit_13__correction_hard_B__i0_u1_b1_b11_w1_map1",
+      "gold": 0
+    },
+    {
+      "review_id": "5bf5d42b8d964251b2019c40",
+      "case_id": "adapt_fit_11__correction_easy_B__i0_u0_b1_b10_w0_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "1e476b30baff44395b9ecdf4",
+      "case_id": "adapt_test_23__correction_easy_A__i0_u0_b0_b11_w1_map1",
+      "gold": 0
+    },
+    {
+      "review_id": "364971f362c77d51cb6ef1e3",
+      "case_id": "adapt_test_04__correction_easy_B__i0_u0_b0_b10_w0_map1",
+      "gold": 0
+    },
+    {
+      "review_id": "9c3be892036cf113620af35f",
+      "case_id": "adapt_fit_08__correction_hard_A__i1_u0_b0_b10_w0_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "e7a135310c3983f14397378f",
+      "case_id": "adapt_test_19__one_step_B__i0_u0_b1_w1_map1",
+      "gold": 0
+    },
+    {
+      "review_id": "7016d93f86247eceecea7f3c",
+      "case_id": "adapt_fit_08__correction_hard_B__i1_u0_b1_b10_w1_map0",
+      "gold": 1
+    },
+    {
+      "review_id": "5245dd97366f8337e5d5e0da",
+      "case_id": "adapt_fit_02__correction_easy_A__i0_u0_b0_b10_w0_map0",
+      "gold": 0
+    },
+    {
+      "review_id": "e6d556686e0798760712a78c",
+      "case_id": "adapt_test_20__one_step_A__i0_u0_b1_w0_map1",
+      "gold": 0
+    },
+    {
+      "review_id": "1b524ba9ea7a523cfed45131",
+      "case_id": "adapt_fit_07__correction_easy_B__i1_u1_b0_b10_w0_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "425ac351735af5c57211ae9d",
+      "case_id": "adapt_fit_04__correction_easy_A__i0_u0_b0_b11_w1_map1",
+      "gold": 0
+    },
+    {
+      "review_id": "35a1d3152e3df86af52675b9",
+      "case_id": "adapt_test_21__correction_hard_A__i0_u1_b1_b11_w1_map1",
+      "gold": 0
+    },
+    {
+      "review_id": "7862ba21995989e6ff9d81ae",
+      "case_id": "adapt_test_03__correction_hard_B__i0_u1_b1_b10_w1_map0",
+      "gold": 0
+    },
+    {
+      "review_id": "0d7b119986e3e17185c989d7",
+      "case_id": "adapt_test_18__correction_hard_A__i0_u1_b0_b10_w0_map0",
+      "gold": 0
+    },
+    {
+      "review_id": "063777774eb17eee9bdc5903",
+      "case_id": "adapt_test_18__correction_hard_B__i1_u0_b0_b11_w0_map0",
+      "gold": 0
+    },
+    {
+      "review_id": "96f17dce81f8ca84e140d524",
+      "case_id": "adapt_test_13__correction_hard_B__i1_u0_b0_b10_w0_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "0a6656860ad87c17e91e5372",
+      "case_id": "adapt_fit_07__correction_easy_B__i0_u0_b0_b10_w0_map1",
+      "gold": 0
+    },
+    {
+      "review_id": "b2bd04f8714753c1d6d9e7d7",
+      "case_id": "adapt_fit_11__correction_hard_A__i0_u1_b0_b10_w1_map1",
+      "gold": 0
+    },
+    {
+      "review_id": "f1a7be0fc8f8cac00560cea8",
+      "case_id": "adapt_fit_03__correction_easy_A__i0_u0_b1_b11_w1_map0",
+      "gold": 1
+    },
+    {
+      "review_id": "d07e6fdc28b6d4f5adb81fbb",
+      "case_id": "adapt_test_12__correction_easy_A__i0_u0_b1_b10_w0_map0",
+      "gold": 1
+    },
+    {
+      "review_id": "947ded8d69576383a3050e10",
+      "case_id": "adapt_test_17__correction_hard_A__i1_u0_b0_b10_w1_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "88144068056ef5784bc0650b",
+      "case_id": "adapt_test_05__correction_easy_A__i1_u1_b1_b11_w1_map1",
+      "gold": 0
+    },
+    {
+      "review_id": "81213b87d865955d661877db",
+      "case_id": "adapt_fit_12__correction_easy_A__i1_u1_b1_b11_w0_map0",
+      "gold": 0
+    },
+    {
+      "review_id": "80581aa6c7c14243d2e4cf42",
+      "case_id": "adapt_test_11__correction_easy_B__i0_u0_b0_b10_w0_map1",
+      "gold": 0
+    },
+    {
+      "review_id": "c45504338bf0f1ce92ba8bbd",
+      "case_id": "adapt_fit_06__correction_easy_B__i0_u0_b1_b11_w0_map0",
+      "gold": 1
+    },
+    {
+      "review_id": "fb5bf511cf731feab1700629",
+      "case_id": "adapt_fit_10__correction_easy_A__i1_u1_b0_b10_w1_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "a3ae4f72bec5183ab42cc8ef",
+      "case_id": "adapt_test_10__correction_easy_A__i0_u0_b1_b11_w0_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "05a86f4f815248ad9af81318",
+      "case_id": "adapt_test_15__one_step_B__i1_u1_b1_w0_map0",
+      "gold": 1
+    },
+    {
+      "review_id": "2c3fc9bbfd6efcf50124d74c",
+      "case_id": "adapt_fit_05__correction_easy_A__i1_u1_b0_b11_w0_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "e0a75404b50613d03824a79e",
+      "case_id": "adapt_test_11__correction_hard_B__i1_u0_b1_b11_w1_map0",
+      "gold": 1
+    },
+    {
+      "review_id": "b9dfc8d849444966e24e1ae0",
+      "case_id": "adapt_test_18__correction_hard_B__i1_u0_b1_b11_w1_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "3c07f3b6e22873a428f45bcc",
+      "case_id": "adapt_test_02__correction_hard_B__i1_u0_b0_b10_w1_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "f07d90fbe4fa8ed9fe352706",
+      "case_id": "adapt_fit_01__correction_hard_A__i1_u0_b1_b10_w1_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "04e05f1894bda944fa7046bd",
+      "case_id": "adapt_test_17__correction_hard_B__i0_u1_b0_b11_w1_map0",
+      "gold": 1
+    },
+    {
+      "review_id": "dd590a3c671797a4f388b48f",
+      "case_id": "adapt_test_23__one_step_B__i1_u1_b1_w1_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "ebf10b3403ef840d69a290b9",
+      "case_id": "adapt_test_22__correction_easy_B__i0_u0_b1_b11_w1_map0",
+      "gold": 1
+    },
+    {
+      "review_id": "0ecd115affc325f43cc906e9",
+      "case_id": "adapt_test_06__correction_hard_B__i1_u0_b0_b10_w1_map0",
+      "gold": 1
+    },
+    {
+      "review_id": "5711344aba90ec30cd436312",
+      "case_id": "adapt_test_20__correction_hard_B__i0_u1_b0_b10_w0_map0",
+      "gold": 0
+    },
+    {
+      "review_id": "b3e99b4760b4cf895f7873b9",
+      "case_id": "adapt_test_10__correction_hard_B__i0_u1_b1_b11_w0_map1",
+      "gold": 0
+    },
+    {
+      "review_id": "6e070648dfecb08c620394a9",
+      "case_id": "adapt_test_11__correction_easy_A__i0_u0_b0_b11_w1_map0",
+      "gold": 0
+    },
+    {
+      "review_id": "c10d9e70e7672c14167665f5",
+      "case_id": "adapt_test_21__one_step_B__i1_u1_b1_w1_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "b44300b3161be879facc2115",
+      "case_id": "adapt_test_09__asserted_A__e1_w0_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "f796d495646780e5b1038121",
+      "case_id": "adapt_fit_04__correction_easy_B__i0_u0_b0_b10_w1_map1",
+      "gold": 0
+    },
+    {
+      "review_id": "7ccbbf60e85c415c04374391",
+      "case_id": "adapt_fit_06__correction_hard_A__i0_u1_b1_b10_w1_map0",
+      "gold": 0
+    },
+    {
+      "review_id": "f395126d1c8170334999a580",
+      "case_id": "adapt_test_16__correction_hard_B__i1_u0_b0_b10_w1_map0",
+      "gold": 1
+    },
+    {
+      "review_id": "aefca9761a676ebdcbeeb3f7",
+      "case_id": "adapt_fit_13__correction_hard_A__i1_u0_b1_b11_w0_map0",
+      "gold": 1
+    },
+    {
+      "review_id": "8dbcb38465042adf7c249505",
+      "case_id": "adapt_test_05__correction_easy_B__i0_u0_b0_b10_w1_map0",
+      "gold": 0
+    },
+    {
+      "review_id": "9091b9f8cd45a73d6abd8c85",
+      "case_id": "adapt_test_21__correction_easy_B__i1_u1_b1_b10_w0_map1",
+      "gold": 0
+    },
+    {
+      "review_id": "9a14b9e6d5ce4dcae13f0232",
+      "case_id": "adapt_test_15__one_step_A__i0_u1_b1_w1_map0",
+      "gold": 1
+    },
+    {
+      "review_id": "7e2c37fabcf4a5783cdba98f",
+      "case_id": "adapt_test_07__one_step_B__i0_u1_b0_w1_map1",
+      "gold": 0
+    },
+    {
+      "review_id": "51780d2c734a45fbd2033fb0",
+      "case_id": "adapt_test_21__correction_hard_B__i1_u0_b0_b11_w0_map1",
+      "gold": 0
+    },
+    {
+      "review_id": "eb80d9f293890056f80b457f",
+      "case_id": "adapt_test_01__correction_hard_B__i0_u1_b1_b11_w1_map1",
+      "gold": 0
+    },
+    {
+      "review_id": "03813c84a3790a181c456585",
+      "case_id": "adapt_test_17__correction_hard_A__i0_u1_b0_b11_w1_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "97a7bbbef7342ac48f60cad8",
+      "case_id": "adapt_fit_05__correction_easy_A__i1_u1_b1_b11_w1_map0",
+      "gold": 0
+    },
+    {
+      "review_id": "009d8fb13f59d3a977830f94",
+      "case_id": "adapt_test_08__correction_hard_B__i1_u0_b1_b11_w1_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "1d37506bd2a3470654de8e9f",
+      "case_id": "adapt_test_10__correction_easy_B__i0_u0_b1_b10_w1_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "674aabe06f18f96fd39719f0",
+      "case_id": "adapt_test_03__correction_easy_A__i1_u1_b1_b10_w1_map0",
+      "gold": 0
+    },
+    {
+      "review_id": "de257ae0fe637d666f5821e7",
+      "case_id": "adapt_test_16__correction_easy_B__i0_u0_b0_b10_w0_map0",
+      "gold": 0
+    },
+    {
+      "review_id": "582cd8c7a44e327ac6604a8f",
+      "case_id": "adapt_fit_10__correction_easy_A__i0_u0_b1_b11_w0_map0",
+      "gold": 1
+    },
+    {
+      "review_id": "388303c6166945c02be3b5b0",
+      "case_id": "adapt_fit_09__correction_easy_A__i1_u1_b0_b10_w0_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "e499194389c0445dfbf4ab98",
+      "case_id": "adapt_fit_08__correction_hard_A__i1_u0_b0_b11_w0_map1",
+      "gold": 0
+    },
+    {
+      "review_id": "a7b127681210fd6e3dd8c3f8",
+      "case_id": "adapt_test_09__one_step_A__i1_u0_b0_w1_map0",
+      "gold": 1
+    },
+    {
+      "review_id": "8db2d2f0d6f95251c7dc5af7",
+      "case_id": "adapt_fit_13__correction_easy_A__i1_u1_b1_b11_w1_map0",
+      "gold": 0
+    },
+    {
+      "review_id": "d52c06e57577733ba365fb69",
+      "case_id": "adapt_fit_12__correction_easy_B__i1_u1_b1_b11_w1_map1",
+      "gold": 0
+    },
+    {
+      "review_id": "4956899e37d4117e57d475c4",
+      "case_id": "adapt_test_17__one_step_B__i1_u1_b1_w0_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "05f17306e534d2acbc79ab07",
+      "case_id": "adapt_test_21__correction_hard_A__i1_u0_b0_b10_w1_map0",
+      "gold": 1
+    },
+    {
+      "review_id": "9c8296353bc0329b5d7b7167",
+      "case_id": "adapt_test_16__correction_easy_B__i0_u0_b0_b11_w1_map1",
+      "gold": 0
+    },
+    {
+      "review_id": "e41621cea980f65f3e4acd44",
+      "case_id": "adapt_fit_10__correction_hard_B__i0_u1_b0_b11_w0_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "c634ceaeca3bf11f31157b2a",
+      "case_id": "adapt_fit_15__correction_hard_A__i1_u0_b1_b11_w1_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "518edae051f7cb178700e0a8",
+      "case_id": "adapt_test_07__asserted_B__e1_w1_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "c500ad282374626a72363fea",
+      "case_id": "adapt_test_06__correction_easy_A__i0_u0_b1_b10_w1_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "676e33b35be997b20e9064fe",
+      "case_id": "adapt_test_00__correction_easy_A__i1_u1_b1_b11_w0_map0",
+      "gold": 0
+    },
+    {
+      "review_id": "2c738cb7fdee607c37223b53",
+      "case_id": "adapt_fit_00__correction_easy_A__i0_u0_b1_b11_w0_map0",
+      "gold": 1
+    },
+    {
+      "review_id": "9f92515e308b4c4b542cf888",
+      "case_id": "adapt_test_11__correction_hard_B__i0_u1_b1_b10_w1_map0",
+      "gold": 0
+    },
+    {
+      "review_id": "df743e3986369e69c759ec77",
+      "case_id": "adapt_test_01__correction_easy_A__i0_u0_b0_b11_w0_map0",
+      "gold": 0
+    },
+    {
+      "review_id": "6726c013c5fa1d1dcb049be3",
+      "case_id": "adapt_fit_14__correction_easy_A__i0_u0_b1_b11_w1_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "3c70881a1b2bb25325bd9688",
+      "case_id": "adapt_test_07__one_step_B__i0_u0_b1_w0_map0",
+      "gold": 0
+    },
+    {
+      "review_id": "d28bb02765b25778bf0ac810",
+      "case_id": "adapt_fit_03__correction_easy_B__i0_u0_b1_b11_w0_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "4e3d0bbf779de09c9d0d80a9",
+      "case_id": "adapt_fit_00__correction_easy_B__i1_u1_b0_b11_w1_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "25c6bd945dd558c64ad5f031",
+      "case_id": "adapt_test_20__correction_easy_B__i0_u0_b1_b10_w0_map0",
+      "gold": 1
+    },
+    {
+      "review_id": "01a0679c731abb0a158b50f8",
+      "case_id": "adapt_fit_12__correction_hard_A__i1_u0_b0_b10_w0_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "2fda0880a245f1ca67b57e5f",
+      "case_id": "adapt_test_08__correction_easy_A__i0_u0_b1_b11_w1_map0",
+      "gold": 1
+    },
+    {
+      "review_id": "41fa13c19c18c5d040a2e296",
+      "case_id": "adapt_test_16__correction_easy_A__i0_u0_b0_b11_w1_map1",
+      "gold": 0
+    },
+    {
+      "review_id": "25226f3ea53bdeb7b735b5e2",
+      "case_id": "adapt_fit_07__correction_easy_A__i1_u1_b1_b10_w1_map0",
+      "gold": 0
+    },
+    {
+      "review_id": "aba16ab513c8a0bdf1f51691",
+      "case_id": "adapt_fit_09__correction_hard_A__i1_u0_b1_b10_w0_map0",
+      "gold": 1
+    },
+    {
+      "review_id": "cb3f7f5d430bb454dbe276fb",
+      "case_id": "adapt_fit_05__correction_hard_B__i1_u0_b1_b10_w1_map1",
+      "gold": 1
+    },
+    {
+      "review_id": "f60fee58b530a234e574496e",
+      "case_id": "adapt_test_07__one_step_A__i1_u1_b0_w0_map0",
+      "gold": 1
+    },
+    {
+      "review_id": "83435ad0d90a8bf0d9e53dd0",
+      "case_id": "adapt_test_10__correction_hard_A__i0_u1_b1_b10_w1_map0",
+      "gold": 0
+    },
+    {
+      "review_id": "594e9b3dd2ef6d21a84e5e73",
+      "case_id": "adapt_fit_01__correction_easy_B__i1_u1_b1_b11_w1_map0",
+      "gold": 0
+    },
+    {
+      "review_id": "d151a051f048dbeee986a643",
+      "case_id": "adapt_test_22__correction_easy_A__i1_u1_b0_b11_w0_map0",
+      "gold": 1
+    },
+    {
+      "review_id": "97411899424f100455d31821",
+      "case_id": "adapt_test_12__correction_hard_B__i0_u1_b1_b11_w0_map0",
+      "gold": 0
+    },
+    {
+      "review_id": "3b0c8c9fa26f360e2151aff3",
+      "case_id": "adapt_fit_15__correction_easy_B__i1_u1_b1_b11_w0_map1",
+      "gold": 0
+    },
+    {
+      "review_id": "2dd0a2e2fc5fe575111fdc58",
+      "case_id": "adapt_fit_01__correction_easy_B__i0_u0_b1_b11_w1_map0",
+      "gold": 1
+    },
+    {
+      "review_id": "59b142ab27798d7d8923eb5b",
+      "case_id": "adapt_test_15__correction_easy_B__i1_u1_b1_b11_w1_map0",
+      "gold": 0
+    },
+    {
+      "review_id": "8aa0642a18619f94d57e7514",
+      "case_id": "adapt_test_06__one_step_A__i0_u0_b0_w1_map0",
+      "gold": 0
+    },
+    {
+      "review_id": "6f4df683d0c536c187ed0ac1",
+      "case_id": "adapt_fit_07__correction_easy_A__i0_u0_b1_b10_w0_map1",
+      "gold": 1
+    }
+  ]
+}

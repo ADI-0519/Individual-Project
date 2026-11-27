@@ -1,0 +1,40 @@
+{
+  "schema": "cached-readout-adequacy-independent-audit-v1",
+  "model_calls": 0,
+  "classifier_refits": 0,
+  "pipeline_imported": false,
+  "research_status": "posthoc_exposed_bank_group_crossfit",
+  "models": {
+    "llama": {
+      "rows": 1920,
+      "groups": 30,
+      "outer_folds": 5,
+      "reconstructed_outer_heads": 15,
+      "train_only_transforms_checked": 10,
+      "reconstructed_oof_predictions": 5760,
+      "maximum_margin_absolute_error": 1.1723955140041653e-13,
+      "all_group_fold_and_aggregate_metrics_match": true
+    },
+    "qwen": {
+      "rows": 1920,
+      "groups": 30,
+      "outer_folds": 5,
+      "reconstructed_outer_heads": 15,
+      "train_only_transforms_checked": 10,
+      "reconstructed_oof_predictions": 5760,
+      "maximum_margin_absolute_error": 1.2050804798491299e-11,
+      "all_group_fold_and_aggregate_metrics_match": true
+    }
+  },
+  "source_sha256": {
+    "/home/adirj/kcl-latent-probes-runs/readout_adequacy_cf_v1_20261122/completed_manifest.json": "35d4ce616c456694ec9794f133c9116979bb65d61f91c260347d94c88fc424d1",
+    "/home/adirj/kcl-latent-probes-runs/readout_adequacy_cf_v1_20261122/prepared_manifest.json": "ee6cde0a588013d09eb703ac2fe0db3f1dab6db6c14b55b83bc48585665b5764",
+    "/home/adirj/kcl-latent-probes-runs/readout_adequacy_cf_v1_20261122_protocol.json": "bfd609ce61bce1699549ff42851e44ab24a4ee0976496752eef01a7097de32c3",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/readout_adequacy_cf_v1/fold_manifest.json": "8bd3d6b5e04199146244fcbea2a0c7e4d623c3d07ec2852e7b01a846415e463f",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/audit_cached_readout_adequacy_independent.py": "d6d94eb3a04f5da9aea6cf187cd19aa304e4b217282232e605a52c3e10fa59eb",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/tests/test_cached_readout_adequacy_independent.py": "eaa63ff3a87b850e7bfb67d9fa1091e0449b38931aa93a12636eab21f544a696",
+    "/home/adirj/kcl-latent-probes-runs/readout_adequacy_cf_v1_20261122/llama/oof_results.json": "4b597a0395e3f98b6037ebe9be767b91ddad9377553de1897e6dd6ea94fa2d88",
+    "/home/adirj/kcl-latent-probes-runs/readout_adequacy_cf_v1_20261122/qwen/oof_results.json": "4725df0fa9789af77b54671b56608b57588e01342c810f33f2365c536401f5a8"
+  },
+  "status": "all_independent_checks_passed"
+}

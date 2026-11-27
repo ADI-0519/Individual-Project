@@ -1,0 +1,322 @@
+"""Separate-author old-data arithmetic; no experiment-module imports or fits."""
+
+import csv
+import hashlib
+import json
+from collections import defaultdict
+from datetime import UTC, datetime
+from itertools import product
+from pathlib import Path
+
+import numpy as np
+from sklearn.metrics import roc_auc_score
+
+ROOT = Path(__file__).resolve().parents[2]
+OUT = ROOT / "docs/results/logical-relevance-old-data-2026-11-27"
+OLD = Path(
+    "//wsl.localhost/Ubuntu/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2"
+)
+FACTORS = ("I", "U", "B1", "B2")
+FIELDS = ("initial", "update", "first_receipt", "receipt")
+
+
+def digest(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def read(path):
+    return json.loads(Path(path).read_text(encoding="utf-8"))
+
+
+def table(name, keys):
+    with (OUT / name).open(encoding="utf-8", newline="") as stream:
+        rows = list(csv.DictReader(stream))
+    keyed = {tuple(row[k] for k in keys): row for row in rows}
+    assert len(keyed) == len(rows), "Duplicate reporting scope"
+    return keyed
+
+
+def run():
+    receipt = read(OUT / "analysis_receipt.json")
+    hashes = receipt["old_input_sha256"]
+    for name, expected in hashes.items():
+        path = Path(name)
+        assert path.resolve().is_relative_to(OLD.resolve()), "Non-old input rejected"
+        assert digest(path) == expected
+    for name, expected in receipt["source_sha256"].items():
+        assert digest(name) == expected
+    for name, expected in receipt["output_sha256"].items():
+        assert digest(OUT / name) == expected
+    factors = table(
+        "factor_metrics.csv", ("model", "renderer", "stratum", "context", "factor", "relevance")
+    )
+    comparisons = table(
+        "factor_comparisons.csv", ("model", "renderer", "stratum", "context", "factor")
+    )
+    oracles = table("oracle_metrics.csv", ("model", "renderer", "stratum", "context", "mask"))
+    assert (len(factors), len(comparisons), len(oracles)) == (2400, 1200, 4800)
+    seen = [set(), set(), set()]
+    numbers = 0
+    maximum = 0.0
+    nulls = 0
+
+    def check(actual, expected, key):
+        nonlocal numbers, maximum, nulls
+        for name, target in expected.items():
+            value = actual[name]
+            if target is None:
+                assert value == "", (key, name, value)
+                nulls += 1
+            elif isinstance(target, str):
+                assert value == target, (key, name, value, target)
+            else:
+                difference = abs(float(value) - target)
+                assert difference <= 1e-12, (key, name, value, target)
+                maximum = max(maximum, difference)
+                numbers += 1
+
+    def measure(y, score):
+        n = len(y)
+        n0, n1 = int(sum(y == 0)), int(sum(y == 1))
+        prediction = score > 0
+        return {
+            "n": n,
+            "class0_n": n0,
+            "class1_n": n1,
+            "raw_oriented_auc": float(roc_auc_score(y, score)) if n0 and n1 else None,
+            "auc_null_reason": None if n0 and n1 else "empty" if not n else "one_class",
+            "zero_accuracy": float(np.mean(y == prediction)) if n else None,
+            "accuracy_null_reason": None if n else "empty",
+            "class0_recall": float(np.mean(prediction[y == 0] == 0)) if n0 else None,
+            "class0_recall_null_reason": None if n0 else "class_absent",
+            "class1_recall": float(np.mean(prediction[y == 1] == 1)) if n1 else None,
+            "class1_recall_null_reason": None if n1 else "class_absent",
+        }
+
+    # Event-sequence oracle lookup: independent of the author's nested fold.
+    lookup = np.empty(16, dtype=np.int64)
+    for initial, report, first, replacement in product((0, 1), repeat=4):
+        value = initial
+        if first:
+            value = report
+        if replacement:
+            value = 1 - report
+        code = initial + 2 * report + 4 * first + 8 * replacement
+        lookup[code] = value
+    closed_counts = {}
+    nonmonotone = []
+    context_difference = defaultdict(list)
+    for model in ("llama", "qwen"):
+        capture = read(OLD / model / "test/rows.json")["rows"]
+        by_id = {row["row_id"]: row for row in capture}
+        assert len(by_id) == len(capture) == 4992
+        with np.load(
+            OLD / (model + "_analysis") / "predictions.npz", allow_pickle=False
+        ) as archive:
+            ids = archive["row_ids"].tolist()
+            score = archive["factor_margins"].copy()
+            saved_bits = archive["factor_predictions"].copy()
+            methods = archive["methods"].tolist()
+            saved_verdict = archive["verdicts"][:, methods.index("C2")].copy()
+        assert set(ids) == set(by_id) and len(ids) == len(set(ids)) == 4992
+        rows = [by_id[i] for i in ids]
+        selected = [
+            i
+            for i, row in enumerate(rows)
+            if row["condition"] in ("correction_easy", "correction_hard")
+        ]
+        assert len(selected) == 3072
+        assert np.isfinite(score).all() and np.array_equal(score > 0, saved_bits)
+        truth = np.zeros((4992, 4), dtype=np.int64)
+        truth[selected] = [[rows[i]["state"][f] for f in FIELDS] for i in selected]
+        initial, report, first, replacement = truth.T
+        # Closed forms derived independently from the event sequence.
+        relevant = np.column_stack(
+            (
+                (first == 0) & (replacement == 0),
+                (first == 1) | (replacement == 1),
+                (replacement == 0) & (initial != report),
+                (first == 1) | (initial == report),
+            )
+        )
+        truth_code = truth @ np.array([1, 2, 4, 8])
+        predicted_code = saved_bits @ np.array([1, 2, 4, 8])
+        predicted = np.column_stack(
+            [lookup[(predicted_code & (15 ^ mask)) | (truth_code & mask)] for mask in range(16)]
+        )
+        gold = np.array([row["gold"] for row in rows])
+        assert np.array_equal(predicted[selected, 0], saved_verdict[selected])
+        assert np.array_equal(predicted[selected, 15], gold[selected])
+        groups = sorted({rows[i]["group_id"] for i in selected})
+        assert len(groups) == 24
+        for fmt, stratum, group in product(
+            ("A", "B"), ("union", "correction_easy", "correction_hard"), ("ALL", *groups)
+        ):
+            ix = np.array(
+                [
+                    i
+                    for i in selected
+                    if rows[i]["renderer"] == fmt
+                    and (stratum == "union" or rows[i]["condition"] == stratum)
+                    and (group == "ALL" or rows[i]["group_id"] == group)
+                ]
+            )
+            denominator = (
+                (1536 if stratum == "union" else 768)
+                if group == "ALL"
+                else (64 if stratum == "union" else 32)
+            )
+            assert len(ix) == denominator
+            for column, factor in enumerate(FACTORS):
+                measured = {}
+                for status, flag in (("relevant", True), ("irrelevant", False)):
+                    subset = ix[relevant[ix, column] == flag]
+                    y = truth[subset, column]
+                    assert len(y) == 0 or sum(y == 0) == sum(y == 1), "Unexpected class imbalance"
+                    key = (model, fmt, stratum, group, factor, status)
+                    measured[status] = measure(y, score[subset, column])
+                    check(factors[key], measured[status], key)
+                    seen[0].add(key)
+                    if model == "llama" and fmt == "A" and group == groups[0]:
+                        closed_counts[(stratum, factor, status)] = len(y)
+                key = (model, fmt, stratum, group, factor)
+                expected = {}
+                for metric in (
+                    "raw_oriented_auc",
+                    "zero_accuracy",
+                    "class0_recall",
+                    "class1_recall",
+                ):
+                    a, b = measured["relevant"][metric], measured["irrelevant"][metric]
+                    value = a - b if a is not None and b is not None else None
+                    name = metric + "_relevant_minus_irrelevant"
+                    expected[name] = value
+                    if group != "ALL" and value is not None:
+                        context_difference[(model, fmt, stratum, factor, name)].append(value)
+                check(comparisons[key], expected, key)
+                seen[1].add(key)
+            quartets = defaultdict(dict)
+            for i in ix:
+                state = rows[i]["state"]
+                key = (
+                    rows[i]["group_id"],
+                    state["initial"],
+                    state["update"],
+                    state["world"],
+                    state["name_map"],
+                )
+                cell = (state["first_receipt"], state["receipt"])
+                assert cell not in quartets[key]
+                quartets[key][cell] = i
+            assert all(set(cells) == set(product((0, 1), repeat=2)) for cells in quartets.values())
+            panels = np.array(
+                [[cells[cell] for cell in product((0, 1), repeat=2)] for cells in quartets.values()]
+            )
+            assert len(panels) * 4 == len(ix)
+            correct = predicted == gold[:, None]
+            totals = correct[panels].sum(axis=1)
+            baseline_row = float(correct[ix, 0].mean())
+            baseline_panel = float((totals[:, 0] == 4).mean())
+            for mask in range(16):
+                key = (model, fmt, stratum, group, str(mask))
+                row_accuracy, panel_accuracy = (
+                    float(correct[ix, mask].mean()),
+                    float((totals[:, mask] == 4).mean()),
+                )
+                expected = {
+                    "mask": mask,
+                    "truth_factors": "+".join(f for j, f in enumerate(FACTORS) if mask & (1 << j))
+                    or "none",
+                    "rows": len(ix),
+                    "row_accuracy": row_accuracy,
+                    "quartets": len(panels),
+                    "quartet_all_correct": panel_accuracy,
+                    "row_accuracy_change_from_mask0": row_accuracy - baseline_row,
+                    "quartet_all_correct_change_from_mask0": panel_accuracy - baseline_panel,
+                    **{
+                        f"quartets_with_{k}_correct": int(sum(totals[:, mask] == k))
+                        for k in range(5)
+                    },
+                }
+                check(oracles[key], expected, key)
+                seen[2].add(key)
+                if (
+                    group == "ALL"
+                    and mask
+                    and (row_accuracy < baseline_row or panel_accuracy < baseline_panel)
+                ):
+                    nonmonotone.append(
+                        {
+                            "model": model,
+                            "renderer": fmt,
+                            "stratum": stratum,
+                            "mask": mask,
+                            "row_change": row_accuracy - baseline_row,
+                            "quartet_change": panel_accuracy - baseline_panel,
+                        }
+                    )
+    assert [len(x) for x in seen] == [len(factors), len(comparisons), len(oracles)]
+    summary = read(OUT / "summary.json")
+    for entry in summary["within_context_relevance_differences"]:
+        for metric in ("raw_oriented_auc", "zero_accuracy", "class0_recall", "class1_recall"):
+            name = metric + "_relevant_minus_irrelevant"
+            values = context_difference.get(
+                (entry["model"], entry["renderer"], entry["stratum"], entry["factor"], name), []
+            )
+            target = entry[name]
+            assert target["defined_contexts"] == len(values) and target["total_contexts"] == 24
+            assert (
+                target["mean"] is None
+                if not values
+                else abs(target["mean"] - float(np.mean(values))) <= 1e-12
+            )
+    # The author files and all declared old artifacts must still be identical.
+    for name, expected in hashes.items():
+        assert digest(name) == expected
+    report = {
+        "schema": "logical-relevance-old-independent-review-v1",
+        "status": "pass_scoped_numeric_reconstruction",
+        "completed_at_utc": datetime.now(UTC).isoformat(),
+        "old_only": True,
+        "new_campaign_artifacts_accessed": False,
+        "model_calls": 0,
+        "classifier_fits": 0,
+        "production_analysis_functions_imported": False,
+        "source_sha256": {str(Path(__file__).resolve()): digest(__file__)},
+        "author_receipt_sha256": digest(OUT / "analysis_receipt.json"),
+        "checked_old_input_sha256": hashes,
+        "checked_author_output_sha256": receipt["output_sha256"],
+        "numeric_scalars_compared": numbers,
+        "explicit_null_cells_compared": nulls,
+        "maximum_absolute_difference": maximum,
+        "tables_completely_checked": {
+            "factor_metrics": len(factors),
+            "factor_comparisons": len(comparisons),
+            "oracle_metrics": len(oracles),
+        },
+        "per_context_relevance_counts": [
+            {"stratum": k[0], "factor": k[1], "relevance": k[2], "n": v}
+            for k, v in closed_counts.items()
+        ],
+        "oracle_cells_below_mask0_pooled": nonmonotone,
+        "scope_limit": "Recomputes saved-margin metrics, relevance partitions, all16 external-factor substitutions, every reporting scope and context-mean difference. Does not reconstruct hidden-state margins from original features, validate story semantics, verify a model-internal mechanism, or certify the author's actual first-access time.",
+    }
+    target = OUT / "independent_review_receipt.json"
+    with target.open("x", encoding="utf-8", newline="\n") as stream:
+        json.dump(report, stream, indent=2, allow_nan=False)
+        stream.write("\n")
+    print(
+        json.dumps(
+            {
+                "status": report["status"],
+                "numeric_scalars": numbers,
+                "nulls": nulls,
+                "maximum_difference": maximum,
+                "nonmonotone_pooled_masks": len(nonmonotone),
+            }
+        )
+    )
+
+
+if __name__ == "__main__":
+    run()

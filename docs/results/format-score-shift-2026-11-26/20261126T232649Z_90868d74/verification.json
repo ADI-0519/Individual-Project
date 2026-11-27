@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "verification": "Independent sklearn raw AUROC; scipy Spearman; NumPy Pearson; direct positive-negative nested comparisons; class means, accuracy and joint factor correctness recomputed without importing diagnostic module.",
+  "counts": {
+    "score_scopes": 2400,
+    "paired_scopes": 1200,
+    "within_context_order_scopes": 1152,
+    "joint_factor_scopes": 200
+  },
+  "max_raw_auroc_difference": 1.1102230246251565e-16,
+  "numpy_version": "2.4.6"
+}

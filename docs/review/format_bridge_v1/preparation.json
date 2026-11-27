@@ -1,0 +1,72 @@
+{
+  "schema": "posthoc-format-bridge-preparation-v1",
+  "created_at": "2026-11-26T23:45:12.520786+00:00",
+  "status": "prepared_no_weights",
+  "exposed_contexts": true,
+  "fresh_confirmation": false,
+  "human_review_complete": false,
+  "model_calls": 0,
+  "classifier_fits": 0,
+  "contexts": 24,
+  "formal_correction_states": 1536,
+  "prompt_variants": 12288,
+  "variant_order": [
+    "system",
+    "narrative",
+    "question"
+  ],
+  "counts": {
+    "AAA": 1536,
+    "AAB": 1536,
+    "ABA": 1536,
+    "ABB": 1536,
+    "BAA": 1536,
+    "BAB": 1536,
+    "BBA": 1536,
+    "BBB": 1536
+  },
+  "ordered_prompt_sha256": "b400b0e8202dd5ad66d22fd1e7ee7441649d577203143a7b75a42d73de8b265c",
+  "source_sha256": {
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/prepare_format_bridge.py": "400cb4f72ebc8402bbf17cb55f64bdb5fb8d379a9f36d84e5696e4042bcd9fbb",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/format_bridge.py": "241983fd083fc299185c0c9f709b7f2b0356a54fc8045b8a85311c850441af7d",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/fresh_readout_v2/compiled_v1/bank.json": "bb277ba4efa6e090879405e472a8cb70a973b3ab53cfe340ede56c61cfa98e35",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/fresh_readout_bank.py": "0765526fd11f6d0d4e44948597340b686dccd46f05d4e21257b5724d6ce66dfb",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/fresh_readout_capture.py": "5e1cc2195f15973be82b6bd62101a8753f03c61f4667256a40b1a45b9d083292",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/main_study_bank.py": "b5d9aae9105e856bd2eeea061e5098291601074b32d6be0730768d6295c40162",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/main_study_design.py": "0973d047d2e98736c1b9144d2187079a60d87f2280eeca691330ff91135506b9",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/main_study_run.py": "09f219b7aedcb222c0eea05ba1ea9324d28fd298f49a2a45004429d7ede10501",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/storage.py": "1de87a24cc3bd701c0384d648d405ddb6066280beae3e21bf1b173c203ee0e84"
+  },
+  "tokenizer_checks": {
+    "llama": {
+      "model_id": "meta-llama/Llama-3.1-8B-Instruct",
+      "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+      "prefixes": 12288,
+      "max_prefix_tokens": 790,
+      "query_prefix_controls": 6144,
+      "query_prefix_controls_passed": true,
+      "ordered_prefix_sha256": "3a5bc8fce1700bf6f58c52385d930c150db704fe4a417931077890b15abbad44",
+      "saved_diagonal_checks": 3072,
+      "saved_diagonal_checks_passed": true,
+      "reference_rows_sha256": "f3d8de2ee74ea5bb2300b32b9e26fb711b7435793b24ebbf5128d776b74f6f41",
+      "reference_analysis_manifest_sha256": "3f6852b3f10244cafd76523c2d2825a177a1c5eeafb5a2739f0a0f0e4c180d44"
+    },
+    "qwen": {
+      "model_id": "Qwen/Qwen2.5-7B-Instruct",
+      "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+      "prefixes": 12288,
+      "max_prefix_tokens": 790,
+      "query_prefix_controls": 6144,
+      "query_prefix_controls_passed": true,
+      "ordered_prefix_sha256": "41bf3e621bf87d2fcc5fe7649ad6565f147155740fc6ec8347c80ad053868612",
+      "saved_diagonal_checks": 3072,
+      "saved_diagonal_checks_passed": true,
+      "reference_rows_sha256": "0e54205e838d49d3c0ee1b5558371d6ae6d908078001fb36b0616dd2e3a88d3f",
+      "reference_analysis_manifest_sha256": "ba7ecd08a3c7a261573992cdf7d9f582d8f1e675fc0af92dffae15f4b8310e64"
+    }
+  },
+  "review_items": 128,
+  "review_packet_sha256": "3bcb2d2ab39e4acf055b3037baf57a6f4e0778217b006934114396741bf05928",
+  "review_key_sha256": "caefb48169bf3ac3da9b6fb58e5849b85650c05d1cbbc65d0742aba126d3447e",
+  "interpretation": "Exact diagonal reproduction and causal-prefix availability checks; no model outcome, semantic approval, or hidden-state invariance measurement."
+}

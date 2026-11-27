@@ -1,0 +1,70 @@
+{
+  "schema": "posthoc-factor-score-figure-v1",
+  "new_model_calls": 0,
+  "classifier_fits": 0,
+  "source_sha256": "cadc89535580eb685c3dbc7702deb0c48184847607fc8eb6320accddb39dd051",
+  "summary_sha256": "75c5aedb17d761c64f9107d8e8656a46dda9e1e5f7b591e51a82d2a372677052",
+  "plotted_values": [
+    {
+      "model": "llama",
+      "factor": "I",
+      "A_auroc": 1.0,
+      "B_auroc": 0.9865909152560763,
+      "B_zero_accuracy": 0.8502604166666666
+    },
+    {
+      "model": "llama",
+      "factor": "M1",
+      "A_auroc": 1.0,
+      "B_auroc": 0.9902411566840278,
+      "B_zero_accuracy": 0.8815104166666666
+    },
+    {
+      "model": "llama",
+      "factor": "B1",
+      "A_auroc": 0.9981231689453125,
+      "B_auroc": 0.69561767578125,
+      "B_zero_accuracy": 0.6263020833333334
+    },
+    {
+      "model": "llama",
+      "factor": "B2",
+      "A_auroc": 0.998748779296875,
+      "B_auroc": 0.9143948025173612,
+      "B_zero_accuracy": 0.775390625
+    },
+    {
+      "model": "qwen",
+      "factor": "I",
+      "A_auroc": 1.0,
+      "B_auroc": 0.9994133843315972,
+      "B_zero_accuracy": 0.9270833333333334
+    },
+    {
+      "model": "qwen",
+      "factor": "M1",
+      "A_auroc": 1.0,
+      "B_auroc": 0.9896952311197916,
+      "B_zero_accuracy": 0.8157552083333334
+    },
+    {
+      "model": "qwen",
+      "factor": "B1",
+      "A_auroc": 0.9837782118055556,
+      "B_auroc": 0.6698320176866319,
+      "B_zero_accuracy": 0.5026041666666666
+    },
+    {
+      "model": "qwen",
+      "factor": "B2",
+      "A_auroc": 0.9724222819010416,
+      "B_auroc": 0.6770714653862847,
+      "B_zero_accuracy": 0.580078125
+    }
+  ],
+  "output_sha256": {
+    "factor_transfer.pdf": "ceb686a7ecfec3c794d8c789c439df51318356abe3959aacaa262d55d90cb98b",
+    "factor_transfer.png": "950624de3e2af41062c3d613baea139e015aec5537a51246afeaacd2e9838456",
+    "factor_transfer.svg": "87dabc3b8b1163bac4634baf192b93c2f3fb60c55a30e1d857189c7d3e58877c"
+  }
+}

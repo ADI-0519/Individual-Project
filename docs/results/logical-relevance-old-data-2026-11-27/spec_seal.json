@@ -1,0 +1,10 @@
+{
+  "schema": "logical-relevance-old-spec-seal-v1",
+  "sealed_at_utc": "2026-11-27T01:31:42.926022+00:00",
+  "spec_path": "docs/LOGICAL_RELEVANCE_OLD_DATA_SPEC_2026-11-27.md",
+  "spec_sha256": "2db8aae7e35e7ba41d7591b8b4945ec9da0fdb24ef1035f652893914df1f83f8",
+  "old_raw_margins_accessed_before_seal": false,
+  "new_campaign_artifacts_accessed": false,
+  "model_calls": 0,
+  "status": "sealed_before_old_raw_margin_access"
+}

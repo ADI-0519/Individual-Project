@@ -1,0 +1,40 @@
+{
+  "schema": "logical-relevance-old-analysis-receipt-v1",
+  "completed_at_utc": "2026-11-27T01:38:31.802918+00:00",
+  "spec_sha256": "2db8aae7e35e7ba41d7591b8b4945ec9da0fdb24ef1035f652893914df1f83f8",
+  "spec_sealed_at_utc": "2026-11-27T01:31:42.926022+00:00",
+  "old_data_first_load_at_utc": "2026-11-27T01:37:47.771110+00:00",
+  "old_input_sha256": {
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\llama_analysis\\manifest.json": "3f6852b3f10244cafd76523c2d2825a177a1c5eeafb5a2739f0a0f0e4c180d44",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\llama_analysis\\predictions.npz": "3cdd11df723a8c2c9e64cf552a4b8c2b7525652015476dfdb0972cc02219b954",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\llama\\test\\rows.json": "f3d8de2ee74ea5bb2300b32b9e26fb711b7435793b24ebbf5128d776b74f6f41",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\llama_fit\\settings.json": "6a459648e7bc17bb4526ee6e76c5bd47601a0b06643f3fb6c3d0e9cea8538c45",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\llama_fit\\heads.npz": "9473175eda13e5af4041591b1edb9dc28e49c4ad2056fab281736fb96261e2d7",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\qwen_analysis\\manifest.json": "ba7ecd08a3c7a261573992cdf7d9f582d8f1e675fc0af92dffae15f4b8310e64",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\qwen_analysis\\predictions.npz": "57e91d5139d505ebe62411140b7526b625c7ca8a0c9f91ceba226d3d3c754864",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\qwen\\test\\rows.json": "0e54205e838d49d3c0ee1b5558371d6ae6d908078001fb36b0616dd2e3a88d3f",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\qwen_fit\\settings.json": "c4d98c5b0fbedc1b965f6faf75067e47c0f1685e28a2cd76122f599b7171ece4",
+    "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\fresh_readout_v2_20261123_recovery_v2\\qwen_fit\\heads.npz": "c1a818f3074ef6c73121ce9dc4220a628d121a8707a26fb4a691fe4d78115a04"
+  },
+  "source_sha256": {
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\scripts\\analyse_logical_relevance_old.py": "79252a154da2fe4815e62d0dad90afad18827d507f0ad55e8339a9e69490efc1",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\tests\\test_logical_relevance_old.py": "ff1312fd7a815e44aeae1f38bbec8beb583c8c4187790bda76207557b04bd670",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\docs\\LOGICAL_RELEVANCE_OLD_DATA_SPEC_2026-11-27.md": "2db8aae7e35e7ba41d7591b8b4945ec9da0fdb24ef1035f652893914df1f83f8",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\docs\\results\\logical-relevance-old-data-2026-11-27\\spec_seal.json": "92ab0a840ba6c1e39ddebebea33cb93f93547b808018413d45f6e37c3ae6e86b"
+  },
+  "output_sha256": {
+    "factor_metrics.csv": "d6b06bbf163480c8b42752116173cf81ddef4d42944232268be1d1415fa1fb52",
+    "factor_comparisons.csv": "3ddb9174acfec5d02e559d777d82e4efd1f1bc2d68e11673d09e7e698b14d77b",
+    "oracle_metrics.csv": "9923b4e60caa1850922d6eec4aaa12528bbd52dc49bf3b07d79159573facc0b2",
+    "summary.json": "028533bcb90b21ba0c97ed0a8ecbd0434f78850ec7b8fdce17af018cde48edb0"
+  },
+  "model_calls": 0,
+  "fitting": false,
+  "threshold_selection": false,
+  "new_campaign_artifacts_accessed": false,
+  "table_rows": {
+    "factor_metrics": 2400,
+    "factor_comparisons": 1200,
+    "oracle_metrics": 4800
+  }
+}

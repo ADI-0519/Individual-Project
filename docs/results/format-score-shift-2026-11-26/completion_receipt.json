@@ -1,0 +1,20 @@
+{
+  "schema": "posthoc-format-score-shift-completion-receipt-v1",
+  "completed_at_utc": "2026-11-26T23:37:55.850540+00:00",
+  "policy": "Original generated outputs unchanged; v1 source archived before separately sealed pooling amendment; no model calls, fitting or threshold search",
+  "frozen_run_manifests": {
+    "docs\\results\\format-score-shift-2026-11-26\\20261126T232649Z_90868d74\\manifest.json": "1a293ddcf546384c294e438160e431be306d8dc10331ecf479711f3e7c7deeff",
+    "docs\\results\\format-score-shift-2026-11-26\\20261126T233413Z_76bd60ed_correction_pool\\manifest.json": "f1af04df39855e0b45184c63b763426efb23f3332cd975b728854446f59695d5"
+  },
+  "supplemental_sha256": {
+    "docs\\results\\format-score-shift-2026-11-26\\README.md": "4871619e777dbd7b55e84749ca3e6f095355c85432f100e56c7be8c85566385e",
+    "docs\\results\\format-score-shift-2026-11-26\\20261126T232649Z_90868d74\\verification.json": "afdbd8f83e8287fb8e6c8aa05ec5dd5ec2b79e8ead795f2ffab92ade55e77d9f",
+    "docs\\results\\format-score-shift-2026-11-26\\20261126T232649Z_90868d74\\diagnostic_source_v1.py": "2953dc1c4a7101ec664237a6635187bf7ed9dd7ce6a180250e2be06473b513ef",
+    "docs\\results\\format-score-shift-2026-11-26\\20261126T233413Z_76bd60ed_correction_pool\\verification.json": "40f4ac35b9ca00ddeda25f4fd26ed4d12f53791fcebff73462427b66b70c2570",
+    "docs\\results\\format-score-shift-2026-11-26\\20261126T233413Z_76bd60ed_correction_pool\\diagnostic_source.py": "c824bdb0997d840abde1e0f6bbedba8da0655f02110e808819ef882cda0441cf",
+    "tests\\test_format_score_shift.py": "5184c5df5f7f3d6c05320bf1c386fc663499f8eaa9f4946436de718e49b4678a"
+  },
+  "test_result": "8 passed; Ruff clean",
+  "source_hash_matches_both_archived_versions": true,
+  "all_original_generated_output_hashes_still_match": true
+}

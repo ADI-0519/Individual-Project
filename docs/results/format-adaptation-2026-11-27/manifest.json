@@ -1,0 +1,20 @@
+{
+  "schema": "format-adaptation-report-manifest-v1",
+  "status": "complete",
+  "created_at": "2026-11-27T02:24:00.625605+00:00",
+  "input_sha256": {
+    "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign_audit/audit_receipt.json": "1daa87e5692a6e04aacd46750b5919ba80e08dca94de7b2f3dcc492227fe660f",
+    "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/llama_analysis/results.json": "800f087ed5f618818b51698defb325ea2163f83d4d7ff45d7d69f91fa2452561",
+    "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/llama_analysis/manifest.json": "716bddbb635e01303ff253ee56cebccf7872be754c9a0ef4a1a08ca0ecbf246b",
+    "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/qwen_analysis/results.json": "d3f56d939f8dda9bc6cf5170a7092c98f2ec67063a14b014cd14cd951ef3da23",
+    "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign/qwen_analysis/manifest.json": "e8cf13ed2140545a7826c8ca91e6421cb9aa3a96935344549242431f12d4edf4"
+  },
+  "source_sha256": "04557a1dc12a01c1b690111856dcbeafb05fe7c456ff8cfeb4f8da4aa2c85fba",
+  "output_sha256": {
+    "summary.json": "b20171e7c77ad704b37c29bec1aabe6bfcb5d7d60a38f4c5b9fe6132dc81392e",
+    "adaptation.pdf": "24d0d910ba1a9ecee48846976da6053ad39daec2f96819036408801f2a595013",
+    "results.md": "59eccf334cb8458fffba9c2c9d6d712a676413a13892c58dfc234e938c67ac2d",
+    "adaptation.svg": "f44f7d0fcdd80490ea91f513ea0d525c27357f673140dbe91fcbde6b0189a140",
+    "adaptation.png": "7cf813c1101f35cb9191b94575f8447e4c62e7340bddcc137b1d6c36ee631b27"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "fresh-readout-detached-launch-seal-v3",
+  "created_at": "2026-11-23T00:19:35.454426+00:00",
+  "research_status": "agent_audited_exploratory",
+  "guard_sha256": "52df2622b0492a37a3badc8618cd0d025a574c22c70f36f7480054bbbb7940b6",
+  "runner_sha256": "c98449321dc36a42d56e620abe252e17c62b45fe6132138a6dc3869b1e169c64",
+  "source_sha256": {
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/recover_fresh_readout_campaign.py": "20cce73336f70066ac00e95e06768db70213d284cbf19d1fa4df11afd32445c4",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/complete_fresh_readout_campaign.py": "ebc39aa381e6e7dbceb8d78665c3b1515034e384f7cd022bc65b133837062174",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/audit_fresh_readout_saved_data.py": "cf74bec502e14f7e35577b277bbe95e36f0687ffb28dc54ccb16fc251f7101ce",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/report_fresh_readout.py": "9a955e95e661f86c0c3a095ec3c7445fc0bff983027337f60711e6bce7f5359b"
+  },
+  "repeat_count": 0,
+  "retained_rows": 2948,
+  "remaining_cohort_prefills": 11132,
+  "model_calls_by_preparation": 0,
+  "supersedes_before_any_model_call": {
+    "launch_seal_v1_sha256": "6a881576f8977a5bd563dbc3e83a7fb141afa536f8210b34f5bc7c64063186d1",
+    "reason": "Independent review required completion to compare against the exact start receipt, including the original seal digest. V1 launch files remain unchanged and unexecuted."
+  },
+  "supersedes_v2_before_any_model_call": {
+    "sha256": "cca829a4d052b1d6c2503311b06a6dbe059b2402494ebeb70f899e192e4be549",
+    "reason": "Explicit exception-based validation remains enabled under Python optimization; earlier files remain unexecuted and preserved."
+  }
+}

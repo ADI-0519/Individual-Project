@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+study_repo='/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project'
+study_run='/home/adirj/kcl-latent-probes-runs/fresh_readout_v2_20261123_recovery_v2'
+cd -- "$study_repo"
+"$study_repo/.venv-wsl/bin/python" "$study_run/verify_launch_seal_v3.py" start
+"$study_repo/.venv-wsl/bin/python" "$study_repo/scripts/recover_fresh_readout_campaign.py" --recovery "$study_run" --run-prepared --attest-no-running-producers
+"$study_repo/.venv-wsl/bin/python" "$study_run/verify_launch_seal_v3.py" completion
+"$study_repo/.venv-wsl/bin/python" "$study_repo/scripts/complete_fresh_readout_campaign.py" --campaign-root "$study_run" --watcher-output "${study_run}_completion" --audit-output "${study_run}_audit" --report-output "${study_run}_report" --publish-dir "$study_repo/docs/results/fresh-readout-2026-11-23" --audit-script "$study_repo/scripts/audit_fresh_readout_saved_data.py" --poll-seconds 30

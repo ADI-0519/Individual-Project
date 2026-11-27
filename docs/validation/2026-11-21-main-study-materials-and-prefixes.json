@@ -1,0 +1,36 @@
+{
+  "schema": "main-study-materials-audit-v1",
+  "bank_sha256": "e038025571a38a7f2c489e5f8c3bf3b0a3c11a05f9b8c7e89d26292a4e7bfb1d",
+  "source_fragments_reconstructed": 2,
+  "groups": 154,
+  "prefixes": 5888,
+  "allocations": 15,
+  "human_review_complete": false,
+  "main_study_model_calls": 0,
+  "prepared_inputs": [
+    {
+      "path": "/home/adirj/kcl-latent-probes-runs/main_v1_preflight_20261121_llama_train_dev_review_gate_v2/protocol.json",
+      "sha256": "1a4696f1c5595c87706d63ff510564a66ff26cc583e1dc85dda58806717a6cfd",
+      "model_id": "meta-llama/Llama-3.1-8B-Instruct",
+      "prefixes": 5888,
+      "minimum_tokens": 538,
+      "maximum_tokens": 721
+    },
+    {
+      "path": "/home/adirj/kcl-latent-probes-runs/main_v1_preflight_20261121_qwen_train_dev_review_gate_v2/protocol.json",
+      "sha256": "f19ebedf16b66e858705bab03612050cdcb8b0e0b77b193b4b25381d3339387d",
+      "model_id": "Qwen/Qwen2.5-7B-Instruct",
+      "prefixes": 5888,
+      "minimum_tokens": 530,
+      "maximum_tokens": 719
+    },
+    {
+      "path": "/home/adirj/kcl-latent-probes-runs/main_v1_preflight_20261121_text_monitor_development_review_gate_v2/protocol.json",
+      "sha256": "d4b40afe3c6920c09ce9b90446d1182d7f396b9045c30880bc087aebce76b9df",
+      "model_id": "Qwen/Qwen2.5-7B-Instruct",
+      "prefixes": 4352,
+      "minimum_tokens": 862,
+      "maximum_tokens": 1055
+    }
+  ]
+}

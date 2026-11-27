@@ -1,0 +1,40 @@
+{
+  "schema": "format-adaptation-progress2-receipt-v1",
+  "created_at": "2026-11-27T02:26:24.822148+00:00",
+  "slides": 4,
+  "test_fixture": false,
+  "model_calls": 0,
+  "classifier_fits": 0,
+  "analysis_performed": false,
+  "human_review_complete": false,
+  "inputs": {
+    "summary": {
+      "path": "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\docs\\results\\format-adaptation-2026-11-27\\summary.json",
+      "sha256": "b20171e7c77ad704b37c29bec1aabe6bfcb5d7d60a38f4c5b9fe6132dc81392e"
+    },
+    "manifest": {
+      "path": "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\docs\\results\\format-adaptation-2026-11-27\\manifest.json",
+      "sha256": "3d03d215a3f8e56abbe1aa76f708a072992caff4c33088f8bff32e90b3fce67a"
+    },
+    "audit": {
+      "path": "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\docs\\results\\format-adaptation-2026-11-27\\audit_receipt.json",
+      "sha256": "1daa87e5692a6e04aacd46750b5919ba80e08dca94de7b2f3dcc492227fe660f"
+    },
+    "campaign_identity": {
+      "path": "/home/adirj/kcl-latent-probes-runs/format_adaptation_v1_20261127_campaign",
+      "sha256": null
+    }
+  },
+  "source_sha256": {
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\scripts\\build_format_adaptation_progress2.py": "193c838a65898c4ea79f596ae7a814eb2a90335ab0df82de8ffa419a1b699cba",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\scripts\\update_progress2.py": "4a1d5d60dd954a80caf7ff48394c7f3b40d074c2d3c68fa31e286c6f04082e78",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\scripts\\report_format_adaptation.py": "04557a1dc12a01c1b690111856dcbeafb05fe7c456ff8cfeb4f8da4aa2c85fba",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\presentations\\templates\\progress2-original.pptx": "c63d6eb4be21cfb626ba0b99fd54fb43629d7e7bd89717da4284af42c80e4255"
+  },
+  "outputs": {
+    "Progress-2-format-adaptation.pdf": "c56ce2e6c18a2a4f8b7d4945851da38dcbc7db8a8a152f21dc6bf799560a66eb",
+    "Progress-2-format-adaptation.pptx": "ad8d73b4b9a9fed344ff5a7bd3cd9a5b8378e96a3ef1c659f37a0c6815482f6a",
+    "speaker-notes.md": "30111ebf618c7f4d81cf3248714b5cdefa7be62d239fd73df7b7836eacee9e6c"
+  },
+  "pdf_renderer": "ReportLab vector text/shapes with the unchanged editable PPTX geometry"
+}

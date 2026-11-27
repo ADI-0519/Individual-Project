@@ -1,0 +1,80 @@
+{
+  "schema": "format-adaptation-text-report-manifest-v1",
+  "status": "complete",
+  "created_at": "2026-11-27T21:28:49.069550+00:00",
+  "test_fixture": false,
+  "research_status": "posthoc_exposed_bank_lexical_shortcut_diagnostic",
+  "human_review_complete": false,
+  "new_language_model_forwards": 0,
+  "classifier_fits": 0,
+  "source_sha256": "6d90bba90e0e7670b019216b7c58c9ae9bc1d5c99a86fd5078cdf50367b84fb5",
+  "input_sha256": {
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\.cache\\lexical-controls-2026-11-27-v1\\rows.json.gz": "073997bcdf59056ac593d057cf17f2ce30030d501e2b909217011030c1b41dc8",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\.cache\\lexical-controls-2026-11-27-v1\\predictions.npz": "d3271b4d48aecc2dd0179aa5bfc57124b32b324d9c14742746201e3ddcab9b85",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\.cache\\lexical-controls-2026-11-27-v1\\summary.json.gz": "c78866ee6bde06b6a6ee256e99bf625dc0ac7796aadb6e2403d1f060d1cdb01b",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\.cache\\lexical-controls-2026-11-27-v1\\metrics.json": "d1c0e6c345a3e38c380d719cffd22344759cfa4c6585bdaed2626f4c05c0ad76",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\.cache\\lexical-controls-2026-11-27-v1\\preparation.json": "b705b5895ffe498c898752d18fd6862d46ef0d06c8082917b4139f36960513b4",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\.cache\\lexical-controls-2026-11-27-v1\\fit_seal.json": "1e21c25a7d22d68843e60629c3f2997f649ca10050a56b5ed622fa034d5e489c",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\.cache\\lexical-controls-2026-11-27-v1\\analysis_complete.json": "226a4d8ac39d61dda5032f9e90fb07ac445e2ca05e1115a687ef4500700ecc79",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\.cache\\lexical-controls-2026-11-27-v1\\fit_started.json": "13d0918787c06918f1f741d7e68d2f6e05c4ec7f205f4d88b2ea9031ef14113b",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\.cache\\lexical-controls-2026-11-27-v1\\analysis_started.json": "7e295c6662a5945465e42a9d270f16c75d922436f643feae2264f70add6155fe",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\.cache\\lexical-controls-2026-11-27-v1\\fit\\full_messages\\settings.json": "c4256e461d24b52a6236fe4065496e9dd266cc78b1b4b5e75555493a096abcce",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\.cache\\lexical-controls-2026-11-27-v1\\fit\\full_messages\\arrays.npz": "18e47582fc840b994d41c562ed0a76d2bd7a8045de8bf4ef58493f93112eb7cb",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\.cache\\lexical-controls-2026-11-27-v1\\fit\\full_messages\\manifest.json": "23ef481d9cd5a12fbf87dc8cc9cb31e9a52d23ff9c3a3a2e2e3451e3208f4d03",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\.cache\\lexical-controls-2026-11-27-v1\\fit\\system_only\\settings.json": "b428bb0e3457214fa8e14bd25086cc8bb4e004602876fbef7eeee8469728b8a9",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\.cache\\lexical-controls-2026-11-27-v1\\fit\\system_only\\arrays.npz": "137ebcf003569007dce92753a75a4040892a5d0aa7045d514a1f008589ed4c0f",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\.cache\\lexical-controls-2026-11-27-v1\\fit\\system_only\\manifest.json": "1d8306ba37650f2d3e92de2fe6b09f147f312325bd39ad6a47703cc3cc163122",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\.cache\\lexical-controls-2026-11-27-v1-audit\\audit_receipt.json": "dead2e233946a81aca637bee2128d424f11eb3e30926193907234247080ca80d",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\.cache\\lexical-controls-2026-11-27-v1-audit\\reconstruction_seal.json": "902d28353b0bbbe94aa4248f6b3ae2e25d27b18cdc22f9268e3289ca6dbf4842",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\.cache\\lexical-controls-2026-11-27-v1-audit\\full_messages_reconstruction.json": "9b3cdc5c22c85e67fb96b38f6cc0ac1f04acc4b56855186a8bae00903d51f9f3",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\.cache\\lexical-controls-2026-11-27-v1-audit\\system_only_reconstruction.json": "68e2a2114d5b217997fa6cdea9037c8040f9b02a33ee398a530ed6e525af8333",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\docs\\results\\format-adaptation-2026-11-27\\summary.json": "b20171e7c77ad704b37c29bec1aabe6bfcb5d7d60a38f4c5b9fe6132dc81392e",
+    "C:\\Users\\adirj\\OneDrive\\Documents\\GitHub\\6CCSAPRJ - Individual project\\Individual-Project\\docs\\results\\format-adaptation-2026-11-27\\manifest.json": "3d03d215a3f8e56abbe1aa76f708a072992caff4c33088f8bff32e90b3fce67a"
+  },
+  "independent_audit_numeric_checks": {
+    "full_messages": {
+      "numeric": 30154,
+      "exact": 27844,
+      "maximum_numeric_difference": 0.0
+    },
+    "system_only": {
+      "numeric": 30154,
+      "exact": 27844,
+      "maximum_numeric_difference": 0.0
+    }
+  },
+  "fitted_archive_members_sha256": {
+    "fit/full_messages/arrays.npz": "18e47582fc840b994d41c562ed0a76d2bd7a8045de8bf4ef58493f93112eb7cb",
+    "fit/full_messages/manifest.json": "23ef481d9cd5a12fbf87dc8cc9cb31e9a52d23ff9c3a3a2e2e3451e3208f4d03",
+    "fit/full_messages/settings.json": "c4256e461d24b52a6236fe4065496e9dd266cc78b1b4b5e75555493a096abcce",
+    "fit/system_only/arrays.npz": "137ebcf003569007dce92753a75a4040892a5d0aa7045d514a1f008589ed4c0f",
+    "fit/system_only/manifest.json": "1d8306ba37650f2d3e92de2fe6b09f147f312325bd39ad6a47703cc3cc163122",
+    "fit/system_only/settings.json": "b428bb0e3457214fa8e14bd25086cc8bb4e004602876fbef7eeee8469728b8a9"
+  },
+  "lossless_reconstruction_exports": {
+    "audit/full_messages_reconstruction.json.gz": {
+      "decompressed_original_sha256": "9b3cdc5c22c85e67fb96b38f6cc0ac1f04acc4b56855186a8bae00903d51f9f3"
+    },
+    "audit/system_only_reconstruction.json.gz": {
+      "decompressed_original_sha256": "68e2a2114d5b217997fa6cdea9037c8040f9b02a33ee398a530ed6e525af8333"
+    }
+  },
+  "output_sha256": {
+    "analysis_complete.json": "226a4d8ac39d61dda5032f9e90fb07ac445e2ca05e1115a687ef4500700ecc79",
+    "analysis_started.json": "7e295c6662a5945465e42a9d270f16c75d922436f643feae2264f70add6155fe",
+    "audit/audit_receipt.json": "dead2e233946a81aca637bee2128d424f11eb3e30926193907234247080ca80d",
+    "audit/full_messages_reconstruction.json.gz": "b026fbe1ee829fc5a851a4ee2e4e5987d9afca36f55c42bd2571ee46a2f3029b",
+    "audit/reconstruction_seal.json": "902d28353b0bbbe94aa4248f6b3ae2e25d27b18cdc22f9268e3289ca6dbf4842",
+    "audit/system_only_reconstruction.json.gz": "106e391453e139845f40b4031741e1e386f73a02e61e21f788506c8295ecd9db",
+    "fit_seal.json": "1e21c25a7d22d68843e60629c3f2997f649ca10050a56b5ed622fa034d5e489c",
+    "fit_started.json": "13d0918787c06918f1f741d7e68d2f6e05c4ec7f205f4d88b2ea9031ef14113b",
+    "fitted-text-readouts.zip": "30c30e5b1290856d6709c8849f5db1013262ed0fcce8e9542625d4c686e02e35",
+    "latent-comparison.json": "ebc20688a83c11f1257768b92ef249e410b1fb3a5cb5f11c022b28e261e3266c",
+    "metrics.json": "d1c0e6c345a3e38c380d719cffd22344759cfa4c6585bdaed2626f4c05c0ad76",
+    "predictions.npz": "d3271b4d48aecc2dd0179aa5bfc57124b32b324d9c14742746201e3ddcab9b85",
+    "preparation.json": "b705b5895ffe498c898752d18fd6862d46ef0d06c8082917b4139f36960513b4",
+    "README.md": "01f2ba8ebaaa3f703b15bbbbafb06bc85a0d1e18cfb5721f78781bf2036f2161",
+    "rows.json.gz": "073997bcdf59056ac593d057cf17f2ce30030d501e2b909217011030c1b41dc8",
+    "summary.json.gz": "c78866ee6bde06b6a6ee256e99bf625dc0ac7796aadb6e2403d1f060d1cdb01b"
+  }
+}

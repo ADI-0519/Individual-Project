@@ -1,0 +1,9 @@
+{
+  "schema": "format-score-independent-reconstruction-archive-v1",
+  "status": "pass",
+  "review_receipt_sha256": "617727055370d0a9fe5004b031d6cdcbf827fe0107dfc0435a17ffda5518c941",
+  "native_path": "\\\\wsl.localhost\\Ubuntu\\home\\adirj\\kcl-latent-probes-runs\\format_score_review_20261126_v1\\reconstruction.json",
+  "sha256": "512c73fc282803abd67e8f73835e788f6e52a9b57b066241fbf08c14bb8de274",
+  "bytes": 1292058,
+  "new_computations": 0
+}

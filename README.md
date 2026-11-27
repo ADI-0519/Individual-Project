@@ -1,4 +1,4 @@
-# Latent probes under reporting pressure
+# Latent Probes and Listener Beliefs
 
 [![CI](https://github.com/ADI-0519/Individual-Project/actions/workflows/ci.yml/badge.svg)](https://github.com/ADI-0519/Individual-Project/actions/workflows/ci.yml)
 
@@ -13,11 +13,204 @@ controlled study tests a frozen readout of sender-attributed current belief;
 this target is distinct from Apollo deception detection. See the
 [current research decision](docs/CURRENT_RESEARCH_STATE.md).
 
-**Project status: early research development.** The engineering baseline and
-small pilot are complete; the main study and dissertation are not. Validated
-targets, human-reviewed data, competitive frozen controls, independent family
-holdouts, a second reader and the final analysis/write-up remain ahead. The
-[main-study gates](docs/MAIN_STUDY_GATES.md) define what counts as completion.
+**27 November: the fresh matched-budget adaptation study is complete.**
+All 11,520 planned cohort measurements, both analyses and the independent
+numerical audit finished at 02:24 GMT. On new format-B hard correction cases,
+mixed-format fitting partially repairs the four-factor readout at the same
+512-observation budget:
+
+| Checkpoint | A512 | Mixed512 | Ahalf256 | Intercept-only Offset |
+| --- | ---: | ---: | ---: | ---: |
+| Llama 3.1 8B | 2/192 | **151/192** | 7/192 | 20/192 |
+| Qwen 2.5 7B | 3/192 | **125/192** | 4/192 | 11/192 |
+
+Each entry counts complete four-case receipt panels across the same 24 test
+contexts. The fixed Llama primary improvement is **77.60 percentage points**,
+conditional 95% interval [68.23, 85.42]; Qwen's named replication is +63.54 pp
+[54.69, 71.35]. The gain has a source-format cost: A hard panels fall from
+185 to 166 for Llama and 162 to 131 for Qwen. One-step controls are not generally
+repaired. Four supervised factors plus a supplied rule measure accessibility;
+spontaneous anticipation and deception detection remain unestablished. Human
+semantic review remains incomplete.
+
+Read the [full report](docs/results/format-adaptation-2026-11-27/results.md),
+[critical interpretation](docs/FORMAT_ADAPTATION_RESULTS_INTERPRETATION_2026-11-27.md),
+[figure PDF](docs/results/format-adaptation-2026-11-27/adaptation.pdf),
+[four-slide deck](presentations/progress2-format-adaptation-2026-11-27/Progress-2-format-adaptation.pptx)
+and [scope update](docs/SUPERVISOR_SCOPE_UPDATE_2026-11-27.md).
+The [frozen protocol](docs/FORMAT_ADAPTATION_EXECUTION_PROTOCOL_V1.md) and
+[replay guide](docs/FORMAT_ADAPTATION_PORTABLE_REPLAY.md) specify the comparison
+and its reproducibility boundaries. Both fitted bundles were sealed before
+either test capture; no new site, threshold or regularization selection occurred.
+
+Replay the saved metrics without either language model:
+
+```sh
+uv run --locked python docs/results/format-adaptation-2026-11-27/replay/replay.py replay --bundle docs/results/format-adaptation-2026-11-27/replay
+```
+
+The compact bundle passed native Linux and relocated Windows replay. The
+independent native auditor separately reconstructs predictions from saved
+features; production-function replay verifies the exported scores and metrics.
+
+**27 November follow-up: matched lexical shortcut controls are complete.**
+A fixed word/character TF-IDF pipeline uses the same fitting states, four
+factor labels and supplied rule. Mixed fits complete 56/192 B hard panels,
+versus 1/192 for A512; system-only inputs complete zero in every arm/format.
+However, Mixed B-hard row accuracy is only 399/768 (51.95%), and name
+substitutions flip 219/384 judgments. Both receipt heads are perfect on B
+corrections, while location-factor accuracy stays near 50%. These results
+separate simple receipt extraction from reliable complete judgments.
+
+The comparison is a **posthoc diagnostic on the exposed bank**, with one shared
+text baseline, rather than another independent checkpoint replication or a
+capable neural text monitor. The independently reconstructed 115,996 metric
+values agree exactly. No new language-model or GPU calls were needed. Read
+the [full lexical report](docs/results/lexical-controls-2026-11-27/README.md),
+[Hanqi briefing](docs/HANQI_RESEARCH_UPDATE_2026-11-27.md),
+[comparison figure](docs/results/lexical-controls-2026-11-27/lexical-comparison.pdf),
+[fixed control protocol](docs/LEXICAL_CONTROL_PROTOCOL_V1.md) and
+[CREATE replication proposal](docs/CREATE_ADAPTATION_REPLICATION_PLAN_V1.md).
+Human semantic review and the proposed precision replication remain unfinished.
+
+Replay the independent lexical metric audit without model weights:
+
+```sh
+uv run --locked python scripts/audit_format_adaptation_text.py --source docs/results/lexical-controls-2026-11-27 --output .cache/new-lexical-audit
+```
+
+Use a fresh audit output path; existing attempts are preserved.
+
+**26 November: the complete score-shift diagnostic is finished.**
+The [new diagnosis](docs/FORMAT_TRANSFER_RESULTS_2026-11-26.md) finds preserved
+location-content ranking but much poorer reading-record ranking under format B:
+first-receipt raw AUROC is 0.696 for Llama and 0.670 for Qwen. Both location
+factors retain 0.987-0.999. This posthoc analysis uses all saved test cases and
+an independently reviewed easy/hard pooling supplement; it requires no new
+model calls, fits or threshold repair. Separate-author arithmetic agrees on
+36,100 scalar checks. See the [figure PDF](docs/results/format-score-shift-2026-11-26/figure/factor_transfer.pdf),
+[deep literature review](docs/FORMAT_TRANSFER_RESEARCH_REVIEW_2026-11-26.md)
+and [proposed controlled follow-up](docs/FORMAT_TRANSFER_DESIGN_REVIEW_2026-11-26.md).
+Generic mixed-format repair already has precedent; the next fresh comparison
+must distinguish coefficient adaptation from an equal-observation intercept-only
+control. Human semantic review and that fresh experiment remain unfinished.
+
+**23 November, 02:43 GMT: the fresh two-model study is complete.**
+All 14,080 planned cohort prefixes, both fresh test captures, the independent
+saved-data audit and all report exports finished. The primary source-only
+site-selection comparison shows no established benefit: Llama improves by
+1.04 percentage points, with conditional 95% interval [-3.65, +5.73].
+The prespecified four-factor readout plus supplied rule solves 176/192 hard
+quartets for Llama and 118/192 for Qwen in the original format, falling to
+17/192 and 12/192 in the alternate format. Extra labels and external computation
+make this an accessibility diagnostic, not an equal-capacity or causal claim.
+Read the [completed report](docs/results/fresh-readout-2026-11-23/results.md),
+[figure PDF](docs/results/fresh-readout-2026-11-23/fresh_readout.pdf) and
+[critical interpretation](docs/FRESH_READOUT_RESULTS_INTERPRETATION_2026-11-23.md).
+Human semantic review and the dissertation remain unfinished. These are
+agent-audited exploratory results, not human-reviewed confirmation.
+
+**Historical checkpoint, 23 November, 00:24 UTC: the interrupted run resumed.**
+The earlier worker stopped at 2,048 Llama and 900 Qwen training/development
+captures. All 2,948 completed rows remain valid; no partial or unknown row
+requires repeating. No fresh test or fitting stage had started. The
+[versioned recovery](docs/FRESH_READOUT_INTERRUPTION_RECOVERY_V2.md) preserves
+the original run and resumes only unattempted inputs. The replacement launcher
+passed a seven-minute no-console/no-job test, and Qwen advanced from 900 to 950
+rows after resuming at 00:21 UTC. Both the live worker and its heartbeat were
+verified. The continuation subsequently completed at 02:43 GMT.
+
+**22 November, 22:18 UTC: the fresh two-model campaign has been started.**
+The [prospective protocol](docs/FRESH_READOUT_EXECUTION_PROTOCOL_V2.md) fixes
+7,040 inputs per model, twelve capture sites, development-only selection,
+two renderers and 24 paired test contexts. A separate agent reviewed all
+48 new contexts and 108 full prompts; human semantic review remains incomplete.
+Both model bundles must be frozen before either fresh test capture.
+At that checkpoint no fresh-study result had been reported; the completed
+results are linked above.
+The [completion runbook](docs/FRESH_READOUT_CAMPAIGN_RUNBOOK_V2.md) explains the
+automatic independent audit/report export and preserved-failure boundaries.
+The [interpretation rules](docs/FRESH_READOUT_INTERPRETATION_RULES_V2.md) state
+what each possible outcome can establish, including an identical S0/S1 head.
+
+The first startup exposed a preparation variable-shadowing bug before any
+model forward. Its zero-row attempt remains preserved. The
+[documented correction](docs/FRESH_READOUT_STARTUP_RECOVERY_V1.md) and
+[exact re-preparation receipt](docs/validation/2026-11-22-fresh-readout-startup-recovery-v1.json)
+retain every original prompt, token, state, label and capture site. The repaired
+capture/campaign tests and independent review passed; the complete local CPU
+suite also passed, with separate Linux plotting checks.
+
+**22 November, 20:01 UTC: the readout-adequacy diagnostic is complete.**
+Using existing correction activations and whole-narrative outer holdouts,
+Llama solves **20.42% / 65.00% / 95.00%** of complete primary quartets with
+direct linear, RBF, and four learned factors plus the supplied rule. Qwen scores
+**2.08% / 1.67% / 45.42%**. Read the
+[new report and figure](docs/results/cached-readout-adequacy-2026-11-22/results.md)
+and [critical interpretation](docs/CACHED_READOUT_ADEQUACY_INTERPRETATION_2026-11-22.md).
+This is posthoc exposed-bank crossfit with 1,536 fitting rows per outer refit,
+not fresh confirmation or an equal-supervision comparison. The Llama result
+shows recoverable ingredients, not the model's causal use of an integrated
+belief representation. No new language-model inference was needed.
+
+New [leakage](docs/MAIN_STUDY_LEAKAGE_FORENSICS_2026-11-22.md) and
+[measurement](docs/MAIN_STUDY_MEASUREMENT_FORENSICS_2026-11-22.md) audits recheck
+membership, preprocessing, selection, labels and failure denominators. The
+[research evidence map](docs/MAIN_STUDY_RESEARCH_EVIDENCE_MAP_2026-11-22.md)
+records eight close primary works and the narrower fresh-study question.
+Original frozen results below remain unchanged.
+
+**22 November, 19:14 UTC: the frozen exploratory experiment is complete.** Both
+models, all 3,840 held-out prose-monitor inputs, integrated analyses and final
+figures finished successfully. The text extractor plus symbolic fold scores
+**33.75% complete correction quartets**, versus **3.75% / 3.00%** for Llama's
+restricted/full readouts and **1.83% / 1.00%** for Qwen's. Each quartet requires
+all four matched judgments correct. Llama's latent readouts remain stronger on
+one-step quartets, so the comparison is mixed. The expected fitting-coverage
+benefit remains unsupported; both primary difference intervals include zero.
+
+The [completed report and figures](docs/results/main-study-2026-11-22-complete/results.md),
+[critical interpretation](docs/MAIN_STUDY_FINAL_INTERPRETATION_2026-11-22.md),
+[updated four-slide PowerPoint](presentations/progress2-main-study-2026-11-22/completed/Progress-2-main-study.pptx)
+and [PDF](presentations/progress2-main-study-2026-11-22/completed/Progress-2-main-study.pdf)
+include the completed shared baseline. Its test score is **2,962/3,840 correct**;
+all **44 invalid outputs** remain incorrect. Independent audits verify both
+models' saved results, every monitor response, and that attaching the baseline
+changed no previous probe result. It uses additional Qwen generation and a
+symbolic scaffold; no equal-compute or absence-of-belief claim follows.
+
+**Project status: specified exploratory experiment complete; dissertation unfinished.**
+Human semantic review, supervisor scope discussion and the dissertation remain.
+These outcomes are agent-audited exploratory, not human-reviewed confirmation.
+This controlled target differs materially from the original natural
+deception/omission extension. The
+[current research state](docs/CURRENT_RESEARCH_STATE.md) takes precedence over the
+historical pilot checkpoints below and the earlier communication-study
+[gates](docs/MAIN_STUDY_GATES.md).
+
+**Earlier 22 November checkpoint:** an independent agent's blinded semantic answers agree
+with all 736 representative labels across 154 groups. The
+[prospective exploratory amendment](docs/MAIN_STUDY_AGENT_EXECUTION_AMENDMENT_2026-11-22.md)
+allows continued model execution with explicit agent-only validation; human
+records remain blank and no confirmatory result is implied. Llama has completed
+2,048 real train/dev forwards, an independent raw-array audit, and all 30 matched
+fit comparisons. Qwen execution and the remaining fixed
+[campaign](docs/MAIN_STUDY_CAMPAIGN_RUNBOOK_2026-11-22.md) are active. Both model
+fits must be frozen before held-out capture. The
+[new literature audit](docs/MAIN_STUDY_NOVELTY_AUDIT_2026-11-22.md) narrows the
+candidate contribution against existing second-order and composition work.
+
+**Implementation (21 November):** the matched-coverage study now has a
+[154-group draft bank](data/belief_main/main_v1/main_bank_v1.json), 5,888 unique
+inputs per model, group-preserving split manifests and 15 paired fitting
+allocations. The prose-only monitor, matched fitting and held-out analysis are
+implemented. Both pinned Llama/Qwen checkpoints passed a separate real hardware
+capture check; those two engineering forwards are not main-study results.
+Human semantic review remains incomplete. Open the
+[offline review worksheet](docs/review/main_study_v1/review.html) locally; it starts
+with blank answers and exports human records without fabricating approval.
+The [execution runbook](docs/MAIN_STUDY_RUNBOOK_V1.md) records the exact next
+commands, source bindings and interpretation limits.
 
 **Latest measured milestone (21 November):** [fully crossed belief validation](docs/CROSSED_BELIEF_VALIDATION_RESULTS.md)
 completed 256 real prefix measurements and 128 answers, without refitting. The

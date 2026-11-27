@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "verification": "Independently recomputed sklearn AUROC, fixed class recalls/accuracy, class means, scipy Spearman, NumPy Pearson, direct nested positive-negative order comparisons, full-state A/B joins, and joint factor correctness without importing diagnostic module.",
+  "counts": {
+    "score_scopes": 800,
+    "paired_scopes": 400,
+    "within_context_order_scopes": 384,
+    "joint_factor_scopes": 100
+  },
+  "max_raw_auroc_difference": 1.1102230246251565e-16
+}

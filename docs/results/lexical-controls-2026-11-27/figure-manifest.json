@@ -1,0 +1,21 @@
+{
+  "schema": "lexical-control-figure-v1",
+  "input_sha256": {
+    "docs\\results\\lexical-controls-2026-11-27\\metrics.json": "d1c0e6c345a3e38c380d719cffd22344759cfa4c6585bdaed2626f4c05c0ad76",
+    "docs\\results\\lexical-controls-2026-11-27\\audit\\audit_receipt.json": "dead2e233946a81aca637bee2128d424f11eb3e30926193907234247080ca80d",
+    "docs\\results\\format-adaptation-2026-11-27\\summary.json": "b20171e7c77ad704b37c29bec1aabe6bfcb5d7d60a38f4c5b9fe6132dc81392e"
+  },
+  "source_sha256": "14e6140516c5341e9e26174bb5867db92d5195b360c632d432af3357e5419fcb",
+  "plot_environment": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.4.6"
+  },
+  "output_sha256": {
+    "lexical-comparison.pdf": "a2f106915f40c197bf92fa441834e99153501a6ca4fe74f3a2cd5ce1f532ee28",
+    "lexical-comparison.svg": "6388dc0430d7ffd1d27366b906c0021ba7fcc64ff97d241fa1a8c2afd10bac8e",
+    "lexical-comparison.png": "04f1b7938dee6c48ab2b8dc6ebcc9b4d51fda0d6779ed92c9a173c5f02dfc171"
+  },
+  "scope": "Descriptive observed comparison; text is one shared posthoc lexical control",
+  "new_model_calls": 0,
+  "classifier_fits": 0
+}

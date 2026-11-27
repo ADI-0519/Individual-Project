@@ -1,0 +1,109 @@
+{
+  "schema": "cached-readout-adequacy-protocol-v1",
+  "research_status": "posthoc_exposed_bank_group_crossfit",
+  "seed": 20261122,
+  "created_at": "2026-11-22T19:57:17.957238+00:00",
+  "git_commit": "9aa780c8b1dd2845871058f6fd586650c26e603f",
+  "source_sha256": {
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/docs/CACHED_READOUT_ADEQUACY_PROTOCOL_V1.md": "5048ffddecb2ffccc51450ca894650c91b83a299c1903a4c35b40007dd5f303f",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/scripts/run_cached_readout_adequacy.py": "d45c019afc5e121b2a02d1fa39e555a72a68e02bf9e02c9838938cfb79e60654",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/__init__.py": "9e7bfd1c5dcc2adfe14ded545821d174be519fc1bd6299e2555bef60a5e0426f",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/cached_readout_adequacy.py": "d7077255814b9e533a12bba3462bbdece90cc76d5c8c3de77c5007ebeddccb9a",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/main_study_design.py": "0973d047d2e98736c1b9144d2187079a60d87f2280eeca691330ff91135506b9",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/main_study_fit.py": "67b651810fff1900bbb79da712217d115911928f050fc20d3d1c3c00fb9406f9",
+    "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/src/latent_probes/storage.py": "1de87a24cc3bd701c0384d648d405ddb6066280beae3e21bf1b173c203ee0e84"
+  },
+  "fold_manifest": {
+    "path": "/mnt/c/Users/adirj/OneDrive/Documents/GitHub/6CCSAPRJ - Individual project/Individual-Project/data/belief_main/readout_adequacy_cf_v1/fold_manifest.json",
+    "sha256": "8bd3d6b5e04199146244fcbea2a0c7e4d623c3d07ec2852e7b01a846415e463f"
+  },
+  "models": [
+    {
+      "key": "llama",
+      "capture_directory": "/home/adirj/kcl-latent-probes-runs/main_v1_agent_20261122_recovery_v1/llama_test",
+      "capture_sha256": {
+        "rows.json": "a2eb5e1ae20858a1e725d8d7320122a796f7b6f109259301a13d1b4d033ec000",
+        "features.npz": "13c3cdc2a19e40db401e52855d7821af8d79eb932142256f3d76bc980ee0c24a",
+        "capture_manifest.json": "cf4de02cb33fcb0213eefb154d6eaa5f494cd719b8ddf69783565bc745e61aa8"
+      },
+      "model_id": "meta-llama/Llama-3.1-8B-Instruct",
+      "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+      "capture_layer": 16,
+      "bank_sha256": "e038025571a38a7f2c489e5f8c3bf3b0a3c11a05f9b8c7e89d26292a4e7bfb1d"
+    },
+    {
+      "key": "qwen",
+      "capture_directory": "/home/adirj/kcl-latent-probes-runs/main_v1_agent_20261122_recovery_v1/qwen_test",
+      "capture_sha256": {
+        "rows.json": "c44b45c558210f556d6dfa9b811e6d60918a22a6b5ff4f32ad20bd6da7fb4515",
+        "features.npz": "825bcfb64cc8d0b4889273797c812b97a8c061682d25839179bcc665d83040db",
+        "capture_manifest.json": "6f8e18fd034b100dc6fa07a4ddfaba1b87d381bda407f3613b4c0316efdd9412"
+      },
+      "model_id": "Qwen/Qwen2.5-7B-Instruct",
+      "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+      "capture_layer": 14,
+      "bank_sha256": "e038025571a38a7f2c489e5f8c3bf3b0a3c11a05f9b8c7e89d26292a4e7bfb1d"
+    }
+  ],
+  "policy": {
+    "research_status": "posthoc_exposed_bank_group_crossfit",
+    "seed": 20261122,
+    "outer_folds": 5,
+    "inner_train_groups": 18,
+    "inner_development_groups": 6,
+    "transform": "float64; train-only StandardScaler then row L2; common across methods",
+    "direct_lr": {
+      "C": [
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0
+      ],
+      "solver": "lbfgs",
+      "max_iter": 2000,
+      "tol": 0.0001,
+      "class_weight": null
+    },
+    "rbf_svc": {
+      "C": [
+        0.1,
+        1.0,
+        10.0,
+        100.0
+      ],
+      "gamma": [
+        0.1,
+        1.0,
+        10.0
+      ],
+      "probability": false,
+      "tol": 0.001,
+      "class_weight": null,
+      "max_iter": 200000,
+      "cache_size_mb": 512
+    },
+    "fourfactor_lr": {
+      "factors": [
+        "initial",
+        "update",
+        "first_receipt",
+        "receipt"
+      ],
+      "C": [
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0
+      ],
+      "shared_C": true,
+      "selection": "mean four-factor development logistic loss"
+    },
+    "target_selection": "primary complete-quartet accuracy; overall row accuracy; lower C; lower gamma",
+    "threshold": "margin > 0; tie class 0",
+    "model_calls": 0,
+    "thread_limit": 4,
+    "inference": "descriptive only; no bootstrap, confidence intervals or p-values"
+  }
+}

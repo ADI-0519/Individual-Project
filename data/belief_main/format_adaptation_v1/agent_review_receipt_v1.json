@@ -1,0 +1,20 @@
+{
+  "schema": "format-adaptation-agent-review-v1",
+  "status": "pass",
+  "human_review_complete": false,
+  "bank_sha256": "a05737d2b0ceaccbc71588ffdde31e3dfe73a251d3acbacf0dad190c8375aeed",
+  "input_sha256": {
+    "data\\belief_main\\format_adaptation_v1\\compiled_v1\\review_packet.json": "3adf3a22c5d4dce219498b5e0ad6f915c939b8fbeaf19b0eb4a8ecb0505b3fa0",
+    "data\\belief_main\\format_adaptation_v1\\compiled_v1\\review_key.json": "e27d82242cdb34eda518ea1a21d692ffba9e83592169a66b16e1885681cc626d",
+    "data\\belief_main\\format_adaptation_v1\\blind_review_answers_v1.json": "4eaad489ab019fe8795733291d6b68e0de91f8fa9122d7ce1122f2f9b2fc4753",
+    "data\\belief_main\\format_adaptation_v1\\compiled_v1\\bank.json": "a05737d2b0ceaccbc71588ffdde31e3dfe73a251d3acbacf0dad190c8375aeed",
+    "data\\belief_main\\format_adaptation_v1\\authored_contexts_v1.json": "67530090b800736b1f8320b42fb9b6cf18684899ed02ab61514150439684320f",
+    "data\\belief_main\\format_adaptation_v1\\authoring_receipt_v1.json": "34c54d588167fe86eaa214c75e11e931dd5fe50e75901e84a7496dec092408db",
+    "data\\belief_main\\format_adaptation_v1\\compiled_v1\\build_receipt.json": "13343cbbacc19af7de9a57abb0f5f3a78409d301bbbad716828e592848aa20ff"
+  },
+  "review_items": 118,
+  "correct": 118,
+  "acceptable": 118,
+  "scope": "Separate agent answered full opaque prompts before formal-key comparison; formal and entity validation separately reviewed. No human semantic validation; minor grammar notes retained.",
+  "model_observations": 0
+}
